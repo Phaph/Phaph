@@ -36,7 +36,14 @@ docker run --rm -v "${PWD}/tests:/app/tests" poe2-optimizer sh -c "pip install -
 2. Zero Trust > Networks > Tunnels > Create a tunnel > Cloudflared. Name it `whetstone`.
 3. On the install screen pick Docker and copy the token (the long string after `--token`). Don't paste it in chat.
 4. Copy `.env.example` to `.env` and put the token after `TUNNEL_TOKEN=`.
-5. Add a public hostname: your domain (or `www`), Service type `HTTP`, URL `app:8000`.
+5. Add a public hostname: `api.<your domain>`, Service type `HTTP`, URL `app:8000`. The tunnel only carries the engine.
+
+## 4b. The page on Cloudflare Pages (done for phaphofbuilding.com)
+The page itself lives on Cloudflare Pages, so it stays up when this PC is off (it then shows "The forge is cold right now" and wakes up on its own when the engine is back).
+- Pages project `whetstone` (whetstone-6j1.pages.dev), connected to GitHub `Phaph/Phaph`, branch `claude/poe2-shadow-build-mobalytics-85ym0e`, build output `api/static`, no build command.
+- Every push to that branch redeploys the page in about a minute. Engine changes still need `docker compose up -d --build app` here.
+- Custom domain `phaphofbuilding.com` points at Pages; `api.phaphofbuilding.com` goes through the tunnel to this PC.
+- The page finds the engine through the `API` constant at the top of the scripts in `index.html` and `tree.html`; the engine allows the site and `*.whetstone*.pages.dev` previews through CORS in `api/app.py`.
 
 ## 5. Start it
 ```
