@@ -44,6 +44,7 @@ AILMENT_FIELD = {"bleed": "BleedDPS", "poison": "PoisonDPS", "ignite": "IgniteDP
 SPELL_WEAPONS = [("Wand", None, None), ("Staff", "none", None)]
 MINION_WEAPONS = [("Sceptre", None, None), ("Wand", None, None)]
 SHIELD_WEAPONS = [("One Hand Mace", None, "Shield"), ("Spear", None, "Shield")]
+THEME_MIN_SHARE = 0.3   # candidates below this share of their theme's ailment are dropped
 DEFAULT_CLASS = {"Minion": "Witch", "Spell": "Sorceress"}
 
 
@@ -171,6 +172,11 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
         c.clear, c.ehp = clear_score(out), out.get("TotalEHP", 0)
         c.boss = score_of(out, metric_for("bossing", req.get("ailment")))
+        # Theme check: an ailment build that gets most of its damage elsewhere is off brief.
+        if req.get("ailment") in AILMENT_FIELD:
+            share = out.get(AILMENT_FIELD[req["ailment"]], 0) / max(total_dps(out), 1)
+            if share < THEME_MIN_SHARE:
+                c.error = f"off theme: only {share:.0%} of damage is {req['ailment']}"
     except (PoBError, ValueError) as e:
         c.error = str(e)
     return c
