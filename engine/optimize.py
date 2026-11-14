@@ -15,6 +15,7 @@ METRICS = {
 
 METRICS["mapping"] = "mapping"   # clear score: hit-weighted DPS x sqrt(area) x sqrt(projectiles)
 CLEAR_FIELDS = ["AreaOfEffectMod", "ProjectileCount"]
+DPS_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS"]
 
 # PoB config for each mode. Bossing is PoB's default (pinnacle boss).
 MODE_CONFIG = {
@@ -24,14 +25,16 @@ MODE_CONFIG = {
 
 
 def total_dps(out: dict) -> float:
-    """Hit DPS plus damage over time (bleed, ignite, poison, DoT skills)."""
-    return out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
+    """Hit DPS plus damage over time (bleed, ignite, poison, DoT skills), plus minions'."""
+    return (out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
+            + out.get("MinionDPS", 0) + out.get("MinionDotDPS", 0))
 
 
 def clear_score(out: dict) -> float:
     """Rough map clear value. PoB has no clear speed stat, so: hits count fully, damage over
     time half (it ramps up), and bigger area / more projectiles reach more of the pack."""
-    dps = out.get("TotalDPS", 0) + 0.5 * out.get("TotalDotDPS", 0)
+    dps = (out.get("TotalDPS", 0) + 0.5 * out.get("TotalDotDPS", 0)
+           + out.get("MinionDPS", 0) + 0.5 * out.get("MinionDotDPS", 0))
     area = max(out.get("AreaOfEffectMod", 1) or 1, 0.1)
     projectiles = max(out.get("ProjectileCount", 1) or 1, 1)
     return dps * area ** 0.5 * projectiles ** 0.5
@@ -80,7 +83,7 @@ def optimise_supports(
     and only re-check the 2 x top_k best supports from the first one.
     """
     field_name = METRICS.get(metric, metric)
-    fields = ["TotalDPS", "TotalDotDPS", "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
+    fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
         + ([] if field_name in ("total", "mapping") else [field_name])
     gems = pob.list_gems("support")
     family = {g["name"]: g.get("family") or g["name"] for g in gems}

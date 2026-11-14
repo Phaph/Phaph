@@ -18,7 +18,7 @@ end
 local DEFAULT_FIELDS = {
 	"FullDPS", "TotalDPS", "CombinedDPS", "AverageHit", "Speed", "HitChance",
 	"CritChance", "CritMultiplier", "BleedDPS", "BleedChance", "PoisonDPS", "IgniteDPS",
-	"TotalDot", "TotalDotDPS", "WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS",
+	"TotalDot", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS",
 	"Life", "EnergyShield", "Mana", "Armour", "Evasion", "TotalEHP",
 	"PhysicalMaximumHitTaken", "FireResist", "ColdResist", "LightningResist", "ChaosResist",
 	"Str", "Dex", "Int",
@@ -51,6 +51,47 @@ local function warnings()
 		end
 	end
 	return w
+end
+
+-- Copy the requested numeric fields out of a PoB output table. Minion damage lives in
+-- out.Minion, so it is exposed as MinionDPS / MinionDotDPS for minion builds.
+local function pick(out, fields)
+	local result = {}
+	local minion = type(out.Minion) == "table" and out.Minion or {}
+	for _, f in ipairs(fields or DEFAULT_FIELDS) do
+		local v
+		if f == "MinionDPS" then v = minion.TotalDPS
+		elseif f == "MinionDotDPS" then v = minion.TotalDotDPS
+		else v = out[f] end
+		if type(v) == "number" then result[f] = v end
+	end
+	return result
+end
+
+-- Some names belong to two gems (e.g. "Lightning Bolt" and its triggered version).
+-- Prefix those lines with the main gem's skillId so PoB picks the castable one.
+local function disambiguate(text)
+	local out = {}
+	for line in text:gmatch("[^\r\n]+") do
+		local name = line:match("^([ %a':]+) %d+/%d+")
+		if name and not line:match("^skillId:") then
+			local found = {}
+			for _, gem in pairs(data.gems) do
+				if gem.name == name and not (gem.tags and gem.tags.support) then table.insert(found, gem) end
+			end
+			if #found > 1 then
+				table.sort(found, function(a, b)
+					local at, bt = (a.tags.trigger and 1 or 0), (b.tags.trigger and 1 or 0)
+					if at ~= bt then return at < bt end
+					return a.grantedEffectId < b.grantedEffectId
+				end)
+				local id = found[1].grantedEffectId
+				if id and id:match("^%w+$") then line = "skillId:" .. id .. " " .. line end
+			end
+		end
+		table.insert(out, line)
+	end
+	return table.concat(out, "\n")
 end
 
 local function findClass(name)
@@ -195,10 +236,7 @@ function handlers.equip(cmd)
 	build.buildFlag = true
 	frame()
 	local out = build.calcsTab.mainOutput
-	local result = {}
-	for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
-		if type(out[f]) == "number" then result[f] = out[f] end
-	end
+	local result = pick(out, cmd.fields)
 	return { id = item.id, name = item.name, output = result }
 end
 
@@ -214,10 +252,7 @@ function handlers.try_items(cmd)
 			item:NormaliseQuality()
 			item:BuildModList()
 			local out = calcFunc({ repSlotName = cmd.slot, repItem = item })
-			local r = {}
-			for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
-				if type(out[f]) == "number" then r[f] = out[f] end
-			end
+			local r = pick(out, cmd.fields)
 			results[i] = r
 		else
 			results[i] = { error = "could not parse item" }
@@ -258,7 +293,7 @@ end
 -- text is PoB's paste format, one gem per line: "Name level/quality  count"
 function handlers.add_skill(cmd)
 	local before = #build.skillsTab.socketGroupList
-	build.skillsTab:PasteSocketGroup(cmd.text)
+	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
 	local index = #build.skillsTab.socketGroupList
 	if index == before then error("no gems recognised in: " .. cmd.text) end
 	if cmd.main ~= false then build.mainSocketGroup = index end
@@ -277,7 +312,7 @@ function handlers.try_skill(cmd)
 	local old = list[cmd.group]
 	if not old then error("no group " .. tostring(cmd.group)) end
 	local count = #list
-	build.skillsTab:PasteSocketGroup(cmd.text)
+	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
 	if #list == count then error("no gems recognised in: " .. cmd.text) end
 	local new = table.remove(list)
 	list[cmd.group] = new
@@ -304,10 +339,7 @@ function handlers.try_skill(cmd)
 		end
 	end
 	local out = build.calcsTab.mainOutput
-	local result = {}
-	for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
-		if type(out[f]) == "number" then result[f] = out[f] end
-	end
+	local result = pick(out, cmd.fields)
 	return { output = result, supported = supported, main_skill = mainSkillName(), warnings = warnings() }
 end
 
@@ -382,10 +414,12 @@ function handlers.optimise_tree(cmd)
 	local function dps(o)
 		if mapping then
 			-- Same clear score as optimize.py: hits full, DoT half, sqrt(area) x sqrt(projectiles)
-			local d = (o.TotalDPS or 0) + 0.5 * (o.TotalDotDPS or 0) + ((o.Minion and o.Minion.CombinedDPS) or 0)
+			local m = type(o.Minion) == "table" and o.Minion or {}
+			local d = (o.TotalDPS or 0) + 0.5 * (o.TotalDotDPS or 0) + (m.TotalDPS or 0) + 0.5 * (m.TotalDotDPS or 0)
 			return d * math.sqrt(math.max(o.AreaOfEffectMod or 1, 0.1)) * math.sqrt(math.max(o.ProjectileCount or 1, 1))
 		end
-		return (o.TotalDPS or 0) + (o.TotalDotDPS or 0) + ((o.Minion and o.Minion.CombinedDPS) or 0)
+		local m = type(o.Minion) == "table" and o.Minion or {}
+		return (o.TotalDPS or 0) + (o.TotalDotDPS or 0) + (m.TotalDPS or 0) + (m.TotalDotDPS or 0)
 	end
 	local function ehp(o) return o.TotalEHP or 0 end
 
@@ -503,10 +537,7 @@ function handlers.calc(cmd)
 	build.buildFlag = true
 	frame()
 	local out = build.calcsTab.mainOutput
-	local result = {}
-	for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
-		if type(out[f]) == "number" then result[f] = out[f] end
-	end
+	local result = pick(out, cmd.fields)
 	return { main_skill = mainSkillName(), output = result, warnings = warnings() }
 end
 

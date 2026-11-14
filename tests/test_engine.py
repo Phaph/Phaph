@@ -114,3 +114,24 @@ def test_clear_score_rewards_area():
     base = {"TotalDPS": 1000, "TotalDotDPS": 0, "AreaOfEffectMod": 1}
     assert clear_score({**base, "AreaOfEffectMod": 2}) > clear_score(base)
     assert clear_score({**base, "TotalDotDPS": 1000}) < total_dps({**base, "TotalDotDPS": 1000})
+
+
+def test_minion_damage_counts(pob):
+    """Regression: minion builds scored zero because minion DPS lives in a separate table."""
+    pob.new()
+    pob.set_class("Witch", "Infernalist")
+    pob.set_level(90)
+    pob.add_skill(["Skeletal Storm Mage"])
+    out = pob.calc(["TotalDPS", "MinionDPS", "MinionDotDPS"])
+    assert out.get("MinionDPS", 0) > 0 and total_dps(out) > 0
+
+
+def test_duplicate_gem_names_pick_the_castable_gem(pob):
+    """Regression: 'Lightning Bolt' resolved to its triggered twin and no support applied."""
+    pob.new()
+    pob.set_class("Sorceress", "Stormweaver")
+    pob.set_level(75)
+    g = pob.add_skill(["Lightning Bolt"])["group"]
+    assert pob.calc(["TotalDPS"]).get("TotalDPS", 0) > 0
+    res = pob.try_skill(g, ["Lightning Bolt", "Lightning Penetration"], FIELDS)
+    assert res["supported"].get("Lightning Penetration")

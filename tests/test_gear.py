@@ -63,3 +63,16 @@ def test_no_wasted_triple_resist_items(crafted):
     triple = [p.slot for p in plans
               if sum(bool(re.search(f"to {e} Resistance", " ".join(p.affixes))) for e in ("Fire", "Cold", "Lightning")) == 3]
     assert len(triple) <= 1, triple
+
+
+def test_caster_caps_resistances_when_items_are_full(pob):
+    """Regression: with every affix slot used, resistances stopped short (e.g. 73% or 45%)."""
+    st = make_stage("early", "budget")
+    pob.new()
+    pob.set_class("Sorceress", "Stormweaver")
+    pob.set_level(st.level)
+    pob.add_skill(["Spark"])
+    craft_gear(pob, st, "Wand", None, mode="mapping", log=lambda *a: None)
+    stats = pob.calc(SCORE_FIELDS)
+    for k in ("FireResist", "ColdResist", "LightningResist"):
+        assert stats[k] >= 75, k

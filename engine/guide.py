@@ -26,7 +26,7 @@ from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, craft_gear, make_stage
 from optimize import CLEAR_FIELDS, MODE_CONFIG, optimise_supports, total_dps
 from pob import PoB
 
-STAT_FIELDS = ["TotalDPS", "TotalDotDPS", "Speed", "CritChance", "HitChance", "Life", "EnergyShield", "Mana",
+STAT_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "Speed", "CritChance", "HitChance", "Life", "EnergyShield", "Mana",
                "Armour", "Evasion", "TotalEHP", "FireResist", "ColdResist", "LightningResist", "ChaosResist"]
 
 

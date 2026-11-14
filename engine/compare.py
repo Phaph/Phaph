@@ -22,7 +22,7 @@ from optimize import optimise_supports, total_dps
 from pob import PoB
 
 FIELDS = [
-    "FullDPS", "TotalDPS", "CombinedDPS", "AverageHit", "Speed", "HitChance", "CritChance",
+    "FullDPS", "TotalDPS", "CombinedDPS", "MinionDPS", "MinionDotDPS", "AverageHit", "Speed", "HitChance", "CritChance",
     "CritMultiplier", "BleedDPS", "PoisonDPS", "IgniteDPS", "TotalDotDPS",
     "Life", "EnergyShield", "Mana", "Armour", "Evasion", "TotalEHP", "PhysicalMaximumHitTaken",
     "FireResist", "ColdResist", "LightningResist", "ChaosResist",

@@ -11,13 +11,13 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from optimize import CLEAR_FIELDS, clear_score, total_dps
+from optimize import CLEAR_FIELDS, DPS_FIELDS, clear_score, total_dps
 from pob import PoB, PoBError
 
 ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots"}
 JEWELLERY_SLOTS = {"Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 RES_CAP = 75
-SCORE_FIELDS = ["TotalDPS", "TotalDotDPS", "TotalEHP", "Life", "FireResist", "ColdResist", "LightningResist",
+SCORE_FIELDS = [*DPS_FIELDS, "TotalEHP", "Life", "FireResist", "ColdResist", "LightningResist",
                 "ChaosResist", *CLEAR_FIELDS]
 # Affix groups that never matter for a build score.
 SKIP_GROUPS = {"ItemFoundRarityIncrease", "LocalAttributeRequirements", "LightRadius", "LocalLightRadius"}
@@ -141,6 +141,7 @@ class _Work:
     lines: list = field(default_factory=list)
     picked: list = field(default_factory=list)
     counts: dict = field(default_factory=lambda: {"Prefix": 0, "Suffix": 0})
+    meta: list = field(default_factory=list)   # (group, affix, lines) per pick, in order
 
     def raw(self, extra: list[str] | None = None) -> str:
         return _item_raw(self.title, self.base, self.lines + (extra or []))
@@ -157,7 +158,33 @@ def _add(work: _Work, group: str, affix: dict, lines: list[str]) -> None:
     work.lines += lines
     work.picked.append(" / ".join(lines))
     work.counts[affix["type"]] += 1
+    work.meta.append((group, affix, lines))
     work.options.pop(group, None)
+
+
+def _remove(work: _Work, index: int) -> None:
+    group, affix, lines = work.meta.pop(index)
+    for line in lines:
+        work.lines.remove(line)
+    work.picked.pop(index)
+    work.counts[affix["type"]] -= 1
+    work.options[group] = affix
+
+
+def _swap_for(work: _Work, stage: Stage, res_group: str) -> bool:
+    """Make room for a resistance on a full item by dropping its lowest-priority
+    non-resistance affix (picks are in priority order, so the last one)."""
+    kind = work.options[res_group]["type"]
+    for i in range(len(work.meta) - 1, -1, -1):
+        group, affix, _ = work.meta[i]
+        if _is_res_group(group):
+            continue
+        frees_kind = affix["type"] == kind or work.counts[kind] < 3
+        frees_slot = len(work.picked) - 1 < stage.max_affixes
+        if frees_kind and frees_slot:
+            _remove(work, i)
+            return True
+    return False
 
 
 def _try(pob: PoB, slot: str, raws: list[str]) -> list[dict | None]:
@@ -197,25 +224,40 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
     groups = {"fire": "FireResistance", "cold": "ColdResistance", "lightning": "LightningResistance",
               "chaos": "ChaosResistance"}
     targets = {"fire": RES_CAP, "cold": RES_CAP, "lightning": RES_CAP, "chaos": 0 if stage.key != "leveling" else -100}
-    for _ in range(30):
+    for _ in range(40):
         out = pob.calc(list(keys.values()))
         need = {e: targets[e] - out.get(k, -60) for e, k in keys.items() if out.get(k, -60) < targets[e]}
         if not need:
             return
-        elem = max(need, key=need.get)
-        # Prefer all-resistance affixes when two or more elements are short, then the single element.
-        choices = []
-        for w in works:
-            short = [e for e in need if e != "chaos"]
-            if len(short) >= 2 and "AllResistances" in w.options and w.has_room(stage, w.options["AllResistances"]["type"]):
-                choices.append((0, w, "AllResistances"))
+        short = [e for e in need if e != "chaos"]
+        pick = None
+        # Most-needed element first; all-resistance affixes when two or more elements are short.
+        for elem in sorted(need, key=need.get, reverse=True):
+            choices = []
+            for w in works:
+                if len(short) >= 2 and "AllResistances" in w.options and w.has_room(stage, w.options["AllResistances"]["type"]):
+                    choices.append((0, w, "AllResistances"))
+                g = groups[elem]
+                if g in w.options and w.has_room(stage, w.options[g]["type"]):
+                    choices.append((1, w, g))
+            if choices:
+                choices.sort(key=lambda c: (c[0], len(c[1].picked)))
+                pick = choices[0][1:]
+                break
+        if not pick:
+            # Every item is full: trade a low-priority affix on an armour or jewellery piece.
+            elem = next((e for e in sorted(need, key=need.get, reverse=True) if e != "chaos"), None)
+            if elem is None:
+                return
             g = groups[elem]
-            if g in w.options and w.has_room(stage, w.options[g]["type"]):
-                choices.append((1, w, g))
-        if not choices:
-            return
-        choices.sort(key=lambda c: (c[0], len(c[1].picked)))
-        _, w, g = choices[0]
+            for w in sorted((w for w in works if not w.slot.startswith("Weapon") and g in w.options),
+                            key=lambda w: sum(_is_res_group(m[0]) for m in w.meta)):
+                if _swap_for(w, stage, g):
+                    pick = (w, g)
+                    break
+            if not pick:
+                return
+        w, g = pick
         a = w.options[g]
         _add(w, g, a, [_value_at(line, stage.roll) for line in a["lines"]])
         pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
