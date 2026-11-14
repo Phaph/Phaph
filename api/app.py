@@ -144,18 +144,18 @@ def validate_spec(spec: BuildSpec, catalog: dict) -> None:
             raise HTTPException(400, f"Unknown weapon type '{t}'")
 
 
-def run_guide(req: dict) -> dict:
+def run_guide(req: dict, progress=None) -> dict:
     from guide import build_guide
 
     spec = {**req["spec"], "budget": req["budget"]}
-    guides = build_guide(spec, req["stages"], log=lambda *a: None)
+    guides = build_guide(spec, req["stages"], log=lambda *a: None, progress=progress)
     return {"spec": spec, "stages": [asdict(g) for g in guides]}
 
 
-def run_generate(req: dict) -> dict:
+def run_generate(req: dict, progress=None) -> dict:
     from generate import generate, options, plan_build
 
-    result = generate(req, log=lambda *a: None)
+    result = generate(req, log=lambda *a: None, progress=progress)
     return {"result": result, "plan": plan_build(result), "options": options(result)}
 
 
@@ -253,8 +253,9 @@ def create_compare(req: CompareRequest, request: Request):
 
 
 @app.get("/jobs/{job_id}")
-def get_job(job_id: str, request: Request):
-    job = request.app.state.jobs.get(job_id)
+def get_job(job_id: str, request: Request, since: int = 0):
+    """Job status and result. While running, `progress` lists the steps after `since`."""
+    job = request.app.state.jobs.get(job_id, since=since)
     if not job:
         raise HTTPException(404, "No such job")
     return job

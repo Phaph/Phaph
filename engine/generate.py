@@ -182,8 +182,21 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
     return c
 
 
-def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print) -> dict:
+def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progress=None) -> dict:
+    """progress, if given, gets {"step": "round", ...} when a round starts and
+    {"step": "candidate", ...} as each skill/weapon/ascendancy option is scored."""
     t0 = time.time()
+
+    def scored(c: Candidate, rnd: int) -> Candidate:
+        if progress and not c.error and c.score > 0:
+            progress({"step": "candidate", "round": rnd, "skill": c.skill, "weapon": c.weapon_type,
+                      "ascendancy": c.ascendancy, "score": round(c.score, 1)})
+        return c
+
+    def round_start(rnd: int, label: str, count: int):
+        log(label)
+        if progress:
+            progress({"step": "round", "round": rnd, "label": label, "count": count})
     with PoB() as p:
         catalog = p.send("skill_catalog")["skills"]
         classes = p.list_classes()
@@ -209,9 +222,9 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print) -> dic
         cls = base_class or DEFAULT_CLASS.get("Minion" if "Minion" in s["types"] else "Spell" if "Spell" in s["types"] else "", "Mercenary")
         for wtype, wsub, off in weapon_options(s, req):
             round1.append(Candidate(s["name"], wtype, wsub, off, cls, is_minion="Minion" in s["types"]))
-    log(f"Round 1: {len(round1)} skill and weapon options")
+    round_start(1, f"Round 1: {len(round1)} skill and weapon options", len(round1))
     with ThreadPoolExecutor(workers) as ex:
-        round1 = list(ex.map(lambda c: evaluate(c, stage, req, tree=False), round1))
+        round1 = list(ex.map(lambda c: scored(evaluate(c, stage, req, tree=False), 1), round1))
     ok1 = sorted((c for c in round1 if not c.error and c.score > 0), key=lambda c: -c.score)
     for c in ok1[:8]:
         log(f"  {c.skill:<26} {c.weapon_type:<14} {c.score:>12,.0f}")
@@ -230,12 +243,12 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print) -> dic
         cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion)
                  for f, (cls, asc) in pairs]
         with ThreadPoolExecutor(workers) as ex:
-            return list(ex.map(lambda c: evaluate(c, stage, req, tree=True), cands))
+            return list(ex.map(lambda c: scored(evaluate(c, stage, req, tree=True), 2), cands))
 
     round2 = []
     if len(ascs) > 6:
         # Many ascendancies (no class chosen): find the best few with the top skill first.
-        log(f"Round 2a: {finalists[0].skill} on {len(ascs)} ascendancies")
+        round_start(2, f"Round 2a: {finalists[0].skill} on {len(ascs)} ascendancies", len(ascs))
         scout = build_round([(finalists[0], a) for a in ascs])
         round2 += scout
         best_ascs = [(c.cls, c.ascendancy) for c in sorted((c for c in scout if not c.error), key=lambda c: -c.score)[:3]]
@@ -244,7 +257,7 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print) -> dic
     else:
         finalists_rest = finalists
     pairs = [(f, a) for f in finalists_rest for a in ascs]
-    log(f"Round 2: {len(pairs)} skill and ascendancy options")
+    round_start(2, f"Round 2: {len(pairs)} skill and ascendancy options", len(pairs))
     round2 += build_round(pairs)
     ranked = sorted((c for c in round2 if not c.error and c.score > 0), key=lambda c: -c.score)
     if not ranked:

@@ -2,10 +2,14 @@
 
 A job's cache key is a hash of (kind, request, PoB version), so the same request returns the
 stored result instantly, and a PoB update automatically invalidates old results.
+
+Runners that take a `progress` argument can report steps while they work. Steps live in memory
+only (they matter while someone is watching) and come back from get(job_id, since=n).
 """
 from __future__ import annotations
 
 import hashlib
+import inspect
 import json
 import sqlite3
 import threading
@@ -47,6 +51,17 @@ class JobStore:
         self.db.execute("UPDATE jobs SET status='failed', error='server restarted' WHERE status IN ('queued','running')")
         self.db.commit()
         self.pool = ThreadPoolExecutor(max_workers=workers)
+        self.progress: dict[str, list[dict]] = {}
+
+    MAX_EVENTS = 600
+
+    def _reporter(self, job_id: str, t0: float):
+        def report(event: dict) -> None:
+            with self.lock:
+                events = self.progress.setdefault(job_id, [])
+                if len(events) < self.MAX_EVENTS:
+                    events.append({**event, "t": round(time.time() - t0, 1)})
+        return report
 
     def key(self, kind: str, request: dict) -> str:
         blob = json.dumps({"kind": kind, "request": request, "version": self.version}, sort_keys=True)
@@ -102,8 +117,12 @@ class JobStore:
         with self.lock:
             self.db.execute("UPDATE jobs SET status='running', started=? WHERE id=?", (time.time(), job_id))
             self.db.commit()
+        runner = self.runners[kind]
         try:
-            result = self.runners[kind](request)
+            if "progress" in inspect.signature(runner).parameters:
+                result = runner(request, progress=self._reporter(job_id, time.time()))
+            else:
+                result = runner(request)
             status, error, payload = "done", None, json.dumps(result)
         except Exception as e:  # noqa: BLE001 - report any engine failure on the job
             status, error, payload = "failed", f"{type(e).__name__}: {e}", None
@@ -112,11 +131,19 @@ class JobStore:
             self.db.execute("UPDATE jobs SET status=?, result=?, error=?, finished=? WHERE id=?",
                             (status, payload, error, time.time(), job_id))
             self.db.commit()
+            self.progress.pop(job_id, None)
 
-    def get(self, job_id: str) -> dict | None:
+    def get(self, job_id: str, since: int = 0) -> dict | None:
+        """The job. While it runs, `progress` holds the steps after the first `since`, and
+        `progress_next` is the `since` to send next time."""
         with self.lock:
             row = self.db.execute("SELECT * FROM jobs WHERE id=?", (job_id,)).fetchone()
-            return self._row(row)
+            out = self._row(row)
+            if out and out["status"] == "running":
+                events = self.progress.get(job_id, [])
+                since = max(0, min(since, len(events)))
+                out["progress"], out["progress_next"] = events[since:], len(events)
+            return out
 
     def shutdown(self) -> None:
         self.pool.shutdown(wait=False, cancel_futures=True)

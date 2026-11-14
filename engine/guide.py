@@ -34,6 +34,30 @@ from utility import optimise_utility
 STAT_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "Spirit",
                "SpiritUnreserved", "Speed", "CritChance", "HitChance", "Life", "EnergyShield", "Mana",
                "Armour", "Evasion", "TotalEHP", "FireResist", "ColdResist", "LightningResist", "ChaosResist"]
+DAMAGE_TYPES = ["Physical", "Fire", "Cold", "Lightning", "Chaos"]
+# Per-type hit size and skill DoT, so the website can colour damage by what it is.
+SPLIT_FIELDS = [f"{t}HitAverage" for t in DAMAGE_TYPES] + [f"{t}Dot" for t in DAMAGE_TYPES]
+AILMENT_TYPE = {"BleedDPS": "physical", "IgniteDPS": "fire", "PoisonDPS": "chaos"}
+
+
+def damage_split(stats: dict) -> dict[str, float]:
+    """Damage per second by type: hits split by each type's share of the average hit, skill DoT by
+    type, ailments by their element, and minions as one block (PoB doesn't split their damage)."""
+    out = {t.lower(): 0.0 for t in DAMAGE_TYPES}
+    hit = stats.get("TotalDPS", 0) or 0
+    avgs = {t: max(stats.get(f"{t}HitAverage", 0) or 0, 0) for t in DAMAGE_TYPES}
+    total_avg = sum(avgs.values())
+    if hit > 0 and total_avg > 0:
+        for t, a in avgs.items():
+            out[t.lower()] += hit * a / total_avg
+    for t in DAMAGE_TYPES:
+        out[t.lower()] += max(stats.get(f"{t}Dot", 0) or 0, 0)
+    for field_name, t in AILMENT_TYPE.items():
+        out[t] += max(stats.get(field_name, 0) or 0, 0)
+    minion = (stats.get("MinionDPS", 0) or 0) + (stats.get("MinionDotDPS", 0) or 0)
+    if minion > 0:
+        out["minion"] = minion
+    return {k: round(v, 1) for k, v in out.items() if v > 0}
 
 
 @dataclass
@@ -62,6 +86,7 @@ class StageGuide:
     clear: float = 0.0                                      # mapping clear score
     rating: dict | None = None                              # 1-10, endgame stage only
     utility: list[dict] = field(default_factory=list)       # curses, marks, banners, warcries kept
+    damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
 
 
 DEFAULT_BUDGET = "high"
@@ -74,13 +99,16 @@ def condition_label(var: str) -> str:
     return re.sub(r"(?<!^)([A-Z])", r" \1", name).lower()
 
 
-def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
+def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) -> StageGuide:
     """One stage of a guide. Gear and passives are built for mapping (where players spend most
     of their time); then a bossing setup is picked: a support swap, or a separate boss skill
     (on weapon set 2 when it needs a different weapon).
 
     Order: conditions -> gear -> passives -> supports -> spirit -> gear again -> final supports.
     Conditions (auto_config) are re-checked whenever the build changes enough to affect them.
+
+    progress, if given, receives one dict per real step ({"stage", "step", "label", "dps"}) so the
+    website can show the work as it happens.
     """
     stage = make_stage(stage_key, spec.get("budget", DEFAULT_BUDGET))
     weapon = dict(weapon_type=spec["weapon_type"], weapon_subtype=spec.get("weapon_subtype"),
@@ -112,6 +140,13 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
                 pob.send("set_weapon_set", group=boss_group, set=2)
         shortlist: dict = {}
 
+        def report(step: str, label: str = "", **extra):
+            if progress:
+                progress({"stage": stage_key, "step": step, "label": label,
+                          "dps": round(total_dps(pob.calc(STAT_FIELDS)), 1), **extra})
+
+        report("start", f"{stage.name}: level {stage.level}, {stage.budget}")
+
         def boss_weapon():
             # The swap weapon is scored with the boss skill as the main skill.
             pob.send("set_main", group=boss_group)
@@ -125,10 +160,20 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
         if boss_swap:
             boss_weapon()
+        report("gear", "First gear pass")
         tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals)
+        if progress:
+            for s in tree["steps"]:
+                if s["type"] != "Normal":
+                    progress({"stage": stage_key, "step": "passive", "label": s["node"],
+                              "ascendancy": bool(s.get("ascendancy")), "gain": round(s.get("gain_per_point", 0), 4)})
+        report("tree", f"{sum(s['cost'] for s in tree['steps'])} passive points spent")
         pob.auto_config("mapping")
-        optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
+        first = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
+        report("supports", ", ".join(first[0].supports) if first else "")
         spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
+        if spirit:
+            report("spirit", ", ".join(spirit))
         # Curses, marks, banners, warcries: kept when they raise the main skill's damage. One
         # that needs a weapon the main hand can't use goes on weapon set 2.
         utility = []
@@ -141,6 +186,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
         if boss_swap:
             gear.append(boss_weapon())
+        report("gear", "Gear re-crafted to fit", slots=[g.unique.split(",")[0] if g.unique else g.base for g in gear])
 
         # Bossing setup: a separate boss skill if the build has one, else a support swap.
         pob.set_config(**MODE_CONFIG["bossing"])
@@ -163,7 +209,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         conditions = pob.auto_config("mapping")
         best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
-        stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"])
+        stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"])
         guide = StageGuide(
             stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget,
             supports=best.supports,
@@ -176,6 +222,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             mobility=mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type")),
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
+            damage_split=damage_split(stats),
         )
         if stage_key == "end":
             guide.rating = rate(boss_dps or total_dps(stats), guide.clear, stats.get("TotalEHP", 0))
@@ -188,13 +235,16 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             if p.unique and p.price_note == "price unknown":
                 guide.notes.append(f"{p.unique.split(',')[0]}: price not checked yet")
         log(f"{stage.name}: {guide.dps:,.0f} mapping DPS, {guide.boss_dps:,.0f} boss DPS")
+        if progress:
+            progress({"stage": stage_key, "step": "done", "label": f"{guide.dps:,.0f} mapping DPS",
+                      "dps": round(guide.dps, 1), "boss_dps": round(boss_dps, 1)})
         return guide
 
 
-def build_guide(spec: dict, stages: list[str] | None = None, log=print) -> list[StageGuide]:
+def build_guide(spec: dict, stages: list[str] | None = None, log=print, progress=None) -> list[StageGuide]:
     keys = stages or spec.get("stages") or list(STAGE_DEFS)
     with ThreadPoolExecutor(max_workers=len(keys)) as ex:
-        return list(ex.map(lambda k: build_stage(spec, k, log), keys))
+        return list(ex.map(lambda k: build_stage(spec, k, log, progress), keys))
 
 
 def to_markdown(spec: dict, guides: list[StageGuide]) -> str:

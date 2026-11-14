@@ -11,7 +11,7 @@ FastAPI service around the engine. Jobs run in the background; results are cache
 | POST | `/generate` | `{"damage": ["lightning"], "kinds": ["minion"], "class": "Monk", "budget": "medium", "mode": "balanced"}` -> job; result has `plan.spec` (post to `/guides`) and `options` |
 | POST | `/parse` | `{"text": "lightning minion build for a monk, 5 div"}` -> `request` (fields for `/generate`) and `found` (each phrase and what it was read as). Keyword based, instant, no job |
 | POST | `/generate/{id}/plan` | Feedback: `{"ascendancy": "Martial Artist"}` -> best build with that locked, plus how much damage it gives up. Instant |
-| GET | `/jobs/{id}` | Status (`queued`/`running`/`done`/`failed`), queue position, result |
+| GET | `/jobs/{id}?since=N` | Status (`queued`/`running`/`done`/`failed`), queue position, result. While running: `progress` (steps after the first N: search candidates and their scores, or per-stage gear/passives/supports/spirit with DPS) and `progress_next` |
 
 A spec: `{"class": "Monk", "ascendancy": "Invoker", "skill": "Tempest Flurry", "weapon_type": "Staff", "weapon_subtype": "Warstaff"}`.
 

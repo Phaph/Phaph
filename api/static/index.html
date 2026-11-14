@@ -21,6 +21,7 @@
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
+[hidden] { display: none !important; }
 html, body { margin: 0; }
 body { background: var(--ground); color: var(--ink); font: 15px/1.6 var(--body); }
 .wrap { max-width: 1080px; margin: 0 auto; padding-block: 32px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
@@ -101,6 +102,50 @@ tr.best td:first-child { color: var(--brass); }
 .divider { display: flex; align-items: center; gap: 12px; font: 600 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
 .divider::before, .divider::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
 .lock { display: inline-flex; gap: 8px; align-items: center; }
+/* The workbench: what the optimiser is doing, live. Motion only for real events. */
+.work-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
+.work-head .clock { font: 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.board { display: grid; gap: 8px; }
+.cand { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; align-items: baseline; animation: rise 500ms var(--ease) both; }
+.cand .name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
+.cand .name span { color: var(--muted); }
+.cand .score { font: 13px var(--mono); font-variant-numeric: tabular-nums; color: var(--muted); }
+.cand .bar { grid-column: 1 / -1; height: 3px; background: var(--rule); }
+.cand .bar i { display: block; height: 100%; width: 0; background: var(--muted); transition: width 700ms var(--ease); }
+.cand.best .name, .cand.best .score { color: var(--brass); }
+.cand.best .bar i { background: var(--brass); }
+.lanes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 760px) { .lanes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.lane { border: 1px solid var(--rule); background: #16171a; padding: 12px; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color 600ms var(--ease); }
+.lane .lname { font: 600 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+.lane .ldps { font: 600 22px/1 var(--mono); font-variant-numeric: tabular-nums; }
+.lane .ldps small { font: 11px var(--mono); color: var(--muted); margin-left: 4px; }
+.lane .lstep { font-size: 12px; color: var(--muted); min-height: 2.6em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.lane .pips { display: flex; gap: 3px; }
+.lane .pips i { flex: 1; height: 2px; background: var(--rule); transition: background 500ms var(--ease); }
+.lane .pips i.on { background: var(--muted); }
+.lane.done { border-color: var(--brass); }
+.lane.done .ldps { color: var(--brass); }
+.lane.done .pips i { background: var(--brass); }
+.notables { display: flex; flex-wrap: wrap; gap: 4px; }
+.notable { font: 11px var(--mono); border: 1px solid var(--rule); padding: 2px 6px; color: var(--ink); animation: heat 900ms var(--ease) both; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.notable.asc { border-color: #5a4a2c; }
+@keyframes heat { 0% { opacity: 0; background: rgba(224,112,58,.45); border-color: var(--fire); }
+  25% { opacity: 1; background: rgba(224,112,58,.35); border-color: var(--fire); } 100% { opacity: 1; background: transparent; } }
+@keyframes rise { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+/* Damage has a colour. */
+.mix { display: grid; gap: 6px; }
+.split { display: flex; height: 10px; gap: 2px; }
+.split i { min-width: 3px; transition: flex-grow 800ms var(--ease); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 12px var(--mono); color: var(--muted); }
+.legend b { font-weight: 600; }
+.dmg-physical { --c: var(--phys); } .dmg-fire { --c: var(--fire); } .dmg-cold { --c: var(--cold); }
+.dmg-lightning { --c: var(--light); } .dmg-chaos { --c: var(--chaos); } .dmg-minion { --c: #8a8478; }
+.split i { background: var(--c); }
+.dmg-minion.split-seg { background: repeating-linear-gradient(135deg, #8a8478 0 3px, #5d5850 3px 6px); }
+.legend .dot { display: inline-block; width: 8px; height: 8px; background: var(--c); margin-right: 6px; vertical-align: 0; }
+.stat b.tinted { color: var(--c); }
+@media (prefers-reduced-motion: reduce) { .cand, .notable { animation: none; } .cand .bar i, .split i, .lane, .lane .pips i { transition: none; } }
 footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; display: grid; gap: 6px; }
 @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
 </style>
@@ -145,6 +190,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     <div class="status" id="status" hidden></div>
   </form>
 
+  <section class="panel" id="work" hidden aria-live="polite" aria-busy="true"></section>
   <section class="panel" id="options" hidden></section>
   <section class="panel" id="compare" hidden></section>
   <section class="panel" id="guide" hidden></section>
@@ -288,17 +334,151 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     s.innerHTML = text ? `${busy ? '<span class="spinner" aria-hidden="true"></span>' : ""}<span>${text}</span>` : "";
   }
 
-  async function waitFor(job, label, onTick) {
+  // Polls a job. While it runs, every new progress step goes to onProgress (the workbench).
+  async function waitFor(job, label, onTick, onProgress) {
     const t0 = Date.now();
+    let since = 0;
     while (job.status === "queued" || job.status === "running") {
       const secs = Math.round((Date.now() - t0) / 1000);
       const queue = job.status === "queued" && job.position > 1 ? ` · ${job.position - 1} ahead of you` : "";
-      onTick(`${label} · ${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}${queue}`);
-      await new Promise(r => setTimeout(r, 3000));
-      job = await api(`/jobs/${job.id}`);
+      onTick(`${label} · ${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}${queue}`, job.status);
+      if (job.progress && onProgress) { job.progress.forEach(onProgress); since = job.progress_next ?? since; }
+      await new Promise(r => setTimeout(r, 2000));
+      job = await api(`/jobs/${job.id}?since=${since}`);
     }
     if (job.status === "failed") throw new Error(job.error || "The build failed.");
     return job;
+  }
+
+  // ---------- The workbench: shows the optimiser's real steps while a job runs ----------
+  const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const STAGE_NAMES = { leveling: "Leveling", early: "Early maps", mid: "Mid maps", end: "Endgame" };
+  const STEP_ORDER = ["start", "gear", "tree", "supports", "spirit", "done"];
+  const STEP_TEXT = { start: "Setting up", gear: "Crafting gear", tree: "Passives allocated", supports: "Supports picked",
+    spirit: "Spirit filled", done: "Finished" };
+
+  function tween(el, to, suffix = "") {
+    const from = +el.dataset.v || 0;
+    el.dataset.v = to;
+    if (REDUCE || !from) { el.innerHTML = fmt(to) + suffix; return; }
+    const t0 = performance.now(), dur = 800;
+    const ease = t => 1 - Math.pow(1 - t, 3);
+    const step = now => {
+      const t = Math.min(1, (now - t0) / dur);
+      if (+el.dataset.v !== to) return;   // a newer value took over
+      el.innerHTML = fmt(from + (to - from) * ease(t)) + suffix;
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  }
+
+  const work = {
+    el: () => $("work"),
+    clock(text) { const c = this.el().querySelector(".clock"); if (c) c.textContent = text; },
+    hide() { this.el().hidden = true; this.el().innerHTML = ""; },
+
+    startSearch() {
+      this.cands = new Map(); this.scored = 0; this.total = 0;
+      const w = this.el(); w.hidden = false;
+      w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">At the bench</span>
+          <h2>Testing every skill, weapon and ascendancy that fits</h2></div><span class="clock"></span></div>
+        <p class="muted" id="roundLabel">Loading Path of Building…</p>
+        <div class="board" id="board"></div>`;
+    },
+    round(e) {
+      this.total += e.count || 0;
+      $("roundLabel").textContent = e.round === 1
+        ? `Round 1: each skill on each weapon it can use, ${e.count} options. No passives yet, just raw power.`
+        : `Round 2: the best skills on each ascendancy, with passive trees spent. ${e.count} options.`;
+    },
+    candidate(e) {
+      this.scored++;
+      const key = `${e.round}|${e.skill}|${e.weapon}|${e.ascendancy || ""}`;
+      this.cands.set(key, e);
+      // Round 2 scores include passives, so they replace round 1 on the board once they arrive.
+      const pool = [...this.cands.values()];
+      const rnd = Math.max(...pool.map(c => c.round));
+      const top = pool.filter(c => c.round === rnd).sort((a, b) => b.score - a.score).slice(0, 8);
+      const best = top[0]?.score || 1;
+      const board = $("board");
+      const keep = new Set(top.map(c => `${c.round}|${c.skill}|${c.weapon}|${c.ascendancy || ""}`));
+      [...board.children].forEach(r => { if (!keep.has(r.dataset.key)) r.remove(); });
+      top.forEach((c, i) => {
+        const k = `${c.round}|${c.skill}|${c.weapon}|${c.ascendancy || ""}`;
+        let row = [...board.children].find(r => r.dataset.key === k);
+        if (!row) {
+          row = document.createElement("div"); row.className = "cand"; row.dataset.key = k;
+          row.innerHTML = `<span class="name">${esc(c.skill)} <span>· ${esc(c.ascendancy || c.weapon)}${c.ascendancy ? ` · ${esc(c.weapon)}` : ""}</span></span>
+            <span class="score"></span><span class="bar"><i></i></span>`;
+        }
+        board.appendChild(row);   // re-append in rank order
+        row.classList.toggle("best", i === 0);
+        row.querySelector(".score").textContent = fmt(c.score);
+        requestAnimationFrame(() => { row.querySelector(".bar i").style.width = `${Math.max(2, 100 * c.score / best)}%`; });
+      });
+    },
+
+    startGuide(stages) {
+      const w = this.el(); w.hidden = false;
+      w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">At the bench</span>
+          <h2>Building all four stages</h2></div><span class="clock"></span></div>
+        <p class="muted">Each stage gets its own gear, passive tree, supports and spirit, all at your budget. Passives appear as they're picked.</p>
+        <div class="lanes">${stages.map(k => `<div class="lane" data-stage="${k}">
+          <span class="lname">${STAGE_NAMES[k] || k}</span>
+          <span class="ldps" data-v="0">–</span>
+          <span class="pips">${STEP_ORDER.slice(1).map(() => "<i></i>").join("")}</span>
+          <span class="lstep">Waiting for a core…</span>
+          <div class="notables"></div></div>`).join("")}</div>`;
+      w.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
+    },
+    guideEvent(e) {
+      const lane = this.el().querySelector(`.lane[data-stage="${e.stage}"]`);
+      if (!lane) return;
+      if (e.step === "passive") {
+        const box = lane.querySelector(".notables");
+        if (box.children.length < 14) {
+          const n = document.createElement("span");
+          n.className = "notable" + (e.ascendancy ? " asc" : ""); n.textContent = e.label; n.title = e.label;
+          // Passives arrive a poll at a time; stagger them so each one lands on its own.
+          const now = performance.now();
+          if (now - (lane._t || 0) > 1500) lane._q = 0;
+          lane._t = now;
+          n.style.animationDelay = `${(lane._q++ || 0) * 140}ms`;
+          box.appendChild(n);
+        } else {
+          let more = box.querySelector(".more");
+          if (!more) { more = document.createElement("span"); more.className = "notable more"; box.appendChild(more); }
+          more.dataset.n = (+more.dataset.n || 0) + 1; more.textContent = `+${more.dataset.n} more`;
+        }
+        return;
+      }
+      if (e.dps) tween(lane.querySelector(".ldps"), e.dps, "<small>DPS</small>");
+      const idx = STEP_ORDER.indexOf(e.step);
+      lane.querySelectorAll(".pips i").forEach((p, i) => p.classList.toggle("on", i < idx));
+      lane.querySelector(".lstep").textContent = e.step === "start" ? e.label
+        : `${STEP_TEXT[e.step] || e.step}${e.label && e.step !== "done" ? `: ${e.label}` : ""}`;
+      if (e.step === "done") lane.classList.add("done");
+    },
+  };
+
+  // Damage mix: a bar split by damage type, the build's colours at a glance.
+  const DMG_LABEL = { physical: "Physical", fire: "Fire", cold: "Cold", lightning: "Lightning", chaos: "Chaos", minion: "Minions" };
+  function mixParts(split) {
+    const parts = Object.entries(split || {}).filter(([, v]) => v > 0).sort((a, b) => b[1] - a[1]);
+    const total = parts.reduce((s, [, v]) => s + v, 0);
+    return total ? parts.map(([k, v]) => [k, v / total]) : [];
+  }
+  function mixHtml(split) {
+    const parts = mixParts(split);
+    if (!parts.length) return "";
+    return `<div class="mix" aria-label="Damage by type">
+      <div class="split">${parts.map(([k, f]) => `<i class="dmg-${k} split-seg" style="flex-grow:${f.toFixed(4)}" title="${DMG_LABEL[k] || k} ${pct(f)}"></i>`).join("")}</div>
+      <div class="legend">${parts.map(([k, f]) => `<span class="dmg-${k}"><span class="dot"></span>${DMG_LABEL[k] || k} <b>${pct(f)}</b></span>`).join("")}</div></div>`;
+  }
+  // The colour of a DPS figure: its main damage type, if one clearly leads.
+  function dpsClass(split) {
+    const [top] = mixParts(split);
+    return top && top[1] >= 0.6 && top[0] !== "minion" ? `tinted dmg-${top[0]}` : "";
   }
 
   $("form").onsubmit = async e => {
@@ -313,18 +493,29 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
     try {
       let job = await api("/generate", req);
-      job = await waitFor(job, job.cached ? "Loading" : "Searching every skill, weapon and ascendancy that fits (about 8-10 minutes for a new idea)", t => setStatus(t, true));
+      if (!job.cached) work.startSearch();
+      job = await waitFor(job, job.cached ? "Loading" : "About 8-10 minutes for a new idea",
+        (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
+        e => e.step === "round" ? work.round(e) : e.step === "candidate" && work.candidate(e));
+      work.hide(); setStatus("");
       state.gen = job.result; state.genJob = job.id;
       renderOptions();
       await buildGuide(job.result.plan);
     } catch (err) {
+      work.hide();
       setStatus(`<span class="error">${esc(err.message)}</span>`);
     } finally { $("go").disabled = false; }
   };
 
   async function buildGuide(plan) {
-    let job = await api("/guides", { spec: plan.spec, budget: plan.spec.budget || state.budget, stages: ["leveling", "early", "mid", "end"] });
-    job = await waitFor(job, job.cached ? "Loading guide" : "Building all four stages: gear, passives, supports (a few minutes)", t => setStatus(t, true));
+    const stages = ["leveling", "early", "mid", "end"];
+    let job = await api("/guides", { spec: plan.spec, budget: plan.spec.budget || state.budget, stages });
+    if (!job.cached) work.startGuide(stages);
+    try {
+      job = await waitFor(job, job.cached ? "Loading guide" : "A few minutes",
+        (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
+        e => work.guideEvent(e));
+    } finally { work.hide(); }
     setStatus("");
     renderGuide(plan, job.result);
   }
@@ -411,12 +602,13 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = `
       <div class="stats">
-        <div class="stat"><b>${fmt(s.dps)}</b><span>Mapping DPS</span></div>
+        <div class="stat"><b class="${dpsClass(s.damage_split)}">${fmt(s.dps)}</b><span>Mapping DPS</span></div>
         <div class="stat"><b>${s.boss_dps ? fmt(s.boss_dps) : "-"}</b><span>Boss DPS</span></div>
         <div class="stat"><b>${fmt(st.Life)}</b><span>Life</span></div>
         <div class="stat"><b>${fmt(st.TotalEHP)}</b><span>Effective HP</span></div>
         <div class="stat"><b>${res}</b><span>Fire / cold / lightning / chaos res</span></div>
       </div>
+      ${mixHtml(s.damage_split)}
       <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
       <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
       <div style="display:grid;gap:8px"><h3>Gear, affixes in the order to buy them</h3>
