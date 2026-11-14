@@ -1,3 +1,5 @@
 engine/vendor/
 __pycache__/
 *.pyc
+.venv/
+*.sqlite3
