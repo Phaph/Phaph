@@ -255,6 +255,13 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
 /* Sparks: a canvas over the page, used only when something is struck. */
 #sparks { position: fixed; inset: 0; pointer-events: none; z-index: 5; width: 100%; height: 100%; }
 
+/* ---------- Class sigils: an ambient motif behind the build ---------- */
+.buildhead { position: relative; display: grid; gap: 14px; padding: 8px 0 4px; isolation: isolate; }
+.buildhead > *:not(canvas) { position: relative; z-index: 1; }
+.sigil-cv { position: absolute; z-index: 0; top: -40px; bottom: -20px; left: -16px; right: -16px; width: calc(100% + 32px); height: calc(100% + 60px); pointer-events: none;
+  -webkit-mask-image: radial-gradient(ellipse 80% 75% at 65% 50%, #000 35%, transparent 80%); mask-image: radial-gradient(ellipse 80% 75% at 65% 50%, #000 35%, transparent 80%); }
+.buildhead .motif { font: italic 15px var(--body); color: var(--faint); }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -539,10 +546,95 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     requestAnimationFrame(step);
   }
 
+
+  // ---------- Class sigils: an ambient motif behind the build, drawn from the class's own mechanics ----------
+  // Low motion: under 50 faint particles, paused off-screen and in hidden tabs, one still frame for reduced motion.
+  // It reacts only to real events: a flare when a stage finishes, a pulse when the build is done.
+  const SIGILS = {
+    Monk: { motif: "Wind rings, chained lightning", color: "--light", draw: "monk" },
+    Shadow: { motif: "Smoke and sweeping vision cones", color: "--chaos", draw: "shadow" },
+    Duelist: { motif: "Crossing blade arcs", color: "--phys", draw: "duelist" },
+    Witch: { motif: "Rising embers, bone dust", color: "--chaos", draw: "witch" },
+    Warrior: { motif: "Stone fracture lines", color: "--phys", draw: "warrior" },
+    Sorceress: { motif: "Orbiting runes", color: "--cold", draw: "sorc" },
+    Ranger: { motif: "Arrow trails", color: "--phys", draw: "ranger" },
+    Huntress: { motif: "Spear thrusts through falling leaves", color: "--fire", draw: "huntress" },
+    Mercenary: { motif: "Crossbow bolt grid", color: "--fire", draw: "merc" },
+    Druid: { motif: "Branching roots", color: "--phys", draw: "druid" },
+  };
+  const cssVar = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  function rgba(hex, a) { const n = parseInt(hex.replace("#", ""), 16); return `rgba(${n >> 16},${n >> 8 & 255},${n & 255},${Math.max(0, a)})`; }
+  function sigil(canvas, className) {
+    const conf = SIGILS[className];
+    if (!canvas || !conf) return { pulse() {}, flare() {}, stop() {} };
+    const cx = canvas.getContext("2d");
+    let W = 0, H = 0, t = 0, parts = [], visible = true, alive = true, boost = 0, rings = [], mouse = { x: -1e4, y: -1e4 };
+    const rnd = (a, b) => a + Math.random() * (b - a);
+    const col = cssVar(conf.color) || "#d0a45a", ink = cssVar("--ink"), phys = cssVar("--phys"), muted = cssVar("--muted");
+    // Bolts and cracks are re-rolled a few times a second, not every frame, so they hold still long enough to read.
+    let bolt = [], cracks = [], rollT = -1;
+    function size() {
+      const r = canvas.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
+      W = Math.max(1, r.width); H = Math.max(1, r.height); canvas.width = W * d; canvas.height = H * d; cx.setTransform(d, 0, 0, d, 0, 0);
+    }
+    function seed() { parts = Array.from({ length: 44 }, () => ({ x: rnd(0, W), y: rnd(0, H), a: rnd(0, 6.28), s: rnd(.2, 1) })); }
+    function reroll() {
+      bolt = []; let x = W * .72, y = 0; bolt.push([x, y]); while (y < H * .48) { x += rnd(-16, 16); y += rnd(10, 22); bolt.push([x, y]); }
+      cracks = Array.from({ length: 9 }, (_, i) => { let a = i * .7 + .3, x = W * .7, y = H * .62; const pts = [[x, y]]; for (let j = 0; j < 9; j++) { a += rnd(-.35, .35); x += Math.cos(a) * 15; y += Math.sin(a) * 15; pts.push([x, y]); } return pts; });
+    }
+    const A = a => a * (1 + boost * 1.6);   // everything brightens briefly on a pulse or flare
+    const draws = {
+      monk(c) {
+        for (let i = 0; i < 6; i++) { const r = (t * 22 + i * 60) % 360; c.strokeStyle = rgba(col, A(.2 * (1 - r / 360))); c.lineWidth = 1.2; c.beginPath(); c.arc(W * .72, H * .48, r, 0, 6.28); c.stroke(); }
+        if (Math.floor(t * 1.3) % 4 === 0 || boost > .3) { c.strokeStyle = rgba(col, A(.35)); c.lineWidth = 1.3; c.beginPath(); bolt.forEach(([x, y], i) => i ? c.lineTo(x, y) : c.moveTo(x, y)); c.stroke(); }
+      },
+      shadow(c) {
+        const eyes = [[W * .78, H * .2, Math.sin(t * .5) * .6 + 2.4], [W * .2, H * .85, Math.sin(t * .4 + 2) * .5 - .6]];
+        for (const [ex, ey, ang] of eyes) { const g = c.createRadialGradient(ex, ey, 0, ex, ey, W * .55); g.addColorStop(0, rgba(ink, A(.07))); g.addColorStop(1, rgba(ink, 0)); c.fillStyle = g; c.beginPath(); c.moveTo(ex, ey); c.arc(ex, ey, W * .55, ang - .32, ang + .32); c.closePath(); c.fill(); }
+        for (const p of parts) { p.x += Math.cos(p.a) * .25; p.y -= .15 * p.s; if (p.y < -20) p.y = H + 20; const near = Math.hypot(p.x - mouse.x, p.y - mouse.y) < 90; c.fillStyle = rgba(col, A(near ? .22 : .07)); c.beginPath(); c.arc(p.x, p.y, 18 * p.s, 0, 6.28); c.fill(); }
+      },
+      duelist(c) { for (let i = 0; i < 3; i++) { const ph = (t * .6 + i / 3) % 1, a = -2.4 + ph * 1.6 + i; c.strokeStyle = rgba(col, A(.26 * Math.sin(ph * 3.14))); c.lineWidth = 2; c.beginPath(); c.arc(W * .66, H * .55, H * (.25 + i * .09), a, a + .9); c.stroke(); } },
+      witch(c) { for (const p of parts) { p.y -= .4 * p.s; p.x += Math.sin(t + p.a) * .3; if (p.y < 0) { p.y = H; p.x = rnd(0, W); } c.fillStyle = rgba(col, A(.32 * p.s)); c.fillRect(p.x, p.y, 2, 2); } },
+      warrior(c) { c.strokeStyle = rgba(col, A(.2)); c.lineWidth = 1; cracks.forEach((pts, i) => { const n = Math.round((Math.sin(t * .8 + i) * .5 + .5) * (pts.length - 1)); c.beginPath(); pts.slice(0, n + 1).forEach(([x, y], j) => j ? c.lineTo(x, y) : c.moveTo(x, y)); c.stroke(); }); },
+      sorc(c) { for (let i = 0; i < 7; i++) { const a = t * .35 + i * .9, r = H * (.18 + (i % 3) * .1); const x = W * .7 + Math.cos(a) * r * 1.4, y = H * .5 + Math.sin(a) * r; c.strokeStyle = rgba(col, A(.3)); c.strokeRect(x - 5, y - 5, 10, 10); c.beginPath(); c.moveTo(x - 5, y); c.lineTo(x + 5, y); c.stroke(); } },
+      ranger(c) { for (const p of parts.slice(0, 14)) { p.x += 5 * p.s; if (p.x > W + 40) { p.x = -40; p.y = rnd(0, H); } c.strokeStyle = rgba(col, A(.24)); c.beginPath(); c.moveTo(p.x - 40, p.y); c.lineTo(p.x, p.y); c.stroke(); } },
+      huntress(c) { for (const p of parts.slice(0, 22)) { p.y += .5 * p.s; p.x += Math.sin(t + p.a) * .4; if (p.y > H) p.y = -10; c.fillStyle = rgba(phys, A(.13)); c.beginPath(); c.ellipse(p.x, p.y, 4, 2, p.a + t, 0, 6.28); c.fill(); } const ph = (t * .5) % 1; c.strokeStyle = rgba(col, A(.34 * (1 - ph))); c.lineWidth = 2; c.beginPath(); c.moveTo(W * .3, H * .5); c.lineTo(W * .3 + ph * W * .55, H * .5); c.stroke(); },
+      merc(c) { c.strokeStyle = rgba(muted, .06); for (let x = 0; x < W; x += 28) { c.beginPath(); c.moveTo(x, 0); c.lineTo(x, H); c.stroke(); } for (const p of parts.slice(0, 8)) { p.y += 6 * p.s; if (p.y > H) { p.y = -30; p.x = Math.round(rnd(0, W) / 28) * 28; } c.strokeStyle = rgba(col, A(.34)); c.beginPath(); c.moveTo(p.x, p.y - 24); c.lineTo(p.x, p.y); c.stroke(); } },
+      druid(c) { c.strokeStyle = rgba(col, A(.18)); const grow = (x, y, a, len, d) => { if (d > 6) return; const x2 = x + Math.cos(a) * len, y2 = y + Math.sin(a) * len; c.beginPath(); c.moveTo(x, y); c.lineTo(x2, y2); c.stroke(); const sway = Math.sin(t * .6 + d) * .08; grow(x2, y2, a - .38 + sway, len * .76, d + 1); grow(x2, y2, a + .34 + sway, len * .72, d + 1); }; grow(W * .72, H, -1.57, H * .22, 0); },
+    };
+    function paint() {
+      cx.clearRect(0, 0, W, H);
+      if (Math.floor(t * 3) !== rollT) { rollT = Math.floor(t * 3); reroll(); }
+      draws[conf.draw](cx);
+      rings = rings.filter(r => r.a > 0.01);
+      for (const r of rings) { r.r += r.v; r.a *= .955; cx.strokeStyle = rgba(col, r.a); cx.lineWidth = r.w; cx.beginPath(); cx.arc(W * .7, H * .5, r.r, 0, 6.28); cx.stroke(); }
+      boost *= .96;
+    }
+    function frame() {
+      if (!alive) return;
+      if (visible && !document.hidden) { t += 1 / 60; paint(); }
+      requestAnimationFrame(frame);
+    }
+    const ro = new ResizeObserver(() => { size(); seed(); reroll(); if (REDUCE) paint(); });
+    ro.observe(canvas);
+    const io = new IntersectionObserver(es => es.forEach(e => visible = e.isIntersecting));
+    io.observe(canvas);
+    canvas.parentElement.addEventListener("pointermove", e => { const r = canvas.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+    size(); seed(); reroll();
+    if (REDUCE) paint(); else requestAnimationFrame(frame);
+    return {
+      motif: conf.motif,
+      flare() { if (REDUCE) return; boost = Math.min(1, boost + .6); rings.push({ r: 10, v: 4, a: .35, w: 1.5 }); },
+      pulse() { if (REDUCE) return; boost = 1; rings.push({ r: 8, v: 5, a: .55, w: 2.5 }, { r: 2, v: 3.2, a: .4, w: 1.2 }); },
+      stop() { alive = false; ro.disconnect(); io.disconnect(); },
+    };
+  }
+  let workSigil = null, guideSigil = null;
+
   const work = {
     el: () => $("work"),
     clock(text) { const c = this.el().querySelector(".clock"); if (c) c.textContent = text; },
-    hide() { this.el().hidden = true; this.el().innerHTML = ""; },
+    hide() { workSigil?.stop(); workSigil = null; this.el().hidden = true; this.el().innerHTML = ""; },
 
     startSearch() {
       this.cands = new Map(); this.scored = 0; this.total = 0;
@@ -590,15 +682,17 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     startGuide(stages, opt = {}) {
       const w = this.el(); w.hidden = false;
       const names = opt.names || STAGE_NAMES;
-      w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">On the anvil</span>
+      w.innerHTML = `<div class="buildhead"><canvas class="sigil-cv" aria-hidden="true"></canvas>
+        <div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">On the anvil</span>
           <h2>${opt.title || "Four anvils, one build"}</h2></div><span class="clock"></span></div>
-        <p class="muted">${opt.blurb || "Leveling, early maps, mid maps and endgame are forged side by side: gear, passives, supports and spirit, each at your budget. Passives drop in as they're picked."}</p>
+        <p class="muted">${opt.blurb || "Leveling, early maps, mid maps and endgame are forged side by side: gear, passives, supports and spirit, each at your budget. Passives drop in as they're picked."}</p></div>
         <div class="lanes">${stages.map(k => `<div class="lane" data-stage="${k}">
           <span class="lname">${esc(names[k] || k)}</span>
           <span class="ldps" data-v="0">–</span>
           <span class="pips">${STEP_ORDER.slice(1).map(() => "<i></i>").join("")}</span>
           <span class="lstep">Waiting for a free anvil…</span>
           <div class="notables"></div></div>`).join("")}</div>`;
+      workSigil?.stop(); workSigil = opt.cls ? sigil(w.querySelector(".sigil-cv"), opt.cls) : null;
       w.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
     },
     guideEvent(e) {
@@ -628,7 +722,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       lane.querySelector(".lstep").textContent = e.step === "start" ? e.label
         : `${STEP_TEXT[e.step] || e.step}${e.label && e.step !== "done" ? `: ${e.label}` : ""}`;
       lane.classList.toggle("hot", e.step !== "done");
-      if (e.step === "done") { lane.classList.add("done"); sparks(lane.querySelector(".ldps"), 22, 0.8); }
+      if (e.step === "done") { lane.classList.add("done"); sparks(lane.querySelector(".ldps"), 22, 0.8); workSigil?.flare(); }
     },
   };
 
@@ -713,7 +807,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
   async function buildGuide(plan) {
     const stages = ["leveling", "early", "mid", "end"];
     let job = await api("/guides", { spec: plan.spec, budget: plan.spec.budget || state.budget, stages });
-    if (!job.cached) work.startGuide(stages);
+    if (!job.cached) work.startGuide(stages, { cls: plan.spec.class });
     try {
       job = await waitFor(job, job.cached ? "Loading guide" : "A few minutes",
         (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
@@ -836,15 +930,18 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
 
   function renderGuide(plan, res) {
     state.guide = res; state.plan = plan; shownGear = null; shownStage = null;
+    guideSigil?.stop(); guideSigil = null;
     const stages = res.stages;
     const end = stages.find(s => s.stage === "end") || stages[stages.length - 1];
     $("guide").hidden = false;
-    $("guide").innerHTML = `
-      <div style="display:grid;gap:6px"><span class="eyebrow">Your build</span><div class="skillhead">${img(gemUrl(plan.spec.skill))}<h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2></div>
+    const motif = SIGILS[plan.spec.class]?.motif;
+    $("guide").innerHTML = `<div class="buildhead"><canvas class="sigil-cv" aria-hidden="true"></canvas>
+      <div style="display:grid;gap:6px"><span class="eyebrow">Your build${plan.spec.class ? ` · ${esc(plan.spec.class)}` : ""}</span><div class="skillhead">${img(gemUrl(plan.spec.skill))}<h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2></div>
+      ${motif ? `<span class="motif">${esc(motif)}</span>` : ""}
       ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}</div>
       ${end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
         <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
-        <p class="muted" style="font-size:13px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}
+        <p class="muted" style="font-size:15px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}</div>
       <div class="tabs" id="stageTabs" role="tablist"></div>
       <div id="stageBody" style="display:grid;gap:18px"></div>`;
     stages.forEach((s, i) => {
@@ -854,6 +951,8 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       $("stageTabs").appendChild(b);
       if (s === end) { b.setAttribute("aria-pressed", "true"); renderStage(plan, s); }
     });
+    guideSigil = sigil($("guide").querySelector(".sigil-cv"), plan.spec.class);
+    setTimeout(() => guideSigil?.pulse(), 450);
     $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
