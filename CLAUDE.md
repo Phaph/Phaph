@@ -1,0 +1,27 @@
+# PoE 2 build optimizer
+
+A free web app for Path of Exile 2. A player types a prompt like "lightning minion build for a monk", picks a budget, and gets the highest DPS version of that build, or a comparison of up to 3 builds. Builds come from real builds online and are tested in Path of Building (PoB) run headless.
+
+Owner: Kyle. Day-one target: PoE 2 1.0 (Dec 11, 2026). First real test case is a Shadow dual wield dagger bleed build (see BUILD.md).
+
+## Where things are
+- `engine/`: headless PoB engine and optimisers. Read `engine/README.md` first.
+  - `runner.lua` (JSON commands inside PoB), `pob.py` (client), `optimize.py` (supports),
+    tree optimiser (`optimise_tree` in runner.lua), `gear.py` (rare crafting per slot and budget),
+    `guide.py` (Leveling / Early / Mid / Endgame guides), `compare.py` (1-3 builds, pros/cons).
+  - `engine/vendor/` is not in git. Run `engine/setup.sh` to build it (needs bash, git, gcc; use WSL on Windows).
+- `PC_TODO.md`: the current to-do list for Kyle and Claude. Start here.
+- `BUILD.md`: pre-launch notes on the Shadow dual wield bleed build.
+
+## Decisions already made
+- Free app, not paid.
+- Budget is picked up front (free / budget <=5 div / medium 5-30 / high 30-100 / unlimited) and caps every stage's gear.
+- Every build gets 4 stages: Leveling, Early maps, Mid maps, Endgame.
+- Compare takes up to 3 builds and shows DPS numbers plus basic pros and cons.
+- Hosting plan: one Hetzner server (website + PoB workers), Claude API for prompts and write-ups.
+- Total DPS = hit DPS + damage over time (PoB's CombinedDPS drops DoT for some skills).
+
+## Working rules
+- Ask Kyle before publishing anything (Mobalytics pages, deploys).
+- Never put API keys in chat or in the repo.
+- The PoE sites (poe.ninja, poe2db, Mobalytics) were blocked in the cloud environment; they should work from the PC.
