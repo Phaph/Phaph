@@ -1,18 +1,18 @@
-# PoE 2 build optimizer: API + headless Path of Building engine in one image.
+# PoE 2 build optimizer: API + headless Path of Building engine.
+
+# Stage 1: build PoB + LuaJIT + lua-utf8. The full Python image already has git, make and gcc.
+FROM python:3.12 AS build
+WORKDIR /app
+COPY engine/setup.sh engine/setup.sh
+RUN engine/setup.sh \
+ && rm -rf engine/vendor/LuaJIT/.git engine/vendor/luautf8 engine/vendor/PathOfBuilding-PoE2/.git
+
+# Stage 2: slim runtime.
 FROM python:3.12-slim
-
-RUN apt-get update \
- && apt-get install -y --no-install-recommends git make gcc libc6-dev ca-certificates \
- && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-
-# Build PoB + LuaJIT + lua-utf8 into engine/vendor (cached layer unless setup.sh changes).
-COPY engine/setup.sh engine/setup.sh
-RUN engine/setup.sh
-
+COPY --from=build /app/engine/vendor engine/vendor
 COPY engine engine
 COPY api api
 

@@ -136,7 +136,8 @@ class PoB:
 
     def calc(self, fields: list[str] | None = None) -> dict:
         kwargs = {"fields": fields} if fields else {}
-        return self.send("calc", **kwargs)["output"]
+        out = self.send("calc", **kwargs)["output"]
+        return out if isinstance(out, dict) else {}  # dkjson sends an empty table as []
 
     def warnings(self) -> list[str]:
         w = self.send("calc", fields=["TotalDPS"]).get("warnings")
