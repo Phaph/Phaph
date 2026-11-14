@@ -5,6 +5,7 @@ Endpoints:
   GET  /catalog              classes, ascendancies, skills, weapon types, budgets, stages
   POST /guides               build guide for one spec -> job
   POST /compare              compare 1-3 specs at a budget -> job
+  POST /parse                prompt text -> /generate request (instant, keyword based)
   GET  /jobs/{job_id}        job status and result
 
 Jobs run in the background (each one starts its own PoB processes). Results are cached in
@@ -78,6 +79,10 @@ class GenerateRequest(BaseModel):
     goals: list[Literal["movement", "rarity", "tanky"]] = Field(default_factory=list)  # beyond damage
 
     model_config = {"populate_by_name": True}
+
+
+class ParseRequest(BaseModel):
+    text: str = Field(..., max_length=500)
 
 
 class PlanRequest(BaseModel):
@@ -253,6 +258,15 @@ def get_job(job_id: str, request: Request):
     if not job:
         raise HTTPException(404, "No such job")
     return job
+
+
+@app.post("/parse")
+def parse(req: ParseRequest, request: Request):
+    """Prompt mode: "lightning minion build for a monk, 5 div" -> the fields for POST /generate, plus what each
+    recognised phrase was read as. No job and no PoB work, so the website can call it as the player types."""
+    from prompt import parse_prompt
+
+    return parse_prompt(req.text, request.app.state.catalog)
 
 
 @app.post("/generate")

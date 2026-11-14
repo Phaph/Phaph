@@ -150,3 +150,13 @@ def test_client_id_prefers_cloudflare_header():
     assert _client(req({"cf-connecting-ip": "203.0.113.7", "x-forwarded-for": "1.2.3.4, 203.0.113.7"})) == "203.0.113.7"
     assert _client(req({"x-forwarded-for": "198.51.100.2, 10.0.0.1"})) == "198.51.100.2"
     assert _client(req({})) == "172.18.0.3"
+
+
+def test_parse_prompt(client):
+    out = client.post("/parse", json={"text": "lightning minion build for a monk, 5 div"}).json()
+    assert out["request"]["class"] == "Monk"
+    assert out["request"]["damage"] == ["lightning"] and out["request"]["kinds"] == ["minion"]
+    assert out["request"]["budget"] == "budget"
+    # The parsed request fits /generate's schema as is.
+    from api.app import GenerateRequest
+    GenerateRequest.model_validate(out["request"])

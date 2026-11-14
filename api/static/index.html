@@ -91,6 +91,16 @@ tr.best td:first-child { color: var(--brass); }
 .code { display: flex; gap: 8px; align-items: center; min-width: 0; }
 .code input { flex: 1; min-width: 0; background: var(--slate2); border: 1px solid var(--rule); border-radius: 2px; padding: 7px 10px; font: 12px var(--mono); color: var(--muted); }
 .chip.small { padding: 4px 10px; }
+.prompt { display: grid; gap: 10px; }
+.prompt textarea { width: 100%; min-height: 64px; resize: vertical; background: var(--slate2); border: 1px solid var(--rule); border-radius: 2px; padding: 12px 14px; font: 17px/1.45 var(--body); color: var(--ink); }
+.prompt textarea::placeholder { color: var(--muted); opacity: .7; }
+.prompt textarea:focus { border-color: var(--brass); outline: none; }
+.readas { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 26px; font: 12px var(--mono); color: var(--muted); }
+.tag { border: 1px solid var(--rule); border-radius: 2px; padding: 3px 8px; color: var(--ink); background: #16171a; }
+.tag i { font-style: normal; color: var(--muted); }
+.divider { display: flex; align-items: center; gap: 12px; font: 600 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.divider::before, .divider::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
+.lock { display: inline-flex; gap: 8px; align-items: center; }
 footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; display: grid; gap: 6px; }
 @media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
 </style>
@@ -99,11 +109,17 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 <div class="wrap">
   <header style="display:grid;gap:10px">
     <span class="eyebrow">Path of Exile 2 · free build forge</span>
-    <h1>Pick a budget and an idea. Get its strongest version.</h1>
+    <h1>Describe a build. Get its strongest version.</h1>
     <p class="muted" style="max-width:64ch">Whetstone tests thousands of versions of your build in Path of Building's damage math: skills, supports, passives, gear, spirit and curses. You get the best one, four stages from leveling to endgame, and a rating against other builds.</p>
   </header>
 
   <form class="panel" id="form" novalidate>
+    <div class="prompt">
+      <label class="eyebrow" for="prompt">Describe your build</label>
+      <textarea id="prompt" rows="2" maxlength="500" placeholder="lightning minion build for a monk, 5 div"></textarea>
+      <div class="readas" id="readas" aria-live="polite"><span>Name a damage type, skill, class or ascendancy, weapon and budget. The options below fill in as you type.</span></div>
+    </div>
+    <div class="divider">or pick, and fine-tune</div>
     <div class="field">
       <span class="label">1. Budget</span>
       <div class="rungs" id="rungs" role="group" aria-label="Budget"></div>
@@ -114,10 +130,15 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     </div>
     <div class="row">
       <div class="field"><label for="ailment">Ailment</label>
-        <select id="ailment"><option value="">Any</option><option value="bleed">Bleed</option><option value="poison">Poison</option><option value="ignite">Ignite</option></select></div>
+        <select id="ailment"><option value="">Any</option><option value="bleed">Bleed</option><option value="poison">Poison</option><option value="ignite">Ignite</option><option value="shock">Shock</option><option value="chill">Chill</option><option value="freeze">Freeze</option></select></div>
       <div class="field"><label for="cls">Class</label><select id="cls"><option value="">Any class</option></select></div>
+      <div class="field"><label for="asc">Ascendancy</label><select id="asc"><option value="">Best for the build</option></select></div>
       <div class="field"><label for="mode">Focus</label>
         <select id="mode"><option value="balanced">Balanced: maps and bosses</option><option value="mapping">Mapping first</option><option value="bossing">Bossing first</option></select></div>
+    </div>
+    <div class="row">
+      <div class="field"><span class="label">Weapon</span><div class="chips" id="weapons" role="group" aria-label="Weapon"></div></div>
+      <div class="field" id="skillField" hidden><span class="label">Skill</span><span class="lock"><span class="tag" id="skillName"></span><button class="link" type="button" id="skillClear">Let it pick</button></span></div>
     </div>
     <div class="field"><span class="label">3. Also optimise for</span><div class="chips" id="goals" role="group" aria-label="Goals"></div></div>
     <button class="go" id="go" type="submit">Forge my build</button>
@@ -140,11 +161,19 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
   const fmt = n => Math.round(n || 0).toLocaleString("en-US");
   const pct = x => `${Math.round(x * 100)}%`;
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const state = { budget: "budget", damage: new Set(), kinds: new Set(), goals: new Set(), gen: null, genJob: null, guide: null };
+  const state = { budget: "budget", damage: new Set(), kinds: new Set(), goals: new Set(), weapons: new Set(), skill: null, gen: null, genJob: null, guide: null };
+  let catalog = null;
 
   const BUDGETS = [["free", "Free", "Self-found", 1], ["budget", "Budget", "Up to ~5 div", 2], ["medium", "Medium", "~5-30 div", 4], ["high", "High", "~30-100 div", 7], ["unlimited", "No limit", "100+ div", 11]];
   const DAMAGE = ["physical", "fire", "cold", "lightning", "chaos"];
-  const KINDS = [["minion", "Minions"], ["spell", "Spells"], ["attack", "Attacks"], ["melee", "Melee"], ["projectile", "Projectiles"], ["totem", "Totems"]];
+  const KINDS = [["minion", "Minions"], ["spell", "Spells"], ["attack", "Attacks"], ["melee", "Melee"], ["projectile", "Projectiles"], ["area", "Area"],
+    ["totem", "Totems"], ["trap", "Traps"], ["slam", "Slams"], ["strike", "Strikes"], ["channel", "Channelling"], ["chaining", "Chaining"], ["grenade", "Grenades"]];
+  // Chip -> PoB weapon types it stands for.
+  const WEAPONS = [["Bow", ["Bow"]], ["Crossbow", ["Crossbow"]], ["Dagger", ["Dagger"]], ["Claw", ["Claw"]], ["Spear", ["Spear"]],
+    ["Quarterstaff / staff", ["Staff"]], ["Wand", ["Wand"]], ["Sceptre", ["Sceptre"]], ["Mace", ["One Hand Mace", "Two Hand Mace"]],
+    ["Sword", ["One Hand Sword", "Two Hand Sword"]], ["Axe", ["One Hand Axe", "Two Hand Axe"]], ["Flail", ["Flail"]], ["Talisman", ["Talisman"]]];
+  const syncs = [];      // chip groups register a function that redraws them from state
+  let weaponSyncs = [];
   const GOALS = [["movement", "Faster mapping"], ["rarity", "More loot"], ["tanky", "Tankier"]];
 
   function chipGroup(el, items, set, attr) {
@@ -154,22 +183,98 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       if (attr) b.dataset[attr] = key;
       b.onclick = () => { set.has(key) ? set.delete(key) : set.add(key); b.setAttribute("aria-pressed", set.has(key)); };
       el.appendChild(b);
+      syncs.push(() => b.setAttribute("aria-pressed", set.has(key)));
     });
   }
+  function weaponChips() {
+    const have = catalog ? new Set(Object.keys(catalog.weapon_types)) : null;
+    $("weapons").innerHTML = ""; weaponSyncs = [];
+    WEAPONS.forEach(([label, types]) => {
+      const ok = types.filter(t => !have || have.has(t));
+      if (!ok.length) return;
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.textContent = label;
+      const on = () => ok.every(t => state.weapons.has(t));
+      b.setAttribute("aria-pressed", on());
+      b.onclick = () => { const v = !on(); ok.forEach(t => v ? state.weapons.add(t) : state.weapons.delete(t)); b.setAttribute("aria-pressed", v); };
+      weaponSyncs.push(() => b.setAttribute("aria-pressed", on()));
+      $("weapons").appendChild(b);
+    });
+  }
+  weaponChips();
   BUDGETS.forEach(([key, name, sub, coins]) => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "rung"; b.setAttribute("aria-pressed", key === state.budget);
     b.innerHTML = `<span class="coins">${Array.from({ length: coins }, (_, j) => `<i style="height:${4 + j}px"></i>`).join("")}</span><b>${name}</b><span>${sub}</span>`;
-    b.onclick = () => { state.budget = key; $("rungs").querySelectorAll(".rung").forEach(x => x.setAttribute("aria-pressed", x === b)); };
+    b.dataset.budget = key;
+    b.onclick = () => { state.budget = key; syncBudget(); };
     $("rungs").appendChild(b);
   });
   chipGroup($("damage"), DAMAGE.map(d => [d, d[0].toUpperCase() + d.slice(1)]), state.damage, "dmg");
   chipGroup($("kinds"), KINDS, state.kinds);
   chipGroup($("goals"), GOALS, state.goals);
 
+  function syncBudget() { $("rungs").querySelectorAll(".rung").forEach(x => x.setAttribute("aria-pressed", x.dataset.budget === state.budget)); }
+
+  function fillAscendancies() {
+    const keep = $("asc").value;
+    $("asc").innerHTML = '<option value="">Best for the build</option>';
+    (catalog?.classes || []).filter(c => !$("cls").value || c.name === $("cls").value).forEach(c => c.ascendancies.forEach(a => {
+      const o = document.createElement("option"); o.value = a; o.textContent = $("cls").value ? a : `${a} (${c.name})`; $("asc").appendChild(o);
+    }));
+    $("asc").value = [...$("asc").options].some(o => o.value === keep) ? keep : "";
+  }
+  $("cls").onchange = fillAscendancies;
+  $("asc").onchange = () => {   // picking an ascendancy picks its class
+    const c = (catalog?.classes || []).find(c => c.ascendancies.includes($("asc").value));
+    if (c && $("cls").value !== c.name) { const a = $("asc").value; $("cls").value = c.name; fillAscendancies(); $("asc").value = a; }
+  };
   fetch("/catalog").then(r => r.json()).then(cat => {
+    catalog = cat;
     cat.classes.forEach(c => { const o = document.createElement("option"); o.value = c.name; o.textContent = c.name; $("cls").appendChild(o); });
+    fillAscendancies(); weaponChips();
   }).catch(() => {});
+
+  // Prompt mode: the server reads the text (POST /parse); we show what it understood and set the picker to match,
+  // so the player can see and fix it before forging.
+  const HINT = "<span>Name a damage type, skill, class or ascendancy, weapon and budget. The options below fill in as you type.</span>";
+  function resetPicker() {
+    state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null;
+    $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
+  }
+  function syncAll() {
+    syncs.forEach(f => f()); weaponSyncs.forEach(f => f()); syncBudget();
+    $("skillField").hidden = !state.skill; $("skillName").textContent = state.skill || "";
+  }
+  function applyParse(out) {
+    const r = out.request;
+    resetPicker();
+    r.damage.forEach(d => state.damage.add(d)); r.kinds.forEach(k => state.kinds.add(k));
+    r.goals.forEach(g => state.goals.add(g)); r.weapons.forEach(w => state.weapons.add(w));
+    if (r.budget) state.budget = r.budget;
+    if (r.ailment) $("ailment").value = r.ailment;
+    if (r.mode) $("mode").value = r.mode;
+    if (r.class) { $("cls").value = r.class; fillAscendancies(); }
+    if (r.ascendancy) $("asc").value = r.ascendancy;
+    state.skill = r.skill || null;
+    syncAll();
+    $("readas").innerHTML = out.found.length
+      ? `<span>Read as</span>${out.found.map(f => `<span class="tag">${esc(f.means)} <i>“${esc(f.text)}”</i></span>`).join("")}`
+        + (out.budget_set ? "" : "<span>· no budget named, using the one picked below</span>")
+      : "<span>Nothing recognised yet. Name a damage type, skill, class, weapon or budget, or pick below.</span>";
+  }
+  $("skillClear").onclick = () => { state.skill = null; syncAll(); };
+  let parseSeq = 0, parsing = Promise.resolve(), parsedText = "", parseTimer;
+  function parseNow() {
+    const text = $("prompt").value.trim();
+    if (text === parsedText) return parsing;
+    parsedText = text;
+    const seq = ++parseSeq;
+    if (!text) { resetPicker(); syncAll(); $("readas").innerHTML = HINT; return (parsing = Promise.resolve()); }
+    return (parsing = api("/parse", { text }).then(out => { if (seq === parseSeq) applyParse(out); }).catch(() => {}));
+  }
+  $("prompt").addEventListener("input", () => { clearTimeout(parseTimer); parseTimer = setTimeout(parseNow, 350); });
+  $("prompt").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("form").requestSubmit(); } });
 
   async function api(path, body) {
     const r = await fetch(path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
@@ -198,9 +303,13 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
   $("form").onsubmit = async e => {
     e.preventDefault();
-    const req = { damage: [...state.damage], kinds: [...state.kinds], budget: state.budget, mode: $("mode").value, goals: [...state.goals] };
+    clearTimeout(parseTimer); await parseNow();
+    const req = { damage: [...state.damage], kinds: [...state.kinds], weapons: [...state.weapons].slice(0, 5), budget: state.budget,
+      mode: $("mode").value, goals: [...state.goals] };
     if ($("ailment").value) req.ailment = $("ailment").value;
     if ($("cls").value) req.class = $("cls").value;
+    if ($("asc").value) req.ascendancy = $("asc").value;
+    if (state.skill) req.skill = state.skill;
     $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
     try {
       let job = await api("/generate", req);

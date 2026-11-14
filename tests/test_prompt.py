@@ -1,0 +1,71 @@
+"""Prompt mode parser. No PoB needed: uses a small fake catalog."""
+from prompt import divines_to_budget, parse_prompt
+
+CATALOG = {
+    "classes": [
+        {"name": "Monk", "ascendancies": ["Invoker", "Acolyte of Chayula"]},
+        {"name": "Witch", "ascendancies": ["Infernalist", "Blood Mage", "Lich"]},
+        {"name": "Ranger", "ascendancies": ["Deadeye", "Pathfinder"]},
+    ],
+    "skills": ["Lightning Arrow", "Tempest Flurry", "Raise Zombie", "Fireball", "Spark"],
+    "weapon_types": {"Bow": [], "Dagger": [], "Staff": ["Warstaff"], "One Hand Mace": [], "Two Hand Mace": []},
+}
+
+
+def parse(text):
+    return parse_prompt(text, CATALOG)["request"]
+
+
+def test_example_prompt():
+    r = parse("lightning minion build for a monk, 5 div")
+    assert r["damage"] == ["lightning"]
+    assert r["kinds"] == ["minion"]
+    assert r["class"] == "Monk"
+    assert r["budget"] == "budget"
+
+
+def test_currency_amounts():
+    assert parse("30 divines")["budget"] == "medium"
+    assert parse("50div")["budget"] == "high"
+    assert parse("300 ex")["budget"] == "budget"           # under a divine
+    assert parse("2k chaos poison build")["budget"] == "unlimited"
+    assert "chaos" not in parse("20 chaos fire build")["damage"]
+    assert divines_to_budget(0) == "free" and divines_to_budget(100) == "high" and divines_to_budget(101) == "unlimited"
+
+
+def test_budget_words():
+    assert parse("league starter")["budget"] == "budget"
+    assert parse("ssf witch")["budget"] == "free"
+    assert parse("high budget bow")["budget"] == "high"
+    assert parse("mirror tier spark")["budget"] == "unlimited"
+    assert "budget" not in parse("fire spells")
+
+
+def test_skill_ascendancy_and_class():
+    r = parse("Lightning Arrow deadeye")
+    assert r["skill"] == "Lightning Arrow" and r["ascendancy"] == "Deadeye" and r["class"] == "Ranger"
+    assert parse("blood mage bleed")["ascendancy"] == "Blood Mage"
+    assert parse("something for witches")["class"] == "Witch"
+
+
+def test_ailment_weapon_goals_mode():
+    r = parse("tanky dagger bleed bosser that's fast")
+    assert r["ailment"] == "bleed"
+    assert r["weapons"] == ["Dagger"]
+    assert set(r["goals"]) == {"tanky", "movement"}
+    assert r["mode"] == "bossing"
+    assert parse("mace slam")["weapons"] == ["One Hand Mace", "Two Hand Mace"]
+    assert "mode" not in parse("good at maps and bosses")      # both: stay balanced
+
+
+def test_negation():
+    r = parse("cold spells, no minions")
+    assert r["kinds"] == ["spell"]
+    assert r["damage"] == ["cold"]
+
+
+def test_found_lists_what_was_understood():
+    out = parse_prompt("fire totem witch", CATALOG)
+    means = [f["means"] for f in out["found"]]
+    assert "Damage: fire" in means and "Kind: totem" in means and "Class: Witch" in means
+    assert out["budget_set"] is False
