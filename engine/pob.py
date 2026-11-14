@@ -50,11 +50,21 @@ class PoB:
         )
         self.version = self._read()["version"]
 
+    on_event = None   # called with live events (e.g. tree steps) that arrive before a command's reply
+
     def _read(self) -> dict:
         assert self.proc.stdout
         for line in self.proc.stdout:
             if line.startswith("@@"):
-                return json.loads(line[2:])
+                msg = json.loads(line[2:])
+                if isinstance(msg, dict) and "event" in msg:
+                    if self.on_event:
+                        try:
+                            self.on_event(msg)
+                        except Exception:  # noqa: BLE001 - a display hook must never break the engine
+                            pass
+                    continue
+                return msg
         raise PoBError("PoB process exited")
 
     def send(self, cmd: str, **kwargs) -> dict:
@@ -136,14 +146,21 @@ class PoB:
         return self.send("points")
 
     def optimise_tree(self, max_dist: int = 6, def_weight: float = 0.25, points: int | None = None,
-                      metric: str = "total", goals=None) -> dict:
+                      metric: str = "total", goals=None, on_step=None) -> dict:
+        """on_step, if given, is called with each step while the search runs (see runner.lua `live`)."""
         from goals import weights
         w = weights(goals)
         kwargs = {"max_dist": max_dist, "def_weight": def_weight * w["def_mult"], "metric": metric,
                   "movement_weight": w["movement"], "rarity_weight": w["rarity"]}
         if points is not None:
             kwargs["points"] = points
-        res = self.send("optimise_tree", **kwargs)
+        if on_step:
+            kwargs["live"] = True
+            self.on_event = on_step
+        try:
+            res = self.send("optimise_tree", **kwargs)
+        finally:
+            self.on_event = None
         if not isinstance(res.get("steps"), list):
             res["steps"] = []
         return res

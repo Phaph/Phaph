@@ -53,7 +53,7 @@ class JobStore:
         self.pool = ThreadPoolExecutor(max_workers=workers)
         self.progress: dict[str, list[dict]] = {}
 
-    MAX_EVENTS = 600
+    MAX_EVENTS = 6000   # live tree steps are ~130 per stage
 
     def _reporter(self, job_id: str, t0: float):
         def report(event: dict) -> None:

@@ -161,10 +161,10 @@ tr.best td { color: var(--brass-hi); }
 .rating .score { font: 700 92px/.8 var(--display); color: var(--brass-hi); filter: drop-shadow(0 2px 0 var(--seam)); }
 .rating .label { font: 600 38px/1 var(--display); }
 .rating .subs { font-size: 16px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 10px 22px; }
 .stat { padding: 10px 14px 12px 0; display: grid; gap: 2px; }
 .stat.res b { font-size: 21px; padding-top: 6px; }
-.stat b { font: 600 30px/1.05 var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -.02em; } .stat span { font-size: 15px; color: var(--muted); }
+.stat b { font: 600 clamp(22px, 2.6vw, 30px)/1.05 var(--mono); overflow-wrap: anywhere; font-variant-numeric: tabular-nums; letter-spacing: -.02em; } .stat span { font-size: 15px; color: var(--muted); }
 .kv { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 8px 18px; }
 .kv dt { font: 600 20px/1.2 var(--display); color: var(--muted); }
 .kv dd { margin: 0; min-width: 0; }
@@ -311,6 +311,34 @@ a.trade::after { content: " \2197"; }
 .kv dd .setup { display: block; margin-bottom: 6px; }
 .kv dd .setup:last-child { margin-bottom: 0; }
 
+/* ---------- The brain: the live tree search ---------- */
+.brain { position: relative; height: clamp(320px, 52vh, 560px); border: 1px solid var(--edge); border-radius: 3px; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 60%, #15120f, #0a0908 75%); box-shadow: inset 0 0 60px rgba(0,0,0,.8), 0 3px 0 var(--seam); }
+.brain-cv { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.brain-hud { position: absolute; left: 12px; right: 12px; top: 10px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; pointer-events: none; }
+.brain-stage { font: 600 22px/1 var(--display); color: var(--ink); text-shadow: 0 2px 6px #000; }
+.brain-count { font: 600 15px var(--mono); color: var(--brass-hi); text-shadow: 0 2px 6px #000; }
+.brain-feed { position: absolute; left: 12px; bottom: 10px; right: 12px; margin: 0; font: 13px/1.45 var(--mono); color: #e8a868; white-space: pre; overflow: hidden;
+  text-shadow: 0 0 6px rgba(232,115,58,.6), 0 1px 2px #000; pointer-events: none; mask-image: linear-gradient(180deg, transparent, #000 45%); -webkit-mask-image: linear-gradient(180deg, transparent, #000 45%); }
+.brain-hint { position: absolute; right: 12px; bottom: 10px; font: italic 13px var(--body); color: var(--faint); }
+@media (max-width: 620px) { .brain-feed { font-size: 11px; } .brain-hint { display: none; } }
+.lane.watched { outline: 2px solid var(--ember); outline-offset: 2px; }
+canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -webkit-mask-image: linear-gradient(0deg, #000 60%, transparent); mask-image: linear-gradient(0deg, #000 60%, transparent); }
+
+/* ---------- The finished build: reveal ---------- */
+.buildhead.with-tree { padding-right: min(38%, 380px); min-height: 230px; }
+.buildhead > .mini-tree { position: absolute; z-index: 1; right: 0; top: 0; bottom: 0; width: min(36%, 360px); border: 1px solid var(--edge); border-radius: 3px; overflow: hidden;
+  background: radial-gradient(ellipse at 50% 55%, #15120f, #0a0908 75%); box-shadow: inset 0 0 40px rgba(0,0,0,.8); display: block; text-decoration: none; }
+.mini-tree canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.mini-tree span { position: absolute; left: 10px; bottom: 8px; font: 500 14px var(--body); color: var(--brass); text-shadow: 0 1px 3px #000; }
+.mini-tree:hover { border-color: var(--brass-lo); }
+@media (max-width: 760px) { .buildhead.with-tree { padding-right: 0; } .buildhead > .mini-tree { position: relative; width: 100%; height: 220px; order: 5; } }
+.forge-flash { position: fixed; inset: 0; z-index: 4; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 35%, rgba(255,241,214,.85), rgba(240,140,60,.45) 35%, rgba(232,115,58,0) 70%); animation: forgeflash 1.3s ease-out forwards; }
+@keyframes forgeflash { 0% { opacity: 0; } 8% { opacity: 1; } 100% { opacity: 0; } }
+.stat b.struck { animation: struck 700ms var(--ease); }
+@keyframes struck { 0% { text-shadow: 0 0 22px rgba(255,200,130,.95); color: #fff1d6; } 100% { } }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -422,6 +450,7 @@ a.trade::after { content: " \2197"; }
   </footer>
 </div>
 
+<script src="/treeview.js"></script>
 <script>
 (() => {
   const $ = id => document.getElementById(id);
@@ -703,12 +732,78 @@ a.trade::after { content: " \2197"; }
       stop() { alive = false; ro.disconnect(); io.disconnect(); },
     };
   }
-  let workSigil = null, guideSigil = null;
+  let workSigil = null, guideSigil = null, miniTree = null, revealNext = false;
+
+
+  // ---------- ASCII forge fire: a furnace that burns as hot as the engine is working ----------
+  // Classic cellular fire (heat rises, cools and drifts), drawn as characters. heat 0..1 is fed by real events.
+  function forgeFire(canvas) {
+    const cx = canvas.getContext("2d");
+    const RAMP = " .'`^,:;-~=+*o#%@";
+    const COLORS = ["#2a0d05", "#4a1607", "#6d2108", "#92300c", "#b54212", "#d0581a", "#e8733a", "#f08a45", "#f5a35a", "#f0c97f", "#f6dca6", "#fff1d6"];
+    let cols = 0, rows = 0, cells = new Float32Array(0), heat = 0.25, floor = 0.18, alive = true, last = 0, raf = 0, flares = [];
+    const CW = 9, CH = 14;
+    function size() {
+      const r = canvas.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
+      canvas.width = r.width * d; canvas.height = r.height * d; cx.setTransform(d, 0, 0, d, 0, 0);
+      cols = Math.max(1, Math.floor(r.width / CW)); rows = Math.max(1, Math.floor(r.height / CH));
+      cells = new Float32Array(cols * rows);
+    }
+    const ro = new ResizeObserver(size); ro.observe(canvas); size();
+    function frame(now) {
+      raf = 0; if (!alive) return;
+      if (now - last > 72) {   // about 14 updates a second: a slow, heavy burn
+        last = now;
+        heat += (floor - heat) * 0.02;
+        for (let x = 0; x < cols; x++) cells[(rows - 1) * cols + x] = Math.min(1, heat * (0.75 + Math.random() * 0.6));
+        if (Math.random() < 0.06 + heat * 0.06) flares.push({ x: (Math.random() * cols) | 0, w: 3 + ((Math.random() * 8) | 0), life: 4 + ((Math.random() * 5) | 0) });
+        flares = flares.filter(f => f.life-- > 0);
+        for (const f of flares) for (let x = Math.max(0, f.x - f.w); x < Math.min(cols, f.x + f.w); x++) {
+          // white-hot core fading to the edges of the burst
+          cells[(rows - 1) * cols + x] = 1; cells[(rows - 2) * cols + x] = Math.max(cells[(rows - 2) * cols + x], 1 - Math.abs(x - f.x) / (f.w + 1));
+        }
+        for (let y = 0; y < rows - 1; y++) for (let x = 0; x < cols; x++) {
+          const src = (y + 1) * cols + Math.min(cols - 1, Math.max(0, x + ((Math.random() * 3) | 0) - 1));
+          cells[y * cols + x] = Math.max(0, cells[src] - Math.random() * (0.6 / rows) * (1.3 - heat * 0.6));
+        }
+        cx.clearRect(0, 0, canvas.width, canvas.height);
+        cx.font = `600 ${CH - 1}px "IBM Plex Mono", monospace`; cx.textBaseline = "top";
+        for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
+          const v = cells[y * cols + x]; if (v < 0.06) continue;
+          cx.fillStyle = COLORS[Math.min(COLORS.length - 1, (v * COLORS.length) | 0)];
+          cx.fillText(RAMP[Math.min(RAMP.length - 1, (v * RAMP.length) | 0)], x * CW, y * CH);
+        }
+      }
+      raf = requestAnimationFrame(frame);
+    }
+    if (!REDUCE) raf = requestAnimationFrame(frame);
+    return {
+      bump(amount = 0.12) {
+        heat = Math.min(1, heat + amount);
+        if (amount >= 0.2 && cols) flares.push({ x: (Math.random() * cols) | 0, w: 5 + ((Math.random() * 8) | 0), life: 6 });
+      },
+      set(f) { floor = f; },
+      stop() { alive = false; ro.disconnect(); if (raf) cancelAnimationFrame(raf); },
+    };
+  }
+
+  // The tree data, loaded once when it's first needed (about 150 KB over the wire).
+  let treeData = null;
+  const loadTree = () => treeData ? Promise.resolve(treeData)
+    : fetch("/tree/data").then(r => r.json()).then(d => (treeData = d)).catch(() => null);
+  let brain = null, fire = null;
 
   const work = {
     el: () => $("work"),
     clock(text) { const c = this.el().querySelector(".clock"); if (c) c.textContent = text; },
-    hide() { workSigil?.stop(); workSigil = null; this.el().hidden = true; this.el().innerHTML = ""; },
+    hide() {
+      workSigil?.stop(); workSigil = null; brain?.tv?.stop(); brain = null; fire?.stop(); fire = null;
+      this.el().hidden = true; this.el().innerHTML = "";
+    },
+    startFire() {
+      const c = document.createElement("canvas"); c.className = "fire"; c.setAttribute("aria-hidden", "true");
+      this.el().appendChild(c); fire?.stop(); fire = forgeFire(c); fire.set(0.5);
+    },
 
     startSearch() {
       this.cands = new Map(); this.scored = 0; this.total = 0;
@@ -717,6 +812,7 @@ a.trade::after { content: " \2197"; }
           <h2>Grinding through every skill that fits</h2></div><span class="clock"></span></div>
         <p class="muted" id="roundLabel">Lighting the forge…</p>
         <div class="board" id="board"></div>`;
+      this.startFire();
     },
     relaxed(e) {
       // The search found nothing for the exact request and is widening it. Start a fresh board for the next pass.
@@ -733,7 +829,7 @@ a.trade::after { content: " \2197"; }
         : `Second pass: the strongest few on each ascendancy, with full passive trees. ${e.count} builds.`;
     },
     candidate(e) {
-      this.scored++;
+      this.scored++; fire?.bump(0.06);
       const key = `${e.round}|${e.skill}|${e.weapon}|${e.ascendancy || ""}`;
       this.cands.set(key, e);
       // Round 2 scores include passives, so they replace round 1 on the board once they arrive.
@@ -768,6 +864,12 @@ a.trade::after { content: " \2197"; }
         <div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">On the anvil</span>
           <h2>${opt.title || "Four anvils, one build"}</h2></div><span class="clock"></span></div>
         <p class="muted">${opt.blurb || "Leveling, early maps, mid maps and endgame are forged side by side: gear, passives, supports and spirit, each at your budget. Passives drop in as they're picked."}</p></div>
+        ${opt.brain === false ? "" : `<div class="brain" id="brain">
+          <canvas class="brain-cv" aria-label="The passive tree, as the engine searches it"></canvas>
+          <div class="brain-hud"><span class="brain-stage" id="brainStage">Lighting the forge…</span><span class="brain-count" id="brainCount"></span></div>
+          <pre class="brain-feed" id="brainFeed" aria-live="off"></pre>
+          <span class="brain-hint">Click a stage below to watch it</span>
+        </div>`}
         <div class="lanes">${stages.map(k => `<div class="lane" data-stage="${k}">
           <span class="lname">${esc(names[k] || k)}</span>
           <span class="ldps" data-v="0">–</span>
@@ -775,11 +877,53 @@ a.trade::after { content: " \2197"; }
           <span class="lstep">Waiting for a free anvil…</span>
           <div class="notables"></div></div>`).join("")}</div>`;
       workSigil?.stop(); workSigil = opt.cls ? sigil(w.querySelector(".sigil-cv"), opt.cls) : null;
+      this.startFire();
+      // The brain: the live tree search. One canvas, following one stage at a time (endgame by default).
+      if (opt.brain !== false) {
+        const names2 = opt.names || STAGE_NAMES;
+        brain = { stage: stages.includes("end") ? "end" : stages[0], per: {}, tv: null, names: names2, evals: {} };
+        stages.forEach(k => brain.per[k] = { alloc: [], picks: [] });
+        w.querySelectorAll(".lane").forEach(l => {
+          l.style.cursor = "pointer";
+          l.onclick = () => this.watch(l.dataset.stage);
+        });
+        this.watch(brain.stage, true);
+        loadTree().then(d => {
+          if (!d || !brain || !$("brain")) return;
+          brain.tv = TreeView(w.querySelector(".brain-cv"), d, { reduceMotion: REDUCE });
+          brain.tv.setAlloc(brain.per[brain.stage].alloc);
+        });
+      }
       w.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
     },
+    watch(k, first = false) {
+      if (!brain || !brain.per[k]) return;
+      brain.stage = k;
+      this.el().querySelectorAll(".lane").forEach(l => l.classList.toggle("watched", l.dataset.stage === k));
+      $("brainStage").textContent = `Watching: ${brain.names[k] || k}`;
+      $("brainFeed").textContent = brain.per[k].picks.slice(-7).join("\n");
+      if (!first) brain.tv?.setAlloc(brain.per[k].alloc, false);
+    },
+    treeStep(e) {
+      if (!brain || !brain.per[e.stage]) return;
+      const st = brain.per[e.stage];
+      st.alloc.push(...(e.path || []), e.chosen);
+      brain.evals[e.stage] = e.evals || 0;
+      const total = Object.values(brain.evals).reduce((a, b) => a + b, 0);
+      $("brainCount").textContent = `${fmt(total)} tree variations scored`;
+      const tag = e.type === "Notable" ? "NOTABLE " : e.type === "Keystone" ? "KEYSTONE" : e.ascendancy ? "ASCEND  " : "        ";
+      st.picks.push(`> ${tag} scanned ${String(e.scanned).padStart(4)} paths  ->  ${e.name}`);
+      fire?.bump(e.type === "Notable" || e.type === "Keystone" ? 0.22 : 0.08);
+      if (e.stage === brain.stage) {
+        brain.tv?.step(e);
+        $("brainFeed").textContent = st.picks.slice(-7).join("\n");
+      }
+    },
     guideEvent(e) {
+      if (e.step === "tree_live") { this.treeStep(e); return; }
       const lane = this.el().querySelector(`.lane[data-stage="${e.stage}"]`);
       if (!lane) return;
+      if (e.step === "done") fire?.bump(0.5);
       if (e.step === "passive") {
         const box = lane.querySelector(".notables");
         if (box.children.length < 14) {
@@ -934,7 +1078,7 @@ a.trade::after { content: " \2197"; }
         const keys = builds.map((_, i) => `b${i}`);
         if (!job.cached) work.startGuide(keys, { names: Object.fromEntries(builds.map((b, i) => [`b${i}`, b.name])),
           title: builds.length > 1 ? `${builds.length} builds, one budget` : "One build, at your budget",
-          blurb: "Each build gets its own endgame gear, passives, supports and spirit at your budget, so the fight is fair." });
+          blurb: "Each build gets its own endgame gear, passives, supports and spirit at your budget, so the fight is fair.", brain: false });
         heat(true);
         try {
           job = await waitFor(job, job.cached ? "Loading" : "A few minutes",
@@ -1014,13 +1158,16 @@ a.trade::after { content: " \2197"; }
   }
 
   function renderGuide(plan, res) {
-    state.guide = res; state.plan = plan; shownGear = null; shownStage = null;
+    state.guide = res; state.plan = plan; shownGear = null; shownStage = null; revealNext = true;
     guideSigil?.stop(); guideSigil = null;
     const stages = res.stages;
     const end = stages.find(s => s.stage === "end") || stages[stages.length - 1];
     $("guide").hidden = false;
     const motif = SIGILS[plan.spec.class]?.motif;
-    $("guide").innerHTML = `<div class="buildhead"><canvas class="sigil-cv" aria-hidden="true"></canvas>
+    const treeHref = state.guideJob && (end.tree_nodes || []).length ? `/tree.html?b=${state.guideJob}&s=end` : null;
+    $("guide").innerHTML = `<div class="buildhead${treeHref || (end.tree_nodes || []).length ? " with-tree" : ""}"><canvas class="sigil-cv" aria-hidden="true"></canvas>
+      ${(end.tree_nodes || []).length ? `<a class="mini-tree" ${treeHref ? `href="${treeHref}" target="_blank" rel="noopener"` : ""} title="Open the passive tree">
+        <canvas aria-label="Endgame passive tree"></canvas><span>${treeHref ? "Open the passive tree &#8599;" : "Endgame passive tree"}</span></a>` : ""}
       <div style="display:grid;gap:6px"><span class="eyebrow">Your build${plan.spec.class ? ` · ${esc(plan.spec.class)}` : ""}</span><div class="skillhead">${img(gemUrl(plan.spec.skill))}<h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2></div>
       ${motif ? `<span class="motif">${esc(motif)}</span>` : ""}
       ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}</div>
@@ -1043,6 +1190,16 @@ a.trade::after { content: " \2197"; }
       if (s === end) { b.setAttribute("aria-pressed", "true"); renderStage(plan, s); }
     });
     wireShare(plan, res);
+    // The reveal: a forge flash, sparks off the title, the endgame tree growing out from the class start.
+    // (revealNext, set at the top of renderGuide, makes the first stage's numbers count up.)
+    miniTree?.stop(); miniTree = null;
+    const mini = $("guide").querySelector(".mini-tree canvas");
+    if (mini) loadTree().then(d => { if (d && mini.isConnected) { miniTree = TreeView(mini, d, { reduceMotion: REDUCE }); miniTree.reveal(end.tree_nodes); } });
+    if (!REDUCE) {
+      const fl = document.createElement("div"); fl.className = "forge-flash"; document.body.appendChild(fl);
+      setTimeout(() => fl.remove(), 1400);
+      setTimeout(() => { const h = $("guide").querySelector(".skillhead h2"); if (h) { sparks(h, 70, 1.6); setTimeout(() => sparks(h, 40, 1.2), 260); } }, 350);
+    }
     guideSigil = sigil($("guide").querySelector(".sigil-cv"), plan.spec.class);
     setTimeout(() => guideSigil?.pulse(), 450);
     $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1101,6 +1258,7 @@ a.trade::after { content: " \2197"; }
   // Most a player at each budget pays for one item, in divines (gear.BUDGET_DIVINES).
   const ITEM_CAP = { free: 0, budget: 5, medium: 30, high: 100, unlimited: Infinity };
   const divs = v => v >= 10 ? fmt(v) : v >= 1 ? (Math.round(v * 10) / 10).toString() : v >= 0.1 ? v.toFixed(2) : "<0.1";
+  const aboutDiv = v => v < 0.1 ? "under 0.1 div" : `~${divs(v)} div`;
   const tradeLink = g => g.trade_url ? `<a class="trade" href="${esc(g.trade_url)}" target="_blank" rel="noopener noreferrer">Find on trade</a>` : "";
   // One line at the top of the build: what the endgame version costs.
   function buildCostLine(s) {
@@ -1109,7 +1267,7 @@ a.trade::after { content: " \2197"; }
     const priced = gear.filter(g => g.unique && g.price != null), rares = gear.filter(g => !g.unique);
     const total = priced.reduce((t, g) => t + g.price, 0), cap = ITEM_CAP[s.budget_key];
     const most = rares.length && isFinite(cap) ? total + rares.length * cap : null;
-    return `<p class="buildcost">Endgame gear: <b>~${divs(total)} div</b> in uniques${rares.length ? ` + ${rares.length} crafted rares` : ""}${most != null && cap > 0 ? `, at most ~${divs(most)} div in all` : ""}</p>`;
+    return `<p class="buildcost">Endgame gear: <b>${aboutDiv(total)}</b> in uniques${rares.length ? ` + ${rares.length} crafted rares` : ""}${most != null && cap > 0 ? `, at most ${aboutDiv(most)} in all` : ""}</p>`;
   }
   function costHtml(s) {
     const gear = s.gear || [];
@@ -1118,11 +1276,11 @@ a.trade::after { content: " \2197"; }
     const total = priced.reduce((t, g) => t + g.price, 0);
     const cap = ITEM_CAP[s.budget_key];
     const parts = [];
-    if (uniques.length) parts.push(`<b>~${divs(total)} div</b> in uniques${priced.length < uniques.length ? ` (${uniques.length - priced.length} unpriced)` : ""}`);
+    if (uniques.length) parts.push(`<b>${aboutDiv(total)}</b> in uniques${priced.length < uniques.length ? ` (${uniques.length - priced.length} unpriced)` : ""}`);
     if (rares.length) parts.push(`${rares.length} crafted rare${rares.length > 1 ? "s" : ""}${cap === 0 ? ", self-found" : cap === Infinity ? "" : `, budgeted up to ~${cap} div each`}`);
     if (!parts.length) return "";
     const most = rares.length && isFinite(cap) && cap > 0 ? total + rares.length * cap : null;
-    return `<div class="cost"><span class="cost-h">Gear cost</span> ${parts.join(" + ")}${most != null ? ` <span class="muted">· at most ~${divs(most)} div</span>` : ""}
+    return `<div class="cost"><span class="cost-h">Gear cost</span> ${parts.join(" + ")}${most != null ? ` <span class="muted">· at most ${aboutDiv(most)}</span>` : ""}
       <span class="muted cost-note">Unique prices are from poe.ninja. Rares have no fixed price: each item's "Find on trade" link opens the trade site with its stats filled in.</span></div>`;
   }
 
@@ -1137,7 +1295,7 @@ a.trade::after { content: " \2197"; }
       const baseStyle = baseChanged ? ` style="animation-delay:${step(120)}ms"` : "";
       if (g.unique) {
         return `<div class="item unique"><div class="item-head"><div><span class="slot">${esc(g.slot)}</span><span class="${baseCls}"${baseStyle}>${esc(name)}</span>
-          <span class="price">${g.price != null ? `~${divs(g.price)} div` : "Unique · price unknown"}</span>${tradeLink(g)}</div>
+          <span class="price">${g.price != null ? aboutDiv(g.price) : "Unique · price unknown"}</span>${tradeLink(g)}</div>
           ${art(ICONS.uniques?.[name], g.slot)}</div></div>`;
       }
       const had = new Set(before && !baseChanged ? before.affixes : []);
@@ -1167,6 +1325,21 @@ a.trade::after { content: " \2197"; }
     if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = stageHtml(plan, s, prevGear, forward, kv, res, st);
+    if (revealNext && !REDUCE) {
+      revealNext = false;
+      // The numbers spin up from zero as the build is "struck".
+      $("stageBody").querySelectorAll(".stat b[data-n]").forEach((b, i) => {
+        const v = +b.dataset.n; if (!v) return;
+        const t0 = performance.now() + 250 + i * 120, dur = 1300;
+        const tick = now => {
+          const t = Math.min(1, Math.max(0, (now - t0) / dur)), e = 1 - Math.pow(1 - t, 4);
+          b.textContent = fmt(v * e);
+          if (t < 1) requestAnimationFrame(tick);
+          else { b.classList.add("struck"); setTimeout(() => b.classList.remove("struck"), 700); }
+        };
+        b.textContent = "0"; requestAnimationFrame(tick);
+      });
+    }
     $("copy").onclick = async () => {
       try { await navigator.clipboard.writeText(s.code); $("copy").textContent = "Copied"; }
       catch { $("code").select(); }
@@ -1177,10 +1350,10 @@ a.trade::after { content: " \2197"; }
     return `
       ${costHtml(s)}
       <div class="stats">
-        <div class="stat"><b class="${dpsClass(s.damage_split)}">${fmt(s.dps)}</b><span>Mapping DPS</span></div>
-        <div class="stat"><b>${s.boss_dps ? fmt(s.boss_dps) : "-"}</b><span>Boss DPS</span></div>
-        <div class="stat"><b>${fmt(st.Life)}</b><span>Life</span></div>
-        <div class="stat"><b>${fmt(st.TotalEHP)}</b><span>Effective HP</span></div>
+        <div class="stat"><b class="${dpsClass(s.damage_split)}" data-n="${s.dps || 0}">${fmt(s.dps)}</b><span>Mapping DPS</span></div>
+        <div class="stat"><b data-n="${s.boss_dps || 0}">${s.boss_dps ? fmt(s.boss_dps) : "-"}</b><span>Boss DPS</span></div>
+        <div class="stat"><b data-n="${st.Life || 0}">${fmt(st.Life)}</b><span>Life</span></div>
+        <div class="stat"><b data-n="${st.TotalEHP || 0}">${fmt(st.TotalEHP)}</b><span>Effective HP</span></div>
         <div class="stat res"><b>${res}</b><span>Fire / cold / lightning / chaos res</span></div>
       </div>
       ${mixHtml(s.damage_split)}

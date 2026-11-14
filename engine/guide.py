@@ -166,7 +166,15 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         if boss_swap:
             boss_weapon()
         report("gear", "First gear pass")
-        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals)
+        def tree_live(ev):
+            if progress:
+                progress({"stage": stage_key, "step": "tree_live", "chosen": ev.get("chosen"), "name": ev.get("name"),
+                          "type": ev.get("type"), "path": ev.get("path") or [], "considered": ev.get("considered") or [],
+                          "scanned": ev.get("scanned", 0), "evals": ev.get("evals", 0),
+                          "ascendancy": bool(ev.get("ascendancy")), "score": round(ev.get("score") or 0, 1)})
+
+        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals,
+                                 on_step=tree_live if progress else None)
         if progress:
             for s in tree["steps"]:
                 if s["type"] != "Normal":

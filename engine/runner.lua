@@ -685,6 +685,7 @@ function handlers.optimise_tree(cmd)
 			and not node.isMultipleChoiceOption
 	end
 
+	local lastScan = { n = 0, top = {} }
 	local function bestStep(ascend)
 		local calcFunc, base = build.calcsTab:GetMiscCalculator()
 		local full = useFull()
@@ -721,6 +722,8 @@ function handlers.optimise_tree(cmd)
 			shortlist[ascend] = list
 			sinceFull[ascend] = 0
 		end
+		lastScan = { n = #scored, top = {} }
+		for i = 1, math.min(8, #scored) do lastScan.top[i] = scored[i].node.id end
 		local top = scored[1]
 		if not top or top.eff <= 0 then
 			-- Nothing positive on the shortlist: force a full scan before giving up.
@@ -751,11 +754,21 @@ function handlers.optimise_tree(cmd)
 				if not node then break end
 			end
 			local cost = #node.path
+			local pathIds = {}
+			for _, n in ipairs(node.path) do table.insert(pathIds, n.id) end   -- PoB clears node.path once allocated
 			build.spec:AllocNode(node)
 			build.spec:AddUndoState()
 			build.buildFlag = true
 			frame()
 			table.insert(steps, { node = node.dn, type = node.type, cost = cost, gain_per_point = eff, ascendancy = ascend })
+			if cmd.live then
+				-- Streamed while the search runs, so the website can show the tree growing: the node taken, the
+				-- path to it, the best candidates it beat, how many were scored, and the build's score now.
+				io.stdout:write("@@", json.encode({ event = "tree_step", chosen = node.id, name = node.dn, type = node.type,
+					path = pathIds, considered = lastScan.top, scanned = lastScan.n, evals = evals, ascendancy = ascend,
+					score = dps(build.calcsTab.mainOutput) }), "\n")
+				io.stdout:flush()
+			end
 		end
 	end
 
