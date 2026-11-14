@@ -327,7 +327,7 @@ ol.prio li::before { content: counter(prio); display: inline-block; min-width: 2
 .brain-hint { position: absolute; right: 12px; bottom: 10px; font: italic 13px var(--body); color: var(--faint); }
 @media (max-width: 620px) { .brain-feed { font-size: 11px; } .brain-hint { display: none; } }
 .lane.watched { outline: 2px solid var(--ember); outline-offset: 2px; }
-canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -webkit-mask-image: linear-gradient(0deg, #000 60%, transparent); mask-image: linear-gradient(0deg, #000 60%, transparent); }
+canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -webkit-mask-image: linear-gradient(0deg, #000 60%, transparent); mask-image: linear-gradient(0deg, #000 60%, transparent); }
 
 /* ---------- The finished build: reveal ---------- */
 .buildhead.with-tree { padding-right: min(38%, 380px); min-height: 230px; }
@@ -746,49 +746,98 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
   // ---------- ASCII forge fire: a furnace that burns as hot as the engine is working ----------
   // Classic cellular fire (heat rises, cools and drifts), drawn as characters. heat 0..1 is fed by real events.
   function forgeFire(canvas) {
+    // A calm, banked burn: flame tongues rise from uneven fuel, taper as they cool with height, sway in a slow
+    // wind, and shed embers. bump() feeds it real events: small picks nudge the heat, a notable or keystone
+    // throws a tall focused flare with a burst of embers, and a finished stage a wide surge with a shower of sparks.
     const cx = canvas.getContext("2d");
-    const RAMP = " .'`^,:;-~=+*o#%@";
-    const COLORS = ["#2a0d05", "#4a1607", "#6d2108", "#92300c", "#b54212", "#d0581a", "#e8733a", "#f08a45", "#f5a35a", "#f0c97f", "#f6dca6", "#fff1d6"];
-    let cols = 0, rows = 0, cells = new Float32Array(0), heat = 0.25, floor = 0.18, alive = true, last = 0, raf = 0, flares = [];
-    const CW = 9, CH = 14;
+    const RAMP = " .,:;-~=+*xoX#%@";
+    const COLORS = ["#1a0703", "#3a0d04", "#5c1505", "#7f1f07", "#a32b0a", "#c43c0e", "#dd5418", "#ec6d22", "#f5892e", "#fba940", "#ffc65e", "#ffdc86", "#ffedb4", "#fff8e2"];
+    const CW = 7, CH = 10, SPACING = 3.6;
+    let cols = 0, rows = 0, cells = new Float32Array(0), heat = 0.4, floor = 0.4, last = 0, t = 0, alive = true, raf = 0;
+    let lattice = [], embers = [], surges = [];
     function size() {
       const r = canvas.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
       canvas.width = r.width * d; canvas.height = r.height * d; cx.setTransform(d, 0, 0, d, 0, 0);
       cols = Math.max(1, Math.floor(r.width / CW)); rows = Math.max(1, Math.floor(r.height / CH));
       cells = new Float32Array(cols * rows);
+      lattice = Array.from({ length: Math.ceil(cols / SPACING) + 3 }, () => ({ a: Math.random(), b: Math.random(), p: Math.random() * 6.28, s: 0.5 + Math.random() * 0.7 }));
     }
     const ro = new ResizeObserver(size); ro.observe(canvas); size();
+    function fuel(x) {
+      const f = x / SPACING, i = Math.floor(f), u = f - i, sm = u * u * (3 - 2 * u);
+      const v = k => { const L = lattice[Math.min(lattice.length - 1, Math.max(0, k))]; return L.a + (L.b - L.a) * (0.5 + 0.5 * Math.sin(t * 0.7 * L.s + L.p)); };
+      let n = v(i) * (1 - sm) + v(i + 1) * sm;
+      n = n * n * 1.6;   // sharper peaks: separate tongues with darker gaps between
+      for (const g of surges) n += g.amp * Math.exp(-((x - g.x) ** 2) / (2 * g.w * g.w));
+      return n;
+    }
     function frame(now) {
       raf = 0; if (!alive) return;
-      if (now - last > 72) {   // about 14 updates a second: a slow, heavy burn
-        last = now;
-        heat += (floor - heat) * 0.02;
-        for (let x = 0; x < cols; x++) cells[(rows - 1) * cols + x] = Math.min(1, heat * (0.75 + Math.random() * 0.6));
-        if (Math.random() < 0.06 + heat * 0.06) flares.push({ x: (Math.random() * cols) | 0, w: 3 + ((Math.random() * 8) | 0), life: 4 + ((Math.random() * 5) | 0) });
-        flares = flares.filter(f => f.life-- > 0);
-        for (const f of flares) for (let x = Math.max(0, f.x - f.w); x < Math.min(cols, f.x + f.w); x++) {
-          // white-hot core fading to the edges of the burst
-          cells[(rows - 1) * cols + x] = 1; cells[(rows - 2) * cols + x] = Math.max(cells[(rows - 2) * cols + x], 1 - Math.abs(x - f.x) / (f.w + 1));
+      if (now - last > 70) {
+        last = now; t += 0.07;
+        heat += (floor - heat) * 0.04;
+        surges = surges.filter(g => (g.amp *= 0.92) > 0.03);
+        if (Math.random() < 0.015 + heat * 0.02) surges.push({ x: Math.random() * cols, w: 2 + Math.random() * 3, amp: 0.2 + Math.random() * 0.25 });
+        for (let x = 0; x < cols; x++) {
+          const v = Math.min(1, heat * (0.3 + 1.1 * fuel(x)) * (0.85 + Math.random() * 0.3));
+          cells[(rows - 1) * cols + x] = v; cells[(rows - 2) * cols + x] = Math.max(cells[(rows - 2) * cols + x], v * 0.95);
         }
-        for (let y = 0; y < rows - 1; y++) for (let x = 0; x < cols; x++) {
-          const src = (y + 1) * cols + Math.min(cols - 1, Math.max(0, x + ((Math.random() * 3) | 0) - 1));
-          cells[y * cols + x] = Math.max(0, cells[src] - Math.random() * (0.6 / rows) * (1.3 - heat * 0.6));
+        const wind = Math.sin(t * 0.45) * 0.35 + Math.sin(t * 1.3) * 0.15;
+        for (let y = 0; y < rows - 2; y++) {
+          const height = 1 - y / rows;
+          for (let x = 0; x < cols; x++) {
+            const sway = Math.round(wind * (0.3 + (1 - height)) + (Math.random() * 3 - 1.5));
+            const src = (y + 1) * cols + Math.min(cols - 1, Math.max(0, x - sway));
+            const cool = Math.random() * (0.85 / rows) * (0.6 + 1.6 * (1 - height) * (1 - height)) * (1.25 - heat * 0.55);
+            cells[y * cols + x] = Math.max(0, cells[src] * 0.995 - cool);
+          }
         }
+        for (let x = 0; x < cols; x++) {
+          for (let y = 1; y < rows * 0.75; y++) {
+            if (cells[y * cols + x] > 0.32 && cells[(y - 1) * cols + x] < 0.1 && Math.random() < 0.005 * (0.4 + heat * 2)) {
+              embers.push({ x: x + 0.5, y: y - 0.5, vx: (Math.random() - 0.5) * 0.4 + wind * 0.3, vy: -(0.35 + Math.random() * 0.6), life: 1, decay: 0.03 + Math.random() * 0.05 });
+              break;
+            }
+          }
+        }
+        embers = embers.filter(e => (e.life -= e.decay) > 0 && e.y > -1);
+        for (const e of embers) { e.x += e.vx + Math.sin(t * 3 + e.y) * 0.15; e.y += e.vy; e.vy *= 0.99; }
         cx.clearRect(0, 0, canvas.width, canvas.height);
-        cx.font = `600 ${CH - 1}px "IBM Plex Mono", monospace`; cx.textBaseline = "top";
+        cx.font = `${CH}px "IBM Plex Mono", ui-monospace, monospace`; cx.textBaseline = "top";
         for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
-          const v = cells[y * cols + x]; if (v < 0.06) continue;
-          cx.fillStyle = COLORS[Math.min(COLORS.length - 1, (v * COLORS.length) | 0)];
+          const v = cells[y * cols + x]; if (v < 0.05) continue;
+          const c = Math.min(1, v * (0.9 + 0.25 * (y / rows)));
+          cx.fillStyle = COLORS[Math.min(COLORS.length - 1, (c * COLORS.length) | 0)];
           cx.fillText(RAMP[Math.min(RAMP.length - 1, (v * RAMP.length) | 0)], x * CW, y * CH);
+        }
+        for (const e of embers) {
+          const fl = e.life * (0.6 + 0.4 * Math.random());
+          cx.fillStyle = fl > 0.6 ? "#ffedb4" : fl > 0.3 ? "#fba940" : "#c43c0e";
+          cx.fillText(fl > 0.5 ? "*" : "'", e.x * CW, e.y * CH);
         }
       }
       raf = requestAnimationFrame(frame);
     }
     if (!REDUCE) raf = requestAnimationFrame(frame);
+    function flare(big) {
+      const at = Math.random() * cols;
+      surges.push({ x: at, w: big ? 14 + Math.random() * 8 : 6 + Math.random() * 4, amp: big ? 1.6 : 1.5 });
+      if (!big) surges.push({ x: at + (Math.random() - 0.5) * 10, w: 3, amp: 1.1 });
+      for (let i = 0; i < (big ? 45 : 28); i++) embers.push({ x: big ? Math.random() * cols : at + (Math.random() - 0.5) * 14, y: rows * (0.4 + Math.random() * 0.3),
+        vx: (Math.random() - 0.5) * 0.9, vy: -(0.6 + Math.random() * 1.0), life: 1, decay: 0.02 + Math.random() * 0.035 });
+    }
+    // A real build sends dozens of events a second, so the fire must not simply add them up: small events
+    // barely warm it, flares are spaced out, and heat is capped below white-hot so it stays a fire, not a wall.
+    let lastFlare = 0;
+    // The look of a flare comes from its local surge and embers, not from overall heat: heat stays low so the
+    // fire keeps its tongues and dark gaps even when picks arrive every few milliseconds.
+    const MAX = 0.56, SMALL_MAX = 0.43, FLARE_GAP = 2500;
     return {
-      bump(amount = 0.12) {
-        heat = Math.min(1, heat + amount);
-        if (amount >= 0.2 && cols) flares.push({ x: (Math.random() * cols) | 0, w: 5 + ((Math.random() * 8) | 0), life: 6 });
+      bump(amount = 0.1) {
+        const now = performance.now();
+        if (amount >= 0.45) { heat = Math.min(MAX, heat + 0.18); flare(true); lastFlare = now; }
+        else if (amount >= 0.2 && now - lastFlare > FLARE_GAP) { heat = Math.min(MAX, heat + 0.06); flare(false); lastFlare = now; }
+        else heat = Math.min(Math.max(heat, SMALL_MAX), heat + amount * 0.06);
       },
       set(f) { floor = f; },
       stop() { alive = false; ro.disconnect(); if (raf) cancelAnimationFrame(raf); },
@@ -810,7 +859,7 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     },
     startFire() {
       const c = document.createElement("canvas"); c.className = "fire"; c.setAttribute("aria-hidden", "true");
-      this.el().appendChild(c); fire?.stop(); fire = forgeFire(c); fire.set(0.5);
+      this.el().appendChild(c); fire?.stop(); fire = forgeFire(c); fire.set(0.4);
     },
 
     startSearch() {
@@ -1038,7 +1087,7 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     try {
       let job = await api("/generate", req);
       if (!job.cached) work.startSearch();
-      job = await waitFor(job, job.cached ? "Loading" : "About 8-10 minutes for a new idea",
+      job = await waitFor(job, job.cached ? "Loading" : "About 2-4 minutes for a new idea",
         (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
         e => e.step === "round" ? work.round(e) : e.step === "candidate" ? work.candidate(e) : e.step === "relaxed" && work.relaxed(e));
       work.hide(); setStatus("");
