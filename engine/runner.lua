@@ -130,6 +130,99 @@ function handlers.add_item(cmd)
 	return { name = name }
 end
 
+-- Item bases. types: list of item types ("Boots", "Ring", "One Handed Mace"...); max_level filters by level req.
+function handlers.bases(cmd)
+	local want = {}
+	for _, t in ipairs(cmd.types or {}) do want[t] = true end
+	local list = {}
+	for name, base in pairs(data.itemBases) do
+		local lvl = base.req and base.req.level or 0
+		if (not cmd.types or want[base.type]) and lvl <= (cmd.max_level or 100) and not base.hidden then
+			local tags = {}
+			for k in pairs(base.tags or {}) do table.insert(tags, k) end
+			table.insert(list, {
+				name = name, type = base.type, subType = base.subType, level = lvl, tags = tags,
+				implicit = base.implicit, armour = base.armour, weapon = base.weapon,
+				req = base.req,
+			})
+		end
+	end
+	return { bases = list }
+end
+
+-- Affixes that can roll on a base, up to item level max_level.
+-- Weight rule: the first weightKey present in the base's tags decides the weight.
+function handlers.affixes(cmd)
+	local base = data.itemBases[cmd.base]
+	if not base then error("unknown base: " .. tostring(cmd.base)) end
+	local list = {}
+	for id, mod in pairs(data.itemMods.Item) do
+		if (mod.type == "Prefix" or mod.type == "Suffix") and (mod.level or 0) <= (cmd.max_level or 100) then
+			local weight = 0
+			for i, key in ipairs(mod.weightKey or {}) do
+				if base.tags[key] then weight = mod.weightVal[i] or 0 break end
+			end
+			if weight > 0 then
+				local lines = {}
+				for _, line in ipairs(mod) do table.insert(lines, line) end
+				table.insert(list, { id = id, type = mod.type, group = mod.group, level = mod.level or 0,
+					lines = lines, tags = mod.modTags, weight = weight })
+			end
+		end
+	end
+	return { affixes = list }
+end
+
+-- Equip an item from raw text into a named slot, replacing (and deleting) what was there.
+function handlers.equip(cmd)
+	local slot = build.itemsTab.slots[cmd.slot]
+	if not slot then error("unknown slot: " .. tostring(cmd.slot)) end
+	local item = new("Item"):Item(cmd.raw)
+	if not item.base then error("could not parse item base") end
+	item:NormaliseQuality()
+	item:BuildModList()
+	local oldId = slot.selItemId
+	build.itemsTab:AddItem(item, true)
+	slot:SetSelItemId(item.id)
+	if oldId and oldId ~= 0 and build.itemsTab.items[oldId] and cmd.delete_old ~= false then
+		local still = false
+		for _, s in pairs(build.itemsTab.slots) do
+			if s ~= slot and s.selItemId == oldId then still = true end
+		end
+		if not still then build.itemsTab:DeleteItem(build.itemsTab.items[oldId], true) end
+	end
+	build.itemsTab:PopulateSlots()
+	build.buildFlag = true
+	frame()
+	local out = build.calcsTab.mainOutput
+	local result = {}
+	for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
+		if type(out[f]) == "number" then result[f] = out[f] end
+	end
+	return { id = item.id, name = item.name, output = result }
+end
+
+function handlers.unequip(cmd)
+	local slot = build.itemsTab.slots[cmd.slot]
+	if not slot then error("unknown slot: " .. tostring(cmd.slot)) end
+	slot:SetSelItemId(0)
+	build.buildFlag = true
+	frame()
+	return {}
+end
+
+-- What is equipped where, as raw item text.
+function handlers.equipped(cmd)
+	local slots = {}
+	for name, slot in pairs(build.itemsTab.slots) do
+		local item = slot.selItemId and build.itemsTab.items[slot.selItemId]
+		if item and not slot.nodeId then
+			slots[name] = { name = item.name, base = item.baseName, type = item.type, rarity = item.rarity, raw = item.raw }
+		end
+	end
+	return { slots = slots }
+end
+
 function handlers.clear_skills(cmd)
 	wipeTable(build.skillsTab.socketGroupList)
 	build.mainSocketGroup = 1

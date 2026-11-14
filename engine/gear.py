@@ -1,0 +1,267 @@
+"""Gear crafter: builds a rare item for every slot, scored by PoB for this exact build.
+
+For each slot it picks the best base, then adds affixes one at a time (max 3 prefixes,
+3 suffixes), each time choosing the affix that adds the most value:
+    relative DPS gain + def_weight * relative EHP gain + res_weight * resistance deficit closed
+The result is a per-slot shopping list: base type and affixes in priority order with
+target values, which works as a trade search for players.
+"""
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass, field
+
+from pob import PoB, PoBError
+
+ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots"}
+JEWELLERY_SLOTS = {"Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
+RES_CAP = 75
+SCORE_FIELDS = ["TotalDPS", "TotalDotDPS", "TotalEHP", "Life", "FireResist", "ColdResist", "LightningResist",
+                "ChaosResist"]
+# Affix groups that never matter for a build score.
+SKIP_GROUPS = {"ItemFoundRarityIncrease", "LocalAttributeRequirements", "LightRadius", "LocalLightRadius"}
+
+
+@dataclass
+class Stage:
+    key: str
+    name: str
+    level: int          # character level for this stage
+    item_level: int     # highest affix level available
+    roll: float         # where in each affix's range the target value sits (0 = min, 1 = max)
+    tier_drop: int      # tiers below the best available (budget)
+    max_affixes: int    # how many good affixes a typical item has at this budget
+    budget: str
+
+
+STAGES = {
+    "leveling": Stage("leveling", "Leveling (campaign)", 55, 55, 0.3, 1, 3, "Free, self-found"),
+    "early": Stage("early", "Early maps (league start)", 75, 70, 0.5, 1, 4, "Budget, about 0-5 divine"),
+    "mid": Stage("mid", "Mid maps", 90, 82, 0.6, 0, 5, "About 5-30 divine"),
+    "end": Stage("end", "Endgame", 95, 82, 0.9, 0, 6, "50+ divine"),
+}
+
+
+@dataclass
+class SlotPlan:
+    slot: str
+    base: str
+    affixes: list[str] = field(default_factory=list)   # in priority order, with target values
+    raw: str = ""
+
+
+def _value_at(text: str, roll: float) -> str:
+    """'+(50-69) to maximum Life' at roll 0.5 -> '+60 to maximum Life'."""
+    def sub(m):
+        lo, hi = float(m.group(1)), float(m.group(2))
+        v = lo + (hi - lo) * roll
+        decimals = "." in m.group(1) or "." in m.group(2)
+        return f"{v:.1f}" if decimals else str(int(round(v)))
+    return re.sub(r"\((-?[\d.]+)-(-?[\d.]+)\)", sub, text)
+
+
+def _res_deficit(out: dict) -> float:
+    return sum(max(0, RES_CAP - out.get(k, -60)) for k in ("FireResist", "ColdResist", "LightningResist")) \
+        + 0.5 * max(0, -out.get("ChaosResist", 0))
+
+
+class Scorer:
+    def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006):
+        self.def_weight = def_weight
+        self.res_weight = res_weight
+
+    def __call__(self, out: dict, base: dict) -> float:
+        d0 = max(base.get("TotalDPS", 0) + base.get("TotalDotDPS", 0), 1)
+        e0 = max(base.get("TotalEHP", 0), 1)
+        d = out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
+        return ((d - d0) / d0
+                + self.def_weight * (out.get("TotalEHP", 0) - e0) / e0
+                + self.res_weight * (_res_deficit(base) - _res_deficit(out)))
+
+
+def _item_raw(title: str, base: str, lines: list[str]) -> str:
+    return "\n".join(["Rarity: Rare", title, base, *lines])
+
+
+def _tier_choices(affixes: list[dict], stage: Stage) -> dict[str, dict]:
+    """One affix per group: the best tier available at this stage, minus tier_drop."""
+    by_group: dict[str, list[dict]] = {}
+    for a in affixes:
+        if a["group"] in SKIP_GROUPS:
+            continue
+        by_group.setdefault(a["group"], []).append(a)
+    chosen = {}
+    for group, tiers in by_group.items():
+        tiers.sort(key=lambda a: a["level"])
+        chosen[group] = tiers[max(0, len(tiers) - 1 - stage.tier_drop)]
+    return chosen
+
+
+@dataclass
+class _Work:
+    """An item being crafted."""
+    slot: str
+    base: str
+    title: str
+    options: dict
+    lines: list = field(default_factory=list)
+    picked: list = field(default_factory=list)
+    counts: dict = field(default_factory=lambda: {"Prefix": 0, "Suffix": 0})
+
+    def raw(self, extra: list[str] | None = None) -> str:
+        return _item_raw(self.title, self.base, self.lines + (extra or []))
+
+    def has_room(self, stage: "Stage", kind: str) -> bool:
+        return len(self.picked) < stage.max_affixes and self.counts[kind] < 3
+
+
+def _is_res_group(group: str) -> bool:
+    return "Resist" in group and "Penetration" not in group and "Minion" not in group and "Allies" not in group
+
+
+def _add(work: _Work, group: str, affix: dict, lines: list[str]) -> None:
+    work.lines += lines
+    work.picked.append(" / ".join(lines))
+    work.counts[affix["type"]] += 1
+    work.options.pop(group, None)
+
+
+def _fill(pob: PoB, work: _Work, stage: Stage, score: Scorer, limit: int, allow, ) -> None:
+    """Greedy: keep adding the affix with the best score until `limit` affixes or no gain."""
+    current = pob.send("equip", slot=work.slot, raw=work.raw(), fields=SCORE_FIELDS)["output"]
+    while len(work.picked) < limit:
+        best, best_score, best_out = None, 0.0, None
+        for group, a in work.options.items():
+            if not allow(group) or not work.has_room(stage, a["type"]):
+                continue
+            new_lines = [_value_at(line, stage.roll) for line in a["lines"]]
+            try:
+                out = pob.send("equip", slot=work.slot, raw=work.raw(new_lines), fields=SCORE_FIELDS)["output"]
+            except PoBError:
+                continue
+            sc = score(out, current)
+            if sc > best_score:
+                best, best_score, best_out = (group, a, new_lines), sc, out
+        if not best:
+            break
+        _add(work, *best)
+        current = best_out
+    pob.send("equip", slot=work.slot, raw=work.raw(), fields=SCORE_FIELDS)
+
+
+def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
+    """Add resistance affixes only where needed, on items that still have room."""
+    keys = {"fire": "FireResist", "cold": "ColdResist", "lightning": "LightningResist", "chaos": "ChaosResist"}
+    groups = {"fire": "FireResistance", "cold": "ColdResistance", "lightning": "LightningResistance",
+              "chaos": "ChaosResistance"}
+    targets = {"fire": RES_CAP, "cold": RES_CAP, "lightning": RES_CAP, "chaos": 0 if stage.key != "leveling" else -100}
+    for _ in range(30):
+        out = pob.calc(list(keys.values()))
+        need = {e: targets[e] - out.get(k, -60) for e, k in keys.items() if out.get(k, -60) < targets[e]}
+        if not need:
+            return
+        elem = max(need, key=need.get)
+        # Prefer all-resistance affixes when two or more elements are short, then the single element.
+        choices = []
+        for w in works:
+            short = [e for e in need if e != "chaos"]
+            if len(short) >= 2 and "AllResistances" in w.options and w.has_room(stage, w.options["AllResistances"]["type"]):
+                choices.append((0, w, "AllResistances"))
+            g = groups[elem]
+            if g in w.options and w.has_room(stage, w.options[g]["type"]):
+                choices.append((1, w, g))
+        if not choices:
+            return
+        choices.sort(key=lambda c: (c[0], len(c[1].picked)))
+        _, w, g = choices[0]
+        a = w.options[g]
+        _add(w, g, a, [_value_at(line, stage.roll) for line in a["lines"]])
+        pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
+
+
+def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score: Scorer) -> str:
+    """Try each candidate base bare (implicit + base defences only) and keep the best."""
+    title = f"{stage.name} {slot}"
+    ref = pob.calc(SCORE_FIELDS)
+    best, best_score = candidates[0]["name"], float("-inf")
+    for c in candidates:
+        try:
+            out = pob.send("equip", slot=slot, raw=_item_raw(title, c["name"], []), fields=SCORE_FIELDS)["output"]
+        except PoBError:
+            continue
+        s = score(out, ref)
+        if s > best_score:
+            best, best_score = c["name"], s
+    return best
+
+
+def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, per_subtype: int = 1) -> list[dict]:
+    """Highest-level base of each defence subtype (or of the given subtype)."""
+    pool = [b for b in bases if b["type"] == item_type and (sub_type is None or b.get("subType") == sub_type)
+            and not b["name"].startswith("Runeforged")]
+    groups: dict[str, list[dict]] = {}
+    for b in pool:
+        groups.setdefault(b.get("subType") or "", []).append(b)
+    out = []
+    for items in groups.values():
+        items.sort(key=lambda b: -b["level"])
+        out += items[:per_subtype]
+    return out
+
+
+def craft_gear(
+    pob: PoB,
+    stage: Stage,
+    weapon_type: str,
+    weapon_subtype: str | None = None,
+    dual_wield: bool = False,
+    offhand_type: str | None = None,
+    def_weight: float = 0.4,
+    log=print,
+) -> list[SlotPlan]:
+    """Craft every slot for a build already loaded in `pob` (class, level, skills set).
+
+    1. Damage and defence affixes first, leaving room on armour and jewellery.
+    2. Resistances only where still needed, on items with room.
+    3. Fill any room left with the best remaining affixes.
+    """
+    score = Scorer(def_weight=def_weight)
+    bases = pob.send("bases", max_level=stage.item_level)["bases"]
+
+    slot_bases: list[tuple[str, list[dict]]] = []
+    weapon_slots = [("Weapon 1", weapon_type, weapon_subtype)]
+    if dual_wield:
+        weapon_slots.append(("Weapon 2", weapon_type, weapon_subtype))
+    elif offhand_type:
+        weapon_slots.append(("Weapon 2", offhand_type, None))
+    for slot, wtype, wsub in weapon_slots:
+        cands = sorted((b for b in bases if b["type"] == wtype and (wsub is None or b.get("subType") == wsub)
+                        and not b["name"].startswith("Runeforged")), key=lambda b: -b["level"])[:6]
+        if not cands:
+            raise ValueError(f"No {wtype} bases up to item level {stage.item_level}")
+        slot_bases.append((slot, cands))
+    for slot, item_type in {**ARMOUR_SLOTS, **JEWELLERY_SLOTS}.items():
+        per = 1 if item_type in ARMOUR_SLOTS.values() else 6
+        cands = _top_bases(bases, item_type, per_subtype=per)
+        if cands:
+            slot_bases.append((slot, cands))
+
+    works: list[_Work] = []
+    for slot, cands in slot_bases:
+        base = _best_base(pob, slot, cands, stage, score)
+        affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
+        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage)))
+
+    no_res = Scorer(def_weight=def_weight, res_weight=0.0)
+    for w in works:
+        reserve = 0 if w.slot.startswith("Weapon") else 2
+        _fill(pob, w, stage, no_res, stage.max_affixes - reserve, allow=lambda g: not _is_res_group(g))
+    _cap_resistances(pob, works, stage)
+    for w in works:
+        _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
+
+    plans = []
+    for w in works:
+        log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
+        plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw()))
+    return plans
