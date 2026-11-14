@@ -24,7 +24,7 @@ Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We d
 ## Known gaps
 - Pros and cons are rule-based for now (damage split, accuracy, speed, crit, resistances, tankiness). The AI layer will add context later.
 - Passive tree: can allocate named nodes, no tree optimiser yet.
-- Support rules not enforced yet: lineage support limits, one copy of each support per character.
-- Conditional supports (e.g. Hit and Run) use PoB's default config, which may assume their condition is met.
+- Support rules: the optimiser rejects any combo that triggers a PoB rule warning (e.g. lineage copy limit). Pass `exclude` for gems used in other skills.
+- Conditional supports (Hit and Run, Glory gems, combo finishers; 12 in total) are skipped by default because PoB counts their bonus but not their downtime.
 - Gear is whatever we put in. Budget-tier gear comes with the build data step.
 - New 1.0 content (Shadow, new gems, daggers' new skills) needs a PoB update first.

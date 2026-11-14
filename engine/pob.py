@@ -102,6 +102,8 @@ class PoB:
         for key in ("supported", "output"):
             if not isinstance(res.get(key), dict):
                 res[key] = {}
+        if not isinstance(res.get("warnings"), list):
+            res["warnings"] = []
         return res
 
     def clear_skills(self):
@@ -119,6 +121,10 @@ class PoB:
     def calc(self, fields: list[str] | None = None) -> dict:
         kwargs = {"fields": fields} if fields else {}
         return self.send("calc", **kwargs)["output"]
+
+    def warnings(self) -> list[str]:
+        w = self.send("calc", fields=["TotalDPS"]).get("warnings")
+        return w if isinstance(w, list) else []
 
     def list_gems(self, filter: str | None = None, tags: list[str] | None = None) -> list[dict]:
         return self.send("list_gems", filter=filter, tags=tags or [])["gems"]

@@ -24,6 +24,35 @@ local DEFAULT_FIELDS = {
 	"Str", "Dex", "Int",
 }
 
+-- Supports that put a usage condition on the skill (move first, build Glory, etc.).
+-- PoB applies their bonus but not the downtime, so they look better than they play.
+local function isConditional(gem)
+	local ge = gem.grantedEffect
+	if not ge then return false end
+	for _, t in ipairs(ge.addSkillTypes or {}) do
+		if t == SkillType.HasUsageCondition then return true end
+	end
+	local d = (ge.description or ""):lower()
+	return d:find("requirement") ~= nil or d:find("can only be used") ~= nil
+end
+
+local function warnings()
+	local w = {}
+	local env = build.calcsTab.mainEnv
+	for kind, list in pairs(env and env.itemWarnings or {}) do
+		for _, entry in ipairs(list) do
+			table.insert(w, kind .. ": " .. table.concat((function()
+				local parts = {}
+				for _, v in ipairs(entry) do
+					if type(v) ~= "table" then table.insert(parts, tostring(v)) end
+				end
+				return parts
+			end)(), " "))
+		end
+	end
+	return w
+end
+
 local function findClass(name)
 	for id, class in pairs(build.spec.tree.classes) do
 		if class.name:lower() == name:lower() then return id, class end
@@ -136,6 +165,10 @@ function handlers.try_skill(cmd)
 	local new = table.remove(list)
 	list[cmd.group] = new
 	build.mainSocketGroup = cmd.group
+	-- Resolve gems and global gem counts before recalculating, otherwise the
+	-- calculation sees the previous gem list and results lag one step behind.
+	build.skillsTab:ProcessSocketGroup(new)
+	build.skillsTab:UpdateGlobalGemCountAssignments()
 	build.buildFlag = true
 	frame()
 	local supported = {}
@@ -158,7 +191,7 @@ function handlers.try_skill(cmd)
 	for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
 		if type(out[f]) == "number" then result[f] = out[f] end
 	end
-	return { output = result, supported = supported, main_skill = mainSkillName() }
+	return { output = result, supported = supported, main_skill = mainSkillName(), warnings = warnings() }
 end
 
 function handlers.remove_skill(cmd)
@@ -205,13 +238,18 @@ function handlers.alloc_nodes(cmd)
 end
 
 function handlers.calc(cmd)
+	for _, group in ipairs(build.skillsTab.socketGroupList) do
+		build.skillsTab:ProcessSocketGroup(group)
+	end
+	build.skillsTab:UpdateGlobalGemCountAssignments()
+	build.buildFlag = true
 	frame()
 	local out = build.calcsTab.mainOutput
 	local result = {}
 	for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
 		if type(out[f]) == "number" then result[f] = out[f] end
 	end
-	return { main_skill = mainSkillName(), output = result }
+	return { main_skill = mainSkillName(), output = result, warnings = warnings() }
 end
 
 -- Lists gems. filter: "support" | "active" | nil; tags: every tag must match
@@ -226,7 +264,8 @@ function handlers.list_gems(cmd)
 			if not (gem.tags and gem.tags[tag]) then ok = false end
 		end
 		if ok then
-			table.insert(gems, { name = gem.name, tags = gem.tagString, family = gem.gemFamily, tier = gem.Tier })
+			table.insert(gems, { name = gem.name, tags = gem.tagString, family = gem.gemFamily, tier = gem.Tier,
+				lineage = gem.tags and gem.tags.lineage or false, conditional = isSupport and isConditional(gem) or false })
 		end
 	end
 	table.sort(gems, function(a, b) return a.name < b.name end)

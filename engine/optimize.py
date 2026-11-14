@@ -38,18 +38,29 @@ def optimise_supports(
     beam: int = 3,
     candidates: list[str] | None = None,
     min_gain: float = 0.005,
+    top_k: int = 15,
+    allow_conditional: bool = False,
+    exclude: set[str] | None = None,
     log=print,
 ) -> list[Result]:
     """Find the support set that maximises `metric` for the skill in `group`.
 
     Rules respected: one gem per gem family (e.g. only one of Bleed I-IV),
-    a support only counts if PoB says it actually supports the skill.
+    a support only counts if PoB says it actually supports the skill, and
+    combos that trigger a PoB rule warning (e.g. lineage copy limit) are rejected.
+    `exclude` holds supports already used elsewhere in the build.
+    Conditional supports (Hit and Run, Glory gems, combo finishers...) are skipped
+    unless allow_conditional, because PoB counts their bonus but not their downtime.
+    Only the `top_k` best supports from screening go into the combination search.
     """
     field_name = METRICS.get(metric, metric)
     fields = ["TotalDPS", "TotalDotDPS", "CombinedDPS", "Life", "TotalEHP"] + ([] if field_name == "total" else [field_name])
     gems = pob.list_gems("support")
     family = {g["name"]: g.get("family") or g["name"] for g in gems}
-    pool = candidates or [g["name"] for g in gems]
+    skip = set(exclude or ())
+    if not allow_conditional:
+        skip |= {g["name"] for g in gems if g.get("conditional")}
+    pool = [n for n in (candidates or [g["name"] for g in gems]) if n not in skip]
 
     t0 = time.time()
     base = pob.try_skill(group, [active], fields)
@@ -62,7 +73,7 @@ def optimise_supports(
         res = pob.try_skill(group, [active, name], fields)
         if res["supported"].get(name):  # skip gems PoB says don't apply
             solo[name] = score_of(res["output"], field_name)
-    useful = sorted((n for n, s in solo.items() if s > base_score * (1 + min_gain)), key=lambda n: -solo[n])
+    useful = sorted((n for n, s in solo.items() if s > base_score * (1 + min_gain)), key=lambda n: -solo[n])[:top_k]
     log(f"Screened {len(pool)} supports in {time.time() - t0:.1f}s, {len(useful)} add damage")
     for n in useful[:10]:
         log(f"  {n:<32} {solo[n] / base_score - 1:+.0%}")
@@ -80,7 +91,7 @@ def optimise_supports(
                 if combo in scored:
                     continue
                 res = pob.try_skill(group, [active, *combo], fields)
-                if not all(res["supported"].get(s) for s in combo):
+                if not all(res["supported"].get(s) for s in combo) or res.get("warnings"):
                     continue
                 scored[combo] = Result(list(combo), score_of(res["output"], field_name), res["output"])
         if not scored:

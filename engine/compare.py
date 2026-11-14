@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import json
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from optimize import optimise_supports, total_dps
@@ -158,13 +159,15 @@ def relative_notes(reports: list[Report]) -> None:
 def compare(builds: list[dict], pob: PoB | None = None) -> list[Report]:
     if not 1 <= len(builds) <= MAX_BUILDS:
         raise ValueError(f"Give 1 to {MAX_BUILDS} builds")
-    own = pob is None
-    pob = pob or PoB()
-    try:
+    if pob is not None:
         reports = [evaluate(pob, b) for b in builds]
-    finally:
-        if own:
-            pob.close()
+    else:
+        # One PoB process per build, run side by side.
+        def run(b):
+            with PoB() as p:
+                return evaluate(p, b)
+        with ThreadPoolExecutor(max_workers=len(builds)) as ex:
+            reports = list(ex.map(run, builds))
     for r in reports:
         absolute_notes(r)
     relative_notes(reports)
