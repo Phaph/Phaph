@@ -1,13 +1,16 @@
 """Collect item and gem icon links (GGG's own image server, web.poecdn.com) into engine/data/icons.json.
 
 Usage:
-    python engine/tools/fetch_icons.py                 # newest softcore trade league, 80 characters
-    python engine/tools/fetch_icons.py --characters 150
+    python engine/tools/fetch_icons.py                       # 10 characters from each ascendancy
+    python engine/tools/fetch_icons.py --per-class 20 --classes "Invoker,Lich"
 
 GGG's image links carry a hash, so they can't be built from a game file path; we need links GGG already
 made. Two places have them:
   - poe.ninja's unique price lists: one icon per unique.
   - poe.ninja's public character pages: each item's base art (a rare shows its base) and each socketed gem.
+    Characters are taken from every ascendancy, so many different skills, supports and bases turn up.
+    poe.ninja only lists characters of level 80+, so campaign-only bases rarely appear; the website shows
+    an original slot silhouette for those.
 We store links only, never the images: the website loads them straight from GGG's server, the same way
 poe.ninja and other fan sites do (see research/ggg-third-party-rules.md).
 
@@ -72,15 +75,25 @@ def _column(blob: bytes, name: str) -> list[str]:
     return out
 
 
-def top_characters(limit: int) -> tuple[str, str, list[tuple[str, str]]]:
-    """(snapshot version, overview name, [(account, character)]) for the newest league's ladder."""
+# Ascendancies as poe.ninja names them (its class filter takes these). Update when GGG adds classes (e.g. 1.0).
+ASCENDANCIES = ["Deadeye", "Pathfinder", "Amazon", "Spirit Walker", "Ritualist", "Titan", "Warbringer", "Smith of Kitava",
+                "Tactician", "Witchhunter", "Gemling Legionnaire", "Oracle", "Shaman", "Infernalist", "Blood Mage", "Lich",
+                "Abyssal Lich", "Stormweaver", "Chronomancer", "Disciple of Varashta", "Martial Artist", "Invoker",
+                "Acolyte of Chayula"]
+
+
+def snapshot() -> tuple[str, str]:
+    """(snapshot version, overview name) for the newest trade league's builds."""
     state = get_json("data/index-state")
     league = newest_trade_league()
     snap = next(s for s in state["snapshotVersions"] if s["name"] == league)
-    blob = _get(f"{BASE}/builds/{snap['version']}/search?" + urllib.parse.urlencode({"overview": snap["snapshotName"]}))
-    accounts, names = _column(blob, "account"), _column(blob, "name")
-    pairs = list(zip(accounts, names))
-    return snap["version"], snap["snapshotName"], pairs[:limit]
+    return snap["version"], snap["snapshotName"]
+
+
+def characters(version: str, overview: str, limit: int, **filters) -> list[tuple[str, str]]:
+    """[(account, character)] from poe.ninja's builds list, with the same filters its page takes (e.g. level="40-65")."""
+    blob = _get(f"{BASE}/builds/{version}/search?" + urllib.parse.urlencode({"overview": overview, **filters}))
+    return list(zip(_column(blob, "account"), _column(blob, "name")))[:limit]
 
 
 def _ok(url: str | None) -> bool:
@@ -105,7 +118,8 @@ def harvest_character(data: dict, icons: dict) -> None:
 
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument("--characters", type=int, default=80)
+    ap.add_argument("--per-class", type=int, default=10, help="characters per ascendancy")
+    ap.add_argument("--classes", default=",".join(ASCENDANCIES), help="ascendancies, comma separated")
     args = ap.parse_args(argv)
 
     icons = {"uniques": {}, "bases": {}, "gems": {}}
@@ -122,7 +136,19 @@ def main(argv: list[str] | None = None) -> int:
         time.sleep(PAUSE)
     print(f"uniques: {len(icons['uniques'])}", file=sys.stderr)
 
-    version, overview, chars = top_characters(args.characters)
+    version, overview = snapshot()
+    chars, seen = [], set()
+    for cls in args.classes.split(","):
+        time.sleep(PAUSE)
+        try:
+            found = characters(version, overview, args.per_class, **{"class": cls.strip()})
+        except Exception as e:  # noqa: BLE001 - an ascendancy poe.ninja doesn't know yet
+            print(f"  skip class {cls}: {e}", file=sys.stderr)
+            continue
+        for c in found:
+            if c not in seen:
+                seen.add(c)
+                chars.append(c)
     print(f"{len(chars)} characters from {overview}", file=sys.stderr)
     for n, (account, name) in enumerate(chars, 1):
         time.sleep(PAUSE)

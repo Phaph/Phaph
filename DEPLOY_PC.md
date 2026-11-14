@@ -69,4 +69,4 @@ Picks the newest softcore trade league on poe.ninja. Run it after a new league's
 python engine/tools/fetch_icons.py
 docker compose up -d --build
 ```
-Collects links to item, unique and gem art on GGG's image server (from poe.ninja's price lists and about 80 top public characters, spaced out). Only links are stored, in `engine/data/icons.json`; the site loads the images from GGG's server. Existing entries are kept, so run it once per league or patch to add new items and gems.
+Collects links to item, unique and gem art on GGG's image server (from poe.ninja's price lists and 10 public characters from each ascendancy, spaced out; poe.ninja only lists level 80+ characters, so campaign bases fall back to a silhouette). Only links are stored, in `engine/data/icons.json`; the site loads the images from GGG's server. Existing entries are kept, so run it once per league or patch to add new items and gems.

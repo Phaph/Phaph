@@ -234,7 +234,7 @@ def icons():
     path = ROOT / "engine" / "data" / "icons.json"
     if not path.exists():
         return {"uniques": {}, "bases": {}, "gems": {}}
-    return FileResponse(path, media_type="application/json", headers={"Cache-Control": "public, max-age=86400"})
+    return FileResponse(path, media_type="application/json", headers={"Cache-Control": "public, max-age=3600"})
 
 
 @app.get("/health")
