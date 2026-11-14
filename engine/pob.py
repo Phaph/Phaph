@@ -147,11 +147,12 @@ class PoB:
 
     def optimise_tree(self, max_dist: int = 6, def_weight: float = 0.25, points: int | None = None,
                       metric: str = "total", goals=None, on_step=None, far_dist: int = 12,
-                      refine: bool = True, refine_seconds: float | None = None) -> dict:
+                      refine: bool = True, refine_seconds: float | None = None, jewel: str | None = None) -> dict:
         """Spend passive and ascendancy points (see runner.lua optimise_tree).
 
         far_dist: how far away a notable or keystone may be (small passives: max_dist).
         refine: run the swap phase afterwards, which takes back weak branches and re-spends them.
+        jewel: a raw jewel (see jewels.proxy_jewel); sockets taken get a copy of it straight away.
         on_step, if given, is called with each step while the search runs (see runner.lua `live`).
         """
         from goals import weights
@@ -161,6 +162,8 @@ class PoB:
                   "refine_rounds": 12 if refine else 0}
         if refine_seconds is not None:
             kwargs["refine_seconds"] = refine_seconds
+        if jewel:
+            kwargs["jewel"] = jewel   # a raw jewel: sockets become targets worth their path plus this jewel
         if points is not None:
             kwargs["points"] = points
         if on_step:

@@ -1415,17 +1415,20 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const divs = v => v >= 10 ? fmt(v) : v >= 1 ? (Math.round(v * 10) / 10).toString() : v >= 0.1 ? v.toFixed(2) : "<0.1";
   const aboutDiv = v => v < 0.1 ? "under 0.1 div" : `~${divs(v)} div`;
   const tradeLink = g => g.trade_url ? `<a class="trade" href="${esc(g.trade_url)}" target="_blank" rel="noopener noreferrer">Find on trade</a>` : "";
+  // Gear plus one jewel per socket ("Jewel 1", "Jewel 2"... in the order the tree took the sockets).
+  const items = s => [...(s?.gear || []), ...(s?.jewels || []).map((j, i) => ({ ...j, slot: `Jewel ${i + 1}`, jewel: true }))];
   // One line at the top of the build: what the endgame version costs.
   function buildCostLine(s) {
-    const gear = s?.gear || [];
+    const gear = items(s);
     if (!gear.length) return "";
     const priced = gear.filter(g => g.unique && g.price != null), rares = gear.filter(g => !g.unique);
     const total = priced.reduce((t, g) => t + g.price, 0), cap = ITEM_CAP[s.budget_key];
+    const rareJewels = rares.filter(g => g.jewel).length;
     const most = rares.length && isFinite(cap) ? total + rares.length * cap : null;
-    return `<p class="buildcost">Endgame gear: <b>${aboutDiv(total)}</b> in uniques${rares.length ? ` + ${rares.length} crafted rares` : ""}${most != null && cap > 0 ? `, at most ${aboutDiv(most)} in all` : ""}</p>`;
+    return `<p class="buildcost">Endgame gear: <b>${aboutDiv(total)}</b> in uniques${rares.length - rareJewels ? ` + ${rares.length - rareJewels} crafted rares` : ""}${rareJewels ? ` + ${rareJewels} rare jewels` : ""}${most != null && cap > 0 ? `, at most ${aboutDiv(most)} in all` : ""}</p>`;
   }
   function costHtml(s) {
-    const gear = s.gear || [];
+    const gear = items(s);
     const uniques = gear.filter(g => g.unique), rares = gear.filter(g => !g.unique);
     const priced = uniques.filter(g => g.price != null);
     const total = priced.reduce((t, g) => t + g.price, 0);
@@ -1469,7 +1472,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   function renderStage(plan, s) {
     const prevGear = shownGear, forward = shownStage == null || STAGE_RANK[s.stage] >= STAGE_RANK[shownStage];
     shownStage = s.stage;
-    shownGear = Object.fromEntries(s.gear.map(g => [g.slot, { name: g.unique ? g.unique.split(",")[0] : g.base, affixes: g.affixes }]));
+    shownGear = Object.fromEntries(items(s).map(g => [g.slot, { name: g.unique ? g.unique.split(",")[0] : g.base, affixes: g.affixes }]));
     const st = s.stats || {};
     const res = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round(st[k] || 0)).join(" / ");
     const kv = [];
@@ -1517,7 +1520,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
       <div style="display:grid;gap:8px"><h3>Gear, struck in the order to buy it</h3>
       <p class="muted" style="font-size:16px">Line 1 is what to buy first. Diamonds show the affix tier: more means a better roll${prevGear ? ". Switching stages re-strikes only what changed" : ""}.</p>
-      <div class="items">${gearHtml(s.gear, prevGear, forward)}</div></div>
+      <div class="items">${gearHtml(items(s), prevGear, forward)}</div></div>
       ${s.notes.length ? `<ul class="notes">${s.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
       ${printing ? "" : `<div class="field"><label for="code">Path of Building code</label>
         <div class="code"><input id="code" readonly value="${esc(s.code)}"><button class="chip small" type="button" id="copy">Copy</button></div></div>`}`;

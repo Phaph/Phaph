@@ -161,3 +161,31 @@ def test_tree_long_reach_never_scores_lower(pob, monk):
     pob.load_xml(xml)
     pob.optimise_tree(points=40)
     assert total_dps(pob.calc(FIELDS)) >= old * 0.95
+
+
+def test_jewel_affixes_come_from_the_jewel_pool(pob):
+    affixes = pob.send("affixes", base="Ruby", max_level=82)["affixes"]
+    assert affixes and all(a["type"] in ("Prefix", "Suffix") for a in affixes)
+    assert not any("to maximum Life" in a["lines"][0] and a["lines"][0].startswith("+(") and "Jewel" not in a["id"]
+                   for a in affixes), "gear affixes leaked into the jewel pool"
+
+
+def test_jewels_fill_the_sockets_the_tree_takes(pob, monk):
+    from gear import Scorer, make_stage
+    from jewels import craft_jewels, jewel_sockets, proxy_jewel
+
+    stage = make_stage("end", "high")
+    score = Scorer()
+    nodes, stats = pob.send("allocated")["nodes"], pob.calc(FIELDS)
+    raw = proxy_jewel(pob, stage, score)
+    assert raw and raw.splitlines()[2] in ("Ruby", "Emerald", "Sapphire")
+    # Making the stand-in jewel must leave the build as it was.
+    assert pob.send("allocated")["nodes"] == nodes
+    for k, v in stats.items():
+        assert pob.calc(FIELDS)[k] == pytest.approx(v)
+    pob.optimise_tree(jewel=raw, refine=False)
+    taken = [s for s in jewel_sockets(pob) if s["alloc"]]
+    assert taken, "a strong jewel should pull the tree into at least one socket"
+    plans = craft_jewels(pob, stage, score, log=lambda *a: None)
+    assert [p.slot for p in plans] == [s["slot"] for s in taken]
+    assert all(p.unique or 1 <= len(p.affixes) <= 4 for p in plans)

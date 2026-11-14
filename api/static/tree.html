@@ -244,7 +244,11 @@ canvas.dragging { cursor: grabbing; }
     const t = $("tip");
     if (!id) { t.hidden = true; return; }
     const n = VN[id];
-    t.innerHTML = `<b>${esc(n[3] || KIND[n[2]])}</b><span class="k">${n[5] ? `${esc(n[5])} ascendancy · ` : ""}${KIND[n[2]]}${alloc.has(id) ? " · in this build" : ""}</span>${n[4].length ? `<ul>${n[4].map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}`;
+    // A socket this build fills shows its jewel instead of the empty socket.
+    const ji = (stage?.jewels || []).findIndex(j => j.slot === `Jewel ${id}`), jw = ji >= 0 ? stage.jewels[ji] : null;
+    const lines = jw ? (jw.unique ? [`Unique: ${jw.unique}`] : jw.affixes) : n[4];
+    const title = jw ? `Jewel ${ji + 1}: ${jw.unique ? jw.unique.split(",")[0] : jw.base}` : (n[3] || KIND[n[2]]);
+    t.innerHTML = `<b>${esc(title)}</b><span class="k">${n[5] ? `${esc(n[5])} ascendancy · ` : ""}${KIND[n[2]]}${alloc.has(id) ? " · in this build" : ""}</span>${lines.length ? `<ul>${lines.map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}`;
     t.hidden = false;
     const r = t.getBoundingClientRect();
     t.style.left = Math.min(sx + 16, W - r.width - 8) + "px"; t.style.top = Math.min(sy + 16, H - r.height - 8) + "px";

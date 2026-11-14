@@ -161,6 +161,8 @@ class _Work:
     unique: str | None = None
     unique_raw: str | None = None
     price_note: str | None = None
+    max_total: int | None = None    # affix cap for this item (jewels); None: the stage's
+    max_kind: int = 3               # prefixes (or suffixes) at most
 
     def raw(self, extra: list[str] | None = None) -> str:
         if self.unique_raw:
@@ -170,7 +172,8 @@ class _Work:
     def has_room(self, stage: "Stage", kind: str) -> bool:
         if self.unique_raw:
             return False
-        return len(self.picked) < stage.max_affixes and self.counts[kind] < 3
+        total = stage.max_affixes if self.max_total is None else self.max_total
+        return len(self.picked) < total and self.counts[kind] < self.max_kind
 
 
 def _is_res_group(group: str) -> bool:

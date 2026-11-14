@@ -214,7 +214,8 @@ function handlers.affixes(cmd)
 	local base = data.itemBases[cmd.base]
 	if not base then error("unknown base: " .. tostring(cmd.base)) end
 	local list = {}
-	for id, mod in pairs(data.itemMods.Item) do
+	local pool = base.type == "Jewel" and data.itemMods.Jewel or data.itemMods.Item
+	for id, mod in pairs(pool) do
 		if (mod.type == "Prefix" or mod.type == "Suffix") and (mod.level or 0) <= (cmd.max_level or 100) then
 			local weight = 0
 			for i, key in ipairs(mod.weightKey or {}) do
@@ -334,6 +335,49 @@ function handlers.allocated(cmd)
 	for id in pairs(build.spec.allocNodes) do table.insert(ids, id) end
 	table.sort(ids)
 	return { nodes = ids, version = build.spec.treeVersion }
+end
+
+-- Jewel sockets on the passive tree. A plain socket takes any jewel; special ones (charm sockets,
+-- ascendancy sockets that only take basic jewels, cluster sockets) are flagged so callers can skip them.
+local function isPlainSocket(node)
+	return (node.type == "Socket" or node.isJewelSocket) and not node.ascendancyName and not node.charmSocket
+		and not node.containJewelSocket and not node.expansionJewel
+end
+
+function handlers.jewel_sockets(cmd)
+	local out = {}
+	for id, node in pairs(build.spec.nodes) do
+		if node.type == "Socket" or node.isJewelSocket then
+			table.insert(out, { id = id, slot = "Jewel " .. id, alloc = node.alloc and true or false,
+				dist = node.path and #node.path or nil, plain = isPlainSocket(node),
+				has_slot = build.itemsTab.slots["Jewel " .. id] ~= nil, type = node.type,
+				charm = node.charmSocket and true or false, asc = node.ascendancyName,
+				name = node.dn, linked = node.linked and #node.linked or 0, pathDist = node.pathDist,
+				locked = node.unlockConstraint and true or false })
+		end
+	end
+	table.sort(out, function(a, b) return a.id < b.id end)
+	return { sockets = out }
+end
+
+-- Allocate nodes by id (with the path to each), or take them back. Used to try a jewel in a socket.
+function handlers.alloc_ids(cmd)
+	for _, id in ipairs(cmd.ids or {}) do
+		local node = build.spec.nodes[id]
+		if node and not node.alloc and node.path then build.spec:AllocNode(node) end
+	end
+	build.spec:AddUndoState(); build.buildFlag = true; frame()
+	local used = build.spec:CountAllocNodes()
+	return { used = used }
+end
+
+function handlers.dealloc_ids(cmd)
+	for _, id in ipairs(cmd.ids or {}) do
+		local node = build.spec.nodes[id]
+		if node and node.alloc then build.spec:DeallocNode(node) end
+	end
+	build.spec:AddUndoState(); build.buildFlag = true; frame()
+	return {}
 end
 
 -- The build's skill groups: index, gem names in order, and whether it is the main group.
@@ -605,6 +649,22 @@ local function passivePoints()
 	return build.characterLevel - 1 + quest + extra
 end
 
+-- Put a raw item in a slot without returning stats (the tree optimiser fills sockets this way).
+local function equipRaw(slotName, raw)
+	local slot = build.itemsTab.slots[slotName]
+	if not slot then return false end
+	local item = new("Item"):Item(raw)
+	if not item.base then return false end
+	item:NormaliseQuality()
+	item:BuildModList()
+	local oldId = slot.selItemId
+	build.itemsTab:AddItem(item, true)
+	slot:SetSelItemId(item.id)
+	if oldId and oldId ~= 0 and build.itemsTab.items[oldId] then build.itemsTab:DeleteItem(build.itemsTab.items[oldId], true) end
+	build.itemsTab:PopulateSlots()
+	return true
+end
+
 function handlers.points(cmd)
 	local used, ascUsed = build.spec:CountAllocNodes()
 	return { available = passivePoints(), used = used, ascendancy_used = ascUsed }
@@ -625,6 +685,16 @@ function handlers.optimise_tree(cmd)
 	local maxDist = cmd.max_dist or 6
 	local farDist = math.max(cmd.far_dist or 12, maxDist)
 	local capDist = nil   -- set while only a few points are left
+	-- Jewel sockets: with cmd.jewel (a raw jewel, the best one for this build), a socket is a target worth
+	-- its path plus that jewel, and every socket taken gets the jewel at once, so later picks see it.
+	local proxy
+	if cmd.jewel then
+		proxy = new("Item"):Item(cmd.jewel)
+		if proxy.base then proxy:NormaliseQuality(); proxy:BuildModList() else proxy = nil end
+	end
+	local function isSocketTarget(node)
+		return proxy and isPlainSocket(node) and node.linked and #node.linked > 0
+	end
 	local quiet = false   -- no live events while a swap is only being tried
 	local defWeight = cmd.def_weight or 0.25
 	local budget = cmd.points or passivePoints()
@@ -689,6 +759,9 @@ function handlers.optimise_tree(cmd)
 		local isAsc = node.ascendancyName ~= nil
 		local reach = (node.type == "Normal" or ascend) and maxDist or farDist
 		if capDist then reach = math.min(reach, capDist) end
+		if not ascend and not node.alloc and node.path and #node.path <= reach and isSocketTarget(node) then
+			return true
+		end
 		return not node.alloc and node.path and node.modKey and node.modKey ~= ""
 			and (node.type == "Normal" or node.type == "Notable" or node.type == "Keystone")
 			and #node.path <= reach
@@ -719,7 +792,9 @@ function handlers.optimise_tree(cmd)
 		for _, node in ipairs(pool) do
 			local pathNodes = {}
 			for _, n in ipairs(node.path) do pathNodes[n] = true end
-			local out = calcFunc({ addNodes = pathNodes }, useFullDPS)
+			local override = { addNodes = pathNodes }
+			if node.type == "Socket" then override.repSlotName = "Jewel " .. node.id; override.repItem = proxy end
+			local out = calcFunc(override, useFullDPS)
 			evals = evals + 1
 			local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0 + goalTerms(out, base)
 			table.insert(scored, { node = node, eff = gain / #node.path })
@@ -770,6 +845,7 @@ function handlers.optimise_tree(cmd)
 			for _, n in ipairs(node.path) do table.insert(pathIds, n.id) end   -- PoB clears node.path once allocated
 			build.spec:AllocNode(node)
 			build.spec:AddUndoState()
+			if proxy and node.type == "Socket" then equipRaw("Jewel " .. node.id, cmd.jewel) end
 			build.buildFlag = true
 			frame()
 			table.insert(steps, { node = node.dn, id = node.id, path = pathIds, type = node.type, cost = cost, gain_per_point = eff, ascendancy = ascend })

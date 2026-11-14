@@ -1,7 +1,8 @@
 """Full build guide: one build spec -> Leveling, Early maps, Mid maps and Endgame versions.
 
 Each stage gets its own level, passive points, gear budget, support gems and passives:
-    supports (bare) -> gear -> passive tree -> supports again
+    supports (bare) -> gear -> passive tree (jewel sockets valued with a stand-in jewel) -> supports again
+    -> gear again -> a jewel for every socket taken
 Stages run side by side, one PoB process each.
 
 Spec:
@@ -22,7 +23,8 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
-from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
+from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
+from jewels import craft_jewels, proxy_jewel
 from optimize import CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports, total_dps
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
 from pob import PoB
@@ -94,6 +96,7 @@ class StageGuide:
     # The order to take passives: each pick (most value per point first) with the path that reaches it.
     tree_order: list[dict] = field(default_factory=list)
     tree_version: str | None = None
+    jewels: list[SlotPlan] = field(default_factory=list)    # one per jewel socket taken, slot "Jewel <node id>"
 
 
 DEFAULT_BUDGET = "high"
@@ -168,6 +171,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         if boss_swap:
             boss_weapon()
         report("gear", "First gear pass")
+        # The best jewel this build could socket: the tree weighs every socket as its path plus this jewel.
+        jewel_score = Scorer(def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals)
+        stand_in = proxy_jewel(pob, stage, jewel_score)
         def tree_live(ev):
             if progress:
                 progress({"stage": stage_key, "step": "tree_live", "chosen": ev.get("chosen"), "name": ev.get("name"),
@@ -176,7 +182,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                           "ascendancy": bool(ev.get("ascendancy")), "score": round(ev.get("score") or 0, 1),
                           "removed": ev.get("removed") or [], "added": ev.get("added") or []})
 
-        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals,
+        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals, jewel=stand_in,
                                  on_step=tree_live if progress else None)
         if progress:
             for s in tree["steps"]:
@@ -202,8 +208,11 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
         if boss_swap:
             gear.append(boss_weapon())
-        add_trade_info(pob, gear)
-        report("gear", "Gear re-crafted to fit", slots=[g.unique.split(",")[0] if g.unique else g.base for g in gear])
+        # Each socket's jewel for real, now the tree, gems and gear are settled.
+        jewels = craft_jewels(pob, stage, jewel_score, log=quiet)
+        add_trade_info(pob, gear + jewels)
+        report("gear", "Gear re-crafted to fit" + (f", {len(jewels)} jewels" if jewels else ""),
+               slots=[g.unique.split(",")[0] if g.unique else g.base for g in gear + jewels])
 
         # Bossing setup: a separate boss skill if the build has one, else a support swap.
         pob.set_config(**MODE_CONFIG["bossing"])
@@ -237,7 +246,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget, budget_key=stage.budget_key,
             supports=best.supports,
             notables=[s["node"] for s in tree["steps"] if s["type"] != "Normal"],
-            gear=gear, stats=stats, dps=total_dps(stats), code=pob.save_code(),
+            gear=gear, jewels=jewels, stats=stats, dps=total_dps(stats), code=pob.save_code(),
             ailment=spec.get("ailment"),
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
@@ -258,7 +267,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for k, label in (("FireResist", "fire"), ("ColdResist", "cold"), ("LightningResist", "lightning")):
             if stats.get(k, 0) < 75:
                 guide.notes.append(f"{label} resistance {stats.get(k, 0):.0f}%: cap it with jewels or by swapping a gear affix")
-        for p in gear:
+        for p in gear + jewels:
             if p.unique and p.price_note == "price unknown":
                 guide.notes.append(f"{p.unique.split(',')[0]}: price not checked yet")
         log(f"{stage.name}: {guide.dps:,.0f} mapping DPS, {guide.boss_dps:,.0f} boss DPS")
@@ -355,6 +364,11 @@ def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
                 out.append(f"- **{p.slot}**: {p.unique} (unique, {p.price_note})")
             else:
                 out.append(f"- **{p.slot}**: {p.base}. " + ("; ".join(p.affixes) or "base only"))
+        if g.jewels:
+            out.append("\n**Jewels** (one per socket):")
+            for p in g.jewels:
+                out.append(f"- **{p.slot}**: " + (f"{p.unique} (unique, {p.price_note})" if p.unique
+                                                   else f"{p.base}. " + "; ".join(p.affixes)))
         for n in g.notes:
             out.append(f"- Note: {n}")
         out.append(f"\nPoB code: `{g.code}`")

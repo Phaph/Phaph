@@ -35,7 +35,8 @@ import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
-from gear import Stage, craft_gear, make_stage
+from gear import Scorer, Stage, craft_gear, make_stage
+from jewels import proxy_jewel
 from optimize import MODE_CONFIG, ailment_dps, clear_score, hit_dps, metric_for, optimise_supports, score_of, total_dps
 from pob import PoB, PoBError
 
@@ -196,7 +197,9 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         if tree:
             # Ranking only: the long reach stays (it changes which skills win), the slower swap phase runs
             # on the final build in guide.py.
-            p.optimise_tree(def_weight=0.25, metric=metric, refine=False)
+            # Jewels count in the ranking too: sockets are worth their path plus the best jewel for this build.
+            stand_in = proxy_jewel(p, stage, Scorer(def_weight=0.25, mode=mode, metric=metric))
+            p.optimise_tree(def_weight=0.25, metric=metric, refine=False, jewel=stand_in)
         p.auto_config(mode)
         best = optimise_supports(p, group, c.skill, slots=5, top_k=10, metric=metric, log=quiet)[0]
         out = p.calc(FIELDS)
