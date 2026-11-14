@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Tempest Flurry Invoker",
+    "class": "Monk",
+    "ascendancy": "Invoker",
+    "level": 90,
+    "items": [
+      "Rarity: Rare\nTest Staff\nWyrm Quarterstaff\n+150 to maximum Life\nAdds 20 to 300 Lightning Damage\nAdds 50 to 90 Physical Damage\n25% increased Attack Speed"
+    ],
+    "skills": [
+      [
+        "Tempest Flurry"
+      ]
+    ],
+    "optimise_supports": 5
+  },
+  {
+    "name": "Falling Thunder Invoker",
+    "class": "Monk",
+    "ascendancy": "Invoker",
+    "level": 90,
+    "items": [
+      "Rarity: Rare\nTest Staff\nWyrm Quarterstaff\n+150 to maximum Life\nAdds 20 to 300 Lightning Damage\nAdds 50 to 90 Physical Damage\n25% increased Attack Speed"
+    ],
+    "skills": [
+      [
+        "Falling Thunder"
+      ]
+    ],
+    "optimise_supports": 5
+  },
+  {
+    "name": "Rake Bleed Amazon",
+    "class": "Huntress",
+    "ascendancy": "Amazon",
+    "level": 90,
+    "items": [
+      "Rarity: Rare\nTest Spear\nAkoyan Spear\n+150 to maximum Life\nAdds 60 to 140 Physical Damage\n150% increased Physical Damage\n20% increased Attack Speed"
+    ],
+    "skills": [
+      [
+        "Rake"
+      ]
+    ],
+    "optimise_supports": 5
+  }
+]

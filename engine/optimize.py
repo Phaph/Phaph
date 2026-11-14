@@ -8,8 +8,18 @@ from pob import PoB
 
 METRICS = {
     "hit": "TotalDPS",       # hit DPS only
-    "combined": "CombinedDPS",  # hits plus ailments and DoTs (PoB's main DPS number)
+    "total": "total",        # hits plus ailments and DoTs
+    "combined": "CombinedDPS",  # PoB's combined number (skips DoT for some skills, e.g. Rake)
 }
+
+
+def total_dps(out: dict) -> float:
+    """Hit DPS plus damage over time (bleed, ignite, poison, DoT skills)."""
+    return out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
+
+
+def score_of(out: dict, field_name: str) -> float:
+    return total_dps(out) if field_name == "total" else out.get(field_name, 0)
 
 
 @dataclass
@@ -24,7 +34,7 @@ def optimise_supports(
     group: int,
     active: str,
     slots: int = 5,
-    metric: str = "combined",
+    metric: str = "total",
     beam: int = 3,
     candidates: list[str] | None = None,
     min_gain: float = 0.005,
@@ -36,22 +46,22 @@ def optimise_supports(
     a support only counts if PoB says it actually supports the skill.
     """
     field_name = METRICS.get(metric, metric)
-    fields = [field_name, "TotalDPS", "CombinedDPS", "Life", "TotalEHP"]
+    fields = ["TotalDPS", "TotalDotDPS", "CombinedDPS", "Life", "TotalEHP"] + ([] if field_name == "total" else [field_name])
     gems = pob.list_gems("support")
     family = {g["name"]: g.get("family") or g["name"] for g in gems}
     pool = candidates or [g["name"] for g in gems]
 
     t0 = time.time()
     base = pob.try_skill(group, [active], fields)
-    base_score = base["output"].get(field_name, 0)
-    log(f"Base {active}: {field_name} = {base_score:,.0f}")
+    base_score = score_of(base["output"], field_name)
+    log(f"Base {active}: {metric} DPS = {base_score:,.0f}")
 
     # Screen every support once on its own: drop ones that don't support the skill or add nothing.
     solo = {}
     for name in pool:
         res = pob.try_skill(group, [active, name], fields)
-        if res["supported"].get(name):
-            solo[name] = res["output"].get(field_name, 0)
+        if res["supported"].get(name):  # skip gems PoB says don't apply
+            solo[name] = score_of(res["output"], field_name)
     useful = sorted((n for n, s in solo.items() if s > base_score * (1 + min_gain)), key=lambda n: -solo[n])
     log(f"Screened {len(pool)} supports in {time.time() - t0:.1f}s, {len(useful)} add damage")
     for n in useful[:10]:
@@ -72,7 +82,7 @@ def optimise_supports(
                 res = pob.try_skill(group, [active, *combo], fields)
                 if not all(res["supported"].get(s) for s in combo):
                     continue
-                scored[combo] = Result(list(combo), res["output"].get(field_name, 0), res["output"])
+                scored[combo] = Result(list(combo), score_of(res["output"], field_name), res["output"])
         if not scored:
             break
         frontier = sorted(scored.values(), key=lambda r: -r.score)[:beam]
