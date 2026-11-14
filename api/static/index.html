@@ -501,11 +501,32 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
   grow();
   $("prompt").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("form").requestSubmit(); } });
 
+  // A request the server never really answered (network drop, or Cloudflare's error page while the site restarts).
+  class Unreachable extends Error {}
   async function api(path, body) {
-    const r = await fetch(path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
-    const data = await r.json().catch(() => ({}));
-    if (!r.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Something went wrong. Try again.");
+    let r;
+    try {
+      r = await fetch(path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
+    } catch { throw new Unreachable("Can't reach the forge right now. Check your connection and try again."); }
+    const data = await r.json().catch(() => null);
+    if ([502, 503, 504, 520, 521, 522, 523, 524, 530].includes(r.status) || (!r.ok && data === null)) {
+      throw new Unreachable("The forge is restarting or unreachable. Try again in a moment.");
+    }
+    if (!r.ok) {
+      const d = data?.detail;
+      throw new Error(typeof d === "string" ? d : Array.isArray(d) ? "That request wasn't understood. Try changing the options." : "Something went wrong. Try again.");
+    }
     return data;
+  }
+  // While a build runs, ride out short outages (about 30 seconds) instead of giving up on it.
+  async function poll(path) {
+    for (let tries = 0; ; tries++) {
+      try { return await api(path); }
+      catch (e) {
+        if (!(e instanceof Unreachable) || tries >= 15) throw e;
+        await new Promise(r => setTimeout(r, 2000));
+      }
+    }
   }
 
   function setStatus(text, busy) {
@@ -523,9 +544,13 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       onTick(`${label} · ${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}${queue}`, job.status);
       if (job.progress && onProgress) { job.progress.forEach(onProgress); since = job.progress_next ?? since; }
       await new Promise(r => setTimeout(r, 2000));
-      job = await api(`/jobs/${job.id}?since=${since}`);
+      job = await poll(`/jobs/${job.id}?since=${since}`);
     }
-    if (job.status === "failed") throw new Error(job.error || "The build failed.");
+    if (job.status === "failed") {
+      throw new Error(job.error === "server restarted"
+        ? "The forge restarted while this was building, so the build was lost. Press Forge it to start it again."
+        : job.error || "The build failed.");
+    }
     return job;
   }
 
