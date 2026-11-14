@@ -17,12 +17,12 @@
    - unique prices, so uniques go into gear plans at the right budget
    - real divine prices to replace the budget estimates
 4. **Tune enemy settings and the mapping clear score** against real play. Mapping vs bossing is built: bossing uses a pinnacle boss, mapping uses normal monsters plus our own area and projectile weighting.
-6. **Move the code to the new repo.**
-7. **Web API: done** (`api/`), with background jobs and a SQLite cache. Left: hook up the website.
-8. **Build the prompt layer** with the Claude API: "lightning minion Monk, 5 divine" becomes a build spec.
-9. **Build the website** on top of the API.
-10. **Test making a Mobalytics page** through Chrome, and find out whether the passive tree can be entered.
-11. **Set up scheduled checks** for patches, PoB updates and ladder data.
+5. **Move the code to the new repo.**
+6. **Web API: done** (`api/`), with background jobs and a SQLite cache. Left: hook up the website.
+7. **Build the prompt layer** with the Claude API: "lightning minion Monk, 5 divine" becomes a build spec.
+8. **Build the website** on top of the API.
+9. **Test making a Mobalytics page** through Chrome, and find out whether the passive tree can be entered.
+10. **Set up scheduled checks** for patches, PoB updates and ladder data.
 
 ## Engine gaps to work through
 - Jewels and attribute requirements aren't handled.
