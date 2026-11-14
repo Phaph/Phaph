@@ -29,3 +29,10 @@ docker run -p 8000:8000 -v poe2data:/data poe2-optimizer
 - `JOB_WORKERS` (default 1): jobs at once. Each guide job starts one PoB process per stage, so keep this at about CPU cores / 4.
 - `MAX_ACTIVE_JOBS_PER_CLIENT` (default 2): per-IP limit.
 - `JOBS_DB`: SQLite file for jobs and cache.
+
+## Tests
+```
+.venv/bin/pip install -r requirements-dev.txt
+.venv/bin/python -m pytest -q tests     # about 70 seconds
+```
+They also run on GitHub Actions on every push (`.github/workflows/test.yml`).
