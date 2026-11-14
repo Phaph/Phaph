@@ -2,6 +2,9 @@
 
 Runs the PoE 2 Path of Building calculation engine without its window, so we can score thousands of build variants automatically.
 
+## Reproducible results
+LuaJIT is built with fixed PRNG and string ID seeds (see setup.sh), so the same request always gives the same build. Without that, table order changes every run and so do tied picks.
+
 ## Setup
 ```
 ./setup.sh        # clones PoB (PoE 2) and builds LuaJIT + lua-utf8 into engine/vendor
@@ -33,7 +36,8 @@ Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We d
 ## Known gaps
 - Pros and cons are rule-based for now (damage split, accuracy, speed, crit, resistances, tankiness). The AI layer will add context later.
 - Tree optimiser is greedy: it can miss a big node that sits behind weak ones further than 6 points away. No jewels, no weapon-set passives, no attribute requirements yet.
-- Speed: about 35s per build for supports + tree + supports again on 4 CPU cores. Caching and smarter candidate lists will cut this.
+- Speed: a full 4-stage guide takes about 2.5 minutes on 4 CPU cores (one stage per core). Repeat requests come from the API cache instantly.
+- Tree search is greedy: from the same start, a different path choice once gave 138k DPS instead of 120k. A look-ahead search could find those.
 - Support rules: the optimiser rejects any combo that triggers a PoB rule warning (e.g. lineage copy limit). Pass `exclude` for gems used in other skills.
 - Conditional supports (Hit and Run, Glory gems, combo finishers; 12 in total) are skipped by default because PoB counts their bonus but not their downtime.
 - Gear is rares only. Uniques need price data (poe.ninja) to place them in the right budget stage. Budgets in divines are estimates until then.

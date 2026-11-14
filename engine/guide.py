@@ -65,12 +65,13 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         group = pob.add_skill([skill])["group"]
         slots = spec.get("support_slots", 5)
         quiet = lambda *a: None
+        shortlist: dict = {}   # support screening results, reused within this stage
 
         pob.set_config(**MODE_CONFIG["mapping"])
-        optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet)
+        # No supports yet: most skills need a weapon before any support shows a gain.
         craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", log=quiet)
         tree = pob.optimise_tree(def_weight=dw_tree, metric="mapping")
-        optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet)
+        optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet, shortlist=shortlist)
         # Passives moved resistances and damage around; re-craft gear once to fit the final tree.
         gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", log=quiet)
 
@@ -83,7 +84,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
 
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
-        best = optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet)[0]
+        best = optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet,
+                                 shortlist=shortlist)[0]
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS)
         guide = StageGuide(
             stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget,

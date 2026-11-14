@@ -64,6 +64,7 @@ def optimise_supports(
     top_k: int = 15,
     allow_conditional: bool = False,
     exclude: set[str] | None = None,
+    shortlist: dict | None = None,
     log=print,
 ) -> list[Result]:
     """Find the support set that maximises `metric` for the skill in `group`.
@@ -75,6 +76,8 @@ def optimise_supports(
     Conditional supports (Hit and Run, Glory gems, combo finishers...) are skipped
     unless allow_conditional, because PoB counts their bonus but not their downtime.
     Only the `top_k` best supports from screening go into the combination search.
+    Pass the same `shortlist` dict to later calls for the same skill to skip the full screen
+    and only re-check the 2 x top_k best supports from the first one.
     """
     field_name = METRICS.get(metric, metric)
     fields = ["TotalDPS", "TotalDotDPS", "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
@@ -85,6 +88,9 @@ def optimise_supports(
     if not allow_conditional:
         skip |= {g["name"] for g in gems if g.get("conditional")}
     pool = [n for n in (candidates or [g["name"] for g in gems]) if n not in skip]
+    shortlist_key = (active, metric)
+    if shortlist is not None and shortlist_key in shortlist:
+        pool = [n for n in shortlist[shortlist_key] if n not in skip]
 
     t0 = time.time()
     base = pob.try_skill(group, [active], fields)
@@ -97,7 +103,10 @@ def optimise_supports(
         res = pob.try_skill(group, [active, name], fields)
         if res["supported"].get(name):  # skip gems PoB says don't apply
             solo[name] = score_of(res["output"], field_name)
-    useful = sorted((n for n, s in solo.items() if s > base_score * (1 + min_gain)), key=lambda n: -solo[n])[:top_k]
+    ranked = sorted((n for n, s in solo.items() if s > base_score * (1 + min_gain)), key=lambda n: -solo[n])
+    if shortlist is not None and shortlist_key not in shortlist and ranked:
+        shortlist[shortlist_key] = ranked[: top_k * 2]
+    useful = ranked[:top_k]
     log(f"Screened {len(pool)} supports in {time.time() - t0:.1f}s, {len(useful)} add damage")
     for n in useful[:10]:
         log(f"  {n:<32} {solo[n] / base_score - 1:+.0%}")

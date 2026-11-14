@@ -16,10 +16,15 @@ else
   git -C PathOfBuilding-PoE2 fetch --depth 1 origin "$POB_REF" && git -C PathOfBuilding-PoE2 checkout -q FETCH_HEAD
 fi
 
-if [ ! -x LuaJIT/src/luajit ]; then
+# Fixed PRNG and string IDs make table iteration order, and so optimiser results, the same
+# on every run. Safe here: LuaJIT only runs PoB's and our own code.
+LUAJIT_FLAGS="-DLUAJIT_SECURITY_PRNG=0 -DLUAJIT_SECURITY_STRID=0"
+if [ ! -x LuaJIT/src/luajit ] || [ "$(cat LuaJIT/.pob-flags 2>/dev/null)" != "$LUAJIT_FLAGS" ]; then
   [ -d LuaJIT ] || git clone https://github.com/LuaJIT/LuaJIT.git LuaJIT
   git -C LuaJIT checkout -q "$LUAJIT_REF"
-  make -C LuaJIT -j"$(nproc)" >/dev/null
+  make -C LuaJIT clean >/dev/null
+  make -C LuaJIT -j"$(nproc)" XCFLAGS="$LUAJIT_FLAGS" >/dev/null
+  echo "$LUAJIT_FLAGS" > LuaJIT/.pob-flags
 fi
 
 if [ ! -f lua-utf8.so ]; then

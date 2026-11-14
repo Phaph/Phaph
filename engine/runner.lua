@@ -365,28 +365,69 @@ function handlers.optimise_tree(cmd)
 	end
 	local function ehp(o) return o.TotalEHP or 0 end
 
+	-- Full scans are expensive, so between them only the best `shortlist` nodes from the
+	-- last full scan are re-checked. A full scan runs every `refresh` picks.
+	local refresh = cmd.refresh or 3
+	local shortlistSize = cmd.shortlist or 150
+	local shortlist = { [true] = nil, [false] = nil }
+	local sinceFull = { [true] = math.huge, [false] = math.huge }
+
+	local function eligible(node, ascend)
+		local isAsc = node.ascendancyName ~= nil
+		return not node.alloc and node.path and node.modKey and node.modKey ~= ""
+			and (node.type == "Normal" or node.type == "Notable" or node.type == "Keystone")
+			and #node.path <= maxDist
+			and isAsc == ascend
+			and (not ascend or node.ascendancyName == build.spec.curAscendClassBaseName or node.ascendancyName == build.spec.curAscendClassName)
+			and not node.isMultipleChoiceOption
+	end
+
 	local function bestStep(ascend)
 		local calcFunc, base = build.calcsTab:GetMiscCalculator()
 		local d0, e0 = math.max(dps(base), 1), math.max(ehp(base), 1)
-		local best, bestEff, bestOut = nil, 0, nil
-		for _, node in pairs(build.spec.nodes) do
-			local isAsc = node.ascendancyName ~= nil
-			if not node.alloc and node.path and node.modKey and node.modKey ~= ""
-				and (node.type == "Normal" or node.type == "Notable" or node.type == "Keystone")
-				and #node.path <= maxDist
-				and isAsc == ascend
-				and (not ascend or node.ascendancyName == build.spec.curAscendClassBaseName or node.ascendancyName == build.spec.curAscendClassName)
-				and not node.isMultipleChoiceOption then
-				local pathNodes = {}
-				for _, n in ipairs(node.path) do pathNodes[n] = true end
-				local out = calcFunc({ addNodes = pathNodes })
-				evals = evals + 1
-				local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0
-				local eff = gain / #node.path
-				if eff > bestEff then best, bestEff, bestOut = node, eff, out end
+		local full = sinceFull[ascend] >= refresh or not shortlist[ascend]
+		local pool = {}
+		if full then
+			for _, node in pairs(build.spec.nodes) do
+				if eligible(node, ascend) then table.insert(pool, node) end
+			end
+		else
+			for _, node in ipairs(shortlist[ascend]) do
+				if eligible(node, ascend) then table.insert(pool, node) end
 			end
 		end
-		return best, bestEff, bestOut
+		-- pairs() order is not stable between runs; sort so ties always break the same way.
+		table.sort(pool, function(a, b) return a.id < b.id end)
+		local scored = {}
+		for _, node in ipairs(pool) do
+			local pathNodes = {}
+			for _, n in ipairs(node.path) do pathNodes[n] = true end
+			local out = calcFunc({ addNodes = pathNodes })
+			evals = evals + 1
+			local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0
+			table.insert(scored, { node = node, eff = gain / #node.path })
+		end
+		table.sort(scored, function(a, b)
+			if a.eff ~= b.eff then return a.eff > b.eff end
+			return a.node.id < b.node.id
+		end)
+		if full then
+			local list = {}
+			for i = 1, math.min(shortlistSize, #scored) do list[i] = scored[i].node end
+			shortlist[ascend] = list
+			sinceFull[ascend] = 0
+		end
+		local top = scored[1]
+		if not top or top.eff <= 0 then
+			-- Nothing positive on the shortlist: force a full scan before giving up.
+			if not full then
+				sinceFull[ascend] = math.huge
+				return bestStep(ascend)
+			end
+			return nil, 0
+		end
+		sinceFull[ascend] = sinceFull[ascend] + 1
+		return top.node, top.eff
 	end
 
 	local function spend(ascend, limit)
@@ -400,6 +441,7 @@ function handlers.optimise_tree(cmd)
 				-- Path too long for the points left: try only short paths.
 				local saved = maxDist
 				maxDist = limit - have
+				sinceFull[ascend] = math.huge
 				node, eff = bestStep(ascend)
 				maxDist = saved
 				if not node then break end
