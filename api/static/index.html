@@ -309,6 +309,10 @@ a.trade::after { content: " \2197"; }
 
 .treelink { justify-self: start; text-decoration: none; color: var(--ink); border-color: var(--brass-lo); }
 .kv dd .setup { display: block; margin-bottom: 6px; }
+ol.prio { margin: 0; padding: 0; list-style: none; counter-reset: prio; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+ol.prio li { counter-increment: prio; white-space: nowrap; }
+ol.prio li::before { content: counter(prio); display: inline-block; min-width: 20px; height: 18px; margin-right: 6px; padding: 0 5px; border-radius: 9px;
+  background: var(--ember); color: #1a0d05; font: 600 12px/18px var(--mono); text-align: center; }
 .kv dd .setup:last-child { margin-bottom: 0; }
 
 /* ---------- The brain: the live tree search ---------- */
@@ -1322,7 +1326,7 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
     else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
     extraRows(s).forEach(r => kv.push(r));
-    if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
+    kv.push(...priorityRow(s));
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = stageHtml(plan, s, prevGear, forward, kv, res, st);
     if (revealNext && !REDUCE) {
@@ -1389,6 +1393,14 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     return rows;
   }
 
+  // Passives in the order to take them: the notables and keystones from the engine's pick order.
+  function priorityRow(s) {
+    const big = (s.tree_order || []).filter(pk => !pk.ascendancy && (pk.type === "Notable" || pk.type === "Keystone"));
+    if (big.length) return [["Passive priority", `<ol class="prio">${big.slice(0, 14).map(pk => `<li>${esc(pk.name)}</li>`).join("")}</ol>${
+      big.length > 14 ? `<span class="muted">+${big.length - 14} more in the tree view, in order</span>` : ""}`]];
+    return s.notables.length ? [["Key passives", s.notables.map(esc).join(", ")]] : [];
+  }
+
   // ---------- Saving and sharing ----------
   function kvFor(plan, s) {
     const kv = [];
@@ -1396,7 +1408,7 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
     else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
     extraRows(s).forEach(r => kv.push(r));
-    if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
+    kv.push(...priorityRow(s));
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     return kv;
   }

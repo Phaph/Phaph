@@ -760,7 +760,7 @@ function handlers.optimise_tree(cmd)
 			build.spec:AddUndoState()
 			build.buildFlag = true
 			frame()
-			table.insert(steps, { node = node.dn, type = node.type, cost = cost, gain_per_point = eff, ascendancy = ascend })
+			table.insert(steps, { node = node.dn, id = node.id, path = pathIds, type = node.type, cost = cost, gain_per_point = eff, ascendancy = ascend })
 			if cmd.live then
 				-- Streamed while the search runs, so the website can show the tree growing: the node taken, the
 				-- path to it, the best candidates it beat, how many were scored, and the build's score now.

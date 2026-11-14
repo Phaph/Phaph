@@ -49,8 +49,24 @@ canvas.dragging { cursor: grabbing; }
 #side .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; color: var(--muted); }
 #side .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
 #side button.toggle { justify-self: start; }
+#side .hint { margin: -4px 0 0; font-size: 14px; color: var(--muted); }
+#side ol.order { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 15px; }
+#side ol.order li { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 0 8px; cursor: pointer; padding: 3px 4px; border-radius: 2px; }
+#side ol.order li:hover { background: #221d17; }
+#side ol.order li .num { grid-row: span 2; font: 600 13px var(--mono); color: #1a0d05; background: var(--ember); border-radius: 9px; height: 18px; text-align: center; line-height: 18px; margin-top: 2px; }
+#side ol.order li b { font-weight: 500; color: var(--ink); }
+#side ol.order li.big b { color: var(--brass-hi); font-weight: 600; }
+#side ol.order li span:not(.num) { color: var(--faint); font-size: 13px; }
 #msg { left: 50%; top: 40%; transform: translate(-50%, -50%); padding: 16px 20px; max-width: 420px; text-align: center; }
 .zoom { left: 12px; bottom: 12px; display: flex; gap: 6px; padding: 6px; }
+/* The ascendancy's own small tree, framed like a plate on the bench. */
+#asc { left: 12px; bottom: 64px; width: min(320px, calc(100% - 24px)); height: 300px; padding: 8px; display: grid; grid-template-rows: auto 1fr; gap: 4px;
+  background: radial-gradient(ellipse at 50% 55%, #1b1610, #0c0b09 80%); border-color: var(--brass-lo); }
+#asc .asc-h { font: 600 20px/1 var(--display); color: var(--brass-hi); background: none; border: 0; padding: 0; text-align: left; cursor: pointer; }
+#asc .asc-h::after { content: "  2"; font: 14px var(--mono); color: var(--muted); }
+#asc.folded { height: auto; } #asc.folded canvas { display: none; } #asc.folded .asc-h::after { content: "  +"; }
+#ascCv { width: 100%; height: 100%; display: block; position: static; cursor: default; }
+@media (max-width: 700px) { #asc { height: 220px; bottom: auto; top: 12px; } }
 @media (max-width: 700px) { #side { left: 12px; right: 12px; top: auto; bottom: 64px; width: auto; max-height: 40%; } #side.collapsed ul { display: none; } }
 </style>
 </head>
@@ -65,7 +81,11 @@ canvas.dragging { cursor: grabbing; }
   <canvas id="cv" aria-label="Passive tree. Drag to move, scroll or pinch to zoom."></canvas>
   <div class="panel" id="tip" hidden></div>
   <aside class="panel" id="side"></aside>
-  <div class="panel zoom"><button class="chip" id="zin" aria-label="Zoom in">+</button><button class="chip" id="zout" aria-label="Zoom out">&minus;</button><button class="chip" id="zfit">Fit path</button></div>
+  <div class="panel" id="asc" hidden>
+    <button class="asc-h" id="ascName" type="button" title="Fold or unfold">Ascendancy</button>
+    <canvas id="ascCv" aria-label="Ascendancy tree"></canvas>
+  </div>
+  <div class="panel zoom"><button class="chip" id="zin" aria-label="Zoom in">+</button><button class="chip" id="zout" aria-label="Zoom out">&minus;</button><button class="chip" id="zfit">Fit path</button><button class="chip" id="play">&#9654; Play the order</button></div>
   <div class="panel" id="msg" hidden></div>
 </main>
 <script>
@@ -78,6 +98,7 @@ canvas.dragging { cursor: grabbing; }
   const cv = $("cv"), cx = cv.getContext("2d");
   let W = 0, H = 0, dpr = 1;
   let tree = null, guide = null, stage = null, alloc = new Set(), found = new Set();
+  let order = new Map(), picks = [], playing = null;   // node id -> step number; the ordered picks
   let view = { x: 0, y: 0, s: 0.05 };   // world point at screen centre, and scale (px per world unit)
   const SIZE = { c: 70, A: 40, k: 52, j: 34, n: 36, a: 18, s: 20 };
   const KIND = { c: "Class start", A: "Ascendancy start", k: "Keystone", j: "Jewel socket", n: "Notable", a: "Attribute", s: "Passive" };
@@ -148,8 +169,22 @@ canvas.dragging { cursor: grabbing; }
         cx.lineWidth = Math.max(2 / view.s, 8); cx.strokeStyle = css("--ember"); cx.stroke();
       }
     }
-    // Names of allocated notables and keystones, once zoomed in enough to read.
+    // Order badges: the step each pick is taken at. Notables and keystones always; every passive once zoomed in.
     cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cx.font = '600 11px "IBM Plex Mono", monospace'; cx.textAlign = "center"; cx.textBaseline = "middle";
+    for (const [id, num] of order) {
+      const n = tree.nodes[id];
+      if (!n || n[5] || !alloc.has(id)) continue;
+      if (!(n[2] === "n" || n[2] === "k" || view.s > 0.11)) continue;
+      const [sx, sy] = toScreen(n[0], n[1]);
+      if (sx < -20 || sx > W + 20 || sy < -20 || sy > H + 20) continue;
+      const bx = sx + (SIZE[n[2]] || 20) * view.s + 7, by = sy - (SIZE[n[2]] || 20) * view.s - 7;
+      const w = Math.max(18, cx.measureText(String(num)).width + 8);
+      cx.fillStyle = "#e8733a"; cx.beginPath(); cx.roundRect ? cx.roundRect(bx - w / 2, by - 9, w, 18, 9) : cx.rect(bx - w / 2, by - 9, w, 18); cx.fill();
+      cx.fillStyle = "#1a0d05"; cx.fillText(String(num), bx, by + 0.5);
+    }
+    cx.textBaseline = "alphabetic";
+    // Names of allocated notables and keystones, once zoomed in enough to read.
     if (view.s > 0.09) {
       cx.font = `600 ${Math.min(16, 9 + view.s * 40)}px "Alegreya Sans", sans-serif`; cx.textAlign = "center";
       for (const id of alloc) {
@@ -231,7 +266,80 @@ canvas.dragging { cursor: grabbing; }
     found = new Set(q.length < 3 ? [] : Object.entries(tree.nodes).filter(([, n]) => !n[5] && (n[3].toLowerCase().includes(q) || n[4].some(s => s.toLowerCase().includes(q)))).map(([id]) => id));
     draw();
   });
-  addEventListener("resize", size);
+  addEventListener("resize", () => { size(); drawAsc(); });
+  $("play").onclick = () => {
+    if (playing) { clearInterval(playing); playing = null; alloc = new Set((stage.tree_nodes || []).map(String)); $("play").innerHTML = "&#9654; Play the order"; draw(); drawAsc(); return; }
+    const steps = picks.filter(pk => !pk.ascendancy);
+    if (!steps.length) return;
+    const full = new Set((stage.tree_nodes || []).map(String));
+    alloc = new Set([...full].filter(id => tree.nodes[id] && (tree.nodes[id][2] === "c" || tree.nodes[id][5])));
+    $("play").innerHTML = "&#9632; Stop"; let i = 0; draw();
+    playing = setInterval(() => {
+      const pk = steps[i++];
+      if (!pk) { clearInterval(playing); playing = null; alloc = full; $("play").innerHTML = "&#9654; Play the order"; draw(); return; }
+      [...pk.path, pk.id].forEach(id => alloc.add(String(id)));
+      found = new Set([String(pk.id)]); draw();
+    }, 260);
+  };
+
+  // ---------- Ascendancy inset ----------
+  const acv = $("ascCv"), acx = acv.getContext("2d");
+  let ascIds = [], aView = null;
+  function drawAsc() {
+    if (!ascIds.length) { $("asc").hidden = true; return; }
+    $("asc").hidden = false;
+    const r = acv.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
+    acv.width = r.width * d; acv.height = r.height * d;
+    const pts = ascIds.map(id => tree.nodes[id]);
+    const b = [Math.min(...pts.map(n => n[0])), Math.min(...pts.map(n => n[1])), Math.max(...pts.map(n => n[0])), Math.max(...pts.map(n => n[1]))];
+    const pad = 160, s = Math.min(r.width / (b[2] - b[0] + 2 * pad), r.height / (b[3] - b[1] + 2 * pad));
+    aView = { s, x: (b[0] + b[2]) / 2, y: (b[1] + b[3]) / 2, w: r.width, h: r.height };
+    acx.setTransform(d * s, 0, 0, d * s, d * (r.width / 2 - aView.x * s), d * (r.height / 2 - aView.y * s));
+    acx.clearRect(aView.x - 1e5, aView.y - 1e5, 2e5, 2e5);
+    const set = new Set(ascIds), lw = Math.max(1.4 / s, 8);
+    acx.lineCap = "round";
+    const line = (e) => {
+      const a = tree.nodes[e[0]], c = tree.nodes[e[1]];
+      acx.beginPath();
+      if (e.length > 2) {
+        const a1 = Math.atan2(a[1] - e[3], a[0] - e[2]); let dd = Math.atan2(c[1] - e[3], c[0] - e[2]) - a1;
+        while (dd > Math.PI) dd -= 2 * Math.PI; while (dd < -Math.PI) dd += 2 * Math.PI;
+        acx.arc(e[2], e[3], e[4], a1, a1 + dd, dd < 0);
+      } else { acx.moveTo(a[0], a[1]); acx.lineTo(c[0], c[1]); }
+      acx.stroke();
+    };
+    const ascEdges = tree.edges.filter(e => set.has(String(e[0])) && set.has(String(e[1])));
+    acx.strokeStyle = "#2c261f"; acx.lineWidth = lw; ascEdges.forEach(line);
+    const lit = ascEdges.filter(e => alloc.has(String(e[0])) && alloc.has(String(e[1])));
+    acx.strokeStyle = "rgba(232,115,58,.4)"; acx.lineWidth = lw * 3.4; lit.forEach(line);
+    acx.strokeStyle = css("--brass-hi"); acx.lineWidth = lw * 1.4; lit.forEach(line);
+    for (const id of ascIds) {
+      const n = tree.nodes[id], on = alloc.has(id), rad = (n[2] === "n" ? 46 : n[2] === "A" ? 40 : 26);
+      acx.beginPath(); acx.arc(n[0], n[1], rad, 0, 6.2832);
+      acx.fillStyle = on ? css("--brass") : n[2] === "n" ? "#2f2a24" : "#1e1b18"; acx.fill();
+      acx.lineWidth = Math.max(1.2 / s, 7); acx.strokeStyle = on ? css("--brass-hi") : "#4a4136"; acx.stroke();
+    }
+    // Names of the notables taken, so the inset reads on its own.
+    acx.setTransform(d, 0, 0, d, 0, 0);
+    acx.font = '600 12px "Alegreya Sans", sans-serif'; acx.textAlign = "center";
+    for (const id of ascIds) {
+      const n = tree.nodes[id];
+      if (n[2] !== "n" || !alloc.has(id)) continue;
+      const sx = (n[0] - aView.x) * s + r.width / 2, sy = (n[1] - aView.y) * s + r.height / 2 + 46 * s + 13;
+      acx.fillStyle = "rgba(12,11,9,.8)"; const w = acx.measureText(n[3]).width + 6; acx.fillRect(sx - w / 2, sy - 11, w, 15);
+      acx.fillStyle = css("--brass-hi"); acx.fillText(n[3], sx, sy);
+    }
+  }
+  acv.addEventListener("pointermove", e => {
+    if (!aView) return;
+    const wx = (e.offsetX - aView.w / 2) / aView.s + aView.x, wy = (e.offsetY - aView.h / 2) / aView.s + aView.y;
+    let best = null, bd = Infinity;
+    for (const id of ascIds) { const n = tree.nodes[id], dd = Math.hypot(n[0] - wx, n[1] - wy); if (dd < Math.max(60, 14 / aView.s) && dd < bd) { bd = dd; best = id; } }
+    const box = acv.getBoundingClientRect(), main = cv.getBoundingClientRect();
+    tip(best, e.clientX - main.left, e.clientY - main.top);
+  });
+  acv.addEventListener("pointerleave", () => { $("tip").hidden = true; });
+  $("ascName").onclick = () => { $("asc").classList.toggle("folded"); if (!$("asc").classList.contains("folded")) drawAsc(); };
 
   function side() {
     const nodes = [...alloc].map(id => [id, tree.nodes[id]]).filter(([, n]) => n);
@@ -241,18 +349,34 @@ canvas.dragging { cursor: grabbing; }
     $("side").innerHTML = `<h2>${esc(stage.name)}</h2>
       <span class="count">${nodes.filter(([, n]) => !n[5] && n[2] !== "c").length} passives · ${asc.length} ascendancy</span>
       <div class="legend"><span><i style="background:var(--brass)"></i>In this build</span><span><i style="background:#3b3128;border:2px solid #7a5f34"></i>Keystone</span><span><i style="background:#2f2a24;border:2px solid #4a4136"></i>Notable</span></div>
-      ${asc.length ? `<h2>Ascendancy</h2><ul>${list(asc)}</ul>` : ""}
-      ${notable.length ? `<h2>Notables &amp; keystones</h2><ul>${list(notable)}</ul>` : ""}`;
+      ${picks.length ? `<h2>Order to take</h2><p class="hint">Most value per point first. Numbers on the tree match this list; click one to find it.</p>
+        <ol class="order">${picks.filter(pk => !pk.ascendancy).map((pk, i) => `<li data-id="${pk.id}" class="${pk.type === "Notable" || pk.type === "Keystone" ? "big" : ""}">
+          <span class="num">${order.get(String(pk.id))}</span><b>${esc(pk.name)}</b>${pk.path.length > 1 ? `<span>${pk.path.length} points to reach</span>` : ""}</li>`).join("")}</ol>` : ""}
+      ${asc.length ? `<h2>Ascendancy${picks.some(pk => pk.ascendancy) ? ", in order" : ""}</h2><ul>${(picks.some(pk => pk.ascendancy)
+          ? picks.filter(pk => pk.ascendancy).map(pk => [String(pk.id), tree.nodes[pk.id]]).filter(([, n]) => n) : asc).map(([id, n], i) =>
+          `<li><b>${picks.some(pk => pk.ascendancy) ? `${i + 1}. ` : ""}${esc(n[3])}</b>${n[4].map(x => `<span>${esc(x)}</span>`).join("")}</li>`).join("")}</ul>` : ""}
+      ${notable.length && !picks.length ? `<h2>Notables &amp; keystones</h2><ul>${list(notable)}</ul>` : ""}`;
+    $("side").querySelectorAll(".order li").forEach(li => li.onclick = () => {
+      const n = tree.nodes[li.dataset.id]; if (!n) return;
+      view.x = n[0] + (W > 700 ? ($("side").getBoundingClientRect().width / 2 + 12) / Math.max(view.s, 0.12) : 0); view.y = n[1];
+      view.s = Math.max(view.s, 0.12); found = new Set([li.dataset.id]); draw();
+    });
   }
 
   function show(key) {
     stage = guide.stages.find(s => s.stage === key) || guide.stages[guide.stages.length - 1];
     alloc = new Set((stage.tree_nodes || []).map(String));
+    picks = stage.tree_order || [];
+    order = new Map(); let k = 0;
+    for (const pk of picks.filter(pk => !pk.ascendancy)) { k++; for (const id of [...pk.path, pk.id]) if (!order.has(String(id))) order.set(String(id), k); }
     $("stages").querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === stage.stage));
     history.replaceState(null, "", `?b=${buildId}&s=${stage.stage}`);
     if (!alloc.size) msg("This build was forged before the tree viewer existed. Forge it again to see its tree.");
     else msg("");
-    side(); fit(alloc);
+    const ascName = guide.spec.ascendancy;
+    ascIds = ascName ? Object.keys(tree.nodes).filter(id => tree.nodes[id][5] === ascName) : [];
+    $("ascName").textContent = ascName ? `${ascName} ascendancy` : "Ascendancy";
+    side(); fit(alloc); drawAsc();
   }
 
   (async () => {

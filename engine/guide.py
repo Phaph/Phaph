@@ -91,6 +91,8 @@ class StageGuide:
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
     budget_key: str = "high"                                 # free / budget / medium / high / unlimited
     tree_nodes: list[int] = field(default_factory=list)      # allocated passive ids, for the tree viewer
+    # The order to take passives: each pick (most value per point first) with the path that reaches it.
+    tree_order: list[dict] = field(default_factory=list)
     tree_version: str | None = None
 
 
@@ -241,6 +243,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             spirit=spirit, conditions=conditions, goals=goals, utility=utility,
             mobility=mobility, setups=setups,
             tree_nodes=[int(n) for n in alloc.get("nodes") or []], tree_version=alloc.get("version"),
+            tree_order=[{"id": s.get("id"), "name": s["node"], "type": s["type"], "path": s.get("path") or [],
+                         "ascendancy": bool(s.get("ascendancy")), "gain": round(s.get("gain_per_point") or 0, 4)}
+                        for s in tree["steps"]],
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
             damage_split=damage_split(stats),
