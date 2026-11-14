@@ -43,11 +43,14 @@ def goal_terms(out: dict, base: dict, w: dict) -> float:
 
 # Movement skills: PoB can't score how they feel, so we recommend by rule. Skills that work
 # with any weapon first, then ones the build's weapon can use.
-def mobility_skills(catalog: list[dict], weapon_type: str | None, limit: int = 2) -> list[str]:
+def mobility_skills(catalog: list[dict], weapon_type: str | None, limit: int = 2,
+                    offhand_type: str | None = None) -> list[str]:
     picks = []
     for s in catalog:
         types = set(s["types"])
         if not types & {"Travel", "Movement"} or s.get("from_item"):
+            continue
+        if types & {"RequiresShield", "RequiresBuckler"} and offhand_type != "Shield":
             continue
         if types & {"Triggered", "InbuiltTrigger"}:
             continue

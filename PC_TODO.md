@@ -1,3 +1,21 @@
+# Go-public plan (current)
+
+Cheapest path: picker form (no Claude API at launch), hosted on Kyle's PC with a free Cloudflare Tunnel, Hetzner later.
+
+| # | Step | Who |
+|---|---|---|
+| 1 | Website: done (`api/static/index.html`, served at `/`) | Claude (cloud) |
+| 2 | Start a local Claude Code session on the PC in this repo | Kyle |
+| 3 | Real unique prices from poe.ninja into `engine/data/unique_prices.json` (until then unpriced uniques only appear on "No limit") | Local session |
+| 4 | Accuracy check: one of Kyle's builds in the engine vs the PoB app | Kyle + local session |
+| 5 | GGG third-party tool rules; credits (PoB MIT, GGG trademark) are in the site footer | Local session |
+| 6 | Run Docker on the PC + Cloudflare Tunnel + domain (~$10/yr). Set `DAILY_JOB_LIMIT` | Kyle + local session |
+| 7 | Friends beta, then public. Optionally pre-build popular themes overnight so most visits hit the cache | Kyle |
+
+First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BRIEF.md, then do steps 3-6 of the go-public plan."
+
+---
+
 # To do when back on the PC
 
 ## Kyle

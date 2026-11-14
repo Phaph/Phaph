@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Whetstone: PoE 2 build forge</title>
+<meta name="description" content="Pick a budget and a build idea. Whetstone tests thousands of versions in Path of Building and hands back the strongest one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Same soot-and-brass world as the concept board. Colour is reserved for damage types and rating. */
+:root {
+  --ground: #121315; --slate: #1b1d21; --slate2: #23252a; --rule: #2c2f35; --ink: #e6e1d8; --muted: #9b968d;
+  --brass: #c9a25c; --good: #8fbf7a; --bad: #c4785f;
+  --phys: #c8b9a0; --fire: #e0703a; --cold: #6fb4d8; --light: #e8d45a; --chaos: #a274c9;
+  --display: "IM Fell English SC", Georgia, serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--ground); color: var(--ink); font: 15px/1.6 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 32px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(34px, 5.5vw, 56px); line-height: 1.02; }
+h2 { font-size: 28px; } h3 { font-size: 19px; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.eyebrow { font: 600 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+.panel { background: var(--slate); border: 1px solid var(--rule); border-radius: 3px; padding: 20px; display: grid; gap: 18px; min-width: 0; }
+.field { display: grid; gap: 8px; }
+.field > label, .field > span.label { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { background: transparent; border: 1px solid var(--rule); border-radius: 2px; padding: 6px 12px; font: 13px var(--mono); cursor: pointer; color: var(--muted); }
+.chip:hover { color: var(--ink); }
+.chip[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); background: var(--slate2); }
+.chip[data-dmg="physical"][aria-pressed="true"] { border-color: var(--phys); }
+.chip[data-dmg="fire"][aria-pressed="true"] { border-color: var(--fire); }
+.chip[data-dmg="cold"][aria-pressed="true"] { border-color: var(--cold); }
+.chip[data-dmg="lightning"][aria-pressed="true"] { border-color: var(--light); }
+.chip[data-dmg="chaos"][aria-pressed="true"] { border-color: var(--chaos); }
+select { background: var(--slate2); border: 1px solid var(--rule); border-radius: 2px; padding: 7px 10px; max-width: 100%; }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+.rungs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.rung { background: none; border: 1px solid var(--rule); padding: 10px; text-align: left; cursor: pointer; display: grid; gap: 4px; min-width: 0; }
+.rung .coins { display: flex; gap: 2px; height: 14px; align-items: end; }
+.rung .coins i { width: 6px; background: var(--muted); border-radius: 1px; }
+.rung b { font: 600 13px var(--body); } .rung span { font: 11px var(--mono); color: var(--muted); }
+.rung[aria-pressed="true"] { border-color: var(--brass); }
+.rung[aria-pressed="true"] .coins i { background: var(--brass); }
+@media (max-width: 620px) { .rungs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.go { justify-self: start; background: var(--brass); color: #17140e; border: 0; border-radius: 2px; padding: 11px 22px; font: 700 15px var(--body); cursor: pointer; }
+.go:disabled { opacity: .5; cursor: progress; }
+.link { background: none; border: 0; color: var(--brass); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; }
+.status { display: flex; align-items: center; gap: 12px; font: 13px var(--mono); color: var(--muted); }
+.spinner { width: 14px; height: 14px; border: 2px solid var(--rule); border-top-color: var(--brass); border-radius: 50%; animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.error { color: var(--bad); }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tablewrap { overflow-x: auto; }
+tr.best td:first-child { color: var(--brass); }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.rating { display: flex; flex-wrap: wrap; align-items: baseline; gap: 18px; }
+.rating .score { font: 600 46px/1 var(--mono); }
+.rating .label { font: 400 24px var(--display); }
+.rating .subs { font: 13px var(--mono); color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.stat { padding: 12px; display: grid; gap: 2px; }
+.stat + .stat { border-left: 1px solid var(--rule); }
+.stat b { font: 600 20px var(--mono); font-variant-numeric: tabular-nums; } .stat span { font-size: 12px; color: var(--muted); }
+.kv { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 6px 16px; }
+.kv dt { font: 600 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; padding-top: 2px; }
+.kv dd { margin: 0; min-width: 0; }
+@media (max-width: 620px) { .kv { grid-template-columns: minmax(0, 1fr); } .kv dd { margin-bottom: 8px; } }
+.items { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.item { border: 1px solid var(--rule); background: #16171a; padding: 12px 14px; display: grid; gap: 4px; min-width: 0; }
+.item .slot { font: 11px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+.item .base { color: var(--brass); font-family: var(--display); font-size: 17px; }
+.item.unique .base { color: #d28a3c; }
+.item ol { margin: 4px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 2px; }
+.notes { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; display: grid; gap: 4px; }
+.code { display: flex; gap: 8px; align-items: center; min-width: 0; }
+.code input { flex: 1; min-width: 0; background: var(--slate2); border: 1px solid var(--rule); border-radius: 2px; padding: 7px 10px; font: 12px var(--mono); color: var(--muted); }
+.chip.small { padding: 4px 10px; }
+footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; display: grid; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header style="display:grid;gap:10px">
+    <span class="eyebrow">Path of Exile 2 · free build forge</span>
+    <h1>Pick a budget and an idea. Get its strongest version.</h1>
+    <p class="muted" style="max-width:64ch">Whetstone tests thousands of versions of your build in Path of Building's damage math: skills, supports, passives, gear, spirit and curses. You get the best one, four stages from leveling to endgame, and a rating against other builds.</p>
+  </header>
+
+  <form class="panel" id="form" novalidate>
+    <div class="field">
+      <span class="label">1. Budget</span>
+      <div class="rungs" id="rungs" role="group" aria-label="Budget"></div>
+    </div>
+    <div class="row">
+      <div class="field"><span class="label">2. Damage type</span><div class="chips" id="damage" role="group" aria-label="Damage type"></div></div>
+      <div class="field"><span class="label">Skill kind</span><div class="chips" id="kinds" role="group" aria-label="Skill kind"></div></div>
+    </div>
+    <div class="row">
+      <div class="field"><label for="ailment">Ailment</label>
+        <select id="ailment"><option value="">Any</option><option value="bleed">Bleed</option><option value="poison">Poison</option><option value="ignite">Ignite</option></select></div>
+      <div class="field"><label for="cls">Class</label><select id="cls"><option value="">Any class</option></select></div>
+      <div class="field"><label for="mode">Focus</label>
+        <select id="mode"><option value="balanced">Balanced: maps and bosses</option><option value="mapping">Mapping first</option><option value="bossing">Bossing first</option></select></div>
+    </div>
+    <div class="field"><span class="label">3. Also optimise for</span><div class="chips" id="goals" role="group" aria-label="Goals"></div></div>
+    <button class="go" id="go" type="submit">Forge my build</button>
+    <div class="status" id="status" hidden></div>
+  </form>
+
+  <section class="panel" id="options" hidden></section>
+  <section class="panel" id="compare" hidden></section>
+  <section class="panel" id="guide" hidden></section>
+
+  <footer>
+    <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2" style="color:var(--brass)">Path of Building Community</a> (MIT licence), run by this site. Use DPS to compare builds; in-game numbers depend on your settings.</p>
+    <p>Fan-made and free. Not affiliated with or endorsed by Grinding Gear Games. Path of Exile is a trademark of Grinding Gear Games.</p>
+  </footer>
+</div>
+
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const fmt = n => Math.round(n || 0).toLocaleString("en-US");
+  const pct = x => `${Math.round(x * 100)}%`;
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const state = { budget: "budget", damage: new Set(), kinds: new Set(), goals: new Set(), gen: null, genJob: null, guide: null };
+
+  const BUDGETS = [["free", "Free", "Self-found", 1], ["budget", "Budget", "Up to ~5 div", 2], ["medium", "Medium", "~5-30 div", 4], ["high", "High", "~30-100 div", 7], ["unlimited", "No limit", "100+ div", 11]];
+  const DAMAGE = ["physical", "fire", "cold", "lightning", "chaos"];
+  const KINDS = [["minion", "Minions"], ["spell", "Spells"], ["attack", "Attacks"], ["melee", "Melee"], ["projectile", "Projectiles"], ["totem", "Totems"]];
+  const GOALS = [["movement", "Faster mapping"], ["rarity", "More loot"], ["tanky", "Tankier"]];
+
+  function chipGroup(el, items, set, attr) {
+    items.forEach(([key, label]) => {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "chip"; b.textContent = label; b.setAttribute("aria-pressed", "false");
+      if (attr) b.dataset[attr] = key;
+      b.onclick = () => { set.has(key) ? set.delete(key) : set.add(key); b.setAttribute("aria-pressed", set.has(key)); };
+      el.appendChild(b);
+    });
+  }
+  BUDGETS.forEach(([key, name, sub, coins]) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "rung"; b.setAttribute("aria-pressed", key === state.budget);
+    b.innerHTML = `<span class="coins">${Array.from({ length: coins }, (_, j) => `<i style="height:${4 + j}px"></i>`).join("")}</span><b>${name}</b><span>${sub}</span>`;
+    b.onclick = () => { state.budget = key; $("rungs").querySelectorAll(".rung").forEach(x => x.setAttribute("aria-pressed", x === b)); };
+    $("rungs").appendChild(b);
+  });
+  chipGroup($("damage"), DAMAGE.map(d => [d, d[0].toUpperCase() + d.slice(1)]), state.damage, "dmg");
+  chipGroup($("kinds"), KINDS, state.kinds);
+  chipGroup($("goals"), GOALS, state.goals);
+
+  fetch("/catalog").then(r => r.json()).then(cat => {
+    cat.classes.forEach(c => { const o = document.createElement("option"); o.value = c.name; o.textContent = c.name; $("cls").appendChild(o); });
+  }).catch(() => {});
+
+  async function api(path, body) {
+    const r = await fetch(path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw new Error(typeof data.detail === "string" ? data.detail : "Something went wrong. Try again.");
+    return data;
+  }
+
+  function setStatus(text, busy) {
+    const s = $("status"); s.hidden = !text;
+    s.innerHTML = text ? `${busy ? '<span class="spinner" aria-hidden="true"></span>' : ""}<span>${text}</span>` : "";
+  }
+
+  async function waitFor(job, label, onTick) {
+    const t0 = Date.now();
+    while (job.status === "queued" || job.status === "running") {
+      const secs = Math.round((Date.now() - t0) / 1000);
+      const queue = job.status === "queued" && job.position > 1 ? ` · ${job.position - 1} ahead of you` : "";
+      onTick(`${label} · ${Math.floor(secs / 60)}:${String(secs % 60).padStart(2, "0")}${queue}`);
+      await new Promise(r => setTimeout(r, 3000));
+      job = await api(`/jobs/${job.id}`);
+    }
+    if (job.status === "failed") throw new Error(job.error || "The build failed.");
+    return job;
+  }
+
+  $("form").onsubmit = async e => {
+    e.preventDefault();
+    const req = { damage: [...state.damage], kinds: [...state.kinds], budget: state.budget, mode: $("mode").value, goals: [...state.goals] };
+    if ($("ailment").value) req.ailment = $("ailment").value;
+    if ($("cls").value) req.class = $("cls").value;
+    $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
+    try {
+      let job = await api("/generate", req);
+      job = await waitFor(job, job.cached ? "Loading" : "Searching every skill, weapon and ascendancy that fits (about 8-10 minutes for a new idea)", t => setStatus(t, true));
+      state.gen = job.result; state.genJob = job.id;
+      renderOptions();
+      await buildGuide(job.result.plan);
+    } catch (err) {
+      setStatus(`<span class="error">${esc(err.message)}</span>`);
+    } finally { $("go").disabled = false; }
+  };
+
+  async function buildGuide(plan) {
+    let job = await api("/guides", { spec: plan.spec, budget: plan.spec.budget || state.budget, stages: ["leveling", "early", "mid", "end"] });
+    job = await waitFor(job, job.cached ? "Loading guide" : "Building all four stages: gear, passives, supports (a few minutes)", t => setStatus(t, true));
+    setStatus("");
+    renderGuide(plan, job.result);
+  }
+
+  function renderOptions() {
+    const { result, plan, options } = state.gen;
+    const rows = result.ranked.slice(0, 12);
+    $("options").hidden = false;
+    $("options").innerHTML = `
+      <div style="display:grid;gap:6px"><span class="eyebrow">What we tested</span>
+      <h2>${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)} came out on top</h2>
+      <p class="muted">${result.skills_considered.length} skills tested on every weapon they can use, then the best on each ascendancy. Pick another row to rebuild with it, or tick up to 3 to compare them at your budget.</p></div>
+      <div class="tablewrap"><table><thead><tr><th></th><th>Skill</th><th>Ascendancy</th><th>Weapon</th><th class="num">vs best</th><th></th></tr></thead><tbody>
+      ${rows.map((r, i) => `<tr class="${i === 0 ? "best" : ""}"><td><input type="checkbox" aria-label="Compare ${esc(r.skill)} ${esc(r.ascendancy)}" data-i="${i}"></td>
+        <td>${esc(r.skill)}</td><td>${esc(r.ascendancy)}</td><td>${esc(r.weapon_type)}</td><td class="num">${pct(r.relative)}</td>
+        <td>${i === 0 ? '<span class="muted">Recommended</span>' : `<button class="link" data-asc="${esc(r.ascendancy)}" data-skill="${esc(r.skill)}">Use this</button>`}</td></tr>`).join("")}
+      </tbody></table></div>
+      <button class="chip" id="cmpBtn" type="button">Compare ticked builds</button>`;
+    $("options").querySelectorAll("button[data-asc]").forEach(b => b.onclick = async () => {
+      try {
+        const plan = await api(`/generate/${state.genJob}/plan`, { ascendancy: b.dataset.asc, skill: b.dataset.skill });
+        if (plan.note) setStatus(esc(plan.note));
+        await buildGuide(plan);
+      } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }
+    });
+    $("cmpBtn").onclick = async () => {
+      const picked = [...$("options").querySelectorAll("input:checked")].map(c => rows[+c.dataset.i]).slice(0, 3);
+      if (!picked.length) { setStatus("Tick 1 to 3 builds to compare."); return; }
+      const builds = picked.map(r => ({ name: `${r.skill} ${r.ascendancy}`, class: r.cls, ascendancy: r.ascendancy, skill: r.skill,
+        weapon_type: r.weapon_type, weapon_subtype: r.weapon_subtype, offhand_type: r.offhand_type }));
+      try {
+        let job = await api("/compare", { builds, budget: state.budget, stage: "end" });
+        job = await waitFor(job, "Building each one at your budget", t => setStatus(t, true));
+        setStatus(""); renderCompare(job.result);
+      } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }
+    };
+  }
+
+  function renderCompare(res) {
+    const b = res.builds;
+    const row = (label, f) => `<tr><td>${label}</td>${b.map(x => `<td class="num">${f(x)}</td>`).join("")}</tr>`;
+    $("compare").hidden = false;
+    $("compare").innerHTML = `<span class="eyebrow">Compare at your budget</span>
+      <div class="tablewrap"><table><thead><tr><th></th>${b.map(x => `<th class="num">${esc(x.name)}</th>`).join("")}</tr></thead><tbody>
+      ${row("Single-target DPS", x => fmt(x.dps))}${row("Mapping DPS", x => fmt(x.stats.MappingDPS))}${row("Effective HP", x => fmt(x.ehp))}
+      ${row("Life", x => fmt(x.stats.Life))}</tbody></table></div>
+      <div class="row">${b.map(x => `<div><h3>${esc(x.name)}</h3><ul class="notes">${x.pros.map(p => `<li>+ ${esc(p)}</li>`).join("")}${x.cons.map(c => `<li>− ${esc(c)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+  }
+
+  function renderGuide(plan, res) {
+    state.guide = res;
+    const stages = res.stages;
+    const end = stages.find(s => s.stage === "end") || stages[stages.length - 1];
+    $("guide").hidden = false;
+    $("guide").innerHTML = `
+      <div style="display:grid;gap:6px"><span class="eyebrow">Your build</span><h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2>
+      ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}</div>
+      ${end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
+        <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
+        <p class="muted" style="font-size:13px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}
+      <div class="tabs" id="stageTabs" role="tablist"></div>
+      <div id="stageBody" style="display:grid;gap:18px"></div>`;
+    stages.forEach((s, i) => {
+      const b = document.createElement("button");
+      b.className = "chip"; b.type = "button"; b.setAttribute("role", "tab"); b.textContent = s.name;
+      b.onclick = () => { $("stageTabs").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); renderStage(plan, s); };
+      $("stageTabs").appendChild(b);
+      if (s === end) { b.setAttribute("aria-pressed", "true"); renderStage(plan, s); }
+    });
+    $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function renderStage(plan, s) {
+    const st = s.stats || {};
+    const res = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round(st[k] || 0)).join(" / ");
+    const kv = [];
+    kv.push(["Mapping", `${esc(plan.spec.skill)} + ${s.supports.map(esc).join(", ")}`]);
+    if (s.boss_skill) kv.push(["Bossing", `${esc(s.boss_skill)}${s.boss_weapon_set === 2 ? " (weapon set 2)" : ""} + ${s.boss_supports.map(esc).join(", ")}`]);
+    else if (s.boss_supports.length) kv.push(["Bossing swap", `${esc(plan.spec.skill)} + ${s.boss_supports.map(esc).join(", ")}`]);
+    if (s.spirit.length) kv.push(["Spirit", s.spirit.map(esc).join(", ")]);
+    if (s.utility.length) kv.push(["Utility", s.utility.map(u => `${esc(u.skill)}${u.weapon_set === 2 ? ` (weapon set 2, ${esc(u.weapon)})` : ""} <span class="muted">${u.gain > 0 ? "+" : ""}${pct(u.gain)}</span>`).join(", ")]);
+    if (s.mobility.length) kv.push(["Movement", s.mobility.map(esc).join(" or ")]);
+    if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
+    if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
+    $("stageBody").innerHTML = `
+      <div class="stats">
+        <div class="stat"><b>${fmt(s.dps)}</b><span>Mapping DPS</span></div>
+        <div class="stat"><b>${s.boss_dps ? fmt(s.boss_dps) : "-"}</b><span>Boss DPS</span></div>
+        <div class="stat"><b>${fmt(st.Life)}</b><span>Life</span></div>
+        <div class="stat"><b>${fmt(st.TotalEHP)}</b><span>Effective HP</span></div>
+        <div class="stat"><b>${res}</b><span>Fire / cold / lightning / chaos res</span></div>
+      </div>
+      <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
+      <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
+      <div style="display:grid;gap:8px"><h3>Gear, affixes in the order to buy them</h3>
+      <div class="items">${s.gear.map(g => g.unique
+        ? `<div class="item unique"><span class="slot">${esc(g.slot)}</span><span class="base">${esc(g.unique.split(",")[0])}</span><span class="muted" style="font-size:13px">Unique · ${esc(g.price_note || "")}</span></div>`
+        : `<div class="item"><span class="slot">${esc(g.slot)}</span><span class="base">${esc(g.base)}</span><ol>${g.affixes.map(a => `<li>${esc(a)}</li>`).join("")}</ol></div>`).join("")}</div></div>
+      ${s.notes.length ? `<ul class="notes">${s.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
+      <div class="field"><label for="code">Path of Building code</label>
+        <div class="code"><input id="code" readonly value="${esc(s.code)}"><button class="chip small" type="button" id="copy">Copy</button></div></div>`;
+    $("copy").onclick = async () => {
+      try { await navigator.clipboard.writeText(s.code); $("copy").textContent = "Copied"; }
+      catch { $("code").select(); }
+    };
+  }
+})();
+</script>
+</body>
+</html>

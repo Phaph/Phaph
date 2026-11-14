@@ -83,6 +83,11 @@ class JobStore:
             return self.db.execute("SELECT COUNT(*) FROM jobs WHERE client=? AND status IN ('queued','running')",
                                    (client,)).fetchone()[0]
 
+    def started_since(self, since: float) -> int:
+        """Jobs created since a timestamp (for the daily cap). Cached results don't count."""
+        with self.lock:
+            return self.db.execute("SELECT COUNT(*) FROM jobs WHERE created >= ?", (since,)).fetchone()[0]
+
     def submit(self, kind: str, request: dict, client: str) -> dict:
         job_id = uuid.uuid4().hex
         with self.lock:

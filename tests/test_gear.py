@@ -76,3 +76,11 @@ def test_caster_caps_resistances_when_items_are_full(pob):
     stats = pob.calc(SCORE_FIELDS)
     for k in ("FireResist", "ColdResist", "LightningResist"):
         assert stats[k] >= 75, k
+
+
+def test_unpriced_uniques_only_on_no_limit():
+    """Regression: Mageblood was suggested for a 5-30 divine build because it had no price."""
+    from gear import _unique_allowed
+    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "medium"))[0] is False
+    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "high"))[0] is False
+    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "unlimited")) == (True, "price unknown")

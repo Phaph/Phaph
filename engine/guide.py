@@ -173,7 +173,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
             spirit=spirit, conditions=conditions, goals=goals, utility=utility,
-            mobility=mobility_skills(catalog, spec["weapon_type"]),
+            mobility=mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type")),
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
         )

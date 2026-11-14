@@ -306,8 +306,9 @@ def _unique_allowed(name: str, stage: Stage) -> tuple[bool, str | None]:
     price = unique_prices().get(name.split(",")[0])
     if price is not None:
         return price <= cap, f"~{price:g} div"
-    # No price data: only suggest uniques where the budget clearly allows it, and say so.
-    return cap >= 30, "price unknown"
+    # No price data: some uniques cost hundreds of divines (Mageblood), so an unpriced unique is
+    # only suggested when the player chose "no limit". Prices from poe.ninja lift this.
+    return cap == float("inf"), "price unknown"
 
 
 def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scorer",

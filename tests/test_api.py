@@ -130,3 +130,9 @@ def test_generate_and_feedback_plan(client, monkeypatch):
 def test_boss_skill_spec_is_validated(client):
     r = client.post("/guides", json={"spec": {**SPEC, "boss_skill": "Not A Skill"}})
     assert r.status_code == 400 and "boss skill" in r.json()["detail"]
+
+
+def test_website_is_served(client):
+    r = client.get("/")
+    assert r.status_code == 200 and "text/html" in r.headers["content-type"]
+    assert "Forge my build" in r.text and "Not affiliated with" in r.text

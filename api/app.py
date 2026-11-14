@@ -16,12 +16,14 @@ from __future__ import annotations
 
 import os
 import sys
+import time
 from contextlib import asynccontextmanager
 from dataclasses import asdict
 from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -35,6 +37,8 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
+# Keeps the bill predictable: new (uncached) builds allowed per rolling 24 hours, 0 = no cap.
+DAILY_JOB_LIMIT = int(os.environ.get("DAILY_JOB_LIMIT", "300"))
 
 
 class BuildSpec(BaseModel):
@@ -198,7 +202,19 @@ def _submit(request: Request, kind: str, payload: dict) -> dict:
         return cached
     if jobs.active_for(client) >= MAX_ACTIVE_JOBS_PER_CLIENT:
         raise HTTPException(429, "Too many builds running for you at once. Wait for one to finish.")
+    if DAILY_JOB_LIMIT and jobs.started_since(time.time() - 86400) >= DAILY_JOB_LIMIT:
+        raise HTTPException(429, "We've hit today's limit for new builds. Builds other people already made still "
+                                 "load instantly, so try a common one, or come back tomorrow.")
     return jobs.submit(kind, payload, client)
+
+
+STATIC = Path(__file__).resolve().parent / "static"
+
+
+@app.get("/", include_in_schema=False)
+def index():
+    """The website: one page that talks to this API."""
+    return FileResponse(STATIC / "index.html")
 
 
 @app.get("/health")
