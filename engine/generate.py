@@ -184,7 +184,9 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         craft_gear(p, stage, c.weapon_type, c.weapon_subtype, offhand_type=c.offhand_type, uniques=False,
                    metric=metric, log=quiet)
         if tree:
-            p.optimise_tree(def_weight=0.25, metric=metric)
+            # Ranking only: the long reach stays (it changes which skills win), the slower swap phase runs
+            # on the final build in guide.py.
+            p.optimise_tree(def_weight=0.25, metric=metric, refine=False)
         p.auto_config(mode)
         best = optimise_supports(p, group, c.skill, slots=5, top_k=10, metric=metric, log=quiet)[0]
         out = p.calc(FIELDS)
