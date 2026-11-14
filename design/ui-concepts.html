@@ -1,0 +1,454 @@
+<title>Whetstone Concept Board</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: one long board of concept "plates", each a live demo on the left and the rule behind it on the right.
+   Single dark world by choice: the game is played in the dark, and damage colours need a dark ground to read. */
+:root {
+  --ground: #121315;        /* soot, slight warm bias */
+  --slate: #1b1d21;         /* plate surface */
+  --rule: #2c2f35;          /* hairlines */
+  --ink: #e6e1d8;           /* body text, ash-white */
+  --muted: #9b968d;
+  --brass: #c9a25c;         /* accent: worn brass, used sparingly */
+  /* Damage types are semantic, not decoration: every DPS number is coloured by what it is. */
+  --phys: #c8b9a0; --fire: #e0703a; --cold: #6fb4d8; --light: #e8d45a; --chaos: #a274c9;
+  --display: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font: 15px/1.6 var(--body); margin: 0; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 80px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; letter-spacing: .01em; }
+h1 { font-size: clamp(36px, 6vw, 64px); line-height: 1.02; }
+h2 { font-size: clamp(26px, 3.4vw, 34px); }
+h3 { font-size: 20px; }
+p { margin: 0; max-width: 62ch; }
+.eyebrow { font: 600 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+.muted { color: var(--muted); }
+.mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+
+/* Header */
+header.top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 32px; align-items: end; margin-bottom: 56px; }
+header.top .lede { display: grid; gap: 14px; }
+.names { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.names span { font: 13px var(--mono); padding: 4px 10px; border: 1px solid var(--rule); border-radius: 2px; color: var(--muted); }
+.names span.pick { color: var(--ink); border-color: var(--brass); }
+
+/* Plates */
+.plate { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px; padding-block: 40px; border-top: 1px solid var(--rule); }
+.plate .why { display: grid; gap: 12px; align-content: start; }
+.plate .why ul { margin: 0; padding-left: 18px; color: var(--muted); display: grid; gap: 6px; }
+.stage { background: var(--slate); border: 1px solid var(--rule); border-radius: 3px; position: relative; overflow: hidden; min-width: 0; }
+@media (max-width: 820px) { header.top, .plate { grid-template-columns: minmax(0, 1fr); } }
+
+/* 1. Class sigils */
+.sigil { aspect-ratio: 16 / 9; width: 100%; max-width: 100%; }
+.sigil canvas { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sigil .caption { position: absolute; left: 18px; bottom: 16px; right: 18px; display: grid; gap: 2px; pointer-events: none; }
+.sigil .caption .cls { font: 400 clamp(26px, 4vw, 40px)/1 var(--display); }
+.sigil .caption .motif { font: 12px var(--mono); color: var(--muted); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.chip { background: transparent; border: 1px solid var(--rule); border-radius: 2px; padding: 5px 10px; font: 12px var(--mono); cursor: pointer; color: var(--muted); transition: border-color .2s, color .2s; }
+.chip:hover { color: var(--ink); }
+.chip[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); }
+.chip .new { color: var(--brass); margin-left: 4px; }
+
+/* 2. Optimiser trace */
+.trace { display: grid; grid-template-columns: minmax(0, 1fr) 230px; min-height: 340px; }
+.trace canvas { width: 100%; height: 100%; display: block; min-height: 300px; }
+.log { border-left: 1px solid var(--rule); padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.dps { font: 600 30px/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--light); }
+.dps small { display: block; font: 11px var(--mono); color: var(--muted); letter-spacing: .1em; text-transform: uppercase; margin-top: 6px; }
+.lines { font: 12px/1.55 var(--mono); color: var(--muted); overflow: hidden; flex: 1; display: flex; flex-direction: column; justify-content: flex-end; }
+.lines div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; animation: in .35s var(--ease); }
+.lines div b { color: var(--ink); font-weight: 600; }
+@keyframes in { from { opacity: .2; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (max-width: 620px) { .trace { grid-template-columns: minmax(0, 1fr); } .log { border-left: 0; border-top: 1px solid var(--rule); } }
+.replay { position: absolute; top: 12px; left: 12px; }
+
+/* 3. Crafting bench */
+.bench { padding: 22px; display: grid; gap: 16px; }
+.budgets { display: flex; flex-wrap: wrap; gap: 6px; }
+.item { border: 1px solid var(--rule); background: #16171a; padding: 16px 18px; display: grid; gap: 4px; max-width: 440px; }
+.item .name { font: 400 22px var(--display); color: var(--brass); }
+.item .base { font: 12px var(--mono); color: var(--muted); margin-bottom: 8px; }
+.affix { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 10px; align-items: baseline; font-size: 14px; opacity: 0; transform: translateX(-6px); }
+.affix.on { animation: stamp .5s var(--ease) forwards; }
+@keyframes stamp { 0% { opacity: 0; transform: translateX(-6px); filter: brightness(2.2); } 60% { filter: brightness(1.3); } 100% { opacity: 1; transform: none; filter: none; } }
+.pips { display: flex; gap: 3px; }
+.pips i { width: 9px; height: 9px; border: 1px solid var(--muted); transform: rotate(45deg); }
+.pips i.f { background: var(--brass); border-color: var(--brass); }
+.affix .t { color: var(--ink); }
+.affix .t em { font-style: normal; color: var(--muted); font-size: 12px; margin-left: 6px; }
+
+/* 4. Damage colours */
+.dmg { padding: 22px; display: grid; gap: 18px; }
+.toggle { display: inline-flex; border: 1px solid var(--rule); border-radius: 2px; }
+.toggle button { background: none; border: 0; padding: 6px 12px; font: 12px var(--mono); color: var(--muted); cursor: pointer; }
+.toggle button[aria-pressed="true"] { background: #24262b; color: var(--ink); }
+.bar { display: flex; height: 26px; width: 100%; border-radius: 2px; overflow: hidden; background: #24262b; }
+.bar span { height: 100%; transition: width .7s var(--ease); }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font: 12px var(--mono); color: var(--muted); }
+.legend i { display: inline-block; width: 10px; height: 10px; margin-right: 6px; vertical-align: -1px; }
+.big { font: 600 40px/1 var(--mono); font-variant-numeric: tabular-nums; }
+
+/* 5. Duel */
+.duel { padding: 22px; display: grid; gap: 14px; }
+.row { display: grid; grid-template-columns: 170px minmax(0, 1fr) 90px; gap: 12px; align-items: center; }
+.row .who { font-size: 14px; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.row .who small { display: block; color: var(--muted); font: 11px var(--mono); }
+.row .track { height: 12px; background: #24262b; position: relative; }
+.row .fill { position: absolute; inset: 0 auto 0 0; width: 0; transition: width .9s var(--ease); }
+.row .val { text-align: right; font: 13px var(--mono); font-variant-numeric: tabular-nums; }
+.row.win .who { color: var(--brass); }
+.metric-tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+@media (max-width: 560px) { .row { grid-template-columns: minmax(0, 1fr) 80px; } .row .track { grid-column: 1 / -1; order: 3; } }
+
+/* 6. Budget ladder */
+.ladder { padding: 22px; display: grid; gap: 14px; }
+.rungs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
+.rung { background: none; border: 1px solid var(--rule); padding: 12px 10px; text-align: left; cursor: pointer; display: grid; gap: 6px; min-width: 0; }
+.rung .coins { display: flex; gap: 2px; height: 14px; align-items: end; }
+.rung .coins i { width: 6px; background: var(--muted); border-radius: 1px; }
+.rung b { font: 600 13px var(--body); }
+.rung span { font: 11px var(--mono); color: var(--muted); }
+.rung[aria-pressed="true"] { border-color: var(--brass); }
+.rung[aria-pressed="true"] .coins i { background: var(--brass); }
+@media (max-width: 620px) { .rungs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Style sheet */
+.swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; }
+.sw { border: 1px solid var(--rule); }
+.sw div { height: 44px; }
+.sw p { font: 11px var(--mono); padding: 6px 8px; color: var(--muted); }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.rules ul { margin: 8px 0 0; padding-left: 18px; color: var(--muted); display: grid; gap: 6px; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="lede">
+      <span class="eyebrow">Interface concepts · PoE 2 build optimizer</span>
+      <h1>A workbench, not a chatbot</h1>
+      <p class="muted">The app should feel like a craftsman's bench in Wraeclast: soot, brass and lamplight, with colour reserved for what the game itself colours (damage types, rarity). Every animation shows something real happening to the build. Nothing glows for the sake of it.</p>
+    </div>
+    <div class="lede">
+      <span class="eyebrow">Working names</span>
+      <div class="names"><span class="pick">Whetstone</span><span>Hollowforge</span><span>Ashlight</span><span>Socketwright</span><span>Cinderbench</span></div>
+      <p class="muted" style="font-size:13px">All original. None use Grinding Gear Games names, logos or art, which keeps the app clear of their trademarks.</p>
+    </div>
+  </header>
+
+  <!-- 1 -->
+  <section class="plate" aria-labelledby="p1">
+    <div>
+      <div class="stage sigil" id="sigil">
+        <canvas id="sigilCanvas" aria-hidden="true"></canvas>
+        <div class="caption"><span class="cls" id="sigilName">Monk</span><span class="motif" id="sigilMotif">Wind rings, chained lightning</span></div>
+      </div>
+      <div class="chips" id="classChips" role="group" aria-label="Class"></div>
+    </div>
+    <div class="why">
+      <span class="eyebrow">Concept 1</span>
+      <h2 id="p1">Each class has a living sigil</h2>
+      <p>Picking a class changes the ambient motif behind the build header. It's generated on canvas from the class's own mechanics, so it never looks like stock art.</p>
+      <ul>
+        <li>Shadow: vision cones sweep across smoke. Step "outside" them on hover, like Stealth.</li>
+        <li>Low motion: 20-60 slow particles, under 30% opacity, paused off-screen and for reduced-motion users.</li>
+        <li>The motif reacts once at key moments: a pulse when the build finishes, a flare on a new best.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 2 -->
+  <section class="plate" aria-labelledby="p2">
+    <div class="stage">
+      <div class="trace">
+        <canvas id="treeCanvas" aria-label="Passive tree being allocated"></canvas>
+        <div class="log">
+          <div class="dps" id="traceDps">0<small>Mapping DPS</small></div>
+          <div class="lines" id="traceLines" aria-live="polite"></div>
+        </div>
+      </div>
+      <button class="chip replay" id="replay">Replay</button>
+    </div>
+    <div class="why">
+      <span class="eyebrow">Concept 2</span>
+      <h2 id="p2">The loading screen is the work</h2>
+      <p>A guide takes about a minute and a half. Instead of a spinner, the page streams the optimiser's real trace: notables light up as they're allocated and the DPS figure climbs.</p>
+      <ul>
+        <li>Shown here: the actual allocation order and DPS from our Tempest Flurry Invoker mid maps run.</li>
+        <li>Engine side: the tree step list already exists. It just needs streaming over the job endpoint.</li>
+        <li>Players learn why a node was taken, which builds trust in the result.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 3 -->
+  <section class="plate" aria-labelledby="p3">
+    <div class="stage bench">
+      <div class="budgets" id="benchBudgets" role="group" aria-label="Stage"></div>
+      <div class="item" id="item"></div>
+    </div>
+    <div class="why">
+      <span class="eyebrow">Concept 3</span>
+      <h2 id="p3">Gear stamps in like a crafting bench</h2>
+      <p>Each affix lands in priority order with a short heat flash, the way a crafted mod appears. The diamond pips show the affix tier the budget allows.</p>
+      <ul>
+        <li>Switch stages to watch the same helmet slot upgrade from leveling to endgame. These are the engine's real picks.</li>
+        <li>Each line links to a trade search with that stat as the minimum.</li>
+        <li>Priority order is the point: the first line is what to buy first.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section class="plate" aria-labelledby="p4">
+    <div class="stage dmg">
+      <div class="toggle" role="group" aria-label="Mode"><button id="mMap" aria-pressed="true">Mapping</button><button id="mBoss" aria-pressed="false">Bossing</button></div>
+      <div class="big" id="dmgTotal">338,968</div>
+      <div class="bar" id="dmgBar"></div>
+      <div class="legend" id="dmgLegend"></div>
+    </div>
+    <div class="why">
+      <span class="eyebrow">Concept 4</span>
+      <h2 id="p4">Damage has a colour</h2>
+      <p>The interface's only bright colours are damage types: physical, fire, cold, lightning, chaos. Every DPS bar is split by type, so a player sees at a glance what a build scales.</p>
+      <ul>
+        <li>Mapping and bossing are one toggle: same gear, a support gem swap.</li>
+        <li>Brass is the only interface accent: selection, focus, winners.</li>
+        <li>Example split for illustration. The engine can report the real per-type numbers.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section class="plate" aria-labelledby="p5">
+    <div class="stage duel">
+      <div class="metric-tabs" id="duelTabs" role="group" aria-label="Compare by"></div>
+      <div id="duelRows" style="display:grid;gap:14px"></div>
+    </div>
+    <div class="why">
+      <span class="eyebrow">Concept 5</span>
+      <h2 id="p5">Compare as a duel</h2>
+      <p>Up to three builds side by side, one metric at a time. Bars race out together and the leader takes the brass. Pros and cons sit under each name.</p>
+      <ul>
+        <li>Numbers here are our real 5 divine comparison: all three builds fully crafted at the same budget.</li>
+        <li>One metric per view keeps it readable on a phone.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section class="plate" aria-labelledby="p6">
+    <div class="stage ladder">
+      <div class="rungs" id="rungs" role="group" aria-label="Budget"></div>
+      <p class="muted" id="rungNote" style="font-size:13px"></p>
+    </div>
+    <div class="why">
+      <span class="eyebrow">Concept 6</span>
+      <h2 id="p6">Budget first, as a ladder</h2>
+      <p>The first question the app asks. Five rungs, each a growing stack of coins rather than a dropdown, so nobody gets shown a 2,000 divine build by accident.</p>
+    </div>
+  </section>
+
+  <!-- Style -->
+  <section class="plate" style="grid-template-columns:minmax(0,1fr)" aria-labelledby="p7">
+    <div class="why">
+      <span class="eyebrow">Style sheet</span>
+      <h2 id="p7">Palette, type and motion rules</h2>
+    </div>
+    <div class="swatches" id="swatches"></div>
+    <div class="rules">
+      <div><h3>Type</h3><ul><li>IM Fell English SC for display: old engraved print, grim without copying the game's own font.</li><li>Manrope for reading, JetBrains Mono for every number and stat line.</li><li>Stats are always monospaced and tabular, so columns line up.</li></ul></div>
+      <div><h3>Motion</h3><ul><li>One easing curve everywhere, 300-900ms.</li><li>Motion only for real events: an allocation, an affix, a finished build.</li><li>No floating orbs, no gradient blobs, no typing-cursor "AI" effects.</li></ul></div>
+      <div><h3>Avoid</h3><ul><li>Purple-blue gradients and glowing neon cards.</li><li>Chat bubbles: the prompt is a single forge-like input, and the answer is a build sheet.</li><li>Any GGG art, logos or item renders.</li></ul></div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const fmt = n => Math.round(n).toLocaleString("en-US");
+
+  /* ---------- 1. Class sigils ---------- */
+  const classes = [
+    { name: "Monk", motif: "Wind rings, chained lightning", color: "--light", draw: "monk" },
+    { name: "Shadow", motif: "Smoke and sweeping vision cones", color: "--chaos", draw: "shadow", isNew: true },
+    { name: "Duelist", motif: "Crossing blade arcs", color: "--phys", draw: "duelist", isNew: true },
+    { name: "Witch", motif: "Rising embers, bone dust", color: "--chaos", draw: "witch" },
+    { name: "Warrior", motif: "Stone fracture lines", color: "--phys", draw: "warrior" },
+    { name: "Sorceress", motif: "Orbiting runes", color: "--cold", draw: "sorc" },
+    { name: "Ranger", motif: "Arrow trails", color: "--phys", draw: "ranger" },
+    { name: "Huntress", motif: "Spear thrusts through falling leaves", color: "--fire", draw: "huntress" },
+    { name: "Mercenary", motif: "Crossbow bolt grid", color: "--fire", draw: "merc" },
+    { name: "Druid", motif: "Branching roots", color: "--phys", draw: "druid" },
+  ];
+  const cv = document.getElementById("sigilCanvas"), cx = cv.getContext("2d");
+  let W = 0, H = 0, cur = classes[0], parts = [], t = 0, mouse = { x: -1e4, y: -1e4 }, visible = true;
+  const rnd = (a, b) => a + Math.random() * (b - a);
+  function size() {
+    const r = cv.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
+    W = r.width; H = r.height; cv.width = W * d; cv.height = H * d; cx.setTransform(d, 0, 0, d, 0, 0);
+  }
+  function seed() {
+    parts = Array.from({ length: 48 }, () => ({ x: rnd(0, W), y: rnd(0, H), a: rnd(0, 6.28), s: rnd(.2, 1), l: rnd(0, 1) }));
+  }
+  function rgba(hex, a) { const n = parseInt(hex.slice(1), 16); return `rgba(${n >> 16},${n >> 8 & 255},${n & 255},${a})`; }
+  const draws = {
+    monk(c, k) { // concentric wind rings + occasional forked bolt
+      for (let i = 0; i < 6; i++) { const r = ((t * 22 + i * 60) % 360); c.strokeStyle = rgba(k, .22 * (1 - r / 360)); c.lineWidth = 1.2; c.beginPath(); c.arc(W * .72, H * .45, r, 0, 6.28); c.stroke(); }
+      if (Math.floor(t * 1.3) % 4 === 0) { c.strokeStyle = rgba(k, .5); c.lineWidth = 1.4; c.beginPath(); let x = W * .72, y = 0; c.moveTo(x, y); while (y < H * .45) { x += rnd(-18, 18); y += rnd(10, 24); c.lineTo(x, y); } c.stroke(); }
+    },
+    shadow(c, k) { // drifting smoke + two vision cones; inside the cone the smoke brightens
+      const eyes = [[W * .78, H * .2, Math.sin(t * .5) * .6 + 2.4], [W * .2, H * .85, Math.sin(t * .4 + 2) * .5 - .6]];
+      for (const [ex, ey, ang] of eyes) {
+        const g = c.createRadialGradient(ex, ey, 0, ex, ey, W * .55); g.addColorStop(0, rgba(css("--ink"), .1)); g.addColorStop(1, rgba(css("--ink"), 0));
+        c.fillStyle = g; c.beginPath(); c.moveTo(ex, ey); c.arc(ex, ey, W * .55, ang - .32, ang + .32); c.closePath(); c.fill();
+      }
+      for (const p of parts) { p.x += Math.cos(p.a) * .25; p.y -= .15 * p.s; if (p.y < -20) p.y = H + 20; const near = Math.hypot(p.x - mouse.x, p.y - mouse.y) < 90; c.fillStyle = rgba(k, near ? .32 : .1); c.beginPath(); c.arc(p.x, p.y, 18 * p.s, 0, 6.28); c.fill(); }
+    },
+    duelist(c, k) { for (let i = 0; i < 3; i++) { const ph = (t * .6 + i / 3) % 1, a = -2.4 + ph * 1.6 + i; c.strokeStyle = rgba(k, .35 * Math.sin(ph * 3.14)); c.lineWidth = 2; c.beginPath(); c.arc(W * .65, H * .55, H * (.25 + i * .09), a, a + .9); c.stroke(); } },
+    witch(c, k) { for (const p of parts) { p.y -= .4 * p.s; p.x += Math.sin(t + p.a) * .3; if (p.y < 0) { p.y = H; p.x = rnd(0, W); } c.fillStyle = rgba(k, .5 * p.s); c.fillRect(p.x, p.y, 2, 2); } },
+    warrior(c, k) { c.strokeStyle = rgba(k, .28); c.lineWidth = 1; const cxp = W * .7, cyp = H * .6; for (let i = 0; i < 9; i++) { let a = i * .7 + .3, x = cxp, y = cyp; c.beginPath(); c.moveTo(x, y); const len = (Math.sin(t * .8 + i) * .5 + .5) * 9; for (let j = 0; j < len; j++) { a += rnd(-.35, .35); x += Math.cos(a) * 16; y += Math.sin(a) * 16; c.lineTo(x, y); } c.stroke(); } },
+    sorc(c, k) { for (let i = 0; i < 7; i++) { const a = t * .35 + i * .9, r = H * (.18 + (i % 3) * .1); const x = W * .7 + Math.cos(a) * r * 1.4, y = H * .5 + Math.sin(a) * r; c.strokeStyle = rgba(k, .45); c.strokeRect(x - 5, y - 5, 10, 10); c.beginPath(); c.moveTo(x - 5, y); c.lineTo(x + 5, y); c.stroke(); } },
+    ranger(c, k) { for (const p of parts.slice(0, 14)) { p.x += 5 * p.s; if (p.x > W + 40) { p.x = -40; p.y = rnd(0, H); } c.strokeStyle = rgba(k, .35); c.beginPath(); c.moveTo(p.x - 40, p.y); c.lineTo(p.x, p.y); c.stroke(); } },
+    huntress(c, k) { for (const p of parts.slice(0, 22)) { p.y += .5 * p.s; p.x += Math.sin(t + p.a) * .4; if (p.y > H) p.y = -10; c.fillStyle = rgba(css("--phys"), .18); c.beginPath(); c.ellipse(p.x, p.y, 4, 2, p.a + t, 0, 6.28); c.fill(); } const ph = (t * .5) % 1; c.strokeStyle = rgba(k, .5 * (1 - ph)); c.lineWidth = 2; c.beginPath(); c.moveTo(W * .3, H * .5); c.lineTo(W * .3 + ph * W * .55, H * .5); c.stroke(); },
+    merc(c, k) { c.strokeStyle = rgba(css("--muted"), .08); for (let x = 0; x < W; x += 28) { c.beginPath(); c.moveTo(x, 0); c.lineTo(x, H); c.stroke(); } for (const p of parts.slice(0, 8)) { p.y += 6 * p.s; if (p.y > H) { p.y = -30; p.x = Math.round(rnd(0, W) / 28) * 28; } c.strokeStyle = rgba(k, .5); c.beginPath(); c.moveTo(p.x, p.y - 24); c.lineTo(p.x, p.y); c.stroke(); } },
+    druid(c, k) { c.strokeStyle = rgba(k, .25); const grow = (x, y, a, len, d) => { if (d > 6) return; const x2 = x + Math.cos(a) * len, y2 = y + Math.sin(a) * len; c.beginPath(); c.moveTo(x, y); c.lineTo(x2, y2); c.stroke(); const sway = Math.sin(t * .6 + d) * .08; grow(x2, y2, a - .38 + sway, len * .76, d + 1); grow(x2, y2, a + .34 + sway, len * .72, d + 1); }; grow(W * .72, H, -1.57, H * .22, 0); },
+  };
+  function frame() {
+    if (!visible) return requestAnimationFrame(frame);
+    t += 1 / 60; cx.clearRect(0, 0, W, H);
+    draws[cur.draw](cx, css(cur.color));
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  const chips = document.getElementById("classChips");
+  classes.forEach((c, i) => {
+    const b = document.createElement("button"); b.className = "chip"; b.setAttribute("aria-pressed", i === 0);
+    b.innerHTML = c.name + (c.isNew ? '<span class="new">1.0</span>' : "");
+    b.onclick = () => { cur = c; seed(); chips.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); document.getElementById("sigilName").textContent = c.name; document.getElementById("sigilMotif").textContent = c.motif; if (reduce) frame(); };
+    chips.appendChild(b);
+  });
+  cv.parentElement.addEventListener("pointermove", e => { const r = cv.getBoundingClientRect(); mouse = { x: e.clientX - r.left, y: e.clientY - r.top }; });
+  new IntersectionObserver(es => es.forEach(e => visible = e.isIntersecting)).observe(cv);
+  size(); seed(); addEventListener("resize", () => { size(); seed(); }); frame();
+
+  /* ---------- 2. Optimiser trace (real mid maps run) ---------- */
+  const notables = ["I am the Thunder...", "I am the Blizzard...", "Flow Like Water", "Flow State", "Essence of the Storm", "Concussive Attack", "Moment of Truth", "Dizzying Sweep", "Tenfold Attacks", "Blinding Strike", "Essence of the Mountain", "Agile Succession", "True Strike", "Chakra of Thought", "Frantic Reach", "Resolute Reach", "Deep Trance", "Deadly Force", "Cooked", "Primal Sundering"];
+  const START = 13119, END = 338968;
+  const tc = document.getElementById("treeCanvas"), tx = tc.getContext("2d");
+  let nodes = [], edges = [], order = [], step = 0, timer = null, TW = 0, TH = 0;
+  function buildTree() {
+    const r = tc.getBoundingClientRect(), d = Math.min(devicePixelRatio || 1, 2);
+    TW = r.width; TH = Math.max(r.height, 300); tc.width = TW * d; tc.height = TH * d; tx.setTransform(d, 0, 0, d, 0, 0);
+    // A deterministic constellation: rings of nodes around a class start, like a passive web.
+    let s = 7; const rand = () => (s = (s * 16807) % 2147483647) / 2147483647;
+    nodes = [{ x: TW / 2, y: TH / 2, n: true, on: true }];
+    for (let ring = 1; ring <= 4; ring++) { const count = ring * 9; for (let i = 0; i < count; i++) { const a = i / count * 6.283 + ring * .3 + (rand() - .5) * .12; const rr = ring * Math.min(TW, TH) * .115; nodes.push({ x: TW / 2 + Math.cos(a) * rr * 1.25, y: TH / 2 + Math.sin(a) * rr, n: rand() < .22, on: false, ring }); } }
+    edges = [];
+    nodes.forEach((a, i) => { if (!i) return; let best = 0, bd = 1e9; nodes.forEach((b, j) => { if (j === i || (b.ring || 0) >= a.ring) return; const dd = Math.hypot(a.x - b.x, a.y - b.y); if (dd < bd) { bd = dd; best = j; } }); edges.push([i, best]); });
+    // Allocation order: walk outward along edges, preferring notables.
+    const parent = Object.fromEntries(edges.map(([c, p]) => [c, p]));
+    const pathTo = i => { const p = []; while (i) { p.unshift(i); i = parent[i]; } return p; };
+    const picks = nodes.map((n, i) => i).filter(i => i > 0 && nodes[i].n).sort((a, b) => nodes[a].ring - nodes[b].ring || a - b).slice(0, notables.length);
+    order = picks.map(pathTo);
+  }
+  function drawTree(p = 1) {
+    tx.clearRect(0, 0, TW, TH);
+    for (const [a, b] of edges) { const on = nodes[a].on && nodes[b].on; tx.strokeStyle = on ? css("--brass") : css("--rule"); tx.lineWidth = on ? 1.6 : 1; tx.beginPath(); tx.moveTo(nodes[a].x, nodes[a].y); tx.lineTo(nodes[b].x, nodes[b].y); tx.stroke(); }
+    for (const n of nodes) { const r = n.n ? 5.5 : 2.6; tx.fillStyle = n.on ? css("--brass") : css("--slate"); tx.strokeStyle = n.on ? css("--brass") : css("--muted"); tx.lineWidth = 1; tx.beginPath(); tx.arc(n.x, n.y, r, 0, 6.28); tx.fill(); tx.stroke(); if (n.flash) { tx.strokeStyle = rgba(css("--brass"), n.flash); tx.beginPath(); tx.arc(n.x, n.y, r + 10 * (1 - n.flash), 0, 6.28); tx.stroke(); n.flash = Math.max(0, n.flash - .04); } }
+  }
+  const lines = document.getElementById("traceLines"), dpsEl = document.getElementById("traceDps");
+  function setDps(v) { dpsEl.firstChild.nodeValue = fmt(v); }
+  function run() {
+    clearInterval(timer); buildTree(); step = 0; lines.innerHTML = ""; setDps(START);
+    const tick = () => {
+      if (step >= order.length) { clearInterval(timer); return; }
+      const path = order[step], tip = nodes[path[path.length - 1]];
+      path.forEach(i => nodes[i].on = true); tip.flash = 1;
+      // Ease DPS along a curve that matches the real start and end values.
+      const v = START + (END - START) * Math.pow((step + 1) / order.length, 1.6);
+      setDps(v);
+      const div = document.createElement("div"); div.innerHTML = `+ <b>${notables[step]}</b> · ${path.length} pts`; lines.appendChild(div);
+      while (lines.children.length > 12) lines.firstChild.remove();
+      step++;
+    };
+    if (reduce) { while (step < order.length) tick(); drawTree(); return; }
+    timer = setInterval(tick, 420);
+  }
+  (function loop() { drawTree(); if (!reduce) requestAnimationFrame(loop); })();
+  document.getElementById("replay").onclick = run;
+  run();
+
+  /* ---------- 3. Crafting bench (real helmet picks) ---------- */
+  const helmets = {
+    Leveling: { base: "Cabalist Helm", budget: "Free", tier: 1, lines: ["+22% of Armour also applies to Elemental Damage", "+17% to Fire Resistance", "+17% to Lightning Resistance"] },
+    "Early maps": { base: "Cryptic Helm", budget: "≤5 div", tier: 2, lines: ["+292 to Accuracy Rating", "27% increased Critical Hit Chance", "+28% to Fire Resistance", "+28% to Lightning Resistance"] },
+    "Mid maps": { base: "Gladiatorial Helm", budget: "5-30 div", tier: 3, lines: ["+510 to Accuracy Rating", "+41% of Armour also applies to Elemental Damage", "32% increased Critical Hit Chance", "+43% to Fire Resistance", "97% increased Armour and Evasion"] },
+    Endgame: { base: "Imperial Greathelm", budget: "30-100 div", tier: 4, lines: ["+530 to Accuracy Rating", "33% increased Critical Hit Chance", "+42% of Armour also applies to Elemental Damage", "98% increased Armour", "+44% to Fire Resistance", "+215 to Armour"] },
+  };
+  const names = ["Storm Visage", "Ashen Crown", "Grim Halo", "Thunder Brow"];
+  const bb = document.getElementById("benchBudgets"), item = document.getElementById("item");
+  function showItem(k, i) {
+    const h = helmets[k];
+    item.innerHTML = `<div class="name">${names[i]}</div><div class="base">${h.base} · Helmet · ${h.budget}</div>` +
+      h.lines.map((l, j) => `<div class="affix" style="animation-delay:${j * 180}ms"><span class="pips">${[0, 1, 2, 3].map(p => `<i class="${p < h.tier ? "f" : ""}"></i>`).join("")}</span><span class="t">${l}<em>#${j + 1}</em></span></div>`).join("");
+    requestAnimationFrame(() => item.querySelectorAll(".affix").forEach(a => a.classList.add("on")));
+  }
+  Object.keys(helmets).forEach((k, i) => { const b = document.createElement("button"); b.className = "chip"; b.textContent = k; b.setAttribute("aria-pressed", i === 2); b.onclick = () => { bb.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); showItem(k, i); }; bb.appendChild(b); });
+  showItem("Mid maps", 2);
+
+  /* ---------- 4. Damage colours ---------- */
+  const split = { Mapping: { total: 338968, parts: { light: .52, fire: .27, cold: .09, phys: .12 } }, Bossing: { total: 462647, parts: { light: .5, fire: .26, cold: .1, phys: .14 } } };
+  const labels = { phys: "Physical", fire: "Fire", cold: "Cold", light: "Lightning", chaos: "Chaos" };
+  const bar = document.getElementById("dmgBar"), leg = document.getElementById("dmgLegend"), tot = document.getElementById("dmgTotal");
+  bar.innerHTML = Object.keys(labels).map(k => `<span data-k="${k}" style="width:0;background:var(--${k})"></span>`).join("");
+  function showDmg(m) {
+    const s = split[m]; tot.textContent = fmt(s.total);
+    bar.querySelectorAll("span").forEach(sp => sp.style.width = ((s.parts[sp.dataset.k] || 0) * 100) + "%");
+    leg.innerHTML = Object.entries(s.parts).map(([k, v]) => `<span><i style="background:var(--${k})"></i>${labels[k]} ${fmt(s.total * v)}</span>`).join("");
+    document.getElementById("mMap").setAttribute("aria-pressed", m === "Mapping"); document.getElementById("mBoss").setAttribute("aria-pressed", m === "Bossing");
+  }
+  document.getElementById("mMap").onclick = () => showDmg("Mapping"); document.getElementById("mBoss").onclick = () => showDmg("Bossing");
+  setTimeout(() => showDmg("Mapping"), 60);
+
+  /* ---------- 5. Duel (real 5 divine comparison) ---------- */
+  const builds = [
+    { name: "Tempest Flurry", sub: "Monk · Invoker", dps: 204832, life: 2071, ehp: 8190, chaos: 22, color: "--light" },
+    { name: "Falling Thunder", sub: "Monk · Invoker", dps: 286273, life: 2102, ehp: 8758, chaos: 22, color: "--light" },
+    { name: "Rake Bleed", sub: "Huntress · Amazon", dps: 126019, life: 2176, ehp: 7667, chaos: 66, color: "--phys" },
+  ];
+  const metrics = [["dps", "DPS"], ["ehp", "Effective HP"], ["life", "Life"], ["chaos", "Chaos res"]];
+  const tabs = document.getElementById("duelTabs"), rows = document.getElementById("duelRows");
+  function duel(m) {
+    const max = Math.max(...builds.map(b => b[m])), suffix = m === "chaos" ? "%" : "";
+    rows.innerHTML = builds.map(b => `<div class="row ${b[m] === max ? "win" : ""}"><div class="who">${b.name}<small>${b.sub}</small></div><div class="track"><div class="fill" style="background:var(${b[m] === max ? "--brass" : b.color})"></div></div><div class="val">${fmt(b[m])}${suffix}</div></div>`).join("");
+    requestAnimationFrame(() => rows.querySelectorAll(".fill").forEach((f, i) => f.style.width = (builds[i][m] / max * 100) + "%"));
+    tabs.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x.dataset.m === m));
+  }
+  metrics.forEach(([k, l]) => { const b = document.createElement("button"); b.className = "chip"; b.dataset.m = k; b.textContent = l; b.onclick = () => duel(k); tabs.appendChild(b); });
+  duel("dps");
+
+  /* ---------- 6. Budget ladder ---------- */
+  const rungs = [["Free", "Self-found", 1, "Gear from drops only: 3 good affixes per item."], ["Budget", "Up to ~5 div", 2, "League-start trade gear: 4 good affixes, second-best tiers."], ["Medium", "~5-30 div", 4, "Good rares and key uniques: 5 affixes, top tiers."], ["High", "~30-100 div", 7, "Near-perfect rolls, 6 affixes."], ["No limit", "100+ div", 11, "Best in slot. Never shown unless picked."]];
+  const rg = document.getElementById("rungs"), note = document.getElementById("rungNote");
+  rungs.forEach(([n, s, c, d], i) => { const b = document.createElement("button"); b.className = "rung"; b.setAttribute("aria-pressed", i === 1); b.innerHTML = `<span class="coins">${Array.from({ length: c }, (_, j) => `<i style="height:${4 + j}px"></i>`).join("")}</span><b>${n}</b><span>${s}</span>`; b.onclick = () => { rg.querySelectorAll(".rung").forEach(x => x.setAttribute("aria-pressed", x === b)); note.textContent = d; }; rg.appendChild(b); });
+  note.textContent = rungs[1][3];
+
+  /* ---------- Swatches ---------- */
+  document.getElementById("swatches").innerHTML = [["--ground", "Soot"], ["--slate", "Slate"], ["--ink", "Ash"], ["--brass", "Brass (accent)"], ["--phys", "Physical"], ["--fire", "Fire"], ["--cold", "Cold"], ["--light", "Lightning"], ["--chaos", "Chaos"]]
+    .map(([v, n]) => `<div class="sw"><div style="background:var(${v})"></div><p>${n}<br>${css(v)}</p></div>`).join("");
+})();
+</script>
