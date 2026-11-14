@@ -1,0 +1,185 @@
+<title>Whetstone Build Engine</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<style>
+/* Layout: a single reading column (~70ch) with full-width bands for the pipeline and the comparison table.
+   Same soot-and-brass world as the concept board, single dark theme by choice. */
+:root {
+  --ground: #121315; --slate: #1b1d21; --rule: #2c2f35; --ink: #e6e1d8; --muted: #9b968d; --brass: #c9a25c;
+  --yes: #8fbf7a; --no: #b9725c; --part: #c9a25c;
+  --display: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--ground); color: var(--ink); font: 16px/1.65 var(--body); margin: 0; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 44px 80px; display: grid; gap: 56px; }
+.col { max-width: 70ch; display: grid; gap: 14px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(38px, 6vw, 62px); line-height: 1.02; }
+h2 { font-size: clamp(26px, 3.4vw, 34px); }
+h3 { font-size: 19px; }
+p { margin: 0; }
+.eyebrow { font: 600 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
+.muted { color: var(--muted); }
+.lede { font-size: 18px; color: var(--muted); max-width: 62ch; }
+a { color: var(--brass); }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+section { display: grid; gap: 18px; }
+
+/* Stats strip */
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.stat { padding: 18px 16px; display: grid; gap: 4px; min-width: 0; }
+.stat + .stat { border-left: 1px solid var(--rule); }
+.stat b { font: 600 clamp(22px, 3vw, 30px)/1 var(--mono); font-variant-numeric: tabular-nums; color: var(--ink); }
+.stat span { font-size: 13px; color: var(--muted); }
+@media (max-width: 700px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } .stat:nth-child(3) { border-left: 0; } .stat:nth-child(n+3) { border-top: 1px solid var(--rule); } }
+
+/* Pipeline */
+.pipe { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 0; counter-reset: s; }
+.step { padding: 16px; border: 1px solid var(--rule); background: var(--slate); display: grid; gap: 8px; align-content: start; min-width: 0; position: relative; }
+.step + .step { border-left: 0; }
+.step .n { font: 600 11px var(--mono); color: var(--brass); letter-spacing: .1em; }
+.step h3 { font-size: 18px; }
+.step p { font-size: 14px; color: var(--muted); }
+.step code { font: 12px var(--mono); color: var(--ink); }
+@media (max-width: 860px) { .pipe { grid-template-columns: minmax(0, 1fr); } .step + .step { border-left: 1px solid var(--rule); border-top: 0; } }
+
+/* Reasons */
+.reasons { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 40px; }
+.reason { display: grid; gap: 8px; min-width: 0; }
+.reason p { color: var(--muted); }
+.reason p b { color: var(--ink); font-weight: 600; }
+@media (max-width: 760px) { .reasons { grid-template-columns: minmax(0, 1fr); } }
+
+/* Example */
+.example { border: 1px solid var(--rule); background: var(--slate); padding: 20px; display: grid; gap: 14px; }
+.tablewrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+td.num { font-family: var(--mono); font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+th.num { text-align: right; }
+.mark { font: 600 12px var(--mono); white-space: nowrap; }
+.mark.y { color: var(--yes); } .mark.n { color: var(--no); } .mark.p { color: var(--part); }
+tr.us td { background: rgba(201, 162, 92, .07); }
+tr.us td:first-child { color: var(--brass); }
+.cmp td:first-child { font-weight: 600; min-width: 150px; }
+.cmp td { min-width: 120px; }
+.cmp .what { min-width: 240px; color: var(--muted); }
+
+ul.plain { margin: 0; padding-left: 18px; display: grid; gap: 8px; color: var(--muted); }
+ul.plain b { color: var(--ink); font-weight: 600; }
+.note { font-size: 13px; color: var(--muted); border-left: 2px solid var(--rule); padding-left: 12px; max-width: 75ch; }
+</style>
+
+<div class="wrap">
+  <header class="col" style="max-width:none">
+    <span class="eyebrow">Path of Exile 2 · free build tool · working name Whetstone</span>
+    <h1>Ask for any build. Get the strongest version of it, tested.</h1>
+    <p class="lede">Type something like "lightning minion Monk, 5 divines". The engine designs that build, then tests thousands of versions in Path of Building's real damage math and hands back the best one. You get supports, passives, ascendancy, gear for every slot and four stages from leveling to endgame. Or give it up to three builds and it compares them at the same budget.</p>
+  </header>
+
+  <div class="stats" role="list">
+    <div class="stat" role="listitem"><b>~20 ms</b><span>per build variant tested</span></div>
+    <div class="stat" role="listitem"><b>555</b><span>support gems screened per skill</span></div>
+    <div class="stat" role="listitem"><b>23 / 23</b><span>ascendancies build without errors</span></div>
+    <div class="stat" role="listitem"><b>35</b><span>automated checks on every change</span></div>
+  </div>
+
+  <section>
+    <div class="col">
+      <span class="eyebrow">How it works</span>
+      <h2>Five steps, all scored by Path of Building</h2>
+      <p class="muted">Path of Building is the community's standard damage calculator: the numbers every guide quotes. Normally it's a desktop app you click through by hand. We run its engine with no window, so a program can ask it "what if?" thousands of times a minute.</p>
+    </div>
+    <div class="pipe">
+      <div class="step"><span class="n">STEP 1</span><h3>Read the request</h3><p>Class, ascendancy, main skill, weapon and budget. Each one is checked against the game data, so a typo or an impossible combo gets a clear error.</p></div>
+      <div class="step"><span class="n">STEP 2</span><h3>Craft gear</h3><p>For every slot it picks the best base, then the best affixes from the game's real affix tables, capped at your budget. Resistances only go where they're still needed.</p></div>
+      <div class="step"><span class="n">STEP 3</span><h3>Spend passives</h3><p>Every reachable passive and ascendancy node is tested. The one that adds the most damage and toughness per point is taken, then it repeats until the points run out.</p></div>
+      <div class="step"><span class="n">STEP 4</span><h3>Pick supports</h3><p>Every support gem is tried on the skill, then the best 5-gem combination is built while respecting game rules: gem families, lineage limits, gems that need conditions.</p></div>
+      <div class="step"><span class="n">STEP 5</span><h3>Write the guide</h3><p>Gear is re-tuned for the final tree. Then a mapping setup and a bossing swap, stats, pros and cons, and a <code>PoB code</code> you can import and check yourself.</p></div>
+    </div>
+    <p class="note">Steps 2 to 5 run once per stage: Leveling (level 55), Early maps (75), Mid maps (90) and Endgame (95), in parallel. A full four-stage guide takes about a minute and a half. Asking for the same build again is instant, because results are cached.</p>
+  </section>
+
+  <section>
+    <div class="col">
+      <span class="eyebrow">Why it's different</span>
+      <h2>It searches instead of guessing</h2>
+    </div>
+    <div class="reasons">
+      <div class="reason"><h3>Real math, not a chatbot's memory</h3><p>AI build assistants mostly ask a language model what's good, which can mix up game versions or invent numbers. Here <b>every recommendation is a number Path of Building calculated</b>. AI only turns your words into a build request and writes up the result.</p></div>
+      <div class="reason"><h3>Niche builds get the same treatment</h3><p>Guide sites cover what's popular. Here a weird idea like <b>bleed Monk or minion Ranger gets the same full search</b> as the meta builds, because nothing depends on someone having written a guide first.</p></div>
+      <div class="reason"><h3>Budget comes first</h3><p>You pick a budget before anything else: free, 5, 30, 100 divines or no limit. <b>Every stage stays inside it</b>, so nobody is handed a 2,000 divine build. A 5 divine player still gets mapping and endgame versions built from gear they can afford.</p></div>
+      <div class="reason"><h3>Gear is a shopping list</h3><p>Each slot gets a base type and affixes <b>in the order to buy them</b>, with target values and tiers matched to the budget. It's ready to paste into a trade search, rather than "get life and resistances".</p></div>
+      <div class="reason"><h3>Mapping and bossing, both</h3><p>Same gear and passives, two support setups. <b>Mapping favours area and clear, bossing favours single-target damage.</b> The tool tells you which gems to swap.</p></div>
+      <div class="reason"><h3>Fair comparisons</h3><p>Give it up to three builds. <b>Each one is fully built at the same budget</b> before comparing, so you see real damage, toughness and resistances side by side with plain pros and cons, not one optimised build against two rough ones.</p></div>
+      <div class="reason"><h3>Same answer every time</h3><p>Identical requests give <b>identical builds</b>. We fixed a hidden source of randomness in the engine that made results drift between runs, so you can trust a number and share it.</p></div>
+      <div class="reason"><h3>Checked on every change</h3><p>35 automated tests cover game rules (Bleed IV stops bleeding, lineage gem limits), past bugs and the website's API. A sweep builds <b>every one of the 23 ascendancies</b> to catch breakage before players do.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <span class="eyebrow">Example output</span>
+      <h2>Tempest Flurry Invoker, all four stages</h2>
+      <p class="muted">One request, generated by the engine. Gear for each stage was capped at its budget, and every elemental resistance from early maps on is capped at 75%.</p>
+    </div>
+    <div class="example">
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>Stage</th><th>Budget</th><th class="num">Mapping DPS</th><th class="num">Boss DPS</th><th class="num">Life</th></tr></thead>
+          <tbody>
+            <tr><td>Leveling</td><td>Free</td><td class="num">13,690</td><td class="num">-</td><td class="num">1,024</td></tr>
+            <tr><td>Early maps</td><td>Up to ~5 div</td><td class="num">81,603</td><td class="num">98,709</td><td class="num">1,508</td></tr>
+            <tr><td>Mid maps</td><td>~5-30 div</td><td class="num">338,968</td><td class="num">462,647</td><td class="num">1,723</td></tr>
+            <tr><td>Endgame</td><td>~30-100 div</td><td class="num">738,869</td><td class="num">991,250</td><td class="num">2,210</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="muted" style="font-size:14px">Mid maps helmet, in buy order: +510 Accuracy, +41% of Armour applies to Elemental Damage, 32% increased Crit Chance, +43% Fire Resistance, 97% increased Armour and Evasion. Bossing swap: Overextend out, Concentrated Area and Rakiata's Flow in.</p>
+      <p class="note">Use DPS figures to compare builds and stages against each other. Absolute values depend on Path of Building's enemy settings, which still need tuning against real play.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="col">
+      <span class="eyebrow">What else is out there</span>
+      <h2>Similar tools, and what each one does</h2>
+      <p class="muted">Searched in November 2026. Nothing found combines all of these: build from a plain request, Path of Building math, budgets and stages, and side-by-side comparison. Several tools cover one or two.</p>
+    </div>
+    <div class="tablewrap">
+      <table class="cmp">
+        <thead><tr><th>Tool</th><th>What it does</th><th>PoB math</th><th>Builds from a request</th><th>Budget + stages</th><th>Compare</th></tr></thead>
+        <tbody>
+          <tr class="us"><td>Whetstone (ours)</td><td class="what">Designs and optimises a full build from a request, then compares up to 3 at a budget</td><td><span class="mark y">Yes</span></td><td><span class="mark y">Yes</span></td><td><span class="mark y">Yes</span></td><td><span class="mark y">Up to 3</span></td></tr>
+          <tr><td><a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">Path of Building</a></td><td class="what">The standard calculator. You plan everything by hand; it shows the numbers</td><td><span class="mark y">It is the math</span></td><td><span class="mark n">No</span></td><td><span class="mark n">No</span></td><td><span class="mark p">Manual</span></td></tr>
+          <tr><td><a href="https://poe.ninja/posts/offensive-stats-and-main-skill-traits">poe.ninja builds</a></td><td class="what">Real ladder characters, filterable by skill and class, with their DPS</td><td><span class="mark p">PoB-based stats</span></td><td><span class="mark n">Only what people play</span></td><td><span class="mark n">No</span></td><td><span class="mark p">Variants of a skill</span></td></tr>
+          <tr><td><a href="https://maxroll.gg/poe2/meta/the-build-meta">Maxroll</a>, <a href="https://mobalytics.gg/poe-2/builds">Mobalytics</a></td><td class="what">Hand-written guides and tier lists by experienced players</td><td><span class="mark p">Authors use PoB</span></td><td><span class="mark n">Popular builds only</span></td><td><span class="mark p">Per guide</span></td><td><span class="mark n">No</span></td></tr>
+          <tr><td><a href="https://github.com/alecrivet/poe-optimizer">poe-optimizer</a></td><td class="what">Runs PoB's engine headless with a genetic algorithm to improve an existing build's passive tree. Gems and gear stay fixed. Appears to target PoE 1. Small, early project</td><td><span class="mark y">Yes</span></td><td><span class="mark n">Needs a build</span></td><td><span class="mark n">No</span></td><td><span class="mark n">No</span></td></tr>
+          <tr><td><a href="https://poe2skills-ai.com/">POE2 Skills AI</a></td><td class="what">Chat-style AI advisor plus a tree planner. Its developer notes it can mix in PoE 1 mechanics and needs clear instructions for niche builds</td><td><span class="mark n">No</span></td><td><span class="mark p">Advice</span></td><td><span class="mark n">Not seen</span></td><td><span class="mark n">No</span></td></tr>
+          <tr><td><a href="https://poe2ai.com/">PoE2AI</a></td><td class="what">Paste your build; AI suggests gem, passive and gear changes ranked by impact</td><td><span class="mark p">Unclear</span></td><td><span class="mark n">Needs a build</span></td><td><span class="mark n">Not seen</span></td><td><span class="mark n">No</span></td></tr>
+          <tr><td><a href="https://poe2builds.ai/">Poe2Builds AI</a></td><td class="what">Gear upgrade paths: stat weights per slot from your class, budget and progress stage</td><td><span class="mark p">Unclear</span></td><td><span class="mark p">Gear only</span></td><td><span class="mark y">Yes</span></td><td><span class="mark n">No</span></td></tr>
+          <tr><td><a href="https://cboyd421-max.github.io/poe2-forge/POE2Forge_v16.html">POE2 Forge</a></td><td class="what">Trade-market optimisation plus AI theorycrafting, at an early stage. Needs an imported build</td><td><span class="mark p">Decodes PoB codes</span></td><td><span class="mark n">Needs a build</span></td><td><span class="mark p">Trade prices</span></td><td><span class="mark n">No</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">The AI tools' details come from their own descriptions in search results. Their sites couldn't be opened from our build environment, so their accuracy wasn't tested. Worth a hands-on look before launch.</p>
+  </section>
+
+  <section class="col">
+    <span class="eyebrow">Honest status</span>
+    <h2>What's built, and what isn't yet</h2>
+    <ul class="plain">
+      <li><b>Built and tested:</b> the engine, support and passive optimisers, gear crafting, four stages, budgets, mapping vs bossing, comparisons, the web API with caching, a Docker package.</li>
+      <li><b>Not built yet:</b> the website itself, and the plain-English request box (it needs an API key).</li>
+      <li><b>Missing from builds:</b> unique items and real trade prices, which need data from poe.ninja. Budgets in divines are estimates until then.</li>
+      <li><b>Known limits:</b> the passive search is greedy and can miss a strong node hidden behind weak ones. Path of Building has no clear-speed stat, so the mapping score is our own estimate.</li>
+      <li><b>Patch 1.0 (Dec 11):</b> the new Shadow and Duelist classes work as soon as Path of Building adds them. Everything else updates with it automatically.</li>
+    </ul>
+  </section>
+</div>

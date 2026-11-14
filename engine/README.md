@@ -20,6 +20,7 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 - `gear.py`: crafts a rare for every slot from PoB's affix tables, per stage. Picks the best base, then damage and defence affixes, then only the resistances still needed, then fills the rest. Output is a per-slot shopping list (base + affixes in priority order with target values).
 - `guide.py`: full build guide. One spec becomes 4 stages: Leveling (lvl 55, free), Early maps (lvl 75, 0-5 div), Mid maps (lvl 90, 5-30 div), Endgame (lvl 95, 50+ div). Each stage: supports, gear, passive tree, supports again. Example: `python3 guide.py examples/tempest_flurry_invoker.json` (output in `examples/tempest_flurry_invoker_guide.md`, about 2.5 minutes).
 - Budget: players pick one up front, `free`, `budget` (<=5 div), `medium` (5-30), `high` (30-100) or `unlimited`. No stage's gear goes above it: a 5 divine player still gets mid maps and endgame versions, built with 5 divine gear. `python3 guide.py spec.json --budget budget`, `python3 compare.py examples/compare_specs.json --budget budget`.
+- `tools/sweep.py`: smoke test that builds one stage for all 23 ascendancies (about 9 minutes on 4 cores). Run it after a PoB update.
 - `demo.py`: command-line demo.
 
 ## Commands
@@ -32,6 +33,9 @@ Gear and passives are built for mapping. Each stage (except leveling) then gets 
 
 ## DPS numbers
 Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We don't use PoB's CombinedDPS as the headline because it leaves DoT out for some skills (e.g. Rake).
+
+## Minions
+Minion damage lives in PoB's separate minion output; the engine exposes it as `MinionDPS` / `MinionDotDPS` and counts it in every score.
 
 ## Known gaps
 - Pros and cons are rule-based for now (damage split, accuracy, speed, crit, resistances, tankiness). The AI layer will add context later.

@@ -10,6 +10,8 @@ Owner: Kyle. Day-one target: PoE 2 1.0 (Dec 11, 2026). First real test case is a
     tree optimiser (`optimise_tree` in runner.lua), `gear.py` (rare crafting per slot and budget),
     `guide.py` (Leveling / Early / Mid / Endgame guides), `compare.py` (1-3 builds, pros/cons).
   - `engine/vendor/` is not in git. Run `engine/setup.sh` to build it (needs bash, git, gcc; use WSL on Windows).
+- `api/`: FastAPI service (jobs + SQLite cache). `tests/`: pytest suite, also run by GitHub Actions.
+- `design/`: UI concept board and the how-it-works explainer (published as private artifacts).
 - `PC_TODO.md`: the current to-do list for Kyle and Claude. Start here.
 - `BUILD.md`: pre-launch notes on the Shadow dual wield bleed build.
 
