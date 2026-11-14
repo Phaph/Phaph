@@ -29,6 +29,7 @@ from pob import PoB
 from rating import rate
 from spirit import optimise_spirit
 from themes import check as theme_check
+from utility import optimise_utility
 
 STAT_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "Spirit",
                "SpiritUnreserved", "Speed", "CritChance", "HitChance", "Life", "EnergyShield", "Mana",
@@ -60,6 +61,7 @@ class StageGuide:
     theme_issues: list[str] = field(default_factory=list)   # empty when the build matches the request
     clear: float = 0.0                                      # mapping clear score
     rating: dict | None = None                              # 1-10, endgame stage only
+    utility: list[dict] = field(default_factory=list)       # curses, marks, banners, warcries kept
 
 
 DEFAULT_BUDGET = "high"
@@ -127,6 +129,14 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         pob.auto_config("mapping")
         optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
         spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
+        # Curses, marks, banners, warcries: kept when they raise the main skill's damage. One
+        # that needs a weapon the main hand can't use goes on weapon set 2.
+        utility = []
+        if stage_key != "leveling":
+            pob.set_config(**MODE_CONFIG["bossing"])
+            utility = optimise_utility(pob, catalog, spec["weapon_type"], boss_metric, item_level=stage.item_level,
+                                       swap_weapon=spec.get("boss_weapon_type") if boss_swap else None, log=quiet)
+            pob.set_config(**MODE_CONFIG["mapping"])
         # Passives, supports and spirit moved damage and resistances around: re-craft gear to fit.
         gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
         if boss_swap:
@@ -162,7 +172,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             ailment=spec.get("ailment"),
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
-            spirit=spirit, conditions=conditions, goals=goals,
+            spirit=spirit, conditions=conditions, goals=goals, utility=utility,
             mobility=mobility_skills(catalog, spec["weapon_type"]),
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
@@ -211,6 +221,10 @@ def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
                        f"toughness {r['toughness']}")
         if g.spirit:
             out.append("**Spirit:** " + ", ".join(g.spirit))
+        if g.utility:
+            out.append("**Utility:** " + ", ".join(
+                f"{u['skill']}" + (f" (weapon set 2, {u['weapon']})" if u["weapon_set"] == 2 else "") + f" {u['gain']:+.0%}"
+                for u in g.utility))
         if g.mobility:
             out.append("**Movement skill:** " + " or ".join(g.mobility))
         if g.goals:

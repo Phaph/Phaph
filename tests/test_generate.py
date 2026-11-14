@@ -155,3 +155,16 @@ def test_rating_scale():
     assert rate(1e3, 1e3, 1e3, cal)["overall"] < 2
     top = rate(1e7, 5e6, 1e5, cal)
     assert top["overall"] == 10 and top["label"] == "Broken"
+
+
+def test_utility_skills_raise_main_damage(pob, catalog):
+    from utility import optimise_utility
+    pob.new()
+    pob.set_class("Huntress", "Amazon")
+    pob.set_level(90)
+    pob.add_item(SPEAR)
+    pob.add_skill(["Rake"])
+    before = pob.calc(["BleedDPS"]).get("BleedDPS", 0)
+    kept = optimise_utility(pob, catalog, "Spear", "bleed", log=lambda *a: None)
+    assert kept and all(k["gain"] > 0.03 for k in kept)
+    assert pob.calc(["BleedDPS"]).get("BleedDPS", 0) > before
