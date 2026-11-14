@@ -8,6 +8,8 @@ FastAPI service around the engine. Jobs run in the background; results are cache
 | GET | `/catalog` | Classes, ascendancies, skills, weapon types, budgets, stages (for dropdowns and the prompt layer) |
 | POST | `/guides` | `{"spec": {...}, "budget": "budget", "stages": ["early","end"]}` -> job |
 | POST | `/compare` | `{"builds": [spec, spec], "budget": "medium", "stage": "end"}` -> job |
+| POST | `/generate` | `{"damage": ["lightning"], "kinds": ["minion"], "class": "Monk", "budget": "medium", "mode": "balanced"}` -> job; result has `plan.spec` (post to `/guides`) and `options` |
+| POST | `/generate/{id}/plan` | Feedback: `{"ascendancy": "Martial Artist"}` -> best build with that locked, plus how much damage it gives up. Instant |
 | GET | `/jobs/{id}` | Status (`queued`/`running`/`done`/`failed`), queue position, result |
 
 A spec: `{"class": "Monk", "ascendancy": "Invoker", "skill": "Tempest Flurry", "weapon_type": "Staff", "weapon_subtype": "Warstaff"}`.

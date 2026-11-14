@@ -376,6 +376,17 @@ function handlers.remove_skill(cmd)
 	return {}
 end
 
+-- Put a skill group on weapon set 1 or 2 (PoE 2 weapon swap).
+function handlers.set_weapon_set(cmd)
+	local g = build.skillsTab.socketGroupList[cmd.group]
+	if not g then error("no group " .. tostring(cmd.group)) end
+	g.set1 = cmd.set == 1
+	g.set2 = cmd.set == 2
+	build.buildFlag = true
+	frame()
+	return {}
+end
+
 -- Count every enabled group toward Full DPS.
 function handlers.full_dps_all(cmd)
 	for _, g in ipairs(build.skillsTab.socketGroupList) do
@@ -460,8 +471,8 @@ end
 -- Turn on the conditional bonuses this build can actually keep up, and only those.
 -- Rules (ours, written to be conservative):
 --   * In combat you have always hit and used a skill recently. Mapping: you have also killed recently.
---   * An enemy ailment counts as up when the build applies it about once a second or more
---     (chance per hit x uses per second >= 1), from the player or its minions.
+--   * An enemy ailment counts as up when the build keeps it up at least 90% of the time:
+--     chance per hit x uses per second x ailment duration >= 0.9 (player or minions).
 --   * Crit recently: crit chance >= 40%.
 --   * Charges: only when something in the build says it gains that charge (passives, items, gems).
 --   * Armour broken: the build breaks armour on hit. Exposure: a gem in the build applies it.
@@ -470,6 +481,8 @@ local AILMENT_VARS = {
 	Ignite = { "conditionEnemyIgnited", "conditionEnemyBurning" }, Shock = { "conditionEnemyShocked" },
 	Chill = { "conditionEnemyChilled" },
 }
+-- Seconds an ailment lasts when PoB reports no duration (PoE 2 base durations, roughly).
+local AILMENT_DEFAULT_DURATION = { Bleed = 5, Poison = 2, Ignite = 4, Shock = 4, Chill = 2 }
 local MANAGED_VARS = {
 	"conditionHitRecently", "conditionUsedSkillRecently", "conditionKilledRecently", "conditionCritRecently",
 	"usePowerCharges", "useFrenzyCharges", "useEnduranceCharges", "conditionEnemyArmourBroken",
@@ -516,14 +529,17 @@ function handlers.auto_config(cmd)
 		set("conditionUsedSkillRecently", "always true in combat")
 		if mode == "mapping" then set("conditionKilledRecently", "mapping: monsters die constantly") end
 		for ailment, vars in pairs(AILMENT_VARS) do
-			local best = 0
+			local uptime, rate = 0, 0
 			for _, src in ipairs({ out, minion }) do
 				local chance = src[ailment .. "ChancePerHit"] or src[ailment .. "ChanceOnHit"] or 0
-				local speed = src.Speed or 0
-				best = math.max(best, chance / 100 * speed)
+				local perSec = chance / 100 * (src.Speed or 0)
+				local duration = src[ailment .. "Duration"] or AILMENT_DEFAULT_DURATION[ailment]
+				if perSec * duration > uptime then uptime, rate = perSec * duration, perSec end
 			end
-			if best >= 1 then
-				for _, v in ipairs(vars) do set(v, string.format("%s applied %.1f times a second", ailment:lower(), best)) end
+			if uptime >= 0.9 then
+				for _, v in ipairs(vars) do
+					set(v, string.format("%s applied %.1f times a second, up %d%% of the time", ailment:lower(), rate, math.floor(math.min(uptime, 1) * 100)))
+				end
 			end
 		end
 		if (out.CritChance or 0) >= 40 then set("conditionCritRecently", string.format("%.0f%% crit chance", out.CritChance)) end

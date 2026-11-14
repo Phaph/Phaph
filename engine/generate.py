@@ -11,7 +11,8 @@ option ("I want the other ascendancy"): we already know how much damage it costs
 
 Request:
     {"damage": ["lightning"], "kinds": ["minion"], "ailment": null, "weapons": [],
-     "class": "Monk", "ascendancy": null, "skill": null, "budget": "high", "mode": "bossing"}
+     "class": "Monk", "ascendancy": null, "skill": null, "budget": "high", "mode": "balanced"}
+mode: balanced (default: geometric mean of clear and single-target damage) | mapping | bossing
 Everything is optional; locked fields (class, ascendancy, skill, weapons) narrow the search.
 
 CLI:  python3 generate.py '{"damage":["lightning"],"kinds":["minion"]}'
@@ -133,9 +134,14 @@ def _score(out: dict, req: dict) -> float:
     if req.get("ailment") in AILMENT_FIELD:
         # An ailment build lives on its ailment: count it fully, hits a quarter.
         return out.get(AILMENT_FIELD[req["ailment"]], 0) + 0.25 * out.get("TotalDPS", 0)
-    if req.get("mode") == "mapping":
+    mode = req.get("mode", "balanced")
+    if mode == "mapping":
         return clear_score(out)
-    return total_dps(out)
+    if mode == "bossing":
+        return total_dps(out)
+    # Balanced (default): a build has to clear maps and kill bosses. The geometric mean
+    # punishes a build that is great at one and poor at the other.
+    return (max(clear_score(out), 0) * max(total_dps(out), 0)) ** 0.5
 
 
 FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "BleedDPS",
@@ -151,11 +157,12 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         p.set_class(c.cls, c.ascendancy)
         p.set_level(stage.level)
         group = p.add_skill([c.skill], full_dps=c.is_minion)["group"]
-        p.set_config(**MODE_CONFIG[req.get("mode", "bossing")])
+        mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
+        p.set_config(**MODE_CONFIG[mode])
         craft_gear(p, stage, c.weapon_type, c.weapon_subtype, offhand_type=c.offhand_type, uniques=False, log=quiet)
         if tree:
             p.optimise_tree(def_weight=0.25, metric="mapping" if req.get("mode") == "mapping" else "total")
-        p.auto_config(req.get("mode", "bossing"))
+        p.auto_config(mode)
         best = optimise_supports(p, group, c.skill, slots=5, top_k=10, log=quiet)[0]
         out = p.calc(FIELDS)
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
@@ -198,24 +205,46 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print) -> dic
     ok1 = sorted((c for c in round1 if not c.error and c.score > 0), key=lambda c: -c.score)
     for c in ok1[:8]:
         log(f"  {c.skill:<26} {c.weapon_type:<14} {c.score:>12,.0f}")
-    finalists = ok1[:top_skills]
+    # One finalist per skill (its best weapon), so one skill can't crowd out the others.
+    finalists, seen_skills = [], set()
+    for c in ok1:
+        if c.skill not in seen_skills:
+            seen_skills.add(c.skill)
+            finalists.append(c)
+        if len(finalists) >= top_skills:
+            break
     if not finalists:
         raise ValueError("None of the matching skills dealt damage. Try a different theme.")
 
-    # Round 2: finalists x ascendancies, with passives.
-    round2 = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion)
-              for f in finalists for cls, asc in ascs]
-    log(f"Round 2: {len(round2)} skill and ascendancy options")
-    with ThreadPoolExecutor(workers) as ex:
-        round2 = list(ex.map(lambda c: evaluate(c, stage, req, tree=True), round2))
+    def build_round(pairs):
+        cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion)
+                 for f, (cls, asc) in pairs]
+        with ThreadPoolExecutor(workers) as ex:
+            return list(ex.map(lambda c: evaluate(c, stage, req, tree=True), cands))
+
+    round2 = []
+    if len(ascs) > 6:
+        # Many ascendancies (no class chosen): find the best few with the top skill first.
+        log(f"Round 2a: {finalists[0].skill} on {len(ascs)} ascendancies")
+        scout = build_round([(finalists[0], a) for a in ascs])
+        round2 += scout
+        best_ascs = [(c.cls, c.ascendancy) for c in sorted((c for c in scout if not c.error), key=lambda c: -c.score)[:3]]
+        ascs = best_ascs
+        finalists_rest = finalists[1:]
+    else:
+        finalists_rest = finalists
+    pairs = [(f, a) for f in finalists_rest for a in ascs]
+    log(f"Round 2: {len(pairs)} skill and ascendancy options")
+    round2 += build_round(pairs)
     ranked = sorted((c for c in round2 if not c.error and c.score > 0), key=lambda c: -c.score)
     if not ranked:
         raise ValueError("Every candidate failed to build.")
     best = ranked[0]
     for c in ranked[:10]:
-        log(f"  {c.ascendancy:<22} {c.skill:<24} {c.score:>12,.0f}  {c.score / best.score:6.0%}")
+        log(f"  {c.ascendancy:<22} {c.skill:<24} {c.weapon_type:<10} {c.score:>12,.0f}  {c.score / best.score:6.0%}")
     log(f"Done in {time.time() - t0:.0f}s")
     return {
+        "request": req,
         "best": asdict(best),
         "ranked": [asdict(c) | {"relative": c.score / best.score} for c in ranked],
         "skills_considered": [c.skill for c in ok1],
@@ -223,14 +252,64 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print) -> dic
     }
 
 
-def alternatives(result: dict, ascendancy: str | None = None, skill: str | None = None) -> list[dict]:
-    """What a player gives up by locking a choice: the best ranked build that matches it."""
-    rows = [r for r in result["ranked"]
+BOSS_SKILL_MIN_GAIN = 1.25   # a separate boss skill must hit this much harder than the mapping skill
+
+
+def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = None) -> dict:
+    """Turn a generator result into a guide spec.
+
+    With no locks this is the top-ranked build. Locking `ascendancy` and/or `skill` (the
+    feedback option: "I love it, but I want the other ascendancy") picks the best build that
+    matches, and reports how much damage that choice gives up versus the recommendation.
+
+    If a different skill on the same ascendancy hits single targets clearly harder, it is added
+    as a boss skill, on weapon set 2 when it needs a different weapon.
+    """
+    ranked = result["ranked"]
+    rows = [r for r in ranked
             if (ascendancy is None or r["ascendancy"] == ascendancy) and (skill is None or r["skill"] == skill)]
-    return rows
+    if not rows:
+        raise ValueError("That combination was not part of the search. Run the generator with it locked.")
+    main = rows[0]
+    req = result.get("request", {})
+    spec = {
+        "name": f"{main['skill']} {main['ascendancy']}",
+        "class": main["cls"], "ascendancy": main["ascendancy"], "skill": main["skill"],
+        "weapon_type": main["weapon_type"], "weapon_subtype": main["weapon_subtype"],
+        "offhand_type": main["offhand_type"], "budget": req.get("budget", "high"),
+    }
+    same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
+    boss = max(same_asc, key=lambda r: r["dps"], default=None)
+    if boss and boss["dps"] >= BOSS_SKILL_MIN_GAIN * main["dps"]:
+        spec["boss_skill"] = boss["skill"]
+        spec["boss_weapon_type"] = boss["weapon_type"]
+        spec["boss_weapon_subtype"] = boss["weapon_subtype"]
+    best = ranked[0]
+    cost = 1 - main["score"] / best["score"] if best["score"] else 0
+    return {
+        "spec": spec,
+        "vs_recommended": cost,   # 0.12 = this choice deals 12% less than the recommended build
+        "recommended": {"skill": best["skill"], "ascendancy": best["ascendancy"]},
+        "note": None if cost <= 0 else (
+            f"{main['ascendancy']} {main['skill']} does about {cost:.0%} less damage than the recommended "
+            f"{best['ascendancy']} {best['skill']}."),
+    }
+
+
+def options(result: dict) -> dict:
+    """Alternatives to offer after a build: each other ascendancy and skill, with its damage
+    relative to the recommendation."""
+    best = result["ranked"][0]["score"]
+    asc, skills = {}, {}
+    for r in result["ranked"]:
+        asc.setdefault(r["ascendancy"], r)
+        skills.setdefault(r["skill"], r)
+    fmt = lambda r: {"skill": r["skill"], "ascendancy": r["ascendancy"], "weapon": r["weapon_type"],
+                     "relative": r["score"] / best if best else 0}
+    return {"ascendancies": [fmt(r) for r in asc.values()], "skills": [fmt(r) for r in skills.values()]}
 
 
 if __name__ == "__main__":
     request = json.loads(sys.argv[1]) if len(sys.argv) > 1 else {"damage": ["lightning"], "kinds": ["minion"]}
     res = generate(request)
-    print(json.dumps(res["best"], indent=2))
+    print(json.dumps({"plan": plan_build(res), "options": options(res)}, indent=2))

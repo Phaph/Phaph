@@ -104,3 +104,29 @@ def test_compare(client):
 
 def test_unknown_job(client):
     assert client.get("/jobs/nope").status_code == 404
+
+
+def test_generate_and_feedback_plan(client, monkeypatch):
+    import api.app as app_module
+
+    result = {"request": {"budget": "budget"}, "ranked": [
+        {"skill": "Snap", "ascendancy": "Invoker", "cls": "Monk", "weapon_type": "Staff", "weapon_subtype": None,
+         "offhand_type": None, "score": 100, "dps": 100},
+        {"skill": "Snap", "ascendancy": "Martial Artist", "cls": "Monk", "weapon_type": "Staff",
+         "weapon_subtype": None, "offhand_type": None, "score": 80, "dps": 80}]}
+    monkeypatch.setitem(app_module.app.state.jobs.runners, "generate",
+                        lambda req: {"result": result, "plan": {}, "options": {}})
+    assert client.post("/generate", json={"class": "Wizard"}).status_code == 400
+    j = client.post("/generate", json={"damage": ["lightning"], "class": "Monk", "budget": "budget"}).json()
+    early = client.post(f"/generate/{j['id']}/plan", json={"ascendancy": "Martial Artist"})
+    assert early.status_code in (200, 409)
+    wait(client, j["id"])
+    plan = client.post(f"/generate/{j['id']}/plan", json={"ascendancy": "Martial Artist"}).json()
+    assert plan["spec"]["ascendancy"] == "Martial Artist" and plan["vs_recommended"] == pytest.approx(0.2)
+    assert client.post(f"/generate/{j['id']}/plan", json={"ascendancy": "Lich"}).status_code == 400
+    assert client.post("/generate/nope/plan", json={}).status_code == 404
+
+
+def test_boss_skill_spec_is_validated(client):
+    r = client.post("/guides", json={"spec": {**SPEC, "boss_skill": "Not A Skill"}})
+    assert r.status_code == 400 and "boss skill" in r.json()["detail"]

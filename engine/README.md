@@ -21,6 +21,9 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 - `guide.py`: full build guide. One spec becomes 4 stages: Leveling (lvl 55, free), Early maps (lvl 75, 0-5 div), Mid maps (lvl 90, 5-30 div), Endgame (lvl 95, 50+ div). Each stage: supports, gear, passive tree, supports again. Example: `python3 guide.py examples/tempest_flurry_invoker.json` (output in `examples/tempest_flurry_invoker_guide.md`, about 2.5 minutes).
 - Budget: players pick one up front, `free`, `budget` (<=5 div), `medium` (5-30), `high` (30-100) or `unlimited`. No stage's gear goes above it: a 5 divine player still gets mid maps and endgame versions, built with 5 divine gear. `python3 guide.py spec.json --budget budget`, `python3 compare.py examples/compare_specs.json --budget budget`.
 - `tools/sweep.py`: smoke test that builds one stage for all 23 ascendancies (about 9 minutes on 4 cores). Run it after a PoB update.
+- `generate.py`: the build generator. A theme (damage types, kinds like minion or melee, an ailment, weapons, optional class/ascendancy/skill locks, budget) becomes a ranked list of skill + weapon + ascendancy builds. `plan_build()` turns it into a guide spec, adding a boss skill (on weapon set 2 if needed) when one hits 25%+ harder; with a lock it reports the damage given up ("10% less than the recommended Invoker"). `options()` lists the alternatives for the feedback screen.
+- `spirit.py`: fills spirit with the auras, heralds, buffs and extra minions that help most.
+- `tools/end_to_end.py`: theme -> generate -> plan -> guide in one command.
 - `demo.py`: command-line demo.
 
 ## Commands
@@ -33,6 +36,19 @@ Gear and passives are built for mapping. Each stage (except leveling) then gets 
 
 ## DPS numbers
 Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We don't use PoB's CombinedDPS as the headline because it leaves DoT out for some skills (e.g. Rake).
+
+## What a build takes into account
+- Main skill, chosen from every gem that fits the theme, on every weapon it can use (shield skills get a shield off hand; attacks with staves get quarterstaves, spells caster staves).
+- Ascendancy, chosen by testing each one with passives spent.
+- Supports for mapping and for bossing, limited to supports PoB's own rules allow on the skill.
+- Passive tree and ascendancy points.
+- Gear for every slot: crafted rares, and uniques where they beat the rare (budget-gated).
+- Spirit: auras, heralds, buffs and extra minions.
+- A second boss skill, on weapon set 2 when it needs another weapon.
+- Conditional bonuses the build keeps up (`auto_config`): hit/used skill recently, killed recently while mapping, enemy ailments kept up 90%+ of the time, crit recently at 40%+ crit, charges the build says it gains, armour break, exposure. Each guide lists them with the reason.
+- Damage from every source through PoB's Full DPS (minions with their counts, heralds, both skills).
+
+Not yet: jewels, flasks and charms, weapon-set passive points, unique-granted skills, item prices (uniques without a known price are only suggested at medium budget and above), attribute requirements, meta/trigger setups (Cast on X).
 
 ## Minions
 Minion damage lives in PoB's separate minion output; the engine exposes it as `MinionDPS` / `MinionDotDPS` and counts it in every score.

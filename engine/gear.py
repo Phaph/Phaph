@@ -442,3 +442,21 @@ def craft_gear(
             log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
             plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw()))
     return plans
+
+
+def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_subtype: str | None = None,
+                 mode: str = "bossing", def_weight: float = 0.4, log=print) -> SlotPlan:
+    """Craft one weapon slot on its own, e.g. "Weapon 1 Swap" for a boss skill on weapon set 2.
+    The skill that uses it must be the main skill while this runs."""
+    score = Scorer(def_weight=def_weight, mode=mode)
+    bases = pob.send("bases", max_level=stage.item_level)["bases"]
+    cands = sorted((b for b in bases if b["type"] == weapon_type and _sub_ok(b.get("subType"), weapon_subtype)
+                    and not b["name"].startswith("Runeforged")), key=lambda b: -b["level"])[:6]
+    if not cands:
+        raise ValueError(f"No {weapon_type} bases up to item level {stage.item_level}")
+    base = _best_base(pob, slot, cands, stage, score)
+    affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
+    w = _Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage))
+    _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
+    log(f"  {slot:<12} {base:<28} " + "; ".join(w.picked))
+    return SlotPlan(slot, base, w.picked, w.raw())

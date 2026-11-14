@@ -47,12 +47,36 @@ class BuildSpec(BaseModel):
     dual_wield: bool = False
     offhand_type: str | None = None
     support_slots: int = Field(5, ge=1, le=5)
+    boss_skill: str | None = None          # a second skill for bosses
+    boss_weapon_type: str | None = None    # set when the boss skill uses weapon set 2
+    boss_weapon_subtype: str | None = None
 
     model_config = {"populate_by_name": True}
 
     def as_engine_spec(self) -> dict:
         d = self.model_dump(by_alias=True, exclude_none=True)
         return d
+
+
+class GenerateRequest(BaseModel):
+    """Build from a theme. Every field is optional; class, ascendancy, skill and weapons lock choices."""
+    damage: list[str] = Field(default_factory=list, max_length=5)   # e.g. ["lightning"]
+    kinds: list[str] = Field(default_factory=list, max_length=5)    # e.g. ["minion"], ["melee"]
+    ailment: Literal["bleed", "poison", "ignite", "shock", "chill", "freeze"] | None = None
+    weapons: list[str] = Field(default_factory=list, max_length=5)
+    cls: str | None = Field(None, alias="class")
+    ascendancy: str | None = None
+    skill: str | None = None
+    budget: Budget = "high"
+    mode: Literal["balanced", "mapping", "bossing"] = "balanced"
+
+    model_config = {"populate_by_name": True}
+
+
+class PlanRequest(BaseModel):
+    """The feedback option: lock an ascendancy and/or skill from a finished generate job."""
+    ascendancy: str | None = None
+    skill: str | None = None
 
 
 class GuideRequest(BaseModel):
@@ -101,7 +125,9 @@ def validate_spec(spec: BuildSpec, catalog: dict) -> None:
                                  f"{', '.join(c['ascendancies'])}")
     if spec.skill not in catalog["skills"]:
         raise HTTPException(400, f"Unknown skill '{spec.skill}'")
-    for t in filter(None, [spec.weapon_type, spec.offhand_type]):
+    if spec.boss_skill and spec.boss_skill not in catalog["skills"]:
+        raise HTTPException(400, f"Unknown boss skill '{spec.boss_skill}'")
+    for t in filter(None, [spec.weapon_type, spec.offhand_type, spec.boss_weapon_type]):
         if t not in catalog["weapon_types"]:
             raise HTTPException(400, f"Unknown weapon type '{t}'")
 
@@ -112,6 +138,26 @@ def run_guide(req: dict) -> dict:
     spec = {**req["spec"], "budget": req["budget"]}
     guides = build_guide(spec, req["stages"], log=lambda *a: None)
     return {"spec": spec, "stages": [asdict(g) for g in guides]}
+
+
+def run_generate(req: dict) -> dict:
+    from generate import generate, options, plan_build
+
+    result = generate(req, log=lambda *a: None)
+    return {"result": result, "plan": plan_build(result), "options": options(result)}
+
+
+def validate_generate(req: GenerateRequest, catalog: dict) -> None:
+    classes = {c["name"].lower(): c for c in catalog["classes"]}
+    if req.cls and req.cls.lower() not in classes:
+        raise HTTPException(400, f"Unknown class '{req.cls}'. Options: {', '.join(sorted(classes))}")
+    if req.ascendancy and not any(req.ascendancy in c["ascendancies"] for c in catalog["classes"]):
+        raise HTTPException(400, f"Unknown ascendancy '{req.ascendancy}'")
+    if req.skill and req.skill not in catalog["skills"]:
+        raise HTTPException(400, f"Unknown skill '{req.skill}'")
+    for w in req.weapons:
+        if w not in catalog["weapon_types"]:
+            raise HTTPException(400, f"Unknown weapon type '{w}'")
 
 
 def run_compare(req: dict) -> dict:
@@ -128,7 +174,7 @@ async def lifespan(app: FastAPI):
         db_path=os.environ.get("JOBS_DB", str(ROOT / "jobs.sqlite3")),
         workers=int(os.environ.get("JOB_WORKERS", "1")),
         version=app.state.catalog["pob_version"],
-        runners={"guide": run_guide, "compare": run_compare},
+        runners={"guide": run_guide, "compare": run_compare, "generate": run_generate},
     )
     yield
     app.state.jobs.shutdown()
@@ -183,3 +229,29 @@ def get_job(job_id: str, request: Request):
     if not job:
         raise HTTPException(404, "No such job")
     return job
+
+
+@app.post("/generate")
+def create_generate(req: GenerateRequest, request: Request):
+    """Find the strongest skill, weapon and ascendancy for a theme. The result holds a ready
+    guide spec (plan.spec, post it to /guides) and the alternatives for the feedback option."""
+    validate_generate(req, request.app.state.catalog)
+    payload = req.model_dump(by_alias=True, exclude_none=True)
+    return _submit(request, "generate", payload)
+
+
+@app.post("/generate/{job_id}/plan")
+def replan(job_id: str, req: PlanRequest, request: Request):
+    """Feedback: "I love this build, but I want the other ascendancy". Returns the best build
+    with that choice locked and how much damage it gives up. Instant: it reuses the search."""
+    from generate import plan_build
+
+    job = request.app.state.jobs.get(job_id)
+    if not job or job["kind"] != "generate":
+        raise HTTPException(404, "No such generate job")
+    if job["status"] != "done":
+        raise HTTPException(409, "That build is still being generated")
+    try:
+        return plan_build(job["result"]["result"], ascendancy=req.ascendancy, skill=req.skill)
+    except ValueError as e:
+        raise HTTPException(400, str(e))
