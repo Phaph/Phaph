@@ -116,7 +116,12 @@ button, select, input, textarea { font: inherit; color: inherit; }
 .chip[data-dmg="lightning"][aria-pressed="true"] { border-color: var(--light); box-shadow: inset 0 1px 0 rgba(255,236,200,.1), 0 2px 0 var(--seam), 0 0 18px rgba(236,215,92,.2); }
 .chip[data-dmg="chaos"][aria-pressed="true"] { border-color: var(--chaos); box-shadow: inset 0 1px 0 rgba(255,236,200,.1), 0 2px 0 var(--seam), 0 0 18px rgba(167,122,208,.22); }
 select { background: linear-gradient(180deg, var(--iron2), var(--iron)); border: 1px solid var(--edge); border-radius: 3px; padding: 8px 10px; max-width: 100%;
-  font: 500 16px var(--body); box-shadow: inset 0 1px 0 rgba(255,236,200,.05), 0 2px 0 var(--seam); }
+  font: 500 16px var(--body); box-shadow: inset 0 1px 0 rgba(255,236,200,.05), 0 2px 0 var(--seam); color-scheme: dark; cursor: pointer; }
+select:hover { border-color: #4c443a; }
+select:focus { border-color: var(--brass); outline: none; }
+/* The open list is drawn by the OS; without these it comes up white on Windows. */
+select option { background: #1c1916; color: var(--ink); }
+select option:checked { background: #3a2f20; color: var(--brass-hi); }
 .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px; }
 /* Budget: coins stacked on the bench. */
 .rungs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
