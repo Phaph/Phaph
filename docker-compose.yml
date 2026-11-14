@@ -14,10 +14,11 @@ services:
       DAILY_JOB_LIMIT: ${DAILY_JOB_LIMIT:-100}
       MAX_ACTIVE_JOBS_PER_CLIENT: ${MAX_ACTIVE_JOBS_PER_CLIENT:-2}
       JOB_WORKERS: ${JOB_WORKERS:-2}
+      GENERATE_WORKERS: ${GENERATE_WORKERS:-8}
     volumes:
       - jobs:/data
     # Leave CPU for games and everything else on the PC.
-    cpus: ${APP_CPUS:-8}
+    cpus: ${APP_CPUS:-16}
 
   tunnel:
     image: cloudflare/cloudflared:2026.11.0

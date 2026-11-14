@@ -72,12 +72,30 @@ class Candidate:
 
 
 _local = threading.local()
+# Each search's worker threads are bound to that search's own list of PoBs, so the search can close all of them
+# when it ends (each holds ~800 MB) without touching another search running at the same time. Without this,
+# worker threads left their PoB processes running: 21 processes / 17 GB were seen after one search.
+
+
+def _bind(registry: list) -> None:
+    _local.registry = registry
 
 
 def _pob() -> PoB:
     if getattr(_local, "pob", None) is None:
         _local.pob = PoB()
+        reg = getattr(_local, "registry", None)
+        if reg is not None:
+            reg.append(_local.pob)
     return _local.pob
+
+
+def _close_all(pobs: list[PoB]) -> None:
+    for p in pobs:
+        try:
+            p.close()
+        except Exception:  # noqa: BLE001 - already gone is fine
+            pass
 
 
 def main_skills(catalog: list[dict], req: dict) -> list[dict]:
@@ -239,6 +257,16 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
 
 
 def _generate_once(req: dict, workers: int, top_skills: int, log, progress) -> dict:
+    """One search, on one pool of `workers` threads (one PoB each) for all rounds; every PoB is closed after."""
+    mine: list[PoB] = []
+    try:
+        with ThreadPoolExecutor(workers, initializer=_bind, initargs=(mine,)) as pool:
+            return _search(req, pool, top_skills, log, progress)
+    finally:
+        _close_all(mine)
+
+
+def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress) -> dict:
     t0 = time.time()
 
     def scored(c: Candidate, rnd: int) -> Candidate:
@@ -277,8 +305,7 @@ def _generate_once(req: dict, workers: int, top_skills: int, log, progress) -> d
         for wtype, wsub, off in weapon_options(s, req):
             round1.append(Candidate(s["name"], wtype, wsub, off, cls, is_minion="Minion" in s["types"]))
     round_start(1, f"Round 1: {len(round1)} skill and weapon options", len(round1))
-    with ThreadPoolExecutor(workers) as ex:
-        round1 = list(ex.map(lambda c: scored(evaluate(c, stage, req, tree=False), 1), round1))
+    round1 = list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=False), 1), round1))
     ok1 = sorted((c for c in round1 if not c.error and c.score > 0), key=lambda c: -c.score)
     for c in ok1[:8]:
         log(f"  {c.skill:<26} {c.weapon_type:<14} {c.score:>12,.0f}")
@@ -296,8 +323,7 @@ def _generate_once(req: dict, workers: int, top_skills: int, log, progress) -> d
     def build_round(pairs):
         cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion)
                  for f, (cls, asc) in pairs]
-        with ThreadPoolExecutor(workers) as ex:
-            return list(ex.map(lambda c: scored(evaluate(c, stage, req, tree=True), 2), cands))
+        return list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=True), 2), cands))
 
     round2 = []
     if len(ascs) > 6:

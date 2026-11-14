@@ -298,9 +298,18 @@ def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], m
 
 
 def build_guide(spec: dict, stages: list[str] | None = None, log=print, progress=None) -> list[StageGuide]:
+    """All stages side by side. With progress, each finished stage is also sent at once as a "stage_result"
+    event, so the website can show it while the others are still being built."""
     keys = stages or spec.get("stages") or list(STAGE_DEFS)
+
+    def one(k: str) -> StageGuide:
+        g = build_stage(spec, k, log, progress)
+        if progress:
+            progress({"stage": k, "step": "stage_result", "result": asdict(g)})
+        return g
+
     with ThreadPoolExecutor(max_workers=len(keys)) as ex:
-        return list(ex.map(lambda k: build_stage(spec, k, log, progress), keys))
+        return list(ex.map(one, keys))
 
 
 def to_markdown(spec: dict, guides: list[StageGuide]) -> str:

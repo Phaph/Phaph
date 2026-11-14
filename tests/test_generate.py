@@ -168,3 +168,16 @@ def test_utility_skills_raise_main_damage(pob, catalog):
     kept = optimise_utility(pob, catalog, "Spear", "bleed", log=lambda *a: None)
     assert kept and all(k["gain"] > 0.03 for k in kept)
     assert pob.calc(["BleedDPS"]).get("BleedDPS", 0) > before
+
+
+def test_search_closes_its_pob_processes():
+    """Regression: a search left its worker PoB processes running (17 GB after one search)."""
+    import generate
+    from generate import _close_all, _bind, _pob
+    from concurrent.futures import ThreadPoolExecutor
+    mine = []
+    with ThreadPoolExecutor(2, initializer=_bind, initargs=(mine,)) as pool:
+        list(pool.map(lambda _: _pob().send("new"), range(4)))
+    assert 1 <= len(mine) <= 2
+    _close_all(mine)
+    assert all(p.proc.poll() is not None for p in mine)

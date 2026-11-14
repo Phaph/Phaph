@@ -41,6 +41,8 @@ StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
 ENGINE_VERSION = "2026-11-14.2"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
+# PoB processes a search runs side by side (one CPU thread each).
+GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
 # Keeps the bill predictable: new (uncached) builds allowed per rolling 24 hours, 0 = no cap.
 DAILY_JOB_LIMIT = int(os.environ.get("DAILY_JOB_LIMIT", "300"))
 
@@ -158,7 +160,7 @@ def run_guide(req: dict, progress=None) -> dict:
 def run_generate(req: dict, progress=None) -> dict:
     from generate import generate, options, plan_build
 
-    result = generate(req, log=lambda *a: None, progress=progress)
+    result = generate(req, workers=GENERATE_WORKERS, log=lambda *a: None, progress=progress)
     return {"result": result, "plan": plan_build(result), "options": options(result)}
 
 

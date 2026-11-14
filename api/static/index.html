@@ -343,6 +343,10 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
 .stat b.struck { animation: struck 700ms var(--ease); }
 @keyframes struck { 0% { text-shadow: 0 0 22px rgba(255,200,130,.95); color: #fff1d6; } 100% { } }
 
+.live-note { font: italic 17px var(--body); color: var(--ember); }
+.readit { justify-self: start; border-color: var(--brass); color: var(--ink); }
+#stageTabs .chip.fresh { border-color: var(--ember); box-shadow: 0 0 18px rgba(232,115,58,.5); transition: box-shadow 1.2s var(--ease), border-color 1.2s var(--ease); }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -900,6 +904,19 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
       }
       w.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
     },
+    laneReady(k) {
+      const lane = this.el().querySelector(`.lane[data-stage="${k}"]`);
+      if (!lane || lane.querySelector(".readit")) return;
+      const b = document.createElement("button");
+      b.className = "chip small readit"; b.type = "button"; b.innerHTML = "Read it &darr;";
+      b.onclick = ev => {
+        ev.stopPropagation();
+        const tab = $("stageTabs")?.querySelector(`[data-stage="${k}"]`);
+        tab?.click();
+        $("guide").scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
+      };
+      lane.querySelector(".lstep").after(b);
+    },
     watch(k, first = false) {
       if (!brain || !brain.per[k]) return;
       brain.stage = k;
@@ -1038,15 +1055,46 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     const stages = ["leveling", "early", "mid", "end"];
     let job = await api("/guides", { spec: plan.spec, budget: plan.spec.budget || state.budget, stages });
     if (!job.cached) work.startGuide(stages, { cls: plan.spec.class });
+    // Stages arrive one by one as they finish; each is readable at once while the rest are still forging.
+    let partial = null;
+    const onStage = e => {
+      partial = partial || { spec: { ...plan.spec }, stages: [] };
+      partial.stages = [...partial.stages.filter(x => x.stage !== e.stage), e.result]
+        .sort((a, b) => STAGE_RANK[a.stage] - STAGE_RANK[b.stage]);
+      if (!liveGuide) { renderGuide(plan, partial, { live: true, total: stages.length }); liveGuide = true; }
+      else addLiveStage(plan, e.result, partial, stages.length);
+      work.laneReady(e.stage);
+    };
+    liveGuide = false;
     try {
       job = await waitFor(job, job.cached ? "Loading guide" : "A few minutes",
         (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
-        e => work.guideEvent(e));
+        e => e.step === "stage_result" ? onStage(e) : work.guideEvent(e));
     } finally { work.hide(); }
     setStatus("");
     state.guideJob = job.id;
     try { history.replaceState(null, "", `?b=${job.id}`); } catch {}
-    renderGuide(plan, job.result);
+    // The big finish. If stages were already showing, stay on the one being read.
+    renderGuide(plan, job.result, liveGuide ? { keepStage: shownStage } : {});
+    liveGuide = false;
+  }
+
+  let liveGuide = false;
+  function addLiveStage(plan, s, partial, total) {
+    const tabs = $("stageTabs"); if (!tabs) return;
+    const b = stageTab(plan, s);
+    const after = [...tabs.children].find(x => STAGE_RANK[x.dataset.stage] > STAGE_RANK[s.stage]);
+    tabs.insertBefore(b, after || null);
+    b.classList.add("fresh"); setTimeout(() => b.classList.remove("fresh"), 1600);
+    sparks(b, 20, 0.8);
+    const note = $("liveNote");
+    if (note) note.textContent = `${partial.stages.length} of ${total} stages ready · the rest are still on the anvil`;
+  }
+  function stageTab(plan, s) {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.setAttribute("role", "tab"); b.textContent = s.name; b.dataset.stage = s.stage;
+    b.onclick = () => { $("stageTabs").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); renderStage(plan, s); };
+    return b;
   }
 
   function renderOptions() {
@@ -1161,38 +1209,46 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     if (winner) setTimeout(() => sparks(winner, 18, 0.7), 950);
   }
 
-  function renderGuide(plan, res) {
-    state.guide = res; state.plan = plan; shownGear = null; shownStage = null; revealNext = true;
+  function renderGuide(plan, res, opt = {}) {
+    const live = !!opt.live;
+    state.guide = res; state.plan = plan; shownGear = null; shownStage = null; revealNext = !live && !opt.keepStage;
     guideSigil?.stop(); guideSigil = null;
     const stages = res.stages;
-    const end = stages.find(s => s.stage === "end") || stages[stages.length - 1];
+    // While forging, only the endgame stage can speak for the whole build (rating, cost, tree).
+    const endStage = stages.find(s => s.stage === "end");
+    const end = endStage || stages[stages.length - 1];
     $("guide").hidden = false;
     const motif = SIGILS[plan.spec.class]?.motif;
     const treeHref = state.guideJob && (end.tree_nodes || []).length ? `/tree.html?b=${state.guideJob}&s=end` : null;
-    $("guide").innerHTML = `<div class="buildhead${treeHref || (end.tree_nodes || []).length ? " with-tree" : ""}"><canvas class="sigil-cv" aria-hidden="true"></canvas>
-      ${(end.tree_nodes || []).length ? `<a class="mini-tree" ${treeHref ? `href="${treeHref}" target="_blank" rel="noopener"` : ""} title="Open the passive tree">
+    const showTree = !live && (end.tree_nodes || []).length;
+    $("guide").innerHTML = `<div class="buildhead${showTree ? " with-tree" : ""}"><canvas class="sigil-cv" aria-hidden="true"></canvas>
+      ${showTree ? `<a class="mini-tree" ${treeHref ? `href="${treeHref}" target="_blank" rel="noopener"` : ""} title="Open the passive tree">
         <canvas aria-label="Endgame passive tree"></canvas><span>${treeHref ? "Open the passive tree &#8599;" : "Endgame passive tree"}</span></a>` : ""}
       <div style="display:grid;gap:6px"><span class="eyebrow">Your build${plan.spec.class ? ` · ${esc(plan.spec.class)}` : ""}</span><div class="skillhead">${img(gemUrl(plan.spec.skill))}<h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2></div>
       ${motif ? `<span class="motif">${esc(motif)}</span>` : ""}
       ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}</div>
-      ${end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
+      ${live ? `<p class="live-note" id="liveNote">${stages.length} of ${opt.total || 4} stages ready · the rest are still on the anvil</p>` : ""}
+      ${!live && end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
         <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
         <p class="muted" style="font-size:15px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}
-      ${buildCostLine(end)}</div>
-      <div class="sharebar">
+      ${live ? "" : buildCostLine(end)}</div>
+      <div class="sharebar"${live ? " hidden" : ""}>
         <button class="chip" type="button" id="shareBtn">Copy share link</button>
         <button class="chip" type="button" id="pdfBtn">Save as PDF</button>
         <span class="muted" id="shareNote"></span>
       </div>
       <div class="tabs" id="stageTabs" role="tablist"></div>
       <div id="stageBody" style="display:grid;gap:18px"></div>`;
-    stages.forEach((s, i) => {
-      const b = document.createElement("button");
-      b.className = "chip"; b.type = "button"; b.setAttribute("role", "tab"); b.textContent = s.name;
-      b.onclick = () => { $("stageTabs").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); renderStage(plan, s); };
+    const pick = stages.find(s => s.stage === opt.keepStage) || (live ? stages[0] : end);
+    stages.forEach(s => {
+      const b = stageTab(plan, s);
       $("stageTabs").appendChild(b);
-      if (s === end) { b.setAttribute("aria-pressed", "true"); renderStage(plan, s); }
+      if (s === pick) { b.setAttribute("aria-pressed", "true"); renderStage(plan, s); }
     });
+    if (live) {   // a quiet first appearance: the big reveal waits for the finished build
+      if (!REDUCE) setTimeout(() => { const h = $("guide").querySelector(".skillhead h2"); if (h) sparks(h, 24, 0.9); }, 200);
+      return;
+    }
     wireShare(plan, res);
     // The reveal: a forge flash, sparks off the title, the endgame tree growing out from the class start.
     // (revealNext, set at the top of renderGuide, makes the first stage's numbers count up.)
@@ -1206,7 +1262,7 @@ canvas.fire { display: block; width: 100%; height: 170px; margin-top: -6px; -web
     }
     guideSigil = sigil($("guide").querySelector(".sigil-cv"), plan.spec.class);
     setTimeout(() => guideSigil?.pulse(), 450);
-    $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
+    if (!opt.keepStage) $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   // Icons: links to GGG's own image server, gathered by engine/tools/fetch_icons.py and served at /icons.
