@@ -135,7 +135,7 @@ def test_boss_skill_spec_is_validated(client):
 def test_website_is_served(client):
     r = client.get("/")
     assert r.status_code == 200 and "text/html" in r.headers["content-type"]
-    assert "Forge my build" in r.text and "Not affiliated with" in r.text
+    assert "Forge it" in r.text and "isn't affiliated with or endorsed by Grinding Gear Games" in r.text
 
 
 def test_client_id_prefers_cloudflare_header():
