@@ -252,6 +252,11 @@ def how_page():
     return FileResponse(STATIC / "how.html")
 
 
+@app.get("/lavabug.js")
+def lavabug_js():
+    return FileResponse(STATIC / "lavabug.js", media_type="text/javascript", headers={"Cache-Control": "public, max-age=3600"})
+
+
 @app.get("/treeview.js")
 def treeview_js():
     return FileResponse(STATIC / "treeview.js", media_type="text/javascript", headers={"Cache-Control": "public, max-age=3600"})

@@ -406,6 +406,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   .cand, .notable, .tag { animation: none; } .cand .bar i, .split i, .lane, .lane .pips i { transition: none; }
   body.working::after { animation: none; } .spinner { animation: none; }
 }
+.bugword { cursor: pointer; border-radius: 2px; transition: color .3s, text-shadow .3s; }
+.bugword:hover, .bugword:focus-visible { color: #ffb347; text-shadow: 0 0 8px rgba(255,106,0,.7); outline: none; }
+.bugword.on { color: #ff8a1f; text-shadow: 0 0 10px rgba(255,106,0,.9); }
 </style>
 </head>
 <body>
@@ -474,6 +477,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   <footer>
     <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2" style="color:var(--brass)">Path of Building Community</a> (MIT licence), run by this site. Unique prices from <a href="https://poe.ninja/poe2/economy" style="color:var(--brass)">poe.ninja</a>. Use DPS to compare builds; in-game numbers depend on your settings.</p>
     <p><a href="/how.html" style="color:var(--brass)">How Whetstone works</a></p>
+    <p class="bugfree">This site is free of <span class="bugword" data-lavabug role="button" tabindex="0" aria-label="bugs (an easter egg: releases a lava bug)">bugs</span>.</p>
     <p>Fan-made and free. This product isn't affiliated with or endorsed by Grinding Gear Games in any way. Path of Exile is a trademark of Grinding Gear Games.</p>
   </footer>
 </div>
@@ -1617,6 +1621,19 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       setStatus("");
     } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }
   })();
+})();
+</script>
+<script>
+// Easter egg: the lava bug (lavabug.js), loaded only when someone clicks "bugs".
+(() => {
+  const w = document.querySelector("[data-lavabug]"); if (!w) return;
+  let loading = null;
+  const go = () => {
+    loading = loading || new Promise((ok, no) => { const s = document.createElement("script"); s.src = "/lavabug.js"; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
+    loading.then(() => w.classList.toggle("on", window.LavaBug.toggle())).catch(() => { loading = null; });
+  };
+  w.addEventListener("click", go);
+  w.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
 })();
 </script>
 </body>
