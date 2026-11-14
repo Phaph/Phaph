@@ -4,6 +4,7 @@ Reports crashes, zero damage and uncapped resistances. Takes a few minutes.
   python3 tools/sweep.py [--stage early] [--budget budget]
 """
 import argparse
+import json
 import sys
 import time
 import traceback
@@ -41,12 +42,17 @@ SPECS = [
 ]
 
 
+RESULTS: list[dict] = []
+
+
 def run(spec, stage, budget):
     cls, asc, skill, wtype, wsub = spec
     t = time.time()
     try:
         g = build_stage({"class": cls, "ascendancy": asc, "skill": skill, "weapon_type": wtype,
                          "weapon_subtype": wsub, "budget": budget}, stage)
+        RESULTS.append({"ascendancy": asc, "skill": skill, "damage": g.boss_dps or g.dps, "clear": g.clear,
+                        "toughness": g.stats.get("TotalEHP", 0), "mapping_dps": g.dps})
         s = g.stats
         res = [s.get(k, 0) for k in ("FireResist", "ColdResist", "LightningResist")]
         flags = []
@@ -66,10 +72,16 @@ def main():
     ap.add_argument("--stage", default="early")
     ap.add_argument("--budget", default="budget")
     ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--calibrate", help="write rating calibration JSON to this path")
     a = ap.parse_args()
     with ThreadPoolExecutor(a.workers) as ex:
         for line in ex.map(lambda s: run(s, a.stage, a.budget), SPECS):
             print(line, flush=True)
+    if a.calibrate:
+        out = {"source": f"tools/sweep.py --stage {a.stage} --budget {a.budget}", "builds": RESULTS,
+               "metrics": {k: sorted(r[k] for r in RESULTS) for k in ("damage", "clear", "toughness")}}
+        Path(a.calibrate).write_text(json.dumps(out, indent=1))
+        print(f"Calibration from {len(RESULTS)} builds written to {a.calibrate}")
 
 
 if __name__ == "__main__":

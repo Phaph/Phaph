@@ -23,6 +23,9 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 - `tools/sweep.py`: smoke test that builds one stage for all 23 ascendancies (about 9 minutes on 4 cores). Run it after a PoB update.
 - `generate.py`: the build generator. A theme (damage types, kinds like minion or melee, an ailment, weapons, optional class/ascendancy/skill locks, budget) becomes a ranked list of skill + weapon + ascendancy builds. `plan_build()` turns it into a guide spec, adding a boss skill (on weapon set 2 if needed) when one hits 25%+ harder; with a lock it reports the damage given up ("10% less than the recommended Invoker"). `options()` lists the alternatives for the feedback screen.
 - `spirit.py`: fills spirit with the auras, heralds, buffs and extra minions that help most.
+- `goals.py`: build goals beyond damage, ticked by the player: `movement` (faster mapping), `rarity` (more loot), `tanky`. Each is a weight in gear, passive and support scoring. Also recommends a movement skill.
+- `themes.py`: checks the finished build still matches the request (e.g. 40%+ of a bleed build's damage is bleed) and lists issues in the guide.
+- `rating.py`: 1-10 rating of the endgame stage (damage, clear, toughness) against a reference set: every ascendancy's endgame build from `tools/sweep.py --stage end --budget high --calibrate data/rating_calibration.json`.
 - `tools/end_to_end.py`: theme -> generate -> plan -> guide in one command.
 - `demo.py`: command-line demo.
 

@@ -282,8 +282,9 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         "weapon_type": main["weapon_type"], "weapon_subtype": main["weapon_subtype"],
         "offhand_type": main["offhand_type"], "budget": req.get("budget", "high"),
     }
-    if req.get("ailment"):
-        spec["ailment"] = req["ailment"]
+    for key in ("ailment", "damage", "kinds", "goals"):
+        if req.get(key):
+            spec[key] = req[key]   # carried into the guide: theme metric, theme checks, goals
     same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
     # Compare single-target strength in the theme's own terms (a bleed build wants a better
     # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.

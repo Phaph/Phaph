@@ -23,9 +23,12 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, craft_gear, craft_weapon, make_stage
-from optimize import CLEAR_FIELDS, MODE_CONFIG, metric_for, optimise_supports, total_dps
+from optimize import CLEAR_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports, total_dps
+from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
 from pob import PoB
+from rating import rate
 from spirit import optimise_spirit
+from themes import check as theme_check
 
 STAT_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "Spirit",
                "SpiritUnreserved", "Speed", "CritChance", "HitChance", "Life", "EnergyShield", "Mana",
@@ -52,6 +55,11 @@ class StageGuide:
     conditions: list[dict] = field(default_factory=list)  # bonuses assumed up, and why
     notes: list[str] = field(default_factory=list)
     ailment: str | None = None   # the build's theme ailment, e.g. "bleed"
+    goals: list[str] = field(default_factory=list)          # movement / rarity / tanky
+    mobility: list[str] = field(default_factory=list)       # recommended movement skills
+    theme_issues: list[str] = field(default_factory=list)   # empty when the build matches the request
+    clear: float = 0.0                                      # mapping clear score
+    rating: dict | None = None                              # 1-10, endgame stage only
 
 
 DEFAULT_BUDGET = "high"
@@ -85,6 +93,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
     # The build's goal: e.g. a bleed build optimises bleed damage everywhere, not raw hits.
     map_metric = metric_for("mapping", spec.get("ailment"))
     boss_metric = metric_for("bossing", spec.get("ailment"))
+    goals = list(spec.get("goals") or [])
     with PoB() as pob:
         catalog = pob.send("skill_catalog")["skills"]
         minion_build = any(s["name"] == spec["skill"] and "Minion" in s["types"] for s in catalog)
@@ -111,15 +120,15 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
 
         pob.set_config(**MODE_CONFIG["mapping"])
         pob.auto_config("mapping")
-        craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, log=quiet)
+        craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
         if boss_swap:
             boss_weapon()
-        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric)
+        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals)
         pob.auto_config("mapping")
         optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
         spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
         # Passives, supports and spirit moved damage and resistances around: re-craft gear to fit.
-        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, log=quiet)
+        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
         if boss_swap:
             gear.append(boss_weapon())
 
@@ -144,7 +153,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         conditions = pob.auto_config("mapping")
         best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
-        stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS)
+        stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"])
         guide = StageGuide(
             stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget,
             supports=best.supports,
@@ -153,8 +162,15 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             ailment=spec.get("ailment"),
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
-            spirit=spirit, conditions=conditions,
+            spirit=spirit, conditions=conditions, goals=goals,
+            mobility=mobility_skills(catalog, spec["weapon_type"]),
+            theme_issues=theme_check(spec, stats, catalog),
+            clear=clear_score(stats),
         )
+        if stage_key == "end":
+            guide.rating = rate(boss_dps or total_dps(stats), guide.clear, stats.get("TotalEHP", 0))
+        for issue in guide.theme_issues:
+            guide.notes.append("Off theme: " + issue)
         for k, label in (("FireResist", "fire"), ("ColdResist", "cold"), ("LightningResist", "lightning")):
             if stats.get(k, 0) < 75:
                 guide.notes.append(f"{label} resistance {stats.get(k, 0):.0f}%: cap it with jewels or by swapping a gear affix")
@@ -189,8 +205,16 @@ def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
             out.append(f"**Bossing:** {g.boss_skill}{where} + " + ", ".join(g.boss_supports))
         elif g.boss_supports:
             out.append(f"**Bossing swap:** {spec['skill']} + " + ", ".join(g.boss_supports))
+        if g.rating:
+            r = g.rating
+            out.append(f"**Rating: {r['overall']}/10 ({r['label']})**: damage {r['damage']}, clear {r['clear']}, "
+                       f"toughness {r['toughness']}")
         if g.spirit:
             out.append("**Spirit:** " + ", ".join(g.spirit))
+        if g.mobility:
+            out.append("**Movement skill:** " + " or ".join(g.mobility))
+        if g.goals:
+            out.append("**Also optimised for:** " + ", ".join(GOAL_LABELS[x] for x in g.goals))
         if g.conditions:
             out.append("**Assumed in combat:** " + "; ".join(f"{condition_label(c['var'])} ({c['why']})" for c in g.conditions))
         if g.notables:

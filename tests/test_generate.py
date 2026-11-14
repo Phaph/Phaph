@@ -115,3 +115,43 @@ def test_theme_metric_drives_every_optimiser():
     assert score_of(out, "bleed+mapping") == score_of(out, "bleed") * 2
     hits_only = {"BleedDPS": 0, "TotalDPS": 6000}
     assert score_of(hits_only, "bleed") < score_of(out, "bleed"), "bleed beats more raw hit damage"
+
+
+def test_goals_trade_damage_for_speed_and_loot(pob, catalog):
+    from gear import craft_gear, make_stage
+    from goals import mobility_skills, weights
+    with pytest.raises(ValueError):
+        weights(["fishing"])
+    stage = make_stage("mid", "medium")
+    fields = ["EffectiveMovementSpeedMod", "EffectiveLootRarityMod"]
+    results = {}
+    for goals in (None, ["movement", "rarity"]):
+        pob.new()
+        pob.set_class("Monk", "Invoker")
+        pob.set_level(90)
+        pob.add_skill(["Tempest Flurry"])
+        craft_gear(pob, stage, "Staff", "Warstaff", goals=goals, uniques=False, log=lambda *a: None)
+        results[bool(goals)] = pob.calc(fields)
+    assert results[True]["EffectiveMovementSpeedMod"] > results[False]["EffectiveMovementSpeedMod"] + 0.1
+    assert results[True]["EffectiveLootRarityMod"] > results[False]["EffectiveLootRarityMod"]
+    assert mobility_skills(catalog, "Staff"), "every build gets a movement skill suggestion"
+
+
+def test_theme_check_flags_off_theme_builds(catalog):
+    from themes import check
+    spec = {"skill": "Rake", "ailment": "bleed", "damage": ["physical"]}
+    assert check(spec, {"TotalDPS": 1000, "BleedDPS": 900}, catalog) == []
+    issues = check(spec, {"TotalDPS": 1000, "BleedDPS": 50}, catalog)
+    assert issues and "bleed" in issues[0]
+    assert check({"skill": "Rake", "damage": ["lightning"]}, {"TotalDPS": 1}, catalog)
+
+
+def test_rating_scale():
+    from rating import anchors, rate
+    cal = {"damage": anchors([1e5, 2e5, 4e5, 8e5, 2e6]), "clear": anchors([1e5, 3e5, 9e5]),
+           "toughness": anchors([5e3, 1e4, 2e4, 4e4])}
+    mid = rate(4e5, 3e5, 1.4e4, cal)
+    assert 4 <= mid["overall"] <= 6 and mid["label"] in ("Solid", "Strong")
+    assert rate(1e3, 1e3, 1e3, cal)["overall"] < 2
+    top = rate(1e7, 5e6, 1e5, cal)
+    assert top["overall"] == 10 and top["label"] == "Broken"

@@ -11,6 +11,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
+from goals import GOAL_FIELDS, goal_terms, weights as goal_weights
 from optimize import CLEAR_FIELDS, DPS_FIELDS, clear_score, score_of, total_dps
 from pob import PoB, PoBError
 
@@ -18,7 +19,7 @@ ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Glo
 JEWELLERY_SLOTS = {"Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 RES_CAP = 75
 SCORE_FIELDS = [*DPS_FIELDS, "TotalEHP", "Life", "FireResist", "ColdResist", "LightningResist",
-                "ChaosResist", *CLEAR_FIELDS]
+                "ChaosResist", *CLEAR_FIELDS, *GOAL_FIELDS]
 # Affix groups that never matter for a build score.
 SKIP_GROUPS = {"ItemFoundRarityIncrease", "LocalAttributeRequirements", "LightRadius", "LocalLightRadius"}
 
@@ -103,8 +104,9 @@ def _res_deficit(out: dict) -> float:
 
 class Scorer:
     def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006, mode: str = "bossing",
-                 metric: str | None = None):
-        self.def_weight = def_weight
+                 metric: str | None = None, goals=None):
+        self.goal_w = goal_weights(goals)
+        self.def_weight = def_weight * self.goal_w["def_mult"]
         self.res_weight = res_weight
         if metric:
             self.dps = lambda out: score_of(out, metric)
@@ -117,18 +119,20 @@ class Scorer:
         d = self.dps(out)
         return ((d - d0) / d0
                 + self.def_weight * (out.get("TotalEHP", 0) - e0) / e0
-                + self.res_weight * (_res_deficit(base) - _res_deficit(out)))
+                + self.res_weight * (_res_deficit(base) - _res_deficit(out))
+                + goal_terms(out, base, self.goal_w))
 
 
 def _item_raw(title: str, base: str, lines: list[str]) -> str:
     return "\n".join(["Rarity: Rare", title, base, *lines])
 
 
-def _tier_choices(affixes: list[dict], stage: Stage) -> dict[str, dict]:
-    """One affix per group: the best tier available at this stage, minus tier_drop."""
+def _tier_choices(affixes: list[dict], stage: Stage, keep: set[str] = frozenset()) -> dict[str, dict]:
+    """One affix per group: the best tier available at this stage, minus tier_drop.
+    `keep` re-allows skipped groups (e.g. item rarity when the player wants more loot)."""
     by_group: dict[str, list[dict]] = {}
     for a in affixes:
-        if a["group"] in SKIP_GROUPS:
+        if a["group"] in SKIP_GROUPS - keep:
             continue
         by_group.setdefault(a["group"], []).append(a)
     chosen = {}
@@ -386,6 +390,7 @@ def craft_gear(
     mode: str = "bossing",
     uniques: bool = True,
     metric: str | None = None,
+    goals=None,
     log=print,
 ) -> list[SlotPlan]:
     """Craft every slot for a build already loaded in `pob` (class, level, skills set).
@@ -394,7 +399,8 @@ def craft_gear(
     2. Resistances only where still needed, on items with room.
     3. Fill any room left with the best remaining affixes.
     """
-    score = Scorer(def_weight=def_weight, mode=mode, metric=metric)
+    score = Scorer(def_weight=def_weight, mode=mode, metric=metric, goals=goals)
+    keep = {"ItemFoundRarityIncrease"} if goals and "rarity" in goals else set()
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
 
     slot_bases: list[tuple[str, list[dict]]] = []
@@ -419,9 +425,9 @@ def craft_gear(
     for slot, cands in slot_bases:
         base = _best_base(pob, slot, cands, stage, score)
         affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
-        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage)))
+        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage, keep)))
 
-    no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric)
+    no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric, goals=goals)
     for w in works:
         reserve = 0 if w.slot.startswith("Weapon") else 2
         _fill(pob, w, stage, no_res, stage.max_affixes - reserve, allow=lambda g: not _is_res_group(g))

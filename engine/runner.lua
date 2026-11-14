@@ -21,7 +21,7 @@ local DEFAULT_FIELDS = {
 	"TotalDot", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS",
 	"Life", "EnergyShield", "Mana", "Armour", "Evasion", "TotalEHP",
 	"PhysicalMaximumHitTaken", "FireResist", "ColdResist", "LightningResist", "ChaosResist",
-	"Str", "Dex", "Int", "Spirit", "SpiritUnreserved",
+	"Str", "Dex", "Int", "Spirit", "SpiritUnreserved", "EffectiveMovementSpeedMod", "EffectiveLootRarityMod",
 }
 
 -- Supports that put a usage condition on the skill (move first, build Glory, etc.).
@@ -632,6 +632,20 @@ function handlers.optimise_tree(cmd)
 		return (o.TotalDPS or 0) + (o.TotalDotDPS or 0) + (m.TotalDPS or 0) + (m.TotalDotDPS or 0)
 	end
 	local function ehp(o) return o.TotalEHP or 0 end
+	-- Build goals (see goals.py): movement speed and loot rarity as extra score.
+	local msWeight, rarityWeight = cmd.movement_weight or 0, cmd.rarity_weight or 0
+	local function goalTerms(o, base)
+		local s = 0
+		if msWeight > 0 then
+			local m0 = math.max(base.EffectiveMovementSpeedMod or 1, 0.1)
+			s = s + msWeight * ((o.EffectiveMovementSpeedMod or m0) - m0) / m0
+		end
+		if rarityWeight > 0 then
+			local r0 = math.max(base.EffectiveLootRarityMod or 1, 0.1)
+			s = s + rarityWeight * ((o.EffectiveLootRarityMod or r0) - r0) / r0
+		end
+		return s
+	end
 
 	-- Full scans are expensive, so between them only the best `shortlist` nodes from the
 	-- last full scan are re-checked. A full scan runs every `refresh` picks.
@@ -673,7 +687,7 @@ function handlers.optimise_tree(cmd)
 			for _, n in ipairs(node.path) do pathNodes[n] = true end
 			local out = calcFunc({ addNodes = pathNodes }, full)
 			evals = evals + 1
-			local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0
+			local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0 + goalTerms(out, base)
 			table.insert(scored, { node = node, eff = gain / #node.path })
 		end
 		table.sort(scored, function(a, b)

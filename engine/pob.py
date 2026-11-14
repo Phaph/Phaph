@@ -136,8 +136,11 @@ class PoB:
         return self.send("points")
 
     def optimise_tree(self, max_dist: int = 6, def_weight: float = 0.25, points: int | None = None,
-                      metric: str = "total") -> dict:
-        kwargs = {"max_dist": max_dist, "def_weight": def_weight, "metric": metric}
+                      metric: str = "total", goals=None) -> dict:
+        from goals import weights
+        w = weights(goals)
+        kwargs = {"max_dist": max_dist, "def_weight": def_weight * w["def_mult"], "metric": metric,
+                  "movement_weight": w["movement"], "rarity_weight": w["rarity"]}
         if points is not None:
             kwargs["points"] = points
         res = self.send("optimise_tree", **kwargs)

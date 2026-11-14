@@ -51,6 +51,7 @@ class BuildSpec(BaseModel):
     boss_weapon_type: str | None = None    # set when the boss skill uses weapon set 2
     boss_weapon_subtype: str | None = None
     ailment: Literal["bleed", "poison", "ignite"] | None = None   # optimise for this ailment
+    goals: list[Literal["movement", "rarity", "tanky"]] = Field(default_factory=list)  # beyond damage
 
     model_config = {"populate_by_name": True}
 
@@ -70,6 +71,7 @@ class GenerateRequest(BaseModel):
     skill: str | None = None
     budget: Budget = "high"
     mode: Literal["balanced", "mapping", "bossing"] = "balanced"
+    goals: list[Literal["movement", "rarity", "tanky"]] = Field(default_factory=list)  # beyond damage
 
     model_config = {"populate_by_name": True}
 
