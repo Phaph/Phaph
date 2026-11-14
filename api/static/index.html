@@ -355,6 +355,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 .howlink { white-space: nowrap; color: var(--brass); font-weight: 500; }
 .howlink::after { content: " \2192"; }
 
+.deep { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 14px; cursor: pointer; max-width: 640px; }
+.deep input { accent-color: var(--brass); width: 18px; height: 18px; margin-top: 3px; flex: none; }
+.deep b { font: 600 18px/1.2 var(--display); color: var(--brass); }
+.deep small { display: block; color: var(--muted); font-size: 14px; line-height: 1.4; }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -455,6 +460,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <div class="field" id="skillField" hidden><span class="label">Skill</span><span class="lock"><span class="tag" id="skillName"></span><button class="link" type="button" id="skillClear">Let it pick</button></span></div>
     </div>
     <div class="field"><span class="label">Also care about</span><div class="chips" id="goals" role="group" aria-label="Goals"></div></div>
+    <label class="deep"><input type="checkbox" id="deep"><span><b>Deep search</b>
+      <small>Tries far more skills, each on its own best ascendancies, so it can find builds the normal search misses. Takes about twice as long.</small></span></label>
     <button class="go" id="go" type="submit">Forge it</button>
     <div class="status" id="status" hidden></div>
   </form>
@@ -564,6 +571,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   function resetPicker() {
     state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null;
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
+    $("deep").checked = false;
   }
   function syncAll() {
     syncs.forEach(f => f()); weaponSyncs.forEach(f => f()); syncBudget();
@@ -577,6 +585,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if (r.budget) state.budget = r.budget;
     if (r.ailment) $("ailment").value = r.ailment;
     if (r.mode) $("mode").value = r.mode;
+    if (r.deep) $("deep").checked = true;
     if (r.class) { $("cls").value = r.class; fillAscendancies(); }
     if (r.ascendancy) $("asc").value = r.ascendancy;
     state.skill = r.skill || null;
@@ -900,7 +909,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     },
     round(e) {
       this.total += e.count || 0;
-      $("roundLabel").textContent = e.round === 1
+      $("roundLabel").textContent = e.text ? e.text : e.round === 1
         ? `First pass: every skill on every weapon it can use, ${e.count} of them. No passives yet, just raw power.`
         : `Second pass: the strongest few on each ascendancy, with full passive trees. ${e.count} builds.`;
     },
@@ -1114,12 +1123,13 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if ($("cls").value) req.class = $("cls").value;
     if ($("asc").value) req.ascendancy = $("asc").value;
     if (state.skill) req.skill = state.skill;
+    if ($("deep").checked) req.deep = true;
     $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
     heat(true);
     try {
       let job = await api("/generate", req);
       if (!job.cached) work.startSearch();
-      job = await waitFor(job, job.cached ? "Loading" : "About 2-4 minutes for a new idea",
+      job = await waitFor(job, job.cached ? "Loading" : req.deep ? "Deep search: about 10-15 minutes" : "About 2-4 minutes for a new idea",
         (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
         e => e.step === "round" ? work.round(e) : e.step === "candidate" ? work.candidate(e) : e.step === "relaxed" && work.relaxed(e));
       work.hide(); setStatus("");

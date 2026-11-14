@@ -49,6 +49,12 @@ BUDGET_WORDS = {
     r"ssf|self found|no money|broke|zero budget|free": "free",
     r"cheap|budget|league start(er|ing)?|starter": "budget",
 }
+# "Find me the strongest build there is": a deep search (see generate.py).
+DEEP = (r"(highest|max(imum)?|most|biggest|top|insane|crazy)\s+(possible\s+)?(dps|damage)"
+        r"|(strongest|most broken|broken|overpowered)\s+(possible\s+)?builds?"
+        r"|(highest|max(imum)?|strongest|best)\s+possible|deep search|search everything|try everything")
+# ...and with no budget named, "in the whole game" style wording means no budget limit either.
+NO_LIMIT_HINT = r"possible|in the game|in game|of all time|ever|no matter the cost|whatever it costs"
 NEGATION = r"(?:no|not|non|without|avoid|avoiding|hate)\s+(?:\w+\s+)?"
 CURRENCY = r"(\d+(?:\.\d+)?)\s*(k\b)?\s*(div(?:ine)?s?|d\b|ex(?:alt(?:ed)?s?)?\b|chaos(?: orbs?)?)"
 
@@ -146,6 +152,16 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
     if len(modes) == 1:
         req["mode"] = modes[0][1]
         found.append((modes[0][0].group(0), f"Focus: {modes[0][1]}"))
+
+    if (m := _find(DEEP, t)):
+        req["deep"] = True
+        found.append((m.group(0), "Deep search: every skill gets a fair chance"))
+        if "budget" not in req and _find(NO_LIMIT_HINT, t):
+            req["budget"] = "unlimited"
+            found.append(((_find(NO_LIMIT_HINT, t)).group(0), "Budget: unlimited"))
+        if "mode" not in req and re.search(r"dps|damage", m.group(0)):
+            req["mode"] = "bossing"
+            found.append((m.group(0), "Focus: bossing (raw damage)"))
 
     # The request schema caps lists at 5.
     for k in ("damage", "kinds", "weapons", "goals"):

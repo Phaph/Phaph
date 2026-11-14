@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-14.4"
+ENGINE_VERSION = "2026-11-14.5"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -82,6 +82,7 @@ class GenerateRequest(BaseModel):
     budget: Budget = "high"
     mode: Literal["balanced", "mapping", "bossing"] = "balanced"
     goals: list[Literal["movement", "rarity", "tanky"]] = Field(default_factory=list)  # beyond damage
+    deep: bool = False   # deep search: wider net, each skill on its own best ascendancies (slower)
 
     model_config = {"populate_by_name": True}
 

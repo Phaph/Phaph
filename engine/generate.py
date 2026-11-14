@@ -15,6 +15,15 @@ Request:
 mode: balanced (default: geometric mean of clear and single-target damage) | mapping | bossing
 Everything is optional; locked fields (class, ascendancy, skill, weapons) narrow the search.
 
+Deep search ("deep": true) is for "find the strongest build there is". It casts a wider net and
+gives skills that only shine with passives a fair chance:
+  Round 1:  as above (no passives).
+  Round 1b: the best DEEP_POOL skills again, now with a passive tree. Keeps DEEP_SKILLS.
+  Round 2a: every one of those skills is scouted on every allowed ascendancy (ascendancy points
+            only, which is quick), and keeps its own best DEEP_ASCS.
+  Round 2:  each skill on its own best ascendancies, full passive trees.
+Normal searches are unchanged.
+
 CLI:  python3 generate.py '{"damage":["lightning"],"kinds":["minion"]}'
 """
 from __future__ import annotations
@@ -46,6 +55,7 @@ MINION_WEAPONS = [("Sceptre", None, None), ("Wand", None, None)]
 SHIELD_WEAPONS = [("One Hand Mace", None, "Shield"), ("Spear", None, "Shield")]
 THEME_MIN_SHARE = 0.3   # candidates below this share of their theme's ailment are dropped
 DEFAULT_CLASS = {"Minion": "Witch", "Spell": "Sorceress"}
+DEEP_POOL, DEEP_SKILLS, DEEP_ASCS = 24, 10, 3
 
 
 @dataclass
@@ -203,6 +213,39 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
     return c
 
 
+def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, req: dict,
+                       keep: int = DEEP_ASCS) -> list[tuple[str, str]]:
+    """The `keep` ascendancies that suit one skill best. Gear is crafted once; each ascendancy then only
+    spends its ascendancy points, so 23 of them take about as long as one full candidate."""
+    p = _pob()
+    quiet = lambda *a: None
+    mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
+    metric = metric_for(mode, req.get("ailment"))
+    try:
+        p.new()
+        p.set_class(f.cls)
+        p.set_level(stage.level)
+        p.add_skill([f.skill, *f.supports], full_dps=f.is_minion)
+        p.set_config(**MODE_CONFIG[mode])
+        craft_gear(p, stage, f.weapon_type, f.weapon_subtype, offhand_type=f.offhand_type, uniques=False,
+                   metric=metric, log=quiet)
+        xml = p.save_xml()
+    except (PoBError, ValueError):
+        return ascs[:keep]
+    scores = []
+    for cls, asc in ascs:
+        try:
+            p.load_xml(xml)
+            p.set_class(cls, asc)
+            p.optimise_tree(points=0, def_weight=0.25, metric=metric, refine=False)
+            p.auto_config(mode)
+            scores.append((_score(p.calc(FIELDS), req), cls, asc))
+        except (PoBError, ValueError):
+            continue
+    scores.sort(key=lambda t: -t[0])
+    return [(c, a) for _, c, a in scores[:keep]] or ascs[:keep]
+
+
 def _relax_steps(req: dict) -> list[tuple[str, dict]]:
     """Ways to loosen a request that found nothing, mildest first, each with a note for the player.
     They apply cumulatively: step 3 keeps the changes of steps 1 and 2."""
@@ -277,10 +320,13 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
                       "ascendancy": c.ascendancy, "score": round(c.score, 1)})
         return c
 
-    def round_start(rnd: int, label: str, count: int):
+    def round_start(rnd: float, label: str, count: int, text: str | None = None):
         log(label)
         if progress:
-            progress({"step": "round", "round": rnd, "label": label, "count": count})
+            ev = {"step": "round", "round": rnd, "label": label, "count": count}
+            if text:
+                ev["text"] = text   # what the page shows for this round
+            progress(ev)
     with PoB() as p:
         catalog = p.send("skill_catalog")["skills"]
         classes = p.list_classes()
@@ -312,15 +358,31 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     for c in ok1[:8]:
         log(f"  {c.skill:<26} {c.weapon_type:<14} {c.score:>12,.0f}")
     # One finalist per skill (its best weapon), so one skill can't crowd out the others.
-    finalists, seen_skills = [], set()
-    for c in ok1:
-        if c.skill not in seen_skills:
-            seen_skills.add(c.skill)
-            finalists.append(c)
-        if len(finalists) >= top_skills:
-            break
+    def one_per_skill(cands, n):
+        out, seen = [], set()
+        for c in cands:
+            if c.skill not in seen:
+                seen.add(c.skill)
+                out.append(c)
+            if len(out) >= n:
+                break
+        return out
+
+    deep = bool(req.get("deep"))
+    finalists = one_per_skill(ok1, DEEP_POOL if deep else top_skills)
     if not finalists:
         raise ValueError("None of the matching skills dealt damage. Try a different theme.")
+    if deep and len(finalists) > DEEP_SKILLS:
+        # Round 1b: some skills are ordinary on their own and strong with the right passives. Re-score the
+        # wider pool with a passive tree before cutting it down.
+        round_start(1.5, f"Round 1b: best {len(finalists)} skills again, with passives", len(finalists),
+                    f"Deep search: the best {len(finalists)} skills again, now with passive trees, so skills that "
+                    f"need passives to shine aren't cut early.")
+        again = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, f.cls, is_minion=f.is_minion)
+                 for f in finalists]
+        again = list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=True), 1.5), again))
+        ok1b = sorted((c for c in again if not c.error and c.score > 0), key=lambda c: -c.score)
+        finalists = one_per_skill(ok1b, DEEP_SKILLS) or finalists[:DEEP_SKILLS]
 
     def build_round(pairs):
         cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion)
@@ -328,7 +390,19 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         return list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=True), 2), cands))
 
     round2 = []
-    if len(ascs) > 6:
+    if deep and len(ascs) > DEEP_ASCS:
+        # Each skill gets its own best ascendancies, not the ones that suit the top skill.
+        round_start(1.75, f"Round 2a: {len(finalists)} skills scouted on {len(ascs)} ascendancies",
+                    len(finalists) * len(ascs),
+                    f"Deep search: each of {len(finalists)} skills tried on all {len(ascs)} ascendancies to find "
+                    f"the {DEEP_ASCS} that suit it best.")
+        picks = list(pool.map(lambda f: scout_ascendancies(f, ascs, stage, req), finalists))
+        pairs = [(f, a) for f, best in zip(finalists, picks) for a in best]
+        round_start(2, f"Round 2: {len(pairs)} skill and ascendancy options", len(pairs),
+                    f"Deep search: each skill on its own best ascendancies, with full passive trees. {len(pairs)} builds.")
+        round2 += build_round(pairs)
+        finalists_rest, pairs = [], []
+    elif len(ascs) > 6:
         # Many ascendancies (no class chosen): find the best few with the top skill first.
         round_start(2, f"Round 2a: {finalists[0].skill} on {len(ascs)} ascendancies", len(ascs))
         scout = build_round([(finalists[0], a) for a in ascs])
@@ -338,9 +412,10 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         finalists_rest = finalists[1:]
     else:
         finalists_rest = finalists
-    pairs = [(f, a) for f in finalists_rest for a in ascs]
-    round_start(2, f"Round 2: {len(pairs)} skill and ascendancy options", len(pairs))
-    round2 += build_round(pairs)
+    if not deep or len(ascs) <= DEEP_ASCS:
+        pairs = [(f, a) for f in finalists_rest for a in ascs]
+        round_start(2, f"Round 2: {len(pairs)} skill and ascendancy options", len(pairs))
+        round2 += build_round(pairs)
     ranked = sorted((c for c in round2 if not c.error and c.score > 0), key=lambda c: -c.score)
     if not ranked:
         raise ValueError("Every candidate failed to build.")

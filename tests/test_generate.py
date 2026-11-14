@@ -181,3 +181,49 @@ def test_search_closes_its_pob_processes():
     assert 1 <= len(mine) <= 2
     _close_all(mine)
     assert all(p.proc.poll() is not None for p in mine)
+
+
+def test_deep_search_scouts_each_skills_own_ascendancies(monkeypatch):
+    """Deep search: a wider pool re-scored with passives, then each finalist on its own best ascendancies.
+    A normal search never calls the scout."""
+    import generate as g
+
+    skills = [{"name": f"Skill{i}", "types": ["Spell"], "weapons": []} for i in range(30)]
+    classes = [{"name": "Witch", "ascendancies": ["A1", "A2", "A3", "A4"]},
+               {"name": "Monk", "ascendancies": ["B1", "B2", "B3", "B4"]}]
+
+    class FakePoB:
+        def __init__(self, *a, **k): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def send(self, cmd, **k): return {"skills": skills}
+        def list_classes(self): return classes
+        def close(self): pass
+
+    def fake_eval(c, stage, req, tree):
+        n = int(c.skill[5:])
+        # Without passives the low numbers look best; with passives Skill20-23 (still inside the deep pool) win.
+        c.score = (1000 + n * 100 if n >= 20 else 500) if tree else 100 - n
+        if c.ascendancy:
+            c.score += {"A1": 1, "B4": 50}.get(c.ascendancy, 0)
+        return c
+
+    scouted = []
+
+    def fake_scout(f, ascs, stage, req, keep=3):
+        scouted.append(f.skill)
+        return [("Monk", "B4"), ("Witch", "A1"), ("Monk", "B1")]
+
+    monkeypatch.setattr(g, "PoB", FakePoB)
+    monkeypatch.setattr(g, "evaluate", fake_eval)
+    monkeypatch.setattr(g, "scout_ascendancies", fake_scout)
+    monkeypatch.setattr(g, "main_skills", lambda cat, req: skills)
+    monkeypatch.setattr(g, "weapon_options", lambda s, req: [("Wand", None, None)])
+
+    normal = g.generate({}, workers=2, log=lambda *a: None)
+    assert not scouted
+    assert normal["ranked"][0]["skill"] in {f"Skill{i}" for i in range(4)}   # only round 1's top 4 went on
+
+    deep = g.generate({"deep": True}, workers=2, log=lambda *a: None)
+    assert len(scouted) == g.DEEP_SKILLS
+    assert deep["ranked"][0]["skill"] == "Skill23" and deep["ranked"][0]["ascendancy"] == "B4"

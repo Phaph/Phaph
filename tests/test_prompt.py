@@ -69,3 +69,17 @@ def test_found_lists_what_was_understood():
     means = [f["means"] for f in out["found"]]
     assert "Damage: fire" in means and "Kind: totem" in means and "Class: Witch" in means
     assert out["budget_set"] is False
+
+
+def test_deep_search_prompts():
+    r = parse("any build highest dps possible in the game")
+    assert r.get("deep") is True and r["budget"] == "unlimited" and r["mode"] == "bossing"
+    r = parse("strongest build for a monk, 10 div")
+    assert r.get("deep") is True and r["budget"] == "medium" and r["class"] == "Monk"   # a named budget wins
+    assert parse("highest damage witch").get("budget") is None                           # no "possible": budget untouched
+
+
+def test_normal_prompts_stay_normal():
+    for text in ("lightning minion build for a monk, 5 div", "best build for mapping", "cheap fast bleed build",
+                 "fireball witch that can boss"):
+        assert not parse(text).get("deep"), text
