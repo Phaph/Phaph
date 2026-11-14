@@ -33,6 +33,7 @@ class Stage:
     tier_drop: int      # tiers below the best available (budget)
     max_affixes: int    # how many good affixes a typical item has at this budget
     budget: str
+    budget_key: str = "unlimited"
 
 
 @dataclass(frozen=True)
@@ -69,7 +70,7 @@ def make_stage(key: str, budget: str = "unlimited") -> Stage:
         raise ValueError(f"budget must be one of {BUDGET_ORDER}")
     name, level, ilvl, natural = STAGE_DEFS[key]
     tier = BUDGETS[min(natural, budget, key=BUDGET_ORDER.index)]
-    return Stage(key, name, level, ilvl, tier.roll, tier.tier_drop, tier.max_affixes, tier.label)
+    return Stage(key, name, level, ilvl, tier.roll, tier.tier_drop, tier.max_affixes, tier.label, tier.key)
 
 
 STAGES = {k: make_stage(k) for k in STAGE_DEFS}
@@ -81,6 +82,8 @@ class SlotPlan:
     base: str
     affixes: list[str] = field(default_factory=list)   # in priority order, with target values
     raw: str = ""
+    unique: str | None = None       # unique item name when a unique beats the crafted rare
+    price_note: str | None = None   # e.g. "price unknown" until poe.ninja prices are loaded
 
 
 def _value_at(text: str, roll: float) -> str:
@@ -142,11 +145,18 @@ class _Work:
     picked: list = field(default_factory=list)
     counts: dict = field(default_factory=lambda: {"Prefix": 0, "Suffix": 0})
     meta: list = field(default_factory=list)   # (group, affix, lines) per pick, in order
+    unique: str | None = None
+    unique_raw: str | None = None
+    price_note: str | None = None
 
     def raw(self, extra: list[str] | None = None) -> str:
+        if self.unique_raw:
+            return self.unique_raw
         return _item_raw(self.title, self.base, self.lines + (extra or []))
 
     def has_room(self, stage: "Stage", kind: str) -> bool:
+        if self.unique_raw:
+            return False
         return len(self.picked) < stage.max_affixes and self.counts[kind] < 3
 
 
@@ -250,7 +260,7 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
             if elem is None:
                 return
             g = groups[elem]
-            for w in sorted((w for w in works if not w.slot.startswith("Weapon") and g in w.options),
+            for w in sorted((w for w in works if not w.slot.startswith("Weapon") and not w.unique and g in w.options),
                             key=lambda w: sum(_is_res_group(m[0]) for m in w.meta)):
                 if _swap_for(w, stage, g):
                     pick = (w, g)
@@ -261,6 +271,66 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
         a = w.options[g]
         _add(w, g, a, [_value_at(line, stage.roll) for line in a["lines"]])
         pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
+
+
+# Most a player at each budget would pay for one item, in divines.
+BUDGET_DIVINES = {"free": 0, "budget": 5, "medium": 30, "high": 100, "unlimited": float("inf")}
+SLOT_TYPES = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots",
+              "Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
+_PRICES: dict | None = None
+
+
+def unique_prices() -> dict:
+    """Unique prices in divines (engine/data/unique_prices.json, filled from poe.ninja)."""
+    global _PRICES
+    if _PRICES is None:
+        import json
+        from pathlib import Path
+        try:
+            _PRICES = json.loads((Path(__file__).parent / "data" / "unique_prices.json").read_text())
+        except (OSError, ValueError):
+            _PRICES = {}
+    return _PRICES
+
+
+def _unique_allowed(name: str, stage: Stage) -> tuple[bool, str | None]:
+    cap = BUDGET_DIVINES.get(stage.budget_key, 0)
+    price = unique_prices().get(name.split(",")[0])
+    if price is not None:
+        return price <= cap, f"~{price:g} div"
+    # No price data: only suggest uniques where the budget clearly allows it, and say so.
+    return cap >= 30, "price unknown"
+
+
+def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scorer",
+                      weapon_types: dict[str, tuple[str, str | None]], min_gain: float = 0.02) -> None:
+    """Swap a crafted rare for a unique wherever a unique scores clearly better."""
+    uniques = pob.list_uniques()
+    used: set[str] = set()
+    for w in works:
+        if w.slot in weapon_types:
+            wtype, wsub = weapon_types[w.slot]
+            pool = [u for u in uniques if u["type"] == wtype and _sub_ok(u.get("subType"), wsub)]
+        else:
+            pool = [u for u in uniques if u["type"] == SLOT_TYPES.get(w.slot)]
+        pool = [u for u in pool if (u.get("level") or 0) <= stage.level and u["name"] not in used]
+        allowed = [(u, note) for u in pool for ok, note in [_unique_allowed(u["name"], stage)] if ok]
+        if not allowed:
+            continue
+        current = pob.calc(SCORE_FIELDS)
+        outs = _try(pob, w.slot, [u["raw"] for u, _ in allowed])
+        best, best_score = None, min_gain
+        for (u, note), out in zip(allowed, outs):
+            if out is None:
+                continue
+            sc = score(out, current)
+            if sc > best_score:
+                best, best_score = (u, note), sc
+        if best:
+            u, note = best
+            w.unique, w.unique_raw, w.price_note = u["name"], u["raw"], note
+            used.add(u["name"])
+            pob.send("equip", slot=w.slot, raw=u["raw"], fields=SCORE_FIELDS)
 
 
 def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score: Scorer) -> str:
@@ -276,6 +346,15 @@ def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score:
         if sc > best_score:
             best, best_score = c["name"], sc
     return best
+
+
+def _sub_ok(actual: str | None, wanted: str | None) -> bool:
+    """wanted None: any subtype. "none": only bases without one (e.g. caster staves, not quarterstaves)."""
+    if wanted is None:
+        return True
+    if wanted == "none":
+        return not actual
+    return actual == wanted
 
 
 def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, per_subtype: int = 1) -> list[dict]:
@@ -301,6 +380,7 @@ def craft_gear(
     offhand_type: str | None = None,
     def_weight: float = 0.4,
     mode: str = "bossing",
+    uniques: bool = True,
     log=print,
 ) -> list[SlotPlan]:
     """Craft every slot for a build already loaded in `pob` (class, level, skills set).
@@ -319,7 +399,7 @@ def craft_gear(
     elif offhand_type:
         weapon_slots.append(("Weapon 2", offhand_type, None))
     for slot, wtype, wsub in weapon_slots:
-        cands = sorted((b for b in bases if b["type"] == wtype and (wsub is None or b.get("subType") == wsub)
+        cands = sorted((b for b in bases if b["type"] == wtype and _sub_ok(b.get("subType"), wsub)
                         and not b["name"].startswith("Runeforged")), key=lambda b: -b["level"])[:6]
         if not cands:
             raise ValueError(f"No {wtype} bases up to item level {stage.item_level}")
@@ -344,8 +424,21 @@ def craft_gear(
     for w in works:
         _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
 
+    if uniques and BUDGET_DIVINES.get(stage.budget_key, 0) > 0:
+        wt = {slot: (t, sub) for slot, t, sub in weapon_slots}
+        _consider_uniques(pob, works, stage, score, wt)
+        if any(w.unique for w in works):
+            # A unique replaced a rare: its resistances and stats may be gone, so re-balance the rares.
+            _cap_resistances(pob, works, stage)
+            for w in works:
+                _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
+
     plans = []
     for w in works:
-        log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
-        plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw()))
+        if w.unique:
+            log(f"  {w.slot:<12} UNIQUE {w.unique} ({w.price_note})")
+            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note))
+        else:
+            log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
+            plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw()))
     return plans

@@ -18,10 +18,10 @@ end
 local DEFAULT_FIELDS = {
 	"FullDPS", "TotalDPS", "CombinedDPS", "AverageHit", "Speed", "HitChance",
 	"CritChance", "CritMultiplier", "BleedDPS", "BleedChance", "PoisonDPS", "IgniteDPS",
-	"TotalDot", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS",
+	"TotalDot", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS",
 	"Life", "EnergyShield", "Mana", "Armour", "Evasion", "TotalEHP",
 	"PhysicalMaximumHitTaken", "FireResist", "ColdResist", "LightningResist", "ChaosResist",
-	"Str", "Dex", "Int",
+	"Str", "Dex", "Int", "Spirit", "SpiritUnreserved",
 }
 
 -- Supports that put a usage condition on the skill (move first, build Glory, etc.).
@@ -92,6 +92,22 @@ local function disambiguate(text)
 		table.insert(out, line)
 	end
 	return table.concat(out, "\n")
+end
+
+-- Use PoB's Full DPS (sum over every included skill, with minion counts) whenever the build
+-- has more than one damage source or any minion skill; otherwise the main skill's output is
+-- identical and much cheaper to compute.
+local function useFull()
+	local n, minion = 0, false
+	for _, g in ipairs(build.skillsTab.socketGroupList) do
+		if g.enabled ~= false and g.includeInFullDPS then
+			n = n + 1
+			for _, s in ipairs(g.displaySkillList or {}) do
+				if s.minion or (s.skillTypes and s.skillTypes[SkillType.Minion]) then minion = true end
+			end
+		end
+	end
+	return n > 1 or minion
 end
 
 local function findClass(name)
@@ -245,13 +261,14 @@ end
 -- or {error=...} for an item that does not parse.
 function handlers.try_items(cmd)
 	local calcFunc = build.calcsTab:GetMiscCalculator()
+	local full = useFull()
 	local results = {}
 	for i, raw in ipairs(cmd.items) do
 		local item = new("Item"):Item(raw)
 		if item.base then
 			item:NormaliseQuality()
 			item:BuildModList()
-			local out = calcFunc({ repSlotName = cmd.slot, repItem = item })
+			local out = calcFunc({ repSlotName = cmd.slot, repItem = item }, full)
 			local r = pick(out, cmd.fields)
 			results[i] = r
 		else
@@ -296,6 +313,9 @@ function handlers.add_skill(cmd)
 	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
 	local index = #build.skillsTab.socketGroupList
 	if index == before then error("no gems recognised in: " .. cmd.text) end
+	-- Full DPS costs a second calculation pass, so it is only switched on for builds that
+	-- need it (several damage sources or minion counts); see set_full_dps.
+	build.skillsTab.socketGroupList[index].includeInFullDPS = cmd.full_dps == true
 	if cmd.main ~= false then build.mainSocketGroup = index end
 	frame()
 	local missing = {}
@@ -315,8 +335,13 @@ function handlers.try_skill(cmd)
 	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
 	if #list == count then error("no gems recognised in: " .. cmd.text) end
 	local new = table.remove(list)
+	new.includeInFullDPS = old.includeInFullDPS
+	new.set1, new.set2 = old.set1, old.set2
+	for i, gem in ipairs(new.gemList) do
+		if old.gemList[i] and old.gemList[i].count then gem.count = old.gemList[i].count end
+	end
 	list[cmd.group] = new
-	build.mainSocketGroup = cmd.group
+	if not cmd.keep_main then build.mainSocketGroup = cmd.group end
 	-- Resolve gems and global gem counts before recalculating, otherwise the
 	-- calculation sees the previous gem list and results lag one step behind.
 	build.skillsTab:ProcessSocketGroup(new)
@@ -351,6 +376,69 @@ function handlers.remove_skill(cmd)
 	return {}
 end
 
+-- Count every enabled group toward Full DPS.
+function handlers.full_dps_all(cmd)
+	for _, g in ipairs(build.skillsTab.socketGroupList) do
+		if g.enabled ~= false then g.includeInFullDPS = true end
+	end
+	build.buildFlag = true
+	frame()
+	return { groups = #build.skillsTab.socketGroupList }
+end
+
+-- Mark a group to count toward PoB's Full DPS (the sum over several skills, e.g. minions + buffs).
+function handlers.set_full_dps(cmd)
+	local g = build.skillsTab.socketGroupList[cmd.group]
+	if not g then error("no group " .. tostring(cmd.group)) end
+	g.includeInFullDPS = cmd.include ~= false
+	build.buildFlag = true
+	frame()
+	return {}
+end
+
+-- For minion skills with a limit above one (e.g. zombies), set the gem count to the limit so
+-- Full DPS counts every minion, not just one. Returns {group = count}.
+function handlers.sync_minion_counts(cmd)
+	local main = build.mainSocketGroup
+	local counts = {}
+	for i, g in ipairs(build.skillsTab.socketGroupList) do
+		if g.includeInFullDPS and g.enabled ~= false then
+			build.mainSocketGroup = i
+			build.buildFlag = true
+			frame()
+			local limit = build.calcsTab.mainOutput.ActiveMinionLimit
+			local active = g.gemList[1]
+			if active and limit and limit > 1 and active.count ~= limit then
+				active.count = limit
+				counts[tostring(i)] = limit
+			end
+		end
+	end
+	build.mainSocketGroup = main
+	build.buildFlag = true
+	frame()
+	return { counts = counts }
+end
+
+-- Support gems PoB's own rules allow on a group's active skill (skill type requirements and
+-- exclusions), without running any calculation. Used to skip supports that cannot apply.
+function handlers.compatible_supports(cmd)
+	local g = build.skillsTab.socketGroupList[cmd.group]
+	if not g then error("no group " .. tostring(cmd.group)) end
+	local active = g.displaySkillList and g.displaySkillList[g.mainActiveSkill or 1]
+	if not active then return { supports = {} } end
+	local names, seen = {}, {}
+	for _, gem in pairs(data.gems) do
+		local ge = gem.grantedEffect
+		if ge and ge.support and not seen[gem.name] and calcLib.canGrantedEffectSupportActiveSkill(ge, active) then
+			seen[gem.name] = true
+			table.insert(names, gem.name)
+		end
+	end
+	table.sort(names)
+	return { supports = names }
+end
+
 function handlers.set_main(cmd)
 	build.mainSocketGroup = cmd.group
 	build.buildFlag = true
@@ -367,6 +455,94 @@ function handlers.set_config(cmd)
 	build.buildFlag = true
 	frame()
 	return {}
+end
+
+-- Turn on the conditional bonuses this build can actually keep up, and only those.
+-- Rules (ours, written to be conservative):
+--   * In combat you have always hit and used a skill recently. Mapping: you have also killed recently.
+--   * An enemy ailment counts as up when the build applies it about once a second or more
+--     (chance per hit x uses per second >= 1), from the player or its minions.
+--   * Crit recently: crit chance >= 40%.
+--   * Charges: only when something in the build says it gains that charge (passives, items, gems).
+--   * Armour broken: the build breaks armour on hit. Exposure: a gem in the build applies it.
+local AILMENT_VARS = {
+	Bleed = { "conditionEnemyBleeding" }, Poison = { "conditionEnemyPoisoned" },
+	Ignite = { "conditionEnemyIgnited", "conditionEnemyBurning" }, Shock = { "conditionEnemyShocked" },
+	Chill = { "conditionEnemyChilled" },
+}
+local MANAGED_VARS = {
+	"conditionHitRecently", "conditionUsedSkillRecently", "conditionKilledRecently", "conditionCritRecently",
+	"usePowerCharges", "useFrenzyCharges", "useEnduranceCharges", "conditionEnemyArmourBroken",
+	"conditionEnemyFireExposure", "conditionEnemyColdExposure", "conditionEnemyLightningExposure",
+}
+for _, vars in pairs(AILMENT_VARS) do for _, v in ipairs(vars) do table.insert(MANAGED_VARS, v) end end
+
+local function buildText()
+	-- Everything the build "says": allocated passives, equipped item mods, gem descriptions.
+	local parts = {}
+	for _, node in pairs(build.spec.allocNodes) do
+		for _, line in ipairs(node.sd or {}) do table.insert(parts, line) end
+	end
+	for _, slot in pairs(build.itemsTab.slots) do
+		local item = slot.selItemId and build.itemsTab.items[slot.selItemId]
+		if item and item.raw then table.insert(parts, item.raw) end
+	end
+	for _, group in ipairs(build.skillsTab.socketGroupList) do
+		for _, gem in ipairs(group.gemList) do
+			local ge = gem.gemData and gem.gemData.grantedEffect
+			if ge and ge.description then table.insert(parts, ge.description) end
+			if gem.nameSpec then table.insert(parts, gem.nameSpec) end
+		end
+	end
+	return table.concat(parts, "\n"):lower()
+end
+
+function handlers.auto_config(cmd)
+	local mode = cmd.mode or "bossing"
+	local input = build.configTab.input
+	for _, v in ipairs(MANAGED_VARS) do input[v] = nil end
+	local applied = {}
+	local function set(var, why)
+		if not input[var] then input[var] = true; table.insert(applied, { var = var, why = why }) end
+	end
+	-- Two passes: turning conditions on changes chances and speed.
+	for _ = 1, 2 do
+		build.configTab:BuildModList()
+		build.buildFlag = true
+		frame()
+		local out = build.calcsTab.mainOutput
+		local minion = type(out.Minion) == "table" and out.Minion or {}
+		set("conditionHitRecently", "always true in combat")
+		set("conditionUsedSkillRecently", "always true in combat")
+		if mode == "mapping" then set("conditionKilledRecently", "mapping: monsters die constantly") end
+		for ailment, vars in pairs(AILMENT_VARS) do
+			local best = 0
+			for _, src in ipairs({ out, minion }) do
+				local chance = src[ailment .. "ChancePerHit"] or src[ailment .. "ChanceOnHit"] or 0
+				local speed = src.Speed or 0
+				best = math.max(best, chance / 100 * speed)
+			end
+			if best >= 1 then
+				for _, v in ipairs(vars) do set(v, string.format("%s applied %.1f times a second", ailment:lower(), best)) end
+			end
+		end
+		if (out.CritChance or 0) >= 40 then set("conditionCritRecently", string.format("%.0f%% crit chance", out.CritChance)) end
+		if (out.ArmourBreakPerHit or 0) > 0 then set("conditionEnemyArmourBroken", "build breaks armour on hit") end
+		local text = buildText()
+		for _, c in ipairs({ { "Frenzy", "useFrenzyCharges" }, { "Power", "usePowerCharges" }, { "Endurance", "useEnduranceCharges" } }) do
+			local name = c[1]:lower() .. " charge"
+			if text:find("gains? [^\n]-" .. name) or text:find("generates? [^\n]-" .. name) or text:find(name .. "s? on") then
+				set(c[2], "build gains " .. name .. "s")
+			end
+		end
+		for _, e in ipairs({ "Fire", "Cold", "Lightning" }) do
+			if text:find(e:lower() .. " exposure") then set("conditionEnemy" .. e .. "Exposure", "build applies " .. e:lower() .. " exposure") end
+		end
+	end
+	build.configTab:BuildModList()
+	build.buildFlag = true
+	frame()
+	return { applied = applied }
 end
 
 function handlers.alloc_nodes(cmd)
@@ -412,6 +588,12 @@ function handlers.optimise_tree(cmd)
 
 	local mapping = cmd.metric == "mapping"
 	local function dps(o)
+		if o.FullDPS and o.FullDPS > 0 then
+			if mapping then
+				return (o.FullDPS - 0.5 * (o.FullDotDPS or 0)) * math.sqrt(math.max(o.AreaOfEffectMod or 1, 0.1)) * math.sqrt(math.max(o.ProjectileCount or 1, 1))
+			end
+			return o.FullDPS
+		end
 		if mapping then
 			-- Same clear score as optimize.py: hits full, DoT half, sqrt(area) x sqrt(projectiles)
 			local m = type(o.Minion) == "table" and o.Minion or {}
@@ -442,6 +624,7 @@ function handlers.optimise_tree(cmd)
 
 	local function bestStep(ascend)
 		local calcFunc, base = build.calcsTab:GetMiscCalculator()
+		local full = useFull()
 		local d0, e0 = math.max(dps(base), 1), math.max(ehp(base), 1)
 		local full = sinceFull[ascend] >= refresh or not shortlist[ascend]
 		local pool = {}
@@ -460,7 +643,7 @@ function handlers.optimise_tree(cmd)
 		for _, node in ipairs(pool) do
 			local pathNodes = {}
 			for _, n in ipairs(node.path) do pathNodes[n] = true end
-			local out = calcFunc({ addNodes = pathNodes })
+			local out = calcFunc({ addNodes = pathNodes }, full)
 			evals = evals + 1
 			local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0
 			table.insert(scored, { node = node, eff = gain / #node.path })
@@ -561,6 +744,36 @@ function handlers.list_gems(cmd)
 	return { gems = gems }
 end
 
+-- Every castable (non-support) gem with what the build generator needs to reason about it:
+-- skill types (Attack, Spell, Minion, Persistent...), required weapon types, spirit cost, tags.
+local skillTypeName = {}
+for n, v in pairs(SkillType) do skillTypeName[v] = n end
+
+function handlers.skill_catalog(cmd)
+	local out = {}
+	for id, gem in pairs(data.gems) do
+		local ge = gem.grantedEffect
+		if ge and not ge.support and not (gem.tags and gem.tags.support) and gem.name and gem.name ~= "" then
+			local types, weapons, tags = {}, {}, {}
+			for k in pairs(ge.skillTypes or {}) do
+				if skillTypeName[k] then table.insert(types, skillTypeName[k]) end
+			end
+			for k in pairs(ge.weaponTypes or {}) do table.insert(weapons, k) end
+			for k in pairs(gem.tags or {}) do table.insert(tags, k) end
+			table.sort(types); table.sort(weapons); table.sort(tags)
+			local lvl = ge.levels and (ge.levels[20] or ge.levels[#ge.levels])
+			table.insert(out, {
+				name = gem.name, id = ge.id, types = types, weapons = weapons, tags = tags,
+				spirit = lvl and lvl.spiritReservationFlat or 0,
+				from_item = ge.fromItem and true or false,
+				tier = gem.Tier, str = gem.reqStr, dex = gem.reqDex, int = gem.reqInt,
+			})
+		end
+	end
+	table.sort(out, function(a, b) return a.name < b.name or (a.name == b.name and a.id < b.id) end)
+	return { skills = out }
+end
+
 function handlers.list_classes(cmd)
 	local classes = {}
 	for _, class in pairs(build.spec.tree.classes) do
@@ -577,7 +790,10 @@ function handlers.list_uniques(cmd)
 	local list = {}
 	for _, item in pairs(main.uniqueDB.list) do
 		if not cmd.type or (item.type and item.type:lower() == cmd.type:lower()) then
-			table.insert(list, { name = item.name, base = item.baseName, type = item.type, raw = item.raw })
+			local parsed = new("Item"):Item(item.raw)
+			table.insert(list, { name = item.name, base = item.baseName, type = item.type, raw = item.raw,
+				level = parsed.requirements and parsed.requirements.level or 0,
+				subType = parsed.base and parsed.base.subType })
 		end
 	end
 	return { uniques = list }

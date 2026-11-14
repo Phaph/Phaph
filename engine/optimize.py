@@ -15,7 +15,7 @@ METRICS = {
 
 METRICS["mapping"] = "mapping"   # clear score: hit-weighted DPS x sqrt(area) x sqrt(projectiles)
 CLEAR_FIELDS = ["AreaOfEffectMod", "ProjectileCount"]
-DPS_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS"]
+DPS_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS"]
 
 # PoB config for each mode. Bossing is PoB's default (pinnacle boss).
 MODE_CONFIG = {
@@ -25,7 +25,10 @@ MODE_CONFIG = {
 
 
 def total_dps(out: dict) -> float:
-    """Hit DPS plus damage over time (bleed, ignite, poison, DoT skills), plus minions'."""
+    """All damage the build deals per second. PoB's Full DPS when available (every included
+    skill, minion counts, damage over time); otherwise the main skill's hit + DoT + minion."""
+    if out.get("FullDPS", 0) > 0:
+        return out["FullDPS"]
     return (out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
             + out.get("MinionDPS", 0) + out.get("MinionDotDPS", 0))
 
@@ -33,8 +36,11 @@ def total_dps(out: dict) -> float:
 def clear_score(out: dict) -> float:
     """Rough map clear value. PoB has no clear speed stat, so: hits count fully, damage over
     time half (it ramps up), and bigger area / more projectiles reach more of the pack."""
-    dps = (out.get("TotalDPS", 0) + 0.5 * out.get("TotalDotDPS", 0)
-           + out.get("MinionDPS", 0) + 0.5 * out.get("MinionDotDPS", 0))
+    if out.get("FullDPS", 0) > 0:
+        dps = out["FullDPS"] - 0.5 * out.get("FullDotDPS", 0)
+    else:
+        dps = (out.get("TotalDPS", 0) + 0.5 * out.get("TotalDotDPS", 0)
+               + out.get("MinionDPS", 0) + 0.5 * out.get("MinionDotDPS", 0))
     area = max(out.get("AreaOfEffectMod", 1) or 1, 0.1)
     projectiles = max(out.get("ProjectileCount", 1) or 1, 1)
     return dps * area ** 0.5 * projectiles ** 0.5
@@ -91,6 +97,11 @@ def optimise_supports(
     if not allow_conditional:
         skip |= {g["name"] for g in gems if g.get("conditional")}
     pool = [n for n in (candidates or [g["name"] for g in gems]) if n not in skip]
+    # PoB's own type rules rule out most supports for any given skill without a calculation.
+    compatible = pob.send("compatible_supports", group=group).get("supports")
+    if isinstance(compatible, list) and compatible:
+        allowed = set(compatible)
+        pool = [n for n in pool if n in allowed]
     shortlist_key = (active, metric)
     if shortlist is not None and shortlist_key in shortlist:
         pool = [n for n in shortlist[shortlist_key] if n not in skip]

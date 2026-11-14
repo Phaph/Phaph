@@ -91,13 +91,22 @@ class PoB:
     def add_item(self, raw: str):
         return self.send("add_item", raw=raw)
 
-    def add_skill(self, gems: list[str], level: int = 20, quality: int = 0, main: bool = True):
+    def add_skill(self, gems: list[str], level: int = 20, quality: int = 0, main: bool = True,
+                  full_dps: bool = False):
         text = "\n".join(f"{g} {level}/{quality}  1" for g in gems)
-        return self.send("add_skill", text=text, main=main)
+        return self.send("add_skill", text=text, main=main, full_dps=full_dps)
 
-    def try_skill(self, group: int, gems: list[str], fields: list[str], level: int = 20, quality: int = 0) -> dict:
+    def use_full_dps(self) -> None:
+        """Count every skill group in PoB's Full DPS (needed once a build has more than one
+        damage source, or minions whose count matters)."""
+        self.send("full_dps_all")
+        self.send("sync_minion_counts")
+
+    def try_skill(self, group: int, gems: list[str], fields: list[str], level: int = 20, quality: int = 0,
+                  keep_main: bool = False) -> dict:
+        """Replace a group's gems and recalculate. keep_main: score the current main skill, not this group."""
         text = "\n".join(f"{g} {level}/{quality}  1" for g in gems)
-        res = self.send("try_skill", group=group, text=text, fields=fields)
+        res = self.send("try_skill", group=group, text=text, fields=fields, keep_main=keep_main)
         # dkjson encodes empty tables as [], normalise to dicts
         for key in ("supported", "output"):
             if not isinstance(res.get(key), dict):
@@ -117,6 +126,11 @@ class PoB:
 
     def alloc_nodes(self, nodes: list):
         return self.send("alloc_nodes", nodes=nodes)
+
+    def auto_config(self, mode: str = "bossing") -> list[dict]:
+        """Turn on the conditional bonuses this build sustains. Returns what was applied and why."""
+        res = self.send("auto_config", mode=mode).get("applied")
+        return res if isinstance(res, list) else []
 
     def points(self) -> dict:
         return self.send("points")
