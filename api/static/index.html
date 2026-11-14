@@ -307,6 +307,9 @@ a.trade::after { content: " \2197"; }
 .cost-note { flex-basis: 100%; font-size: 14px; }
 .buildcost { font-size: 18px; color: var(--muted); } .buildcost b { font: 600 20px var(--mono); color: var(--brass-hi); }
 
+.kv dd .setup { display: block; margin-bottom: 6px; }
+.kv dd .setup:last-child { margin-bottom: 0; }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -597,8 +600,8 @@ a.trade::after { content: " \2197"; }
   // ---------- The workbench: shows the optimiser's real steps while a job runs ----------
   const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const STAGE_NAMES = { leveling: "Leveling", early: "Early maps", mid: "Mid maps", end: "Endgame" };
-  const STEP_ORDER = ["start", "gear", "tree", "supports", "spirit", "done"];
-  const STEP_TEXT = { start: "Setting up", gear: "Crafting gear", tree: "Passives allocated", supports: "Supports picked",
+  const STEP_ORDER = ["start", "gear", "tree", "supports", "spirit", "kit", "done"];
+  const STEP_TEXT = { start: "Setting up", gear: "Crafting gear", tree: "Passives allocated", supports: "Supports picked", kit: "Every skill kitted out",
     spirit: "Spirit filled", done: "Finished" };
 
   function tween(el, to, suffix = "") {
@@ -1159,9 +1162,7 @@ a.trade::after { content: " \2197"; }
     kv.push(["Mapping", gemRow(plan.spec.skill, s.supports)]);
     if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
     else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
-    if (s.spirit.length) kv.push(["Spirit", gemRow(null, s.spirit)]);
-    if (s.utility.length) kv.push(["Utility", `<span class="gems">${s.utility.map(u => `${gem(u.skill)}${u.weapon_set === 2 ? ` <span class="muted">(weapon set 2, ${esc(u.weapon)})</span>` : ""} <span class="muted">${u.gain > 0 ? "+" : ""}${pct(u.gain)}</span>`).join("")}</span>`]);
-    if (s.mobility.length) kv.push(["Movement", `<span class="gems">${s.mobility.map(m => gem(m)).join('<span class="plus">or</span>')}</span>`]);
+    extraRows(s).forEach(r => kv.push(r));
     if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = stageHtml(plan, s, prevGear, forward, kv, res, st);
@@ -1192,15 +1193,34 @@ a.trade::after { content: " \2197"; }
         <div class="code"><input id="code" readonly value="${esc(s.code)}"><button class="chip small" type="button" id="copy">Copy</button></div></div>`}`;
   }
 
+  // Every other skill in the build with its own supports (guide.kit_out). Older results without setups fall
+  // back to the plain lists.
+  function extraRows(s) {
+    const rows = [], setups = s.setups || [];
+    const line = x => `<span class="setup">${gemRow(x.skill, x.supports || [])}</span>`;
+    const role = r => setups.filter(x => x.role === r);
+    if (setups.length) {
+      if (role("spirit").length) rows.push(["Spirit", role("spirit").map(line).join("")]);
+      if (role("utility").length) rows.push(["Utility", role("utility").map(x => {
+        const u = (s.utility || []).find(u => u.skill === x.skill);
+        return line(x) + (u?.weapon_set === 2 ? ` <span class="muted">(weapon set 2, ${esc(u.weapon)})</span>` : "");
+      }).join("")]);
+      if (role("movement").length) rows.push(["Movement", role("movement").map(line).join("")]);
+      return rows;
+    }
+    if (s.spirit.length) rows.push(["Spirit", gemRow(null, s.spirit)]);
+    if (s.utility.length) rows.push(["Utility", `<span class="gems">${s.utility.map(u => gem(u.skill)).join("")}</span>`]);
+    if (s.mobility.length) rows.push(["Movement", `<span class="gems">${s.mobility.map(m => gem(m)).join('<span class="plus">or</span>')}</span>`]);
+    return rows;
+  }
+
   // ---------- Saving and sharing ----------
   function kvFor(plan, s) {
     const kv = [];
     kv.push(["Mapping", gemRow(plan.spec.skill, s.supports)]);
     if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
     else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
-    if (s.spirit.length) kv.push(["Spirit", gemRow(null, s.spirit)]);
-    if (s.utility.length) kv.push(["Utility", `<span class="gems">${s.utility.map(u => gem(u.skill)).join("")}</span>`]);
-    if (s.mobility.length) kv.push(["Movement", `<span class="gems">${s.mobility.map(m => gem(m)).join('<span class="plus">or</span>')}</span>`]);
+    extraRows(s).forEach(r => kv.push(r));
     if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     return kv;

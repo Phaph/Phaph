@@ -86,6 +86,8 @@ class StageGuide:
     clear: float = 0.0                                      # mapping clear score
     rating: dict | None = None                              # 1-10, endgame stage only
     utility: list[dict] = field(default_factory=list)       # curses, marks, banners, warcries kept
+    # Supports for every other skill in the build: [{"skill", "role": spirit/utility/movement, "supports"}]
+    setups: list[dict] = field(default_factory=list)
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
     budget_key: str = "high"                                 # free / budget / medium / high / unlimited
 
@@ -209,8 +211,12 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
         conditions = pob.auto_config("mapping")
+        mobility = mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type"))
         best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
+        used = set(best.supports) | set(boss.supports if boss else [])
+        setups = kit_out(pob, group, spirit, utility, mobility[:1], map_metric, slots, used, log=quiet)
+        report("kit", f"Supports for {len(setups)} more skills")
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
                          + MINION_AILMENT_FIELDS)
         guide = StageGuide(
@@ -222,7 +228,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
             spirit=spirit, conditions=conditions, goals=goals, utility=utility,
-            mobility=mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type")),
+            mobility=mobility, setups=setups,
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
             damage_split=damage_split(stats),
@@ -242,6 +248,36 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             progress({"stage": stage_key, "step": "done", "label": f"{guide.dps:,.0f} mapping DPS",
                       "dps": round(guide.dps, 1), "boss_dps": round(boss_dps, 1)})
         return guide
+
+
+def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], movement: list[str], metric: str,
+            slots: int, used: set[str], log=lambda *a: None) -> list[dict]:
+    """Supports for every skill besides the main one, so the build is complete, not just its main attack.
+
+    Spirit and utility skills (auras, heralds, curses, banners) are scored by what they do for the main skill:
+    the main skill stays main while their supports are tried (keep_main). The movement skill gets its own group
+    and is scored on uses per second per mana spent. Each support gem is used once in the whole build, as in game.
+    """
+    groups = pob.send("groups")["groups"]
+    by_skill = {g["gems"][0]: g["group"] for g in groups if g["gems"] and g["group"] != main_group}
+    setups = []
+    todo = [(n, "spirit") for n in spirit] + [(u["skill"], "utility") for u in utility]
+    for name, role in todo:
+        gid = by_skill.get(name)
+        if not gid:
+            continue
+        res = optimise_supports(pob, gid, name, slots=slots, metric=metric, exclude=used, keep_main=True, log=log)
+        chosen = res[0].supports if res else []
+        used |= set(chosen)
+        setups.append({"skill": name, "role": role, "supports": chosen})
+    for name in movement:
+        gid = pob.add_skill([name], main=False)["group"]
+        res = optimise_supports(pob, gid, name, slots=slots, metric="movement", exclude=used, log=log)
+        chosen = res[0].supports if res else []
+        used |= set(chosen)
+        setups.append({"skill": name, "role": "movement", "supports": chosen})
+        pob.send("set_main", group=main_group)
+    return setups
 
 
 def build_guide(spec: dict, stages: list[str] | None = None, log=print, progress=None) -> list[StageGuide]:

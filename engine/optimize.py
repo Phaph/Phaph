@@ -77,6 +77,11 @@ def metric_for(mode: str, ailment: str | None = None) -> str:
 
 
 def score_of(out: dict, field_name: str) -> float:
+    if field_name == "movement":
+        # A movement skill: more uses per second, and cheaper to use. Damage doesn't matter here. Paying in life
+        # (Bloodletting-style supports) is a cost too, not a saving.
+        cost = sum(max(out.get(k, 0) or 0, 0) for k in ("ManaCost", "LifeCost", "ESCost"))
+        return (out.get("Speed", 0) or 0) * 100 / (100 + cost)
     if field_name == "total":
         return total_dps(out)
     if field_name == "mapping":
@@ -110,6 +115,7 @@ def optimise_supports(
     allow_conditional: bool = False,
     exclude: set[str] | None = None,
     shortlist: dict | None = None,
+    keep_main: bool = False,
     log=print,
 ) -> list[Result]:
     """Find the support set that maximises `metric` for the skill in `group`.
@@ -126,7 +132,8 @@ def optimise_supports(
     """
     field_name = METRICS.get(metric, metric)
     fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
-        + ([] if field_name in ("total", "mapping") or "+" in field_name or field_name in AILMENT_FIELD else [field_name])
+        + (["Speed", "ManaCost", "LifeCost", "ESCost"] if field_name == "movement" else
+           [] if field_name in ("total", "mapping") or "+" in field_name or field_name in AILMENT_FIELD else [field_name])
     gems = pob.list_gems("support")
     family = {g["name"]: g.get("family") or g["name"] for g in gems}
     skip = set(exclude or ())
@@ -143,14 +150,14 @@ def optimise_supports(
         pool = [n for n in shortlist[shortlist_key] if n not in skip]
 
     t0 = time.time()
-    base = pob.try_skill(group, [active], fields)
+    base = pob.try_skill(group, [active], fields, keep_main=keep_main)
     base_score = score_of(base["output"], field_name)
     log(f"Base {active}: {metric} DPS = {base_score:,.0f}")
 
     # Screen every support once on its own: drop ones that don't support the skill or add nothing.
     solo = {}
     for name in pool:
-        res = pob.try_skill(group, [active, name], fields)
+        res = pob.try_skill(group, [active, name], fields, keep_main=keep_main)
         if res["supported"].get(name):  # skip gems PoB says don't apply
             solo[name] = score_of(res["output"], field_name)
     ranked = sorted((n for n, s in solo.items() if s > base_score * (1 + min_gain)), key=lambda n: -solo[n])
@@ -173,7 +180,7 @@ def optimise_supports(
                 combo = tuple(sorted(state.supports + [name]))
                 if combo in scored:
                     continue
-                res = pob.try_skill(group, [active, *combo], fields)
+                res = pob.try_skill(group, [active, *combo], fields, keep_main=keep_main)
                 if not all(res["supported"].get(s) for s in combo) or res.get("warnings"):
                     continue
                 scored[combo] = Result(list(combo), score_of(res["output"], field_name), res["output"])
@@ -186,6 +193,6 @@ def optimise_supports(
         log(f"{depth + 1} supports: {best.score:,.0f} ({best.score / base_score:.2f}x) {best.supports}")
 
     # Leave the build holding the winning setup.
-    pob.try_skill(group, [active, *best.supports], fields)
+    pob.try_skill(group, [active, *best.supports], fields, keep_main=keep_main)
     log(f"Done in {time.time() - t0:.1f}s")
     return frontier

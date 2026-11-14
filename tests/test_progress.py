@@ -56,3 +56,11 @@ def test_damage_split():
 def test_damage_split_minions_and_empty():
     assert damage_split({"MinionDPS": 5000, "MinionDotDPS": 100}) == {"minion": 5100}
     assert damage_split({}) == {}
+
+
+def test_movement_metric_counts_life_cost():
+    from optimize import score_of
+    mana = score_of({"Speed": 2.0, "ManaCost": 20}, "movement")
+    blood = score_of({"Speed": 2.0, "ManaCost": 0, "LifeCost": 30}, "movement")
+    assert blood < mana
+    assert score_of({"Speed": 3.0, "ManaCost": 20}, "movement") > mana

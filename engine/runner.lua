@@ -328,6 +328,17 @@ end
 
 -- Replace the gems of an existing group in place and return chosen output fields.
 -- Used by the optimiser so each candidate costs one recalculation.
+-- The build's skill groups: index, gem names in order, and whether it is the main group.
+function handlers.groups(cmd)
+	local out = {}
+	for i, g in ipairs(build.skillsTab.socketGroupList) do
+		local gems = {}
+		for _, gem in ipairs(g.gemList) do table.insert(gems, gem.nameSpec) end
+		table.insert(out, { group = i, gems = gems, main = build.mainSocketGroup == i })
+	end
+	return { groups = out }
+end
+
 function handlers.try_skill(cmd)
 	local list = build.skillsTab.socketGroupList
 	local old = list[cmd.group]
