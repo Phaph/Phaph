@@ -3,6 +3,7 @@
 Endpoints:
   GET  /health
   GET  /catalog              classes, ascendancies, skills, weapon types, budgets, stages
+  GET  /icons                icon links for uniques, item bases and gems
   POST /guides               build guide for one spec -> job
   POST /compare              compare 1-3 specs at a budget -> job
   POST /parse                prompt text -> /generate request (instant, keyword based)
@@ -225,6 +226,15 @@ STATIC = Path(__file__).resolve().parent / "static"
 def index():
     """The website: one page that talks to this API."""
     return FileResponse(STATIC / "index.html")
+
+
+@app.get("/icons")
+def icons():
+    """Icon links for uniques, item bases and gems (GGG's image server). Built by engine/tools/fetch_icons.py."""
+    path = ROOT / "engine" / "data" / "icons.json"
+    if not path.exists():
+        return {"uniques": {}, "bases": {}, "gems": {}}
+    return FileResponse(path, media_type="application/json", headers={"Cache-Control": "public, max-age=86400"})
 
 
 @app.get("/health")

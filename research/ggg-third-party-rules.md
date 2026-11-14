@@ -35,7 +35,7 @@ Sources:
 | Meta tags (7(g)) | OK. The `<title>` says "PoE 2" and the description says "Path of Building", both visible text describing what the site is for. Don't stuff GGG names into keywords or hidden text. |
 | API rules (User-Agent, rate limits) | Not used yet. Only matters if we later call GGG's API. |
 | Character import via OAuth | Not possible for now: GGG isn't accepting new OAuth apps. Players paste a PoB code instead, which needs no GGG access at all. |
-| Item and gem icons | Not shown on the site today. poe.ninja's API returns icon URLs on `web.poecdn.com` (GGG's CDN), and fan sites commonly hotlink them. GGG publishes no asset or fan-art policy I could find, so if we add icons: hotlink from `web.poecdn.com` rather than re-hosting, keep the app free, and keep the non-affiliation line. Asset rules are researched in more depth under RESEARCH_BRIEF section 1. |
+| Item and gem icons | Shown on the site (gear plates, skills, supports). Loaded straight from GGG's image server (`web.poecdn.com`), never copied: the links come from poe.ninja (`engine/tools/fetch_icons.py`), the same links poe.ninja itself shows. GGG publishes no asset policy; this matches what major fan sites do. Keep the app free and the non-affiliation line, and don't use GGG art as the site's own branding (the logo and mark are original). Passive-tree icons aren't shown: no source gives ready links for them. |
 
 ## Other sources we depend on
 - **Path of Building Community (PoE 2):** MIT licence. Credited and linked in the footer. Keep the licence file in the Docker image (it comes with the cloned repo in `engine/vendor`).

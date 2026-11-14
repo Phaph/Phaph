@@ -173,6 +173,25 @@ tr.best td { color: var(--brass-hi); }
 .item .slot { font: italic 15px var(--body); color: var(--muted); }
 .item .base { color: var(--brass-hi); font: 600 24px/1.05 var(--display); }
 .item.unique .base { color: #e2913f; }
+/* Item art sits in an inventory cell, like the game's own grid. */
+.item-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: start; }
+.item-head > div { display: grid; gap: 4px; min-width: 0; }
+.art { width: 64px; height: 64px; display: grid; place-items: center; border-radius: 2px; margin-top: 8px;
+  background: radial-gradient(circle at 50% 40%, #1d2330, #0d0f14 75%); box-shadow: inset 0 0 0 1px #2b3140, inset 0 2px 6px rgba(0,0,0,.7); }
+.item.unique .art { background: radial-gradient(circle at 50% 40%, #33240f, #120c05 75%); box-shadow: inset 0 0 0 1px #5a3d14, inset 0 2px 6px rgba(0,0,0,.7); }
+.art img { max-width: 58px; max-height: 58px; object-fit: contain; filter: drop-shadow(0 2px 3px rgba(0,0,0,.6)); }
+/* Gems: a small icon in front of the name, the way they sit in the game's skill panel. */
+.gem { display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
+.gem img { width: 24px; height: 24px; object-fit: contain; flex: none; }
+/* No icon known (yet): an empty socket keeps the names lined up. */
+.gems .gem:not(:has(img))::before { content: ""; width: 12px; height: 12px; margin: 0 6px 0 6px; flex: none; transform: rotate(45deg);
+  border: 1px solid #4a4239; background: #12100e; box-shadow: inset 0 0 3px rgba(0,0,0,.8); }
+.gems { display: flex; flex-wrap: wrap; gap: 4px 14px; align-items: center; }
+.gems .plus { color: var(--faint); }
+.gem.main img { width: 30px; height: 30px; }
+.skillhead { display: flex; align-items: center; gap: 14px; }
+.skillhead img { width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 3px 6px rgba(0,0,0,.6)); }
+.cand .name img, td .gem img { width: 22px; height: 22px; vertical-align: -5px; margin-right: 6px; }
 .item ol { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 3px; }
 /* Each affix is struck onto the item in the order to buy it, hot first, then cooling. */
 .affix { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; font-size: 16px; padding: 2px 4px; margin: 0 -4px; border-radius: 2px; }
@@ -406,7 +425,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
   }
   function syncAll() {
     syncs.forEach(f => f()); weaponSyncs.forEach(f => f()); syncBudget();
-    $("skillField").hidden = !state.skill; $("skillName").textContent = state.skill || "";
+    $("skillField").hidden = !state.skill; $("skillName").innerHTML = state.skill ? gem(state.skill) : "";
   }
   function applyParse(out) {
     const r = out.request;
@@ -528,7 +547,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
           row = document.createElement("div"); row.className = "cand"; row.dataset.key = k;
           // Fade in once. Re-ranking moves the row in the DOM, which would otherwise replay the fade.
           row.addEventListener("animationend", () => { row.style.animation = "none"; }, { once: true });
-          row.innerHTML = `<span class="name">${esc(c.skill)} <span>· ${esc(c.ascendancy || c.weapon)}${c.ascendancy ? ` · ${esc(c.weapon)}` : ""}</span></span>
+          row.innerHTML = `<span class="name">${img(gemUrl(c.skill))}${esc(c.skill)} <span>· ${esc(c.ascendancy || c.weapon)}${c.ascendancy ? ` · ${esc(c.weapon)}` : ""}</span></span>
             <span class="score"></span><span class="bar"><i></i></span>`;
         }
         board.appendChild(row);   // re-append in rank order
@@ -683,7 +702,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       <p class="muted">${result.skills_considered.length} skills tested on every weapon they can use, then the best on each ascendancy. Pick another row to rebuild with it, or tick up to 3 to compare them at your budget.</p></div>
       <div class="tablewrap"><table><thead><tr><th></th><th>Skill</th><th>Ascendancy</th><th>Weapon</th><th class="num">vs best</th><th></th></tr></thead><tbody>
       ${rows.map((r, i) => `<tr class="${i === 0 ? "best" : ""}"><td><input type="checkbox" aria-label="Compare ${esc(r.skill)} ${esc(r.ascendancy)}" data-i="${i}"></td>
-        <td>${esc(r.skill)}</td><td>${esc(r.ascendancy)}</td><td>${esc(r.weapon_type)}</td><td class="num">${pct(r.relative)}</td>
+        <td>${gem(r.skill)}</td><td>${esc(r.ascendancy)}</td><td>${esc(r.weapon_type)}</td><td class="num">${pct(r.relative)}</td>
         <td>${i === 0 ? '<span class="muted">Recommended</span>' : `<button class="link" data-asc="${esc(r.ascendancy)}" data-skill="${esc(r.skill)}">Use this</button>`}</td></tr>`).join("")}
       </tbody></table></div>
       <button class="chip" id="cmpBtn" type="button">Compare ticked builds</button>`;
@@ -719,12 +738,12 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
   }
 
   function renderGuide(plan, res) {
-    state.guide = res; shownGear = null; shownStage = null;
+    state.guide = res; state.plan = plan; shownGear = null; shownStage = null;
     const stages = res.stages;
     const end = stages.find(s => s.stage === "end") || stages[stages.length - 1];
     $("guide").hidden = false;
     $("guide").innerHTML = `
-      <div style="display:grid;gap:6px"><span class="eyebrow">Your build</span><h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2>
+      <div style="display:grid;gap:6px"><span class="eyebrow">Your build</span><div class="skillhead">${img(gemUrl(plan.spec.skill))}<h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2></div>
       ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}</div>
       ${end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
         <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
@@ -740,6 +759,23 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     });
     $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
   }
+
+  // Icons: links to GGG's own image server, gathered by engine/tools/fetch_icons.py and served at /icons.
+  // Support gems come in tiers ("Bleed II"); a name without the numeral matches any tier.
+  let ICONS = { uniques: {}, bases: {}, gems: {} }, GEM_LOOSE = {};
+  const loose = n => String(n || "").replace(/\s+[IVX]+$/, "").toLowerCase();
+  fetch("/icons").then(r => r.json()).then(d => {
+    ICONS = d;
+    for (const [n, u] of Object.entries(d.gems || {})) GEM_LOOSE[loose(n)] ??= u;
+    if (state.guide && shownStage) {   // a guide is already on screen: redraw it with icons
+      const st = state.guide.stages.find(x => x.stage === shownStage);
+      if (st && state.plan) { shownGear = null; renderStage(state.plan, st); }
+    }
+  }).catch(() => {});
+  const gemUrl = n => ICONS.gems?.[n] || GEM_LOOSE[loose(n)] || null;
+  const img = (url, size) => url ? `<img src="${esc(url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"${size ? ` width="${size}" height="${size}"` : ""} onerror="this.remove()">` : "";
+  const gem = (n, cls = "") => `<span class="gem ${cls}">${img(gemUrl(n))}${esc(n)}</span>`;
+  const gemRow = (main, supports) => `<span class="gems">${main ? gem(main, "main") + (supports.length ? '<span class="plus">+</span>' : "") : ""}${supports.map(x => gem(x)).join("")}</span>`;
 
   // Gear plates. Against the stage shown before (prev), unchanged lines stay still and only upgrades
   // are struck again, so switching stages shows each slot improving.
@@ -761,8 +797,9 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       const baseCls = baseChanged ? "base stamp" : "base";
       const baseStyle = baseChanged ? ` style="animation-delay:${step(120)}ms"` : "";
       if (g.unique) {
-        return `<div class="item unique"><span class="slot">${esc(g.slot)}</span><span class="${baseCls}"${baseStyle}>${esc(name)}</span>
-          <span class="muted" style="font-size:15px">Unique · ${esc(g.price_note || "")}</span></div>`;
+        return `<div class="item unique"><div class="item-head"><div><span class="slot">${esc(g.slot)}</span><span class="${baseCls}"${baseStyle}>${esc(name)}</span>
+          <span class="muted" style="font-size:15px">Unique · ${esc(g.price_note || "")}</span></div>
+          ${ICONS.uniques?.[name] ? `<span class="art">${img(ICONS.uniques[name])}</span>` : ""}</div></div>`;
       }
       const had = new Set(before && !baseChanged ? before.affixes : []);
       const lines = g.affixes.map((a, i) => {
@@ -771,8 +808,9 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
         return `<li class="affix${fresh ? " stamp" : ""}"${st}><span class="n">${i + 1}</span><span>${esc(a)}</span>${tierMarks((g.affix_info || [])[i])}</li>`;
       }).join("");
       const upgraded = before && !baseChanged ? g.affixes.filter(a => !had.has(a)).length : 0;
-      return `<div class="item"><span class="slot">${esc(g.slot)}${upgraded ? ` <span class="upg">· ${upgraded} ${forward ? "upgraded" : "changed"}</span>` : ""}</span>
-        <span class="${baseCls}"${baseStyle}>${esc(name)}</span><ol>${lines}</ol></div>`;
+      return `<div class="item"><div class="item-head"><div><span class="slot">${esc(g.slot)}${upgraded ? ` <span class="upg">· ${upgraded} ${forward ? "upgraded" : "changed"}</span>` : ""}</span>
+        <span class="${baseCls}"${baseStyle}>${esc(name)}</span></div>
+        ${ICONS.bases?.[name] ? `<span class="art">${img(ICONS.bases[name])}</span>` : ""}</div><ol>${lines}</ol></div>`;
     }).join("");
   }
 
@@ -783,12 +821,12 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     const st = s.stats || {};
     const res = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round(st[k] || 0)).join(" / ");
     const kv = [];
-    kv.push(["Mapping", `${esc(plan.spec.skill)} + ${s.supports.map(esc).join(", ")}`]);
-    if (s.boss_skill) kv.push(["Bossing", `${esc(s.boss_skill)}${s.boss_weapon_set === 2 ? " (weapon set 2)" : ""} + ${s.boss_supports.map(esc).join(", ")}`]);
-    else if (s.boss_supports.length) kv.push(["Bossing swap", `${esc(plan.spec.skill)} + ${s.boss_supports.map(esc).join(", ")}`]);
-    if (s.spirit.length) kv.push(["Spirit", s.spirit.map(esc).join(", ")]);
-    if (s.utility.length) kv.push(["Utility", s.utility.map(u => `${esc(u.skill)}${u.weapon_set === 2 ? ` (weapon set 2, ${esc(u.weapon)})` : ""} <span class="muted">${u.gain > 0 ? "+" : ""}${pct(u.gain)}</span>`).join(", ")]);
-    if (s.mobility.length) kv.push(["Movement", s.mobility.map(esc).join(" or ")]);
+    kv.push(["Mapping", gemRow(plan.spec.skill, s.supports)]);
+    if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
+    else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
+    if (s.spirit.length) kv.push(["Spirit", gemRow(null, s.spirit)]);
+    if (s.utility.length) kv.push(["Utility", `<span class="gems">${s.utility.map(u => `${gem(u.skill)}${u.weapon_set === 2 ? ` <span class="muted">(weapon set 2, ${esc(u.weapon)})</span>` : ""} <span class="muted">${u.gain > 0 ? "+" : ""}${pct(u.gain)}</span>`).join("")}</span>`]);
+    if (s.mobility.length) kv.push(["Movement", `<span class="gems">${s.mobility.map(m => gem(m)).join('<span class="plus">or</span>')}</span>`]);
     if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = `

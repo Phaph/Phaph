@@ -160,3 +160,9 @@ def test_parse_prompt(client):
     # The parsed request fits /generate's schema as is.
     from api.app import GenerateRequest
     GenerateRequest.model_validate(out["request"])
+
+
+def test_icons(client):
+    r = client.get("/icons")
+    assert r.status_code == 200
+    assert set(r.json()) >= {"uniques", "bases", "gems"}

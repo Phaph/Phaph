@@ -32,7 +32,8 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 2. **Check accuracy.** Load your PoB code in the engine and in the PoB app, and compare DPS, life, EHP and resistances. Fix any gaps.
 3. **Pull real data from poe.ninja** (the PC's network isn't blocked):
    - top builds as starting points for the optimiser
-   - unique prices, so uniques go into gear plans at the right budget
+   - unique prices: done (`engine/tools/fetch_prices.py`)
+   - icons for uniques, item bases and gems: done (`engine/tools/fetch_icons.py`, links to GGG's image server). Passive icons still missing: no ready-made links
    - real divine prices to replace the budget estimates
 4. **Tune enemy settings and the mapping clear score** against real play. Mapping vs bossing is built: bossing uses a pinnacle boss, mapping uses normal monsters plus our own area and projectile weighting.
 5. **Move the code to the new repo.**
