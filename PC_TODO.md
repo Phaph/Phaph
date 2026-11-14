@@ -6,10 +6,10 @@ Cheapest path: picker form (no Claude API at launch), hosted on Kyle's PC with a
 |---|---|---|
 | 1 | Website: done (`api/static/index.html`, served at `/`) | Claude (cloud) |
 | 2 | Start a local Claude Code session on the PC in this repo | Kyle |
-| 3 | Real unique prices from poe.ninja into `engine/data/unique_prices.json` (until then unpriced uniques only appear on "No limit") | Local session |
-| 4 | Accuracy check: one of Kyle's builds in the engine vs the PoB app | Kyle + local session |
-| 5 | GGG third-party tool rules; credits (PoB MIT, GGG trademark) are in the site footer | Local session |
-| 6 | Run Docker on the PC + Cloudflare Tunnel + domain (~$10/yr). Set `DAILY_JOB_LIMIT` | Kyle + local session |
+| 3 | Done: 373 unique prices from poe.ninja (Forbidden Rites, 2026-11-14) in `engine/data/unique_prices.json`. Refresh with `engine/tools/fetch_prices.py`. Left: check names match PoB's unique list once the engine runs | Local session |
+| 4 | Accuracy check: tool ready (`engine/tools/accuracy_check.py`, see DEPLOY_PC.md section 3). Waiting on Docker + one of Kyle's PoB codes | Kyle + local session |
+| 5 | Done: `research/ggg-third-party-rules.md`. Footer now uses GGG's exact non-affiliation line and credits poe.ninja | Local session |
+| 6 | Ready: `docker-compose.yml` (app + Cloudflare Tunnel), `.env.example` (`DAILY_JOB_LIMIT=100`), steps in DEPLOY_PC.md. Kyle: install WSL + Docker Desktop, Cloudflare account, domain, tunnel token | Kyle + local session |
 | 7 | Friends beta, then public. Optionally pre-build popular themes overnight so most visits hit the cache | Kyle |
 
 First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BRIEF.md, then do steps 3-6 of the go-public plan."

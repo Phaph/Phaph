@@ -295,7 +295,7 @@ def unique_prices() -> dict:
         import json
         from pathlib import Path
         try:
-            _PRICES = json.loads((Path(__file__).parent / "data" / "unique_prices.json").read_text())
+            _PRICES = json.loads((Path(__file__).parent / "data" / "unique_prices.json").read_text(encoding="utf-8"))
         except (OSError, ValueError):
             _PRICES = {}
     return _PRICES

@@ -52,7 +52,7 @@ Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We d
 - Conditional bonuses the build keeps up (`auto_config`): hit/used skill recently, killed recently while mapping, enemy ailments kept up 90%+ of the time, crit recently at 40%+ crit, charges the build says it gains, armour break, exposure. Each guide lists them with the reason.
 - Damage from every source through PoB's Full DPS (minions with their counts, heralds, both skills).
 
-Not yet: jewels, flasks and charms, weapon-set passive points, unique-granted skills, item prices (uniques without a known price are only suggested at medium budget and above), attribute requirements, meta/trigger setups (Cast on X), and skill interactions PoB doesn't model (skills that only matter because another skill consumes their effect).
+Not yet: jewels, flasks and charms, weapon-set passive points, unique-granted skills, uniques without a poe.ninja price (only suggested on "No limit"), attribute requirements, meta/trigger setups (Cast on X), and skill interactions PoB doesn't model (skills that only matter because another skill consumes their effect).
 
 ## Minions
 Minion damage lives in PoB's separate minion output; the engine exposes it as `MinionDPS` / `MinionDotDPS` and counts it in every score.
@@ -64,6 +64,6 @@ Minion damage lives in PoB's separate minion output; the engine exposes it as `M
 - Tree search is greedy: from the same start, a different path choice once gave 138k DPS instead of 120k. A look-ahead search could find those.
 - Support rules: the optimiser rejects any combo that triggers a PoB rule warning (e.g. lineage copy limit). Pass `exclude` for gems used in other skills.
 - Conditional supports (Hit and Run, Glory gems, combo finishers; 12 in total) are skipped by default because PoB counts their bonus but not their downtime.
-- Gear is rares only. Uniques need price data (poe.ninja) to place them in the right budget stage. Budgets in divines are estimates until then.
+- Unique prices come from poe.ninja (`tools/fetch_prices.py`, one price per name, corrupted and thinly listed copies skipped). Budget tier divine limits are still estimates.
 - Leveling stage is one snapshot at level 55, not a step-by-step leveling route.
 - New 1.0 content (Shadow, new gems, daggers' new skills) needs a PoB update first.

@@ -191,7 +191,12 @@ app = FastAPI(title="PoE 2 Build Optimizer", lifespan=lifespan)
 
 
 def _client(request: Request) -> str:
-    return request.headers.get("x-forwarded-for", request.client.host if request.client else "unknown").split(",")[0]
+    # Behind Cloudflare (tunnel or proxy) CF-Connecting-IP is the visitor's real IP, set by Cloudflare.
+    # X-Forwarded-For's first entry is whatever the visitor sent, so it is only a fallback.
+    cf = request.headers.get("cf-connecting-ip")
+    if cf:
+        return cf.strip()
+    return request.headers.get("x-forwarded-for", request.client.host if request.client else "unknown").split(",")[0].strip()
 
 
 def _submit(request: Request, kind: str, payload: dict) -> dict:

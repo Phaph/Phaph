@@ -136,3 +136,17 @@ def test_website_is_served(client):
     r = client.get("/")
     assert r.status_code == 200 and "text/html" in r.headers["content-type"]
     assert "Forge my build" in r.text and "Not affiliated with" in r.text
+
+
+def test_client_id_prefers_cloudflare_header():
+    """Behind the Cloudflare Tunnel a faked X-Forwarded-For must not dodge the per-client limit."""
+    from starlette.requests import Request
+    from api.app import _client
+
+    def req(headers):
+        return Request({"type": "http", "client": ("172.18.0.3", 5000),
+                        "headers": [(k.encode(), v.encode()) for k, v in headers.items()]})
+
+    assert _client(req({"cf-connecting-ip": "203.0.113.7", "x-forwarded-for": "1.2.3.4, 203.0.113.7"})) == "203.0.113.7"
+    assert _client(req({"x-forwarded-for": "198.51.100.2, 10.0.0.1"})) == "198.51.100.2"
+    assert _client(req({})) == "172.18.0.3"

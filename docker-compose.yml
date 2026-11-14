@@ -1,0 +1,32 @@
+# Run the site on this PC and put it online through a Cloudflare Tunnel.
+#   1. Copy .env.example to .env and fill in TUNNEL_TOKEN (see DEPLOY_PC.md).
+#   2. docker compose up -d --build
+# The app is only reachable on this PC at http://127.0.0.1:8000; the public reaches it through the tunnel,
+# so no router port forwarding is needed.
+services:
+  app:
+    build: .
+    image: poe2-optimizer
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      DAILY_JOB_LIMIT: ${DAILY_JOB_LIMIT:-100}
+      MAX_ACTIVE_JOBS_PER_CLIENT: ${MAX_ACTIVE_JOBS_PER_CLIENT:-2}
+      JOB_WORKERS: ${JOB_WORKERS:-2}
+    volumes:
+      - jobs:/data
+    # Leave CPU for games and everything else on the PC.
+    cpus: ${APP_CPUS:-8}
+
+  tunnel:
+    image: cloudflare/cloudflared:2026.11.0
+    restart: unless-stopped
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${TUNNEL_TOKEN:?set TUNNEL_TOKEN in .env}
+    depends_on:
+      - app
+
+volumes:
+  jobs:

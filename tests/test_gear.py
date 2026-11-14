@@ -78,9 +78,37 @@ def test_caster_caps_resistances_when_items_are_full(pob):
         assert stats[k] >= 75, k
 
 
-def test_unpriced_uniques_only_on_no_limit():
+def test_unpriced_uniques_only_on_no_limit(monkeypatch):
     """Regression: Mageblood was suggested for a 5-30 divine build because it had no price."""
+    import gear
     from gear import _unique_allowed
+    monkeypatch.setattr(gear, "_PRICES", {})
     assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "medium"))[0] is False
     assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "high"))[0] is False
     assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "unlimited")) == (True, "price unknown")
+
+
+def test_priced_uniques_follow_budget(monkeypatch):
+    import gear
+    from gear import _unique_allowed
+    monkeypatch.setattr(gear, "_PRICES", {"Mageblood": 112, "Headhunter": 8.5})
+    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "high")) == (False, "~112 div")
+    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "unlimited")) == (True, "~112 div")
+    assert _unique_allowed("Headhunter, Heavy Belt", make_stage("end", "medium")) == (True, "~8.5 div")
+    assert _unique_allowed("Headhunter, Heavy Belt", make_stage("end", "budget"))[0] is False
+
+
+def test_price_picker_skips_fixed_and_corrupted_listings():
+    import sys
+    from pathlib import Path
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "engine" / "tools"))
+    from fetch_prices import pick_prices
+    lines = [
+        {"name": "Winter's Bite", "baseType": "Glass Shank", "primaryValue": 45185000, "listingCount": 1},
+        {"name": "Voices", "baseType": "Sapphire", "primaryValue": 1329, "listingCount": 70, "corrupted": True},
+        {"name": "Runeseeker's Call", "baseType": "Runic Fork", "primaryValue": 6455, "listingCount": 69},
+        {"name": "Runeseeker's Call", "baseType": "Runemastered Runic Fork", "primaryValue": 1620, "listingCount": 34},
+        {"name": "Temporalis", "baseType": "Runemastered Silk Robe", "primaryValue": 6876, "listingCount": 7},
+        {"name": "Widowhail", "baseType": "Crude Bow", "primaryValue": 0.00156, "listingCount": 3531},
+    ]
+    assert pick_prices(lines) == {"Runeseeker's Call": 6455, "Temporalis": 6876, "Widowhail": 0.002}
