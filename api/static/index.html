@@ -7,171 +7,272 @@
 <meta name="description" content="Pick a budget and a build idea. Whetstone tests thousands of versions in Path of Building and hands back the strongest one.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Manrope:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
-/* Same soot-and-brass world as the concept board. Colour is reserved for damage types and rating. */
+/* Smithy: a workbench in Wraeclast. Forged iron, ember light, brass where a hand would touch it.
+   Bright colour is kept for what the game itself colours: damage types. */
 :root {
-  --ground: #121315; --slate: #1b1d21; --slate2: #23252a; --rule: #2c2f35; --ink: #e6e1d8; --muted: #9b968d;
-  --brass: #c9a25c; --good: #8fbf7a; --bad: #c4785f;
-  --phys: #c8b9a0; --fire: #e0703a; --cold: #6fb4d8; --light: #e8d45a; --chaos: #a274c9;
-  --display: "IM Fell English SC", Georgia, serif;
-  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+  --ground: #0e0d0c; --iron: #171513; --iron2: #1f1c19; --iron3: #2a2622; --seam: #070606; --edge: #3a342d;
+  --ink: #ece4d6; --muted: #a39a8b; --faint: #6f675c;
+  --brass: #d0a45a; --brass-hi: #f0c97f; --brass-lo: #8a6528; --ember: #e0703a;
+  --good: #9cc183; --bad: #d4805f;
+  --phys: #cdbda2; --fire: #e8733a; --cold: #74b9dc; --light: #ecd75c; --chaos: #a77ad0;
+  --display: "Grenze Gotisch", "Iowan Old Style", Georgia, serif;
+  --body: "Alegreya Sans", "Gill Sans", "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   --ease: cubic-bezier(.2,.7,.2,1);
+  --heat: .55;
   color-scheme: dark;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 html, body { margin: 0; }
-body { background: var(--ground); color: var(--ink); font: 15px/1.6 var(--body); }
-.wrap { max-width: 1080px; margin: 0 auto; padding-block: 32px 80px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
-h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; }
-h1 { font-size: clamp(34px, 5.5vw, 56px); line-height: 1.02; }
-h2 { font-size: 28px; } h3 { font-size: 19px; }
+body { background: var(--ground); color: var(--ink); font: 18px/1.55 var(--body); min-height: 100vh; position: relative; overflow-x: hidden; }
+/* Grain: fine noise over everything, like cast iron. */
+body::before { content: ""; position: fixed; inset: 0; pointer-events: none; z-index: 0; opacity: .55; mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+/* Ember light from the forge below. It burns hotter while a build is on the anvil. */
+body::after { content: ""; position: fixed; left: -10%; right: -10%; bottom: -30vh; height: 75vh; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(232,115,58,.32), rgba(208,164,90,.08) 45%, transparent 70%);
+  opacity: var(--heat); transition: opacity 1.6s var(--ease); }
+body.working { --heat: 1; }
+body.working::after { animation: breathe 3.2s ease-in-out infinite; }
+@keyframes breathe { 50% { opacity: .78; } }
+.wrap { position: relative; z-index: 1; max-width: 1040px; margin: 0 auto; padding-block: 28px 96px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 44px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; letter-spacing: .005em; }
+h1 { font-size: clamp(44px, 8vw, 84px); line-height: .92; font-weight: 700; }
+h2 { font-size: clamp(30px, 4.4vw, 40px); line-height: 1; }
+h3 { font-size: 24px; line-height: 1.05; }
 p { margin: 0; }
+a { color: var(--brass); }
 .muted { color: var(--muted); }
-.eyebrow { font: 600 11px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--brass); }
 .mono { font-family: var(--mono); font-variant-numeric: tabular-nums; }
-button, select, input { font: inherit; color: inherit; }
-:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
-.panel { background: var(--slate); border: 1px solid var(--rule); border-radius: 3px; padding: 20px; display: grid; gap: 18px; min-width: 0; }
-.field { display: grid; gap: 8px; }
-.field > label, .field > span.label { font: 600 12px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-.chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.chip { background: transparent; border: 1px solid var(--rule); border-radius: 2px; padding: 6px 12px; font: 13px var(--mono); cursor: pointer; color: var(--muted); }
-.chip:hover { color: var(--ink); }
-.chip[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); background: var(--slate2); }
-.chip[data-dmg="physical"][aria-pressed="true"] { border-color: var(--phys); }
-.chip[data-dmg="fire"][aria-pressed="true"] { border-color: var(--fire); }
-.chip[data-dmg="cold"][aria-pressed="true"] { border-color: var(--cold); }
-.chip[data-dmg="lightning"][aria-pressed="true"] { border-color: var(--light); }
-.chip[data-dmg="chaos"][aria-pressed="true"] { border-color: var(--chaos); }
-select { background: var(--slate2); border: 1px solid var(--rule); border-radius: 2px; padding: 7px 10px; max-width: 100%; }
-.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
-.rungs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 6px; }
-.rung { background: none; border: 1px solid var(--rule); padding: 10px; text-align: left; cursor: pointer; display: grid; gap: 4px; min-width: 0; }
-.rung .coins { display: flex; gap: 2px; height: 14px; align-items: end; }
-.rung .coins i { width: 6px; background: var(--muted); border-radius: 1px; }
-.rung b { font: 600 13px var(--body); } .rung span { font: 11px var(--mono); color: var(--muted); }
-.rung[aria-pressed="true"] { border-color: var(--brass); }
-.rung[aria-pressed="true"] .coins i { background: var(--brass); }
+button, select, input, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--brass-hi); outline-offset: 3px; }
+/* Small voice above a heading: written, not stencilled. */
+.eyebrow { font: italic 500 17px/1.2 var(--body); color: var(--brass); letter-spacing: 0; }
+
+/* ---------- Masthead ---------- */
+.mast { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px 24px; align-items: center; }
+.mark { width: clamp(90px, 15vw, 150px); align-self: start; height: auto; color: var(--brass); filter: drop-shadow(0 2px 0 var(--seam)); grid-row: span 2; }
+.wordmark { font: 700 clamp(56px, 11vw, 120px)/.8 var(--display); letter-spacing: -.01em;
+  background: linear-gradient(180deg, #f6ead2 0%, #d8c3a0 46%, #9c8668 54%, #e2cfae 100%); -webkit-background-clip: text; background-clip: text; color: transparent;
+  filter: drop-shadow(0 2px 0 var(--seam)); }
+.mast .sub { color: var(--muted); max-width: 52ch; font-size: 19px; }
+.mast .sub b { color: var(--ink); font-weight: 500; }
+@media (max-width: 560px) { .mast { grid-template-columns: minmax(0, 1fr); } .mark { grid-row: auto; width: 64px; } }
+
+/* ---------- Forged rule with rivets, instead of boxes ---------- */
+.rule { height: 14px; position: relative; }
+.rule::before { content: ""; position: absolute; left: 0; right: 0; top: 6px; height: 2px; background: linear-gradient(90deg, transparent, var(--seam) 8%, var(--seam) 92%, transparent);
+  box-shadow: 0 1px 0 rgba(255,236,200,.06); }
+.rule::after { content: ""; position: absolute; left: 0; right: 0; top: 3px; height: 8px;
+  background: radial-gradient(circle at 4px 4px, #4a4239 0 2.5px, #1a1714 3px, transparent 3.6px) 6% 0 / 8px 8px no-repeat,
+              radial-gradient(circle at 4px 4px, #4a4239 0 2.5px, #1a1714 3px, transparent 3.6px) 94% 0 / 8px 8px no-repeat; }
+.panel { display: grid; gap: 22px; min-width: 0; padding-top: 34px; position: relative; }
+.panel::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 14px;
+  background:
+    radial-gradient(circle at 4px 4px, #4a4239 0 2.5px, #1a1714 3px, transparent 3.6px) 0 3px / 8px 8px no-repeat,
+    radial-gradient(circle at 4px 4px, #4a4239 0 2.5px, #1a1714 3px, transparent 3.6px) 100% 3px / 8px 8px no-repeat,
+    linear-gradient(var(--seam), var(--seam)) 14px 6px / calc(100% - 28px) 2px no-repeat; }
+#form { padding-top: 0; }
+#form::before { display: none; }
+
+/* ---------- The prompt: a line cut into the metal ---------- */
+.prompt { display: grid; gap: 12px; }
+.prompt label { font: 600 clamp(34px, 5vw, 48px)/1 var(--display); color: var(--ink); }
+.prompt textarea { width: 100%; min-height: 0; resize: none; overflow: hidden; background: transparent; border: 0; padding: 10px 2px 14px;
+  font: 400 clamp(22px, 3.2vw, 30px)/1.3 var(--body); color: var(--ink); caret-color: var(--ember);
+  border-bottom: 2px solid var(--seam); box-shadow: 0 1px 0 rgba(255,236,200,.07); transition: border-color 400ms var(--ease); }
+.prompt textarea::placeholder { color: var(--faint); font-style: italic; }
+.prompt textarea:focus { outline: none; border-bottom-color: var(--brass-lo); }
+.readas { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-height: 30px; font-size: 16px; color: var(--muted); }
+.readas > span:first-child { font-style: italic; }
+/* Stamped brass tokens: what it understood. */
+.tag { font: 500 15px/1 var(--body); padding: 6px 10px 5px; color: #20180c; border-radius: 2px;
+  background: linear-gradient(180deg, var(--brass-hi), var(--brass) 55%, #b98a42); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(0,0,0,.25), 0 1px 0 var(--seam);
+  animation: stamp 420ms var(--ease) both; }
+.tag i { font-style: italic; color: #5a4220; }
+@keyframes stamp { from { transform: scale(1.12); opacity: 0; } 60% { transform: scale(.97); opacity: 1; } to { transform: none; } }
+.divider { display: flex; align-items: center; gap: 14px; font: italic 17px var(--body); color: var(--faint); }
+.divider::before, .divider::after { content: ""; flex: 1; height: 2px; background: var(--seam); box-shadow: 0 1px 0 rgba(255,236,200,.05); }
+
+/* ---------- Picker ---------- */
+.field { display: grid; gap: 10px; align-content: start; }
+.field > label, .field > span.label { font: 600 23px/1 var(--display); color: var(--ink); }
+.chips { display: flex; flex-wrap: wrap; gap: 7px; }
+/* Iron tags. Pressed ones get a brass edge and a little warmth. */
+.chip { border: 1px solid var(--edge); border-radius: 3px; padding: 7px 13px 6px; font: 500 16px/1.1 var(--body); cursor: pointer; color: var(--muted);
+  background: linear-gradient(180deg, var(--iron2), var(--iron)); box-shadow: inset 0 1px 0 rgba(255,236,200,.06), 0 2px 0 var(--seam);
+  transition: color 200ms, border-color 200ms, box-shadow 250ms var(--ease), transform 120ms; }
+.chip:hover { color: var(--ink); border-color: #4c443a; }
+.chip:active { transform: translateY(1px); box-shadow: inset 0 1px 0 rgba(255,236,200,.04), 0 1px 0 var(--seam); }
+.chip[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); background: linear-gradient(180deg, #2b241b, #1c1813);
+  box-shadow: inset 0 1px 0 rgba(255,220,160,.12), 0 2px 0 var(--seam), 0 0 18px rgba(208,164,90,.14); }
+.chip[data-dmg="physical"][aria-pressed="true"] { border-color: var(--phys); box-shadow: inset 0 1px 0 rgba(255,236,200,.1), 0 2px 0 var(--seam), 0 0 18px rgba(205,189,162,.16); }
+.chip[data-dmg="fire"][aria-pressed="true"] { border-color: var(--fire); box-shadow: inset 0 1px 0 rgba(255,236,200,.1), 0 2px 0 var(--seam), 0 0 18px rgba(232,115,58,.22); }
+.chip[data-dmg="cold"][aria-pressed="true"] { border-color: var(--cold); box-shadow: inset 0 1px 0 rgba(255,236,200,.1), 0 2px 0 var(--seam), 0 0 18px rgba(116,185,220,.2); }
+.chip[data-dmg="lightning"][aria-pressed="true"] { border-color: var(--light); box-shadow: inset 0 1px 0 rgba(255,236,200,.1), 0 2px 0 var(--seam), 0 0 18px rgba(236,215,92,.2); }
+.chip[data-dmg="chaos"][aria-pressed="true"] { border-color: var(--chaos); box-shadow: inset 0 1px 0 rgba(255,236,200,.1), 0 2px 0 var(--seam), 0 0 18px rgba(167,122,208,.22); }
+select { background: linear-gradient(180deg, var(--iron2), var(--iron)); border: 1px solid var(--edge); border-radius: 3px; padding: 8px 10px; max-width: 100%;
+  font: 500 16px var(--body); box-shadow: inset 0 1px 0 rgba(255,236,200,.05), 0 2px 0 var(--seam); }
+.row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px; }
+/* Budget: coins stacked on the bench. */
+.rungs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
+.rung { background: linear-gradient(180deg, var(--iron2), var(--iron)); border: 1px solid var(--edge); border-radius: 3px; padding: 12px; text-align: left; cursor: pointer;
+  display: grid; gap: 4px; min-width: 0; box-shadow: inset 0 1px 0 rgba(255,236,200,.05), 0 2px 0 var(--seam); transition: border-color 250ms, box-shadow 300ms var(--ease); }
+.rung .coins { display: flex; gap: 3px; height: 30px; align-items: end; min-width: 0; overflow: hidden; }
+.rung .coins i { flex: 0 1 11px; min-width: 4px; border-radius: 2px; transition: filter 400ms var(--ease); background: repeating-linear-gradient(0deg, #2c2721 0 1px, #9b8e7a 1px 2px, #73685a 2px 3.5px); }
+.rung b { font: 600 22px/1 var(--display); } .rung span { font-size: 14px; color: var(--muted); }
+.rung[aria-pressed="true"] { border-color: var(--brass); box-shadow: inset 0 1px 0 rgba(255,220,160,.12), 0 2px 0 var(--seam), 0 0 22px rgba(208,164,90,.16); }
+.rung[aria-pressed="true"] .coins i { background: repeating-linear-gradient(0deg, #5a3f12 0 1px, #f6d797 1px 2px, #c99a50 2px 3.5px); filter: drop-shadow(0 0 5px rgba(240,201,127,.4)); }
 @media (max-width: 620px) { .rungs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.go { justify-self: start; background: var(--brass); color: #17140e; border: 0; border-radius: 2px; padding: 11px 22px; font: 700 15px var(--body); cursor: pointer; }
-.go:disabled { opacity: .5; cursor: progress; }
-.link { background: none; border: 0; color: var(--brass); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; }
-.status { display: flex; align-items: center; gap: 12px; font: 13px var(--mono); color: var(--muted); }
-.spinner { width: 14px; height: 14px; border: 2px solid var(--rule); border-top-color: var(--brass); border-radius: 50%; animation: spin 1s linear infinite; }
+/* The forge button: a heavy brass plate. */
+.go { justify-self: start; position: relative; border: 0; border-radius: 3px; padding: 14px 34px 12px; cursor: pointer;
+  font: 700 28px/1 var(--display); color: #241a0b; letter-spacing: .01em;
+  background: linear-gradient(180deg, var(--brass-hi) 0%, var(--brass) 48%, #a87a35 52%, #c99a50 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -2px 0 rgba(0,0,0,.25), 0 3px 0 #4a3415, 0 8px 22px rgba(232,115,58,.18);
+  transition: transform 90ms, box-shadow 160ms; }
+.go:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -2px 0 rgba(0,0,0,.25), 0 3px 0 #4a3415, 0 10px 30px rgba(232,115,58,.32); }
+.go:active { transform: translateY(2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.25), 0 1px 0 #4a3415; }
+.go:disabled { filter: saturate(.5) brightness(.75); cursor: progress; }
+.link { background: none; border: 0; color: var(--brass); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.status { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--muted); }
+.spinner { width: 14px; height: 14px; border: 2px solid var(--edge); border-top-color: var(--ember); border-radius: 50%; animation: spin 1s linear infinite; }
 @keyframes spin { to { transform: rotate(360deg); } }
 .error { color: var(--bad); }
-table { border-collapse: collapse; width: 100%; font-size: 14px; }
-th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--rule); vertical-align: top; }
-th { font: 600 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
-td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.lock { display: inline-flex; gap: 10px; align-items: center; }
+
+/* ---------- Results ---------- */
+table { border-collapse: collapse; width: 100%; font-size: 17px; }
+th, td { text-align: left; padding: 9px 10px; border-bottom: 1px solid #221f1b; vertical-align: top; }
+th { font: italic 500 15px var(--body); color: var(--faint); }
+td.num, th.num { text-align: right; font-family: var(--mono); font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
 .tablewrap { overflow-x: auto; }
-tr.best td:first-child { color: var(--brass); }
-.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
-.rating { display: flex; flex-wrap: wrap; align-items: baseline; gap: 18px; }
-.rating .score { font: 600 46px/1 var(--mono); }
-.rating .label { font: 400 24px var(--display); }
-.rating .subs { font: 13px var(--mono); color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; }
-.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
-.stat { padding: 12px; display: grid; gap: 2px; }
-.stat + .stat { border-left: 1px solid var(--rule); }
-.stat b { font: 600 20px var(--mono); font-variant-numeric: tabular-nums; } .stat span { font-size: 12px; color: var(--muted); }
-.kv { display: grid; grid-template-columns: 160px minmax(0, 1fr); gap: 6px 16px; }
-.kv dt { font: 600 12px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; padding-top: 2px; }
+tr.best td { color: var(--brass-hi); }
+.tabs { display: flex; flex-wrap: wrap; gap: 7px; }
+.rating { display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px 20px; }
+.rating .score { font: 700 92px/.8 var(--display); color: var(--brass-hi); filter: drop-shadow(0 2px 0 var(--seam)); }
+.rating .label { font: 600 38px/1 var(--display); }
+.rating .subs { font-size: 16px; color: var(--muted); display: flex; gap: 16px; flex-wrap: wrap; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; }
+.stat { padding: 10px 14px 12px 0; display: grid; gap: 2px; }
+.stat.res b { font-size: 21px; padding-top: 6px; }
+.stat b { font: 600 30px/1.05 var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -.02em; } .stat span { font-size: 15px; color: var(--muted); }
+.kv { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 8px 18px; }
+.kv dt { font: 600 20px/1.2 var(--display); color: var(--muted); }
 .kv dd { margin: 0; min-width: 0; }
-@media (max-width: 620px) { .kv { grid-template-columns: minmax(0, 1fr); } .kv dd { margin-bottom: 8px; } }
-.items { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
-.item { border: 1px solid var(--rule); background: #16171a; padding: 12px 14px; display: grid; gap: 4px; min-width: 0; }
-.item .slot { font: 11px var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
-.item .base { color: var(--brass); font-family: var(--display); font-size: 17px; }
-.item.unique .base { color: #d28a3c; }
-.item ol { margin: 4px 0 0; padding-left: 20px; font-size: 13px; display: grid; gap: 2px; }
-.notes { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; display: grid; gap: 4px; }
+@media (max-width: 620px) { .kv { grid-template-columns: minmax(0, 1fr); } .kv dd { margin-bottom: 10px; } }
+/* Gear: riveted plates. */
+.items { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+.item { position: relative; border: 1px solid var(--edge); border-radius: 3px; padding: 14px 16px; display: grid; gap: 4px; min-width: 0;
+  background: linear-gradient(180deg, var(--iron2), var(--iron)); box-shadow: inset 0 1px 0 rgba(255,236,200,.06), 0 3px 0 var(--seam); }
+.item::before, .item::after { content: ""; position: absolute; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #4a4239; box-shadow: 0 1px 0 var(--seam); }
+.item::before { left: 7px; } .item::after { right: 7px; }
+.item .slot { font: italic 15px var(--body); color: var(--muted); }
+.item .base { color: var(--brass-hi); font: 600 24px/1.05 var(--display); }
+.item.unique .base { color: #e2913f; }
+.item ol { margin: 4px 0 0; padding-left: 22px; font-size: 16px; display: grid; gap: 2px; }
+.notes { margin: 0; padding-left: 20px; color: var(--muted); font-size: 16px; display: grid; gap: 4px; }
 .code { display: flex; gap: 8px; align-items: center; min-width: 0; }
-.code input { flex: 1; min-width: 0; background: var(--slate2); border: 1px solid var(--rule); border-radius: 2px; padding: 7px 10px; font: 12px var(--mono); color: var(--muted); }
-.chip.small { padding: 4px 10px; }
-.prompt { display: grid; gap: 10px; }
-.prompt textarea { width: 100%; min-height: 64px; resize: vertical; background: var(--slate2); border: 1px solid var(--rule); border-radius: 2px; padding: 12px 14px; font: 17px/1.45 var(--body); color: var(--ink); }
-.prompt textarea::placeholder { color: var(--muted); opacity: .7; }
-.prompt textarea:focus { border-color: var(--brass); outline: none; }
-.readas { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; min-height: 26px; font: 12px var(--mono); color: var(--muted); }
-.tag { border: 1px solid var(--rule); border-radius: 2px; padding: 3px 8px; color: var(--ink); background: #16171a; }
-.tag i { font-style: normal; color: var(--muted); }
-.divider { display: flex; align-items: center; gap: 12px; font: 600 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-.divider::before, .divider::after { content: ""; flex: 1; border-top: 1px solid var(--rule); }
-.lock { display: inline-flex; gap: 8px; align-items: center; }
-/* The workbench: what the optimiser is doing, live. Motion only for real events. */
+.code input { flex: 1; min-width: 0; background: #0b0a09; border: 1px solid var(--edge); border-radius: 3px; padding: 8px 10px; font: 13px var(--mono); color: var(--muted); }
+.chip.small { padding: 5px 11px 4px; font-size: 15px; }
+footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); padding-top: 18px; display: grid; gap: 6px; }
+
+/* ---------- The workbench: what the optimiser is doing, live. Motion only for real events. ---------- */
 .work-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
-.work-head .clock { font: 13px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
-.board { display: grid; gap: 8px; }
-.cand { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 12px; align-items: baseline; animation: rise 500ms var(--ease) both; }
-.cand .name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 14px; }
+.work-head .clock { font: 15px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.board { display: grid; gap: 10px; }
+.cand { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 12px; align-items: baseline; animation: rise 500ms var(--ease) both; }
+.cand .name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 18px; }
 .cand .name span { color: var(--muted); }
-.cand .score { font: 13px var(--mono); font-variant-numeric: tabular-nums; color: var(--muted); }
-.cand .bar { grid-column: 1 / -1; height: 3px; background: var(--rule); }
-.cand .bar i { display: block; height: 100%; width: 0; background: var(--muted); transition: width 700ms var(--ease); }
-.cand.best .name, .cand.best .score { color: var(--brass); }
-.cand.best .bar i { background: var(--brass); }
-.lanes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.cand .score { font: 15px var(--mono); font-variant-numeric: tabular-nums; color: var(--muted); }
+.cand .bar { grid-column: 1 / -1; height: 4px; background: var(--seam); border-radius: 2px; }
+.cand .bar i { display: block; height: 100%; width: 0; border-radius: 2px; background: #5c544a; transition: width 700ms var(--ease); }
+.cand.best .name, .cand.best .score { color: var(--brass-hi); }
+.cand.best .bar i { background: linear-gradient(90deg, var(--ember), var(--brass-hi)); box-shadow: 0 0 10px rgba(232,115,58,.45); }
+.lanes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
 @media (max-width: 760px) { .lanes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-.lane { border: 1px solid var(--rule); background: #16171a; padding: 12px; display: grid; gap: 8px; align-content: start; min-width: 0; transition: border-color 600ms var(--ease); }
-.lane .lname { font: 600 11px var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-.lane .ldps { font: 600 22px/1 var(--mono); font-variant-numeric: tabular-nums; }
-.lane .ldps small { font: 11px var(--mono); color: var(--muted); margin-left: 4px; }
-.lane .lstep { font-size: 12px; color: var(--muted); min-height: 2.6em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+/* Each stage is an anvil: it heats while worked, and cools to brass when done. */
+.lane { position: relative; border: 1px solid var(--edge); border-radius: 3px; padding: 14px; display: grid; gap: 8px; align-content: start; min-width: 0;
+  background: linear-gradient(180deg, var(--iron2), var(--iron)); box-shadow: inset 0 1px 0 rgba(255,236,200,.06), 0 3px 0 var(--seam);
+  transition: border-color 600ms var(--ease), box-shadow 900ms var(--ease); }
+.lane.hot { box-shadow: inset 0 1px 0 rgba(255,236,200,.06), inset 0 -26px 30px -18px rgba(232,115,58,.35), 0 3px 0 var(--seam); }
+.lane .lname { font: 600 22px/1 var(--display); color: var(--ink); }
+.lane .ldps { font: 600 25px/1 var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.lane .ldps small { font: 13px var(--mono); color: var(--muted); margin-left: 4px; letter-spacing: 0; }
+.lane .lstep { font-size: 15px; color: var(--muted); min-height: 2.6em; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
 .lane .pips { display: flex; gap: 3px; }
-.lane .pips i { flex: 1; height: 2px; background: var(--rule); transition: background 500ms var(--ease); }
-.lane .pips i.on { background: var(--muted); }
+.lane .pips i { flex: 1; height: 3px; background: var(--seam); border-radius: 2px; transition: background 500ms var(--ease); }
+.lane .pips i.on { background: var(--ember); }
 .lane.done { border-color: var(--brass); }
-.lane.done .ldps { color: var(--brass); }
+.lane.done .ldps { color: var(--brass-hi); }
 .lane.done .pips i { background: var(--brass); }
 .notables { display: flex; flex-wrap: wrap; gap: 4px; }
-.notable { font: 11px var(--mono); border: 1px solid var(--rule); padding: 2px 6px; color: var(--ink); animation: heat 900ms var(--ease) both; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-.notable.asc { border-color: #5a4a2c; }
-@keyframes heat { 0% { opacity: 0; background: rgba(224,112,58,.45); border-color: var(--fire); }
-  25% { opacity: 1; background: rgba(224,112,58,.35); border-color: var(--fire); } 100% { opacity: 1; background: transparent; } }
+.notable { font: 500 14px/1.2 var(--body); border: 1px solid var(--edge); border-radius: 2px; padding: 3px 7px; color: var(--ink); background: #12100e;
+  animation: heat 1100ms var(--ease) both; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.notable.asc { border-color: var(--brass-lo); color: var(--brass-hi); }
+@keyframes heat { 0% { opacity: 0; transform: translateY(-3px); background: #ffb26a; border-color: #ffd29a; color: #2a1405; box-shadow: 0 0 14px rgba(255,160,80,.8); }
+  30% { opacity: 1; transform: none; background: rgba(232,115,58,.55); border-color: var(--ember); color: var(--ink); box-shadow: 0 0 8px rgba(232,115,58,.5); }
+  100% { opacity: 1; background: #12100e; box-shadow: none; } }
 @keyframes rise { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
-/* Damage has a colour. */
-.mix { display: grid; gap: 6px; }
-.split { display: flex; height: 10px; gap: 2px; }
-.split i { min-width: 3px; transition: flex-grow 800ms var(--ease); }
-.legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 12px var(--mono); color: var(--muted); }
-.legend b { font-weight: 600; }
+/* Sparks: a canvas over the page, used only when something is struck. */
+#sparks { position: fixed; inset: 0; pointer-events: none; z-index: 5; width: 100%; height: 100%; }
+
+/* ---------- Damage has a colour ---------- */
+.mix { display: grid; gap: 8px; }
+.split { display: flex; height: 12px; gap: 2px; }
+.split i { min-width: 3px; border-radius: 2px; transition: flex-grow 800ms var(--ease); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
+.legend { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 16px; color: var(--muted); }
+.legend b { font: 600 15px var(--mono); color: var(--ink); }
 .dmg-physical { --c: var(--phys); } .dmg-fire { --c: var(--fire); } .dmg-cold { --c: var(--cold); }
 .dmg-lightning { --c: var(--light); } .dmg-chaos { --c: var(--chaos); } .dmg-minion { --c: #8a8478; }
 .split i { background: var(--c); }
 .dmg-minion.split-seg { background: repeating-linear-gradient(135deg, #8a8478 0 3px, #5d5850 3px 6px); }
-.legend .dot { display: inline-block; width: 8px; height: 8px; background: var(--c); margin-right: 6px; vertical-align: 0; }
-.stat b.tinted { color: var(--c); }
-@media (prefers-reduced-motion: reduce) { .cand, .notable { animation: none; } .cand .bar i, .split i, .lane, .lane .pips i { transition: none; } }
-footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 16px; display: grid; gap: 6px; }
-@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }
+.legend .dot { display: inline-block; width: 9px; height: 9px; border-radius: 2px; background: var(--c); margin-right: 6px; }
+.stat b.tinted { color: var(--c); text-shadow: 0 0 18px color-mix(in srgb, var(--c) 35%, transparent); }
+
+@media (prefers-reduced-motion: reduce) {
+  .cand, .notable, .tag { animation: none; } .cand .bar i, .split i, .lane, .lane .pips i { transition: none; }
+  body.working::after { animation: none; } .spinner { animation: none; }
+}
 </style>
 </head>
 <body>
+<canvas id="sparks" aria-hidden="true"></canvas>
 <div class="wrap">
-  <header style="display:grid;gap:10px">
-    <span class="eyebrow">Path of Exile 2 · free build forge</span>
-    <h1>Describe a build. Get its strongest version.</h1>
-    <p class="muted" style="max-width:64ch">Whetstone tests thousands of versions of your build in Path of Building's damage math: skills, supports, passives, gear, spirit and curses. You get the best one, four stages from leveling to endgame, and a rating against other builds.</p>
+  <header class="mast">
+    <svg class="mark" viewBox="0 0 120 104" aria-hidden="true">
+      <!-- An original mark: a whetstone wheel over an anvil, throwing sparks. -->
+      <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+        <circle cx="70" cy="28" r="21" stroke-width="9" opacity=".9"/>
+        <circle cx="70" cy="28" r="26" stroke-width="1.5" opacity=".5"/>
+        <circle cx="70" cy="28" r="15" stroke-width="1.5" opacity=".5"/>
+        <path d="M70 28L70 28" stroke-width="7"/>
+        <path d="M44 46l-12 6M46 52l-16 2M48 56l-9 7" stroke="#e8733a" stroke-width="2.5"/>
+      </g>
+      <path fill="currentColor" d="M2 60q18 5 26 5h88v9q0 7-8 7H92v13l11 9H43l11-9V81H44q-15 0-20-9-9-6-22-12z"/>
+      <path fill="#0e0d0c" opacity=".35" d="M28 65h88v3H28z"/>
+    </svg>
+    <span class="wordmark">Whetstone</span>
+    <p class="sub">Say what you want to play. It grinds through <b>every skill, weapon and ascendancy</b> that fits in Path of Building's own damage maths, and hands you the sharpest version at your budget, from the campaign to endgame.</p>
   </header>
 
   <form class="panel" id="form" novalidate>
     <div class="prompt">
-      <label class="eyebrow" for="prompt">Describe your build</label>
-      <textarea id="prompt" rows="2" maxlength="500" placeholder="lightning minion build for a monk, 5 div"></textarea>
-      <div class="readas" id="readas" aria-live="polite"><span>Name a damage type, skill, class or ascendancy, weapon and budget. The options below fill in as you type.</span></div>
+      <label for="prompt">What are you playing?</label>
+      <textarea id="prompt" rows="1" maxlength="500" placeholder="lightning minion build for a monk, 5 div"></textarea>
+      <div class="readas" id="readas" aria-live="polite"><span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span></div>
     </div>
-    <div class="divider">or pick, and fine-tune</div>
+    <div class="divider">or set it up by hand</div>
     <div class="field">
-      <span class="label">1. Budget</span>
+      <span class="label">How much you can spend</span>
       <div class="rungs" id="rungs" role="group" aria-label="Budget"></div>
     </div>
     <div class="row">
-      <div class="field"><span class="label">2. Damage type</span><div class="chips" id="damage" role="group" aria-label="Damage type"></div></div>
-      <div class="field"><span class="label">Skill kind</span><div class="chips" id="kinds" role="group" aria-label="Skill kind"></div></div>
+      <div class="field"><span class="label">Damage</span><div class="chips" id="damage" role="group" aria-label="Damage type"></div></div>
+      <div class="field"><span class="label">Kind of skill</span><div class="chips" id="kinds" role="group" aria-label="Skill kind"></div></div>
     </div>
     <div class="row">
       <div class="field"><label for="ailment">Ailment</label>
@@ -185,8 +286,8 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       <div class="field"><span class="label">Weapon</span><div class="chips" id="weapons" role="group" aria-label="Weapon"></div></div>
       <div class="field" id="skillField" hidden><span class="label">Skill</span><span class="lock"><span class="tag" id="skillName"></span><button class="link" type="button" id="skillClear">Let it pick</button></span></div>
     </div>
-    <div class="field"><span class="label">3. Also optimise for</span><div class="chips" id="goals" role="group" aria-label="Goals"></div></div>
-    <button class="go" id="go" type="submit">Forge my build</button>
+    <div class="field"><span class="label">Also care about</span><div class="chips" id="goals" role="group" aria-label="Goals"></div></div>
+    <button class="go" id="go" type="submit">Forge it</button>
     <div class="status" id="status" hidden></div>
   </form>
 
@@ -251,7 +352,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
   BUDGETS.forEach(([key, name, sub, coins]) => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "rung"; b.setAttribute("aria-pressed", key === state.budget);
-    b.innerHTML = `<span class="coins">${Array.from({ length: coins }, (_, j) => `<i style="height:${4 + j}px"></i>`).join("")}</span><b>${name}</b><span>${sub}</span>`;
+    b.innerHTML = `<span class="coins">${Array.from({ length: coins }, (_, j) => `<i style="height:${7 + j * 2}px"></i>`).join("")}</span><b>${name}</b><span>${sub}</span>`;
     b.dataset.budget = key;
     b.onclick = () => { state.budget = key; syncBudget(); };
     $("rungs").appendChild(b);
@@ -283,7 +384,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
   // Prompt mode: the server reads the text (POST /parse); we show what it understood and set the picker to match,
   // so the player can see and fix it before forging.
-  const HINT = "<span>Name a damage type, skill, class or ascendancy, weapon and budget. The options below fill in as you type.</span>";
+  const HINT = "<span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span>";
   function resetPicker() {
     state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null;
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
@@ -306,8 +407,8 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     syncAll();
     $("readas").innerHTML = out.found.length
       ? `<span>Read as</span>${out.found.map(f => `<span class="tag">${esc(f.means)} <i>“${esc(f.text)}”</i></span>`).join("")}`
-        + (out.budget_set ? "" : "<span>· no budget named, using the one picked below</span>")
-      : "<span>Nothing recognised yet. Name a damage type, skill, class, weapon or budget, or pick below.</span>";
+        + (out.budget_set ? "" : "<span>· no budget named, so it uses the one picked below</span>")
+      : "<span>Nothing it recognises yet. Try a damage type, skill, class, weapon or budget.</span>";
   }
   $("skillClear").onclick = () => { state.skill = null; syncAll(); };
   let parseSeq = 0, parsing = Promise.resolve(), parsedText = "", parseTimer;
@@ -319,7 +420,9 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     if (!text) { resetPicker(); syncAll(); $("readas").innerHTML = HINT; return (parsing = Promise.resolve()); }
     return (parsing = api("/parse", { text }).then(out => { if (seq === parseSeq) applyParse(out); }).catch(() => {}));
   }
-  $("prompt").addEventListener("input", () => { clearTimeout(parseTimer); parseTimer = setTimeout(parseNow, 350); });
+  const grow = () => { const t = $("prompt"); t.style.height = "auto"; t.style.height = t.scrollHeight + "px"; };
+  $("prompt").addEventListener("input", () => { grow(); clearTimeout(parseTimer); parseTimer = setTimeout(parseNow, 350); });
+  grow();
   $("prompt").addEventListener("keydown", e => { if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); $("form").requestSubmit(); } });
 
   async function api(path, body) {
@@ -380,16 +483,16 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     startSearch() {
       this.cands = new Map(); this.scored = 0; this.total = 0;
       const w = this.el(); w.hidden = false;
-      w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">At the bench</span>
-          <h2>Testing every skill, weapon and ascendancy that fits</h2></div><span class="clock"></span></div>
-        <p class="muted" id="roundLabel">Loading Path of Building…</p>
+      w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">On the anvil</span>
+          <h2>Grinding through every skill that fits</h2></div><span class="clock"></span></div>
+        <p class="muted" id="roundLabel">Lighting the forge…</p>
         <div class="board" id="board"></div>`;
     },
     round(e) {
       this.total += e.count || 0;
       $("roundLabel").textContent = e.round === 1
-        ? `Round 1: each skill on each weapon it can use, ${e.count} options. No passives yet, just raw power.`
-        : `Round 2: the best skills on each ascendancy, with passive trees spent. ${e.count} options.`;
+        ? `First pass: every skill on every weapon it can use, ${e.count} of them. No passives yet, just raw power.`
+        : `Second pass: the strongest few on each ascendancy, with full passive trees. ${e.count} builds.`;
     },
     candidate(e) {
       this.scored++;
@@ -408,6 +511,8 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         let row = [...board.children].find(r => r.dataset.key === k);
         if (!row) {
           row = document.createElement("div"); row.className = "cand"; row.dataset.key = k;
+          // Fade in once. Re-ranking moves the row in the DOM, which would otherwise replay the fade.
+          row.addEventListener("animationend", () => { row.style.animation = "none"; }, { once: true });
           row.innerHTML = `<span class="name">${esc(c.skill)} <span>· ${esc(c.ascendancy || c.weapon)}${c.ascendancy ? ` · ${esc(c.weapon)}` : ""}</span></span>
             <span class="score"></span><span class="bar"><i></i></span>`;
         }
@@ -420,14 +525,14 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
     startGuide(stages) {
       const w = this.el(); w.hidden = false;
-      w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">At the bench</span>
-          <h2>Building all four stages</h2></div><span class="clock"></span></div>
-        <p class="muted">Each stage gets its own gear, passive tree, supports and spirit, all at your budget. Passives appear as they're picked.</p>
+      w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">On the anvil</span>
+          <h2>Four anvils, one build</h2></div><span class="clock"></span></div>
+        <p class="muted">Leveling, early maps, mid maps and endgame are forged side by side: gear, passives, supports and spirit, each at your budget. Passives drop in as they're picked.</p>
         <div class="lanes">${stages.map(k => `<div class="lane" data-stage="${k}">
           <span class="lname">${STAGE_NAMES[k] || k}</span>
           <span class="ldps" data-v="0">–</span>
           <span class="pips">${STEP_ORDER.slice(1).map(() => "<i></i>").join("")}</span>
-          <span class="lstep">Waiting for a core…</span>
+          <span class="lstep">Waiting for a free anvil…</span>
           <div class="notables"></div></div>`).join("")}</div>`;
       w.scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
     },
@@ -457,9 +562,40 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
       lane.querySelectorAll(".pips i").forEach((p, i) => p.classList.toggle("on", i < idx));
       lane.querySelector(".lstep").textContent = e.step === "start" ? e.label
         : `${STEP_TEXT[e.step] || e.step}${e.label && e.step !== "done" ? `: ${e.label}` : ""}`;
-      if (e.step === "done") lane.classList.add("done");
+      lane.classList.toggle("hot", e.step !== "done");
+      if (e.step === "done") { lane.classList.add("done"); sparks(lane.querySelector(".ldps"), 22, 0.8); }
     },
   };
+
+  // Sparks: struck only by real events (forging starts, a stage is finished).
+  const sparks = (() => {
+    const cv = $("sparks"), cx = cv.getContext("2d");
+    let parts = [], running = false;
+    const size = () => { const d = Math.min(devicePixelRatio || 1, 2); cv.width = innerWidth * d; cv.height = innerHeight * d; cx.setTransform(d, 0, 0, d, 0, 0); };
+    size(); addEventListener("resize", size);
+    function frame() {
+      cx.clearRect(0, 0, innerWidth, innerHeight);
+      parts = parts.filter(p => p.life > 0);
+      for (const p of parts) {
+        p.vy += 0.18; p.vx *= 0.985; p.x += p.vx; p.y += p.vy; p.life -= p.decay;
+        const a = Math.max(0, p.life);
+        cx.strokeStyle = `rgba(${255},${Math.round(150 + 90 * a)},${Math.round(60 + 120 * a * a)},${a})`;
+        cx.lineWidth = p.w; cx.beginPath(); cx.moveTo(p.x, p.y); cx.lineTo(p.x - p.vx * 2.2, p.y - p.vy * 2.2); cx.stroke();
+      }
+      if (parts.length) requestAnimationFrame(frame); else { running = false; cx.clearRect(0, 0, innerWidth, innerHeight); }
+    }
+    return function burst(el, n = 34, spread = 1) {
+      if (REDUCE || !el) return;
+      const r = el.getBoundingClientRect();
+      const x = r.left + r.width * (0.3 + Math.random() * 0.4), y = r.top + r.height * 0.5;
+      for (let i = 0; i < n; i++) {
+        const ang = -Math.PI / 2 + (Math.random() - 0.5) * Math.PI * 1.3 * spread, sp = 3 + Math.random() * 7;
+        parts.push({ x, y, vx: Math.cos(ang) * sp, vy: Math.sin(ang) * sp, life: 1, decay: 0.012 + Math.random() * 0.02, w: 1 + Math.random() * 1.4 });
+      }
+      if (!running) { running = true; requestAnimationFrame(frame); }
+    };
+  })();
+  const heat = on => document.body.classList.toggle("working", on);
 
   // Damage mix: a bar split by damage type, the build's colours at a glance.
   const DMG_LABEL = { physical: "Physical", fire: "Fire", cold: "Cold", lightning: "Lightning", chaos: "Chaos", minion: "Minions" };
@@ -483,6 +619,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
 
   $("form").onsubmit = async e => {
     e.preventDefault();
+    sparks($("go"), 46);
     clearTimeout(parseTimer); await parseNow();
     const req = { damage: [...state.damage], kinds: [...state.kinds], weapons: [...state.weapons].slice(0, 5), budget: state.budget,
       mode: $("mode").value, goals: [...state.goals] };
@@ -491,6 +628,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     if ($("asc").value) req.ascendancy = $("asc").value;
     if (state.skill) req.skill = state.skill;
     $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
+    heat(true);
     try {
       let job = await api("/generate", req);
       if (!job.cached) work.startSearch();
@@ -504,7 +642,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     } catch (err) {
       work.hide();
       setStatus(`<span class="error">${esc(err.message)}</span>`);
-    } finally { $("go").disabled = false; }
+    } finally { $("go").disabled = false; heat(false); }
   };
 
   async function buildGuide(plan) {
@@ -525,7 +663,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     const rows = result.ranked.slice(0, 12);
     $("options").hidden = false;
     $("options").innerHTML = `
-      <div style="display:grid;gap:6px"><span class="eyebrow">What we tested</span>
+      <div style="display:grid;gap:6px"><span class="eyebrow">What it tried</span>
       <h2>${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)} came out on top</h2>
       <p class="muted">${result.skills_considered.length} skills tested on every weapon they can use, then the best on each ascendancy. Pick another row to rebuild with it, or tick up to 3 to compare them at your budget.</p></div>
       <div class="tablewrap"><table><thead><tr><th></th><th>Skill</th><th>Ascendancy</th><th>Weapon</th><th class="num">vs best</th><th></th></tr></thead><tbody>
@@ -558,7 +696,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
     const b = res.builds;
     const row = (label, f) => `<tr><td>${label}</td>${b.map(x => `<td class="num">${f(x)}</td>`).join("")}</tr>`;
     $("compare").hidden = false;
-    $("compare").innerHTML = `<span class="eyebrow">Compare at your budget</span>
+    $("compare").innerHTML = `<span class="eyebrow">Side by side, at your budget</span>
       <div class="tablewrap"><table><thead><tr><th></th>${b.map(x => `<th class="num">${esc(x.name)}</th>`).join("")}</tr></thead><tbody>
       ${row("Single-target DPS", x => fmt(x.dps))}${row("Mapping DPS", x => fmt(x.stats.MappingDPS))}${row("Effective HP", x => fmt(x.ehp))}
       ${row("Life", x => fmt(x.stats.Life))}</tbody></table></div>
@@ -606,7 +744,7 @@ footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule)
         <div class="stat"><b>${s.boss_dps ? fmt(s.boss_dps) : "-"}</b><span>Boss DPS</span></div>
         <div class="stat"><b>${fmt(st.Life)}</b><span>Life</span></div>
         <div class="stat"><b>${fmt(st.TotalEHP)}</b><span>Effective HP</span></div>
-        <div class="stat"><b>${res}</b><span>Fire / cold / lightning / chaos res</span></div>
+        <div class="stat res"><b>${res}</b><span>Fire / cold / lightning / chaos res</span></div>
       </div>
       ${mixHtml(s.damage_split)}
       <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
