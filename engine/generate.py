@@ -27,7 +27,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from gear import Stage, craft_gear, make_stage
-from optimize import MODE_CONFIG, clear_score, metric_for, optimise_supports, total_dps
+from optimize import MODE_CONFIG, clear_score, metric_for, optimise_supports, score_of, total_dps
 from pob import PoB, PoBError
 
 # Types that make a skill a support act rather than a main damage skill.
@@ -58,6 +58,7 @@ class Candidate:
     score: float = 0.0
     dps: float = 0.0
     clear: float = 0.0
+    boss: float = 0.0     # single-target score in the theme's terms (e.g. bleed vs a boss)
     ehp: float = 0.0
     supports: list[str] = field(default_factory=list)
     is_minion: bool = False
@@ -169,6 +170,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         out = p.calc(FIELDS)
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
         c.clear, c.ehp = clear_score(out), out.get("TotalEHP", 0)
+        c.boss = score_of(out, metric_for("bossing", req.get("ailment")))
     except (PoBError, ValueError) as e:
         c.error = str(e)
     return c
@@ -283,8 +285,11 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
     if req.get("ailment"):
         spec["ailment"] = req["ailment"]
     same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
-    boss = max(same_asc, key=lambda r: r["dps"], default=None)
-    if boss and boss["dps"] >= BOSS_SKILL_MIN_GAIN * main["dps"]:
+    # Compare single-target strength in the theme's own terms (a bleed build wants a better
+    # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.
+    key = lambda r: r.get("boss") or r["dps"]
+    boss = max(same_asc, key=key, default=None)
+    if boss and key(boss) >= BOSS_SKILL_MIN_GAIN * key(main):
         spec["boss_skill"] = boss["skill"]
         spec["boss_weapon_type"] = boss["weapon_type"]
         spec["boss_weapon_subtype"] = boss["weapon_subtype"]

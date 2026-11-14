@@ -21,7 +21,10 @@ Owner: Kyle. Day-one target: PoE 2 1.0 (Dec 11, 2026). First real test case is a
 - Every build gets 4 stages: Leveling, Early maps, Mid maps, Endgame.
 - Compare takes up to 3 builds and shows DPS numbers plus basic pros and cons.
 - Hosting plan: one Hetzner server (website + PoB workers), Claude API for prompts and write-ups.
-- Total DPS = hit DPS + damage over time (PoB's CombinedDPS drops DoT for some skills).
+- Total DPS = hit DPS + damage over time (PoB's CombinedDPS drops DoT for some skills). Builds with several damage sources (minions, heralds, a boss skill) use PoB's Full DPS.
+- The tool picks skill, weapon and ascendancy itself (`engine/generate.py`); players can lock an ascendancy or skill afterwards and see the damage it costs.
+- A theme's goal (e.g. bleed) drives every optimiser through one metric (`optimize.metric_for` / `score_of`).
+- Builds include spirit buffs, uniques (budget-gated), a boss skill on weapon set 2 when worth it, and only the conditional bonuses the build keeps up (each listed with its reason).
 
 ## Working rules
 - Ask Kyle before publishing anything (Mobalytics pages, deploys).

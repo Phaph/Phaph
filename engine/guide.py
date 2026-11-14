@@ -127,16 +127,17 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         pob.set_config(**MODE_CONFIG["bossing"])
         boss, boss_dps = None, 0.0
         if stage_key != "leveling":
+            # boss_dps is real single-target damage (not the theme score used to pick supports).
             if boss_group:
                 pob.send("set_main", group=boss_group)
                 pob.auto_config("bossing")
                 boss = optimise_supports(pob, boss_group, boss_skill, slots=slots, metric=boss_metric, log=quiet)[0]
-                boss_dps = boss.score
+                boss_dps = total_dps(pob.calc(STAT_FIELDS))
                 pob.send("set_main", group=group)
             else:
                 pob.auto_config("bossing")
                 boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
-                boss_dps = boss.score
+                boss_dps = total_dps(pob.calc(STAT_FIELDS))
 
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
