@@ -85,6 +85,8 @@ class SlotPlan:
     raw: str = ""
     unique: str | None = None       # unique item name when a unique beats the crafted rare
     price_note: str | None = None   # e.g. "price unknown" until poe.ninja prices are loaded
+    # Per affix, same order: {"tier": 1 = best roll in the game, "of": tiers that exist, "type": Prefix/Suffix}
+    affix_info: list[dict] = field(default_factory=list)
 
 
 def _value_at(text: str, roll: float) -> str:
@@ -138,7 +140,8 @@ def _tier_choices(affixes: list[dict], stage: Stage, keep: set[str] = frozenset(
     chosen = {}
     for group, tiers in by_group.items():
         tiers.sort(key=lambda a: a["level"])
-        chosen[group] = tiers[max(0, len(tiers) - 1 - stage.tier_drop)]
+        idx = max(0, len(tiers) - 1 - stage.tier_drop)
+        chosen[group] = {**tiers[idx], "_tier": len(tiers) - idx, "_tiers": len(tiers)}
     return chosen
 
 
@@ -170,6 +173,10 @@ class _Work:
 
 def _is_res_group(group: str) -> bool:
     return "Resist" in group and "Penetration" not in group and "Minion" not in group and "Allies" not in group
+
+
+def _affix_info(work: "_Work") -> list[dict]:
+    return [{"tier": a.get("_tier"), "of": a.get("_tiers"), "type": a.get("type")} for _, a, _ in work.meta]
 
 
 def _add(work: _Work, group: str, affix: dict, lines: list[str]) -> None:
@@ -452,7 +459,7 @@ def craft_gear(
             plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note))
         else:
             log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
-            plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw()))
+            plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw(), affix_info=_affix_info(w)))
     return plans
 
 
@@ -471,4 +478,4 @@ def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_sub
     w = _Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage))
     _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
     log(f"  {slot:<12} {base:<28} " + "; ".join(w.picked))
-    return SlotPlan(slot, base, w.picked, w.raw())
+    return SlotPlan(slot, base, w.picked, w.raw(), affix_info=_affix_info(w))

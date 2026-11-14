@@ -112,3 +112,12 @@ def test_price_picker_skips_fixed_and_corrupted_listings():
         {"name": "Widowhail", "baseType": "Crude Bow", "primaryValue": 0.00156, "listingCount": 3531},
     ]
     assert pick_prices(lines) == {"Runeseeker's Call": 6455, "Temporalis": 6876, "Widowhail": 0.002}
+
+
+def test_tier_choices_record_tier():
+    from gear import _tier_choices
+    affixes = [{"group": "Life", "level": lvl, "type": "Prefix"} for lvl in (1, 10, 30, 60)]
+    best = _tier_choices(affixes, make_stage("end", "unlimited"))["Life"]
+    assert (best["level"], best["_tier"], best["_tiers"]) == (60, 1, 4)
+    cheap = _tier_choices(affixes, make_stage("end", "free"))["Life"]
+    assert cheap["_tier"] == 1 + make_stage("end", "free").tier_drop

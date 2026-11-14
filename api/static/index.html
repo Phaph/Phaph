@@ -173,7 +173,22 @@ tr.best td { color: var(--brass-hi); }
 .item .slot { font: italic 15px var(--body); color: var(--muted); }
 .item .base { color: var(--brass-hi); font: 600 24px/1.05 var(--display); }
 .item.unique .base { color: #e2913f; }
-.item ol { margin: 4px 0 0; padding-left: 22px; font-size: 16px; display: grid; gap: 2px; }
+.item ol { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 3px; }
+/* Each affix is struck onto the item in the order to buy it, hot first, then cooling. */
+.affix { display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 8px; align-items: baseline; font-size: 16px; padding: 2px 4px; margin: 0 -4px; border-radius: 2px; }
+.affix .n { font: 600 13px var(--mono); color: var(--faint); text-align: right; }
+.affix:first-child .n { color: var(--brass); }
+.affix .t { display: inline-flex; gap: 2px; align-items: center; font: 600 12px var(--mono); color: var(--faint); white-space: nowrap; }
+.affix .t i { width: 6px; height: 6px; transform: rotate(45deg); background: var(--seam); box-shadow: inset 0 0 0 1px #3d362e; }
+.affix .t i.on { background: var(--brass); box-shadow: 0 0 4px rgba(240,201,127,.45); }
+.affix .t b { font-weight: 600; margin-right: 4px; }
+.affix.stamp { animation: strike 900ms var(--ease) both; }
+.base.stamp { animation: strike-base 900ms var(--ease) both; }
+@keyframes strike { 0% { opacity: 0; transform: translateX(-6px); background: rgba(255,178,106,.65); color: #2a1405; }
+  22% { opacity: 1; transform: none; background: rgba(232,115,58,.45); color: #fff1dc; } 100% { background: transparent; } }
+@keyframes strike-base { 0% { opacity: 0; filter: brightness(2.2); } 30% { opacity: 1; filter: brightness(1.6) drop-shadow(0 0 8px rgba(232,115,58,.7)); } 100% { filter: none; } }
+.item .upg { font: italic 14px var(--body); color: var(--ember); }
+@media (prefers-reduced-motion: reduce) { .affix.stamp, .base.stamp { animation: none; } }
 .notes { margin: 0; padding-left: 20px; color: var(--muted); font-size: 16px; display: grid; gap: 4px; }
 .code { display: flex; gap: 8px; align-items: center; min-width: 0; }
 .code input { flex: 1; min-width: 0; background: #0b0a09; border: 1px solid var(--edge); border-radius: 3px; padding: 8px 10px; font: 13px var(--mono); color: var(--muted); }
@@ -704,7 +719,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
   }
 
   function renderGuide(plan, res) {
-    state.guide = res;
+    state.guide = res; shownGear = null; shownStage = null;
     const stages = res.stages;
     const end = stages.find(s => s.stage === "end") || stages[stages.length - 1];
     $("guide").hidden = false;
@@ -726,7 +741,45 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
+  // Gear plates. Against the stage shown before (prev), unchanged lines stay still and only upgrades
+  // are struck again, so switching stages shows each slot improving.
+  let shownGear = null, shownStage = null;
+  const STAGE_RANK = { leveling: 0, early: 1, mid: 2, end: 3 };
+  function tierMarks(info) {
+    if (!info || !info.tier || !info.of) return "";
+    const filled = Math.max(1, Math.round(5 * (info.of - info.tier + 1) / info.of));
+    return `<span class="t" title="Tier ${info.tier} of ${info.of}${info.type ? ", " + info.type.toLowerCase() : ""}"><b>T${info.tier}</b>${
+      Array.from({ length: 5 }, (_, i) => `<i class="${i < filled ? "on" : ""}"></i>`).join("")}</span>`;
+  }
+  function gearHtml(gear, prev, forward = true) {
+    let delay = 0;
+    const step = ms => { const d = delay; delay += ms; return REDUCE ? 0 : d; };
+    return gear.map(g => {
+      const before = prev?.[g.slot];
+      const name = g.unique ? g.unique.split(",")[0] : g.base;
+      const baseChanged = !before || before.name !== name;
+      const baseCls = baseChanged ? "base stamp" : "base";
+      const baseStyle = baseChanged ? ` style="animation-delay:${step(120)}ms"` : "";
+      if (g.unique) {
+        return `<div class="item unique"><span class="slot">${esc(g.slot)}</span><span class="${baseCls}"${baseStyle}>${esc(name)}</span>
+          <span class="muted" style="font-size:15px">Unique · ${esc(g.price_note || "")}</span></div>`;
+      }
+      const had = new Set(before && !baseChanged ? before.affixes : []);
+      const lines = g.affixes.map((a, i) => {
+        const fresh = !had.has(a);
+        const st = fresh ? ` style="animation-delay:${step(150)}ms"` : "";
+        return `<li class="affix${fresh ? " stamp" : ""}"${st}><span class="n">${i + 1}</span><span>${esc(a)}</span>${tierMarks((g.affix_info || [])[i])}</li>`;
+      }).join("");
+      const upgraded = before && !baseChanged ? g.affixes.filter(a => !had.has(a)).length : 0;
+      return `<div class="item"><span class="slot">${esc(g.slot)}${upgraded ? ` <span class="upg">· ${upgraded} ${forward ? "upgraded" : "changed"}</span>` : ""}</span>
+        <span class="${baseCls}"${baseStyle}>${esc(name)}</span><ol>${lines}</ol></div>`;
+    }).join("");
+  }
+
   function renderStage(plan, s) {
+    const prevGear = shownGear, forward = shownStage == null || STAGE_RANK[s.stage] >= STAGE_RANK[shownStage];
+    shownStage = s.stage;
+    shownGear = Object.fromEntries(s.gear.map(g => [g.slot, { name: g.unique ? g.unique.split(",")[0] : g.base, affixes: g.affixes }]));
     const st = s.stats || {};
     const res = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round(st[k] || 0)).join(" / ");
     const kv = [];
@@ -749,10 +802,9 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       ${mixHtml(s.damage_split)}
       <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
       <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
-      <div style="display:grid;gap:8px"><h3>Gear, affixes in the order to buy them</h3>
-      <div class="items">${s.gear.map(g => g.unique
-        ? `<div class="item unique"><span class="slot">${esc(g.slot)}</span><span class="base">${esc(g.unique.split(",")[0])}</span><span class="muted" style="font-size:13px">Unique · ${esc(g.price_note || "")}</span></div>`
-        : `<div class="item"><span class="slot">${esc(g.slot)}</span><span class="base">${esc(g.base)}</span><ol>${g.affixes.map(a => `<li>${esc(a)}</li>`).join("")}</ol></div>`).join("")}</div></div>
+      <div style="display:grid;gap:8px"><h3>Gear, struck in the order to buy it</h3>
+      <p class="muted" style="font-size:16px">Line 1 is what to buy first. Diamonds show the affix tier: more means a better roll${prevGear ? ". Switching stages re-strikes only what changed" : ""}.</p>
+      <div class="items">${gearHtml(s.gear, prevGear, forward)}</div></div>
       ${s.notes.length ? `<ul class="notes">${s.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
       <div class="field"><label for="code">Path of Building code</label>
         <div class="code"><input id="code" readonly value="${esc(s.code)}"><button class="chip small" type="button" id="copy">Copy</button></div></div>`;
