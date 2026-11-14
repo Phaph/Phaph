@@ -6,7 +6,8 @@ A build is either a PoB share code or a recipe:
      "items": ["<PoB item text>", ...],
      "skills": [["Tempest Flurry", "Rakiata's Flow", ...], ...],   # first is the main skill
      "config": {"enemyIsBoss": "Pinnacle"},
-     "optimise_supports": 5}   # optional: let the optimiser pick the main skill's supports
+     "optimise_supports": 5,   # optional: let the optimiser pick the main skill's supports
+     "optimise_tree": true}    # optional: let the optimiser spend passive and ascendancy points
 
 CLI:  python3 compare.py builds.json [--json]
 """
@@ -44,6 +45,13 @@ class Report:
     cons: list[str] = field(default_factory=list)
     code: str = ""
     supports: list[str] = field(default_factory=list)
+    notables: list[str] = field(default_factory=list)
+
+
+def _pick_supports(pob: PoB, group: int, build: dict) -> list[str]:
+    skill = build["skills"][0][0]
+    best = optimise_supports(pob, group, skill, slots=int(build["optimise_supports"]), log=lambda *a: None)[0]
+    return best.supports
 
 
 def load_build(pob: PoB, build: dict) -> str | None:
@@ -68,10 +76,13 @@ def load_build(pob: PoB, build: dict) -> str | None:
         if main_group:
             pob.send("set_main", group=main_group)
         if main_group and build.get("optimise_supports"):
-            skills = build["skills"][0]
-            best = optimise_supports(pob, main_group, skills[0], slots=int(build["optimise_supports"]),
-                                     log=lambda *a: None)[0]
-            build["chosen_supports"] = best.supports
+            build["chosen_supports"] = _pick_supports(pob, main_group, build)
+        if build.get("optimise_tree"):
+            tree = pob.optimise_tree(def_weight=float(build.get("defence_weight", 0.25)))
+            build["chosen_notables"] = [s["node"] for s in tree["steps"] if s["type"] != "Normal"]
+            # Passives change what the best supports are, so pick them again.
+            if main_group and build.get("optimise_supports"):
+                build["chosen_supports"] = _pick_supports(pob, main_group, build)
     if build.get("config"):
         pob.set_config(**build["config"])
     return pob.send("calc", fields=["TotalDPS"]).get("main_skill")
@@ -93,6 +104,7 @@ def evaluate(pob: PoB, build: dict) -> Report:
         stats=s,
         code=pob.save_code(),
         supports=build.get("chosen_supports") or list(build.get("skills", [[None]])[0][1:]),
+        notables=build.get("chosen_notables", []),
     )
 
 
@@ -199,6 +211,8 @@ def to_markdown(reports: list[Report]) -> str:
         out.append(f"\n**{r.name}**")
         out += [f"- + {p}" for p in r.pros] or ["- + (none found)"]
         out += [f"- - {c}" for c in r.cons] or ["- - (none found)"]
+        if r.notables:
+            out.append("- Key passives: " + ", ".join(r.notables[:12]) + (" ..." if len(r.notables) > 12 else ""))
         out.append(f"- PoB code: `{r.code[:40]}...`")
     return "\n".join(out)
 

@@ -237,6 +237,97 @@ function handlers.alloc_nodes(cmd)
 	return { allocated = done, missing = missing, points_used = build.spec:CountAllocNodes() }
 end
 
+local function passivePoints()
+	local acts = build.acts and build.acts[build.maxActs]
+	local quest = acts and acts.questPoints or 0
+	local extra = build.calcsTab.mainOutput and build.calcsTab.mainOutput.ExtraPoints or 0
+	return build.characterLevel - 1 + quest + extra
+end
+
+function handlers.points(cmd)
+	local used, ascUsed = build.spec:CountAllocNodes()
+	return { available = passivePoints(), used = used, ascendancy_used = ascUsed }
+end
+
+-- Greedy passive tree optimiser using PoB's fast what-if calculator.
+-- Each step tries every reachable node (path up to max_dist points), scores
+-- (relative DPS gain + def_weight * relative EHP gain) per point spent, and
+-- allocates the best path. Ascendancy points are spent the same way.
+function handlers.optimise_tree(cmd)
+	local maxDist = cmd.max_dist or 6
+	local defWeight = cmd.def_weight or 0.25
+	local budget = cmd.points or passivePoints()
+	local ascBudget = cmd.ascendancy_points or 8
+	local steps, evals = {}, 0
+	local t0 = os.clock()
+
+	local function dps(o) return (o.TotalDPS or 0) + (o.TotalDotDPS or 0) + ((o.Minion and o.Minion.CombinedDPS) or 0) end
+	local function ehp(o) return o.TotalEHP or 0 end
+
+	local function bestStep(ascend)
+		local calcFunc, base = build.calcsTab:GetMiscCalculator()
+		local d0, e0 = math.max(dps(base), 1), math.max(ehp(base), 1)
+		local best, bestEff, bestOut = nil, 0, nil
+		for _, node in pairs(build.spec.nodes) do
+			local isAsc = node.ascendancyName ~= nil
+			if not node.alloc and node.path and node.modKey and node.modKey ~= ""
+				and (node.type == "Normal" or node.type == "Notable" or node.type == "Keystone")
+				and #node.path <= maxDist
+				and isAsc == ascend
+				and (not ascend or node.ascendancyName == build.spec.curAscendClassBaseName or node.ascendancyName == build.spec.curAscendClassName)
+				and not node.isMultipleChoiceOption then
+				local pathNodes = {}
+				for _, n in ipairs(node.path) do pathNodes[n] = true end
+				local out = calcFunc({ addNodes = pathNodes })
+				evals = evals + 1
+				local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0
+				local eff = gain / #node.path
+				if eff > bestEff then best, bestEff, bestOut = node, eff, out end
+			end
+		end
+		return best, bestEff, bestOut
+	end
+
+	local function spend(ascend, limit)
+		while true do
+			local used, ascUsed = build.spec:CountAllocNodes()
+			local have = ascend and ascUsed or used
+			if have >= limit then break end
+			local node, eff = bestStep(ascend)
+			if not node then break end
+			if have + #node.path > limit then
+				-- Path too long for the points left: try only short paths.
+				local saved = maxDist
+				maxDist = limit - have
+				node, eff = bestStep(ascend)
+				maxDist = saved
+				if not node then break end
+			end
+			local cost = #node.path
+			build.spec:AllocNode(node)
+			build.spec:AddUndoState()
+			build.buildFlag = true
+			frame()
+			table.insert(steps, { node = node.dn, type = node.type, cost = cost, gain_per_point = eff, ascendancy = ascend })
+		end
+	end
+
+	spend(true, ascBudget)
+	spend(false, budget)
+	local used, ascUsed = build.spec:CountAllocNodes()
+	return { steps = steps, used = used, ascendancy_used = ascUsed, available = budget,
+		evaluations = evals, seconds = os.clock() - t0 }
+end
+
+function handlers.reset_tree(cmd)
+	build.spec:ResetNodes()
+	build.spec:BuildAllDependsAndPaths()
+	build.spec:AddUndoState()
+	build.buildFlag = true
+	frame()
+	return {}
+end
+
 function handlers.calc(cmd)
 	for _, group in ipairs(build.skillsTab.socketGroupList) do
 		build.skillsTab:ProcessSocketGroup(group)

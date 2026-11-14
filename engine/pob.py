@@ -118,6 +118,21 @@ class PoB:
     def alloc_nodes(self, nodes: list):
         return self.send("alloc_nodes", nodes=nodes)
 
+    def points(self) -> dict:
+        return self.send("points")
+
+    def optimise_tree(self, max_dist: int = 6, def_weight: float = 0.25, points: int | None = None) -> dict:
+        kwargs = {"max_dist": max_dist, "def_weight": def_weight}
+        if points is not None:
+            kwargs["points"] = points
+        res = self.send("optimise_tree", **kwargs)
+        if not isinstance(res.get("steps"), list):
+            res["steps"] = []
+        return res
+
+    def reset_tree(self):
+        return self.send("reset_tree")
+
     def calc(self, fields: list[str] | None = None) -> dict:
         kwargs = {"fields": fields} if fields else {}
         return self.send("calc", **kwargs)["output"]

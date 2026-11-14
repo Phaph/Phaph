@@ -12,7 +12,8 @@
         "Tempest Flurry"
       ]
     ],
-    "optimise_supports": 5
+    "optimise_supports": 5,
+    "optimise_tree": true
   },
   {
     "name": "Falling Thunder Invoker",
@@ -27,7 +28,8 @@
         "Falling Thunder"
       ]
     ],
-    "optimise_supports": 5
+    "optimise_supports": 5,
+    "optimise_tree": true
   },
   {
     "name": "Rake Bleed Amazon",
@@ -42,6 +44,7 @@
         "Rake"
       ]
     ],
-    "optimise_supports": 5
+    "optimise_supports": 5,
+    "optimise_tree": true
   }
 ]

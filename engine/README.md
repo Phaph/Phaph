@@ -12,6 +12,7 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 - `runner.lua`: runs inside PoB. Reads JSON commands on stdin, replies with `@@{json}` lines.
 - `pob.py`: Python client. One `PoB()` is one long-running PoB process (about 2.5s to start, then ~20ms per recalculation).
 - `optimize.py`: support gem beam search. Screens every support, then builds the best set one gem at a time.
+- Passive tree: `optimise_tree` (in runner.lua) greedily spends passive and ascendancy points using PoB's fast what-if calculator. Each step scores every reachable node by (DPS gain + 0.25 x EHP gain) per point.
 - `compare.py`: evaluate 1 build or compare up to 3. Gives a DPS/defence table and basic pros and cons. Builds can be PoB codes or recipes, and can ask the optimiser to pick supports. Example: `python3 compare.py examples/compare_three.json`.
 - `demo.py`: command-line demo.
 
@@ -23,7 +24,8 @@ Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We d
 
 ## Known gaps
 - Pros and cons are rule-based for now (damage split, accuracy, speed, crit, resistances, tankiness). The AI layer will add context later.
-- Passive tree: can allocate named nodes, no tree optimiser yet.
+- Tree optimiser is greedy: it can miss a big node that sits behind weak ones further than 6 points away. No jewels, no weapon-set passives, no attribute requirements yet.
+- Speed: about 35s per build for supports + tree + supports again on 4 CPU cores. Caching and smarter candidate lists will cut this.
 - Support rules: the optimiser rejects any combo that triggers a PoB rule warning (e.g. lineage copy limit). Pass `exclude` for gems used in other skills.
 - Conditional supports (Hit and Run, Glory gems, combo finishers; 12 in total) are skipped by default because PoB counts their bonus but not their downtime.
 - Gear is whatever we put in. Budget-tier gear comes with the build data step.
