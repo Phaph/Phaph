@@ -1,0 +1,266 @@
+{
+ "source": "tools/sweep.py --stage end --budget high",
+ "builds": [
+  {
+   "ascendancy": "Infernalist",
+   "skill": "Fireball",
+   "damage": 1231869.6404254,
+   "clear": 1701645.110581168,
+   "toughness": 39025.771351133,
+   "mapping_dps": 1385108.1565686
+  },
+  {
+   "ascendancy": "Invoker",
+   "skill": "Tempest Flurry",
+   "damage": 1487618.9814823,
+   "clear": 5418948.873169376,
+   "toughness": 31882.398594936,
+   "mapping_dps": 3620275.7160526
+  },
+  {
+   "ascendancy": "Martial Artist",
+   "skill": "Tempest Flurry",
+   "damage": 1371021.0467337,
+   "clear": 5009595.841300732,
+   "toughness": 35473.727384495,
+   "mapping_dps": 3366417.0106346
+  },
+  {
+   "ascendancy": "Acolyte of Chayula",
+   "skill": "Falling Thunder",
+   "damage": 2345011.707847,
+   "clear": 7466088.153690057,
+   "toughness": 41181.795402066,
+   "mapping_dps": 5571337.9483303
+  },
+  {
+   "ascendancy": "Lich",
+   "skill": "Chaos Bolt",
+   "damage": 1024365.5099903,
+   "clear": 1284504.1312940235,
+   "toughness": 39663.663934658,
+   "mapping_dps": 1004507.4120038
+  },
+  {
+   "ascendancy": "Deadeye",
+   "skill": "Lightning Arrow",
+   "damage": 531687.85268187,
+   "clear": 2328229.0416345196,
+   "toughness": 35879.709581815,
+   "mapping_dps": 790282.64778209
+  },
+  {
+   "ascendancy": "Blood Mage",
+   "skill": "Skeletal Storm Mage",
+   "damage": 104113.43265922,
+   "clear": 240228.4687382383,
+   "toughness": 35036.907637339,
+   "mapping_dps": 240231.6926471
+  },
+  {
+   "ascendancy": "Pathfinder",
+   "skill": "Tornado Shot",
+   "damage": 448297.8844228,
+   "clear": 1457943.4047330278,
+   "toughness": 38852.426050471,
+   "mapping_dps": 571780.0040002
+  },
+  {
+   "ascendancy": "Abyssal Lich",
+   "skill": "Raise Zombie",
+   "damage": 297577.83876563,
+   "clear": 484028.2814108365,
+   "toughness": 66245.326031109,
+   "mapping_dps": 484057.44157244
+  },
+  {
+   "ascendancy": "Titan",
+   "skill": "Boneshatter",
+   "damage": 841881.2928605,
+   "clear": 1674664.4336320814,
+   "toughness": 54673.605234426,
+   "mapping_dps": 1102010.7219167
+  },
+  {
+   "ascendancy": "Warbringer",
+   "skill": "Rolling Slam",
+   "damage": 399531.14147169,
+   "clear": 917166.5423864318,
+   "toughness": 37872.597089935,
+   "mapping_dps": 564315.55756769
+  },
+  {
+   "ascendancy": "Stormweaver",
+   "skill": "Spark",
+   "damage": 734831.51731987,
+   "clear": 3323254.829746565,
+   "toughness": 37088.069341905,
+   "mapping_dps": 921705.05308343
+  },
+  {
+   "ascendancy": "Smith of Kitava",
+   "skill": "Volcanic Fissure",
+   "damage": 552539.86296619,
+   "clear": 1961639.488880301,
+   "toughness": 48892.068080012,
+   "mapping_dps": 1288989.1667102
+  },
+  {
+   "ascendancy": "Chronomancer",
+   "skill": "Arc",
+   "damage": 818467.05525615,
+   "clear": 935666.3920382066,
+   "toughness": 42527.622636858,
+   "mapping_dps": 730632.70158673
+  },
+  {
+   "ascendancy": "Disciple of Varashta",
+   "skill": "Lightning Bolt",
+   "damage": 941849.47619216,
+   "clear": 2197074.0464253845,
+   "toughness": 51414.205311199,
+   "mapping_dps": 1445568.5927977
+  },
+  {
+   "ascendancy": "Ritualist",
+   "skill": "Lightning Spear",
+   "damage": 1560502.6952975,
+   "clear": 4380830.996763296,
+   "toughness": 41328.953354863,
+   "mapping_dps": 1810098.2923478
+  },
+  {
+   "ascendancy": "Amazon",
+   "skill": "Rake",
+   "damage": 1628520.4331623,
+   "clear": 3406424.7683876627,
+   "toughness": 31892.633170795,
+   "mapping_dps": 2435275.7930604
+  },
+  {
+   "ascendancy": "Spirit Walker",
+   "skill": "Twister",
+   "damage": 1099772.6395627,
+   "clear": 3261598.9204209754,
+   "toughness": 41692.799093503,
+   "mapping_dps": 1191920.1278863
+  },
+  {
+   "ascendancy": "Witchhunter",
+   "skill": "Explosive Shot",
+   "damage": 529093.48535693,
+   "clear": 1312788.3720887967,
+   "toughness": 66651.355822865,
+   "mapping_dps": 761313.81699314
+  },
+  {
+   "ascendancy": "Tactician",
+   "skill": "Armour Piercing Rounds",
+   "damage": 1782501.7224927,
+   "clear": 3607025.8143217415,
+   "toughness": 26172.060801851,
+   "mapping_dps": 3613108.1152781
+  },
+  {
+   "ascendancy": "Shaman",
+   "skill": "Volcano",
+   "damage": 430550.17851194,
+   "clear": 372140.85912244266,
+   "toughness": 43385.501531057,
+   "mapping_dps": 254604.56876881
+  },
+  {
+   "ascendancy": "Oracle",
+   "skill": "Maul",
+   "damage": 763221.00156067,
+   "clear": 2597463.5457755667,
+   "toughness": 58367.958582568,
+   "mapping_dps": 1683938.7468228
+  },
+  {
+   "ascendancy": "Gemling Legionnaire",
+   "skill": "Permafrost Bolts",
+   "damage": 351339.64199399,
+   "clear": 3232565.6093784873,
+   "toughness": 49607.79090248,
+   "mapping_dps": 675387.89314953
+  }
+ ],
+ "metrics": {
+  "damage": [
+   104113.43265922,
+   297577.83876563,
+   351339.64199399,
+   399531.14147169,
+   430550.17851194,
+   448297.8844228,
+   529093.48535693,
+   531687.85268187,
+   552539.86296619,
+   734831.51731987,
+   763221.00156067,
+   818467.05525615,
+   841881.2928605,
+   941849.47619216,
+   1024365.5099903,
+   1099772.6395627,
+   1231869.6404254,
+   1371021.0467337,
+   1487618.9814823,
+   1560502.6952975,
+   1628520.4331623,
+   1782501.7224927,
+   2345011.707847
+  ],
+  "clear": [
+   240228.4687382383,
+   372140.85912244266,
+   484028.2814108365,
+   917166.5423864318,
+   935666.3920382066,
+   1284504.1312940235,
+   1312788.3720887967,
+   1457943.4047330278,
+   1674664.4336320814,
+   1701645.110581168,
+   1961639.488880301,
+   2197074.0464253845,
+   2328229.0416345196,
+   2597463.5457755667,
+   3232565.6093784873,
+   3261598.9204209754,
+   3323254.829746565,
+   3406424.7683876627,
+   3607025.8143217415,
+   4380830.996763296,
+   5009595.841300732,
+   5418948.873169376,
+   7466088.153690057
+  ],
+  "toughness": [
+   26172.060801851,
+   31882.398594936,
+   31892.633170795,
+   35036.907637339,
+   35473.727384495,
+   35879.709581815,
+   37088.069341905,
+   37872.597089935,
+   38852.426050471,
+   39025.771351133,
+   39663.663934658,
+   41181.795402066,
+   41328.953354863,
+   41692.799093503,
+   42527.622636858,
+   43385.501531057,
+   48892.068080012,
+   49607.79090248,
+   51414.205311199,
+   54673.605234426,
+   58367.958582568,
+   66245.326031109,
+   66651.355822865
+  ]
+ }
+}
