@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>How it works · Whetstone</title>
+<meta name="description" content="How Whetstone turns a build idea into its strongest version: the search, the four stages, the passive tree, gear, supports and the numbers behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root {
+  --ground: #0e0d0c; --iron: #171513; --iron2: #1f1c19; --seam: #070606; --edge: #3a342d;
+  --ink: #ece4d6; --muted: #a39a8b; --faint: #6f675c;
+  --brass: #d0a45a; --brass-hi: #f0c97f; --brass-lo: #8a6528; --ember: #e8733a;
+  --phys: #cdbda2; --fire: #e8733a; --cold: #74b9dc; --light: #ecd75c; --chaos: #a77ad0;
+  --display: "Grenze Gotisch", Georgia, serif; --body: "Alegreya Sans", "Segoe UI", sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--ground); color: var(--ink); font: 18px/1.6 var(--body); }
+body::after { content: ""; position: fixed; left: -10%; right: -10%; bottom: -30vh; height: 70vh; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(232,115,58,.22), rgba(208,164,90,.06) 45%, transparent 70%); }
+.wrap { position: relative; z-index: 1; max-width: 980px; margin: 0 auto; padding: 28px max(16px, env(safe-area-inset-left, 0px)) 96px max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 56px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(42px, 7vw, 76px); line-height: .95; font-weight: 700; }
+h2 { font-size: clamp(30px, 4.2vw, 40px); line-height: 1; }
+h3 { font-size: 24px; line-height: 1.05; }
+p { margin: 0; }
+a { color: var(--brass); text-underline-offset: 3px; }
+.muted { color: var(--muted); }
+.eyebrow { font: italic 500 17px/1.2 var(--body); color: var(--brass); }
+nav { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+nav .brand { font: 700 34px/1 var(--display); text-decoration: none;
+  background: linear-gradient(180deg, #f6ead2 0%, #d8c3a0 46%, #9c8668 54%, #e2cfae 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.go { display: inline-block; text-decoration: none; border-radius: 3px; padding: 12px 26px 10px; font: 700 24px/1 var(--display); color: #241a0b;
+  background: linear-gradient(180deg, var(--brass-hi) 0%, var(--brass) 48%, #a87a35 52%, #c99a50 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.45), inset 0 -2px 0 rgba(0,0,0,.25), 0 3px 0 #4a3415, 0 8px 22px rgba(232,115,58,.18); }
+.hero { display: grid; gap: 16px; max-width: 760px; }
+.lede { font-size: 21px; color: var(--muted); }
+.lede b { color: var(--ink); font-weight: 500; }
+.rule { height: 2px; background: var(--seam); box-shadow: 0 1px 0 rgba(255,236,200,.06); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
+.stat { display: grid; gap: 2px; }
+.stat b { font: 600 clamp(26px, 3.4vw, 36px)/1 var(--mono); color: var(--brass-hi); letter-spacing: -.02em; }
+.stat span { color: var(--muted); font-size: 16px; }
+@media (max-width: 700px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+section { display: grid; gap: 22px; }
+.steps { display: grid; gap: 14px; counter-reset: step; }
+.step { position: relative; display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 4px 18px; padding: 18px 20px 20px; border: 1px solid var(--edge); border-radius: 3px;
+  background: linear-gradient(180deg, var(--iron2), var(--iron)); box-shadow: inset 0 1px 0 rgba(255,236,200,.06), 0 3px 0 var(--seam); }
+.step > * { grid-column: 2; }
+.step::before { counter-increment: step; content: counter(step); grid-column: 1; grid-row: 1 / span 12; align-self: start; width: 52px; height: 52px; border-radius: 50%; display: grid; place-items: center;
+  font: 700 28px/1 var(--display); color: #241a0b; background: radial-gradient(circle at 40% 35%, #ffc670, var(--ember) 70%); box-shadow: 0 0 18px rgba(232,115,58,.45); }
+.step h3 { align-self: end; }
+.step p { color: var(--muted); }
+.step p b { color: var(--ink); font-weight: 500; }
+.step ul { margin: 6px 0 0; padding-left: 20px; color: var(--muted); display: grid; gap: 6px; }
+.step ul b { color: var(--ink); font-weight: 500; }
+.step .see { font-size: 16px; color: var(--faint); font-style: italic; }
+.grid2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 32px; }
+@media (max-width: 760px) { .grid2 { grid-template-columns: minmax(0, 1fr); } .step { grid-template-columns: minmax(0, 1fr); } .step > * { grid-column: 1; } .step::before { grid-row: auto; } }
+.card { display: grid; gap: 8px; align-content: start; }
+.card p { color: var(--muted); }
+.card p b { color: var(--ink); font-weight: 500; }
+.term { font: 600 15px var(--mono); color: var(--brass-hi); }
+.mix { display: flex; height: 10px; gap: 2px; max-width: 360px; }
+.mix i { border-radius: 2px; }
+.notyet { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.notyet li { display: grid; grid-template-columns: 22px minmax(0, 1fr); gap: 8px; color: var(--muted); }
+.notyet li::before { content: "\2212"; color: var(--ember); font: 700 18px/1.4 var(--mono); }
+.notyet b { color: var(--ink); font-weight: 500; }
+.cta { display: grid; gap: 14px; justify-items: start; padding: 26px; border: 1px solid var(--brass-lo); border-radius: 3px; background: linear-gradient(180deg, #221d16, var(--iron)); }
+footer { font-size: 15px; color: var(--faint); display: grid; gap: 6px; border-top: 2px solid var(--seam); padding-top: 18px; }
+footer a { color: var(--brass); }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><a class="brand" href="/">Whetstone</a><a class="go" href="/">Forge a build</a></nav>
+
+  <header class="hero">
+    <span class="eyebrow">How it works</span>
+    <h1>From an idea to its sharpest version</h1>
+    <p class="lede">You describe a build. Whetstone runs <b>Path of Building's own damage maths</b> on tens of thousands of versions of it: every skill that fits, every weapon it can use, every ascendancy, every passive worth taking, every support gem, gear crafted to your budget. What comes back is the strongest one it found, in four stages from the campaign to endgame.</p>
+  </header>
+
+  <div class="stats" aria-label="A typical build in numbers">
+    <div class="stat"><b>30,000+</b><span>passive tree variations scored per build</span></div>
+    <div class="stat"><b>~400</b><span>skills checked against your idea</span></div>
+    <div class="stat"><b>23</b><span>ascendancies tried</span></div>
+    <div class="stat"><b>~4 min</b><span>for a brand-new idea</span></div>
+  </div>
+
+  <section>
+    <h2>The forge, step by step</h2>
+    <div class="steps">
+      <article class="step">
+        <h3>You describe it</h3>
+        <p>Type what you want to play, like <b>"lightning minion build for a monk, 5 div"</b>, or pick it with the buttons. Whetstone reads damage types, kinds of skill, ailments, weapons, classes, ascendancies, skill names and budgets ("5 div", "300 ex", "league starter"), and shows you exactly how it read each word before you forge.</p>
+        <p>If nothing can match everything you asked for, it doesn't give up. It loosens the request one step at a time (first how strict the theme is, then the ailment, the weapon, the damage type, the kind of skill, the class) and tells you what it changed.</p>
+      </article>
+
+      <article class="step">
+        <h3>The search</h3>
+        <p>Two rounds, run side by side on several copies of Path of Building:</p>
+        <ul>
+          <li><b>First pass:</b> every skill that fits your idea, on every weapon it can use, with crafted gear at your budget. No passives yet, just raw power, so weak options drop out fast.</li>
+          <li><b>Second pass:</b> the strongest few skills on each ascendancy, now with full passive trees. When no class is chosen, the best skill is tried on all 23 ascendancies first to find the few that suit it.</li>
+        </ul>
+        <p>Builds are scored on <b>maps and bosses together</b>: a build that clears well but can't kill a boss (or the reverse) scores lower than one that does both. A themed build, like bleed or poison, is scored on its theme, and one that gets too little of its damage from it is dropped.</p>
+        <p class="see">You watch this as the leaderboard on the workbench.</p>
+      </article>
+
+      <article class="step">
+        <h3>Four anvils</h3>
+        <p>The winner is forged four times at once: <b>Leveling</b> (level 55), <b>Early maps</b> (75), <b>Mid maps</b> (90) and <b>Endgame</b> (95), each capped at your budget. Each stage goes through the same steps:</p>
+        <ul>
+          <li><b>Gear:</b> a rare is crafted for every slot from Path of Building's affix tables: the best base, then damage and defence affixes, then only the resistances still needed. A unique replaces the rare when it scores clearly better and its poe.ninja price fits your budget.</li>
+          <li><b>Passive tree:</b> one point at a time, the engine tries every passive within reach and takes the one that adds the most damage and toughness per point spent. That's the "brain" you watch on the workbench, and why the order it took them in is the order to take them.</li>
+          <li><b>Supports:</b> every support gem is screened on your skill, then the best combination is built up one gem at a time, following Path of Building's own rules on what can support what.</li>
+          <li><b>Spirit and utility:</b> auras, heralds and buffs that fill your spirit, plus curses, marks and banners, are kept only when they raise your damage. A second skill goes on weapon swap when it hits bosses much harder.</li>
+          <li><b>Every skill kitted out:</b> auras, curses and your movement skill get their own supports too, and each support gem is used once in the whole build, as in game.</li>
+          <li><b>Mapping and bossing:</b> gear and passives are built for mapping, then a bossing setup (a support swap or a boss skill) is picked against a pinnacle boss.</li>
+        </ul>
+        <p class="see">Stages appear on the page one by one as they finish.</p>
+      </article>
+
+      <article class="step">
+        <h3>Checks and the rating</h3>
+        <p>The finished build is checked against what you asked for (a bleed build should really bleed), and the endgame stage is <b>rated 1 to 10</b> on damage, clear and toughness against reference builds for every ascendancy at the same settings. Builds tuned for a theme, speed or loot give up some raw numbers, so they rate a little lower, and that's expected.</p>
+      </article>
+
+      <article class="step">
+        <h3>Your build</h3>
+        <ul>
+          <li><b>The passive tree,</b> drawn on the site, with every point numbered in the order to take it and your ascendancy in the centre.</li>
+          <li><b>Gear in buy order:</b> line 1 is what to buy first, with affix tiers, unique prices and a "Find on trade" link that opens the official trade site with the stats filled in.</li>
+          <li><b>Every skill with its supports,</b> the damage mix, the gear cost, and a Path of Building code if you want it in PoB.</li>
+          <li><b>A share link and a PDF,</b> so you can keep it or send it to a friend.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <section>
+    <h2>What the numbers mean</h2>
+    <div class="grid2">
+      <div class="card"><span class="term">Mapping DPS</span><p>Damage per second against normal monsters with your mapping setup. Hits and damage over time both count, and area and projectiles weigh in when ranking builds for clear.</p></div>
+      <div class="card"><span class="term">Boss DPS</span><p>Single-target damage per second against a pinnacle boss, with the bossing setup (a support swap or a boss skill).</p></div>
+      <div class="card"><span class="term">Effective HP</span><p>Path of Building's estimate of how much raw damage you can take, counting life, energy shield, armour, evasion and resistances.</p></div>
+      <div class="card"><span class="term">Damage mix</span>
+        <div class="mix" aria-hidden="true"><i style="flex:6;background:var(--light)"></i><i style="flex:2;background:var(--phys)"></i><i style="flex:1;background:var(--chaos)"></i></div>
+        <p>How the damage splits by type. Only damage types get bright colours on Whetstone, so you can see what a build scales at a glance.</p></div>
+    </div>
+    <p class="muted">All numbers are Path of Building's, at the settings the build keeps up (each one is listed with its reason). Use them to compare builds; your in-game numbers depend on your own gear, charges and buffs.</p>
+  </section>
+
+  <section>
+    <h2>Where it all comes from</h2>
+    <div class="grid2">
+      <div class="card"><h3>Path of Building</h3><p>The open-source <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">Path of Building Community</a> (MIT licence) does every calculation, run without its window. Its game data covers skills, supports, items, affixes and the passive tree.</p></div>
+      <div class="card"><h3>poe.ninja</h3><p>Unique item prices come from <a href="https://poe.ninja/poe2/economy">poe.ninja</a>, refreshed for the current league. Crafted rares have no fixed price, so each one links to the official trade site instead.</p></div>
+      <div class="card"><h3>Grinding Gear Games</h3><p>Item and gem pictures load straight from GGG's own image server. The passive tree is drawn by Whetstone from Path of Building's data, with no game art.</p></div>
+      <div class="card"><h3>No AI guesswork</h3><p>Nothing here is a language model's opinion. Reading your prompt is plain keyword matching, and every number is a calculation. Free to use, and it costs nothing to run a build.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What it can't do yet</h2>
+    <ul class="notyet">
+      <li><span><b>Jewels, flasks and charms</b> aren't planned yet.</span></li>
+      <li><span><b>The passive tree is picked greedily,</b> one best point at a time, so it can miss a great passive hidden behind several weak ones.</span></li>
+      <li><span><b>Leveling is one snapshot</b> at level 55, not a step-by-step route through the campaign.</span></li>
+      <li><span><b>Some skill interactions</b> Path of Building doesn't model (triggers like Cast on X, combo finishers) are left out on purpose.</span></li>
+      <li><span><b>Rare item prices</b> are estimates by budget; check the trade links for real prices.</span></li>
+      <li><span><b>Path of Exile 2 1.0</b> (December 11) needs a Path of Building update first; new classes like the Shadow arrive as soon as it supports them.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Where it runs</h2>
+    <p class="muted">This page is always online. The engine itself runs on a home PC, so if it's switched off, the forge says it's cold and new builds wait until it's back. Builds are cached, so asking for one someone already forged comes back instantly.</p>
+  </section>
+
+  <div class="cta">
+    <h2>Ready to forge one?</h2>
+    <p class="muted">Describe a build, pick a budget, and watch it get made.</p>
+    <a class="go" href="/">Forge a build</a>
+  </div>
+
+  <footer>
+    <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">Path of Building Community</a> (MIT licence), run by this site. Unique prices from <a href="https://poe.ninja/poe2/economy">poe.ninja</a>.</p>
+    <p>Fan-made and free. This product isn't affiliated with or endorsed by Grinding Gear Games in any way. Path of Exile is a trademark of Grinding Gear Games.</p>
+  </footer>
+</div>
+</body>
+</html>

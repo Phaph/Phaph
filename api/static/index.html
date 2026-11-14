@@ -352,6 +352,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 .cold b { font: 600 24px/1.1 var(--display); color: #a9c4d6; }
 .cold span { color: var(--muted); font-size: 16px; }
 
+.howlink { white-space: nowrap; color: var(--brass); font-weight: 500; }
+.howlink::after { content: " 92"; }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -417,7 +420,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <path fill="#0e0d0c" opacity=".35" d="M28 65h88v3H28z"/>
     </svg>
     <span class="wordmark">Whetstone</span>
-    <p class="sub">Say what you want to play. It grinds through <b>every skill, weapon and ascendancy</b> that fits in Path of Building's own damage maths, and hands you the sharpest version at your budget, from the campaign to endgame.</p>
+    <p class="sub">Say what you want to play. It grinds through <b>every skill, weapon and ascendancy</b> that fits in Path of Building's own damage maths, and hands you the sharpest version at your budget, from the campaign to endgame. <a class="howlink" href="/how.html">How it works</a></p>
   </header>
 
   <div class="cold" id="cold" hidden role="status">
@@ -463,6 +466,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   <footer>
     <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2" style="color:var(--brass)">Path of Building Community</a> (MIT licence), run by this site. Unique prices from <a href="https://poe.ninja/poe2/economy" style="color:var(--brass)">poe.ninja</a>. Use DPS to compare builds; in-game numbers depend on your settings.</p>
+    <p><a href="/how.html" style="color:var(--brass)">How Whetstone works</a></p>
     <p>Fan-made and free. This product isn't affiliated with or endorsed by Grinding Gear Games in any way. Path of Exile is a trademark of Grinding Gear Games.</p>
   </footer>
 </div>

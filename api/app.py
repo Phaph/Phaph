@@ -246,6 +246,11 @@ def index():
     return FileResponse(STATIC / "index.html")
 
 
+@app.get("/how.html")
+def how_page():
+    return FileResponse(STATIC / "how.html")
+
+
 @app.get("/treeview.js")
 def treeview_js():
     return FileResponse(STATIC / "treeview.js", media_type="text/javascript", headers={"Cache-Control": "public, max-age=3600"})
