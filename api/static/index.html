@@ -255,6 +255,35 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
 /* Sparks: a canvas over the page, used only when something is struck. */
 #sparks { position: fixed; inset: 0; pointer-events: none; z-index: 5; width: 100%; height: 100%; }
 
+/* ---------- The duel ---------- */
+.duel { display: grid; gap: 18px; }
+.lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
+.lanebar .who { font: 600 24px/1.1 var(--display); min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: flex; align-items: center; gap: 10px; }
+.lanebar .who img { width: 34px; height: 34px; object-fit: contain; flex: none; }
+.lanebar .val { font: 600 22px var(--mono); font-variant-numeric: tabular-nums; letter-spacing: -.02em; white-space: nowrap; }
+.lanebar .val small { font: 13px var(--mono); color: var(--muted); letter-spacing: 0; }
+.lanebar .val em { font: italic 500 16px var(--body); color: var(--ember); letter-spacing: 0; margin-left: 6px; }
+.lanebar .track { grid-column: 1 / -1; height: 18px; border-radius: 3px; background: var(--seam); box-shadow: inset 0 2px 4px rgba(0,0,0,.6), 0 1px 0 rgba(255,236,200,.05); overflow: hidden; }
+.lanebar .fill { display: flex; gap: 2px; height: 100%; width: 0; transition: width 1100ms cubic-bezier(.2,.8,.15,1); }
+.lanebar .fill i { min-width: 2px; height: 100%; background: var(--c, #6a6052); box-shadow: inset 0 1px 0 rgba(255,255,255,.25); }
+.lanebar .fill i.plain { flex: 1; background: linear-gradient(180deg, #7d7262, #4f463c); }
+.lanebar .fill i.dmg-minion.split-seg { background: repeating-linear-gradient(135deg, #8a8478 0 3px, #5d5850 3px 6px); }
+.lanebar.leader .who, .lanebar.leader .val { color: var(--brass-hi); }
+.lanebar.leader .track { box-shadow: inset 0 2px 4px rgba(0,0,0,.6), 0 0 0 1px var(--brass-lo), 0 0 18px rgba(208,164,90,.22); }
+.lanebar.leader .fill i.plain { background: linear-gradient(180deg, var(--brass-hi), var(--brass-lo)); }
+@media (max-width: 560px) { .lanebar .who { font-size: 20px; } .lanebar .val { font-size: 18px; } .lanebar .val em { display: block; margin: 0; } }
+.duelists { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+.duelist { display: grid; gap: 10px; align-content: start; }
+.duelist .skillhead img { width: 40px; height: 40px; }
+.duelist > .chip { justify-self: start; }
+.proscons { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; font-size: 16px; }
+.proscons li { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 6px; }
+.proscons li::before { font: 700 16px/1.3 var(--mono); }
+.proscons .pro::before { content: "+"; color: var(--good); }
+.proscons .con::before { content: "\2212"; color: var(--bad); }
+.proscons .con { color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { .lanebar .fill { transition: none; } }
+
 /* ---------- Damage has a colour ---------- */
 .mix { display: grid; gap: 8px; }
 .split { display: flex; height: 12px; gap: 2px; }
@@ -558,13 +587,14 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       });
     },
 
-    startGuide(stages) {
+    startGuide(stages, opt = {}) {
       const w = this.el(); w.hidden = false;
+      const names = opt.names || STAGE_NAMES;
       w.innerHTML = `<div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">On the anvil</span>
-          <h2>Four anvils, one build</h2></div><span class="clock"></span></div>
-        <p class="muted">Leveling, early maps, mid maps and endgame are forged side by side: gear, passives, supports and spirit, each at your budget. Passives drop in as they're picked.</p>
+          <h2>${opt.title || "Four anvils, one build"}</h2></div><span class="clock"></span></div>
+        <p class="muted">${opt.blurb || "Leveling, early maps, mid maps and endgame are forged side by side: gear, passives, supports and spirit, each at your budget. Passives drop in as they're picked."}</p>
         <div class="lanes">${stages.map(k => `<div class="lane" data-stage="${k}">
-          <span class="lname">${STAGE_NAMES[k] || k}</span>
+          <span class="lname">${esc(names[k] || k)}</span>
           <span class="ldps" data-v="0">–</span>
           <span class="pips">${STEP_ORDER.slice(1).map(() => "<i></i>").join("")}</span>
           <span class="lstep">Waiting for a free anvil…</span>
@@ -720,22 +750,88 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       const builds = picked.map(r => ({ name: `${r.skill} ${r.ascendancy}`, class: r.cls, ascendancy: r.ascendancy, skill: r.skill,
         weapon_type: r.weapon_type, weapon_subtype: r.weapon_subtype, offhand_type: r.offhand_type }));
       try {
+        $("compare").hidden = true;
         let job = await api("/compare", { builds, budget: state.budget, stage: "end" });
-        job = await waitFor(job, "Building each one at your budget", t => setStatus(t, true));
-        setStatus(""); renderCompare(job.result);
+        const keys = builds.map((_, i) => `b${i}`);
+        if (!job.cached) work.startGuide(keys, { names: Object.fromEntries(builds.map((b, i) => [`b${i}`, b.name])),
+          title: builds.length > 1 ? `${builds.length} builds, one budget` : "One build, at your budget",
+          blurb: "Each build gets its own endgame gear, passives, supports and spirit at your budget, so the fight is fair." });
+        heat(true);
+        try {
+          job = await waitFor(job, job.cached ? "Loading" : "A few minutes",
+            (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
+            e => work.guideEvent(e));
+        } finally { work.hide(); heat(false); }
+        setStatus(""); renderCompare(job.result, picked);
       } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }
     };
   }
 
-  function renderCompare(res) {
+  // Compare as a duel: one measure at a time, bars race out together, the leader takes the brass.
+  const DUEL_METRICS = [
+    { key: "boss", label: "Boss damage", get: x => x.dps, split: true, unit: "DPS" },
+    { key: "map", label: "Mapping damage", get: x => x.mapping_dps || x.stats.MappingDPS || 0, split: true, unit: "DPS" },
+    { key: "ehp", label: "Toughness", get: x => x.ehp, unit: "effective HP" },
+    { key: "pool", label: "Life + ES", get: x => (x.stats.Life || 0) + (x.stats.EnergyShield || 0), unit: "life + ES" },
+    { key: "speed", label: "Speed", get: x => x.stats.Speed || 0, unit: "uses / s", dec: 2 },
+  ];
+  let duel = null;
+  function renderCompare(res, picked = []) {
+    duel = { builds: res.builds, picked, metric: duel?.metric || "boss" };
     const b = res.builds;
-    const row = (label, f) => `<tr><td>${label}</td>${b.map(x => `<td class="num">${f(x)}</td>`).join("")}</tr>`;
     $("compare").hidden = false;
-    $("compare").innerHTML = `<span class="eyebrow">Side by side, at your budget</span>
-      <div class="tablewrap"><table><thead><tr><th></th>${b.map(x => `<th class="num">${esc(x.name)}</th>`).join("")}</tr></thead><tbody>
-      ${row("Single-target DPS", x => fmt(x.dps))}${row("Mapping DPS", x => fmt(x.stats.MappingDPS))}${row("Effective HP", x => fmt(x.ehp))}
-      ${row("Life", x => fmt(x.stats.Life))}</tbody></table></div>
-      <div class="row">${b.map(x => `<div><h3>${esc(x.name)}</h3><ul class="notes">${x.pros.map(p => `<li>+ ${esc(p)}</li>`).join("")}${x.cons.map(c => `<li>− ${esc(c)}</li>`).join("")}</ul></div>`).join("")}</div>`;
+    $("compare").innerHTML = `<div style="display:grid;gap:6px"><span class="eyebrow">Side by side, at your budget</span>
+        <h2>${b.length > 1 ? "The duel" : esc(b[0].name)}</h2>
+        <p class="muted">Every build here was fully forged at the same budget, so this is a fair fight. Pick what matters to you.</p></div>
+      <div class="tabs" id="duelTabs" role="tablist">${DUEL_METRICS.map(m => `<button class="chip" type="button" role="tab" data-m="${m.key}">${m.label}</button>`).join("")}</div>
+      <div class="duel" id="duelBars"></div>
+      <div class="duelists">${b.map((x, i) => `<div class="duelist">
+          <div class="skillhead">${img(gemUrl(x.main_skill))}<h3>${esc(x.name)}</h3></div>
+          ${x.rating ? `<p class="muted">Rated <b style="color:var(--brass-hi)">${x.rating.overall}</b> · ${esc(x.rating.label)}</p>` : ""}
+          ${mixHtml(x.damage_split)}
+          <ul class="proscons">${x.pros.map(t => `<li class="pro">${esc(t)}</li>`).join("")}${x.cons.map(t => `<li class="con">${esc(t)}</li>`).join("")}</ul>
+          ${picked[i] ? `<button class="chip" type="button" data-forge="${i}">Forge this one</button>` : ""}
+        </div>`).join("")}</div>`;
+    $("duelTabs").querySelectorAll(".chip").forEach(t => t.onclick = () => { duel.metric = t.dataset.m; drawDuel(); });
+    $("compare").querySelectorAll("[data-forge]").forEach(btn => btn.onclick = async () => {
+      const r = duel.picked[+btn.dataset.forge];
+      try {
+        const plan = await api(`/generate/${state.genJob}/plan`, { ascendancy: r.ascendancy, skill: r.skill });
+        if (plan.note) setStatus(esc(plan.note));
+        heat(true);
+        try { await buildGuide(plan); } finally { heat(false); }
+      } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }
+    });
+    drawDuel();
+    $("compare").scrollIntoView({ behavior: REDUCE ? "auto" : "smooth", block: "start" });
+  }
+  function drawDuel() {
+    const m = DUEL_METRICS.find(x => x.key === duel.metric);
+    const vals = duel.builds.map(m.get);
+    const max = Math.max(...vals, 1e-9);
+    const order = vals.map((v, i) => [v, i]).sort((a, b) => b[0] - a[0]);
+    const lead = order[0][1], second = order[1];
+    const by = second && second[0] > 0 ? vals[lead] / second[0] - 1 : null;
+    const many = duel.builds.length > 1;
+    $("duelTabs").querySelectorAll(".chip").forEach(t => t.setAttribute("aria-pressed", t.dataset.m === m.key));
+    const num = v => m.dec ? v.toFixed(m.dec) : fmt(v);
+    $("duelBars").innerHTML = duel.builds.map((x, i) => {
+      const w = 100 * vals[i] / max;
+      const parts = m.split ? mixParts(x.damage_split) : [];
+      const fill = parts.length
+        ? parts.map(([k, f]) => `<i class="dmg-${k} split-seg" style="flex-grow:${f.toFixed(4)}"></i>`).join("")
+        : `<i class="plain"></i>`;
+      return `<div class="lanebar${i === lead && many ? " leader" : ""}">
+        <span class="who">${img(gemUrl(x.main_skill))}${esc(x.name)}</span>
+        <span class="val">${num(vals[i])} <small>${m.unit}</small>${i === lead && by != null && many ? ` <em>leads by ${pct(by)}</em>` : ""}</span>
+        <span class="track"><span class="fill" data-w="${w.toFixed(2)}">${fill}</span></span></div>`;
+    }).join("");
+    // Race: every bar starts empty and they run out together.
+    const fills = [...$("duelBars").querySelectorAll(".fill")];
+    if (REDUCE) { fills.forEach(f => f.style.width = f.dataset.w + "%"); return; }
+    requestAnimationFrame(() => requestAnimationFrame(() => fills.forEach(f => f.style.width = f.dataset.w + "%")));
+    const winner = $("duelBars").querySelector(".leader .val");
+    if (winner) setTimeout(() => sparks(winner, 18, 0.7), 950);
   }
 
   function renderGuide(plan, res) {

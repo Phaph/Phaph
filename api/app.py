@@ -173,10 +173,10 @@ def validate_generate(req: GenerateRequest, catalog: dict) -> None:
             raise HTTPException(400, f"Unknown weapon type '{w}'")
 
 
-def run_compare(req: dict) -> dict:
+def run_compare(req: dict, progress=None) -> dict:
     from compare import compare
 
-    reports = compare(req["builds"], budget=req["budget"], stage=req["stage"])
+    reports = compare(req["builds"], budget=req["budget"], stage=req["stage"], progress=progress)
     return {"budget": req["budget"], "stage": req["stage"], "builds": [asdict(r) for r in reports]}
 
 

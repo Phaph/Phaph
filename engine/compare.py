@@ -46,6 +46,12 @@ class Report:
     code: str = ""
     supports: list[str] = field(default_factory=list)
     notables: list[str] = field(default_factory=list)
+    # Filled when builds are built at a budget (evaluate_spec):
+    ascendancy: str | None = None
+    mapping_dps: float = 0.0
+    clear: float = 0.0
+    damage_split: dict = field(default_factory=dict)   # dps by type, as in guide.damage_split
+    rating: dict | None = None                          # 1-10, endgame stage only
 
 
 def _pick_supports(pob: PoB, group: int, build: dict) -> list[str]:
@@ -168,28 +174,32 @@ def relative_notes(reports: list[Report]) -> None:
         by_ehp[-1].cons.append(f"Squishiest ({by_ehp[-1].ehp:,.0f} effective HP)")
 
 
-def evaluate_spec(spec: dict, budget: str, stage: str = "end") -> Report:
+def evaluate_spec(spec: dict, budget: str, stage: str = "end", progress=None) -> Report:
     """Build a guide spec at one stage, capped at `budget`, and report on it."""
     from guide import build_stage  # local import: guide imports this module's helpers indirectly
 
-    g = build_stage({**spec, "budget": budget}, stage)
+    g = build_stage({**spec, "budget": budget}, stage, progress=progress)
     s = dict(g.stats, MappingDPS=g.dps)
     return Report(
         name=spec.get("name") or spec["skill"], main_skill=spec["skill"], dps=g.boss_dps or g.dps,
         hit_dps=s.get("TotalDPS", 0), ailment_dps=s.get("TotalDotDPS", 0), ehp=s.get("TotalEHP", 0),
         stats=s, code=g.code, supports=g.supports, notables=g.notables,
+        ascendancy=spec.get("ascendancy"), mapping_dps=g.dps, clear=g.clear, damage_split=g.damage_split, rating=g.rating,
     )
 
 
 def compare(builds: list[dict], pob: PoB | None = None, budget: str | None = None,
-            stage: str = "end") -> list[Report]:
+            stage: str = "end", progress=None) -> list[Report]:
     """Compare 1-3 builds. With `budget`, builds are guide specs (class, skill, weapon type)
-    and each is fully built (supports, gear, tree) at that budget before comparing."""
+    and each is fully built (supports, gear, tree) at that budget before comparing.
+    progress gets the stage builder's steps, with "stage" set to "b0", "b1", "b2" for each build."""
     if not 1 <= len(builds) <= MAX_BUILDS:
         raise ValueError(f"Give 1 to {MAX_BUILDS} builds")
     if budget:
+        def tagged(i):
+            return (lambda e: progress({**e, "stage": f"b{i}"})) if progress else None
         with ThreadPoolExecutor(max_workers=len(builds)) as ex:
-            reports = list(ex.map(lambda b: evaluate_spec(b, budget, stage), builds))
+            reports = list(ex.map(lambda ib: evaluate_spec(ib[1], budget, stage, tagged(ib[0])), enumerate(builds)))
     elif pob is not None:
         reports = [evaluate(pob, b) for b in builds]
     else:
