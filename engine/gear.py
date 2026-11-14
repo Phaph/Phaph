@@ -160,27 +160,35 @@ def _add(work: _Work, group: str, affix: dict, lines: list[str]) -> None:
     work.options.pop(group, None)
 
 
+def _try(pob: PoB, slot: str, raws: list[str]) -> list[dict | None]:
+    """Score candidate items for a slot without equipping them (PoB's fast what-if calc)."""
+    if not raws:
+        return []
+    res = pob.send("try_items", slot=slot, items=raws, fields=SCORE_FIELDS)["results"]
+    return [None if (not isinstance(r, dict) or "error" in r) else r for r in res]
+
+
 def _fill(pob: PoB, work: _Work, stage: Stage, score: Scorer, limit: int, allow, ) -> None:
     """Greedy: keep adding the affix with the best score until `limit` affixes or no gain."""
     current = pob.send("equip", slot=work.slot, raw=work.raw(), fields=SCORE_FIELDS)["output"]
     while len(work.picked) < limit:
-        best, best_score, best_out = None, 0.0, None
+        cands = []
         for group, a in work.options.items():
-            if not allow(group) or not work.has_room(stage, a["type"]):
-                continue
-            new_lines = [_value_at(line, stage.roll) for line in a["lines"]]
-            try:
-                out = pob.send("equip", slot=work.slot, raw=work.raw(new_lines), fields=SCORE_FIELDS)["output"]
-            except PoBError:
+            if allow(group) and work.has_room(stage, a["type"]):
+                cands.append((group, a, [_value_at(line, stage.roll) for line in a["lines"]]))
+        outs = _try(pob, work.slot, [work.raw(c[2]) for c in cands])
+        best, best_score = None, 0.0
+        for cand, out in zip(cands, outs):
+            if out is None:
                 continue
             sc = score(out, current)
             if sc > best_score:
-                best, best_score, best_out = (group, a, new_lines), sc, out
+                best, best_score = cand, sc
         if not best:
             break
         _add(work, *best)
-        current = best_out
-    pob.send("equip", slot=work.slot, raw=work.raw(), fields=SCORE_FIELDS)
+        # Equip the improved item so the next round's what-if calcs start from it.
+        current = pob.send("equip", slot=work.slot, raw=work.raw(), fields=SCORE_FIELDS)["output"]
 
 
 def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
@@ -217,15 +225,14 @@ def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score:
     """Try each candidate base bare (implicit + base defences only) and keep the best."""
     title = f"{stage.name} {slot}"
     ref = pob.calc(SCORE_FIELDS)
+    outs = _try(pob, slot, [_item_raw(title, c["name"], []) for c in candidates])
     best, best_score = candidates[0]["name"], float("-inf")
-    for c in candidates:
-        try:
-            out = pob.send("equip", slot=slot, raw=_item_raw(title, c["name"], []), fields=SCORE_FIELDS)["output"]
-        except PoBError:
+    for c, out in zip(candidates, outs):
+        if out is None:
             continue
-        s = score(out, ref)
-        if s > best_score:
-            best, best_score = c["name"], s
+        sc = score(out, ref)
+        if sc > best_score:
+            best, best_score = c["name"], sc
     return best
 
 

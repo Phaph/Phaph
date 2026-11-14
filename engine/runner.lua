@@ -202,6 +202,30 @@ function handlers.equip(cmd)
 	return { id = item.id, name = item.name, output = result }
 end
 
+-- Score several candidate items for one slot without equipping them, using PoB's fast
+-- what-if calculator (the one behind its item tooltips). Returns one output per item,
+-- or {error=...} for an item that does not parse.
+function handlers.try_items(cmd)
+	local calcFunc = build.calcsTab:GetMiscCalculator()
+	local results = {}
+	for i, raw in ipairs(cmd.items) do
+		local item = new("Item"):Item(raw)
+		if item.base then
+			item:NormaliseQuality()
+			item:BuildModList()
+			local out = calcFunc({ repSlotName = cmd.slot, repItem = item })
+			local r = {}
+			for _, f in ipairs(cmd.fields or DEFAULT_FIELDS) do
+				if type(out[f]) == "number" then r[f] = out[f] end
+			end
+			results[i] = r
+		else
+			results[i] = { error = "could not parse item" }
+		end
+	end
+	return { results = results }
+end
+
 function handlers.unequip(cmd)
 	local slot = build.itemsTab.slots[cmd.slot]
 	if not slot then error("unknown slot: " .. tostring(cmd.slot)) end
