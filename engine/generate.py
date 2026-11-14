@@ -210,6 +210,8 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
                 c.error = f"off theme: only {share:.0%} of damage is {req['ailment']}"
     except (PoBError, ValueError) as e:
         c.error = str(e)
+    except Exception as e:  # noqa: BLE001 - one broken candidate must not end the whole search
+        c.error = f"{type(e).__name__}: {e}"
     return c
 
 
@@ -230,7 +232,7 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
         craft_gear(p, stage, f.weapon_type, f.weapon_subtype, offhand_type=f.offhand_type, uniques=False,
                    metric=metric, log=quiet)
         xml = p.save_xml()
-    except (PoBError, ValueError):
+    except Exception:  # noqa: BLE001
         return ascs[:keep]
     scores = []
     for cls, asc in ascs:
@@ -240,7 +242,7 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
             p.optimise_tree(points=0, def_weight=0.25, metric=metric, refine=False)
             p.auto_config(mode)
             scores.append((_score(p.calc(FIELDS), req), cls, asc))
-        except (PoBError, ValueError):
+        except Exception:  # noqa: BLE001 - skip an ascendancy that fails to build
             continue
     scores.sort(key=lambda t: -t[0])
     return [(c, a) for _, c, a in scores[:keep]] or ascs[:keep]

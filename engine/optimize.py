@@ -166,7 +166,7 @@ def optimise_supports(
     useful = ranked[:top_k]
     log(f"Screened {len(pool)} supports in {time.time() - t0:.1f}s, {len(useful)} add damage")
     for n in useful[:10]:
-        log(f"  {n:<32} {solo[n] / base_score - 1:+.0%}")
+        log(f"  {n:<32} {solo[n] / max(base_score, 1e-9) - 1:+.0%}")
 
     frontier = [Result([], base_score, base["output"])]
     best = frontier[0]
@@ -190,7 +190,7 @@ def optimise_supports(
         if frontier[0].score <= best.score * (1 + min_gain):
             break
         best = frontier[0]
-        log(f"{depth + 1} supports: {best.score:,.0f} ({best.score / base_score:.2f}x) {best.supports}")
+        log(f"{depth + 1} supports: {best.score:,.0f} ({best.score / max(base_score, 1e-9):.2f}x) {best.supports}")
 
     # Leave the build holding the winning setup.
     pob.try_skill(group, [active, *best.supports], fields, keep_main=keep_main)
