@@ -27,7 +27,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from gear import Stage, craft_gear, make_stage
-from optimize import MODE_CONFIG, clear_score, metric_for, optimise_supports, score_of, total_dps
+from optimize import MODE_CONFIG, ailment_dps, clear_score, hit_dps, metric_for, optimise_supports, score_of, total_dps
 from pob import PoB, PoBError
 
 # Types that make a skill a support act rather than a main damage skill.
@@ -135,7 +135,7 @@ def weapon_options(skill: dict, req: dict) -> list[tuple[str, str | None, str | 
 def _score(out: dict, req: dict) -> float:
     if req.get("ailment") in AILMENT_FIELD:
         # An ailment build lives on its ailment: count it fully, hits a quarter.
-        return out.get(AILMENT_FIELD[req["ailment"]], 0) + 0.25 * out.get("TotalDPS", 0)
+        return ailment_dps(out, req["ailment"]) + 0.25 * hit_dps(out)
     mode = req.get("mode", "balanced")
     if mode == "mapping":
         return clear_score(out)
@@ -147,7 +147,8 @@ def _score(out: dict, req: dict) -> float:
 
 
 FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "BleedDPS",
-          "PoisonDPS", "IgniteDPS", "AreaOfEffectMod", "ProjectileCount", "TotalEHP"]
+          "PoisonDPS", "IgniteDPS", "MinionBleedDPS", "MinionPoisonDPS", "MinionIgniteDPS",
+          "AreaOfEffectMod", "ProjectileCount", "TotalEHP"]
 
 
 def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
@@ -174,17 +175,70 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         c.boss = score_of(out, metric_for("bossing", req.get("ailment")))
         # Theme check: an ailment build that gets most of its damage elsewhere is off brief.
         if req.get("ailment") in AILMENT_FIELD:
-            share = out.get(AILMENT_FIELD[req["ailment"]], 0) / max(total_dps(out), 1)
-            if share < THEME_MIN_SHARE:
+            share = ailment_dps(out, req["ailment"]) / max(total_dps(out), 1)
+            if share < req.get("_min_share", THEME_MIN_SHARE):
                 c.error = f"off theme: only {share:.0%} of damage is {req['ailment']}"
     except (PoBError, ValueError) as e:
         c.error = str(e)
     return c
 
 
+def _relax_steps(req: dict) -> list[tuple[str, dict]]:
+    """Ways to loosen a request that found nothing, mildest first, each with a note for the player.
+    They apply cumulatively: step 3 keeps the changes of steps 1 and 2."""
+    steps = []
+    ail = req.get("ailment")
+    if ail in AILMENT_FIELD:
+        steps.append((f"No build got most of its damage from {ail}, so builds where {ail} is a smaller part were allowed.",
+                      {"_min_share": 0.0}))
+    if ail:
+        steps.append((f"No {ail} build worked with these choices, so {ail} isn't required.", {"ailment": None}))
+    if req.get("weapons"):
+        steps.append((f"Nothing worked with {' or '.join(req['weapons'])}, so any weapon was allowed.", {"weapons": []}))
+    if req.get("damage"):
+        steps.append((f"No {'/'.join(req['damage'])} skill worked with these choices, so any damage type was allowed.",
+                      {"damage": []}))
+    if req.get("kinds"):
+        steps.append((f"No {'/'.join(req['kinds'])} skill worked with these choices, so any kind of skill was allowed.",
+                      {"kinds": []}))
+    if req.get("skill"):
+        steps.append((f"{req['skill']} couldn't be built here, so the best skill was picked instead.", {"skill": None}))
+    if req.get("ascendancy") or req.get("class"):
+        who = req.get("ascendancy") or req.get("class")
+        steps.append((f"Nothing worked on {who}, so every class was tried.", {"class": None, "ascendancy": None}))
+    return steps
+
+
 def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progress=None) -> dict:
-    """progress, if given, gets {"step": "round", ...} when a round starts and
-    {"step": "candidate", ...} as each skill/weapon/ascendancy option is scored."""
+    """Best builds for a theme. Never comes back empty: when nothing fits, the request is loosened one step at
+    a time (see _relax_steps) and result["relaxed"] lists what was changed, in the player's words.
+
+    progress, if given, gets {"step": "round", ...} when a round starts, {"step": "candidate", ...} as each
+    skill/weapon/ascendancy option is scored, and {"step": "relaxed", "label": note} when the request is loosened."""
+    tried = dict(req)
+    notes: list[str] = []
+    steps = _relax_steps(req)
+    while True:
+        try:
+            result = _generate_once({k: v for k, v in tried.items() if v not in (None, [], "")} | {"budget": req.get("budget", "high")},
+                                    workers, top_skills, log, progress)
+        except ValueError as e:
+            if not steps:
+                raise ValueError(f"{e} Even a fully open search found nothing; please report this.") from e
+            note, change = steps.pop(0)
+            log(f"Relaxing: {note}")
+            if progress:
+                progress({"step": "relaxed", "label": note})
+            tried.update(change)
+            notes.append(note)
+            continue
+        result["request"] = req
+        result["searched"] = {k: v for k, v in tried.items() if not k.startswith("_")}
+        result["relaxed"] = notes
+        return result
+
+
+def _generate_once(req: dict, workers: int, top_skills: int, log, progress) -> dict:
     t0 = time.time()
 
     def scored(c: Candidate, rnd: int) -> Candidate:
@@ -294,7 +348,9 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
     if not rows:
         raise ValueError("That combination was not part of the search. Run the generator with it locked.")
     main = rows[0]
-    req = result.get("request", {})
+    # The request as actually searched: if it had to be loosened (result["relaxed"]), the guide follows suit
+    # rather than chasing, say, an ailment no candidate could deliver.
+    req = result.get("searched") or result.get("request", {})
     spec = {
         "name": f"{main['skill']} {main['ascendancy']}",
         "class": main["cls"], "ascendancy": main["ascendancy"], "skill": main["skill"],

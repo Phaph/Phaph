@@ -5,7 +5,7 @@ a "bleed" build whose damage mostly isn't bleed has failed its brief, however st
 """
 from __future__ import annotations
 
-from optimize import AILMENT_FIELD, total_dps
+from optimize import AILMENT_FIELD, ailment_dps, total_dps
 
 AILMENT_MIN_SHARE = 0.4   # at least 40% of damage from the theme's ailment
 
@@ -15,7 +15,7 @@ def check(spec: dict, stats: dict, catalog: list[dict]) -> list[str]:
     ailment = spec.get("ailment")
     total = max(total_dps(stats), 1)
     if ailment in AILMENT_FIELD:
-        share = stats.get(AILMENT_FIELD[ailment], 0) / total
+        share = ailment_dps(stats, ailment) / total
         if share < AILMENT_MIN_SHARE:
             issues.append(f"Only {share:.0%} of damage is {ailment}; a {ailment} build should be at least "
                           f"{AILMENT_MIN_SHARE:.0%}.")

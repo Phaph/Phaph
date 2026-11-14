@@ -16,7 +16,7 @@ METRICS = {
 METRICS["mapping"] = "mapping"   # clear score: hit-weighted DPS x sqrt(area) x sqrt(projectiles)
 CLEAR_FIELDS = ["AreaOfEffectMod", "ProjectileCount"]
 DPS_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "BleedDPS",
-              "PoisonDPS", "IgniteDPS"]
+              "PoisonDPS", "IgniteDPS", "MinionBleedDPS", "MinionPoisonDPS", "MinionIgniteDPS"]
 
 # PoB config for each mode. Bossing is PoB's default (pinnacle boss).
 MODE_CONFIG = {
@@ -48,6 +48,19 @@ def clear_score(out: dict) -> float:
 
 
 AILMENT_FIELD = {"bleed": "BleedDPS", "poison": "PoisonDPS", "ignite": "IgniteDPS"}
+# The same ailments dealt by minions: PoB keeps minion damage in its own output (runner.lua exposes it as Minion*).
+MINION_AILMENT_FIELDS = ["Minion" + f for f in AILMENT_FIELD.values()]
+
+
+def ailment_dps(out: dict, ailment: str) -> float:
+    """An ailment's damage per second from the player and their minions together."""
+    f = AILMENT_FIELD[ailment]
+    return (out.get(f, 0) or 0) + (out.get("Minion" + f, 0) or 0)
+
+
+def hit_dps(out: dict) -> float:
+    """Hit damage per second from the player and their minions."""
+    return (out.get("TotalDPS", 0) or 0) + (out.get("MinionDPS", 0) or 0)
 
 
 def area_factor(out: dict) -> float:
@@ -72,7 +85,7 @@ def score_of(out: dict, field_name: str) -> float:
     ailment = next((p for p in parts if p in AILMENT_FIELD), None)
     if ailment:
         # An ailment build lives on its ailment: it counts fully, hits a quarter.
-        base = out.get(AILMENT_FIELD[ailment], 0) + 0.25 * out.get("TotalDPS", 0)
+        base = ailment_dps(out, ailment) + 0.25 * hit_dps(out)
         return base * area_factor(out) if "mapping" in parts else base
     return out.get(field_name, 0)
 

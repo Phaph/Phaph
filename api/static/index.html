@@ -267,6 +267,46 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
   -webkit-mask-image: radial-gradient(ellipse 80% 75% at 65% 50%, #000 35%, transparent 80%); mask-image: radial-gradient(ellipse 80% 75% at 65% 50%, #000 35%, transparent 80%); }
 .buildhead .motif { font: italic 15px var(--body); color: var(--faint); }
 
+/* What the search had to loosen to find a build, in plain words. */
+.relaxed { list-style: none; margin: 0; padding: 10px 14px; display: grid; gap: 4px; border-left: 3px solid var(--ember);
+  background: rgba(232,115,58,.08); font-size: 16px; color: var(--ink); }
+.relaxed li::before { content: "Changed: "; color: var(--ember); font-style: italic; }
+
+.sharebar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.sharebar .muted { font-size: 15px; }
+#printStages { display: none; }
+@media print {
+  :root { --ink: #111; --muted: #444; --faint: #666; --brass: #7a5a1e; --brass-hi: #7a5a1e; --ground: #fff; }
+  * { animation: none !important; transition: none !important; box-shadow: none !important; text-shadow: none !important; }
+  html, body { background: #fff !important; color: #111; font-size: 12pt; }
+  body::before, body::after, #sparks, .sigil-cv, form#form, #work, #options, #compare, .mast .sub, .sharebar, #stageTabs, #stageBody, footer .go { display: none !important; }
+  .wrap { max-width: none; padding: 0; gap: 12px; }
+  .panel { padding-top: 0; } .panel::before { display: none; }
+  .wordmark { -webkit-text-fill-color: #111; color: #111; background: none; filter: none; font-size: 40pt; }
+  .mark { width: 60px; color: #7a5a1e; }
+  #printStages { display: block; }
+  .print-stage { break-before: page; display: grid; gap: 10px; }
+  .print-stage:first-child { break-before: auto; }
+  .item, .lane { background: #fff !important; border-color: #bbb; break-inside: avoid; }
+  .item::before, .item::after { display: none; }
+  .art { background: #f2f2f2 !important; }
+  .split i, .legend .dot { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .rating .score { color: #7a5a1e; filter: none; }
+  .stat b.tinted { color: #111; }
+  footer { color: #444; }
+}
+
+.price { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.item.unique .price { color: #e2913f; font-weight: 500; }
+a.trade { color: var(--brass); font-size: 14px; white-space: nowrap; text-underline-offset: 3px; }
+a.trade::after { content: " \2197"; }
+.cost { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; padding: 10px 14px; border: 1px solid var(--edge); border-radius: 3px;
+  background: linear-gradient(180deg, #221d16, var(--iron)); font-size: 17px; }
+.cost b { font: 600 19px var(--mono); color: var(--brass-hi); }
+.cost-h { font: 600 21px/1 var(--display); margin-right: 4px; }
+.cost-note { flex-basis: 100%; font-size: 14px; }
+.buildcost { font-size: 18px; color: var(--muted); } .buildcost b { font: 600 20px var(--mono); color: var(--brass-hi); }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -674,6 +714,14 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
         <p class="muted" id="roundLabel">Lighting the forge…</p>
         <div class="board" id="board"></div>`;
     },
+    relaxed(e) {
+      // The search found nothing for the exact request and is widening it. Start a fresh board for the next pass.
+      const w = this.el(); this.cands = new Map();
+      if ($("board")) $("board").innerHTML = "";
+      let box = w.querySelector(".relaxed");
+      if (!box) { box = document.createElement("ul"); box.className = "relaxed"; $("roundLabel").before(box); }
+      const li = document.createElement("li"); li.textContent = e.label; box.appendChild(li);
+    },
     round(e) {
       this.total += e.count || 0;
       $("roundLabel").textContent = e.round === 1
@@ -823,7 +871,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       if (!job.cached) work.startSearch();
       job = await waitFor(job, job.cached ? "Loading" : "About 8-10 minutes for a new idea",
         (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
-        e => e.step === "round" ? work.round(e) : e.step === "candidate" && work.candidate(e));
+        e => e.step === "round" ? work.round(e) : e.step === "candidate" ? work.candidate(e) : e.step === "relaxed" && work.relaxed(e));
       work.hide(); setStatus("");
       state.gen = job.result; state.genJob = job.id;
       renderOptions();
@@ -844,6 +892,8 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
         e => work.guideEvent(e));
     } finally { work.hide(); }
     setStatus("");
+    state.guideJob = job.id;
+    try { history.replaceState(null, "", `?b=${job.id}`); } catch {}
     renderGuide(plan, job.result);
   }
 
@@ -854,6 +904,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     $("options").innerHTML = `
       <div style="display:grid;gap:6px"><span class="eyebrow">What it tried</span>
       <h2>${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)} came out on top</h2>
+      ${(result.relaxed || []).length ? `<ul class="relaxed">${result.relaxed.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
       <p class="muted">${result.skills_considered.length} skills tested on every weapon they can use, then the best on each ascendancy. Pick another row to rebuild with it, or tick up to 3 to compare them at your budget.</p></div>
       <div class="tablewrap"><table><thead><tr><th></th><th>Skill</th><th>Ascendancy</th><th>Weapon</th><th class="num">vs best</th><th></th></tr></thead><tbody>
       ${rows.map((r, i) => `<tr class="${i === 0 ? "best" : ""}"><td><input type="checkbox" aria-label="Compare ${esc(r.skill)} ${esc(r.ascendancy)}" data-i="${i}"></td>
@@ -971,7 +1022,13 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}</div>
       ${end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
         <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
-        <p class="muted" style="font-size:15px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}</div>
+        <p class="muted" style="font-size:15px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}
+      ${buildCostLine(end)}</div>
+      <div class="sharebar">
+        <button class="chip" type="button" id="shareBtn">Copy share link</button>
+        <button class="chip" type="button" id="pdfBtn">Save as PDF</button>
+        <span class="muted" id="shareNote"></span>
+      </div>
       <div class="tabs" id="stageTabs" role="tablist"></div>
       <div id="stageBody" style="display:grid;gap:18px"></div>`;
     stages.forEach((s, i) => {
@@ -981,6 +1038,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       $("stageTabs").appendChild(b);
       if (s === end) { b.setAttribute("aria-pressed", "true"); renderStage(plan, s); }
     });
+    wireShare(plan, res);
     guideSigil = sigil($("guide").querySelector(".sigil-cv"), plan.spec.class);
     setTimeout(() => guideSigil?.pulse(), 450);
     $("guide").scrollIntoView({ behavior: "smooth", block: "start" });
@@ -1035,6 +1093,35 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     return `<span class="t" title="Tier ${info.tier} of ${info.of}${info.type ? ", " + info.type.toLowerCase() : ""}"><b>T${info.tier}</b>${
       Array.from({ length: 5 }, (_, i) => `<i class="${i < filled ? "on" : ""}"></i>`).join("")}</span>`;
   }
+  // ---------- Prices ----------
+  // Most a player at each budget pays for one item, in divines (gear.BUDGET_DIVINES).
+  const ITEM_CAP = { free: 0, budget: 5, medium: 30, high: 100, unlimited: Infinity };
+  const divs = v => v >= 10 ? fmt(v) : v >= 1 ? (Math.round(v * 10) / 10).toString() : v >= 0.1 ? v.toFixed(2) : "<0.1";
+  const tradeLink = g => g.trade_url ? `<a class="trade" href="${esc(g.trade_url)}" target="_blank" rel="noopener noreferrer">Find on trade</a>` : "";
+  // One line at the top of the build: what the endgame version costs.
+  function buildCostLine(s) {
+    const gear = s?.gear || [];
+    if (!gear.length) return "";
+    const priced = gear.filter(g => g.unique && g.price != null), rares = gear.filter(g => !g.unique);
+    const total = priced.reduce((t, g) => t + g.price, 0), cap = ITEM_CAP[s.budget_key];
+    const most = rares.length && isFinite(cap) ? total + rares.length * cap : null;
+    return `<p class="buildcost">Endgame gear: <b>~${divs(total)} div</b> in uniques${rares.length ? ` + ${rares.length} crafted rares` : ""}${most != null && cap > 0 ? `, at most ~${divs(most)} div in all` : ""}</p>`;
+  }
+  function costHtml(s) {
+    const gear = s.gear || [];
+    const uniques = gear.filter(g => g.unique), rares = gear.filter(g => !g.unique);
+    const priced = uniques.filter(g => g.price != null);
+    const total = priced.reduce((t, g) => t + g.price, 0);
+    const cap = ITEM_CAP[s.budget_key];
+    const parts = [];
+    if (uniques.length) parts.push(`<b>~${divs(total)} div</b> in uniques${priced.length < uniques.length ? ` (${uniques.length - priced.length} unpriced)` : ""}`);
+    if (rares.length) parts.push(`${rares.length} crafted rare${rares.length > 1 ? "s" : ""}${cap === 0 ? ", self-found" : cap === Infinity ? "" : `, budgeted up to ~${cap} div each`}`);
+    if (!parts.length) return "";
+    const most = rares.length && isFinite(cap) && cap > 0 ? total + rares.length * cap : null;
+    return `<div class="cost"><span class="cost-h">Gear cost</span> ${parts.join(" + ")}${most != null ? ` <span class="muted">· at most ~${divs(most)} div</span>` : ""}
+      <span class="muted cost-note">Unique prices are from poe.ninja. Rares have no fixed price: each item's "Find on trade" link opens the trade site with its stats filled in.</span></div>`;
+  }
+
   function gearHtml(gear, prev, forward = true) {
     let delay = 0;
     const step = ms => { const d = delay; delay += ms; return REDUCE ? 0 : d; };
@@ -1046,7 +1133,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       const baseStyle = baseChanged ? ` style="animation-delay:${step(120)}ms"` : "";
       if (g.unique) {
         return `<div class="item unique"><div class="item-head"><div><span class="slot">${esc(g.slot)}</span><span class="${baseCls}"${baseStyle}>${esc(name)}</span>
-          <span class="muted" style="font-size:15px">Unique · ${esc(g.price_note || "")}</span></div>
+          <span class="price">${g.price != null ? `~${divs(g.price)} div` : "Unique · price unknown"}</span>${tradeLink(g)}</div>
           ${art(ICONS.uniques?.[name], g.slot)}</div></div>`;
       }
       const had = new Set(before && !baseChanged ? before.affixes : []);
@@ -1057,7 +1144,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       }).join("");
       const upgraded = before && !baseChanged ? g.affixes.filter(a => !had.has(a)).length : 0;
       return `<div class="item"><div class="item-head"><div><span class="slot">${esc(g.slot)}${upgraded ? ` <span class="upg">· ${upgraded} ${forward ? "upgraded" : "changed"}</span>` : ""}</span>
-        <span class="${baseCls}"${baseStyle}>${esc(name)}</span></div>
+        <span class="${baseCls}"${baseStyle}>${esc(name)}</span><span class="price">Crafted rare ${tradeLink(g)}</span></div>
         ${art(ICONS.bases?.[name], g.slot)}</div><ol>${lines}</ol></div>`;
     }).join("");
   }
@@ -1077,7 +1164,16 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
     if (s.mobility.length) kv.push(["Movement", `<span class="gems">${s.mobility.map(m => gem(m)).join('<span class="plus">or</span>')}</span>`]);
     if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
-    $("stageBody").innerHTML = `
+    $("stageBody").innerHTML = stageHtml(plan, s, prevGear, forward, kv, res, st);
+    $("copy").onclick = async () => {
+      try { await navigator.clipboard.writeText(s.code); $("copy").textContent = "Copied"; }
+      catch { $("code").select(); }
+    };
+  }
+
+  function stageHtml(plan, s, prevGear, forward, kv, res, st, printing = false) {
+    return `
+      ${costHtml(s)}
       <div class="stats">
         <div class="stat"><b class="${dpsClass(s.damage_split)}">${fmt(s.dps)}</b><span>Mapping DPS</span></div>
         <div class="stat"><b>${s.boss_dps ? fmt(s.boss_dps) : "-"}</b><span>Boss DPS</span></div>
@@ -1092,13 +1188,59 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
       <p class="muted" style="font-size:16px">Line 1 is what to buy first. Diamonds show the affix tier: more means a better roll${prevGear ? ". Switching stages re-strikes only what changed" : ""}.</p>
       <div class="items">${gearHtml(s.gear, prevGear, forward)}</div></div>
       ${s.notes.length ? `<ul class="notes">${s.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
-      <div class="field"><label for="code">Path of Building code</label>
-        <div class="code"><input id="code" readonly value="${esc(s.code)}"><button class="chip small" type="button" id="copy">Copy</button></div></div>`;
-    $("copy").onclick = async () => {
-      try { await navigator.clipboard.writeText(s.code); $("copy").textContent = "Copied"; }
-      catch { $("code").select(); }
+      ${printing ? "" : `<div class="field"><label for="code">Path of Building code</label>
+        <div class="code"><input id="code" readonly value="${esc(s.code)}"><button class="chip small" type="button" id="copy">Copy</button></div></div>`}`;
+  }
+
+  // ---------- Saving and sharing ----------
+  function kvFor(plan, s) {
+    const kv = [];
+    kv.push(["Mapping", gemRow(plan.spec.skill, s.supports)]);
+    if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
+    else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
+    if (s.spirit.length) kv.push(["Spirit", gemRow(null, s.spirit)]);
+    if (s.utility.length) kv.push(["Utility", `<span class="gems">${s.utility.map(u => gem(u.skill)).join("")}</span>`]);
+    if (s.mobility.length) kv.push(["Movement", `<span class="gems">${s.mobility.map(m => gem(m)).join('<span class="plus">or</span>')}</span>`]);
+    if (s.notables.length) kv.push(["Key passives", s.notables.map(esc).join(", ")]);
+    if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
+    return kv;
+  }
+  function wireShare(plan, res) {
+    $("shareBtn").onclick = async () => {
+      const url = `${location.origin}/?b=${state.guideJob}`;
+      try { await navigator.clipboard.writeText(url); $("shareNote").textContent = "Link copied. Anyone with it sees this build."; }
+      catch { $("shareNote").textContent = url; }
+    };
+    if (!state.guideJob) $("shareBtn").hidden = true;
+    $("pdfBtn").onclick = () => {
+      // Every stage, one after another, in a light print layout; the browser's print dialog saves it as a PDF.
+      let box = $("printStages");
+      if (!box) { box = document.createElement("div"); box.id = "printStages"; $("guide").appendChild(box); }
+      box.innerHTML = res.stages.map(st => {
+        const r = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round((st.stats || {})[k] || 0)).join(" / ");
+        return `<section class="print-stage"><h2>${esc(st.name)}</h2>${stageHtml(plan, st, null, true, kvFor(plan, st), r, st.stats || {}, true)}</section>`;
+      }).join("");
+      const title = document.title;
+      document.title = `Whetstone - ${plan.spec.skill} ${plan.spec.ascendancy}`;
+      addEventListener("afterprint", () => { document.title = title; box.innerHTML = ""; }, { once: true });
+      setTimeout(() => print(), 300);   // let the item images start loading
     };
   }
+
+  // Opening a share link (?b=<id>) shows that finished build straight away.
+  (async () => {
+    const id = new URLSearchParams(location.search).get("b");
+    if (!id || !/^[0-9a-f]{32}$/.test(id)) return;
+    try {
+      const job = await api(`/jobs/${id}`);
+      if (job.kind !== "guide" || job.status !== "done") { setStatus("That build link isn't finished or doesn't exist."); return; }
+      state.guideJob = id;
+      const plan = { spec: job.result.spec, note: null };
+      state.budget = job.result.spec.budget || state.budget;
+      renderGuide(plan, job.result);
+      setStatus("");
+    } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }
+  })();
 })();
 </script>
 </body>

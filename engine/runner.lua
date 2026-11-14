@@ -62,6 +62,7 @@ local function pick(out, fields)
 		local v
 		if f == "MinionDPS" then v = minion.TotalDPS
 		elseif f == "MinionDotDPS" then v = minion.TotalDotDPS
+		elseif out[f] == nil and f:sub(1, 6) == "Minion" then v = minion[f:sub(7)]   -- e.g. MinionPoisonDPS
 		else v = out[f] end
 		if type(v) == "number" then result[f] = v end
 	end
@@ -612,8 +613,9 @@ function handlers.optimise_tree(cmd)
 	end
 	local function dps(o)
 		if ailmentField then
-			-- Same as optimize.score_of: the ailment counts fully, hits a quarter.
-			local d = (o[ailmentField] or 0) + 0.25 * (o.TotalDPS or 0)
+			-- Same as optimize.score_of: the ailment counts fully, hits a quarter, minions included.
+			local m = type(o.Minion) == "table" and o.Minion or {}
+			local d = (o[ailmentField] or 0) + (m[ailmentField] or 0) + 0.25 * ((o.TotalDPS or 0) + (m.TotalDPS or 0))
 			return mapping and d * areaFactor(o) or d
 		end
 		if o.FullDPS and o.FullDPS > 0 then
@@ -839,6 +841,53 @@ function handlers.list_uniques(cmd)
 		end
 	end
 	return { uniques = list }
+end
+
+
+-- Trade site link for an item: the official PoE 2 trade search, pre-filled with the item's base and its
+-- affixes at a minimum just under the planned values (or the unique's name). Uses PoB's own "Buy similar"
+-- mapping from mod text to trade stat ids (Data/TradeSiteStats.lua), and packs the query into the link
+-- itself, so nothing is sent to GGG's servers: the player's browser opens the search.
+local buySimilar
+function handlers.trade_query(cmd)
+	if not buySimilar then
+		buySimilar = LoadModule("Classes/CompareBuySimilar")
+	end
+	local item = new("Item"):Item(cmd.raw)
+	local q = { status = { option = "available" }, stats = { { type = "and", filters = {} } } }
+	local isUnique = item.rarity == "UNIQUE" or item.rarity == "RELIC"
+	if isUnique then
+		q.name, q.type = item.title, item.baseName
+	else
+		q.type = item.baseName
+		local entries = buySimilar.addModEntries(item, {
+			{ list = item.implicitModLines, type = "implicit" },
+			{ list = item.explicitModLines, type = "explicit" },
+		})
+		local scale = cmd.slack or 0.9
+		for _, e in ipairs(entries) do
+			local function filter(id)
+				local f = { id = id }
+				if e.isOption then
+					f.value = { min = e.value, max = e.value }
+				elseif e.value then
+					local v = math.floor(e.value * scale * 100 + 0.5) / 100
+					f.value = e.invert and { max = -v } or { min = v }
+				end
+				return f
+			end
+			if #e.tradeIds == 1 then
+				table.insert(q.stats[1].filters, filter(e.tradeIds[1]))
+			elseif #e.tradeIds > 1 then
+				local count = { type = "count", value = { min = 1 }, filters = {} }
+				for _, id in ipairs(e.tradeIds) do table.insert(count.filters, filter(id)) end
+				table.insert(q.stats, count)
+			end
+		end
+	end
+	-- The query goes back as JSON; Python gzips and base64url-encodes it into the link (PoB's Deflate()
+	-- belongs to its graphics layer, which isn't loaded headless).
+	return { query = { query = q, sort = { price = "asc" } } }
 end
 
 reply({ ok = true, ready = true, version = launch.versionNumber })

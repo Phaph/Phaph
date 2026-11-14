@@ -22,8 +22,8 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
-from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, craft_gear, craft_weapon, make_stage
-from optimize import CLEAR_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports, total_dps
+from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
+from optimize import CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports, total_dps
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
 from pob import PoB
 from rating import rate
@@ -87,6 +87,7 @@ class StageGuide:
     rating: dict | None = None                              # 1-10, endgame stage only
     utility: list[dict] = field(default_factory=list)       # curses, marks, banners, warcries kept
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
+    budget_key: str = "high"                                 # free / budget / medium / high / unlimited
 
 
 DEFAULT_BUDGET = "high"
@@ -186,6 +187,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
         if boss_swap:
             gear.append(boss_weapon())
+        add_trade_info(pob, gear)
         report("gear", "Gear re-crafted to fit", slots=[g.unique.split(",")[0] if g.unique else g.base for g in gear])
 
         # Bossing setup: a separate boss skill if the build has one, else a support swap.
@@ -209,9 +211,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         conditions = pob.auto_config("mapping")
         best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
-        stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"])
+        stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
+                         + MINION_AILMENT_FIELDS)
         guide = StageGuide(
-            stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget,
+            stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget, budget_key=stage.budget_key,
             supports=best.supports,
             notables=[s["node"] for s in tree["steps"] if s["type"] != "Normal"],
             gear=gear, stats=stats, dps=total_dps(stats), code=pob.save_code(),

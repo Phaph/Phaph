@@ -87,6 +87,8 @@ class SlotPlan:
     price_note: str | None = None   # e.g. "price unknown" until poe.ninja prices are loaded
     # Per affix, same order: {"tier": 1 = best roll in the game, "of": tiers that exist, "type": Prefix/Suffix}
     affix_info: list[dict] = field(default_factory=list)
+    price: float | None = None      # divines, uniques with a poe.ninja price
+    trade_url: str | None = None    # official trade search for this base + affixes (or this unique)
 
 
 def _value_at(text: str, roll: float) -> str:
@@ -293,6 +295,40 @@ BUDGET_DIVINES = {"free": 0, "budget": 5, "medium": 30, "high": 100, "unlimited"
 SLOT_TYPES = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots",
               "Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 _PRICES: dict | None = None
+
+
+def price_league() -> str:
+    """The league unique prices came from (engine/data/unique_prices.meta.json), for trade links."""
+    import json
+    from pathlib import Path
+    try:
+        return json.loads((Path(__file__).parent / "data" / "unique_prices.meta.json").read_text(encoding="utf-8"))["league"]
+    except (OSError, ValueError, KeyError):
+        return "Standard"
+
+
+def trade_link(query: dict, league: str) -> str:
+    """The official PoE 2 trade search with `query` pre-filled. The query rides in the link (gzip + base64url,
+    as Path of Building does), so opening it is the player's own search: nothing is sent to GGG from here."""
+    import base64
+    import gzip
+    import json
+    from urllib.parse import quote
+    blob = gzip.compress(json.dumps(query, separators=(",", ":")).encode("utf-8"))
+    return f"https://www.pathofexile.com/trade2/search/poe2/{quote(league)}/{base64.urlsafe_b64encode(blob).decode()}"
+
+
+def add_trade_info(pob: "PoB", plans: list["SlotPlan"]) -> None:
+    """Price each unique from poe.ninja and give every item a trade search link."""
+    league = price_league()
+    for p in plans:
+        if p.unique:
+            p.price = unique_prices().get(p.unique.split(",")[0])
+        if p.raw:
+            try:
+                p.trade_url = trade_link(pob.send("trade_query", raw=p.raw)["query"], league)
+            except Exception:  # noqa: BLE001 - a link is a nice-to-have; never fail a build over it
+                p.trade_url = None
 
 
 def unique_prices() -> dict:

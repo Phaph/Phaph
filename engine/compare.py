@@ -23,7 +23,7 @@ from pob import PoB
 
 FIELDS = [
     "FullDPS", "TotalDPS", "CombinedDPS", "MinionDPS", "MinionDotDPS", "AverageHit", "Speed", "HitChance", "CritChance",
-    "CritMultiplier", "BleedDPS", "PoisonDPS", "IgniteDPS", "TotalDotDPS",
+    "CritMultiplier", "BleedDPS", "PoisonDPS", "IgniteDPS", "MinionBleedDPS", "MinionPoisonDPS", "MinionIgniteDPS", "TotalDotDPS",
     "Life", "EnergyShield", "Mana", "Armour", "Evasion", "TotalEHP", "PhysicalMaximumHitTaken",
     "FireResist", "ColdResist", "LightningResist", "ChaosResist",
 ]
