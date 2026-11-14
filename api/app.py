@@ -200,6 +200,19 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="PoE 2 Build Optimizer", lifespan=lifespan)
 
+# The website is served by Cloudflare Pages (phaphofbuilding.com, or a *.pages.dev preview) and calls this engine at
+# api.phaphofbuilding.com, so those origins may read its responses. Local runs serve both from one host.
+from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["https://phaphofbuilding.com", "https://www.phaphofbuilding.com"],
+    allow_origin_regex=r"https://([a-z0-9-]+\.)?whetstone[a-z0-9-]*\.pages\.dev",
+    allow_methods=["GET", "POST"],
+    allow_headers=["content-type"],
+    max_age=86400,
+)
+
 
 def _client(request: Request) -> str:
     # Behind Cloudflare (tunnel or proxy) CF-Connecting-IP is the visitor's real IP, set by Cloudflare.

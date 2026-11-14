@@ -347,6 +347,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 .readit { justify-self: start; border-color: var(--brass); color: var(--ink); }
 #stageTabs .chip.fresh { border-color: var(--ember); box-shadow: 0 0 18px rgba(232,115,58,.5); transition: box-shadow 1.2s var(--ease), border-color 1.2s var(--ease); }
 
+.cold { display: grid; gap: 4px; padding: 14px 16px; border: 1px solid #5a3a22; border-radius: 3px;
+  background: linear-gradient(180deg, #1d1712, #120f0c); box-shadow: inset 0 0 30px rgba(120,180,255,.05); }
+.cold b { font: 600 24px/1.1 var(--display); color: #a9c4d6; }
+.cold span { color: var(--muted); font-size: 16px; }
+
 /* ---------- The duel ---------- */
 .duel { display: grid; gap: 18px; }
 .lanebar { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 6px 14px; align-items: baseline; }
@@ -415,6 +420,10 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     <p class="sub">Say what you want to play. It grinds through <b>every skill, weapon and ascendancy</b> that fits in Path of Building's own damage maths, and hands you the sharpest version at your budget, from the campaign to endgame.</p>
   </header>
 
+  <div class="cold" id="cold" hidden role="status">
+    <b>The forge is cold right now.</b>
+    <span>Whetstone's engine runs on a home PC that's switched off at the moment, so new builds and shared builds can't load. This page checks again every 30 seconds and wakes up on its own.</span>
+  </div>
   <form class="panel" id="form" novalidate>
     <div class="prompt">
       <label for="prompt">What are you playing?</label>
@@ -461,6 +470,12 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 <script src="/treeview.js"></script>
 <script>
 (() => {
+  // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
+  // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
+  // the engine share one host.
+  const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
+    ? "https://api.phaphofbuilding.com" : "";
+
   const $ = id => document.getElementById(id);
   const fmt = n => Math.round(n || 0).toLocaleString("en-US");
   const pct = x => `${Math.round(x * 100)}%`;
@@ -533,7 +548,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     const c = (catalog?.classes || []).find(c => c.ascendancies.includes($("asc").value));
     if (c && $("cls").value !== c.name) { const a = $("asc").value; $("cls").value = c.name; fillAscendancies(); $("asc").value = a; }
   };
-  fetch("/catalog").then(r => r.json()).then(cat => {
+  fetch(API + "/catalog").then(r => r.json()).then(cat => {
     catalog = cat;
     cat.classes.forEach(c => { const o = document.createElement("option"); o.value = c.name; o.textContent = c.name; $("cls").appendChild(o); });
     fillAscendancies(); weaponChips();
@@ -587,11 +602,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   async function api(path, body) {
     let r;
     try {
-      r = await fetch(path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
+      r = await fetch(API + path, body ? { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) } : {});
     } catch { throw new Unreachable("Can't reach the forge right now. Check your connection and try again."); }
     const data = await r.json().catch(() => null);
     if ([502, 503, 504, 520, 521, 522, 523, 524, 530].includes(r.status) || (!r.ok && data === null)) {
-      throw new Unreachable("The forge is restarting or unreachable. Try again in a moment.");
+      throw new Unreachable("The forge is cold right now: its engine runs on a home PC that's switched off or restarting. Try again later.");
     }
     if (!r.ok) {
       const d = data?.detail;
@@ -847,7 +862,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // The tree data, loaded once when it's first needed (about 150 KB over the wire).
   let treeData = null;
   const loadTree = () => treeData ? Promise.resolve(treeData)
-    : fetch("/tree/data").then(r => r.json()).then(d => (treeData = d)).catch(() => null);
+    : fetch(API + "/tree/data").then(r => r.json()).then(d => (treeData = d)).catch(() => null);
   let brain = null, fire = null;
 
   const work = {
@@ -1318,7 +1333,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Support gems come in tiers ("Bleed II"); a name without the numeral matches any tier.
   let ICONS = { uniques: {}, bases: {}, gems: {} }, GEM_LOOSE = {};
   const loose = n => String(n || "").replace(/\s+[IVX]+$/, "").toLowerCase();
-  fetch("/icons").then(r => r.json()).then(d => {
+  fetch(API + "/icons").then(r => r.json()).then(d => {
     ICONS = d;
     for (const [n, u] of Object.entries(d.gems || {})) GEM_LOOSE[loose(n)] ??= u;
     if (state.guide && shownStage) {   // a guide is already on screen: redraw it with icons
@@ -1538,6 +1553,28 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       setTimeout(() => print(), 300);   // let the item images start loading
     };
   }
+
+  // Is the engine up? If not, say so plainly, hold the Forge button, and keep checking.
+  let engineUp = null;
+  async function checkEngine() {
+    let ok = false;
+    try {
+      const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 6000);
+      const r = await fetch(API + "/health", { signal: ctl.signal, cache: "no-store" });
+      clearTimeout(tm);
+      ok = r.ok && (await r.json().catch(() => ({}))).ok === true;
+    } catch { ok = false; }
+    if (ok !== engineUp) {
+      const wasDown = engineUp === false;
+      engineUp = ok;
+      $("cold").hidden = ok;
+      $("go").disabled = !ok;
+      $("go").title = ok ? "" : "The forge is cold right now";
+      if (ok && wasDown) location.reload();   // fresh catalog, icons and any shared build
+    }
+    setTimeout(checkEngine, ok ? 120000 : 30000);
+  }
+  checkEngine();
 
   // Opening a share link (?b=<id>) shows that finished build straight away.
   (async () => {

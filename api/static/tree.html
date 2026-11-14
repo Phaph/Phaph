@@ -86,6 +86,11 @@ canvas.dragging { cursor: grabbing; }
 </main>
 <script>
 (() => {
+  // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
+  // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
+  // the engine share one host.
+  const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
+    ? "https://api.phaphofbuilding.com" : "";
   const $ = id => document.getElementById(id);
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
   const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
@@ -355,11 +360,11 @@ canvas.dragging { cursor: grabbing; }
     $("back").href = `/?b=${buildId}`;
     msg("Loading the tree…");
     try {
-      const job = await fetch(`/jobs/${buildId}`).then(r => r.json());
+      const job = await fetch(`${API}/jobs/${buildId}`).then(r => r.json());
       if (!job || job.kind !== "guide" || job.status !== "done") { msg("That build link isn't finished or doesn't exist."); return; }
       guide = job.result;
       const ver = (guide.stages.find(s => s.tree_version) || {}).tree_version;
-      tree = await fetch(`/tree/data${ver ? `?v=${encodeURIComponent(ver)}` : ""}`).then(r => r.json());
+      tree = await fetch(`${API}/tree/data${ver ? `?v=${encodeURIComponent(ver)}` : ""}`).then(r => r.json());
       index();
       $("sub").textContent = `${guide.spec.skill} · ${guide.spec.ascendancy}`;
       document.title = `${guide.spec.skill} ${guide.spec.ascendancy} · passive tree · Whetstone`;
@@ -369,7 +374,7 @@ canvas.dragging { cursor: grabbing; }
       });
       size();
       show(params.get("s") || "end");
-    } catch (e) { msg("Couldn't load the tree. Try again in a moment."); }
+    } catch (e) { msg("The forge is cold right now: Whetstone's engine runs on a home PC that's switched off. Try this link again later."); }
   })();
 })();
 </script>

@@ -166,3 +166,12 @@ def test_icons(client):
     r = client.get("/icons")
     assert r.status_code == 200
     assert set(r.json()) >= {"uniques", "bases", "gems"}
+
+
+def test_cors_allows_the_website_only(client):
+    ok = client.get("/health", headers={"Origin": "https://phaphofbuilding.com"})
+    assert ok.headers.get("access-control-allow-origin") == "https://phaphofbuilding.com"
+    preview = client.get("/health", headers={"Origin": "https://abc123.whetstone.pages.dev"})
+    assert preview.headers.get("access-control-allow-origin") == "https://abc123.whetstone.pages.dev"
+    other = client.get("/health", headers={"Origin": "https://evil.example"})
+    assert "access-control-allow-origin" not in other.headers
