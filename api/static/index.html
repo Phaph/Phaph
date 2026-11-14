@@ -307,6 +307,7 @@ a.trade::after { content: " \2197"; }
 .cost-note { flex-basis: 100%; font-size: 14px; }
 .buildcost { font-size: 18px; color: var(--muted); } .buildcost b { font: 600 20px var(--mono); color: var(--brass-hi); }
 
+.treelink { justify-self: start; text-decoration: none; color: var(--ink); border-color: var(--brass-lo); }
 .kv dd .setup { display: block; margin-bottom: 6px; }
 .kv dd .setup:last-child { margin-bottom: 0; }
 
@@ -1184,6 +1185,7 @@ a.trade::after { content: " \2197"; }
       </div>
       ${mixHtml(s.damage_split)}
       <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
+      ${!printing && state.guideJob && (s.tree_nodes || []).length ? `<a class="chip treelink" href="/tree.html?b=${state.guideJob}&s=${s.stage}" target="_blank" rel="noopener">Open the passive tree &#8599;</a>` : ""}
       <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
       <div style="display:grid;gap:8px"><h3>Gear, struck in the order to buy it</h3>
       <p class="muted" style="font-size:16px">Line 1 is what to buy first. Diamonds show the affix tier: more means a better roll${prevGear ? ". Switching stages re-strikes only what changed" : ""}.</p>

@@ -38,6 +38,8 @@ from .jobs import JobStore  # noqa: E402
 
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
+# Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
+ENGINE_VERSION = "2026-11-14.2"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # Keeps the bill predictable: new (uncached) builds allowed per rolling 24 hours, 0 = no cap.
 DAILY_JOB_LIMIT = int(os.environ.get("DAILY_JOB_LIMIT", "300"))
@@ -186,7 +188,8 @@ async def lifespan(app: FastAPI):
     app.state.jobs = JobStore(
         db_path=os.environ.get("JOBS_DB", str(ROOT / "jobs.sqlite3")),
         workers=int(os.environ.get("JOB_WORKERS", "1")),
-        version=app.state.catalog["pob_version"],
+        # Cached results are reused only for the same PoB and engine version, so engine changes show up at once.
+        version=f'{app.state.catalog["pob_version"]}+{ENGINE_VERSION}',
         runners={"guide": run_guide, "compare": run_compare, "generate": run_generate},
     )
     yield
@@ -226,6 +229,20 @@ STATIC = Path(__file__).resolve().parent / "static"
 def index():
     """The website: one page that talks to this API."""
     return FileResponse(STATIC / "index.html")
+
+
+@app.get("/tree.html")
+def tree_page():
+    return FileResponse(STATIC / "tree.html")
+
+
+@app.get("/tree/data")
+def tree_data(v: str | None = None):
+    """The passive tree from PoB's data, compacted for the browser (engine/tree.py)."""
+    from fastapi.responses import JSONResponse
+    from tree import compact
+
+    return JSONResponse(compact(v), headers={"Cache-Control": "public, max-age=86400"})
 
 
 @app.get("/icons")

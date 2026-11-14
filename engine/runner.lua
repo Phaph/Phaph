@@ -328,6 +328,14 @@ end
 
 -- Replace the gems of an existing group in place and return chosen output fields.
 -- Used by the optimiser so each candidate costs one recalculation.
+-- Allocated passive node ids and the tree version, for the website's tree viewer.
+function handlers.allocated(cmd)
+	local ids = {}
+	for id in pairs(build.spec.allocNodes) do table.insert(ids, id) end
+	table.sort(ids)
+	return { nodes = ids, version = build.spec.treeVersion }
+end
+
 -- The build's skill groups: index, gem names in order, and whether it is the main group.
 function handlers.groups(cmd)
 	local out = {}

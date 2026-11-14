@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Passive tree · Whetstone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Same forge as the main site. The tree is drawn from Path of Building's data with our own shapes, no game art. */
+:root {
+  --ground: #0e0d0c; --iron: #171513; --iron2: #1f1c19; --seam: #070606; --edge: #3a342d;
+  --ink: #ece4d6; --muted: #a39a8b; --faint: #6f675c;
+  --brass: #d0a45a; --brass-hi: #f0c97f; --brass-lo: #8a6528; --ember: #e8733a;
+  --display: "Grenze Gotisch", Georgia, serif; --body: "Alegreya Sans", "Segoe UI", sans-serif; --mono: "IBM Plex Mono", ui-monospace, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; height: 100%; }
+body { background: var(--ground); color: var(--ink); font: 17px/1.5 var(--body); overflow: hidden; display: grid; grid-template-rows: auto 1fr; }
+header { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; padding: 12px max(16px, env(safe-area-inset-left, 0px)); border-bottom: 2px solid var(--seam);
+  background: linear-gradient(180deg, #171411, var(--ground)); position: relative; z-index: 2; }
+header a.back { color: var(--brass); text-decoration: none; font-size: 15px; }
+header h1 { margin: 0; font: 700 28px/1 var(--display); }
+header h1 small { font: italic 500 16px var(--body); color: var(--muted); margin-left: 8px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--edge); border-radius: 3px; padding: 5px 11px 4px; font: 500 15px/1.1 var(--body); cursor: pointer; color: var(--muted);
+  background: linear-gradient(180deg, var(--iron2), var(--iron)); box-shadow: inset 0 1px 0 rgba(255,236,200,.06), 0 2px 0 var(--seam); }
+.chip:hover { color: var(--ink); }
+.chip[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); }
+input[type=search] { background: var(--iron2); border: 1px solid var(--edge); border-radius: 3px; padding: 6px 10px; color: var(--ink); font: 15px var(--body); width: 200px; max-width: 100%; }
+input[type=search]:focus { outline: none; border-color: var(--brass); }
+main { position: relative; min-height: 0; }
+canvas { position: absolute; inset: 0; width: 100%; height: 100%; touch-action: none; cursor: grab; display: block; }
+canvas.dragging { cursor: grabbing; }
+.panel { position: absolute; z-index: 2; background: rgba(23,21,19,.94); border: 1px solid var(--edge); border-radius: 3px; box-shadow: 0 6px 24px rgba(0,0,0,.5); }
+#tip { pointer-events: none; padding: 10px 12px; max-width: 320px; display: grid; gap: 4px; }
+#tip b { font: 600 20px/1.1 var(--display); color: var(--brass-hi); }
+#tip .k { font: italic 14px var(--body); color: var(--muted); }
+#tip ul { margin: 0; padding-left: 16px; font-size: 15px; }
+#side { right: 12px; top: 12px; width: 300px; max-height: calc(100% - 24px); overflow: auto; padding: 12px 14px; display: grid; gap: 10px; }
+#side h2 { margin: 0; font: 600 22px/1 var(--display); }
+#side .count { font: 600 15px var(--mono); color: var(--brass-hi); }
+#side ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 15px; }
+#side li b { color: var(--brass-hi); font-weight: 600; }
+#side li span { color: var(--muted); display: block; font-size: 14px; }
+#side .legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 14px; color: var(--muted); }
+#side .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 6px; vertical-align: -1px; }
+#side button.toggle { justify-self: start; }
+#msg { left: 50%; top: 40%; transform: translate(-50%, -50%); padding: 16px 20px; max-width: 420px; text-align: center; }
+.zoom { left: 12px; bottom: 12px; display: flex; gap: 6px; padding: 6px; }
+@media (max-width: 700px) { #side { left: 12px; right: 12px; top: auto; bottom: 64px; width: auto; max-height: 40%; } #side.collapsed ul { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <a class="back" id="back" href="/">&larr; Back to the build</a>
+  <h1 id="title">Passive tree<small id="sub"></small></h1>
+  <div class="tabs" id="stages"></div>
+  <input type="search" id="find" placeholder="Find a passive…" aria-label="Find a passive">
+</header>
+<main>
+  <canvas id="cv" aria-label="Passive tree. Drag to move, scroll or pinch to zoom."></canvas>
+  <div class="panel" id="tip" hidden></div>
+  <aside class="panel" id="side"></aside>
+  <div class="panel zoom"><button class="chip" id="zin" aria-label="Zoom in">+</button><button class="chip" id="zout" aria-label="Zoom out">&minus;</button><button class="chip" id="zfit">Fit path</button></div>
+  <div class="panel" id="msg" hidden></div>
+</main>
+<script>
+(() => {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  const params = new URLSearchParams(location.search);
+  const buildId = params.get("b");
+  const cv = $("cv"), cx = cv.getContext("2d");
+  let W = 0, H = 0, dpr = 1;
+  let tree = null, guide = null, stage = null, alloc = new Set(), found = new Set();
+  let view = { x: 0, y: 0, s: 0.05 };   // world point at screen centre, and scale (px per world unit)
+  const SIZE = { c: 70, A: 40, k: 52, j: 34, n: 36, a: 18, s: 20 };
+  const KIND = { c: "Class start", A: "Ascendancy start", k: "Keystone", j: "Jewel socket", n: "Notable", a: "Attribute", s: "Passive" };
+  let grid = new Map(), GRID = 600;
+
+  function msg(text) { $("msg").hidden = !text; $("msg").innerHTML = text || ""; }
+
+  function size() {
+    const r = cv.getBoundingClientRect(); dpr = Math.min(devicePixelRatio || 1, 2);
+    W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; draw();
+  }
+
+  function index() {
+    grid = new Map();
+    for (const [id, n] of Object.entries(tree.nodes)) {
+      if (n[5]) continue;
+      const k = `${Math.floor(n[0] / GRID)},${Math.floor(n[1] / GRID)}`;
+      (grid.get(k) || grid.set(k, []).get(k)).push(id);
+    }
+  }
+
+  const toScreen = (x, y) => [(x - view.x) * view.s + W / 2, (y - view.y) * view.s + H / 2];
+  const toWorld = (sx, sy) => [(sx - W / 2) / view.s + view.x, (sy - H / 2) / view.s + view.y];
+
+  function draw() {
+    if (!tree) return;
+    cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cx.fillStyle = css("--ground"); cx.fillRect(0, 0, W, H);
+    // Ember glow under the allocated path, so it reads at a glance.
+    cx.setTransform(dpr * view.s, 0, 0, dpr * view.s, dpr * (W / 2 - view.x * view.s), dpr * (H / 2 - view.y * view.s));
+    const lw = Math.max(1.2 / view.s, 7);
+    const edge = (e, alloced) => {
+      const a = tree.nodes[e[0]], b = tree.nodes[e[1]];
+      if (!a || !b || a[5] || b[5]) return;
+      cx.beginPath();
+      if (e.length > 2) {
+        const [gx, gy, r] = [e[2], e[3], e[4]];
+        let a1 = Math.atan2(a[1] - gy, a[0] - gx), a2 = Math.atan2(b[1] - gy, b[0] - gx);
+        let d = a2 - a1; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
+        cx.arc(gx, gy, r, a1, a1 + d, d < 0);
+      } else { cx.moveTo(a[0], a[1]); cx.lineTo(b[0], b[1]); }
+      cx.stroke();
+    };
+    cx.lineCap = "round";
+    cx.strokeStyle = "#2a2621"; cx.lineWidth = lw;
+    for (const e of tree.edges) if (!(alloc.has(String(e[0])) && alloc.has(String(e[1])))) edge(e);
+    cx.strokeStyle = "rgba(232,115,58,.35)"; cx.lineWidth = lw * 3.2;
+    for (const e of tree.edges) if (alloc.has(String(e[0])) && alloc.has(String(e[1]))) edge(e);
+    cx.strokeStyle = css("--brass-hi"); cx.lineWidth = lw * 1.3;
+    for (const e of tree.edges) if (alloc.has(String(e[0])) && alloc.has(String(e[1]))) edge(e);
+    // Nodes
+    const [x0, y0] = toWorld(0, 0), [x1, y1] = toWorld(W, H);
+    for (const [id, n] of Object.entries(tree.nodes)) {
+      if (n[5] || n[0] < x0 - 200 || n[0] > x1 + 200 || n[1] < y0 - 200 || n[1] > y1 + 200) continue;
+      const on = alloc.has(id), r = Math.max(SIZE[n[2]] || 20, 2.2 / view.s);
+      cx.beginPath();
+      if (n[2] === "j") { cx.rect(n[0] - r, n[1] - r, 2 * r, 2 * r); }
+      else cx.arc(n[0], n[1], r, 0, 2 * Math.PI);
+      cx.fillStyle = on ? css("--brass") : n[2] === "k" ? "#3b3128" : n[2] === "n" ? "#2f2a24" : "#221f1b";
+      cx.fill();
+      if (n[2] === "k" || n[2] === "n" || n[2] === "c" || on) {
+        cx.lineWidth = Math.max(1 / view.s, n[2] === "k" ? 9 : 6);
+        cx.strokeStyle = on ? css("--brass-hi") : n[2] === "k" ? "#7a5f34" : "#4a4136";
+        cx.stroke();
+      }
+      if (found.has(id)) {
+        cx.beginPath(); cx.arc(n[0], n[1], r + Math.max(10, 6 / view.s), 0, 2 * Math.PI);
+        cx.lineWidth = Math.max(2 / view.s, 8); cx.strokeStyle = css("--ember"); cx.stroke();
+      }
+    }
+    // Names of allocated notables and keystones, once zoomed in enough to read.
+    cx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    if (view.s > 0.09) {
+      cx.font = `600 ${Math.min(16, 9 + view.s * 40)}px "Alegreya Sans", sans-serif`; cx.textAlign = "center";
+      for (const id of alloc) {
+        const n = tree.nodes[id];
+        if (!n || n[5] || !"knc".includes(n[2])) continue;
+        const [sx, sy] = toScreen(n[0], n[1]);
+        if (sx < -50 || sx > W + 50 || sy < -50 || sy > H + 50) continue;
+        cx.fillStyle = "rgba(14,13,12,.75)"; const w = cx.measureText(n[3]).width + 8;
+        cx.fillRect(sx - w / 2, sy + (SIZE[n[2]] * view.s) + 4, w, 18);
+        cx.fillStyle = css("--brass-hi"); cx.fillText(n[3], sx, sy + SIZE[n[2]] * view.s + 17);
+      }
+    }
+  }
+
+  function nodeAt(sx, sy) {
+    const [wx, wy] = toWorld(sx, sy);
+    let best = null, bd = Infinity;
+    for (let gx = -1; gx <= 1; gx++) for (let gy = -1; gy <= 1; gy++) {
+      for (const id of grid.get(`${Math.floor(wx / GRID) + gx},${Math.floor(wy / GRID) + gy}`) || []) {
+        const n = tree.nodes[id], d = Math.hypot(n[0] - wx, n[1] - wy), r = Math.max(SIZE[n[2]] || 20, 10 / view.s);
+        if (d < r && d < bd) { bd = d; best = id; }
+      }
+    }
+    return best;
+  }
+
+  function tip(id, sx, sy) {
+    const t = $("tip");
+    if (!id) { t.hidden = true; return; }
+    const n = tree.nodes[id];
+    t.innerHTML = `<b>${esc(n[3] || KIND[n[2]])}</b><span class="k">${KIND[n[2]]}${alloc.has(id) ? " · in this build" : ""}</span>${n[4].length ? `<ul>${n[4].map(s => `<li>${esc(s)}</li>`).join("")}</ul>` : ""}`;
+    t.hidden = false;
+    const r = t.getBoundingClientRect();
+    t.style.left = Math.min(sx + 16, W - r.width - 8) + "px"; t.style.top = Math.min(sy + 16, H - r.height - 8) + "px";
+  }
+
+  function fit(ids) {
+    const pts = [...ids].map(id => tree.nodes[id]).filter(n => n && !n[5]);
+    const b = pts.length ? [Math.min(...pts.map(n => n[0])), Math.min(...pts.map(n => n[1])), Math.max(...pts.map(n => n[0])), Math.max(...pts.map(n => n[1]))] : tree.bounds;
+    const pad = 600;
+    // Leave room for the side panel on wide screens (it sits on the right).
+    const panel = W > 700 ? ($("side").getBoundingClientRect().width + 24) : 0;
+    const usable = W - panel;
+    view.s = Math.min(usable / (b[2] - b[0] + 2 * pad), H / (b[3] - b[1] + 2 * pad));
+    view.x = (b[0] + b[2]) / 2 + (panel / 2) / view.s; view.y = (b[1] + b[3]) / 2;
+    draw();
+  }
+  function zoomAt(f, sx = W / 2, sy = H / 2) {
+    const [wx, wy] = toWorld(sx, sy);
+    view.s = Math.min(Math.max(view.s * f, 0.01), 1.2);
+    view.x = wx - (sx - W / 2) / view.s; view.y = wy - (sy - H / 2) / view.s;
+    draw();
+  }
+
+  // Pan and zoom: mouse drag, wheel, and two-finger pinch on touch screens.
+  const pointers = new Map(); let pinch = null, moved = false;
+  cv.addEventListener("pointerdown", e => { cv.setPointerCapture(e.pointerId); pointers.set(e.pointerId, [e.offsetX, e.offsetY]); moved = false; cv.classList.add("dragging"); });
+  cv.addEventListener("pointermove", e => {
+    const prev = pointers.get(e.pointerId);
+    if (!prev) { tip(nodeAt(e.offsetX, e.offsetY), e.offsetX, e.offsetY); return; }
+    pointers.set(e.pointerId, [e.offsetX, e.offsetY]);
+    if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()], d = Math.hypot(a[0] - b[0], a[1] - b[1]);
+      if (pinch) zoomAt(d / pinch, (a[0] + b[0]) / 2, (a[1] + b[1]) / 2);
+      pinch = d; moved = true; return;
+    }
+    const dx = e.offsetX - prev[0], dy = e.offsetY - prev[1];
+    if (Math.abs(dx) + Math.abs(dy) > 2) moved = true;
+    view.x -= dx / view.s; view.y -= dy / view.s; draw(); $("tip").hidden = true;
+  });
+  const up = e => { pointers.delete(e.pointerId); if (pointers.size < 2) pinch = null; if (!pointers.size) cv.classList.remove("dragging");
+    if (!moved && e.type === "pointerup") tip(nodeAt(e.offsetX, e.offsetY), e.offsetX, e.offsetY); };
+  cv.addEventListener("pointerup", up); cv.addEventListener("pointercancel", up);
+  cv.addEventListener("pointerleave", () => { if (!pointers.size) $("tip").hidden = true; });
+  cv.addEventListener("wheel", e => { e.preventDefault(); zoomAt(Math.exp(-e.deltaY * 0.0015), e.offsetX, e.offsetY); }, { passive: false });
+  $("zin").onclick = () => zoomAt(1.4); $("zout").onclick = () => zoomAt(1 / 1.4); $("zfit").onclick = () => fit(alloc);
+  $("find").addEventListener("input", e => {
+    const q = e.target.value.trim().toLowerCase();
+    found = new Set(q.length < 3 ? [] : Object.entries(tree.nodes).filter(([, n]) => !n[5] && (n[3].toLowerCase().includes(q) || n[4].some(s => s.toLowerCase().includes(q)))).map(([id]) => id));
+    draw();
+  });
+  addEventListener("resize", size);
+
+  function side() {
+    const nodes = [...alloc].map(id => [id, tree.nodes[id]]).filter(([, n]) => n);
+    const asc = nodes.filter(([, n]) => n[5] && n[2] !== "A");
+    const notable = nodes.filter(([, n]) => !n[5] && (n[2] === "n" || n[2] === "k"));
+    const list = arr => arr.map(([, n]) => `<li><b>${esc(n[3])}</b>${n[4].map(s => `<span>${esc(s)}</span>`).join("")}</li>`).join("");
+    $("side").innerHTML = `<h2>${esc(stage.name)}</h2>
+      <span class="count">${nodes.filter(([, n]) => !n[5] && n[2] !== "c").length} passives · ${asc.length} ascendancy</span>
+      <div class="legend"><span><i style="background:var(--brass)"></i>In this build</span><span><i style="background:#3b3128;border:2px solid #7a5f34"></i>Keystone</span><span><i style="background:#2f2a24;border:2px solid #4a4136"></i>Notable</span></div>
+      ${asc.length ? `<h2>Ascendancy</h2><ul>${list(asc)}</ul>` : ""}
+      ${notable.length ? `<h2>Notables &amp; keystones</h2><ul>${list(notable)}</ul>` : ""}`;
+  }
+
+  function show(key) {
+    stage = guide.stages.find(s => s.stage === key) || guide.stages[guide.stages.length - 1];
+    alloc = new Set((stage.tree_nodes || []).map(String));
+    $("stages").querySelectorAll(".chip").forEach(b => b.setAttribute("aria-pressed", b.dataset.k === stage.stage));
+    history.replaceState(null, "", `?b=${buildId}&s=${stage.stage}`);
+    if (!alloc.size) msg("This build was forged before the tree viewer existed. Forge it again to see its tree.");
+    else msg("");
+    side(); fit(alloc);
+  }
+
+  (async () => {
+    if (!buildId || !/^[0-9a-f]{32}$/.test(buildId)) { msg("Open the tree from a build on Whetstone."); return; }
+    $("back").href = `/?b=${buildId}`;
+    msg("Loading the tree…");
+    try {
+      const job = await fetch(`/jobs/${buildId}`).then(r => r.json());
+      if (!job || job.kind !== "guide" || job.status !== "done") { msg("That build link isn't finished or doesn't exist."); return; }
+      guide = job.result;
+      const ver = (guide.stages.find(s => s.tree_version) || {}).tree_version;
+      tree = await fetch(`/tree/data${ver ? `?v=${encodeURIComponent(ver)}` : ""}`).then(r => r.json());
+      index();
+      $("sub").textContent = `${guide.spec.skill} · ${guide.spec.ascendancy}`;
+      document.title = `${guide.spec.skill} ${guide.spec.ascendancy} · passive tree · Whetstone`;
+      guide.stages.forEach(s => {
+        const b = document.createElement("button"); b.className = "chip"; b.type = "button"; b.textContent = s.name; b.dataset.k = s.stage;
+        b.onclick = () => show(s.stage); $("stages").appendChild(b);
+      });
+      size();
+      show(params.get("s") || "end");
+    } catch (e) { msg("Couldn't load the tree. Try again in a moment."); }
+  })();
+})();
+</script>
+</body>
+</html>

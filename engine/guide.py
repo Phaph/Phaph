@@ -90,6 +90,8 @@ class StageGuide:
     setups: list[dict] = field(default_factory=list)
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
     budget_key: str = "high"                                 # free / budget / medium / high / unlimited
+    tree_nodes: list[int] = field(default_factory=list)      # allocated passive ids, for the tree viewer
+    tree_version: str | None = None
 
 
 DEFAULT_BUDGET = "high"
@@ -214,6 +216,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         mobility = mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type"))
         best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
+        alloc = pob.send("allocated")
         used = set(best.supports) | set(boss.supports if boss else [])
         setups = kit_out(pob, group, spirit, utility, mobility[:1], map_metric, slots, used, log=quiet)
         report("kit", f"Supports for {len(setups)} more skills")
@@ -229,6 +232,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
             spirit=spirit, conditions=conditions, goals=goals, utility=utility,
             mobility=mobility, setups=setups,
+            tree_nodes=[int(n) for n in alloc.get("nodes") or []], tree_version=alloc.get("version"),
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
             damage_split=damage_split(stats),
