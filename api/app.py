@@ -50,6 +50,7 @@ class BuildSpec(BaseModel):
     boss_skill: str | None = None          # a second skill for bosses
     boss_weapon_type: str | None = None    # set when the boss skill uses weapon set 2
     boss_weapon_subtype: str | None = None
+    ailment: Literal["bleed", "poison", "ignite"] | None = None   # optimise for this ailment
 
     model_config = {"populate_by_name": True}
 

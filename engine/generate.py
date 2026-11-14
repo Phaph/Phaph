@@ -27,7 +27,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from gear import Stage, craft_gear, make_stage
-from optimize import MODE_CONFIG, clear_score, optimise_supports, total_dps
+from optimize import MODE_CONFIG, clear_score, metric_for, optimise_supports, total_dps
 from pob import PoB, PoBError
 
 # Types that make a skill a support act rather than a main damage skill.
@@ -159,11 +159,13 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         group = p.add_skill([c.skill], full_dps=c.is_minion)["group"]
         mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
         p.set_config(**MODE_CONFIG[mode])
-        craft_gear(p, stage, c.weapon_type, c.weapon_subtype, offhand_type=c.offhand_type, uniques=False, log=quiet)
+        metric = metric_for(mode, req.get("ailment"))
+        craft_gear(p, stage, c.weapon_type, c.weapon_subtype, offhand_type=c.offhand_type, uniques=False,
+                   metric=metric, log=quiet)
         if tree:
-            p.optimise_tree(def_weight=0.25, metric="mapping" if req.get("mode") == "mapping" else "total")
+            p.optimise_tree(def_weight=0.25, metric=metric)
         p.auto_config(mode)
-        best = optimise_supports(p, group, c.skill, slots=5, top_k=10, log=quiet)[0]
+        best = optimise_supports(p, group, c.skill, slots=5, top_k=10, metric=metric, log=quiet)[0]
         out = p.calc(FIELDS)
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
         c.clear, c.ehp = clear_score(out), out.get("TotalEHP", 0)
@@ -278,6 +280,8 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         "weapon_type": main["weapon_type"], "weapon_subtype": main["weapon_subtype"],
         "offhand_type": main["offhand_type"], "budget": req.get("budget", "high"),
     }
+    if req.get("ailment"):
+        spec["ailment"] = req["ailment"]
     same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
     boss = max(same_asc, key=lambda r: r["dps"], default=None)
     if boss and boss["dps"] >= BOSS_SKILL_MIN_GAIN * main["dps"]:

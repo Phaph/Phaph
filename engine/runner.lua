@@ -602,8 +602,20 @@ function handlers.optimise_tree(cmd)
 	local steps, evals = {}, 0
 	local t0 = os.clock()
 
-	local mapping = cmd.metric == "mapping"
+	local metric = cmd.metric or "total"
+	local mapping = metric:find("mapping") ~= nil
+	local AILMENT_FIELD = { bleed = "BleedDPS", poison = "PoisonDPS", ignite = "IgniteDPS" }
+	local ailmentField
+	for name, f in pairs(AILMENT_FIELD) do if metric:find(name) then ailmentField = f end end
+	local function areaFactor(o)
+		return math.sqrt(math.max(o.AreaOfEffectMod or 1, 0.1)) * math.sqrt(math.max(o.ProjectileCount or 1, 1))
+	end
 	local function dps(o)
+		if ailmentField then
+			-- Same as optimize.score_of: the ailment counts fully, hits a quarter.
+			local d = (o[ailmentField] or 0) + 0.25 * (o.TotalDPS or 0)
+			return mapping and d * areaFactor(o) or d
+		end
 		if o.FullDPS and o.FullDPS > 0 then
 			if mapping then
 				return (o.FullDPS - 0.5 * (o.FullDotDPS or 0)) * math.sqrt(math.max(o.AreaOfEffectMod or 1, 0.1)) * math.sqrt(math.max(o.ProjectileCount or 1, 1))

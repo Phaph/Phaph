@@ -23,7 +23,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, craft_gear, craft_weapon, make_stage
-from optimize import CLEAR_FIELDS, MODE_CONFIG, optimise_supports, total_dps
+from optimize import CLEAR_FIELDS, MODE_CONFIG, metric_for, optimise_supports, total_dps
 from pob import PoB
 from spirit import optimise_spirit
 
@@ -51,6 +51,7 @@ class StageGuide:
     spirit: list[str] = field(default_factory=list)       # auras, heralds, buffs, extra minions
     conditions: list[dict] = field(default_factory=list)  # bonuses assumed up, and why
     notes: list[str] = field(default_factory=list)
+    ailment: str | None = None   # the build's theme ailment, e.g. "bleed"
 
 
 DEFAULT_BUDGET = "high"
@@ -81,6 +82,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
                      != (spec["weapon_type"], spec.get("weapon_subtype")))
     quiet = lambda *a: None
     slots = spec.get("support_slots", 5)
+    # The build's goal: e.g. a bleed build optimises bleed damage everywhere, not raw hits.
+    map_metric = metric_for("mapping", spec.get("ailment"))
+    boss_metric = metric_for("bossing", spec.get("ailment"))
     with PoB() as pob:
         catalog = pob.send("skill_catalog")["skills"]
         minion_build = any(s["name"] == spec["skill"] and "Minion" in s["types"] for s in catalog)
@@ -101,21 +105,21 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             # The swap weapon is scored with the boss skill as the main skill.
             pob.send("set_main", group=boss_group)
             plan = craft_weapon(pob, stage, "Weapon 1 Swap", spec["boss_weapon_type"],
-                                spec.get("boss_weapon_subtype"), mode="bossing", log=quiet)
+                                spec.get("boss_weapon_subtype"), mode="bossing", metric=boss_metric, log=quiet)
             pob.send("set_main", group=group)
             return plan
 
         pob.set_config(**MODE_CONFIG["mapping"])
         pob.auto_config("mapping")
-        craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", log=quiet)
+        craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, log=quiet)
         if boss_swap:
             boss_weapon()
-        tree = pob.optimise_tree(def_weight=dw_tree, metric="mapping")
+        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric)
         pob.auto_config("mapping")
-        optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet, shortlist=shortlist)
-        spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, log=quiet)
+        optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
+        spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
         # Passives, supports and spirit moved damage and resistances around: re-craft gear to fit.
-        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", log=quiet)
+        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, log=quiet)
         if boss_swap:
             gear.append(boss_weapon())
 
@@ -126,18 +130,18 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             if boss_group:
                 pob.send("set_main", group=boss_group)
                 pob.auto_config("bossing")
-                boss = optimise_supports(pob, boss_group, boss_skill, slots=slots, metric="total", log=quiet)[0]
+                boss = optimise_supports(pob, boss_group, boss_skill, slots=slots, metric=boss_metric, log=quiet)[0]
                 boss_dps = boss.score
                 pob.send("set_main", group=group)
             else:
                 pob.auto_config("bossing")
-                boss = optimise_supports(pob, group, skill, slots=slots, metric="total", log=quiet)[0]
+                boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
                 boss_dps = boss.score
 
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
         conditions = pob.auto_config("mapping")
-        best = optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet,
+        best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS)
         guide = StageGuide(
@@ -145,6 +149,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
             supports=best.supports,
             notables=[s["node"] for s in tree["steps"] if s["type"] != "Normal"],
             gear=gear, stats=stats, dps=total_dps(stats), code=pob.save_code(),
+            ailment=spec.get("ailment"),
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
             spirit=spirit, conditions=conditions,

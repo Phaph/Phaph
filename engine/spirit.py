@@ -2,7 +2,7 @@
 minions) that add the most to the build, one at a time, scored by PoB."""
 from __future__ import annotations
 
-from optimize import CLEAR_FIELDS, DPS_FIELDS, clear_score, total_dps
+from optimize import CLEAR_FIELDS, DPS_FIELDS, clear_score, score_of, total_dps
 from pob import PoB, PoBError
 
 FIELDS = [*DPS_FIELDS, *CLEAR_FIELDS, "TotalEHP", "Spirit", "SpiritUnreserved"]
@@ -21,9 +21,10 @@ def spirit_candidates(catalog: list[dict], minion_build: bool) -> list[str]:
 
 
 def optimise_spirit(pob: PoB, catalog: list[dict], mode: str = "bossing", minion_build: bool = False,
-                    def_weight: float = 0.25, min_gain: float = 0.01, log=print) -> list[str]:
+                    def_weight: float = 0.25, min_gain: float = 0.01, metric: str | None = None,
+                    log=print) -> list[str]:
     """Returns the persistent skills chosen, in the order they were added. They stay in the build."""
-    dps = clear_score if mode == "mapping" else total_dps
+    dps = (lambda o: score_of(o, metric)) if metric else (clear_score if mode == "mapping" else total_dps)
     cands = spirit_candidates(catalog, minion_build)
     # Heralds and extra minions add damage of their own, which only Full DPS counts.
     pob.use_full_dps()

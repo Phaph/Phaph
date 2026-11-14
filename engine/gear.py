@@ -11,7 +11,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
-from optimize import CLEAR_FIELDS, DPS_FIELDS, clear_score, total_dps
+from optimize import CLEAR_FIELDS, DPS_FIELDS, clear_score, score_of, total_dps
 from pob import PoB, PoBError
 
 ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots"}
@@ -102,10 +102,14 @@ def _res_deficit(out: dict) -> float:
 
 
 class Scorer:
-    def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006, mode: str = "bossing"):
+    def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006, mode: str = "bossing",
+                 metric: str | None = None):
         self.def_weight = def_weight
         self.res_weight = res_weight
-        self.dps = clear_score if mode == "mapping" else total_dps
+        if metric:
+            self.dps = lambda out: score_of(out, metric)
+        else:
+            self.dps = clear_score if mode == "mapping" else total_dps
 
     def __call__(self, out: dict, base: dict) -> float:
         d0 = max(self.dps(base), 1)
@@ -381,6 +385,7 @@ def craft_gear(
     def_weight: float = 0.4,
     mode: str = "bossing",
     uniques: bool = True,
+    metric: str | None = None,
     log=print,
 ) -> list[SlotPlan]:
     """Craft every slot for a build already loaded in `pob` (class, level, skills set).
@@ -389,7 +394,7 @@ def craft_gear(
     2. Resistances only where still needed, on items with room.
     3. Fill any room left with the best remaining affixes.
     """
-    score = Scorer(def_weight=def_weight, mode=mode)
+    score = Scorer(def_weight=def_weight, mode=mode, metric=metric)
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
 
     slot_bases: list[tuple[str, list[dict]]] = []
@@ -416,7 +421,7 @@ def craft_gear(
         affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
         works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage)))
 
-    no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode)
+    no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric)
     for w in works:
         reserve = 0 if w.slot.startswith("Weapon") else 2
         _fill(pob, w, stage, no_res, stage.max_affixes - reserve, allow=lambda g: not _is_res_group(g))
@@ -445,10 +450,10 @@ def craft_gear(
 
 
 def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_subtype: str | None = None,
-                 mode: str = "bossing", def_weight: float = 0.4, log=print) -> SlotPlan:
+                 mode: str = "bossing", def_weight: float = 0.4, metric: str | None = None, log=print) -> SlotPlan:
     """Craft one weapon slot on its own, e.g. "Weapon 1 Swap" for a boss skill on weapon set 2.
     The skill that uses it must be the main skill while this runs."""
-    score = Scorer(def_weight=def_weight, mode=mode)
+    score = Scorer(def_weight=def_weight, mode=mode, metric=metric)
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
     cands = sorted((b for b in bases if b["type"] == weapon_type and _sub_ok(b.get("subType"), weapon_subtype)
                     and not b["name"].startswith("Runeforged")), key=lambda b: -b["level"])[:6]

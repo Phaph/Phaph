@@ -15,7 +15,8 @@ METRICS = {
 
 METRICS["mapping"] = "mapping"   # clear score: hit-weighted DPS x sqrt(area) x sqrt(projectiles)
 CLEAR_FIELDS = ["AreaOfEffectMod", "ProjectileCount"]
-DPS_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS"]
+DPS_FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "BleedDPS",
+              "PoisonDPS", "IgniteDPS"]
 
 # PoB config for each mode. Bossing is PoB's default (pinnacle boss).
 MODE_CONFIG = {
@@ -46,11 +47,33 @@ def clear_score(out: dict) -> float:
     return dps * area ** 0.5 * projectiles ** 0.5
 
 
+AILMENT_FIELD = {"bleed": "BleedDPS", "poison": "PoisonDPS", "ignite": "IgniteDPS"}
+
+
+def area_factor(out: dict) -> float:
+    return max(out.get("AreaOfEffectMod", 1) or 1, 0.1) ** 0.5 * max(out.get("ProjectileCount", 1) or 1, 1) ** 0.5
+
+
+def metric_for(mode: str, ailment: str | None = None) -> str:
+    """The metric string every optimiser understands:
+    "total", "mapping", "<ailment>" or "<ailment>+mapping" (e.g. "bleed+mapping")."""
+    mapping = mode == "mapping"
+    if ailment in AILMENT_FIELD:
+        return f"{ailment}+mapping" if mapping else ailment
+    return "mapping" if mapping else "total"
+
+
 def score_of(out: dict, field_name: str) -> float:
     if field_name == "total":
         return total_dps(out)
     if field_name == "mapping":
         return clear_score(out)
+    parts = field_name.split("+")
+    ailment = next((p for p in parts if p in AILMENT_FIELD), None)
+    if ailment:
+        # An ailment build lives on its ailment: it counts fully, hits a quarter.
+        base = out.get(AILMENT_FIELD[ailment], 0) + 0.25 * out.get("TotalDPS", 0)
+        return base * area_factor(out) if "mapping" in parts else base
     return out.get(field_name, 0)
 
 
@@ -90,7 +113,7 @@ def optimise_supports(
     """
     field_name = METRICS.get(metric, metric)
     fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
-        + ([] if field_name in ("total", "mapping") else [field_name])
+        + ([] if field_name in ("total", "mapping") or "+" in field_name or field_name in AILMENT_FIELD else [field_name])
     gems = pob.list_gems("support")
     family = {g["name"]: g.get("family") or g["name"] for g in gems}
     skip = set(exclude or ())
