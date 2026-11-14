@@ -10,16 +10,15 @@
 7. **Later, not urgent.** Pick hosting (Hetzner server, about $5-10/month, recommended) and optionally a domain.
 
 ## Claude
-1. **Get the engine running on Windows.** `setup.sh` needs bash and gcc, so use WSL or Docker Desktop, whichever the PC has.
+1. **Get the engine running on Windows** through WSL or Docker Desktop. The Docker image is built and tested (`docker build -t poe2-optimizer .`, then `docker run -p 8000:8000 poe2-optimizer`).
 2. **Check accuracy.** Load your PoB code in the engine and in the PoB app, and compare DPS, life, EHP and resistances. Fix any gaps.
 3. **Pull real data from poe.ninja** (the PC's network isn't blocked):
    - top builds as starting points for the optimiser
    - unique prices, so uniques go into gear plans at the right budget
    - real divine prices to replace the budget estimates
-4. **Set realistic enemy settings** for bosses and maps in PoB, so DPS numbers are closer to in-game.
-5. **Add a mapping vs bossing switch** to each guide.
+4. **Tune enemy settings and the mapping clear score** against real play. Mapping vs bossing is built: bossing uses a pinnacle boss, mapping uses normal monsters plus our own area and projectile weighting.
 6. **Move the code to the new repo.**
-7. **Build the web API:** a request for a guide or a comparison, a job queue, and a cache so repeated builds load instantly.
+7. **Web API: done** (`api/`), with background jobs and a SQLite cache. Left: hook up the website.
 8. **Build the prompt layer** with the Claude API: "lightning minion Monk, 5 divine" becomes a build spec.
 9. **Build the website** on top of the API.
 10. **Test making a Mobalytics page** through Chrome, and find out whether the passive tree can be entered.
@@ -29,7 +28,7 @@
 - Jewels and attribute requirements aren't handled.
 - The tree optimiser is greedy, so it can miss a strong node behind weak ones.
 - The leveling stage is a single snapshot, not a step-by-step route.
-- It's too slow for a website. A full guide takes about 2.5 minutes; needs caching and smaller candidate lists.
+- A full guide takes about 2.5 minutes on 4 cores. The API cache makes repeat requests instant; more cores make first requests faster.
 
 ## 1.0 launch day (Dec 11)
 1. Update PoB as soon as it supports 1.0 and the Shadow.
