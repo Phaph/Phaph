@@ -168,10 +168,29 @@ def relative_notes(reports: list[Report]) -> None:
         by_ehp[-1].cons.append(f"Squishiest ({by_ehp[-1].ehp:,.0f} effective HP)")
 
 
-def compare(builds: list[dict], pob: PoB | None = None) -> list[Report]:
+def evaluate_spec(spec: dict, budget: str, stage: str = "end") -> Report:
+    """Build a guide spec at one stage, capped at `budget`, and report on it."""
+    from guide import build_stage  # local import: guide imports this module's helpers indirectly
+
+    g = build_stage({**spec, "budget": budget}, stage)
+    s = g.stats
+    return Report(
+        name=spec.get("name") or spec["skill"], main_skill=spec["skill"], dps=g.dps,
+        hit_dps=s.get("TotalDPS", 0), ailment_dps=s.get("TotalDotDPS", 0), ehp=s.get("TotalEHP", 0),
+        stats=s, code=g.code, supports=g.supports, notables=g.notables,
+    )
+
+
+def compare(builds: list[dict], pob: PoB | None = None, budget: str | None = None,
+            stage: str = "end") -> list[Report]:
+    """Compare 1-3 builds. With `budget`, builds are guide specs (class, skill, weapon type)
+    and each is fully built (supports, gear, tree) at that budget before comparing."""
     if not 1 <= len(builds) <= MAX_BUILDS:
         raise ValueError(f"Give 1 to {MAX_BUILDS} builds")
-    if pob is not None:
+    if budget:
+        with ThreadPoolExecutor(max_workers=len(builds)) as ex:
+            reports = list(ex.map(lambda b: evaluate_spec(b, budget, stage), builds))
+    elif pob is not None:
         reports = [evaluate(pob, b) for b in builds]
     else:
         # One PoB process per build, run side by side.
@@ -221,10 +240,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("builds", help="JSON file with a list of 1-3 builds")
     ap.add_argument("--json", action="store_true", help="print JSON instead of markdown")
+    ap.add_argument("--budget", help="free|budget|medium|high|unlimited: fully build each spec at this budget")
+    ap.add_argument("--stage", default="end", help="leveling|early|mid|end (with --budget)")
     args = ap.parse_args()
     with open(args.builds) as f:
         builds = json.load(f)
-    reports = compare(builds)
+    reports = compare(builds, budget=args.budget, stage=args.stage)
     if args.json:
         print(json.dumps([asdict(r) for r in reports], indent=2))
     else:

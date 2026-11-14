@@ -16,6 +16,7 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 - `compare.py`: evaluate 1 build or compare up to 3. Gives a DPS/defence table and basic pros and cons. Builds can be PoB codes or recipes, and can ask the optimiser to pick supports. Example: `python3 compare.py examples/compare_three.json`.
 - `gear.py`: crafts a rare for every slot from PoB's affix tables, per stage. Picks the best base, then damage and defence affixes, then only the resistances still needed, then fills the rest. Output is a per-slot shopping list (base + affixes in priority order with target values).
 - `guide.py`: full build guide. One spec becomes 4 stages: Leveling (lvl 55, free), Early maps (lvl 75, 0-5 div), Mid maps (lvl 90, 5-30 div), Endgame (lvl 95, 50+ div). Each stage: supports, gear, passive tree, supports again. Example: `python3 guide.py examples/tempest_flurry_invoker.json` (output in `examples/tempest_flurry_invoker_guide.md`, about 2.5 minutes).
+- Budget: players pick one up front, `free`, `budget` (<=5 div), `medium` (5-30), `high` (30-100) or `unlimited`. No stage's gear goes above it: a 5 divine player still gets mid maps and endgame versions, built with 5 divine gear. `python3 guide.py spec.json --budget budget`, `python3 compare.py examples/compare_specs.json --budget budget`.
 - `demo.py`: command-line demo.
 
 ## Commands

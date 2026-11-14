@@ -34,12 +34,44 @@ class Stage:
     budget: str
 
 
-STAGES = {
-    "leveling": Stage("leveling", "Leveling (campaign)", 55, 55, 0.3, 1, 3, "Free, self-found"),
-    "early": Stage("early", "Early maps (league start)", 75, 70, 0.5, 1, 4, "Budget, about 0-5 divine"),
-    "mid": Stage("mid", "Mid maps", 90, 82, 0.6, 0, 5, "About 5-30 divine"),
-    "end": Stage("end", "Endgame", 95, 82, 0.9, 0, 6, "50+ divine"),
+@dataclass(frozen=True)
+class Budget:
+    key: str
+    label: str
+    roll: float
+    tier_drop: int
+    max_affixes: int
+
+
+# Ordered cheapest to most expensive. The player picks one up front; no stage goes above it.
+BUDGETS = {
+    "free": Budget("free", "Free, self-found", 0.35, 2, 3),
+    "budget": Budget("budget", "Budget, up to ~5 divine", 0.5, 1, 4),
+    "medium": Budget("medium", "Medium, ~5-30 divine", 0.6, 0, 5),
+    "high": Budget("high", "High, ~30-100 divine", 0.8, 0, 6),
+    "unlimited": Budget("unlimited", "No limit, 100+ divine", 0.95, 0, 6),
 }
+BUDGET_ORDER = list(BUDGETS)
+
+# key: (name, character level, item level, the budget this stage would use with no cap)
+STAGE_DEFS = {
+    "leveling": ("Leveling (campaign)", 55, 55, "free"),
+    "early": ("Early maps (league start)", 75, 70, "budget"),
+    "mid": ("Mid maps", 90, 82, "medium"),
+    "end": ("Endgame", 95, 82, "unlimited"),
+}
+
+
+def make_stage(key: str, budget: str = "unlimited") -> Stage:
+    """A stage with its gear capped at the player's budget."""
+    if budget not in BUDGETS:
+        raise ValueError(f"budget must be one of {BUDGET_ORDER}")
+    name, level, ilvl, natural = STAGE_DEFS[key]
+    tier = BUDGETS[min(natural, budget, key=BUDGET_ORDER.index)]
+    return Stage(key, name, level, ilvl, tier.roll, tier.tier_drop, tier.max_affixes, tier.label)
+
+
+STAGES = {k: make_stage(k) for k in STAGE_DEFS}
 
 
 @dataclass

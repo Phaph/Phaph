@@ -7,9 +7,13 @@ Stages run side by side, one PoB process each.
 Spec:
     {"name": "Tempest Flurry Invoker", "class": "Monk", "ascendancy": "Invoker",
      "skill": "Tempest Flurry", "weapon_type": "Staff", "weapon_subtype": "Warstaff",
-     "dual_wield": false, "stages": ["leveling", "early", "mid", "end"]}
+     "dual_wield": false, "budget": "budget", "stages": ["leveling", "early", "mid", "end"]}
 
-CLI:  python3 guide.py spec.json [--stages early,end] [--json]
+budget: free | budget (<=5 div) | medium (5-30) | high (30-100) | unlimited. Default: high.
+Every stage's gear is capped at the budget, so a 5 divine player still gets mid maps
+and endgame versions, built with gear they can afford.
+
+CLI:  python3 guide.py spec.json [--budget budget] [--stages early,end] [--json]
 """
 from __future__ import annotations
 
@@ -18,7 +22,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
-from gear import STAGES, SlotPlan, craft_gear
+from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, craft_gear, make_stage
 from optimize import optimise_supports, total_dps
 from pob import PoB
 
@@ -41,8 +45,11 @@ class StageGuide:
     notes: list[str] = field(default_factory=list)
 
 
+DEFAULT_BUDGET = "high"
+
+
 def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
-    stage = STAGES[stage_key]
+    stage = make_stage(stage_key, spec.get("budget", DEFAULT_BUDGET))
     with PoB() as pob:
         pob.new()
         pob.set_class(spec["class"], spec.get("ascendancy"))
@@ -77,13 +84,14 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
 
 
 def build_guide(spec: dict, stages: list[str] | None = None, log=print) -> list[StageGuide]:
-    keys = stages or spec.get("stages") or list(STAGES)
+    keys = stages or spec.get("stages") or list(STAGE_DEFS)
     with ThreadPoolExecutor(max_workers=len(keys)) as ex:
         return list(ex.map(lambda k: build_stage(spec, k, log), keys))
 
 
 def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
-    out = [f"# {spec.get('name') or spec['skill']}", ""]
+    out = [f"# {spec.get('name') or spec['skill']}", "",
+           f"Budget: **{make_stage('end', spec.get('budget', DEFAULT_BUDGET)).budget}**", ""]
     out.append("| Stage | Level | Budget | DPS | Life / ES | Effective HP | Res (F/C/L/Chaos) |")
     out.append("|---|---|---|---|---|---|---|")
     for g in guides:
@@ -108,9 +116,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec", help="JSON build spec")
     ap.add_argument("--stages", help="comma list, e.g. early,end")
+    ap.add_argument("--budget", choices=BUDGET_ORDER, help="cap all gear at this budget")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
     spec = json.load(open(args.spec))
+    if args.budget:
+        spec["budget"] = args.budget
     stages = args.stages.split(",") if args.stages else None
     guides = build_guide(spec, stages, log=lambda *a: None)
     if args.json:

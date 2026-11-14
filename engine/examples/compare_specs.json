@@ -1,0 +1,8 @@
+[
+  {"name": "Tempest Flurry Invoker", "class": "Monk", "ascendancy": "Invoker",
+   "skill": "Tempest Flurry", "weapon_type": "Staff", "weapon_subtype": "Warstaff"},
+  {"name": "Falling Thunder Invoker", "class": "Monk", "ascendancy": "Invoker",
+   "skill": "Falling Thunder", "weapon_type": "Staff", "weapon_subtype": "Warstaff"},
+  {"name": "Rake Bleed Amazon", "class": "Huntress", "ascendancy": "Amazon",
+   "skill": "Rake", "weapon_type": "Spear"}
+]
