@@ -135,3 +135,29 @@ def test_duplicate_gem_names_pick_the_castable_gem(pob):
     assert pob.calc(["TotalDPS"]).get("TotalDPS", 0) > 0
     res = pob.try_skill(g, ["Lightning Bolt", "Lightning Penetration"], FIELDS)
     assert res["supported"].get("Lightning Penetration")
+
+
+def test_tree_swap_phase_only_keeps_improvements(pob, monk):
+    """The swap phase takes weak branches back and re-spends them; it must never leave the build worse,
+    stay within the points, and the order to take passives must still cover every point spent."""
+    res = pob.optimise_tree(points=40)
+    assert res["used"] <= 40
+    assert res["score_after_swaps"] >= res["score_before_swaps"] - 1e-9
+    alloc = set(pob.send("allocated")["nodes"])
+    main = set()
+    for s in res["steps"]:
+        ids = set(s["path"]) | {s["id"]}
+        assert ids <= alloc, "the order lists a passive that isn't in the tree"
+        if not s.get("ascendancy"):
+            assert not (ids & main), "a passive appears twice in the order"
+            main |= ids
+    assert len(main) == res["used"]
+
+
+def test_tree_long_reach_never_scores_lower(pob, monk):
+    xml = pob.save_xml()
+    pob.optimise_tree(points=40, far_dist=6, refine=False)
+    old = total_dps(pob.calc(FIELDS))
+    pob.load_xml(xml)
+    pob.optimise_tree(points=40)
+    assert total_dps(pob.calc(FIELDS)) >= old * 0.95

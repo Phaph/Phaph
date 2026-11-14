@@ -996,6 +996,19 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     treeStep(e) {
       if (!brain || !brain.per[e.stage]) return;
       const st = brain.per[e.stage];
+      if (e.removed && e.removed.length) {
+        // The swap phase took a weak branch back and spent its points better.
+        const gone = new Set(e.removed.map(String));
+        st.alloc = st.alloc.filter(id => !gone.has(String(id))).concat(e.added || []);
+        brain.evals[e.stage] = e.evals || 0;
+        st.picks.push(`> SWAP     ${String(e.removed.length).padStart(2)} points back from ${e.name}, re-spent`);
+        fire?.bump(0.22);
+        if (e.stage === brain.stage) {
+          brain.tv?.step(e);
+          $("brainFeed").textContent = st.picks.slice(-7).join("\n");
+        }
+        return;
+      }
       st.alloc.push(...(e.path || []), e.chosen);
       brain.evals[e.stage] = e.evals || 0;
       const total = Object.values(brain.evals).reduce((a, b) => a + b, 0);

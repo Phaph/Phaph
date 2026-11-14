@@ -610,12 +610,22 @@ function handlers.points(cmd)
 	return { available = passivePoints(), used = used, ascendancy_used = ascUsed }
 end
 
--- Greedy passive tree optimiser using PoB's fast what-if calculator.
--- Each step tries every reachable node (path up to max_dist points), scores
--- (relative DPS gain + def_weight * relative EHP gain) per point spent, and
--- allocates the best path. Ascendancy points are spent the same way.
+-- Passive tree optimiser using PoB's fast what-if calculator.
+-- Build phase: each step tries every reachable node, scores the whole path to it
+-- (relative DPS gain + def_weight * relative EHP gain, per point spent) and takes the
+-- best path. Small passives are looked at up to max_dist points away; notables and
+-- keystones up to far_dist, so a strong one behind a long run of weak passives is found.
+-- Ascendancy points are spent the same way.
+-- Swap phase (refine): the build phase never takes a pick back, so afterwards the
+-- weakest allocated branches are removed one at a time and their points re-spent;
+-- a swap is kept only when the whole build scores higher. This catches points spent
+-- early on passives that later picks made worthless, and pairs of passives that are
+-- only strong together.
 function handlers.optimise_tree(cmd)
 	local maxDist = cmd.max_dist or 6
+	local farDist = math.max(cmd.far_dist or 12, maxDist)
+	local capDist = nil   -- set while only a few points are left
+	local quiet = false   -- no live events while a swap is only being tried
 	local defWeight = cmd.def_weight or 0.25
 	local budget = cmd.points or passivePoints()
 	local ascBudget = cmd.ascendancy_points or 8
@@ -677,9 +687,11 @@ function handlers.optimise_tree(cmd)
 
 	local function eligible(node, ascend)
 		local isAsc = node.ascendancyName ~= nil
+		local reach = (node.type == "Normal" or ascend) and maxDist or farDist
+		if capDist then reach = math.min(reach, capDist) end
 		return not node.alloc and node.path and node.modKey and node.modKey ~= ""
 			and (node.type == "Normal" or node.type == "Notable" or node.type == "Keystone")
-			and #node.path <= maxDist
+			and #node.path <= reach
 			and isAsc == ascend
 			and (not ascend or node.ascendancyName == build.spec.curAscendClassBaseName or node.ascendancyName == build.spec.curAscendClassName)
 			and not node.isMultipleChoiceOption
@@ -688,7 +700,7 @@ function handlers.optimise_tree(cmd)
 	local lastScan = { n = 0, top = {} }
 	local function bestStep(ascend)
 		local calcFunc, base = build.calcsTab:GetMiscCalculator()
-		local full = useFull()
+		local useFullDPS = useFull()
 		local d0, e0 = math.max(dps(base), 1), math.max(ehp(base), 1)
 		local full = sinceFull[ascend] >= refresh or not shortlist[ascend]
 		local pool = {}
@@ -707,7 +719,7 @@ function handlers.optimise_tree(cmd)
 		for _, node in ipairs(pool) do
 			local pathNodes = {}
 			for _, n in ipairs(node.path) do pathNodes[n] = true end
-			local out = calcFunc({ addNodes = pathNodes }, full)
+			local out = calcFunc({ addNodes = pathNodes }, useFullDPS)
 			evals = evals + 1
 			local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0 + goalTerms(out, base)
 			table.insert(scored, { node = node, eff = gain / #node.path })
@@ -746,11 +758,11 @@ function handlers.optimise_tree(cmd)
 			if not node then break end
 			if have + #node.path > limit then
 				-- Path too long for the points left: try only short paths.
-				local saved = maxDist
-				maxDist = limit - have
+				capDist = limit - have
 				sinceFull[ascend] = math.huge
 				node, eff = bestStep(ascend)
-				maxDist = saved
+				capDist = nil
+				sinceFull[ascend] = math.huge
 				if not node then break end
 			end
 			local cost = #node.path
@@ -761,7 +773,7 @@ function handlers.optimise_tree(cmd)
 			build.buildFlag = true
 			frame()
 			table.insert(steps, { node = node.dn, id = node.id, path = pathIds, type = node.type, cost = cost, gain_per_point = eff, ascendancy = ascend })
-			if cmd.live then
+			if cmd.live and not quiet then
 				-- Streamed while the search runs, so the website can show the tree growing: the node taken, the
 				-- path to it, the best candidates it beat, how many were scored, and the build's score now.
 				io.stdout:write("@@", json.encode({ event = "tree_step", chosen = node.id, name = node.dn, type = node.type,
@@ -774,9 +786,156 @@ function handlers.optimise_tree(cmd)
 
 	spend(true, ascBudget)
 	spend(false, budget)
+	local buildSeconds = os.clock() - t0
+
+	-- Swap phase. One whole-build score, fixed to the build as the build phase left it.
+	local swaps, swapTries = {}, 0
+	local refineRounds = cmd.refine_rounds or 12
+	local refineTries = cmd.refine_tries or 4
+	local maxRemove = cmd.refine_max_remove or 8
+	local deadline = os.clock() + (cmd.refine_seconds or math.max(5, buildSeconds * 0.6))
+	local function recalc()
+		build.buildFlag = true
+		frame()
+		return build.calcsTab.mainOutput
+	end
+	local ref = recalc()
+	local D0, E0 = math.max(dps(ref), 1), math.max(ehp(ref), 1)
+	local function J(o) return dps(o) / D0 + defWeight * ehp(o) / E0 + goalTerms(o, ref) end
+	local scoreBefore = J(ref)
+
+	local function snapshot()
+		local ids = {}
+		for id, node in pairs(build.spec.allocNodes) do
+			if not node.ascendancyName then ids[id] = true end
+		end
+		return ids
+	end
+	local function restore(snap)
+		local spec = build.spec
+		for id, node in pairs(spec.allocNodes) do
+			if not node.ascendancyName and not snap[id] then spec:DeallocSingleNode(node) end
+		end
+		for id in pairs(snap) do
+			local node = spec.nodes[id]
+			if node and not node.alloc then
+				node.alloc = true
+				node.allocMode = 0
+				spec.allocNodes[id] = node
+				if node.isAttribute then spec:SwitchAttributeNode(id, spec.attributeIndex or 1) end
+			end
+		end
+		spec:BuildAllDependsAndPaths()
+		spec:AddUndoState()
+	end
+
+	if refineRounds > 0 then
+		for round = 1, refineRounds do
+			if os.clock() > deadline then break end
+			local calcFunc, base = build.calcsTab:GetMiscCalculator()
+			local useFullDPS = useFull()
+			local cur = J(base)
+			-- What each allocated branch is worth: the score lost per point if it (and everything
+			-- that only connects through it) were removed.
+			local groups = {}
+			for id, node in pairs(build.spec.allocNodes) do
+				if not node.ascendancyName and node.type ~= "ClassStart" and node.type ~= "AscendClassStart"
+					and not node.isMultipleChoiceOption and node.depends and #node.depends <= maxRemove then
+					local set, n, ok = {}, 0, true
+					for _, d in ipairs(node.depends) do
+						if d.ascendancyName or d.type == "ClassStart" then ok = false end
+						set[d] = true
+						n = n + 1
+					end
+					if ok and n > 0 then
+						local out = calcFunc({ removeNodes = set }, useFullDPS)
+						evals = evals + 1
+						table.insert(groups, { node = node, n = n, loss = (cur - J(out)) / n })
+					end
+				end
+			end
+			table.sort(groups, function(a, b)
+				if a.loss ~= b.loss then return a.loss < b.loss end
+				return a.node.id < b.node.id
+			end)
+			local kept = false
+			for i = 1, math.min(refineTries, #groups) do
+				if os.clock() > deadline then break end
+				local g = groups[i]
+				local snap, stepsBefore = snapshot(), #steps
+				local removed = {}
+				for _, d in ipairs(g.node.depends) do table.insert(removed, d.id) end
+				swapTries = swapTries + 1
+				quiet = true
+				build.spec:DeallocNode(g.node)
+				build.spec:AddUndoState()
+				recalc()
+				sinceFull[false] = math.huge
+				spend(false, budget)
+				local now = J(recalc())
+				quiet = false
+				if now > cur * (1 + 1e-4) + 1e-6 then
+					table.insert(swaps, { removed = removed, name = g.node.dn, gain = now - cur })
+					if cmd.live then
+						local added = {}
+						for k = stepsBefore + 1, #steps do
+							for _, id in ipairs(steps[k].path) do table.insert(added, id) end
+						end
+						io.stdout:write("@@", json.encode({ event = "tree_step", removed = removed, added = added, name = g.node.dn,
+							evals = evals, score = dps(build.calcsTab.mainOutput) }), "\n")
+						io.stdout:flush()
+					end
+					kept = true
+					break
+				end
+				for k = #steps, stepsBefore + 1, -1 do steps[k] = nil end
+				restore(snap)
+				recalc()
+			end
+			if not kept then break end
+		end
+	end
+
+	-- The order to take passives, after swaps: steps whose target was swapped out are dropped,
+	-- and any of their path passives still in the tree move to the next step that needs them.
+	local finalOrder = {}
+	if #swaps > 0 then
+		local carry = {}
+		local covered = {}
+		for _, st in ipairs(steps) do
+			local live = {}
+			for _, id in ipairs(st.path) do
+				local n = build.spec.nodes[id]
+				if n and n.alloc and not covered[id] then table.insert(live, id) end
+			end
+			local target = build.spec.nodes[st.id]
+			if target and target.alloc and not covered[st.id] then
+				for _, id in ipairs(carry) do table.insert(live, id) end
+				carry = {}
+				for _, id in ipairs(live) do covered[id] = true end
+				covered[st.id] = true
+				st.path = live
+				st.cost = #live
+				table.insert(finalOrder, st)
+			else
+				for _, id in ipairs(live) do
+					if id ~= st.id then table.insert(carry, id) end
+					covered[id] = true
+				end
+			end
+		end
+		if #carry > 0 and #finalOrder > 0 then
+			local last = finalOrder[#finalOrder]
+			for _, id in ipairs(carry) do table.insert(last.path, id) end
+			last.cost = #last.path
+		end
+		steps = finalOrder
+	end
+
 	local used, ascUsed = build.spec:CountAllocNodes()
 	return { steps = steps, used = used, ascendancy_used = ascUsed, available = budget,
-		evaluations = evals, seconds = os.clock() - t0 }
+		evaluations = evals, seconds = os.clock() - t0, build_seconds = buildSeconds,
+		swaps = swaps, swap_tries = swapTries, score_before_swaps = scoreBefore, score_after_swaps = J(recalc()) }
 end
 
 function handlers.reset_tree(cmd)

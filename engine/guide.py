@@ -173,7 +173,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 progress({"stage": stage_key, "step": "tree_live", "chosen": ev.get("chosen"), "name": ev.get("name"),
                           "type": ev.get("type"), "path": ev.get("path") or [], "considered": ev.get("considered") or [],
                           "scanned": ev.get("scanned", 0), "evals": ev.get("evals", 0),
-                          "ascendancy": bool(ev.get("ascendancy")), "score": round(ev.get("score") or 0, 1)})
+                          "ascendancy": bool(ev.get("ascendancy")), "score": round(ev.get("score") or 0, 1),
+                          "removed": ev.get("removed") or [], "added": ev.get("added") or []})
 
         tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals,
                                  on_step=tree_live if progress else None)

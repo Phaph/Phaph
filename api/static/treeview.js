@@ -131,6 +131,13 @@
     function kick() { if (!raf && alive) raf = requestAnimationFrame(frame); }
 
     function apply(ev, now) {
+      if (ev.removed && ev.removed.length) {
+        // A swap: the removed branch goes dark, the passives that replaced it light up.
+        ev.removed.forEach(id => alloc.delete(String(id)));
+        (ev.added || []).forEach((id, i) => { alloc.add(String(id)); flashes.push({ id: String(id), t0: now + i * 40 }); });
+        kick();
+        return;
+      }
       const path = (ev.path || []).map(String), chosen = String(ev.chosen);
       if (reduce) { path.forEach(id => alloc.add(id)); alloc.add(chosen); aim(alloc); kick(); return; }
       (ev.considered || []).slice(0, 8).forEach((id, i) => flickers.push({ id: String(id), t0: now + i * 25, life: 700, ph: Math.random() * 6 }));

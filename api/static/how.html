@@ -118,7 +118,7 @@ footer a { color: var(--brass); }
         <p>The winner is forged four times at once: <b>Leveling</b> (level 55), <b>Early maps</b> (75), <b>Mid maps</b> (90) and <b>Endgame</b> (95), each capped at your budget. Each stage goes through the same steps:</p>
         <ul>
           <li><b>Gear:</b> a rare is crafted for every slot from Path of Building's affix tables: the best base, then damage and defence affixes, then only the resistances still needed. A unique replaces the rare when it scores clearly better and its poe.ninja price fits your budget.</li>
-          <li><b>Passive tree:</b> one point at a time, the engine tries every passive within reach and takes the one that adds the most damage and toughness per point spent. That's the "brain" you watch on the workbench, and why the order it took them in is the order to take them.</li>
+          <li><b>Passive tree:</b> the engine scores the whole path to every passive in reach (small ones up to 6 points away, notables and keystones up to 12) and takes the path that adds the most damage and toughness per point, weak passives on the way included. Then it goes back over its own work: it takes back the weakest branches one by one, re-spends those points, and keeps the change only if the whole build gets stronger. That's the "brain" you watch on the workbench, and the order it settles on is the order to take them.</li>
           <li><b>Supports:</b> every support gem is screened on your skill, then the best combination is built up one gem at a time, following Path of Building's own rules on what can support what.</li>
           <li><b>Spirit and utility:</b> auras, heralds and buffs that fill your spirit, plus curses, marks and banners, are kept only when they raise your damage. A second skill goes on weapon swap when it hits bosses much harder.</li>
           <li><b>Every skill kitted out:</b> auras, curses and your movement skill get their own supports too, and each support gem is used once in the whole build, as in game.</li>
@@ -173,7 +173,7 @@ footer a { color: var(--brass); }
     <h2>What it can't do yet</h2>
     <ul class="notyet">
       <li><span><b>Jewels, flasks and charms</b> aren't planned yet.</span></li>
-      <li><span><b>The passive tree is picked greedily,</b> one best point at a time, so it can miss a great passive hidden behind several weak ones.</span></li>
+      <li><span><b>The passive tree isn't a perfect search.</b> It reaches notables up to 12 points away and swaps out weak branches afterwards, but a tree has more combinations than any computer could try, so a better tree may still exist.</span></li>
       <li><span><b>Leveling is one snapshot</b> at level 55, not a step-by-step route through the campaign.</span></li>
       <li><span><b>Some skill interactions</b> Path of Building doesn't model (triggers like Cast on X, combo finishers) are left out on purpose.</span></li>
       <li><span><b>Rare item prices</b> are estimates by budget; check the trade links for real prices.</span></li>
