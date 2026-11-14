@@ -23,7 +23,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from gear import BUDGET_ORDER, STAGE_DEFS, SlotPlan, craft_gear, make_stage
-from optimize import optimise_supports, total_dps
+from optimize import CLEAR_FIELDS, MODE_CONFIG, optimise_supports, total_dps
 from pob import PoB
 
 STAT_FIELDS = ["TotalDPS", "TotalDotDPS", "Speed", "CritChance", "HitChance", "Life", "EnergyShield", "Mana",
@@ -42,6 +42,8 @@ class StageGuide:
     stats: dict
     dps: float
     code: str
+    boss_supports: list[str] = field(default_factory=list)
+    boss_dps: float = 0.0   # single target vs a pinnacle boss, with the boss support swap
     notes: list[str] = field(default_factory=list)
 
 
@@ -49,7 +51,12 @@ DEFAULT_BUDGET = "high"
 
 
 def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
+    """Gear and passives are built for mapping (where players spend most of their time).
+    Then two support setups are picked: one for mapping, one for bossing (a gem swap)."""
     stage = make_stage(stage_key, spec.get("budget", DEFAULT_BUDGET))
+    weapon = dict(weapon_type=spec["weapon_type"], weapon_subtype=spec.get("weapon_subtype"),
+                  dual_wield=spec.get("dual_wield", False), offhand_type=spec.get("offhand_type"))
+    dw_gear, dw_tree = spec.get("defence_weight", 0.4), spec.get("defence_weight", 0.25)
     with PoB() as pob:
         pob.new()
         pob.set_class(spec["class"], spec.get("ascendancy"))
@@ -59,27 +66,37 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None) -> StageGuide:
         slots = spec.get("support_slots", 5)
         quiet = lambda *a: None
 
-        optimise_supports(pob, group, skill, slots=slots, log=quiet)
-        craft_gear(pob, stage, spec["weapon_type"], spec.get("weapon_subtype"),
-                   dual_wield=spec.get("dual_wield", False), offhand_type=spec.get("offhand_type"),
-                   def_weight=spec.get("defence_weight", 0.4), log=quiet)
-        tree = pob.optimise_tree(def_weight=spec.get("defence_weight", 0.25))
-        best = optimise_supports(pob, group, skill, slots=slots, log=quiet)[0]
-        # Passives and gear moved resistances around; re-craft gear once so it fits the final tree.
-        gear = craft_gear(pob, stage, spec["weapon_type"], spec.get("weapon_subtype"),
-                          dual_wield=spec.get("dual_wield", False), offhand_type=spec.get("offhand_type"),
-                          def_weight=spec.get("defence_weight", 0.4), log=quiet)
-        stats = pob.calc(STAT_FIELDS)
+        pob.set_config(**MODE_CONFIG["mapping"])
+        optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet)
+        craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", log=quiet)
+        tree = pob.optimise_tree(def_weight=dw_tree, metric="mapping")
+        optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet)
+        # Passives moved resistances and damage around; re-craft gear once to fit the final tree.
+        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", log=quiet)
+
+        # Bossing swap: same gear and passives, supports picked for single target vs a pinnacle boss.
+        boss = None
+        if stage_key != "leveling":
+            pob.set_config(**MODE_CONFIG["bossing"])
+            boss = optimise_supports(pob, group, skill, slots=slots, metric="total", log=quiet)[0]
+            boss_dps = boss.score
+
+        # Mapping setup last, so the PoB code and stats are the mapping version.
+        pob.set_config(**MODE_CONFIG["mapping"])
+        best = optimise_supports(pob, group, skill, slots=slots, metric="mapping", log=quiet)[0]
+        stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS)
         guide = StageGuide(
             stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget,
             supports=best.supports,
             notables=[s["node"] for s in tree["steps"] if s["type"] != "Normal"],
             gear=gear, stats=stats, dps=total_dps(stats), code=pob.save_code(),
+            boss_supports=boss.supports if boss else [],
+            boss_dps=boss_dps if boss else 0.0,
         )
         for k, label in (("FireResist", "fire"), ("ColdResist", "cold"), ("LightningResist", "lightning")):
             if stats.get(k, 0) < 75:
                 guide.notes.append(f"{label} resistance {stats.get(k, 0):.0f}%: cap it with jewels or by swapping a gear affix")
-        log(f"{stage.name}: {guide.dps:,.0f} DPS")
+        log(f"{stage.name}: {guide.dps:,.0f} mapping DPS, {guide.boss_dps:,.0f} boss DPS")
         return guide
 
 
@@ -92,15 +109,18 @@ def build_guide(spec: dict, stages: list[str] | None = None, log=print) -> list[
 def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
     out = [f"# {spec.get('name') or spec['skill']}", "",
            f"Budget: **{make_stage('end', spec.get('budget', DEFAULT_BUDGET)).budget}**", ""]
-    out.append("| Stage | Level | Budget | DPS | Life / ES | Effective HP | Res (F/C/L/Chaos) |")
-    out.append("|---|---|---|---|---|---|---|")
+    out.append("| Stage | Level | Budget | Mapping DPS | Boss DPS | Life / ES | Effective HP | Res (F/C/L/Chaos) |")
+    out.append("|---|---|---|---|---|---|---|---|")
     for g in guides:
         s = g.stats
         res = "/".join(f"{s.get(k, 0):.0f}" for k in ("FireResist", "ColdResist", "LightningResist", "ChaosResist"))
-        out.append(f"| {g.name} | {g.level} | {g.budget} | {g.dps:,.0f} | {s.get('Life', 0):,.0f} / "
+        boss = f"{g.boss_dps:,.0f}" if g.boss_dps else "-"
+        out.append(f"| {g.name} | {g.level} | {g.budget} | {g.dps:,.0f} | {boss} | {s.get('Life', 0):,.0f} / "
                    f"{s.get('EnergyShield', 0):,.0f} | {s.get('TotalEHP', 0):,.0f} | {res} |")
     for g in guides:
-        out += ["", f"## {g.name}", f"**Skill:** {spec['skill']} + " + ", ".join(g.supports)]
+        out += ["", f"## {g.name}", f"**Mapping:** {spec['skill']} + " + ", ".join(g.supports)]
+        if g.boss_supports:
+            out.append(f"**Bossing swap:** {spec['skill']} + " + ", ".join(g.boss_supports))
         if g.notables:
             out.append("**Key passives:** " + ", ".join(g.notables))
         out.append("\n**Gear** (affixes in priority order):")

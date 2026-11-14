@@ -121,8 +121,9 @@ class PoB:
     def points(self) -> dict:
         return self.send("points")
 
-    def optimise_tree(self, max_dist: int = 6, def_weight: float = 0.25, points: int | None = None) -> dict:
-        kwargs = {"max_dist": max_dist, "def_weight": def_weight}
+    def optimise_tree(self, max_dist: int = 6, def_weight: float = 0.25, points: int | None = None,
+                      metric: str = "total") -> dict:
+        kwargs = {"max_dist": max_dist, "def_weight": def_weight, "metric": metric}
         if points is not None:
             kwargs["points"] = points
         res = self.send("optimise_tree", **kwargs)

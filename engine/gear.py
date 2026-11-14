@@ -11,13 +11,14 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass, field
 
+from optimize import CLEAR_FIELDS, clear_score, total_dps
 from pob import PoB, PoBError
 
 ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots"}
 JEWELLERY_SLOTS = {"Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 RES_CAP = 75
 SCORE_FIELDS = ["TotalDPS", "TotalDotDPS", "TotalEHP", "Life", "FireResist", "ColdResist", "LightningResist",
-                "ChaosResist"]
+                "ChaosResist", *CLEAR_FIELDS]
 # Affix groups that never matter for a build score.
 SKIP_GROUPS = {"ItemFoundRarityIncrease", "LocalAttributeRequirements", "LightRadius", "LocalLightRadius"}
 
@@ -98,14 +99,15 @@ def _res_deficit(out: dict) -> float:
 
 
 class Scorer:
-    def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006):
+    def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006, mode: str = "bossing"):
         self.def_weight = def_weight
         self.res_weight = res_weight
+        self.dps = clear_score if mode == "mapping" else total_dps
 
     def __call__(self, out: dict, base: dict) -> float:
-        d0 = max(base.get("TotalDPS", 0) + base.get("TotalDotDPS", 0), 1)
+        d0 = max(self.dps(base), 1)
         e0 = max(base.get("TotalEHP", 0), 1)
-        d = out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
+        d = self.dps(out)
         return ((d - d0) / d0
                 + self.def_weight * (out.get("TotalEHP", 0) - e0) / e0
                 + self.res_weight * (_res_deficit(base) - _res_deficit(out)))
@@ -249,6 +251,7 @@ def craft_gear(
     dual_wield: bool = False,
     offhand_type: str | None = None,
     def_weight: float = 0.4,
+    mode: str = "bossing",
     log=print,
 ) -> list[SlotPlan]:
     """Craft every slot for a build already loaded in `pob` (class, level, skills set).
@@ -257,7 +260,7 @@ def craft_gear(
     2. Resistances only where still needed, on items with room.
     3. Fill any room left with the best remaining affixes.
     """
-    score = Scorer(def_weight=def_weight)
+    score = Scorer(def_weight=def_weight, mode=mode)
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
 
     slot_bases: list[tuple[str, list[dict]]] = []
@@ -284,7 +287,7 @@ def craft_gear(
         affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
         works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage)))
 
-    no_res = Scorer(def_weight=def_weight, res_weight=0.0)
+    no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode)
     for w in works:
         reserve = 0 if w.slot.startswith("Weapon") else 2
         _fill(pob, w, stage, no_res, stage.max_affixes - reserve, allow=lambda g: not _is_res_group(g))

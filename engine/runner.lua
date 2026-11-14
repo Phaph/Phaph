@@ -354,7 +354,15 @@ function handlers.optimise_tree(cmd)
 	local steps, evals = {}, 0
 	local t0 = os.clock()
 
-	local function dps(o) return (o.TotalDPS or 0) + (o.TotalDotDPS or 0) + ((o.Minion and o.Minion.CombinedDPS) or 0) end
+	local mapping = cmd.metric == "mapping"
+	local function dps(o)
+		if mapping then
+			-- Same clear score as optimize.py: hits full, DoT half, sqrt(area) x sqrt(projectiles)
+			local d = (o.TotalDPS or 0) + 0.5 * (o.TotalDotDPS or 0) + ((o.Minion and o.Minion.CombinedDPS) or 0)
+			return d * math.sqrt(math.max(o.AreaOfEffectMod or 1, 0.1)) * math.sqrt(math.max(o.ProjectileCount or 1, 1))
+		end
+		return (o.TotalDPS or 0) + (o.TotalDotDPS or 0) + ((o.Minion and o.Minion.CombinedDPS) or 0)
+	end
 	local function ehp(o) return o.TotalEHP or 0 end
 
 	local function bestStep(ascend)

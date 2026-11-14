@@ -173,9 +173,9 @@ def evaluate_spec(spec: dict, budget: str, stage: str = "end") -> Report:
     from guide import build_stage  # local import: guide imports this module's helpers indirectly
 
     g = build_stage({**spec, "budget": budget}, stage)
-    s = g.stats
+    s = dict(g.stats, MappingDPS=g.dps)
     return Report(
-        name=spec.get("name") or spec["skill"], main_skill=spec["skill"], dps=g.dps,
+        name=spec.get("name") or spec["skill"], main_skill=spec["skill"], dps=g.boss_dps or g.dps,
         hit_dps=s.get("TotalDPS", 0), ailment_dps=s.get("TotalDotDPS", 0), ehp=s.get("TotalEHP", 0),
         stats=s, code=g.code, supports=g.supports, notables=g.notables,
     )
@@ -213,7 +213,8 @@ def to_markdown(reports: list[Report]) -> str:
     rows = [
         ("Main skill", [r.main_skill or "-" for r in reports]),
         ("Supports", [", ".join(r.supports) or "-" for r in reports]),
-        ("Total DPS", [fmt(r.dps) for r in reports]),
+        ("Total DPS (single target)", [fmt(r.dps) for r in reports]),
+        ("Mapping DPS (vs normal monsters)", [fmt(r.stats["MappingDPS"]) if "MappingDPS" in r.stats else "-" for r in reports]),
         ("Hit DPS", [fmt(r.hit_dps) for r in reports]),
         ("Ailment / DoT DPS", [fmt(r.ailment_dps) for r in reports]),
         ("Uses per second", [f"{r.stats.get('Speed', 0):.2f}" for r in reports]),

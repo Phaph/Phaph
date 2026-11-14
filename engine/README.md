@@ -22,6 +22,11 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 ## Commands
 `new`, `load_xml`, `save_xml`, `set_class`, `set_level`, `add_item`, `add_skill`, `try_skill`, `remove_skill`, `clear_skills`, `set_main`, `set_config`, `alloc_nodes`, `calc`, `list_gems`, `list_classes`, `list_uniques`.
 
+## Mapping vs bossing
+Gear and passives are built for mapping. Each stage (except leveling) then gets two support setups: mapping, and a bossing swap.
+- Bossing: total DPS vs a pinnacle boss (PoB's default enemy).
+- Mapping: PoB has no clear speed stat, so we score (hit DPS + half of DoT) x sqrt(area) x sqrt(projectiles) vs normal monsters. This is our heuristic, not PoB's, and is worth tuning against real play.
+
 ## DPS numbers
 Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We don't use PoB's CombinedDPS as the headline because it leaves DoT out for some skills (e.g. Rake).
 
@@ -32,6 +37,5 @@ Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We d
 - Support rules: the optimiser rejects any combo that triggers a PoB rule warning (e.g. lineage copy limit). Pass `exclude` for gems used in other skills.
 - Conditional supports (Hit and Run, Glory gems, combo finishers; 12 in total) are skipped by default because PoB counts their bonus but not their downtime.
 - Gear is rares only. Uniques need price data (poe.ninja) to place them in the right budget stage. Budgets in divines are estimates until then.
-- No mapping vs bossing switch yet.
 - Leveling stage is one snapshot at level 55, not a step-by-step leveling route.
 - New 1.0 content (Shadow, new gems, daggers' new skills) needs a PoB update first.

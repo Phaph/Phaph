@@ -13,13 +13,36 @@ METRICS = {
 }
 
 
+METRICS["mapping"] = "mapping"   # clear score: hit-weighted DPS x sqrt(area) x sqrt(projectiles)
+CLEAR_FIELDS = ["AreaOfEffectMod", "ProjectileCount"]
+
+# PoB config for each mode. Bossing is PoB's default (pinnacle boss).
+MODE_CONFIG = {
+    "bossing": {"enemyIsBoss": "Pinnacle"},
+    "mapping": {"enemyIsBoss": "None"},
+}
+
+
 def total_dps(out: dict) -> float:
     """Hit DPS plus damage over time (bleed, ignite, poison, DoT skills)."""
     return out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
 
 
+def clear_score(out: dict) -> float:
+    """Rough map clear value. PoB has no clear speed stat, so: hits count fully, damage over
+    time half (it ramps up), and bigger area / more projectiles reach more of the pack."""
+    dps = out.get("TotalDPS", 0) + 0.5 * out.get("TotalDotDPS", 0)
+    area = max(out.get("AreaOfEffectMod", 1) or 1, 0.1)
+    projectiles = max(out.get("ProjectileCount", 1) or 1, 1)
+    return dps * area ** 0.5 * projectiles ** 0.5
+
+
 def score_of(out: dict, field_name: str) -> float:
-    return total_dps(out) if field_name == "total" else out.get(field_name, 0)
+    if field_name == "total":
+        return total_dps(out)
+    if field_name == "mapping":
+        return clear_score(out)
+    return out.get(field_name, 0)
 
 
 @dataclass
@@ -54,7 +77,8 @@ def optimise_supports(
     Only the `top_k` best supports from screening go into the combination search.
     """
     field_name = METRICS.get(metric, metric)
-    fields = ["TotalDPS", "TotalDotDPS", "CombinedDPS", "Life", "TotalEHP"] + ([] if field_name == "total" else [field_name])
+    fields = ["TotalDPS", "TotalDotDPS", "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
+        + ([] if field_name in ("total", "mapping") else [field_name])
     gems = pob.list_gems("support")
     family = {g["name"]: g.get("family") or g["name"] for g in gems}
     skip = set(exclude or ())
