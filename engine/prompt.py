@@ -59,6 +59,30 @@ NEGATION = r"(?:no|not|non|without|avoid|avoiding|hate)\s+(?:\w+\s+)?"
 CURRENCY = r"(\d+(?:\.\d+)?)\s*(k\b)?\s*(div(?:ine)?s?|d\b|ex(?:alt(?:ed)?s?)?\b|chaos(?: orbs?)?)"
 
 
+# Short names players type for skills; matched as whole words.
+SKILL_ALIASES = {
+    "coc": "Cast on Critical", "cast on crit": "Cast on Critical",
+    "coea": "Cast on Elemental Ailment", "cast on ailment": "Cast on Elemental Ailment",
+    "com": "Cast on Minion Death", "cod": "Cast on Dodge",
+}
+
+
+def skill_pattern(name: str) -> str:
+    """How a skill name may be typed: any word may be plural ("sparks", "comets"), and in a name of two or more
+    words the last word may be shortened to its first four letters or more ("cast on crit" = Cast on Critical)."""
+    words = name.lower().split()
+
+    def plural(w: str) -> str:
+        return re.escape(w) + "(?:s|es)?"
+    parts = [plural(w) for w in words]
+    last = words[-1]
+    if len(words) >= 2 and len(last) > 4:
+        # "crit", "criti", "critical" (and plural): a prefix of the last word, at least four letters long.
+        prefixes = "|".join(re.escape(last[:k]) for k in range(len(last), 3, -1))
+        parts[-1] = f"(?:{prefixes})(?:s|es)?"
+    return r"\s+".join(parts)
+
+
 def _norm(text: str) -> str:
     text = text.lower().replace("’", "'")
     return re.sub(r"[^a-z0-9'.\s-]", " ", text)
@@ -115,11 +139,21 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
     # text so its words aren't read again ("cast" in "Cast on Elemental Ailment" is not "Kind: spell"). The first
     # damage skill becomes the locked main skill; Cast on X gems, buffs, auras and heralds are kept beside it.
     helper_names = set(catalog.get("helper_skills", []))
+    known = set(catalog.get("skills", []))
     named = []
-    for skill in sorted(catalog.get("skills", []), key=len, reverse=True):
-        if (m := _find(re.escape(skill.lower()), t)):
-            named.append((m.start(), skill, m.group(0)))
+
+    def take(skill: str, pattern: str):
+        nonlocal t
+        if (m := _find(pattern, t)):
+            if skill not in {n for _, n, _ in named}:
+                named.append((m.start(), skill, m.group(0)))
             t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
+    # Abbreviations first ("coc"), then full names longest first (plurals and shortened last words allowed).
+    for alias, skill in sorted(SKILL_ALIASES.items(), key=lambda kv: -len(kv[0])):
+        if skill in known:
+            take(skill, re.escape(alias))
+    for skill in sorted(known, key=len, reverse=True):
+        take(skill, skill_pattern(skill))
     named.sort()
     helpers = []
     for _, skill, text in named:

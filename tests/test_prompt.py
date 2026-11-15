@@ -93,3 +93,20 @@ def test_every_named_skill_is_kept():
     assert "spell" not in r["kinds"], "'cast' inside a skill name isn't a kind of skill"
     r = parse_prompt("charged staff monk", cat)["request"]
     assert not r.get("skill") and r["with_skills"] == ["Charged Staff"]
+
+
+def test_skills_match_the_way_players_type_them():
+    cat = {**CATALOG, "skills": CATALOG["skills"] + ["Cast on Critical", "Cast on Elemental Ailment", "Comet"],
+           "helper_skills": ["Cast on Critical", "Cast on Elemental Ailment"]}
+    cases = {
+        "sparks, cast on crit, 1000 div": ("Spark", ["Cast on Critical"]),
+        "spark coc": ("Spark", ["Cast on Critical"]),
+        "comets with cast on critical": ("Comet", ["Cast on Critical"]),
+        "cast on crit comet": ("Comet", ["Cast on Critical"]),
+        "lightning arrows": ("Lightning Arrow", None),
+        "raise zombies": ("Raise Zombie", None),
+    }
+    for text, (skill, helpers) in cases.items():
+        r = parse_prompt(text, cat)["request"]
+        assert r.get("skill") == skill and r.get("with_skills") == helpers, (text, r)
+        assert "spell" not in r["kinds"], text
