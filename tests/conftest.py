@@ -1,5 +1,9 @@
+import os
 import sys
 from pathlib import Path
+
+# Every test crafts in strict mode: any item the game couldn't make fails the test (gear.item_problems).
+os.environ.setdefault("STRICT_ITEMS", "1")
 
 import pytest
 

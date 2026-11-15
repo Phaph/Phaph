@@ -16,7 +16,7 @@ How it fits in a build stage:
 from __future__ import annotations
 
 from gear import (SCORE_FIELDS, Scorer, SlotPlan, Stage, _affix_info, _fill, _tier_choices, _try, _unique_allowed,
-                  _Work, unique_lines)
+                  _Work, _enforce_rules, unique_lines)
 from pob import PoB
 
 JEWEL_BASES = ("Ruby", "Emerald", "Sapphire")
@@ -41,9 +41,13 @@ def _craft_in(pob: PoB, slot: str, stage: Stage, score: Scorer, bases, cache: di
     best, best_score = None, float("-inf")
     for base in bases:
         if base not in cache:
-            cache[base] = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
-        w = _Work(slot, base, f"{stage.name} Jewel", _tier_choices(cache[base], stage), max_total=n, max_kind=2)
+            cache[base] = pob.send("affixes", base=base, max_level=stage.item_level)
+        res = cache[base]
+        w = _Work(slot, base, f"{stage.name} Jewel", _tier_choices(res["affixes"], stage), max_total=n, max_kind=2,
+                  base_tags=frozenset(res.get("item_tags") or ()))
         _fill(pob, w, stage, score, n, allow=lambda g: True)
+        if _enforce_rules(w, stage):
+            pob.send("equip", slot=slot, raw=w.raw(), fields=SCORE_FIELDS)
         sc = score(pob.calc(SCORE_FIELDS), empty)
         if sc > best_score:
             best, best_score = w, sc

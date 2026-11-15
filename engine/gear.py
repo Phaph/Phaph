@@ -209,6 +209,66 @@ class _Work:
         return len(self.picked) < total and self.counts[kind] < self.max_kind
 
 
+# ---------- The game's crafting rules, checked on every finished rare ----------
+STRICT_ITEMS = __import__("os").environ.get("STRICT_ITEMS") == "1"   # tests: a broken rule fails loudly
+
+
+def _allowed_with(affix: dict, tags: set) -> bool:
+    for key, val in zip(affix.get("wk") or (), affix.get("wv") or ()):
+        if key in tags:
+            return val > 0
+    return "wk" not in affix   # no weight data (older callers): nothing to check
+
+
+def item_problems(w: "_Work", item_level: int = 100) -> list[str]:
+    """Everything about a crafted rare the game wouldn't allow. Empty means it can really exist."""
+    if w.unique_raw:
+        return []
+    out = []
+    kinds = {"Prefix": 0, "Suffix": 0}
+    for _, a, _ in w.meta:
+        kinds[a["type"]] = kinds.get(a["type"], 0) + 1
+    for kind, n in kinds.items():
+        if n > w.max_kind:
+            out.append(f"{n} {kind.lower()}es (most is {w.max_kind})")
+    total = w.max_total if w.max_total is not None else 2 * w.max_kind
+    if len(w.meta) > total:
+        out.append(f"{len(w.meta)} affixes (most is {total})")
+    groups = [grp for grp, _, _ in w.meta]
+    for grp in {x for x in groups if groups.count(x) > 1}:
+        out.append(f"two mods from group {grp}")
+    stats = [tuple(a.get("stats") or ()) for _, a, _ in w.meta]
+    for st in {x for x in stats if x and stats.count(x) > 1}:
+        out.append(f"two mods with the same stat {st}")
+    for i, (grp, a, _) in enumerate(w.meta):
+        if (a.get("level") or 0) > item_level:
+            out.append(f"{grp} needs item level {a['level']}")
+        if w.base_tags is not None:
+            # Tags the base has plus every OTHER mod adds: a mod that adds "no_cold_spell_mods" rules out cold
+            # spell levels whichever was added first.
+            tags = set(w.base_tags)
+            for j, (_, b, _) in enumerate(w.meta):
+                if j != i:
+                    tags |= set(b.get("adds") or ())
+            if not _allowed_with(a, tags):
+                out.append(f"{grp} can't roll on this item with its other mods")
+    return out
+
+
+def _enforce_rules(w: "_Work", stage: "Stage", log=lambda *a: None) -> bool:
+    """Make sure the finished item could exist: in tests a broken rule is an error; live, offending affixes are
+    taken off (lowest priority first) so nobody is ever shown an impossible item."""
+    probs = item_problems(w, stage.item_level)
+    if not probs:
+        return False
+    if STRICT_ITEMS:
+        raise AssertionError(f"{w.slot} {w.base}: {probs} :: {w.picked}")
+    log(f"  {w.slot}: removed affixes that break the game's rules: {probs}")
+    while item_problems(w, stage.item_level) and w.meta:
+        _remove(w, len(w.meta) - 1)
+    return True
+
+
 def _is_res_group(group: str) -> bool:
     return "Resist" in group and "Penetration" not in group and "Minion" not in group and "Allies" not in group
 
@@ -575,6 +635,8 @@ def craft_gear(
 
     plans = []
     for w in works:
+        if _enforce_rules(w, stage, log):
+            pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
         if w.unique:
             log(f"  {w.slot:<12} UNIQUE {w.unique} ({w.price_note})")
             mods, variants = unique_lines(pob, w.unique_raw)
@@ -604,5 +666,7 @@ def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_sub
     w = _Work(slot, base, f"{stage.name} {slot}", _tier_choices(res["affixes"], stage), implicits=tuple(imp),
               base_tags=frozenset(res.get("item_tags") or ()))
     _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
+    if _enforce_rules(w, stage, log):
+        pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
     log(f"  {slot:<12} {base:<28} " + "; ".join(w.picked))
     return SlotPlan(slot, base, w.picked, w.raw(), affix_info=_affix_info(w), implicits=list(w.implicits))

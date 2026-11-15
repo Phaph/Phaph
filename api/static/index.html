@@ -255,6 +255,15 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
 /* ---------- The workbench: what the optimiser is doing, live. Motion only for real events. ---------- */
 .work-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 6px 16px; }
 .work-head .clock { font: 15px var(--mono); color: var(--muted); font-variant-numeric: tabular-nums; }
+.anvilbar { display: grid; gap: 6px; margin: 2px 0 4px; }
+.anvilbar .prog { height: 3px; background: #1d1915; border-radius: 2px; overflow: hidden; }
+.anvilbar .prog i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, #8a3a12, #e8733a, #ffce6e);
+  box-shadow: 0 0 8px rgba(232,115,58,.6); transition: width .8s var(--ease); }
+.anvilgame { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; width: 100%; padding: 0;
+  background: none; border: 0; cursor: pointer; color: var(--muted); font: 12px var(--mono); text-align: right; }
+.anvilgame canvas { width: 100%; height: 22px; display: block; }
+.anvilgame:focus-visible { outline: 1px dashed var(--brass); outline-offset: 3px; }
+.anvilgame .ag-score { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .board { display: grid; gap: 10px; }
 .cand { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 3px 12px; align-items: baseline; animation: rise 500ms var(--ease) both; }
 .cand .name { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 18px; }
@@ -919,11 +928,42 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   const work = {
     el: () => $("work"),
-    clock(text) { const c = this.el().querySelector(".clock"); if (c) c.textContent = text; },
+    clock(text) { const c = this.el().querySelector(".clock"); if (c) c.textContent = text; this.tickProgress(); },
     hide() {
+      anvilGame?.stop(); anvilGame = null;
       workSigil?.stop(); workSigil = null; brain?.tv?.stop(); brain = null; fire?.stop(); fire = null;
       this.el().hidden = true; this.el().innerHTML = "";
     },
+    // A thin progress bar under the timer, then the anvil minigame. Progress follows real work (candidates scored,
+    // stage steps done) with elapsed time as a floor, and never goes backwards.
+    mountAnvil(phase) {
+      const head = this.el().querySelector(".work-head"); if (!head) return;
+      this.phase = phase; this.t0 = performance.now(); this.prog = 0;
+      this.expected = phase === "search" ? ($("deep")?.checked ? 780 : 240) : 330;
+      const bar = document.createElement("div");
+      bar.className = "anvilbar";
+      bar.innerHTML = `<div class="prog" role="progressbar" aria-label="Estimated progress" aria-valuemin="0" aria-valuemax="100"><i></i></div>
+        <button type="button" class="anvilgame" aria-label="Anvil minigame: strike when the glow is in the gold zone">
+          <canvas aria-hidden="true"></canvas><span class="ag-score">Strike while you wait</span></button>`;
+      head.after(bar);
+      anvilGame?.stop(); anvilGame = anvilMini(bar.querySelector(".anvilgame"));
+      this.tickProgress();
+    },
+    tickProgress() {
+      const bar = this.el().querySelector(".anvilbar .prog"); if (!bar || !this.t0) return;
+      const el = (performance.now() - this.t0) / 1000;
+      let ev = 0;
+      if (this.phase === "search") ev = this.total ? Math.min(1, this.scored / this.total) : 0;
+      else {
+        const pips = this.el().querySelectorAll(".lane .pips i"), on = this.el().querySelectorAll(".lane .pips i.on");
+        ev = pips.length ? on.length / pips.length : 0;
+      }
+      const byTime = Math.min(0.9, el / this.expected * 0.9);
+      this.prog = Math.max(this.prog || 0, Math.min(0.98, Math.max(byTime * 0.85, ev * 0.97)));
+      bar.firstElementChild.style.width = `${(this.prog * 100).toFixed(1)}%`;
+      bar.setAttribute("aria-valuenow", Math.round(this.prog * 100));
+    },
+
     startFire() {
       const c = document.createElement("canvas"); c.className = "fire"; c.setAttribute("aria-hidden", "true");
       this.el().appendChild(c); fire?.stop(); fire = forgeFire(c); fire.set(0.4);
@@ -938,6 +978,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
           <h2>Grinding through every skill that fits</h2></div><span class="clock"></span></div>
         <p class="muted" id="roundLabel">Lighting the forge…</p>
         <div class="board" id="board"></div>`;
+      this.mountAnvil("search");
       this.startFire();
     },
     relaxed(e) {
@@ -1003,6 +1044,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
           <span class="lstep">Waiting for a free anvil…</span>
           <div class="notables"></div></div>`).join("")}</div>`;
       workSigil?.stop(); workSigil = opt.cls ? sigil(w.querySelector(".sigil-cv"), opt.cls) : null;
+      this.mountAnvil("guide");
       this.startFire();
       // The brain: the live tree search. One canvas, following one stage at a time (endgame by default).
       if (opt.brain !== false) {
@@ -1508,6 +1550,74 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
         ${art(ICONS.bases?.[name], g.slot)}</div>${(g.implicits || []).length
           ? `<ul class="impl">${g.implicits.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}<ol>${lines}</ol></div>`;
     }).join("");
+  }
+
+  // ---------- Anvil minigame ----------
+  // A glow swings along a short track; strike (click, tap, Space or Enter) while it's over the gold zone. Hits
+  // spark and make the forge fire flare; streaks speed it up. Best streak is remembered on this device.
+  let anvilGame = null;
+  function anvilMini(btn) {
+    const cv = btn.querySelector("canvas"), cx = cv.getContext("2d"), label = btn.querySelector(".ag-score");
+    let best = 0;
+    try { best = +localStorage.getItem("whetstone.anvil.best") || 0; } catch {}
+    let t = 0, pos = 0, dir = 1, speed = 0.55, zone = 0.5, width = 0.16, streak = 0, strikes = 0, flash = 0, flashGood = false,
+      raf = 0, last = 0, alive = true, sparks = [];
+    const W = () => cv.clientWidth, H = () => cv.clientHeight;
+    function size() { const d = Math.min(devicePixelRatio || 1, 2); cv.width = W() * d; cv.height = H() * d; cx.setTransform(d, 0, 0, d, 0, 0); }
+    const ro = new ResizeObserver(size); ro.observe(cv); size();
+    function say() {
+      label.textContent = strikes ? `${streak ? `Streak ${streak}` : "Clang"} · best ${best}` : "Strike while you wait";
+    }
+    function strike() {
+      strikes++;
+      const hit = Math.abs(pos - zone) <= width / 2;
+      flash = 1; flashGood = hit;
+      if (hit) {
+        streak++; speed = Math.min(1.9, 0.55 + streak * 0.08); width = Math.max(0.07, 0.16 - streak * 0.006);
+        zone = 0.2 + Math.random() * 0.6;
+        if (streak > best) { best = streak; try { localStorage.setItem("whetstone.anvil.best", String(best)); } catch {} }
+        fire?.bump(streak % 5 === 0 ? 0.45 : 0.22);
+        const x = pos * W();
+        for (let i = 0; i < 14 + Math.min(streak, 20); i++) {
+          const a = -Math.PI * Math.random(), v = 0.6 + Math.random() * 2.2;
+          sparks.push({ x, y: H() * 0.55, vx: Math.cos(a) * v, vy: Math.sin(a) * v, life: 1 });
+        }
+      } else { streak = 0; speed = 0.55; width = 0.16; }
+      say();
+    }
+    btn.addEventListener("click", strike);
+    function frame(now) {
+      if (!alive) return;
+      const dt = Math.min(0.05, (now - (last || now)) / 1000); last = now; t += dt;
+      pos += dir * speed * dt; if (pos > 1) { pos = 1; dir = -1; } if (pos < 0) { pos = 0; dir = 1; }
+      const w = W(), h = H(), mid = h * 0.55;
+      cx.clearRect(0, 0, w, h);
+      // The track: a cooling bar of iron, the gold zone glowing on it.
+      cx.fillStyle = "#1a1612"; cx.fillRect(0, mid - 2, w, 4);
+      const zx = (zone - width / 2) * w, zw = width * w;
+      const g = cx.createLinearGradient(zx, 0, zx + zw, 0);
+      g.addColorStop(0, "rgba(232,170,80,0)"); g.addColorStop(0.5, "rgba(255,206,110,.85)"); g.addColorStop(1, "rgba(232,170,80,0)");
+      cx.fillStyle = g; cx.fillRect(zx, mid - 4, zw, 8);
+      // The swinging glow.
+      const x = pos * w, r = 5;
+      const glow = cx.createRadialGradient(x, mid, 0, x, mid, r * 3);
+      glow.addColorStop(0, "rgba(255,240,200,.95)"); glow.addColorStop(0.4, "rgba(255,140,40,.6)"); glow.addColorStop(1, "rgba(255,90,0,0)");
+      cx.fillStyle = glow; cx.beginPath(); cx.arc(x, mid, r * 3, 0, 6.283); cx.fill();
+      if (flash > 0) {
+        cx.fillStyle = flashGood ? `rgba(255,214,120,${flash * 0.35})` : `rgba(120,140,160,${flash * 0.25})`;
+        cx.fillRect(0, 0, w, h); flash = Math.max(0, flash - dt * 3);
+      }
+      sparks = sparks.filter(sp => (sp.life -= dt * 1.6) > 0);
+      for (const sp of sparks) {
+        sp.x += sp.vx; sp.y += sp.vy; sp.vy += 0.08;
+        cx.fillStyle = sp.life > 0.5 ? "#ffe0a0" : "#ff8a30"; cx.globalAlpha = sp.life; cx.fillRect(sp.x, sp.y, 2, 2); cx.globalAlpha = 1;
+      }
+      raf = requestAnimationFrame(frame);
+    }
+    say();
+    if (!REDUCE) raf = requestAnimationFrame(frame);
+    else { label.textContent = "Strike while you wait (animations off)"; }
+    return { stop() { alive = false; ro.disconnect(); cancelAnimationFrame(raf); } };
   }
 
   // ---------- Paper doll ----------

@@ -238,7 +238,8 @@ function handlers.affixes(cmd)
 					if not key:find("^genesis_") then table.insert(wk, key); table.insert(wv, mod.weightVal[i] or 0) end
 				end
 				table.insert(list, { id = id, type = mod.type, group = mod.group, level = mod.level or 0,
-					lines = lines, tags = mod.modTags, weight = weight, wk = wk, wv = wv, adds = mod.tags or {} })
+					lines = lines, tags = mod.modTags, weight = weight, wk = wk, wv = wv, adds = mod.tags or {},
+					stats = mod.statOrder or {} })
 			end
 		end
 	end
