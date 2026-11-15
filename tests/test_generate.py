@@ -253,6 +253,9 @@ def test_a_named_buff_is_kept_as_a_helper(monkeypatch):
     monkeypatch.setattr(g, "_generate_once", fake_once)
     out = g.generate({"skill": "Charged Staff", "budget": "high"}, log=lambda *a: None)
     assert seen.get("with_skill") == "Charged Staff" and not seen.get("skill")
-    assert seen.get("weapons") == ["Staff"]
+    assert seen.get("weapons") == ["Staff"] and seen.get("_attack_only")
+    # ...so a staff spell can't be paired with it, only staff attacks.
+    names = [x["name"] for x in g.main_skills(cat + [{"name": "Hexblast", "types": ["Spell", "Damage"], "weapons": []}], seen)]
+    assert names == ["Tempest Flurry"]
     assert out["relaxed"] and "kept in the build" in out["relaxed"][0]
     assert out["searched"]["with_skill"] == "Charged Staff"

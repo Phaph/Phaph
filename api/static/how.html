@@ -200,17 +200,18 @@ footer a { color: var(--brass); }
   <footer>
     <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">Path of Building Community</a> (MIT licence), run by this site. Unique prices from <a href="https://poe.ninja/poe2/economy">poe.ninja</a>.</p>
     <p>Fan-made and free. This product isn't affiliated with or endorsed by Grinding Gear Games in any way. Path of Exile is a trademark of Grinding Gear Games.</p>
-    <p class="bugfree">This site is free of <span class="bugword" data-lavabug role="button" tabindex="0" aria-label="bugs (an easter egg: releases a lava bug)">bugs</span>.</p>
+    <p class="bugfree">This site is free of <span class="bugword" data-lavabug role="button" tabindex="0" aria-label="bugs (an easter egg: each click releases another lava bug, Esc sends them away)">bugs</span>.</p>
   </footer>
 </div>
 <script>
-// Easter egg: the lava bug (lavabug.js), loaded only when someone clicks "bugs".
+// Easter egg: the lava bugs (lavabug.js), loaded only when someone clicks "bugs".
 (() => {
   const w = document.querySelector("[data-lavabug]"); if (!w) return;
   let loading = null;
   const go = () => {
     loading = loading || new Promise((ok, no) => { const s = document.createElement("script"); s.src = "/lavabug.js"; s.onload = ok; s.onerror = no; document.head.appendChild(s); });
-    loading.then(() => w.classList.toggle("on", window.LavaBug.toggle())).catch(() => { loading = null; });
+    // Every click lets one more bug out (up to 20). Only Esc, or reloading the page, sends them away.
+    loading.then(() => { window.LavaBug.add(); w.classList.add("on"); }).catch(() => { loading = null; });
   };
   w.addEventListener("click", go);
   w.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });

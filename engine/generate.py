@@ -137,6 +137,8 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
             continue
         if req.get("skill") and s["name"] != req["skill"]:
             continue
+        if req.get("_attack_only") and "Attack" not in types:
+            continue   # a weapon buff (e.g. Charged Staff) only helps attacks made with that weapon
         if not weapon_options(s, req):
             continue
         seen.add(s["name"])
@@ -298,8 +300,11 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
             locked = next((s for s in p.send("skill_catalog")["skills"] if s["name"] == req["skill"]), None)
         if locked and set(locked["types"]) & NOT_MAIN:
             req = {**req, "skill": None, "with_skill": locked["name"]}
-            if locked.get("weapons") and not req.get("weapons"):
-                req["weapons"] = list(locked["weapons"])
+            if locked.get("weapons"):
+                # It works through a weapon (Charged Staff charges a quarterstaff): pair it with attacks that use one.
+                if not req.get("weapons"):
+                    req["weapons"] = list(locked["weapons"])
+                req["_attack_only"] = True
             notes.append(f"{locked['name']} boosts other skills rather than dealing damage itself, so it's kept in "
                          f"the build and the best skill to use with it was picked.")
     tried = dict(req)
