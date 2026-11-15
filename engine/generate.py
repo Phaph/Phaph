@@ -37,7 +37,7 @@ from dataclasses import asdict, dataclass, field
 
 from gear import Scorer, Stage, craft_gear, make_stage
 from jewels import proxy_jewel
-from optimize import (MODE_CONFIG, ailment_dps, broken_numbers, clear_score, hit_dps, metric_for, optimise_supports,
+from optimize import (MODE_CONFIG, ailment_dps, broken_numbers, ailment_score, clear_score, damage_types, hit_dps, metric_for, seed_ailment, optimise_supports,
                       score_of, total_dps)
 from pob import PoB, PoBError
 
@@ -128,7 +128,7 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
     ailment = (req.get("ailment") or "").lower() or None
     seen, out = set(), []
     for s in catalog:
-        types = set(s["types"])
+        types = damage_types(s["types"])
         if s["name"] in seen or types & NOT_MAIN:
             continue
         is_minion = "Minion" in types
@@ -183,8 +183,7 @@ def _score(out: dict, req: dict) -> float:
 
 def _score_plain(out: dict, req: dict) -> float:
     if req.get("ailment") in AILMENT_FIELD:
-        # An ailment build lives on its ailment: count it fully, hits a quarter.
-        return ailment_dps(out, req["ailment"]) + 0.25 * hit_dps(out)
+        return ailment_score(out, req["ailment"])   # the ailment counts fully, hits a quarter, share enforced
     mode = req.get("mode", "balanced")
     if mode == "mapping":
         return clear_score(out)
@@ -209,6 +208,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         p.set_class(c.cls, c.ascendancy)
         p.set_level(stage.level)
         group = p.add_skill([c.skill], full_dps=c.is_minion)["group"]
+        seed_ailment(p, group, c.skill, req.get("ailment"))
         add_helpers(p, req, c.skill)
         mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
         p.set_config(**MODE_CONFIG[mode])

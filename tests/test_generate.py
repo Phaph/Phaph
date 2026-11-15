@@ -111,7 +111,8 @@ def test_theme_metric_drives_every_optimiser():
     out = {"BleedDPS": 1000, "TotalDPS": 4000, "AreaOfEffectMod": 4}
     assert metric_for("mapping", "bleed") == "bleed+mapping"
     assert metric_for("bossing", None) == "total"
-    assert score_of(out, "bleed") == 1000 + 0.25 * 4000
+    # bleed fully, hits a quarter; this build is 20% bleed, half the 40% target, so it scores half
+    assert score_of(out, "bleed") == (1000 + 0.25 * 4000) * 0.5
     assert score_of(out, "bleed+mapping") == score_of(out, "bleed") * 2
     hits_only = {"BleedDPS": 0, "TotalDPS": 6000}
     assert score_of(hits_only, "bleed") < score_of(out, "bleed"), "bleed beats more raw hit damage"

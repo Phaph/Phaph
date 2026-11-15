@@ -1,6 +1,8 @@
 """Support gem optimiser: beam search over support gems for one skill, scored by PoB."""
 from __future__ import annotations
 
+import re
+
 import time
 from dataclasses import dataclass, field
 
@@ -89,6 +91,18 @@ def hit_dps(out: dict) -> float:
     return (out.get("TotalDPS", 0) or 0) + (out.get("MinionDPS", 0) or 0)
 
 
+AILMENT_TARGET = 0.4   # an ailment build gets at least this share of its damage from the ailment (themes.py)
+
+
+def ailment_score(out: dict, ailment: str) -> float:
+    """An ailment build's score: the ailment counts fully, hits a quarter, and below AILMENT_TARGET of the damage the
+    score falls in proportion. Without that last part a big enough hit build wins with no ailment at all (a crossbow
+    "bleed" build that buys elemental damage), and the tree, gear and supports all follow the score away from it."""
+    a, h = max(ailment_dps(out, ailment), 0), max(hit_dps(out), 0)
+    share = a / (a + h) if a + h > 0 else 0.0
+    return (a + 0.25 * h) * min(1.0, share / AILMENT_TARGET)
+
+
 def area_factor(out: dict) -> float:
     return max(out.get("AreaOfEffectMod", 1) or 1, 0.1) ** 0.5 * max(out.get("ProjectileCount", 1) or 1, 1) ** 0.5
 
@@ -104,6 +118,42 @@ def metric_for(mode: str, ailment: str | None = None, goals=None) -> str:
     else:
         m = "mapping" if mapping else "total"
     return m + "".join(f"+{g}" for g in (goals or ()) if g in FOCUS)
+
+
+ROMAN = {"I": 1, "II": 2, "III": 3, "IV": 4, "V": 5}
+ELEMENT_TYPES = {"Fire", "Cold", "Lightning", "Chaos"}
+
+
+def damage_types(types) -> set[str]:
+    """A skill's damage types. Attacks with no element tag hit with the weapon's physical damage, so they count as
+    physical (crossbow ammo, most bow and melee attacks carry no "Physical" tag in PoB)."""
+    types = set(types)
+    if "Attack" in types and not types & ELEMENT_TYPES:
+        types.add("Physical")
+    return types
+
+
+def seed_ailment(pob: PoB, group: int, active: str, ailment: str | None, keep_main: bool = False) -> str | None:
+    """Put the strongest compatible ailment support (e.g. Bleed IV) on the skill before gear and passives are chosen.
+    Without it the skill has no ailment chance, its ailment damage is zero, and gear and tree would chase hit damage
+    of any element (a crossbow bleed build would buy lightning). The support search later re-picks freely."""
+    if ailment not in AILMENT_FIELD:
+        return None
+    compatible = pob.send("compatible_supports", group=group).get("supports") or []
+    pattern = re.compile(rf"{ailment.capitalize()} (I|II|III|IV|V)")
+    # The tier that gives the most ailment chance (Bleed IV, for one, applies no bleed by itself in PoB); ties go to
+    # the higher tier.
+    chance_field = ailment.capitalize() + "Chance"
+    tried = []
+    for n in (n for n in compatible if pattern.fullmatch(n)):
+        out = pob.try_skill(group, [active, n], [chance_field], keep_main=keep_main)["output"]
+        tried.append(((out.get(chance_field) or 0), ROMAN[n.split()[-1]], n))
+    best = max(tried, default=None)
+    if best and best[0] > 0:
+        pob.try_skill(group, [active, best[2]], ["TotalDPS"], keep_main=keep_main)
+        return best[2]
+    pob.try_skill(group, [active], ["TotalDPS"], keep_main=keep_main)
+    return None
 
 
 def split_focus(field_name: str) -> tuple[str, list[str]]:
@@ -139,8 +189,7 @@ def _score_of(out: dict, field_name: str) -> float:
     parts = field_name.split("+")
     ailment = next((p for p in parts if p in AILMENT_FIELD), None)
     if ailment:
-        # An ailment build lives on its ailment: it counts fully, hits a quarter.
-        base = ailment_dps(out, ailment) + 0.25 * hit_dps(out)
+        base = ailment_score(out, ailment)
         return base * area_factor(out) if "mapping" in parts else base
     return out.get(field_name, 0)
 

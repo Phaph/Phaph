@@ -28,6 +28,7 @@ from jewels import craft_jewels, proxy_jewel
 from triggers import best_cast_on_crit, cast_on_crit, find_groups
 from generate import add_helpers, best_helper
 from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports,
+                      seed_ailment,
                       score_of, total_dps)
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
 from pob import PoB
@@ -148,6 +149,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_level(stage.level)
         skill = spec["skill"]
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
+        seed_ailment(pob, group, skill, spec.get("ailment"))   # so gear and tree chase the ailment from the start
         helpers = list(spec.get("with_skills") or [])   # skills the player asked for (Charged Staff, Cast on X)
         picked_helpers = []
         metas = {s["name"] for s in catalog if "Meta" in s["types"]} & set(helpers)

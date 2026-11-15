@@ -922,9 +922,13 @@ function handlers.optimise_tree(cmd)
 	end
 	dpsRaw = function(o)
 		if ailmentField then
-			-- Same as optimize.score_of: the ailment counts fully, hits a quarter, minions included.
+			-- Same as optimize.ailment_score: the ailment counts fully, hits a quarter, minions included, and below
+			-- 40% of the damage the score falls in proportion (so the tree never trades the ailment for hits).
 			local m = type(o.Minion) == "table" and o.Minion or {}
-			local d = (o[ailmentField] or 0) + (m[ailmentField] or 0) + 0.25 * ((o.TotalDPS or 0) + (m.TotalDPS or 0))
+			local a = math.max((o[ailmentField] or 0) + (m[ailmentField] or 0), 0)
+			local h = math.max((o.TotalDPS or 0) + (m.TotalDPS or 0), 0)
+			local share = (a + h) > 0 and a / (a + h) or 0
+			local d = (a + 0.25 * h) * math.min(1, share / 0.4)
 			return mapping and d * areaFactor(o) or d
 		end
 		if o.FullDPS and o.FullDPS > 0 then
