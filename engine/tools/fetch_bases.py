@@ -73,8 +73,13 @@ def main():
         nonlocal checked
         if name in state["bases"]:
             return state["bases"][name] > 0
-        res = request(f"{TRADE}/search/poe2/{urllib.parse.quote(league)}",
-                      {"query": {"type": name, "status": {"option": "any"}}})
+        try:
+            res = request(f"{TRADE}/search/poe2/{urllib.parse.quote(league)}",
+                          {"query": {"type": name, "status": {"option": "any"}}})
+        except urllib.error.HTTPError as e:
+            if e.code != 400:
+                raise
+            res = {}   # the trade site doesn't know this base (not in the game yet): it can't be bought
         total = res.get("total") or 0
         state["bases"][name] = total
         if total and name not in icons["bases"] and res.get("result"):
