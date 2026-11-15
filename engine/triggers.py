@@ -102,3 +102,73 @@ def cast_on_crit(pob: PoB, attack_group: int, coc_group: int, mode: str = "bossi
         "casts_per_sec": casts_per_sec, "spells": per_spell,
         "trigger_dps": trigger_dps, "total_dps": attack_dps + trigger_dps,
     }
+
+
+# ---------- Picking a Cast on Critical setup for a build ----------
+NOT_TRIGGERABLE = {"Buff", "Aura", "Herald", "Meta", "Triggered", "InbuiltTrigger", "Minion", "Channel", "OngoingSkill",
+                   "Persistent", "AppliesCurse", "Shapeshift", "Totemable", "Trappable", "Mineable"}
+
+
+def spell_candidates(catalog: list[dict]) -> list[str]:
+    """Spells that can sit in Cast on Critical: damaging spells that need no particular weapon."""
+    out = set()
+    for s in catalog:
+        types = set(s["types"])
+        if "Spell" in types and not types & NOT_TRIGGERABLE and not s.get("weapons") and not s.get("from_item"):
+            out.add(s["name"])
+    return sorted(out)
+
+
+def best_cast_on_crit(pob: PoB, attack_group: int, catalog: list[dict], mode: str = "mapping", slots: int = 5,
+                      gem_level: int = 20, min_gain: float = 0.03, shortlist: int = 3, log=lambda *a: None) -> dict | None:
+    """Try Cast on Critical with the spell that does the most damage per point of energy, with its best supports.
+
+    Keeps the setup in the build (a new skill group) and returns it with its estimate, or removes it and returns
+    None when the attack can't crit or the setup adds less than `min_gain` of the attack's damage."""
+    from optimize import optimise_supports
+
+    pob.send("set_main", group=attack_group)
+    a = pob.calc(["CritChance", "HitChance"])
+    if not a.get("CritChance") or not a.get("HitChance"):
+        return None
+    spells = spell_candidates(catalog)
+    if not spells:
+        return None
+    info = pob.send("gem_info", names=spells)["gems"]
+    spells = [s for s in spells if s in info and info[s]["cast_time"] > 0]
+    group = pob.add_skill([spells[0]], main=False)["group"]
+    try:
+        # Damage per energy: per-cast damage over base cast time (energy to fire is 100 per second of it).
+        ranked = []
+        for s in spells:
+            res = pob.try_skill(group, [s], ["TotalDPS", "Speed"])
+            o = res["output"]
+            per_cast = (o.get("TotalDPS") or 0) / o["Speed"] if o.get("Speed") else 0
+            if per_cast > 0:
+                ranked.append((per_cast / info[s]["cast_time"], s))
+        ranked.sort(reverse=True)
+        best = None
+        for _, s in ranked[:shortlist]:
+            res = optimise_supports(pob, group, s, slots=slots, metric="per_cast", log=lambda *a: None)
+            if not res:
+                continue
+            value = res[0].score / info[s]["cast_time"]
+            if not best or value > best[0]:
+                best = (value, s, res[0].supports)
+        if not best:
+            raise LookupError
+        _, spell, supports = best
+        # The spell first, so PoB's "main skill" of the group is the spell; the meta gem triggers it from anywhere.
+        pob.try_skill(group, [spell, *supports, "Cast on Critical"], ["TotalDPS"], keep_main=True)
+        pob.send("set_main", group=attack_group)
+        est = cast_on_crit(pob, attack_group, group, mode=mode, gem_level=gem_level)
+        gain = est["trigger_dps"] / max(est["attack"]["dps"], 1)
+        log(f"Cast on Critical + {spell}: {est['trigger_dps']:,.0f} DPS ({gain:+.1%}), {est['casts_per_sec']:.2f} casts/s")
+        if gain < min_gain:
+            raise LookupError
+        return {"gem": "Cast on Critical", "spell": spell, "supports": supports, "group": group, "gain": gain,
+                mode: est}
+    except LookupError:
+        pob.send("remove_skill", group=group)
+        pob.send("set_main", group=attack_group)
+        return None

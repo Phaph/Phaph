@@ -68,3 +68,13 @@ def test_cooldown_caps_casts_and_mapping_uses_normal_monsters():
 def test_unverified_rules_are_flagged_and_groups_are_found():
     assert verified() is False   # until an in-game check flips the flags
     assert find_groups(FakePoB()) == (2, [1])
+
+
+def test_spell_candidates_are_plain_damaging_spells():
+    from triggers import spell_candidates
+    cat = [{"name": "Comet", "types": ["Spell", "Area"], "weapons": []},
+           {"name": "Herald of Ice", "types": ["Spell", "Herald", "Persistent"], "weapons": []},
+           {"name": "Raise Zombie", "types": ["Spell", "Minion"], "weapons": []},
+           {"name": "Wand Spell", "types": ["Spell"], "weapons": ["Wand"]},
+           {"name": "Tempest Flurry", "types": ["Attack"], "weapons": ["Staff"]}]
+    assert spell_candidates(cat) == ["Comet"]

@@ -189,3 +189,17 @@ def test_jewels_fill_the_sockets_the_tree_takes(pob, monk):
     plans = craft_jewels(pob, stage, score, log=lambda *a: None)
     assert [p.slot for p in plans] == [s["slot"] for s in taken]
     assert all(p.unique or 1 <= len(p.affixes) <= 4 for p in plans)
+
+
+def test_cast_on_crit_setup_is_kept_or_cleanly_removed(pob, monk):
+    from triggers import best_cast_on_crit, find_groups
+    catalog = pob.send("skill_catalog")["skills"]
+    before = len(pob.send("groups")["groups"])
+    t = best_cast_on_crit(pob, monk, catalog, min_gain=10.0)       # an impossible bar: must clean up
+    assert t is None and len(pob.send("groups")["groups"]) == before
+    t = best_cast_on_crit(pob, monk, catalog, min_gain=-1.0)       # any setup: must be in the build, spell first
+    if t:   # None only if this test attack can't crit
+        coc, _ = find_groups(pob)
+        gems = next(g["gems"] for g in pob.send("groups")["groups"] if g["group"] == coc)
+        assert gems[0] == t["spell"] and gems[-1] == "Cast on Critical"
+        assert t["mapping"]["estimate"] is True

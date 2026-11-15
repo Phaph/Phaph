@@ -25,7 +25,9 @@ from dataclasses import asdict, dataclass, field
 
 from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
 from jewels import craft_jewels, proxy_jewel
-from optimize import CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports, total_dps
+from triggers import best_cast_on_crit, cast_on_crit, find_groups
+from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports,
+                      score_of, total_dps)
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
 from pob import PoB
 from rating import rate
@@ -88,6 +90,9 @@ class StageGuide:
     clear: float = 0.0                                      # mapping clear score
     rating: dict | None = None                              # 1-10, endgame stage only
     utility: list[dict] = field(default_factory=list)       # curses, marks, banners, warcries kept
+    # Cast on Critical setup when it pays: {"gem", "spell", "supports", "mapping": estimate, "bossing": estimate}.
+    # Whetstone's estimate (engine/triggers.py), not Path of Building's; not part of dps / boss_dps.
+    trigger: dict | None = None
     # Supports for every other skill in the build: [{"skill", "role": spirit/utility/movement, "supports"}]
     setups: list[dict] = field(default_factory=list)
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
@@ -193,7 +198,25 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.auto_config("mapping")
         first = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
         report("supports", ", ".join(first[0].supports) if first else "")
+        # Cast on Critical reserves 100 spirit, so it competes with spirit buffs: fill spirit both ways, keep the better.
+        trigger = None
+        before_spirit = pob.save_xml()
         spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
+        if not minion_build:
+            plain_score, plain_xml = score_of(pob.calc(STAT_FIELDS + CLEAR_FIELDS), map_metric), pob.save_xml()
+            pob.load_xml(before_spirit)
+            trigger = best_cast_on_crit(pob, group, catalog, mode="mapping", slots=slots, log=quiet)
+            if trigger:
+                spirit_t = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
+                est = cast_on_crit(pob, group, find_groups(pob)[0], mode="mapping")
+                with_t = score_of(pob.calc(STAT_FIELDS + CLEAR_FIELDS), map_metric) * (1 + est["trigger_dps"] / max(est["attack"]["dps"], 1))
+                if with_t > plain_score:
+                    spirit = spirit_t
+                    report("spirit", f"Cast on Critical + {trigger['spell']} (estimate)")
+                else:
+                    trigger = None
+            if not trigger:
+                pob.load_xml(plain_xml)
         if spirit:
             report("spirit", ", ".join(spirit))
         # Curses, marks, banners, warcries: kept when they raise the main skill's damage. One
@@ -229,6 +252,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 pob.auto_config("bossing")
                 boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
                 boss_dps = total_dps(pob.calc(STAT_FIELDS))
+            if trigger:
+                trigger["bossing"] = cast_on_crit(pob, group, find_groups(pob)[0], mode="bossing")
 
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
@@ -236,6 +261,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         mobility = mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type"))
         best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
+        if trigger:
+            trigger["mapping"] = cast_on_crit(pob, group, find_groups(pob)[0], mode="mapping")
+            trigger.pop("group", None)
         alloc = pob.send("allocated")
         used = set(best.supports) | set(boss.supports if boss else [])
         setups = kit_out(pob, group, spirit, utility, mobility[:1], map_metric, slots, used, log=quiet)
@@ -250,7 +278,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             ailment=spec.get("ailment"),
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
-            spirit=spirit, conditions=conditions, goals=goals, utility=utility,
+            spirit=spirit, conditions=conditions, goals=goals, utility=utility, trigger=trigger,
             mobility=mobility, setups=setups,
             tree_nodes=[int(n) for n in alloc.get("nodes") or []], tree_version=alloc.get("version"),
             tree_order=[{"id": s.get("id"), "name": s["node"], "type": s["type"], "path": s.get("path") or [],
@@ -350,6 +378,11 @@ def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
             out.append("**Utility:** " + ", ".join(
                 f"{u['skill']}" + (f" (weapon set 2, {u['weapon']})" if u["weapon_set"] == 2 else "") + f" {u['gain']:+.0%}"
                 for u in g.utility))
+        if g.trigger:
+            t, m, b = g.trigger, g.trigger.get("mapping") or {}, g.trigger.get("bossing") or {}
+            out.append(f"**Cast on Critical:** {t['spell']}" + (f" + {', '.join(t['supports'])}" if t['supports'] else "")
+                       + f", about {m.get('trigger_dps', 0):,.0f} mapping / {b.get('trigger_dps', 0):,.0f} boss DPS on top"
+                       + " (Whetstone's estimate, not Path of Building's)")
         if g.mobility:
             out.append("**Movement skill:** " + " or ".join(g.mobility))
         if g.goals:

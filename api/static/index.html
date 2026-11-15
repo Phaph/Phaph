@@ -355,6 +355,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 .howlink { white-space: nowrap; color: var(--brass); font-weight: 500; }
 .howlink::after { content: " \2192"; }
 
+.est { display: inline-block; margin-left: 8px; font: 13px var(--mono); color: #c9a46a; border: 1px dashed rgba(201,164,106,.55);
+  border-radius: 2px; padding: 1px 6px; cursor: help; }
 .deep { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 14px; cursor: pointer; max-width: 640px; }
 .deep input { accent-color: var(--brass); width: 18px; height: 18px; margin-top: 3px; flex: none; }
 .deep b { font: 600 18px/1.2 var(--display); color: var(--brass); }
@@ -1481,6 +1483,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     kv.push(["Mapping", gemRow(plan.spec.skill, s.supports)]);
     if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
     else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
+    triggerRow(s).forEach(r => kv.push(r));
     extraRows(s).forEach(r => kv.push(r));
     kv.push(...priorityRow(s));
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
@@ -1530,6 +1533,13 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   // Every other skill in the build with its own supports (guide.kit_out). Older results without setups fall
   // back to the plain lists.
+  // Cast on Critical: Whetstone's own energy maths on top of Path of Building's numbers, so it's labelled.
+  function triggerRow(s) {
+    if (!s.trigger) return [];
+    const t = s.trigger, m = t.mapping || {}, b = t.bossing || {};
+    return [["Cast on Critical", `<span class="setup">${gemRow(t.spell, t.supports || [])}</span>
+      <span class="est" title="Path of Building doesn't model Cast on X energy, so this part is Whetstone's estimate: crits per second x energy per crit / energy to fire. Not yet checked in game.">+${fmt(m.trigger_dps || 0)} mapping${b.trigger_dps != null ? ` / +${fmt(b.trigger_dps)} boss` : ""} DPS · ~${(m.casts_per_sec || 0).toFixed(2)} casts/s · estimate</span>`]];
+  }
   function extraRows(s) {
     const rows = [], setups = s.setups || [];
     const line = x => `<span class="setup">${gemRow(x.skill, x.supports || [])}</span>`;
@@ -1563,6 +1573,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     kv.push(["Mapping", gemRow(plan.spec.skill, s.supports)]);
     if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
     else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
+    triggerRow(s).forEach(r => kv.push(r));
     extraRows(s).forEach(r => kv.push(r));
     kv.push(...priorityRow(s));
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);

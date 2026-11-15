@@ -82,6 +82,10 @@ def score_of(out: dict, field_name: str) -> float:
         # (Bloodletting-style supports) is a cost too, not a saving.
         cost = sum(max(out.get(k, 0) or 0, 0) for k in ("ManaCost", "LifeCost", "ESCost"))
         return (out.get("Speed", 0) or 0) * 100 / (100 + cost)
+    if field_name == "per_cast":
+        # Damage per cast, for a spell fired by Cast on X: cast speed doesn't matter there, only how hard it hits.
+        speed = out.get("Speed") or 0
+        return (out.get("TotalDPS") or 0) / speed if speed > 0 else 0.0
     if field_name == "total":
         return total_dps(out)
     if field_name == "mapping":
@@ -132,7 +136,7 @@ def optimise_supports(
     """
     field_name = METRICS.get(metric, metric)
     fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
-        + (["Speed", "ManaCost", "LifeCost", "ESCost"] if field_name == "movement" else
+        + (["Speed", "ManaCost", "LifeCost", "ESCost"] if field_name == "movement" else ["Speed"] if field_name == "per_cast" else
            [] if field_name in ("total", "mapping") or "+" in field_name or field_name in AILMENT_FIELD else [field_name])
     gems = pob.list_gems("support")
     family = {g["name"]: g.get("family") or g["name"] for g in gems}
