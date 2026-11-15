@@ -1155,7 +1155,7 @@ function handlers.gem_info(cmd)
 			if gem.name == name and gem.grantedEffect then
 				local ge = gem.grantedEffect
 				local lvl = ge.levels and (ge.levels[cmd.level or 20] or ge.levels[#ge.levels]) or {}
-				out[name] = { cast_time = ge.castTime or 0, cooldown = lvl.cooldown, types = {},
+				out[name] = { cast_time = ge.castTime or 0, cooldown = lvl.cooldown, types = {}, req_level = lvl.levelRequirement,
 					support = (ge.support or (gem.tags and gem.tags.support)) and true or false }
 				for k in pairs(ge.skillTypes or {}) do
 					for n, v in pairs(SkillType) do if v == k then table.insert(out[name].types, n) end end
