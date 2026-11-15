@@ -35,6 +35,7 @@ class Stage:
     max_affixes: int    # how many good affixes a typical item has at this budget
     budget: str
     budget_key: str = "unlimited"
+    top_mods: int = 0   # how many of an item's affixes can be the best tier; the rest sit tier_drop tiers lower
 
 
 @dataclass(frozen=True)
@@ -44,15 +45,20 @@ class Budget:
     roll: float
     tier_drop: int
     max_affixes: int
+    top_mods: int = 0
 
 
 # Ordered cheapest to most expensive. The player picks one up front; no stage goes above it.
+# What that money really buys per item: a few good mods, only some of them top tier. Six top-tier mods on one item
+# is a mirror-tier item, not something a 100-divine build has. The crafter spends the top-tier slots on the mods that
+# matter most to the build (it picks the best gain first).
+#                 key          label                        roll  tiers below best  good mods  top-tier mods
 BUDGETS = {
-    "free": Budget("free", "Free, self-found", 0.35, 2, 3),
-    "budget": Budget("budget", "Budget, up to ~5 divine", 0.5, 1, 4),
-    "medium": Budget("medium", "Medium, ~5-30 divine", 0.6, 0, 5),
-    "high": Budget("high", "High, ~30-100 divine", 0.8, 0, 6),
-    "unlimited": Budget("unlimited", "No limit, 100+ divine", 0.95, 0, 6),
+    "free": Budget("free", "Free, self-found", 0.35, 3, 2, 0),
+    "budget": Budget("budget", "Budget, up to ~5 divine", 0.5, 2, 3, 0),
+    "medium": Budget("medium", "Medium, ~5-30 divine", 0.6, 1, 4, 1),
+    "high": Budget("high", "High, ~30-100 divine", 0.75, 1, 5, 2),
+    "unlimited": Budget("unlimited", "No limit, 100+ divine", 0.9, 1, 6, 4),
 }
 BUDGET_ORDER = list(BUDGETS)
 
@@ -71,7 +77,7 @@ def make_stage(key: str, budget: str = "unlimited") -> Stage:
         raise ValueError(f"budget must be one of {BUDGET_ORDER}")
     name, level, ilvl, natural = STAGE_DEFS[key]
     tier = BUDGETS[min(natural, budget, key=BUDGET_ORDER.index)]
-    return Stage(key, name, level, ilvl, tier.roll, tier.tier_drop, tier.max_affixes, tier.label, tier.key)
+    return Stage(key, name, level, ilvl, tier.roll, tier.tier_drop, tier.max_affixes, tier.label, tier.key, tier.top_mods)
 
 
 STAGES = {k: make_stage(k) for k in STAGE_DEFS}
@@ -158,6 +164,9 @@ def _tier_choices(affixes: list[dict], stage: Stage, keep: set[str] = frozenset(
         tiers.sort(key=lambda a: a["level"])
         idx = max(0, len(tiers) - 1 - stage.tier_drop)
         chosen[group] = {**tiers[idx], "_tier": len(tiers) - idx, "_tiers": len(tiers)}
+        if idx < len(tiers) - 1:
+            # The best tier too, offered while the item still has a top-tier slot left (stage.top_mods).
+            chosen[group]["_best"] = {**tiers[-1], "_tier": 1, "_tiers": len(tiers), "_is_top": True}
     return chosen
 
 
@@ -179,6 +188,9 @@ class _Work:
     max_kind: int = 3               # prefixes (or suffixes) at most
     implicits: tuple = ()           # the base's implicit lines, at this stage's roll
     base_tags: frozenset | None = None   # the base's item tags (None: no tag rules, e.g. jewels)
+
+    def top_used(self) -> int:
+        return sum(1 for _, a, _ in self.meta if a.get("_is_top"))
 
     def tags(self) -> set:
         """The item's tags now: the base's, plus any its mods added (which block other mods, as in game)."""
@@ -291,7 +303,7 @@ def _remove(work: _Work, index: int) -> None:
         work.lines.remove(line)
     work.picked.pop(index)
     work.counts[affix["type"]] -= 1
-    work.options[group] = affix
+    work.options[group] = affix.get("_low") or affix
 
 
 def _swap_for(work: _Work, stage: Stage, res_group: str) -> bool:
@@ -323,9 +335,13 @@ def _fill(pob: PoB, work: _Work, stage: Stage, score: Scorer, limit: int, allow,
     current = pob.send("equip", slot=work.slot, raw=work.raw(), fields=SCORE_FIELDS)["output"]
     while len(work.picked) < limit:
         cands = []
+        top_left = work.top_used() < stage.top_mods
         for group, a in work.options.items():
             if allow(group) and work.has_room(stage, a["type"]) and work.allows(a):
                 cands.append((group, a, [_value_at(line, stage.roll) for line in a["lines"]]))
+                best = a.get("_best")
+                if top_left and best and work.allows(best):
+                    cands.append((group, {**best, "_low": a}, [_value_at(line, stage.roll) for line in best["lines"]]))
         outs = _try(pob, work.slot, [work.raw(c[2]) for c in cands])
         best, best_score = None, 0.0
         for cand, out in zip(cands, outs):
@@ -389,7 +405,9 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
 
 
 # Most a player at each budget would pay for one item, in divines.
-BUDGET_DIVINES = {"free": 0, "budget": 5, "medium": 30, "high": 100, "unlimited": float("inf")}
+# The most one unique may cost at each budget: well under the whole build's budget (a 30-100 divine build can't spend
+# 112 divines on Mageblood).
+BUDGET_DIVINES = {"free": 0, "budget": 2, "medium": 10, "high": 40, "unlimited": float("inf")}
 SLOT_TYPES = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots",
               "Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 _PRICES: dict | None = None

@@ -21,7 +21,7 @@ from pob import PoB
 
 JEWEL_BASES = ("Ruby", "Emerald", "Sapphire")
 # How many good affixes a rare jewel has at each budget (a jewel holds up to 2 prefixes and 2 suffixes).
-JEWEL_AFFIXES = {"free": 2, "budget": 3, "medium": 4, "high": 4, "unlimited": 4}
+JEWEL_AFFIXES = {"free": 1, "budget": 2, "medium": 3, "high": 3, "unlimited": 4}
 
 
 def jewel_sockets(pob: PoB) -> list[dict]:

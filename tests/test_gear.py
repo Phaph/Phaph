@@ -117,7 +117,20 @@ def test_price_picker_skips_fixed_and_corrupted_listings():
 def test_tier_choices_record_tier():
     from gear import _tier_choices
     affixes = [{"group": "Life", "level": lvl, "type": "Prefix"} for lvl in (1, 10, 30, 60)]
-    best = _tier_choices(affixes, make_stage("end", "unlimited"))["Life"]
-    assert (best["level"], best["_tier"], best["_tiers"]) == (60, 1, 4)
+    # No limit: one tier below best by default, the best tier offered for the item's few top-tier slots.
+    opt = _tier_choices(affixes, make_stage("end", "unlimited"))["Life"]
+    assert (opt["level"], opt["_tier"], opt["_tiers"]) == (30, 2, 4)
+    assert (opt["_best"]["level"], opt["_best"]["_tier"], opt["_best"]["_is_top"]) == (60, 1, True)
+    assert make_stage("end", "unlimited").top_mods == 4 and make_stage("end", "high").top_mods == 2
     cheap = _tier_choices(affixes, make_stage("end", "free"))["Life"]
-    assert cheap["_tier"] == 1 + make_stage("end", "free").tier_drop
+    assert cheap["_tier"] == 1 + make_stage("end", "free").tier_drop and make_stage("end", "free").top_mods == 0
+
+
+def test_top_tier_slots_are_capped(pob, monk):
+    """A High budget item may hold at most 2 best-tier mods; the crafter spends them on what matters most."""
+    from gear import craft_gear
+    stage = make_stage("end", "high")
+    for p in craft_gear(pob, stage, "Staff", "Warstaff", log=lambda *a: None):
+        if not p.unique:
+            assert sum(1 for i in p.affix_info if i.get("tier") == 1 and (i.get("of") or 0) > 1) <= stage.top_mods, p
+            assert len(p.affixes) <= stage.max_affixes
