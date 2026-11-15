@@ -215,21 +215,71 @@ function handlers.affixes(cmd)
 	if not base then error("unknown base: " .. tostring(cmd.base)) end
 	local list = {}
 	local pool = base.type == "Jewel" and data.itemMods.Jewel or data.itemMods.Item
+	-- The item's tags, as the game rolls them. "genesis_tree_*" tags only open mods through the Genesis tree
+	-- (a league crafting mechanic), so ordinary crafting ignores them.
+	local tags = {}
+	for k in pairs(base.tags or {}) do
+		if not k:find("^genesis_") then tags[k] = true end
+	end
 	for id, mod in pairs(pool) do
 		if (mod.type == "Prefix" or mod.type == "Suffix") and (mod.level or 0) <= (cmd.max_level or 100) then
 			local weight = 0
 			for i, key in ipairs(mod.weightKey or {}) do
-				if base.tags[key] then weight = mod.weightVal[i] or 0 break end
+				if tags[key] then weight = mod.weightVal[i] or 0 break end
 			end
 			if weight > 0 then
 				local lines = {}
 				for _, line in ipairs(mod) do table.insert(lines, line) end
+				-- wk/wv: the mod's weights, so the crafter can re-check it as other mods add tags to the item.
+				-- adds: tags this mod puts on the item (e.g. +cold spell levels adds "no_fire_spell_mods"...),
+				-- which block other mods, exactly as in game.
+				local wk, wv = {}, {}
+				for i, key in ipairs(mod.weightKey or {}) do
+					if not key:find("^genesis_") then table.insert(wk, key); table.insert(wv, mod.weightVal[i] or 0) end
+				end
 				table.insert(list, { id = id, type = mod.type, group = mod.group, level = mod.level or 0,
-					lines = lines, tags = mod.modTags, weight = weight })
+					lines = lines, tags = mod.modTags, weight = weight, wk = wk, wv = wv, adds = mod.tags or {} })
 			end
 		end
 	end
-	return { affixes = list }
+	local itemTags = {}
+	for k in pairs(tags) do table.insert(itemTags, k) end
+	return { affixes = list, item_tags = itemTags }
+end
+
+-- An item's mod lines as the game shows them, with its selected variants applied (e.g. the four
+-- "Legacy of ..." choices on Mageblood). Used to show a unique's mods.
+function handlers.item_lines(cmd)
+	local item = new("Item"):Item(cmd.raw)
+	if not item.base then error("could not parse item") end
+	local chosen = {}
+	for _, v in ipairs({ item.variant, item.variantAlt, item.variantAlt2, item.variantAlt3, item.variantAlt4, item.variantAlt5 }) do
+		chosen[v] = true
+	end
+	local function active(ml)
+		if not ml.variantList then return true end
+		for v in pairs(chosen) do if ml.variantList[v] then return true end end
+		return false
+	end
+	local function collect(list)
+		local out = {}
+		for _, ml in ipairs(list or {}) do
+			if active(ml) and ml.line and ml.line ~= "" then table.insert(out, (ml.line:gsub("{[^}]*}", ""))) end
+		end
+		return out
+	end
+	-- Every choice in order, duplicates included (Mageblood's Legacies grow stronger per duplicate).
+	local variants = {}
+	local slots = { item.variant }
+	if item.hasAltVariant then table.insert(slots, item.variantAlt) end
+	if item.hasAltVariant2 then table.insert(slots, item.variantAlt2) end
+	if item.hasAltVariant3 then table.insert(slots, item.variantAlt3) end
+	if item.hasAltVariant4 then table.insert(slots, item.variantAlt4) end
+	if item.hasAltVariant5 then table.insert(slots, item.variantAlt5) end
+	if item.variantList and #item.variantList > 1 then
+		for _, v in ipairs(slots) do if v and item.variantList[v] then table.insert(variants, item.variantList[v]) end end
+	end
+	return { implicits = collect(item.implicitModLines), explicits = collect(item.explicitModLines), variants = variants }
 end
 
 -- Equip an item from raw text into a named slot, replacing (and deleting) what was there.

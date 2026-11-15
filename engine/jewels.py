@@ -16,7 +16,7 @@ How it fits in a build stage:
 from __future__ import annotations
 
 from gear import (SCORE_FIELDS, Scorer, SlotPlan, Stage, _affix_info, _fill, _tier_choices, _try, _unique_allowed,
-                  _Work)
+                  _Work, unique_lines)
 from pob import PoB
 
 JEWEL_BASES = ("Ruby", "Emerald", "Sapphire")
@@ -111,7 +111,9 @@ def craft_jewels(pob: PoB, stage: Stage, score: Scorer, uniques: bool = True, mi
     for w in works:
         if w.unique:
             log(f"  {w.slot:<12} UNIQUE {w.unique} ({w.price_note})")
-            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note))
+            mods, variants = unique_lines(pob, w.unique_raw)
+            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note,
+                                  mods=mods, variants=variants))
         else:
             log(f"  {w.slot:<12} {w.base:<10} " + "; ".join(w.picked))
             plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw(), affix_info=_affix_info(w)))

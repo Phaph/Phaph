@@ -1492,7 +1492,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       if (g.unique) {
         return `<div class="item unique"><div class="item-head"><div><span class="slot">${esc(g.slot)}</span><span class="${baseCls}"${baseStyle}>${esc(name)}</span>
           <span class="price">${g.price != null ? aboutDiv(g.price) : "Unique · price unknown"}</span>${tradeLink(g)}</div>
-          ${art(ICONS.uniques?.[name], g.slot)}</div></div>`;
+          ${art(ICONS.uniques?.[name], g.slot)}</div>${(g.variants || []).length
+          ? `<p class="muted" style="margin:6px 0 0;font-size:14px">Choices for this build: ${g.variants.map(esc).join(", ")}</p>` : ""}${(g.mods || []).length
+          ? `<ul class="impl" style="border:0;text-align:left;color:#c9b38a">${g.mods.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</div>`;
       }
       const had = new Set(before && !baseChanged ? before.affixes : []);
       const lines = g.affixes.map((a, i) => {

@@ -90,6 +90,8 @@ class SlotPlan:
     price: float | None = None      # divines, uniques with a poe.ninja price
     trade_url: str | None = None    # official trade search for this base + affixes (or this unique)
     implicits: list[str] = field(default_factory=list)   # the base's own modifiers, shown above the affixes
+    mods: list[str] = field(default_factory=list)        # a unique's own mods, its chosen variants applied
+    variants: list[str] = field(default_factory=list)    # a unique's chosen variants (e.g. Mageblood's Legacy effects)
 
 
 def _value_at(text: str, roll: float) -> str:
@@ -176,6 +178,24 @@ class _Work:
     max_total: int | None = None    # affix cap for this item (jewels); None: the stage's
     max_kind: int = 3               # prefixes (or suffixes) at most
     implicits: tuple = ()           # the base's implicit lines, at this stage's roll
+    base_tags: frozenset | None = None   # the base's item tags (None: no tag rules, e.g. jewels)
+
+    def tags(self) -> set:
+        """The item's tags now: the base's, plus any its mods added (which block other mods, as in game)."""
+        out = set(self.base_tags or ())
+        for _, a, _ in self.meta:
+            out |= set(a.get("adds") or ())
+        return out
+
+    def allows(self, affix: dict) -> bool:
+        """Can this affix roll on the item as it is now? The first of the mod's weight tags the item has decides."""
+        if self.base_tags is None or "wk" not in affix:
+            return True
+        tags = self.tags()
+        for key, val in zip(affix["wk"], affix["wv"]):
+            if key in tags:
+                return val > 0
+        return False
 
     def raw(self, extra: list[str] | None = None) -> str:
         if self.unique_raw:
@@ -244,7 +264,7 @@ def _fill(pob: PoB, work: _Work, stage: Stage, score: Scorer, limit: int, allow,
     while len(work.picked) < limit:
         cands = []
         for group, a in work.options.items():
-            if allow(group) and work.has_room(stage, a["type"]):
+            if allow(group) and work.has_room(stage, a["type"]) and work.allows(a):
                 cands.append((group, a, [_value_at(line, stage.roll) for line in a["lines"]]))
         outs = _try(pob, work.slot, [work.raw(c[2]) for c in cands])
         best, best_score = None, 0.0
@@ -278,10 +298,11 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
         for elem in sorted(need, key=need.get, reverse=True):
             choices = []
             for w in works:
-                if len(short) >= 2 and "AllResistances" in w.options and w.has_room(stage, w.options["AllResistances"]["type"]):
+                if len(short) >= 2 and "AllResistances" in w.options and w.has_room(stage, w.options["AllResistances"]["type"]) \
+                        and w.allows(w.options["AllResistances"]):
                     choices.append((0, w, "AllResistances"))
                 g = groups[elem]
-                if g in w.options and w.has_room(stage, w.options[g]["type"]):
+                if g in w.options and w.has_room(stage, w.options[g]["type"]) and w.allows(w.options[g]):
                     choices.append((1, w, g))
             if choices:
                 choices.sort(key=lambda c: (c[0], len(c[1].picked)))
@@ -293,7 +314,8 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
             if elem is None:
                 return
             g = groups[elem]
-            for w in sorted((w for w in works if not w.slot.startswith("Weapon") and not w.unique and g in w.options),
+            for w in sorted((w for w in works if not w.slot.startswith("Weapon") and not w.unique and g in w.options
+                             and w.allows(w.options[g])),
                             key=lambda w: sum(_is_res_group(m[0]) for m in w.meta)):
                 if _swap_for(w, stage, g):
                     pick = (w, g)
@@ -370,6 +392,48 @@ def _unique_allowed(name: str, stage: Stage) -> tuple[bool, str | None]:
     return cap == float("inf"), "price unknown"
 
 
+VARIANT_KEYS = ["Selected Variant", "Selected Alt Variant", "Selected Alt Variant Two", "Selected Alt Variant Three",
+                "Selected Alt Variant Four", "Selected Alt Variant Five"]
+HAS_ALT = {"Selected Alt Variant": "Has Alt Variant: true", "Selected Alt Variant Two": "Has Alt Variant Two: true",
+           "Selected Alt Variant Three": "Has Alt Variant Three: true", "Selected Alt Variant Four": "Has Alt Variant Four: true",
+           "Selected Alt Variant Five": "Has Alt Variant Five: true"}
+
+
+def _set_variant(raw: str, key: str, value: int) -> str:
+    lines = [ln for ln in raw.split("\n") if not ln.startswith(key + ":")]
+    # The "Selected ..." lines go in the item's header, before its list of variants.
+    at = next((i for i, ln in enumerate(lines) if ln.startswith("Variant: ")), min(3, len(lines)))
+    lines.insert(at, f"{key}: {value}")
+    return "\n".join(lines)
+
+
+def best_variants(pob: PoB, raw: str, slot: str, score: "Scorer") -> str:
+    """For a unique whose mods you choose (Mageblood: four "Legacy of ..." effects), pick each choice in turn as the
+    one that helps this build most. Uniques with version variants ("Pre 0.2.0") keep their current version."""
+    import re
+    names = [ln[len("Variant: "):] for ln in raw.split("\n") if ln.startswith("Variant: ")]
+    if len(names) < 2 or any(re.match(r"\(?Pre \d|Current", n) for n in names):
+        return raw
+    keys = ["Selected Variant"] + [k for k in VARIANT_KEYS[1:] if HAS_ALT[k] in raw]
+    current = pob.calc(SCORE_FIELDS)
+    for key in keys:
+        cands = [_set_variant(raw, key, i) for i in range(1, len(names) + 1)]
+        outs = _try(pob, slot, cands)
+        scored = [(score(o, current), i) for i, o in enumerate(outs) if o is not None]
+        if scored:
+            raw = cands[max(scored)[1]]
+    return raw
+
+
+def unique_lines(pob: PoB, raw: str) -> tuple[list[str], list[str]]:
+    """A unique's mods and chosen variants, as the game shows them."""
+    try:
+        res = pob.send("item_lines", raw=raw)
+        return list(res.get("implicits") or []) + list(res.get("explicits") or []), list(res.get("variants") or [])
+    except PoBError:
+        return [], []
+
+
 def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scorer",
                       weapon_types: dict[str, tuple[str, str | None]], min_gain: float = 0.02) -> None:
     """Swap a crafted rare for a unique wherever a unique scores clearly better."""
@@ -386,6 +450,8 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
         if not allowed:
             continue
         current = pob.calc(SCORE_FIELDS)
+        # Uniques with choices (Mageblood) are tried with their best choices for this build.
+        allowed = [({**u, "raw": best_variants(pob, u["raw"], w.slot, score)}, note) for u, note in allowed]
         outs = _try(pob, w.slot, [u["raw"] for u, _ in allowed])
         best, best_score = None, min_gain
         for (u, note), out in zip(allowed, outs):
@@ -485,9 +551,10 @@ def craft_gear(
     works: list[_Work] = []
     for slot, cands in slot_bases:
         base = _best_base(pob, slot, cands, stage, score)
-        affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
+        res = pob.send("affixes", base=base, max_level=stage.item_level)
         imp = base_implicits(next(c for c in cands if c["name"] == base), stage.roll) or []
-        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage, keep), implicits=tuple(imp)))
+        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(res["affixes"], stage, keep), implicits=tuple(imp),
+                           base_tags=frozenset(res.get("item_tags") or ())))
 
     no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric, goals=goals)
     for w in works:
@@ -510,7 +577,9 @@ def craft_gear(
     for w in works:
         if w.unique:
             log(f"  {w.slot:<12} UNIQUE {w.unique} ({w.price_note})")
-            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note))
+            mods, variants = unique_lines(pob, w.unique_raw)
+            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note,
+                                  mods=mods, variants=variants))
         else:
             log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
             plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw(), affix_info=_affix_info(w),
@@ -530,9 +599,10 @@ def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_sub
     if not cands:
         raise ValueError(f"No {weapon_type} bases up to item level {stage.item_level}")
     base = _best_base(pob, slot, cands, stage, score)
-    affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
+    res = pob.send("affixes", base=base, max_level=stage.item_level)
     imp = base_implicits(next(c for c in cands if c["name"] == base), stage.roll) or []
-    w = _Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage), implicits=tuple(imp))
+    w = _Work(slot, base, f"{stage.name} {slot}", _tier_choices(res["affixes"], stage), implicits=tuple(imp),
+              base_tags=frozenset(res.get("item_tags") or ()))
     _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
     log(f"  {slot:<12} {base:<28} " + "; ".join(w.picked))
     return SlotPlan(slot, base, w.picked, w.raw(), affix_info=_affix_info(w), implicits=list(w.implicits))
