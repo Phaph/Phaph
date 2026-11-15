@@ -357,6 +357,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
 .est { display: inline-block; margin-left: 8px; font: 13px var(--mono); color: #c9a46a; border: 1px dashed rgba(201,164,106,.55);
   border-radius: 2px; padding: 1px 6px; cursor: help; }
+.stagefor { grid-column: 1 / -1; margin: 0; font: 600 13px var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--brass); }
 .deep { display: flex; gap: 10px; align-items: flex-start; margin: 4px 0 14px; cursor: pointer; max-width: 640px; }
 .deep input { accent-color: var(--brass); width: 18px; height: 18px; margin-top: 3px; flex: none; }
 .deep b { font: 600 18px/1.2 var(--display); color: var(--brass); }
@@ -1164,7 +1165,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       else addLiveStage(plan, e.result, partial, stages.length);
       work.laneReady(e.stage);
     };
-    liveGuide = false;
+    liveGuide = false; stagePicked = false;
     try {
       job = await waitFor(job, job.cached ? "Loading guide" : "A few minutes",
         (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
@@ -1173,12 +1174,13 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     setStatus("");
     state.guideJob = job.id;
     try { history.replaceState(null, "", `?b=${job.id}`); } catch {}
-    // The big finish. If stages were already showing, stay on the one being read.
-    renderGuide(plan, job.result, liveGuide ? { keepStage: shownStage } : {});
+    // The big finish opens on Endgame, which the rating is about. Only if the player picked a stage themselves
+    // while the others were forging do we stay on it.
+    renderGuide(plan, job.result, liveGuide && stagePicked ? { keepStage: shownStage } : {});
     liveGuide = false;
   }
 
-  let liveGuide = false;
+  let liveGuide = false, stagePicked = false;
   function addLiveStage(plan, s, partial, total) {
     const tabs = $("stageTabs"); if (!tabs) return;
     const b = stageTab(plan, s);
@@ -1192,7 +1194,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   function stageTab(plan, s) {
     const b = document.createElement("button");
     b.className = "chip"; b.type = "button"; b.setAttribute("role", "tab"); b.textContent = s.name; b.dataset.stage = s.stage;
-    b.onclick = () => { $("stageTabs").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); renderStage(plan, s); };
+    b.onclick = () => { stagePicked = true; $("stageTabs").querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b)); renderStage(plan, s); };
     return b;
   }
 
@@ -1513,6 +1515,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     return `
       ${costHtml(s)}
       <div class="stats">
+        <p class="stagefor">${esc(s.name)} numbers · level ${s.level}</p>
         <div class="stat"><b class="${dpsClass(s.damage_split)}" data-n="${s.dps || 0}">${fmt(s.dps)}</b><span>Mapping DPS</span></div>
         <div class="stat"><b data-n="${s.boss_dps || 0}">${s.boss_dps ? fmt(s.boss_dps) : "-"}</b><span>Boss DPS</span></div>
         <div class="stat"><b data-n="${st.Life || 0}">${fmt(st.Life)}</b><span>Life</span></div>
