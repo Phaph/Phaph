@@ -171,6 +171,38 @@ tr.best td { color: var(--brass-hi); }
 @media (max-width: 620px) { .kv { grid-template-columns: minmax(0, 1fr); } .kv dd { margin-bottom: 10px; } }
 /* Gear: riveted plates. */
 .items { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
+/* Paper doll: the in-game inventory layout. */
+.doll-wrap { display: grid; gap: 12px; justify-items: center; }
+.doll { --c: 56px; display: grid; gap: 6px; grid-template-columns: repeat(8, var(--c)); grid-template-rows: repeat(6, var(--c));
+  grid-template-areas:
+    "w1 w1 .  he he .  w2 w2"
+    "w1 w1 .  he he am w2 w2"
+    "w1 w1 r1 bo bo r2 w2 w2"
+    "w1 w1 .  bo bo .  w2 w2"
+    "gl gl .  bo bo .  bt bt"
+    "gl gl .  be be .  bt bt"; }
+.doll-extra { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; }
+.doll-extra .slot { width: 56px; height: 56px; }
+.slot { position: relative; display: grid; place-items: center; padding: 4px; min-width: 0; cursor: pointer; border-radius: 2px;
+  background: radial-gradient(circle at 50% 40%, #1d2330, #0b0d12 78%); border: 1px solid #3a3f4c;
+  box-shadow: inset 0 2px 8px rgba(0,0,0,.75); transition: border-color .15s, box-shadow .15s, transform .15s; }
+.slot.rare { border-color: #8a7a3a; }
+.slot.unique { border-color: #a5612a; background: radial-gradient(circle at 50% 40%, #33240f, #100a04 78%); }
+.slot.jewel { border-color: #4d6a8a; }
+.slot.empty { cursor: default; opacity: .35; }
+.slot:hover, .slot:focus-visible, .slot.on { outline: none; border-color: var(--brass-hi); box-shadow: inset 0 2px 8px rgba(0,0,0,.75), 0 0 14px rgba(232,170,80,.35); transform: translateY(-1px); }
+.slot-art { display: grid; place-items: center; width: 100%; height: 100%; }
+.slot-art img { max-width: 100%; max-height: 100%; object-fit: contain; filter: drop-shadow(0 2px 3px rgba(0,0,0,.6)); }
+.slot-art svg { width: 60%; height: 60%; color: #6a6052; opacity: .8; }
+.slot-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.slot.fresh { animation: slotfresh 1.4s var(--ease) 1; }
+@keyframes slotfresh { 0% { box-shadow: 0 0 0 0 rgba(232,115,58,.9), inset 0 2px 8px rgba(0,0,0,.75); } 100% { box-shadow: 0 0 0 10px rgba(232,115,58,0), inset 0 2px 8px rgba(0,0,0,.75); } }
+.itemtip { position: fixed; z-index: 50; width: min(340px, calc(100vw - 16px)); pointer-events: auto; filter: drop-shadow(0 10px 24px rgba(0,0,0,.6)); }
+.itemtip .items { grid-template-columns: 1fr; }
+.itemtip .item { background: #15120f; }
+.item .impl { list-style: none; margin: 6px 0 0; padding: 0 0 6px; border-bottom: 1px solid var(--edge); display: grid; gap: 2px;
+  color: #9fb4d0; font-size: 15px; text-align: center; }
+@media (max-width: 520px) { .doll { --c: 36px; gap: 5px; } .doll-extra .slot { width: 40px; height: 40px; } }
 .item { position: relative; border: 1px solid var(--edge); border-radius: 3px; padding: 14px 16px; display: grid; gap: 4px; min-width: 0;
   background: linear-gradient(180deg, var(--iron2), var(--iron)); box-shadow: inset 0 1px 0 rgba(255,236,200,.06), 0 3px 0 var(--seam); }
 .item::before, .item::after { content: ""; position: absolute; top: 7px; width: 5px; height: 5px; border-radius: 50%; background: #4a4239; box-shadow: 0 1px 0 var(--seam); }
@@ -1471,9 +1503,71 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       const upgraded = before && !baseChanged ? g.affixes.filter(a => !had.has(a)).length : 0;
       return `<div class="item"><div class="item-head"><div><span class="slot">${esc(g.slot)}${upgraded ? ` <span class="upg">· ${upgraded} ${forward ? "upgraded" : "changed"}</span>` : ""}</span>
         <span class="${baseCls}"${baseStyle}>${esc(name)}</span><span class="price">Crafted rare ${tradeLink(g)}</span></div>
-        ${art(ICONS.bases?.[name], g.slot)}</div><ol>${lines}</ol></div>`;
+        ${art(ICONS.bases?.[name], g.slot)}</div>${(g.implicits || []).length
+          ? `<ul class="impl">${g.implicits.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}<ol>${lines}</ol></div>`;
     }).join("");
   }
+
+  // ---------- Paper doll ----------
+  // Gear laid out like the in-game inventory (as poe.ninja and Mobalytics show it); the full item card appears on
+  // hover, keyboard focus, or a tap (which pins it, for phones).
+  const DOLL_AREA = { "Weapon 1": "w1", "Weapon 2": "w2", "Helmet": "he", "Body Armour": "bo", "Gloves": "gl", "Boots": "bt",
+    "Amulet": "am", "Ring 1": "r1", "Ring 2": "r2", "Belt": "be" };
+  let dollItems = [], dollPrev = null, tipPinned = null;
+  function dollHtml(list, prev) {
+    dollItems = list; dollPrev = prev;
+    const cell = (g, i, area) => {
+      const name = g.unique ? g.unique.split(",")[0] : g.base;
+      const url = g.unique ? ICONS.uniques?.[name] : ICONS.bases?.[name];
+      const before = prev?.[g.slot];
+      const changed = before && (before.name !== name || (before.affixes || []).join("|") !== (g.affixes || []).join("|"));
+      return `<button type="button" class="slot ${g.unique ? "unique" : g.jewel ? "jewel" : "rare"}${changed ? " fresh" : ""}"
+        ${area ? `style="grid-area:${area}"` : ""} data-i="${i}" aria-label="${esc(g.slot)}: ${esc(name)}${g.unique ? " (unique)" : ""}">
+        <span class="slot-art">${url ? img(url) : slotShape(g.slot)}</span><span class="slot-label">${esc(g.slot)}</span></button>`;
+    };
+    const main = [], extra = [];
+    list.forEach((g, i) => (DOLL_AREA[g.slot] ? main : extra).push([g, i]));
+    const empty = Object.entries(DOLL_AREA).filter(([slot]) => !list.some(g => g.slot === slot))
+      .map(([slot, area]) => `<span class="slot empty" style="grid-area:${area}" title="${esc(slot)}: nothing needed"></span>`).join("");
+    return `<div class="doll-wrap"><div class="doll">${main.map(([g, i]) => cell(g, i, DOLL_AREA[g.slot])).join("")}${empty}</div>
+      ${extra.length ? `<div class="doll-extra">${extra.map(([g, i]) => cell(g, i)).join("")}</div>` : ""}</div>`;
+  }
+  const tipEl = () => {
+    let t = document.getElementById("itemTip");
+    if (!t) { t = document.createElement("div"); t.id = "itemTip"; t.className = "itemtip"; t.hidden = true; document.body.appendChild(t); }
+    return t;
+  };
+  function showTip(btn) {
+    const g = dollItems[+btn.dataset.i]; if (!g) return;
+    const t = tipEl();
+    t.innerHTML = `<div class="items">${gearHtml([g], null, true)}</div>`;
+    t.hidden = false;
+    const r = btn.getBoundingClientRect(), w = t.offsetWidth, h = t.offsetHeight, pad = 10;
+    let x = r.right + pad; if (x + w > innerWidth - 8) x = r.left - w - pad; if (x < 8) x = Math.max(8, (innerWidth - w) / 2);
+    let y = Math.min(Math.max(8, r.top), innerHeight - h - 8);
+    if (x === Math.max(8, (innerWidth - w) / 2)) y = r.bottom + pad + h < innerHeight ? r.bottom + pad : Math.max(8, r.top - h - pad);
+    t.style.left = x + "px"; t.style.top = y + "px";
+    document.querySelectorAll(".doll-wrap .slot.on").forEach(b => b.classList.remove("on"));
+    btn.classList.add("on");
+  }
+  function hideTip(force) {
+    if (tipPinned && !force) return;
+    tipPinned = null;
+    const t = document.getElementById("itemTip"); if (t) t.hidden = true;
+    document.querySelectorAll(".doll-wrap .slot.on").forEach(b => b.classList.remove("on"));
+  }
+  document.addEventListener("pointerover", e => { const b = e.target.closest?.(".doll-wrap .slot[data-i]"); if (b && !tipPinned) showTip(b); });
+  document.addEventListener("pointerout", e => { const b = e.target.closest?.(".doll-wrap .slot[data-i]");
+    if (b && !b.contains(e.relatedTarget)) hideTip(); });
+  document.addEventListener("focusin", e => { const b = e.target.closest?.(".doll-wrap .slot[data-i]"); if (b) showTip(b); });
+  document.addEventListener("focusout", e => { if (e.target.closest?.(".doll-wrap .slot[data-i]")) hideTip(); });
+  document.addEventListener("click", e => {
+    const b = e.target.closest?.(".doll-wrap .slot[data-i]");
+    if (b) { if (tipPinned === b) hideTip(true); else { tipPinned = b; showTip(b); } return; }
+    if (tipPinned && !e.target.closest?.("#itemTip")) hideTip(true);
+  });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") hideTip(true); });
+  addEventListener("scroll", () => { if (!tipPinned) hideTip(); }, { passive: true });
 
   function renderStage(plan, s) {
     const prevGear = shownGear, forward = shownStage == null || STAGE_RANK[s.stage] >= STAGE_RANK[shownStage];
@@ -1526,9 +1620,12 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
       ${!printing && state.guideJob && (s.tree_nodes || []).length ? `<a class="chip treelink" href="/tree.html?b=${state.guideJob}&s=${s.stage}" target="_blank" rel="noopener">Open the passive tree &#8599;</a>` : ""}
       <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
-      <div style="display:grid;gap:8px"><h3>Gear, struck in the order to buy it</h3>
-      <p class="muted" style="font-size:16px">Line 1 is what to buy first. Diamonds show the affix tier: more means a better roll${prevGear ? ". Switching stages re-strikes only what changed" : ""}.</p>
-      <div class="items">${gearHtml(items(s), prevGear, forward)}</div></div>
+      <div style="display:grid;gap:8px"><h3>Gear</h3>
+      ${printing
+        ? `<p class="muted" style="font-size:16px">Affix 1 is what to buy first. Diamonds show the affix tier: more means a better roll.</p>
+           <div class="items">${gearHtml(items(s), prevGear, forward)}</div>`
+        : `<p class="muted" style="font-size:16px">Hover or tap an item for its affixes in the order to buy them, tiers, price and a trade link.</p>
+           ${dollHtml(items(s), prevGear)}`}</div>
       ${s.notes.length ? `<ul class="notes">${s.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
       ${printing ? "" : `<div class="field"><label for="code">Path of Building code</label>
         <div class="code"><input id="code" readonly value="${esc(s.code)}"><button class="chip small" type="button" id="copy">Copy</button></div></div>`}`;

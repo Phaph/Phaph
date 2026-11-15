@@ -89,6 +89,7 @@ class SlotPlan:
     affix_info: list[dict] = field(default_factory=list)
     price: float | None = None      # divines, uniques with a poe.ninja price
     trade_url: str | None = None    # official trade search for this base + affixes (or this unique)
+    implicits: list[str] = field(default_factory=list)   # the base's own modifiers, shown above the affixes
 
 
 def _value_at(text: str, roll: float) -> str:
@@ -127,8 +128,19 @@ class Scorer:
                 + goal_terms(out, base, self.goal_w))
 
 
-def _item_raw(title: str, base: str, lines: list[str]) -> str:
-    return "\n".join(["Rarity: Rare", title, base, *lines])
+def _item_raw(title: str, base: str, lines: list[str], implicits=()) -> str:
+    # PoB only applies a base's implicit when the item text lists it, under "Implicits: n".
+    head = ["Rarity: Rare", title, base] + ([f"Implicits: {len(implicits)}", *implicits] if implicits else [])
+    return "\n".join([*head, *lines])
+
+
+def base_implicits(base: dict, roll: float) -> list[str] | None:
+    """A base's implicit lines at this roll, or None for a base the crafter can't promise: one whose implicit is
+    random (amulets that grant one of many skills) or that removes affix slots ("-1 Prefix Modifier allowed")."""
+    text = base.get("implicit") or ""
+    if "{variant" in text or "Modifier allowed" in text:
+        return None
+    return [_value_at(line, roll) for line in text.split("\n") if line.strip()]
 
 
 def _tier_choices(affixes: list[dict], stage: Stage, keep: set[str] = frozenset()) -> dict[str, dict]:
@@ -163,11 +175,12 @@ class _Work:
     price_note: str | None = None
     max_total: int | None = None    # affix cap for this item (jewels); None: the stage's
     max_kind: int = 3               # prefixes (or suffixes) at most
+    implicits: tuple = ()           # the base's implicit lines, at this stage's roll
 
     def raw(self, extra: list[str] | None = None) -> str:
         if self.unique_raw:
             return self.unique_raw
-        return _item_raw(self.title, self.base, self.lines + (extra or []))
+        return _item_raw(self.title, self.base, self.lines + (extra or []), self.implicits)
 
     def has_room(self, stage: "Stage", kind: str) -> bool:
         if self.unique_raw:
@@ -392,7 +405,7 @@ def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score:
     """Try each candidate base bare (implicit + base defences only) and keep the best."""
     title = f"{stage.name} {slot}"
     ref = pob.calc(SCORE_FIELDS)
-    outs = _try(pob, slot, [_item_raw(title, c["name"], []) for c in candidates])
+    outs = _try(pob, slot, [_item_raw(title, c["name"], [], base_implicits(c, stage.roll) or ()) for c in candidates])
     best, best_score = candidates[0]["name"], float("-inf")
     for c, out in zip(candidates, outs):
         if out is None:
@@ -415,7 +428,7 @@ def _sub_ok(actual: str | None, wanted: str | None) -> bool:
 def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, per_subtype: int = 1) -> list[dict]:
     """Highest-level base of each defence subtype (or of the given subtype)."""
     pool = [b for b in bases if b["type"] == item_type and (sub_type is None or b.get("subType") == sub_type)
-            and not b["name"].startswith("Runeforged")]
+            and not b["name"].startswith("Runeforged") and base_implicits(b, 0.5) is not None]
     groups: dict[str, list[dict]] = {}
     for b in pool:
         groups.setdefault(b.get("subType") or "", []).append(b)
@@ -458,12 +471,13 @@ def craft_gear(
         weapon_slots.append(("Weapon 2", offhand_type, None))
     for slot, wtype, wsub in weapon_slots:
         cands = sorted((b for b in bases if b["type"] == wtype and _sub_ok(b.get("subType"), wsub)
-                        and not b["name"].startswith("Runeforged")), key=lambda b: -b["level"])[:6]
+                        and not b["name"].startswith("Runeforged") and base_implicits(b, 0.5) is not None),
+                       key=lambda b: -b["level"])[:6]
         if not cands:
             raise ValueError(f"No {wtype} bases up to item level {stage.item_level}")
         slot_bases.append((slot, cands))
     for slot, item_type in {**ARMOUR_SLOTS, **JEWELLERY_SLOTS}.items():
-        per = 1 if item_type in ARMOUR_SLOTS.values() else 6
+        per = 1 if item_type in ARMOUR_SLOTS.values() else 40   # every ring, amulet and belt base competes
         cands = _top_bases(bases, item_type, per_subtype=per)
         if cands:
             slot_bases.append((slot, cands))
@@ -472,7 +486,8 @@ def craft_gear(
     for slot, cands in slot_bases:
         base = _best_base(pob, slot, cands, stage, score)
         affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
-        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage, keep)))
+        imp = base_implicits(next(c for c in cands if c["name"] == base), stage.roll) or []
+        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage, keep), implicits=tuple(imp)))
 
     no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric, goals=goals)
     for w in works:
@@ -498,7 +513,8 @@ def craft_gear(
             plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note))
         else:
             log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
-            plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw(), affix_info=_affix_info(w)))
+            plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw(), affix_info=_affix_info(w),
+                                  implicits=list(w.implicits)))
     return plans
 
 
@@ -509,12 +525,14 @@ def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_sub
     score = Scorer(def_weight=def_weight, mode=mode, metric=metric)
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
     cands = sorted((b for b in bases if b["type"] == weapon_type and _sub_ok(b.get("subType"), weapon_subtype)
-                    and not b["name"].startswith("Runeforged")), key=lambda b: -b["level"])[:6]
+                    and not b["name"].startswith("Runeforged") and base_implicits(b, 0.5) is not None),
+                   key=lambda b: -b["level"])[:6]
     if not cands:
         raise ValueError(f"No {weapon_type} bases up to item level {stage.item_level}")
     base = _best_base(pob, slot, cands, stage, score)
     affixes = pob.send("affixes", base=base, max_level=stage.item_level)["affixes"]
-    w = _Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage))
+    imp = base_implicits(next(c for c in cands if c["name"] == base), stage.roll) or []
+    w = _Work(slot, base, f"{stage.name} {slot}", _tier_choices(affixes, stage), implicits=tuple(imp))
     _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
     log(f"  {slot:<12} {base:<28} " + "; ".join(w.picked))
-    return SlotPlan(slot, base, w.picked, w.raw(), affix_info=_affix_info(w))
+    return SlotPlan(slot, base, w.picked, w.raw(), affix_info=_affix_info(w), implicits=list(w.implicits))

@@ -175,3 +175,12 @@ def test_cors_allows_the_website_only(client):
     assert preview.headers.get("access-control-allow-origin") == "https://abc123.whetstone.pages.dev"
     other = client.get("/health", headers={"Origin": "https://evil.example"})
     assert "access-control-allow-origin" not in other.headers
+
+
+def test_helper_skills_reach_the_guide(client):
+    """A buff kept beside the main skill (e.g. Charged Staff) must survive the API's spec schema."""
+    client.release.set()
+    j = client.post("/guides", json={"spec": {**SPEC, "with_skills": ["Tempest Flurry"]}}).json()
+    done = wait(client, j["id"])
+    assert done["result"]["spec"]["with_skills"] == ["Tempest Flurry"]
+    assert client.post("/guides", json={"spec": {**SPEC, "with_skills": ["Not A Skill"]}}).status_code == 400
