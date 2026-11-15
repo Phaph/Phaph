@@ -25,13 +25,39 @@ MODE_CONFIG = {
 }
 
 
+# The guard against impossible numbers. When Path of Building's maths breaks (something divides by zero or grows
+# without limit) a skill comes back infinite, not a number, or stuck at 2,147,483,647, the most a 32-bit counter
+# holds; poe.ninja's "2 billion DPS" builds are this. No real build is near it, so such a number scores zero and
+# can never win a search.
+IMPOSSIBLE_DPS = 2.0e9
+# One support gem multiplying damage by more than this is a calculation error, not a real interaction.
+IMPOSSIBLE_SUPPORT_GAIN = 1000
+
+
+def impossible(x) -> bool:
+    try:
+        x = float(x)
+    except (TypeError, ValueError):
+        return True
+    return x != x or x in (float("inf"), float("-inf")) or abs(x) >= IMPOSSIBLE_DPS
+
+
+def _sane(v: float) -> float:
+    return 0.0 if impossible(v) else v
+
+
+def broken_numbers(out: dict) -> list[str]:
+    """The damage fields in a PoB output that are impossible (see IMPOSSIBLE_DPS)."""
+    return [k for k, v in out.items() if ("DPS" in k or k.endswith("Dot")) and isinstance(v, (int, float)) and impossible(v)]
+
+
 def total_dps(out: dict) -> float:
     """All damage the build deals per second. PoB's Full DPS when available (every included
     skill, minion counts, damage over time); otherwise the main skill's hit + DoT + minion."""
     if out.get("FullDPS", 0) > 0:
-        return out["FullDPS"]
-    return (out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
-            + out.get("MinionDPS", 0) + out.get("MinionDotDPS", 0))
+        return _sane(out["FullDPS"])
+    return _sane(out.get("TotalDPS", 0) + out.get("TotalDotDPS", 0)
+                 + out.get("MinionDPS", 0) + out.get("MinionDotDPS", 0))
 
 
 def clear_score(out: dict) -> float:
@@ -44,7 +70,7 @@ def clear_score(out: dict) -> float:
                + out.get("MinionDPS", 0) + 0.5 * out.get("MinionDotDPS", 0))
     area = max(out.get("AreaOfEffectMod", 1) or 1, 0.1)
     projectiles = max(out.get("ProjectileCount", 1) or 1, 1)
-    return dps * area ** 0.5 * projectiles ** 0.5
+    return _sane(dps * area ** 0.5 * projectiles ** 0.5)
 
 
 AILMENT_FIELD = {"bleed": "BleedDPS", "poison": "PoisonDPS", "ignite": "IgniteDPS"}
@@ -77,6 +103,10 @@ def metric_for(mode: str, ailment: str | None = None) -> str:
 
 
 def score_of(out: dict, field_name: str) -> float:
+    return _sane(_score_of(out, field_name))
+
+
+def _score_of(out: dict, field_name: str) -> float:
     if field_name == "movement":
         # A movement skill: more uses per second, and cheaper to use. Damage doesn't matter here. Paying in life
         # (Bloodletting-style supports) is a cost too, not a saving.
@@ -163,7 +193,11 @@ def optimise_supports(
     for name in pool:
         res = pob.try_skill(group, [active, name], fields, keep_main=keep_main)
         if res["supported"].get(name):  # skip gems PoB says don't apply
-            solo[name] = score_of(res["output"], field_name)
+            sc = score_of(res["output"], field_name)
+            if base_score > 0 and sc > base_score * IMPOSSIBLE_SUPPORT_GAIN:
+                log(f"  {name}: skipped, a {sc / base_score:,.0f}x jump is a calculation error")
+                continue
+            solo[name] = sc
     ranked = sorted((n for n, s in solo.items() if s > base_score * (1 + min_gain)), key=lambda n: -solo[n])
     if shortlist is not None and shortlist_key not in shortlist and ranked:
         shortlist[shortlist_key] = ranked[: top_k * 2]

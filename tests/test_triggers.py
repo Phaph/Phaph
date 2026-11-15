@@ -78,3 +78,12 @@ def test_spell_candidates_are_plain_damaging_spells():
            {"name": "Wand Spell", "types": ["Spell"], "weapons": ["Wand"]},
            {"name": "Tempest Flurry", "types": ["Attack"], "weapons": ["Staff"]}]
     assert spell_candidates(cat) == ["Comet"]
+
+
+def test_impossible_numbers_never_score():
+    from optimize import broken_numbers, impossible, score_of, total_dps
+    assert impossible(2147483647) and impossible(float("inf")) and impossible(float("nan")) and impossible(None)
+    assert not impossible(36_000_000)
+    assert total_dps({"FullDPS": 2147483647}) == 0
+    assert score_of({"TotalDPS": float("inf")}, "total") == 0
+    assert broken_numbers({"TotalDPS": 2147483647, "Life": 5000, "FullDPS": 1e6}) == ["TotalDPS"]

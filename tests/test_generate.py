@@ -227,3 +227,32 @@ def test_deep_search_scouts_each_skills_own_ascendancies(monkeypatch):
     deep = g.generate({"deep": True}, workers=2, log=lambda *a: None)
     assert len(scouted) == g.DEEP_SKILLS
     assert deep["ranked"][0]["skill"] == "Skill23" and deep["ranked"][0]["ascendancy"] == "B4"
+
+
+def test_a_named_buff_is_kept_as_a_helper(monkeypatch):
+    """'charged staff' is a buff, not a damage skill: keep it in every build, lock its weapon, and pick the best
+    skill to pair it with, instead of dropping the weapon and then the skill."""
+    import generate as g
+
+    cat = [{"name": "Charged Staff", "types": ["Buff", "Spell"], "weapons": ["Staff"]},
+           {"name": "Tempest Flurry", "types": ["Attack", "Melee"], "weapons": ["Staff"]}]
+
+    class FakePoB:
+        def __init__(self, *a, **k): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def send(self, cmd, **k): return {"skills": cat}
+
+    seen = {}
+
+    def fake_once(req, workers, top_skills, log, progress):
+        seen.update(req)
+        return {"ranked": []}
+
+    monkeypatch.setattr(g, "PoB", FakePoB)
+    monkeypatch.setattr(g, "_generate_once", fake_once)
+    out = g.generate({"skill": "Charged Staff", "budget": "high"}, log=lambda *a: None)
+    assert seen.get("with_skill") == "Charged Staff" and not seen.get("skill")
+    assert seen.get("weapons") == ["Staff"]
+    assert out["relaxed"] and "kept in the build" in out["relaxed"][0]
+    assert out["searched"]["with_skill"] == "Charged Staff"

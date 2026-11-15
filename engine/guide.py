@@ -147,6 +147,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_level(stage.level)
         skill = spec["skill"]
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
+        helpers = list(spec.get("with_skills") or [])   # buffs the player asked for (e.g. Charged Staff)
+        for h in helpers:
+            pob.add_skill([h], main=False)
         boss_group = None
         if boss_skill:
             boss_group = pob.add_skill([boss_skill], main=False, full_dps=True)["group"]
@@ -266,7 +269,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             trigger.pop("group", None)
         alloc = pob.send("allocated")
         used = set(best.supports) | set(boss.supports if boss else [])
-        setups = kit_out(pob, group, spirit, utility, mobility[:1], map_metric, slots, used, log=quiet)
+        setups = kit_out(pob, group, spirit, utility + [{"skill": h} for h in helpers], mobility[:1], map_metric, slots,
+                         used, log=quiet)
         report("kit", f"Supports for {len(setups)} more skills")
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
                          + MINION_AILMENT_FIELDS)

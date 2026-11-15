@@ -713,7 +713,15 @@ function handlers.optimise_tree(cmd)
 	local function areaFactor(o)
 		return math.sqrt(math.max(o.AreaOfEffectMod or 1, 0.1)) * math.sqrt(math.max(o.ProjectileCount or 1, 1))
 	end
-	local function dps(o)
+	-- The guard (see optimize.IMPOSSIBLE_DPS): a broken calculation (infinite, not a number, or at the 32-bit
+	-- ceiling) scores zero, so the tree never chases it.
+	local function sane(v)
+		if v ~= v or v == math.huge or v == -math.huge or math.abs(v) >= 2.0e9 then return 0 end
+		return v
+	end
+	local dpsRaw
+	local function dps(o) return sane(dpsRaw(o)) end
+	dpsRaw = function(o)
 		if ailmentField then
 			-- Same as optimize.score_of: the ailment counts fully, hits a quarter, minions included.
 			local m = type(o.Minion) == "table" and o.Minion or {}

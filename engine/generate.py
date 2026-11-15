@@ -37,7 +37,8 @@ from dataclasses import asdict, dataclass, field
 
 from gear import Scorer, Stage, craft_gear, make_stage
 from jewels import proxy_jewel
-from optimize import MODE_CONFIG, ailment_dps, clear_score, hit_dps, metric_for, optimise_supports, score_of, total_dps
+from optimize import (MODE_CONFIG, ailment_dps, broken_numbers, clear_score, hit_dps, metric_for, optimise_supports,
+                      score_of, total_dps)
 from pob import PoB, PoBError
 
 # Types that make a skill a support act rather than a main damage skill.
@@ -189,6 +190,8 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         p.set_class(c.cls, c.ascendancy)
         p.set_level(stage.level)
         group = p.add_skill([c.skill], full_dps=c.is_minion)["group"]
+        if req.get("with_skill"):
+            p.add_skill([req["with_skill"]], main=False)
         mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
         p.set_config(**MODE_CONFIG[mode])
         metric = metric_for(mode, req.get("ailment"))
@@ -203,6 +206,8 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         p.auto_config(mode)
         best = optimise_supports(p, group, c.skill, slots=5, top_k=10, metric=metric, log=quiet)[0]
         out = p.calc(FIELDS)
+        if (bad := broken_numbers(out)):
+            raise ValueError(f"impossible damage from Path of Building ({', '.join(bad)}), a calculation bug: skipped")
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
         c.clear, c.ehp = clear_score(out), out.get("TotalEHP", 0)
         c.boss = score_of(out, metric_for("bossing", req.get("ailment")))
@@ -231,6 +236,8 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
         p.set_class(f.cls)
         p.set_level(stage.level)
         p.add_skill([f.skill, *f.supports], full_dps=f.is_minion)
+        if req.get("with_skill"):
+            p.add_skill([req["with_skill"]], main=False)
         p.set_config(**MODE_CONFIG[mode])
         craft_gear(p, stage, f.weapon_type, f.weapon_subtype, offhand_type=f.offhand_type, uniques=False,
                    metric=metric, log=quiet)
@@ -283,8 +290,19 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
 
     progress, if given, gets {"step": "round", ...} when a round starts, {"step": "candidate", ...} as each
     skill/weapon/ascendancy option is scored, and {"step": "relaxed", "label": note} when the request is loosened."""
-    tried = dict(req)
     notes: list[str] = []
+    # A locked skill that isn't a damage skill of its own (a buff like Charged Staff, a herald, an aura) can't be the
+    # main skill: keep it in every build as a helper, lock the weapon it needs, and find the best skill to pair it with.
+    if req.get("skill"):
+        with PoB() as p:
+            locked = next((s for s in p.send("skill_catalog")["skills"] if s["name"] == req["skill"]), None)
+        if locked and set(locked["types"]) & NOT_MAIN:
+            req = {**req, "skill": None, "with_skill": locked["name"]}
+            if locked.get("weapons") and not req.get("weapons"):
+                req["weapons"] = list(locked["weapons"])
+            notes.append(f"{locked['name']} boosts other skills rather than dealing damage itself, so it's kept in "
+                         f"the build and the best skill to use with it was picked.")
+    tried = dict(req)
     steps = _relax_steps(req)
     while True:
         try:
@@ -468,6 +486,8 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
     for key in ("ailment", "damage", "kinds", "goals"):
         if req.get(key):
             spec[key] = req[key]   # carried into the guide: theme metric, theme checks, goals
+    if req.get("with_skill"):
+        spec["with_skills"] = [req["with_skill"]]   # a buff the player asked for, kept beside the main skill
     same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
     # Compare single-target strength in the theme's own terms (a bleed build wants a better
     # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.
