@@ -53,3 +53,9 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 1. Update PoB as soon as it supports 1.0 and the Shadow.
 2. Run the Shadow dual wield dagger bleed build through guides and comparisons, at each budget.
 3. Check the results in game and tune.
+
+---
+
+# 1.0 update
+
+The plan and checklist for moving to PoE 2 1.0 (new tree, gems, items) without breaking the live site: `LAUNCH_1.0.md`.
