@@ -91,3 +91,12 @@ def test_every_crafted_item_is_legal(pob, monkeypatch, cls, wtype, wsub, off, at
         assert plans
         for p in plans:
             assert p.unique or len(p.affixes) <= 6
+
+
+def test_special_and_unlisted_bases_are_never_used(monkeypatch):
+    import gear
+    assert not gear.base_usable({"name": "Golden Mantle", "tags": ["armour", "demigods", "not_for_sale"], "implicit": ""})
+    monkeypatch.setattr(gear, "_AVAILABILITY", {"Dark Staff": 0, "Wyrm Quarterstaff": 2106})
+    assert not gear.base_usable({"name": "Dark Staff", "tags": ["staff"], "implicit": ""})
+    assert gear.base_usable({"name": "Wyrm Quarterstaff", "tags": ["staff"], "implicit": ""})
+    assert gear.base_usable({"name": "Not Yet Checked", "tags": ["staff"], "implicit": ""})

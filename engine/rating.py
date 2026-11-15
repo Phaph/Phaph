@@ -46,7 +46,7 @@ def anchors(values: list[float]) -> list[tuple[float, float]]:
 
 
 def place(value: float, pts: list[tuple[float, float]]) -> float:
-    if value <= 0:
+    if not value or value <= 0:   # missing (PoB gave no number) or zero
         return 1.0
     lv = math.log10(value)
     if lv <= pts[0][0]:

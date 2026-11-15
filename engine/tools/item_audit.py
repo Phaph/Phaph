@@ -67,12 +67,14 @@ def audit_stage(pob: PoB, g) -> dict:
     for have, need in ATTR:
         if (out.get(have) or 0) < (out.get(need) or 0):
             issues["attributes"].append(f"{have} {out.get(have, 0):.0f} < {out.get(need, 0):.0f} needed")
-    gems = sorted({gm for grp in pob.send("groups")["groups"] for gm in grp["gems"]})
-    info = pob.send("gem_info", names=gems)["gems"]
-    over = [n for n, i in info.items() if (i.get("req_level") or 0) > g.level]
+    over = {}
+    for grp in pob.send("groups")["groups"]:
+        for name, lv in zip(grp["gems"], grp.get("levels") or []):
+            if (lv.get("req") or 0) > g.level:
+                over[name] = (lv.get("level"), lv.get("req"))
     if over:
-        issues["gems"].append(f"{len(over)} gems at level 20 need a higher character level than {g.level}, e.g. "
-                              + ", ".join(f"{n} ({info[n]['req_level']})" for n in over[:3]))
+        issues["gems"].append(f"{len(over)} gems need a higher character level than {g.level}, e.g. "
+                              + ", ".join(f"{n} level {lv} (needs {req})" for n, (lv, req) in list(over.items())[:3]))
     return issues
 
 

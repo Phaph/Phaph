@@ -112,6 +112,10 @@ def craft_jewels(pob: PoB, stage: Stage, score: Scorer, uniques: bool = True, mi
                     used.add(u["name"])
                     pob.send("equip", slot=w.slot, raw=u["raw"], fields=SCORE_FIELDS)
 
+    blank = [w for w in works if not w.unique and not w.picked]
+    for w in blank:
+        pob.send("unequip", slot=w.slot)
+    works = [w for w in works if w not in blank]
     for w in works:
         if w.unique:
             log(f"  {w.slot:<12} UNIQUE {w.unique} ({w.price_note})")

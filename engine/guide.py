@@ -199,6 +199,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                     progress({"stage": stage_key, "step": "passive", "label": s["node"],
                               "ascendancy": bool(s.get("ascendancy")), "gain": round(s.get("gain_per_point", 0), 4)})
         report("tree", f"{sum(s['cost'] for s in tree['steps'])} passive points spent")
+        pob.send("balance_attributes")   # "+5 any attribute" passives go where the gear and gems need them
         pob.auto_config("mapping")
         first = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
         report("supports", ", ".join(first[0].supports) if first else "")
@@ -231,8 +232,11 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             utility = optimise_utility(pob, catalog, spec["weapon_type"], boss_metric, item_level=stage.item_level,
                                        swap_weapon=spec.get("boss_weapon_type") if boss_swap else None, log=quiet)
             pob.set_config(**MODE_CONFIG["mapping"])
-        # Passives, supports and spirit moved damage and resistances around: re-craft gear to fit.
-        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
+        # Passives, supports and spirit moved damage and resistances around: re-craft gear to fit. Attribute passives
+        # are balanced first, and this pass treats an unmet requirement as costly: an item you can't equip is useless.
+        pob.send("balance_attributes")
+        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals,
+                          log=quiet, attr_weight=0.05)
         if boss_swap:
             gear.append(boss_weapon())
         # Each socket's jewel for real, now the tree, gems and gear are settled.
@@ -273,6 +277,11 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         setups = kit_out(pob, group, spirit, utility + [{"skill": h} for h in helpers], mobility[:1], map_metric, slots,
                          used, log=quiet)
         report("kit", f"Supports for {len(setups)} more skills")
+        # Every gem is in now: balance attributes once more; if that isn't enough, use lower-level extra gems; and say
+        # plainly if anything is still short.
+        fit = pob.send("fit_gems")
+        short = fit.get("short") or {}
+        lowered = fit.get("lowered") or {}
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
                          + MINION_AILMENT_FIELDS)
         guide = StageGuide(
@@ -294,7 +303,12 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             damage_split=damage_split(stats),
         )
         if stage_key == "end":
-            guide.rating = rate(boss_dps or total_dps(stats), guide.clear, stats.get("TotalEHP", 0))
+            guide.rating = rate(boss_dps or total_dps(stats), guide.clear, stats.get("TotalEHP") or 0)
+        if isinstance(lowered, dict) and lowered:
+            guide.notes.append("Lower-level gems so the attributes work out: "
+                               + ", ".join(f"{n} level {lv}" for n, lv in sorted(lowered.items())))
+        for attr, gap in (short.items() if isinstance(short, dict) else []):
+            guide.notes.append(f"Needs {gap:.0f} more {attr} than this setup has: add {attr} on gear or swap a gem.")
         for h in sorted(metas):
             guide.notes.append(f"{h}: {skill} is socketed in it. How often it triggers isn't modelled yet, so the "
                                f"damage shown is {skill} cast normally.")

@@ -19,7 +19,7 @@ ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Glo
 JEWELLERY_SLOTS = {"Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 RES_CAP = 75
 SCORE_FIELDS = [*DPS_FIELDS, "TotalEHP", "Life", "FireResist", "ColdResist", "LightningResist",
-                "ChaosResist", *CLEAR_FIELDS, *GOAL_FIELDS]
+                "ChaosResist", *CLEAR_FIELDS, *GOAL_FIELDS, "Str", "Dex", "Int", "ReqStr", "ReqDex", "ReqInt"]
 # Affix groups that never matter for a build score.
 SKIP_GROUPS = {"ItemFoundRarityIncrease", "LocalAttributeRequirements", "LightRadius", "LocalLightRadius"}
 
@@ -110,6 +110,12 @@ def _value_at(text: str, roll: float) -> str:
     return re.sub(r"\((-?[\d.]+)-(-?[\d.]+)\)", sub, text)
 
 
+def _attr_deficit(out: dict) -> float:
+    """Attribute points the gear and gems need that the character doesn't have."""
+    return sum(max(0.0, (out.get(need) or 0) - (out.get(have) or 0))
+               for have, need in (("Str", "ReqStr"), ("Dex", "ReqDex"), ("Int", "ReqInt")))
+
+
 def _res_deficit(out: dict) -> float:
     return sum(max(0, RES_CAP - out.get(k, -60)) for k in ("FireResist", "ColdResist", "LightningResist")) \
         + 0.5 * max(0, -out.get("ChaosResist", 0))
@@ -117,7 +123,9 @@ def _res_deficit(out: dict) -> float:
 
 class Scorer:
     def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006, mode: str = "bossing",
-                 metric: str | None = None, goals=None):
+                 metric: str | None = None, goals=None, attr_weight: float | None = None):
+        if attr_weight is not None:
+            self.attr_weight = attr_weight
         self.goal_w = goal_weights(goals)
         self.def_weight = def_weight * self.goal_w["def_mult"]
         self.res_weight = res_weight
@@ -126,13 +134,18 @@ class Scorer:
         else:
             self.dps = clear_score if mode == "mapping" else total_dps
 
+    # Per attribute point a requirement is short by. Off by default: before the passive tree exists every build is
+    # short, and the tree's attribute passives fix most of it. The final gear pass (guide.py) turns it on.
+    attr_weight = 0.0
+
     def __call__(self, out: dict, base: dict) -> float:
-        d0 = max(self.dps(base), 1)
-        e0 = max(base.get("TotalEHP", 0), 1)
-        d = self.dps(out)
+        d0 = max(self.dps(base) or 0, 1)
+        e0 = max(base.get("TotalEHP") or 0, 1)
+        d = self.dps(out) or 0
         return ((d - d0) / d0
-                + self.def_weight * (out.get("TotalEHP", 0) - e0) / e0
+                + self.def_weight * ((out.get("TotalEHP") or 0) - e0) / e0
                 + self.res_weight * (_res_deficit(base) - _res_deficit(out))
+                + self.attr_weight * (_attr_deficit(base) - _attr_deficit(out))
                 + goal_terms(out, base, self.goal_w))
 
 
@@ -140,6 +153,31 @@ def _item_raw(title: str, base: str, lines: list[str], implicits=()) -> str:
     # PoB only applies a base's implicit when the item text lists it, under "Implicits: n".
     head = ["Rarity: Rare", title, base] + ([f"Implicits: {len(implicits)}", *implicits] if implicits else [])
     return "\n".join([*head, *lines])
+
+
+_AVAILABILITY: dict | None = None
+
+
+def base_available(name: str) -> bool:
+    """False for a base the current league's trade site has no listings of (data/base_availability.json, filled by
+    tools/fetch_bases.py): players can't find it, so we never tell them to buy it. Unknown bases count as available."""
+    global _AVAILABILITY
+    if _AVAILABILITY is None:
+        import json
+        from pathlib import Path
+        try:
+            _AVAILABILITY = json.loads((Path(__file__).parent / "data" / "base_availability.json").read_text(encoding="utf-8")).get("bases", {})
+        except (OSError, ValueError):
+            _AVAILABILITY = {}
+    return _AVAILABILITY.get(name, 1) > 0
+
+
+def base_usable(base: dict) -> bool:
+    """A base the crafter may use: a normal drop (not a Demigod / not-for-sale special base), with a crafter-safe
+    implicit, and listed in the current league."""
+    if set(base.get("tags") or []) & {"not_for_sale", "demigods"}:
+        return False
+    return base_implicits(base, 0.5) is not None and base_available(base["name"])
 
 
 def base_implicits(base: dict, roll: float) -> list[str] | None:
@@ -507,9 +545,17 @@ def unique_lines(pob: PoB, raw: str) -> tuple[list[str], list[str]]:
     """A unique's mods and chosen variants, as the game shows them."""
     try:
         res = pob.send("item_lines", raw=raw)
-        return list(res.get("implicits") or []) + list(res.get("explicits") or []), list(res.get("variants") or [])
+        mods, variants = list(res.get("implicits") or []) + list(res.get("explicits") or []), list(res.get("variants") or [])
     except PoBError:
-        return [], []
+        mods, variants = [], []
+    if not mods:
+        # Some uniques' mods are generated (Megalomaniac grants random notables), so PoB lists none: show the
+        # item text's own mod lines instead of an empty card.
+        import re
+        lines = raw.split("\n")
+        body = [ln for ln in lines[2:] if ln.strip() and not re.match(r"^[A-Za-z ]+:\s", ln) and not ln.startswith("Rarity")]
+        mods = [re.sub(r"\{[^}]*\}", "", ln).strip() for ln in body][:12]
+    return mods, variants
 
 
 def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scorer",
@@ -572,7 +618,7 @@ def _sub_ok(actual: str | None, wanted: str | None) -> bool:
 def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, per_subtype: int = 1) -> list[dict]:
     """Highest-level base of each defence subtype (or of the given subtype)."""
     pool = [b for b in bases if b["type"] == item_type and (sub_type is None or b.get("subType") == sub_type)
-            and not b["name"].startswith("Runeforged") and base_implicits(b, 0.5) is not None]
+            and not b["name"].startswith("Runeforged") and base_usable(b)]
     groups: dict[str, list[dict]] = {}
     for b in pool:
         groups.setdefault(b.get("subType") or "", []).append(b)
@@ -596,6 +642,7 @@ def craft_gear(
     metric: str | None = None,
     goals=None,
     log=print,
+    attr_weight: float | None = None,
 ) -> list[SlotPlan]:
     """Craft every slot for a build already loaded in `pob` (class, level, skills set).
 
@@ -603,7 +650,7 @@ def craft_gear(
     2. Resistances only where still needed, on items with room.
     3. Fill any room left with the best remaining affixes.
     """
-    score = Scorer(def_weight=def_weight, mode=mode, metric=metric, goals=goals)
+    score = Scorer(def_weight=def_weight, mode=mode, metric=metric, goals=goals, attr_weight=attr_weight)
     keep = {"ItemFoundRarityIncrease"} if goals and "rarity" in goals else set()
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
 
@@ -615,7 +662,7 @@ def craft_gear(
         weapon_slots.append(("Weapon 2", offhand_type, None))
     for slot, wtype, wsub in weapon_slots:
         cands = sorted((b for b in bases if b["type"] == wtype and _sub_ok(b.get("subType"), wsub)
-                        and not b["name"].startswith("Runeforged") and base_implicits(b, 0.5) is not None),
+                        and not b["name"].startswith("Runeforged") and base_usable(b)),
                        key=lambda b: -b["level"])[:6]
         if not cands:
             raise ValueError(f"No {wtype} bases up to item level {stage.item_level}")
@@ -634,7 +681,7 @@ def craft_gear(
         works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(res["affixes"], stage, keep), implicits=tuple(imp),
                            base_tags=frozenset(res.get("item_tags") or ())))
 
-    no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric, goals=goals)
+    no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric, goals=goals, attr_weight=attr_weight)
     for w in works:
         reserve = 0 if w.slot.startswith("Weapon") else 2
         _fill(pob, w, stage, no_res, stage.max_affixes - reserve, allow=lambda g: not _is_res_group(g))
@@ -674,7 +721,7 @@ def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_sub
     score = Scorer(def_weight=def_weight, mode=mode, metric=metric)
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
     cands = sorted((b for b in bases if b["type"] == weapon_type and _sub_ok(b.get("subType"), weapon_subtype)
-                    and not b["name"].startswith("Runeforged") and base_implicits(b, 0.5) is not None),
+                    and not b["name"].startswith("Runeforged") and base_usable(b)),
                    key=lambda b: -b["level"])[:6]
     if not cands:
         raise ValueError(f"No {weapon_type} bases up to item level {stage.item_level}")

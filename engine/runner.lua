@@ -360,12 +360,30 @@ function handlers.clear_skills(cmd)
 	return {}
 end
 
+-- A gem can't be above the level its level requirement allows at this character level (a level 55 character has no
+-- level 20 gems). Applied to every group the engine creates or changes.
+local function capGemLevels(group)
+	local charLevel = build.characterLevel or 100
+	for _, gem in ipairs(group.gemList or {}) do
+		local ge = gem.gemData and gem.gemData.grantedEffect
+		if ge and ge.levels and gem.level then
+			local best = 1
+			for lvl, d in pairs(ge.levels) do
+				if type(lvl) == "number" and lvl <= gem.level and (d.levelRequirement or 0) <= charLevel and lvl > best then best = lvl end
+			end
+			gem.level = best
+		end
+	end
+end
+
 -- text is PoB's paste format, one gem per line: "Name level/quality  count"
 function handlers.add_skill(cmd)
 	local before = #build.skillsTab.socketGroupList
 	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
 	local index = #build.skillsTab.socketGroupList
 	if index == before then error("no gems recognised in: " .. cmd.text) end
+	capGemLevels(build.skillsTab.socketGroupList[index])
+	build.skillsTab:ProcessSocketGroup(build.skillsTab.socketGroupList[index])
 	-- Full DPS costs a second calculation pass, so it is only switched on for builds that
 	-- need it (several damage sources or minion counts); see set_full_dps.
 	build.skillsTab.socketGroupList[index].includeInFullDPS = cmd.full_dps == true
@@ -435,9 +453,15 @@ end
 function handlers.groups(cmd)
 	local out = {}
 	for i, g in ipairs(build.skillsTab.socketGroupList) do
-		local gems = {}
-		for _, gem in ipairs(g.gemList) do table.insert(gems, gem.nameSpec) end
-		table.insert(out, { group = i, gems = gems, main = build.mainSocketGroup == i })
+		local gems, levels = {}, {}
+		for _, gem in ipairs(g.gemList) do
+			table.insert(gems, gem.nameSpec)
+			local ge = gem.gemData and gem.gemData.grantedEffect
+			local d = ge and ge.levels and ge.levels[gem.level or 1]
+			-- Each gem's level here, and the character level that gem level needs.
+			table.insert(levels, { level = gem.level, req = d and d.levelRequirement or 0 })
+		end
+		table.insert(out, { group = i, gems = gems, levels = levels, main = build.mainSocketGroup == i })
 	end
 	return { groups = out }
 end
@@ -456,6 +480,7 @@ function handlers.try_skill(cmd)
 		if old.gemList[i] and old.gemList[i].count then gem.count = old.gemList[i].count end
 	end
 	list[cmd.group] = new
+	capGemLevels(new)
 	if not cmd.keep_main then build.mainSocketGroup = cmd.group end
 	-- Resolve gems and global gem counts before recalculating, otherwise the
 	-- calculation sees the previous gem list and results lag one step behind.
@@ -717,6 +742,110 @@ local function equipRaw(slotName, raw)
 	if oldId and oldId ~= 0 and build.itemsTab.items[oldId] then build.itemsTab:DeleteItem(build.itemsTab.items[oldId], true) end
 	build.itemsTab:PopulateSlots()
 	return true
+end
+
+-- Attribute requirements: the tree's "+5 to any Attribute" passives are switched from attributes with points to
+-- spare to the ones the gear and gems are short of. Returns what is still short afterwards.
+local ATTRS = { { name = "Strength", have = "Str", need = "ReqStr" }, { name = "Dexterity", have = "Dex", need = "ReqDex" },
+	{ name = "Intelligence", have = "Int", need = "ReqInt" } }
+local function attributeOf(spec, id)
+	local node = spec.hashOverrides[id] or spec.nodes[id]
+	local text = table.concat(node and node.sd or {}, " ") .. " " .. (node and node.dn or "")
+	for i, a in ipairs(ATTRS) do if text:find(a.name) then return i end end
+	return nil
+end
+local function optionIndex(id, attr)
+	local base = build.spec.tree.nodes[id]
+	for i, opt in ipairs(base and base.options or {}) do
+		local text = table.concat(opt.sd or {}, " ") .. " " .. (opt.dn or "")
+		if text:find(ATTRS[attr].name) then return i end
+	end
+	return nil
+end
+function handlers.balance_attributes(cmd)
+	local spec = build.spec
+	local switched = 0
+	for _ = 1, 400 do
+		build.buildFlag = true
+		frame()
+		local out = build.calcsTab.mainOutput
+		local short, worst, spare = nil, 0, {}
+		for i, a in ipairs(ATTRS) do
+			local gap = (out[a.need] or 0) - (out[a.have] or 0)
+			if gap > worst then short, worst = i, gap end
+			spare[i] = (out[a.have] or 0) - (out[a.need] or 0)
+		end
+		if not short then break end
+		-- A node from an attribute with at least 5 to spare (one node's worth), the one with the most to spare first.
+		local moved = false
+		local order = { 1, 2, 3 }
+		table.sort(order, function(x, y) return spare[x] > spare[y] end)
+		for _, from in ipairs(order) do
+			if from ~= short and spare[from] >= 5 then
+				for id, node in pairs(spec.allocNodes) do
+					if node.isAttribute and attributeOf(spec, id) == from then
+						local opt = optionIndex(id, short)
+						if opt then
+							spec:SwitchAttributeNode(id, opt)
+							moved = true
+							switched = switched + 1
+							break
+						end
+					end
+				end
+			end
+			if moved then break end
+		end
+		if not moved then break end
+		spec:BuildAllDependsAndPaths()
+	end
+	spec:BuildAllDependsAndPaths()
+	spec:AddUndoState()
+	build.buildFlag = true
+	frame()
+	local out = build.calcsTab.mainOutput
+	local short = {}
+	for _, a in ipairs(ATTRS) do
+		local gap = (out[a.need] or 0) - (out[a.have] or 0)
+		if gap > 0 then short[a.have] = gap end
+	end
+	return { switched = switched, short = short }
+end
+
+-- Last resort for attribute requirements: lower the level of the gems that need the short attribute, one level at a
+-- time, extra skills first (movement, auras, curses) and the main skill's group last. In game you'd simply use a
+-- lower-level gem. Returns the gems lowered and anything still short.
+function handlers.fit_gems(cmd)
+	local short = handlers.balance_attributes({}).short or {}
+	local lowered, itemBound = {}, {}
+	local ATTR = { Str = { field = "reqStr", out = "ReqStr" }, Dex = { field = "reqDex", out = "ReqDex" }, Int = { field = "reqInt", out = "ReqInt" } }
+	for _ = 1, 300 do
+		local attr
+		for k in pairs(short) do if not itemBound[k] then attr = k break end end
+		if not attr then break end
+		local need = build.calcsTab.mainOutput[ATTR[attr].out] or 0
+		-- The gems that set this requirement (their own requirement is the highest); extra skills before the main one.
+		local best, bestKey
+		for gi, g in ipairs(build.skillsTab.socketGroupList) do
+			for _, gem in ipairs(g.gemList or {}) do
+				local req = gem[ATTR[attr].field] or 0
+				if req >= need and req > 0 and (gem.level or 1) > 1 then
+					local key = ((gi == build.mainSocketGroup) and 1000 or 0) - (gem.level or 1)
+					if not best or key < bestKey then best, bestKey = gem, key end
+				end
+			end
+		end
+		if not best then
+			itemBound[attr] = true   -- an item sets this requirement, not a gem: lowering gems won't help
+		else
+			best.level = best.level - 1
+			lowered[best.nameSpec] = best.level
+			for _, g in ipairs(build.skillsTab.socketGroupList) do build.skillsTab:ProcessSocketGroup(g) end
+			build.skillsTab:UpdateGlobalGemCountAssignments()
+			short = handlers.balance_attributes({}).short or {}
+		end
+	end
+	return { lowered = lowered, short = short }
 end
 
 function handlers.points(cmd)

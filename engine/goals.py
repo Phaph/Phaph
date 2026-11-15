@@ -24,7 +24,7 @@ def weights(goals) -> dict:
         raise ValueError(f"Unknown goals {sorted(unknown)}. Options: {sorted(GOAL_LABELS)}")
     return {
         "movement": 0.6 if "movement" in g else 0.0,
-        "rarity": 0.15 if "rarity" in g else 0.0,
+        "rarity": 0.4 if "rarity" in g else 0.0,   # asked for loot: +15% rarity is worth about +6% damage
         "def_mult": 2.5 if "tanky" in g else 1.0,
     }
 
