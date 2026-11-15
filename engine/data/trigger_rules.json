@@ -1,0 +1,25 @@
+{
+  "_about": "Rules for Cast on X (meta gem) energy, which Path of Building does not model. Edit numbers here, not in code. 'verified' turns true per rule once an in-game check matches (see engine/tools/trigger_check.py).",
+  "monster_power": {
+    "normal": 1, "magic": 2, "rare": 5, "unique_boss": 20,
+    "_source": "community figures (Mobalytics monster power guide, poe2wiki): base power x rarity, unique bosses 20",
+    "verified": false
+  },
+  "threshold_scaling": {
+    "_about": "Energy per crit is multiplied by (crit damage / enemy ailment threshold), at most `cap`.",
+    "cap": 1.0,
+    "mapping_ratio": 1.0,
+    "_mapping_note": "Map monsters: crits usually deal more than a normal monster's whole ailment threshold, so the ratio is taken as the cap.",
+    "_source": "poe2db Cast on Critical text: 'modified by the percentage of the enemy's Ailment Threshold the Critical Hit will deal'. The cap is our assumption.",
+    "verified": false
+  },
+  "cast_on_crit": {
+    "gem": "Cast on Critical",
+    "energy_per_power": 1.0,
+    "energy_increased_per_level": 3,
+    "max_energy_per_second_of_cast_time": 100,
+    "triggered_damage_more": -20,
+    "_source": "Path of Building gem data (MetaCastOnCritPlayer, SupportMetaCastOnCritPlayer) and poe2db",
+    "verified": false
+  }
+}

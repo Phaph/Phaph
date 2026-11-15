@@ -516,6 +516,9 @@ end
 
 function handlers.set_main(cmd)
 	build.mainSocketGroup = cmd.group
+	-- Optional: which active skill of the group is the main one (e.g. a spell socketed in a Cast on X gem).
+	local g = build.skillsTab.socketGroupList[cmd.group]
+	if cmd.skill and g then g.mainActiveSkill = cmd.skill; g.mainActiveSkillCalcs = cmd.skill end
 	build.buildFlag = true
 	frame()
 	return { main_skill = mainSkillName() }
@@ -1083,6 +1086,26 @@ function handlers.skill_catalog(cmd)
 	end
 	table.sort(out, function(a, b) return a.name < b.name or (a.name == b.name and a.id < b.id) end)
 	return { skills = out }
+end
+
+-- Base cast time and cooldown of gems by name (what Cast on X uses for its energy: base, not modified, cast time).
+function handlers.gem_info(cmd)
+	local out = {}
+	for _, name in ipairs(cmd.names or {}) do
+		for _, gem in pairs(data.gems) do
+			if gem.name == name and gem.grantedEffect then
+				local ge = gem.grantedEffect
+				local lvl = ge.levels and (ge.levels[cmd.level or 20] or ge.levels[#ge.levels]) or {}
+				out[name] = { cast_time = ge.castTime or 0, cooldown = lvl.cooldown, types = {},
+					support = (ge.support or (gem.tags and gem.tags.support)) and true or false }
+				for k in pairs(ge.skillTypes or {}) do
+					for n, v in pairs(SkillType) do if v == k then table.insert(out[name].types, n) end end
+				end
+				break
+			end
+		end
+	end
+	return { gems = out }
 end
 
 function handlers.list_classes(cmd)
