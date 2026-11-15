@@ -26,6 +26,7 @@ from dataclasses import asdict, dataclass, field
 from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
 from jewels import craft_jewels, proxy_jewel
 from triggers import best_cast_on_crit, cast_on_crit, find_groups
+from generate import add_helpers
 from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports,
                       score_of, total_dps)
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
@@ -147,9 +148,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_level(stage.level)
         skill = spec["skill"]
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
-        helpers = list(spec.get("with_skills") or [])   # buffs the player asked for (e.g. Charged Staff)
-        for h in helpers:
-            pob.add_skill([h], main=False)
+        helpers = list(spec.get("with_skills") or [])   # skills the player asked for (Charged Staff, Cast on X)
+        metas = {s["name"] for s in catalog if "Meta" in s["types"]} & set(helpers)
+        add_helpers(pob, {"with_skills": helpers}, skill, metas=metas)
         boss_group = None
         if boss_skill:
             boss_group = pob.add_skill([boss_skill], main=False, full_dps=True)["group"]
@@ -294,6 +295,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         )
         if stage_key == "end":
             guide.rating = rate(boss_dps or total_dps(stats), guide.clear, stats.get("TotalEHP", 0))
+        for h in sorted(metas):
+            guide.notes.append(f"{h}: {skill} is socketed in it. How often it triggers isn't modelled yet, so the "
+                               f"damage shown is {skill} cast normally.")
         for issue in guide.theme_issues:
             guide.notes.append("Off theme: " + issue)
         for k, label in (("FireResist", "fire"), ("ColdResist", "cold"), ("LightningResist", "lightning")):

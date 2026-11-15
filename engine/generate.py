@@ -139,6 +139,8 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
             continue
         if req.get("_attack_only") and "Attack" not in types:
             continue   # a weapon buff (e.g. Charged Staff) only helps attacks made with that weapon
+        if req.get("_spell_only") and "Spell" not in types:
+            continue   # a Cast on X gem triggers spells
         if not weapon_options(s, req):
             continue
         seen.add(s["name"])
@@ -192,8 +194,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         p.set_class(c.cls, c.ascendancy)
         p.set_level(stage.level)
         group = p.add_skill([c.skill], full_dps=c.is_minion)["group"]
-        if req.get("with_skill"):
-            p.add_skill([req["with_skill"]], main=False)
+        add_helpers(p, req, c.skill)
         mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
         p.set_config(**MODE_CONFIG[mode])
         metric = metric_for(mode, req.get("ailment"))
@@ -225,6 +226,13 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
     return c
 
 
+def add_helpers(p, req: dict, main_skill: str, metas=None) -> None:
+    """Put the player's helper skills in the build: a Cast on X gem with the main spell socketed in it, others alone."""
+    metas = set(req.get("_metas") or []) if metas is None else set(metas)
+    for h in req.get("with_skills") or []:
+        p.add_skill([main_skill, h] if h in metas else [h], main=False)
+
+
 def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, req: dict,
                        keep: int = DEEP_ASCS) -> list[tuple[str, str]]:
     """The `keep` ascendancies that suit one skill best. Gear is crafted once; each ascendancy then only
@@ -238,8 +246,7 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
         p.set_class(f.cls)
         p.set_level(stage.level)
         p.add_skill([f.skill, *f.supports], full_dps=f.is_minion)
-        if req.get("with_skill"):
-            p.add_skill([req["with_skill"]], main=False)
+        add_helpers(p, req, f.skill)
         p.set_config(**MODE_CONFIG[mode])
         craft_gear(p, stage, f.weapon_type, f.weapon_subtype, offhand_type=f.offhand_type, uniques=False,
                    metric=metric, log=quiet)
@@ -293,20 +300,38 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
     progress, if given, gets {"step": "round", ...} when a round starts, {"step": "candidate", ...} as each
     skill/weapon/ascendancy option is scored, and {"step": "relaxed", "label": note} when the request is loosened."""
     notes: list[str] = []
-    # A locked skill that isn't a damage skill of its own (a buff like Charged Staff, a herald, an aura) can't be the
-    # main skill: keep it in every build as a helper, lock the weapon it needs, and find the best skill to pair it with.
-    if req.get("skill"):
+    # Every skill the player named is a requirement. A damage skill is the main skill; one that boosts others instead
+    # (Cast on X, a buff like Charged Staff, a herald, an aura) is kept in every candidate beside it:
+    #   - a Cast on X gem gets the main spell socketed into it, so the main skill must be a spell;
+    #   - a weapon buff locks its weapon and pairs only with attacks made with it.
+    helpers = list(req.get("with_skills") or [])
+    if req.get("skill") or helpers:
         with PoB() as p:
-            locked = next((s for s in p.send("skill_catalog")["skills"] if s["name"] == req["skill"]), None)
-        if locked and set(locked["types"]) & NOT_MAIN:
-            req = {**req, "skill": None, "with_skill": locked["name"]}
-            if locked.get("weapons"):
-                # It works through a weapon (Charged Staff charges a quarterstaff): pair it with attacks that use one.
+            cat = {s["name"]: s for s in p.send("skill_catalog")["skills"]}
+        if req.get("skill") and set(cat.get(req["skill"], {}).get("types", [])) & NOT_MAIN:
+            helpers.insert(0, req["skill"])
+            req = {**req, "skill": None}
+        req = dict(req)
+        metas = [h for h in helpers if "Meta" in cat.get(h, {}).get("types", [])]
+        for h in helpers:
+            info = cat.get(h, {})
+            if h in metas:
+                continue
+            if info.get("weapons"):
                 if not req.get("weapons"):
-                    req["weapons"] = list(locked["weapons"])
+                    req["weapons"] = list(info["weapons"])
                 req["_attack_only"] = True
-            notes.append(f"{locked['name']} boosts other skills rather than dealing damage itself, so it's kept in "
-                         f"the build and the best skill to use with it was picked.")
+        if metas:
+            req["_spell_only"] = True
+        if helpers:
+            req["with_skills"], req["_metas"] = helpers, metas
+            for h in helpers:
+                if h in metas:
+                    notes.append(f"{h} is kept with the main spell socketed in it. How often it triggers isn't modelled "
+                                 f"yet, so the damage shown is the spell cast normally.")
+                else:
+                    notes.append(f"{h} boosts other skills rather than dealing damage itself, so it's kept in the build "
+                                 f"and the best skill to use with it was picked.")
     tried = dict(req)
     steps = _relax_steps(req)
     while True:
@@ -491,8 +516,8 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
     for key in ("ailment", "damage", "kinds", "goals"):
         if req.get(key):
             spec[key] = req[key]   # carried into the guide: theme metric, theme checks, goals
-    if req.get("with_skill"):
-        spec["with_skills"] = [req["with_skill"]]   # a buff the player asked for, kept beside the main skill
+    if req.get("with_skills"):
+        spec["with_skills"] = list(req["with_skills"])   # skills the player asked for, kept beside the main skill
     same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
     # Compare single-target strength in the theme's own terms (a bleed build wants a better
     # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.

@@ -83,3 +83,13 @@ def test_normal_prompts_stay_normal():
     for text in ("lightning minion build for a monk, 5 div", "best build for mapping", "cheap fast bleed build",
                  "fireball witch that can boss"):
         assert not parse(text).get("deep"), text
+
+
+def test_every_named_skill_is_kept():
+    cat = {**CATALOG, "skills": CATALOG["skills"] + ["Cast on Elemental Ailment", "Charged Staff"],
+           "helper_skills": ["Cast on Elemental Ailment", "Charged Staff"]}
+    r = parse_prompt("warrior spark cast on elemental ailment", cat)["request"]
+    assert r["skill"] == "Spark" and r["with_skills"] == ["Cast on Elemental Ailment"]
+    assert "spell" not in r["kinds"], "'cast' inside a skill name isn't a kind of skill"
+    r = parse_prompt("charged staff monk", cat)["request"]
+    assert not r.get("skill") and r["with_skills"] == ["Charged Staff"]

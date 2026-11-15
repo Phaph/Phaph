@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-14.12"
+ENGINE_VERSION = "2026-11-14.13"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -84,6 +84,7 @@ class GenerateRequest(BaseModel):
     budget: Budget = "high"
     mode: Literal["balanced", "mapping", "bossing"] = "balanced"
     goals: list[Literal["movement", "rarity", "tanky"]] = Field(default_factory=list)  # beyond damage
+    with_skills: list[str] = Field(default_factory=list, max_length=3)   # kept beside the main skill (Cast on X, buffs)
     deep: bool = False   # deep search: wider net, each skill on its own best ascendancies (slower)
 
     model_config = {"populate_by_name": True}
@@ -115,6 +116,9 @@ def load_catalog() -> dict:
     with PoB() as pob:
         classes = pob.list_classes()
         skills = sorted(g["name"] for g in pob.list_gems("active"))
+        from generate import NOT_MAIN
+        # Skills that boost another rather than dealing damage themselves (Cast on X, buffs, auras, heralds).
+        helper_skills = sorted({s["name"] for s in pob.send("skill_catalog")["skills"] if set(s["types"]) & NOT_MAIN})
         bases = pob.send("bases")["bases"]
         version = pob.version
     weapon_types: dict[str, set] = {}
@@ -129,6 +133,7 @@ def load_catalog() -> dict:
         "pob_version": version,
         "classes": sorted(classes, key=lambda c: c["name"]),
         "skills": skills,
+        "helper_skills": helper_skills,
         "weapon_types": {k: sorted(v) for k, v in sorted(weapon_types.items())},
         "budgets": [{"key": k, "label": BUDGETS[k].label} for k in BUDGET_ORDER],
         "stages": [{"key": k, "label": v[0], "level": v[1]} for k, v in STAGE_DEFS.items()],
@@ -178,6 +183,9 @@ def validate_generate(req: GenerateRequest, catalog: dict) -> None:
         raise HTTPException(400, f"Unknown ascendancy '{req.ascendancy}'")
     if req.skill and req.skill not in catalog["skills"]:
         raise HTTPException(400, f"Unknown skill '{req.skill}'")
+    for w in req.with_skills:
+        if w not in catalog["skills"]:
+            raise HTTPException(400, f"Unknown skill '{w}'")
     for w in req.weapons:
         if w not in catalog["weapon_types"]:
             raise HTTPException(400, f"Unknown weapon type '{w}'")

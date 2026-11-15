@@ -252,10 +252,42 @@ def test_a_named_buff_is_kept_as_a_helper(monkeypatch):
     monkeypatch.setattr(g, "PoB", FakePoB)
     monkeypatch.setattr(g, "_generate_once", fake_once)
     out = g.generate({"skill": "Charged Staff", "budget": "high"}, log=lambda *a: None)
-    assert seen.get("with_skill") == "Charged Staff" and not seen.get("skill")
+    assert seen.get("with_skills") == ["Charged Staff"] and not seen.get("skill")
     assert seen.get("weapons") == ["Staff"] and seen.get("_attack_only")
     # ...so a staff spell can't be paired with it, only staff attacks.
     names = [x["name"] for x in g.main_skills(cat + [{"name": "Hexblast", "types": ["Spell", "Damage"], "weapons": []}], seen)]
     assert names == ["Tempest Flurry"]
     assert out["relaxed"] and "kept in the build" in out["relaxed"][0]
-    assert out["searched"]["with_skill"] == "Charged Staff"
+    assert out["searched"]["with_skills"] == ["Charged Staff"]
+
+
+def test_named_spell_with_a_cast_on_x_gem(monkeypatch):
+    """'warrior spark cast on elemental ailment': Spark stays the main skill, the Cast on X gem is kept with Spark
+    socketed in it, and only spells can be the main skill when a Cast on X gem is asked for."""
+    import generate as g
+
+    cat = [{"name": "Spark", "types": ["Spell", "Lightning"], "weapons": []},
+           {"name": "Cast on Elemental Ailment", "types": ["Meta", "Buff", "Persistent"], "weapons": []},
+           {"name": "Tempest Flurry", "types": ["Attack", "Melee"], "weapons": ["Staff"]}]
+
+    class FakePoB:
+        def __init__(self, *a, **k): pass
+        def __enter__(self): return self
+        def __exit__(self, *a): return False
+        def send(self, cmd, **k): return {"skills": cat}
+
+    seen = {}
+    monkeypatch.setattr(g, "PoB", FakePoB)
+    monkeypatch.setattr(g, "_generate_once", lambda req, *a: seen.update(req) or {"ranked": []})
+    out = g.generate({"skill": "Spark", "with_skills": ["Cast on Elemental Ailment"], "class": "Warrior"}, log=lambda *a: None)
+    assert seen["skill"] == "Spark" and seen["with_skills"] == ["Cast on Elemental Ailment"]
+    assert seen["_metas"] == ["Cast on Elemental Ailment"] and seen["_spell_only"]
+    assert [x["name"] for x in g.main_skills(cat, {"_spell_only": True})] == ["Spark"]
+    assert "socketed" in out["relaxed"][0]
+
+    groups = []
+
+    class Rec:
+        def add_skill(self, gems, main=True, **k): groups.append(gems)
+    g.add_helpers(Rec(), seen, "Spark")
+    assert groups == [["Spark", "Cast on Elemental Ailment"]]

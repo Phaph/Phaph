@@ -111,11 +111,26 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
                 break
 
     # Names from PoB: skill (longest first so "Lightning Arrow" beats "Lightning"), ascendancy, class.
+    # Every skill named, longest first ("Lightning Arrow" before "Lightning"). Each match is blanked out of the
+    # text so its words aren't read again ("cast" in "Cast on Elemental Ailment" is not "Kind: spell"). The first
+    # damage skill becomes the locked main skill; Cast on X gems, buffs, auras and heralds are kept beside it.
+    helper_names = set(catalog.get("helper_skills", []))
+    named = []
     for skill in sorted(catalog.get("skills", []), key=len, reverse=True):
         if (m := _find(re.escape(skill.lower()), t)):
+            named.append((m.start(), skill, m.group(0)))
+            t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
+    named.sort()
+    helpers = []
+    for _, skill, text in named:
+        if skill not in helper_names and not req.get("skill"):
             req["skill"] = skill
-            found.append((m.group(0), f"Skill: {skill}"))
-            break
+            found.append((text, f"Skill: {skill}"))
+        else:
+            helpers.append(skill)
+            found.append((text, f"With: {skill}"))
+    if helpers:
+        req["with_skills"] = helpers[:3]
     for c in catalog.get("classes", []):
         for asc in c.get("ascendancies", []):
             if not req.get("ascendancy") and (m := _find(re.escape(asc.lower()) + "s?", t)):
