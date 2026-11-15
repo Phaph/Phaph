@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-15.3"
+ENGINE_VERSION = "2026-11-15.4"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -315,7 +315,23 @@ def icons():
 
 @app.get("/health")
 def health(request: Request):
-    return {"ok": True, "pob_version": request.app.state.catalog["pob_version"]}
+    commit = ROOT / "engine" / "vendor" / "POB_COMMIT"   # written by engine/setup.sh
+    return {"ok": True, "pob_version": request.app.state.catalog["pob_version"], "engine": ENGINE_VERSION,
+            "pob_commit": commit.read_text().strip() if commit.exists() else None, "notice": site_notice()}
+
+
+# A notice shown at the top of the site, switched on and off without a redeploy (LAUNCH_1.0.md):
+#   docker exec phaph-app-1 sh -c 'echo "Path of Exile 2 1.0 is out..." > /data/notice.txt'
+#   docker exec phaph-app-1 sh -c 'rm /data/notice.txt'
+NOTICE_FILE = Path(os.environ.get("NOTICE_FILE", "/data/notice.txt"))
+
+
+def site_notice() -> str | None:
+    try:
+        text = NOTICE_FILE.read_text(encoding="utf-8").strip()[:400]
+    except OSError:
+        return None
+    return text or None
 
 
 @app.get("/catalog")

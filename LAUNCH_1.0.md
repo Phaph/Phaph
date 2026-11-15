@@ -39,15 +39,39 @@ Any of these can be renamed or removed in 1.0.
 
 ## Before 1.0 (now to Dec 11)
 
-| # | Step | Who |
+| # | Step | Status |
 |---|---|---|
-| 1 | **Pin PoB.** Set `POB_REF` in `engine/setup.sh` to the commit running today, and show it on the site's health check. | Claude |
-| 2 | **Game-data preflight tool** (`tools/preflight.py`). It checks that every name and stat our code relies on exists in the installed PoB: ailment support tiers, skill tags, weapon types, jewel bases, trigger gem names, aliases, focus and output stats, classes and ascendancies, and that the unique prices, pictures and base names match PoB's lists. It prints whatever is missing. Run it once now; it should come back clean. | Claude |
-| 3 | **Catalog snapshot and diff tool** (`tools/catalog_diff.py`). Save today's skills, supports, uniques, bases and tree summary. On 1.0, it lists what is new, removed or changed, so new skill types and mechanics get prompt words and nothing quietly disappears. | Claude |
-| 4 | **Baseline results.** Save today's numbers: the item audit, a sweep of every main skill (DPS, or why it failed), and about 20 test prompts run through `tools/check_prompt.py` (bleed crossbow crit, minions, CoC and so on). This is what 1.0 gets compared against. | Claude |
-| 5 | **Staging container.** `docker-compose.staging.yml` runs a second app on another port, not on the tunnel, with its own job database. | Claude |
-| 6 | **Day-one site notice.** A banner that is switched on by a setting: "Path of Exile 2 1.0 is out. Builds are being updated; results are from 0.x until then." No redeploy needed to turn it on or off. | Claude |
-| 7 | **Your in-game PoB codes.** Two or three characters to compare against on 1.0. `tools/accuracy_check.py` already does the comparison. | Kyle |
+| 1 | **Pin PoB.** `POB_REF` in `engine/setup.sh` is commit `601768bd` (PoB 0.23.1, dev on 2026-11-10), the same one live runs. `/health` shows `pob_commit`. | Done |
+| 2 | **Preflight** (`engine/tools/preflight.py`, also run by `tests/test_preflight.py`). It checks every name and stat our code relies on against the installed PoB. On today's PoB: 0 errors. It also gives 4 warnings about stale picture names (companion gems, renamed uniques) that are harmless. | Done |
+| 3 | **Catalog snapshot and diff** (`engine/tools/catalog_diff.py`). The snapshot of today's PoB is in `engine/data/catalog_snapshot.json`: 961 gems, 443 uniques, 1505 bases, 1385 tree nodes. `diff` lists what's new, removed or reworked, plus skill tags no prompt word reaches. | Done |
+| 4 | **Baseline** (`engine/tools/baseline.py`): 15 fixed prompts end to end, saved to `engine/data/baseline/prompts_0.23.1.json`, then the sweep of every ascendancy to `sweep_0.23.1.json`. `baseline.py compare old new` flags anything a player didn't get. The item audit baseline is from 2026-11-15 (see below). | Running |
+| 5 | **Staging** (`docker-compose.staging.yml`): a second app on http://127.0.0.1:8001, off the tunnel, with its own database, built from any PoB commit. | Done |
+| 6 | **Site notice.** A banner at the top of the page, read from `/data/notice.txt` on every health check, so it needs no redeploy. | Done |
+| 7 | **Your in-game PoB codes.** Two or three characters to compare against on 1.0, using `engine/tools/accuracy_check.py`. | Kyle |
+
+Item audit on 2026-11-15: every item in all 8 builds is real and readable. The issues left are attribute shortfalls, mostly at leveling, in 5 of 8 builds (e.g. Twister Amazon leveling Int 33 of 86 needed). The crafter doesn't yet enforce a unique's "Limited to: N".
+
+### Commands
+
+```bash
+# Staging with a new PoB (1.0): build, open http://127.0.0.1:8001, tear down
+POB_REF=<commit> docker compose -f docker-compose.staging.yml -p phaph-staging up -d --build
+docker compose -f docker-compose.staging.yml -p phaph-staging down
+
+# Checks, inside the staging container (docker exec -it phaph-staging-app-1 sh, then cd engine)
+python tools/preflight.py
+python tools/catalog_diff.py diff
+python tools/baseline.py run && python tools/baseline.py compare data/baseline/prompts_0.23.1.json data/baseline/prompts_<new>.json
+
+# Site notice on / off (live)
+docker exec phaph-app-1 sh -c 'echo "Path of Exile 2 1.0 is out. Builds are being updated for it; results are from 0.4 until then." > /data/notice.txt'
+docker exec phaph-app-1 sh -c 'rm /data/notice.txt'
+
+# Before switching live: keep the old image for rollback
+docker tag poe2-optimizer poe2-optimizer:pre-1.0
+```
+
+To roll back: `docker tag poe2-optimizer:pre-1.0 poe2-optimizer`, then `docker compose up -d app` (no `--build`).
 
 ## Launch week, in order
 

@@ -10,11 +10,12 @@ the build), then checks each item:
 and each stage:
   attributes Str / Dex / Int meet what the gear and gems require
   gems       no gem above the level the character's level allows
-  uniques    no unique twice (several are "limited to 1")
+  uniques    no unique more times than its "Limited to: N" allows
 """
 import argparse
 import json
 import os
+import re
 import sys
 import time
 from concurrent.futures import ThreadPoolExecutor
@@ -43,8 +44,11 @@ def audit_stage(pob: PoB, g) -> dict:
     issues = {"real": [], "stats": [], "readable": [], "attributes": [], "gems": [], "uniques": []}
     items = list(g.gear) + list(g.jewels or [])
     names = [p.unique.split(",")[0] for p in items if p.unique]
-    for n in {x for x in names if names.count(x) > 1}:
-        issues["uniques"].append(f"{n} twice")
+    for n in sorted({x for x in names if names.count(x) > 1}):
+        raw = next(p.raw for p in items if p.unique and p.unique.split(",")[0] == n)
+        limit = re.search(r"Limited to: (\d+)", raw or "")
+        if limit and names.count(n) > int(limit.group(1)):   # e.g. Grand Spectrum is limited to 3
+            issues["uniques"].append(f"{n} {names.count(n)} times, limited to {limit.group(1)}")
     for p in items:
         label = f"{p.slot} {p.unique or p.base}"
         if p.unique:

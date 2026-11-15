@@ -388,6 +388,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   background: linear-gradient(180deg, #1d1712, #120f0c); box-shadow: inset 0 0 30px rgba(120,180,255,.05); }
 .cold b { font: 600 24px/1.1 var(--display); color: #a9c4d6; }
 .cold span { color: var(--muted); font-size: 16px; }
+.notice { padding: 10px 16px; border: 1px solid #6a4a22; border-left: 3px solid var(--ember); border-radius: 3px;
+  background: #18130e; color: var(--ink); font-size: 16px; }
 
 .howlink { white-space: nowrap; color: var(--brass); font-weight: 500; }
 .howlink::after { content: " \2192"; }
@@ -471,6 +473,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     <p class="sub">Say what you want to play. It grinds through <b>every skill, weapon and ascendancy</b> that fits in Path of Building's own damage maths, and hands you the sharpest version at your budget, from the campaign to endgame. <a class="howlink" href="/how.html">How it works</a></p>
   </header>
 
+  <div class="notice" id="notice" hidden role="status"></div>
   <div class="cold" id="cold" hidden role="status">
     <b>The forge is cold right now.</b>
     <span>Whetstone's engine runs on a home PC that's switched off at the moment, so new builds and shared builds can't load. This page checks again every 30 seconds and wakes up on its own.</span>
@@ -1756,7 +1759,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       const ctl = new AbortController(); const tm = setTimeout(() => ctl.abort(), 6000);
       const r = await fetch(API + "/health", { signal: ctl.signal, cache: "no-store" });
       clearTimeout(tm);
-      ok = r.ok && (await r.json().catch(() => ({}))).ok === true;
+      const h = r.ok ? await r.json().catch(() => ({})) : {};
+      ok = h.ok === true;
+      // A site-wide notice (e.g. "1.0 is out, builds are updating"), switched on the PC without a redeploy.
+      $("notice").textContent = h.notice || "";
+      $("notice").hidden = !h.notice;
     } catch { ok = false; }
     if (ok !== engineUp) {
       const wasDown = engineUp === false;

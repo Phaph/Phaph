@@ -184,3 +184,12 @@ def test_helper_skills_reach_the_guide(client):
     done = wait(client, j["id"])
     assert done["result"]["spec"]["with_skills"] == ["Tempest Flurry"]
     assert client.post("/guides", json={"spec": {**SPEC, "with_skills": ["Not A Skill"]}}).status_code == 400
+
+
+def test_site_notice(client, tmp_path, monkeypatch):
+    import api.app as app_module
+    notice = tmp_path / "notice.txt"
+    monkeypatch.setattr(app_module, "NOTICE_FILE", notice)
+    assert client.get("/health").json()["notice"] is None
+    notice.write_text("Path of Exile 2 1.0 is out. Builds are being updated.\n", encoding="utf-8")
+    assert client.get("/health").json()["notice"] == "Path of Exile 2 1.0 is out. Builds are being updated."

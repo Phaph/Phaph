@@ -3,6 +3,8 @@
 # Stage 1: build PoB + LuaJIT + lua-utf8. The full Python image already has git, make and gcc.
 FROM python:3.12 AS build
 WORKDIR /app
+# Empty = the PoB commit pinned in setup.sh. Staging passes another one to try a new PoB (LAUNCH_1.0.md).
+ARG POB_REF=
 COPY engine/setup.sh engine/setup.sh
 RUN engine/setup.sh \
  && rm -rf engine/vendor/LuaJIT/.git engine/vendor/luautf8 engine/vendor/PathOfBuilding-PoE2/.git

@@ -129,3 +129,12 @@ def test_words_not_understood_are_listed():
     out = parse_prompt("super cool fishing build with es", CATALOG)
     assert out["unused"] == ["super", "cool", "fishing"]
     assert parse_prompt("lightning minion build for a monk, 5 div", CATALOG)["unused"] == []
+
+
+def test_one_and_two_handed_weapons():
+    assert parse("two hand mace slam build")["weapons"] == ["Two Hand Mace"]
+    assert parse("2h hammer warrior")["weapons"] == ["Two Hand Mace"]
+    assert parse("one-handed mace build")["weapons"] == ["One Hand Mace"]
+    assert parse("mace build")["weapons"] == ["One Hand Mace", "Two Hand Mace"]
+    full = parse_prompt("two hand mace slam for a new player", CATALOG)
+    assert full["unused"] == []

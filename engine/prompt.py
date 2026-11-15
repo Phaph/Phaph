@@ -35,6 +35,13 @@ KINDS = {
 }
 # weapon word -> PoB weapon types it means (kept only if PoB's catalog has them)
 WEAPONS = {
+    # One- and two-handed first: the matched words are blanked, so "two hand mace" isn't also any "mace".
+    r"(two|2)[- ]?hand(ed)? (maces?|hammers?)|2h (maces?|hammers?)": ["Two Hand Mace"],
+    r"(one|1)[- ]?hand(ed)? (maces?|hammers?)|1h (maces?|hammers?)": ["One Hand Mace"],
+    r"(two|2)[- ]?hand(ed)? swords?|2h swords?|greatswords?": ["Two Hand Sword"],
+    r"(one|1)[- ]?hand(ed)? swords?|1h swords?": ["One Hand Sword"],
+    r"(two|2)[- ]?hand(ed)? axes?|2h axes?|greataxes?": ["Two Hand Axe"],
+    r"(one|1)[- ]?hand(ed)? axes?|1h axes?": ["One Hand Axe"],
     r"bows?": ["Bow"], r"crossbows?|xbows?": ["Crossbow"], r"daggers?": ["Dagger"], r"claws?": ["Claw"],
     r"spears?": ["Spear"], r"(quarter)?sta(ff|ves)": ["Staff"], r"wands?": ["Wand"], r"scept(re|er)s?": ["Sceptre"],
     r"maces?|hammers?": ["One Hand Mace", "Two Hand Mace"], r"swords?": ["One Hand Sword", "Two Hand Sword"],
@@ -119,7 +126,7 @@ FILLER = set("""a an the and or with without for of to in on at by from as is ar
 im i'm want wants need give make makes made build builds character char setup please some any can you could would
 should like using use uses used good great nice strong strongest best top high highest max maximum most possible
 dps damage league new also but very really just one two which what who how do does get got so all every whole game
-ever time around based focus focused focusing type style playstyle version no not non avoid avoiding hate""".split())
+ever time around based player players new newbie beginner first focus focused focusing type style playstyle version no not non avoid avoiding hate""".split())
 
 
 def unused_words(text: str, found: list[tuple[str, str]]) -> list[str]:
@@ -267,6 +274,7 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
                 if (not known_weapons or w in known_weapons) and w not in req["weapons"]:
                     req["weapons"].append(w)
             found.append((m.group(0), f"Weapon: {' or '.join(types)}"))
+            t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
 
     modes = [(m, val) for pat, val in MODE.items() if (m := _find(pat, t))]
     if len(modes) == 1:

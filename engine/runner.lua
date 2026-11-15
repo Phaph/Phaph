@@ -1331,6 +1331,61 @@ function handlers.list_classes(cmd)
 	return { classes = classes }
 end
 
+-- Everything a game update can change, each entry with a stable text form that Python hashes, so
+-- tools/catalog_diff.py can list what PoB 1.0 added, removed or reworked (gems, uniques, bases, tree).
+local function ser(v, depth)
+	depth = depth or 0
+	local t = type(v)
+	if t == "table" then
+		if depth > 6 then return "{...}" end
+		local keys = {}
+		for k in pairs(v) do table.insert(keys, k) end
+		table.sort(keys, function(a, b) return tostring(a) < tostring(b) end)
+		local parts = {}
+		for _, k in ipairs(keys) do
+			local sv = ser(v[k], depth + 1)
+			if sv then table.insert(parts, tostring(k) .. "=" .. sv) end
+		end
+		return "{" .. table.concat(parts, ",") .. "}"
+	elseif t == "number" or t == "boolean" then return tostring(v)
+	elseif t == "string" then return string.format("%q", v)
+	end
+	return nil   -- functions and userdata say nothing stable
+end
+
+function handlers.catalog_snapshot(cmd)
+	local gems, uniques, bases, nodes = {}, {}, {}, {}
+	for _, gem in pairs(data.gems) do
+		local ge = gem.grantedEffect
+		if gem.name and gem.name ~= "" then
+			local lvl = ge and ge.levels and (ge.levels[20] or ge.levels[#ge.levels])
+			table.insert(gems, { name = gem.name, support = (gem.tags and gem.tags.support) and true or false,
+				tags = gem.tagString or "", text = ser({ ge and ge.stats, ge and ge.constantStats, lvl,
+				ge and ge.skillTypes, ge and ge.statMap and true, gem.reqStr, gem.reqDex, gem.reqInt }) or "" })
+		end
+	end
+	for _, item in pairs(main.uniqueDB.list) do
+		table.insert(uniques, { name = item.name, text = item.raw or "" })
+	end
+	for name, base in pairs(data.itemBases) do
+		if not base.hidden then
+			table.insert(bases, { name = name, type = base.type, subType = base.subType, text = ser(base) or "" })
+		end
+	end
+	local tree = build.spec.tree
+	local counts = {}
+	for _, node in pairs(tree.nodes) do
+		local kind = node.type or "Normal"
+		counts[kind] = (counts[kind] or 0) + 1
+		if node.dn and (kind == "Notable" or kind == "Keystone" or node.ascendancyName) then
+			table.insert(nodes, { name = node.dn, type = kind, asc = node.ascendancyName,
+				text = table.concat(node.sd or {}, " / ") })
+		end
+	end
+	return { gems = gems, uniques = uniques, bases = bases,
+		tree = { version = build.spec.treeVersion, counts = counts, nodes = nodes } }
+end
+
 function handlers.list_uniques(cmd)
 	local list = {}
 	for _, item in pairs(main.uniqueDB.list) do

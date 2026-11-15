@@ -1,0 +1,27 @@
+# Staging: a second copy of the app for testing a new PoB (e.g. 1.0) before it goes live. See LAUNCH_1.0.md.
+# Not on the tunnel, own image tag, own job database; the live app keeps running untouched.
+#
+#   POB_REF=<PoB commit> docker compose -f docker-compose.staging.yml -p phaph-staging up -d --build
+#   open http://127.0.0.1:8001  (the page talks to the staging engine when opened here)
+#   docker compose -f docker-compose.staging.yml -p phaph-staging down
+#
+# Without POB_REF it builds the commit pinned in engine/setup.sh (the same PoB as live).
+services:
+  app:
+    build:
+      context: .
+      args:
+        POB_REF: ${POB_REF:-}
+    image: poe2-optimizer:staging
+    ports:
+      - "127.0.0.1:8001:8000"
+    environment:
+      DAILY_JOB_LIMIT: "0"
+      JOB_WORKERS: "1"
+      GENERATE_WORKERS: ${GENERATE_WORKERS:-6}
+    volumes:
+      - jobs-staging:/data
+    cpus: ${APP_CPUS:-12}
+
+volumes:
+  jobs-staging:
