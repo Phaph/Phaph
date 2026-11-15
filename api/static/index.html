@@ -89,6 +89,7 @@ button, select, input, textarea { font: inherit; color: inherit; }
 .prompt textarea:focus { outline: none; border-bottom-color: var(--brass-lo); }
 .readas { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; min-height: 30px; font-size: 16px; color: var(--muted); }
 .readas > span:first-child { font-style: italic; }
+.readas .unused b { color: #e0a060; font-weight: 600; }
 /* Stamped brass tokens: what it understood. */
 .tag { font: 500 15px/1 var(--body); padding: 6px 10px 5px; color: #20180c; border-radius: 2px;
   background: linear-gradient(180deg, var(--brass-hi), var(--brass) 55%, #b98a42); box-shadow: inset 0 1px 0 rgba(255,255,255,.35), inset 0 -1px 0 rgba(0,0,0,.25), 0 1px 0 var(--seam);
@@ -547,7 +548,10 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     ["Sword", ["One Hand Sword", "Two Hand Sword"]], ["Axe", ["One Hand Axe", "Two Hand Axe"]], ["Flail", ["Flail"]], ["Talisman", ["Talisman"]]];
   const syncs = [];      // chip groups register a function that redraws them from state
   let weaponSyncs = [];
-  const GOALS = [["movement", "Faster mapping"], ["rarity", "More loot"], ["tanky", "Tankier"]];
+  const GOALS = [["movement", "Faster mapping"], ["rarity", "More loot"], ["tanky", "Tankier"], ["crit", "Crit"], ["speed", "Attack/cast speed"],
+    ["block", "Block"], ["es", "Energy shield"], ["life", "Life"], ["armour", "Armour"], ["evasion", "Evasion"],
+    ["leech", "Leech"], ["regen", "Regen"], ["mana", "Mana"], ["str", "Strength"], ["dex", "Dexterity"],
+    ["int", "Intelligence"], ["spirit", "Spirit"]];
 
   function chipGroup(el, items, set, attr) {
     items.forEach(([key, label]) => {
@@ -612,7 +616,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // so the player can see and fix it before forging.
   const HINT = "<span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span>";
   function resetPicker() {
-    state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null; state.withSkills = [];
+    state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null; state.withSkills = []; state.withTypes = [];
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
     $("deep").checked = false;
   }
@@ -634,11 +638,13 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if (r.class) { $("cls").value = r.class; fillAscendancies(); }
     if (r.ascendancy) $("asc").value = r.ascendancy;
     state.skill = r.skill || null;
+    state.withTypes = r.with_types || [];   // "warcries": the best one for the build is picked
     state.withSkills = r.with_skills || [];   // Cast on X gems, buffs: kept beside the main skill
     syncAll();
     $("readas").innerHTML = out.found.length
       ? `<span>Read as</span>${out.found.map(f => `<span class="tag">${esc(f.means)} <i>“${esc(f.text)}”</i></span>`).join("")}`
         + (out.budget_set ? "" : "<span>· no budget named, so it uses the one picked below</span>")
+        + ((out.unused || []).length ? `<span class="unused">· not understood, so not used: ${out.unused.map(w => `<b>${esc(w)}</b>`).join(", ")}</span>` : "")
       : "<span>Nothing it recognises yet. Try a damage type, skill, class, weapon or budget.</span>";
   }
   $("skillClear").onclick = () => { state.skill = null; state.withSkills = []; syncAll(); };
@@ -1201,6 +1207,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if ($("asc").value) req.ascendancy = $("asc").value;
     if (state.skill) req.skill = state.skill;
     if ((state.withSkills || []).length) req.with_skills = state.withSkills;
+    if ((state.withTypes || []).length) req.with_types = state.withTypes;
     if ($("deep").checked) req.deep = true;
     $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
     heat(true);

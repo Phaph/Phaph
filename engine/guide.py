@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass, field
 from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
 from jewels import craft_jewels, proxy_jewel
 from triggers import best_cast_on_crit, cast_on_crit, find_groups
-from generate import add_helpers
+from generate import add_helpers, best_helper
 from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports,
                       score_of, total_dps)
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
@@ -137,8 +137,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
     quiet = lambda *a: None
     slots = spec.get("support_slots", 5)
     # The build's goal: e.g. a bleed build optimises bleed damage everywhere, not raw hits.
-    map_metric = metric_for("mapping", spec.get("ailment"))
-    boss_metric = metric_for("bossing", spec.get("ailment"))
+    map_metric = metric_for("mapping", spec.get("ailment"), spec.get("goals"))
+    boss_metric = metric_for("bossing", spec.get("ailment"), spec.get("goals"))
     goals = list(spec.get("goals") or [])
     with PoB() as pob:
         catalog = pob.send("skill_catalog")["skills"]
@@ -149,8 +149,16 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         skill = spec["skill"]
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
         helpers = list(spec.get("with_skills") or [])   # skills the player asked for (Charged Staff, Cast on X)
+        picked_helpers = []
         metas = {s["name"] for s in catalog if "Meta" in s["types"]} & set(helpers)
         add_helpers(pob, {"with_skills": helpers}, skill, metas=metas)
+        # Kinds of helper the player asked for ("with warcries"): the best skill of each kind for this build.
+        for kind in spec.get("with_types") or []:
+            pick = best_helper(pob, catalog, kind, map_metric, spec["weapon_type"], spec.get("offhand_type"), skip=helpers)
+            if pick:
+                pob.add_skill([pick], main=False)
+                helpers.append(pick)
+                picked_helpers.append((kind, pick))
         boss_group = None
         if boss_skill:
             boss_group = pob.add_skill([boss_skill], main=False, full_dps=True)["group"]
@@ -312,6 +320,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for h in sorted(metas):
             guide.notes.append(f"{h}: {skill} is socketed in it. How often it triggers isn't modelled yet, so the "
                                f"damage shown is {skill} cast normally.")
+        for kind, pick in picked_helpers:
+            guide.notes.append(f"You asked for a {kind}: {pick} adds the most to this build, so it's in the skills.")
         for issue in guide.theme_issues:
             guide.notes.append("Off theme: " + issue)
         for k, label in (("FireResist", "fire"), ("ColdResist", "cold"), ("LightningResist", "lightning")):

@@ -93,13 +93,25 @@ def area_factor(out: dict) -> float:
     return max(out.get("AreaOfEffectMod", 1) or 1, 0.1) ** 0.5 * max(out.get("ProjectileCount", 1) or 1, 1) ** 0.5
 
 
-def metric_for(mode: str, ailment: str | None = None) -> str:
+def metric_for(mode: str, ailment: str | None = None, goals=None) -> str:
     """The metric string every optimiser understands:
-    "total", "mapping", "<ailment>" or "<ailment>+mapping" (e.g. "bleed+mapping")."""
+    "total", "mapping", "<ailment>" or "<ailment>+mapping" (e.g. "bleed+mapping"), plus "+<focus>" for each stat
+    focus the player asked for (goals.FOCUS, e.g. "bleed+crit+speed")."""
+    from goals import FOCUS
     mapping = mode == "mapping"
     if ailment in AILMENT_FIELD:
-        return f"{ailment}+mapping" if mapping else ailment
-    return "mapping" if mapping else "total"
+        m = f"{ailment}+mapping" if mapping else ailment
+    else:
+        m = "mapping" if mapping else "total"
+    return m + "".join(f"+{g}" for g in (goals or ()) if g in FOCUS)
+
+
+def split_focus(field_name: str) -> tuple[str, list[str]]:
+    """("bleed+mapping+crit") -> ("bleed+mapping", ["crit"])."""
+    from goals import FOCUS
+    parts = field_name.split("+")
+    keep = [p for p in parts if p not in FOCUS] or ["total"]
+    return "+".join(keep), [p for p in parts if p in FOCUS]
 
 
 def score_of(out: dict, field_name: str) -> float:
@@ -116,6 +128,10 @@ def _score_of(out: dict, field_name: str) -> float:
         # Damage per cast, for a spell fired by Cast on X: cast speed doesn't matter there, only how hard it hits.
         speed = out.get("Speed") or 0
         return (out.get("TotalDPS") or 0) / speed if speed > 0 else 0.0
+    rest, focus = split_focus(field_name)
+    if focus:
+        from goals import focus_factor
+        return _score_of(out, rest) * focus_factor(out, focus)
     if field_name == "total":
         return total_dps(out)
     if field_name == "mapping":
@@ -165,7 +181,8 @@ def optimise_supports(
     and only re-check the 2 x top_k best supports from the first one.
     """
     field_name = METRICS.get(metric, metric)
-    fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS] \
+    from goals import FOCUS_FIELDS
+    fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS, *FOCUS_FIELDS] \
         + (["Speed", "ManaCost", "LifeCost", "ESCost"] if field_name == "movement" else ["Speed"] if field_name == "per_cast" else
            [] if field_name in ("total", "mapping") or "+" in field_name or field_name in AILMENT_FIELD else [field_name])
     gems = pob.list_gems("support")

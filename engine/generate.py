@@ -44,11 +44,22 @@ from pob import PoB, PoBError
 # Types that make a skill a support act rather than a main damage skill.
 NOT_MAIN = {"Buff", "Aura", "Herald", "Meta", "Triggered", "InbuiltTrigger", "OngoingSkill", "Shapeshift",
             "AppliesCurse", "ActiveBlock"}
+from goals import FOCUS_FIELDS, focus_factor  # noqa: E402
+
 KIND_TYPES = {
     "minion": "Minion", "spell": "Spell", "attack": "Attack", "melee": "Melee", "projectile": "Projectile",
     "totem": "Totemable", "trap": "Trappable", "slam": "Slam", "strike": "MeleeSingleTarget", "area": "Area",
     "channel": "Channel", "chaining": "Chains", "grenade": "Grenade", "ammo": "CrossbowAmmoSkill",
+    "dot": "DamageOverTime", "nova": "Nova", "storm": "Storm", "wall": "Wall", "orb": "Orb", "remnant": "GeneratesRemnants",
+    "ballista": "TotemsAreBallistae", "companion": "Companion", "ranged": "RangedAttack", "bear": "Bear",
+    "wolf": "Wolf", "wyvern": "Wyvern", "plant": "Plant", "barrage": "Barrageable", "rain": "Rain",
+    "jump": "Jumping", "cooldown": "Cooldown", "duration": "Duration", "invocation": "Invocation",
+    "detonate": "Detonator", "ice crystal": "IceCrystal", "ground": "CreatesGroundEffect", "skeleton": "CreatesSkeletonMinion",
+    "undead": "CreatesUndeadMinion", "demon": "CreatesDemonMinion",
 }
+# Helper kinds: "warcries", "auras"... The best skill of that type is put beside the main skill (best_helper).
+HELPER_TYPES = {"warcry": "Warcry", "aura": "Aura", "herald": "Herald", "curse": "AppliesCurse", "banner": "Banner",
+                "mark": "Mark", "offering": "Offering"}
 AILMENT_DAMAGE = {"bleed": {"Physical"}, "poison": {"Physical", "Chaos"}, "ignite": {"Fire"},
                   "shock": {"Lightning"}, "chill": {"Cold"}, "freeze": {"Cold"}}
 AILMENT_FIELD = {"bleed": "BleedDPS", "poison": "PoisonDPS", "ignite": "IgniteDPS"}
@@ -167,6 +178,10 @@ def weapon_options(skill: dict, req: dict) -> list[tuple[str, str | None, str | 
 
 
 def _score(out: dict, req: dict) -> float:
+    return _score_plain(out, req) * focus_factor(out, req.get("goals") or ())
+
+
+def _score_plain(out: dict, req: dict) -> float:
     if req.get("ailment") in AILMENT_FIELD:
         # An ailment build lives on its ailment: count it fully, hits a quarter.
         return ailment_dps(out, req["ailment"]) + 0.25 * hit_dps(out)
@@ -182,7 +197,7 @@ def _score(out: dict, req: dict) -> float:
 
 FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "BleedDPS",
           "PoisonDPS", "IgniteDPS", "MinionBleedDPS", "MinionPoisonDPS", "MinionIgniteDPS",
-          "AreaOfEffectMod", "ProjectileCount", "TotalEHP"]
+          "AreaOfEffectMod", "ProjectileCount", "TotalEHP", *FOCUS_FIELDS]
 
 
 def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
@@ -197,7 +212,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         add_helpers(p, req, c.skill)
         mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
         p.set_config(**MODE_CONFIG[mode])
-        metric = metric_for(mode, req.get("ailment"))
+        metric = metric_for(mode, req.get("ailment"), req.get("goals"))
         craft_gear(p, stage, c.weapon_type, c.weapon_subtype, offhand_type=c.offhand_type, uniques=False,
                    metric=metric, log=quiet)
         if tree:
@@ -226,6 +241,38 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
     return c
 
 
+def best_helper(p, catalog: list[dict], kind: str, metric: str, weapon_type: str | None, offhand_type: str | None = None,
+                skip=()) -> str | None:
+    """The skill of a helper kind ("warcry", "curse"...) that raises the build's metric most, tried one by one."""
+    want = HELPER_TYPES.get(kind, kind)
+    names = []
+    for s in catalog:
+        types = set(s["types"])
+        if want not in types or s.get("from_item") or s["name"] in skip or s["name"] in names:
+            continue
+        if types & {"RequiresShield", "RequiresBuckler"} and offhand_type != "Shield":
+            continue
+        weapons = [w for w in s.get("weapons", []) if w != "None"]
+        if weapons and weapon_type not in weapons:
+            continue
+        names.append(s["name"])
+    if not names:
+        return None
+    p.use_full_dps()
+    base = score_of(p.calc(FIELDS), metric)
+    best, best_score = names[0], None
+    for n in names:
+        try:
+            g = p.add_skill([n], main=False, full_dps=True)["group"]
+            sc = score_of(p.calc(FIELDS), metric)
+            p.remove_skill(g)
+        except Exception:  # noqa: BLE001 - one skill that fails to load must not stop the pick
+            continue
+        if best_score is None or sc > best_score:
+            best, best_score = n, sc
+    return best if best_score is not None and best_score >= base * 0.98 else names[0]
+
+
 def add_helpers(p, req: dict, main_skill: str, metas=None) -> None:
     """Put the player's helper skills in the build: a Cast on X gem with the main spell socketed in it, others alone."""
     metas = set(req.get("_metas") or []) if metas is None else set(metas)
@@ -240,7 +287,7 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
     p = _pob()
     quiet = lambda *a: None
     mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
-    metric = metric_for(mode, req.get("ailment"))
+    metric = metric_for(mode, req.get("ailment"), req.get("goals"))
     try:
         p.new()
         p.set_class(f.cls)
@@ -518,6 +565,8 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
             spec[key] = req[key]   # carried into the guide: theme metric, theme checks, goals
     if req.get("with_skills"):
         spec["with_skills"] = list(req["with_skills"])   # skills the player asked for, kept beside the main skill
+    if req.get("with_types"):
+        spec["with_types"] = list(req["with_types"])     # "warcries": the guide picks the best one
     same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
     # Compare single-target strength in the theme's own terms (a bleed build wants a better
     # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.

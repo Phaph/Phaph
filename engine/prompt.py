@@ -9,6 +9,8 @@ from __future__ import annotations
 
 import re
 
+from goals import FOCUS
+
 # phrase pattern (regex, matched on whole words) -> value
 DAMAGE = {
     r"phys(ical)?": "physical", r"fire|flames?|burning": "fire", r"cold|ice|icy|frost": "cold",
@@ -24,6 +26,12 @@ KINDS = {
     r"projectiles?": "projectile", r"totems?": "totem", r"traps?": "trap", r"slams?": "slam",
     r"strikes?": "strike", r"aoe|area": "area", r"channel(l?ing|led)?": "channel",
     r"chain(s|ing)?": "chaining", r"grenades?": "grenade", r"ammo": "ammo",
+    r"dot|damage over time|degen": "dot", r"novas?": "nova", r"walls?": "wall", r"orbs?": "orb",
+    r"remnants?": "remnant", r"ballista(e|s)?": "ballista", r"companions?|beasts?|tamed": "companion",
+    r"ranged": "ranged", r"bears?": "bear", r"wolf|wolves|werewolf": "wolf", r"wyverns?|dragons?": "wyvern",
+    r"plants?|vines?|nature": "plant", r"barrage": "barrage", r"rains?": "rain", r"invocations?|invoker": "invocation",
+    r"detonat(e|or|ion)s?": "detonate", r"ice crystals?": "ice crystal", r"skeletons?|skellies": "skeleton",
+    r"undead": "undead", r"demons?": "demon",
 }
 # weapon word -> PoB weapon types it means (kept only if PoB's catalog has them)
 WEAPONS = {
@@ -36,6 +44,29 @@ GOALS = {
     r"fast|faster|speedy|zoom(y|ing)?|movement|move speed": "movement",
     r"loot|rarity|magic find|mf|iir": "rarity",
     r"tank(y|ier)?|tough(er)?|surviv(e|able|al)|durable|safe|hardcore|hc|defen[cs]ive": "tanky",
+}
+# Stat focuses (goals.FOCUS), read before the tables above and blanked out, so "cast speed" is not also "Kind: spell"
+# and "fast attacks" not also "Faster mapping". Longest phrases first within each entry.
+FOCUS_WORDS = {
+    r"crit(ical)? (strike|hit)s?( chance)?|crit (chance|multi(plier)?|damage)|crit(ical)? stack(ing|er)?|crits?|critical(ly)?": "crit",
+    r"((fast|faster|high|more) )?(attack|cast(ing)?|skill|swing) speed|fast (attacks?|cast(s|ing)?|hits?)|speed stack(ing|er)?|ias|ics": "speed",
+    r"energy shield( stack(ing|er)?)?|es stack(ing|er)?|ci|chaos inoculation|es": "es",
+    r"(max(imum)? |spell |shield )?block(ing| chance)?|blocker": "block",
+    r"(life )?leech(ing|er)?|lifesteal|life steal": "leech",
+    r"(life )?regen(eration)?|recovery": "regen",
+    r"life( stack(ing|er)?)?|hp|health|high life": "life",
+    r"armou?r( stack(ing|er)?)?|armou?red": "armour",
+    r"evasion( stack(ing|er)?)?|evade|evasive|eva|dodge": "evasion",
+    r"mana( stack(ing|er)?)?|mom|mind over matter": "mana",
+    r"str(ength)?( stack(ing|er)?)?": "str",
+    r"dex(terity)?( stack(ing|er)?)?": "dex",
+    r"int(elligence)?( stack(ing|er)?)?": "int",
+    r"spirit( stack(ing|er)?)?": "spirit",
+}
+# Kinds of helper skill: "with warcries" adds the best warcry for the build (generate.HELPER_TYPES).
+HELPER_WORDS = {
+    r"warcr(y|ies)|war cr(y|ies)|shouts?|cr(y|ies)": "warcry", r"auras?": "aura", r"heralds?": "herald",
+    r"curses?|hex(es)?": "curse", r"banners?": "banner", r"marks?": "mark", r"offerings?": "offering",
 }
 MODE = {
     r"boss(es|ing|er)?|pinnacle|single target|ubers?": "bossing",
@@ -83,6 +114,27 @@ def skill_pattern(name: str) -> str:
     return r"\s+".join(parts)
 
 
+# Filler words: never reported as "not used".
+FILLER = set("""a an the and or with without for of to in on at by from as is are be it its that this these my me i
+im i'm want wants need give make makes made build builds character char setup please some any can you could would
+should like using use uses used good great nice strong strongest best top high highest max maximum most possible
+dps damage league new also but very really just one two which what who how do does get got so all every whole game
+ever time around based focus focused focusing type style playstyle version no not non avoid avoiding hate""".split())
+
+
+def unused_words(text: str, found: list[tuple[str, str]]) -> list[str]:
+    """Words of the prompt that nothing matched, so the player sees what was not taken into account."""
+    t = _norm(text)
+    for phrase, _ in sorted(found, key=lambda f: -len(f[0])):
+        t = re.sub(rf"(?<![\w']){re.escape(phrase)}(?![\w'])", " ", t, count=1)
+    out = []
+    for w in t.split():
+        w = w.strip(".-'")
+        if w and w not in FILLER and not w.isdigit() and w not in out:
+            out.append(w)
+    return out
+
+
 def _norm(text: str) -> str:
     text = text.lower().replace("’", "'")
     return re.sub(r"[^a-z0-9'.\s-]", " ", text)
@@ -114,6 +166,7 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
 
     catalog is the API's /catalog: classes (with ascendancies), skills and weapon_types.
     """
+    prompt_text = text
     t = _norm(text)
     req: dict = {"damage": [], "kinds": [], "weapons": [], "goals": []}
     found: list[tuple[str, str]] = []
@@ -177,6 +230,24 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
                 found.append((m.group(0), f"Class: {c['name']}"))
                 break
 
+    def blank(m):
+        nonlocal t
+        t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
+
+    for pat, val in FOCUS_WORDS.items():
+        while (m := _find(pat, t)):
+            if val not in req["goals"]:
+                req["goals"].append(val)
+                found.append((m.group(0), f"Focus: {FOCUS[val][2]}"))
+            blank(m)
+    for pat, val in HELPER_WORDS.items():
+        if (m := _find(pat, t)):
+            req.setdefault("with_types", [])
+            if val not in req["with_types"]:
+                req["with_types"].append(val)
+                found.append((m.group(0), f"With: best {val}"))
+            blank(m)
+
     for table, field, label in ((DAMAGE, "damage", "Damage"), (KINDS, "kinds", "Kind"), (GOALS, "goals", "Goal")):
         for pat, val in table.items():
             if val not in req[field] and (m := _find(pat, t)):
@@ -213,6 +284,10 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
             found.append((m.group(0), "Focus: bossing (raw damage)"))
 
     # The request schema caps lists at 5.
-    for k in ("damage", "kinds", "weapons", "goals"):
+    for k in ("damage", "kinds", "weapons"):
         req[k] = req[k][:5]
-    return {"request": req, "found": [{"text": a, "means": b} for a, b in found], "budget_set": "budget" in req}
+    req["goals"] = req["goals"][:8]
+    if "with_types" in req:
+        req["with_types"] = req["with_types"][:3]
+    return {"request": req, "found": [{"text": a, "means": b} for a, b in found], "budget_set": "budget" in req,
+            "unused": unused_words(prompt_text, found)}

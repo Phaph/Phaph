@@ -110,3 +110,22 @@ def test_skills_match_the_way_players_type_them():
         r = parse_prompt(text, cat)["request"]
         assert r.get("skill") == skill and r.get("with_skills") == helpers, (text, r)
         assert "spell" not in r["kinds"], text
+
+
+def test_stat_focuses_are_read():
+    assert parse("bleed, crit, dagger build")["goals"] == ["crit"]
+    r = parse("fast cast speed energy shield block spark")
+    assert r["skill"] == "Spark" and set(r["goals"]) == {"speed", "es", "block"} and "spell" not in r["kinds"]
+    assert set(parse("life leech armour stacking")["goals"]) == {"leech", "armour"}
+    assert parse("move speed build")["goals"] == ["movement"]
+
+
+def test_helper_kinds_and_more_skill_kinds():
+    r = parse("bow build with warcries and curses, damage over time")
+    assert r["with_types"] == ["warcry", "curse"] and "dot" in r["kinds"]
+
+
+def test_words_not_understood_are_listed():
+    out = parse_prompt("super cool fishing build with es", CATALOG)
+    assert out["unused"] == ["super", "cool", "fishing"]
+    assert parse_prompt("lightning minion build for a monk, 5 div", CATALOG)["unused"] == []

@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-14.15"
+ENGINE_VERSION = "2026-11-15.1"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -61,9 +61,10 @@ class BuildSpec(BaseModel):
     boss_weapon_type: str | None = None    # set when the boss skill uses weapon set 2
     boss_weapon_subtype: str | None = None
     ailment: Literal["bleed", "poison", "ignite"] | None = None   # optimise for this ailment
-    goals: list[Literal["movement", "rarity", "tanky"]] = Field(default_factory=list)  # beyond damage
+    goals: list[str] = Field(default_factory=list, max_length=8)  # beyond damage: goals.GOAL_LABELS
     # Skills the player asked for that boost the main skill instead of dealing damage (e.g. Charged Staff).
     with_skills: list[str] = Field(default_factory=list, max_length=3)
+    with_types: list[str] = Field(default_factory=list, max_length=3)   # "warcry": the best one is picked
 
     model_config = {"populate_by_name": True}
 
@@ -83,8 +84,9 @@ class GenerateRequest(BaseModel):
     skill: str | None = None
     budget: Budget = "high"
     mode: Literal["balanced", "mapping", "bossing"] = "balanced"
-    goals: list[Literal["movement", "rarity", "tanky"]] = Field(default_factory=list)  # beyond damage
+    goals: list[str] = Field(default_factory=list, max_length=8)  # beyond damage: goals.GOAL_LABELS
     with_skills: list[str] = Field(default_factory=list, max_length=3)   # kept beside the main skill (Cast on X, buffs)
+    with_types: list[str] = Field(default_factory=list, max_length=3)    # "warcry", "curse"...: the best one is picked
     deep: bool = False   # deep search: wider net, each skill on its own best ascendancies (slower)
 
     model_config = {"populate_by_name": True}
@@ -155,6 +157,7 @@ def validate_spec(spec: BuildSpec, catalog: dict) -> None:
     for w in spec.with_skills:
         if w not in catalog["skills"]:
             raise HTTPException(400, f"Unknown skill '{w}'")
+    _check_goals(spec.goals, spec.with_types)
     for t in filter(None, [spec.weapon_type, spec.offhand_type, spec.boss_weapon_type]):
         if t not in catalog["weapon_types"]:
             raise HTTPException(400, f"Unknown weapon type '{t}'")
@@ -175,6 +178,17 @@ def run_generate(req: dict, progress=None) -> dict:
     return {"result": result, "plan": plan_build(result), "options": options(result)}
 
 
+def _check_goals(goals: list[str], with_types: list[str]) -> None:
+    from generate import HELPER_TYPES
+    from goals import GOAL_LABELS
+    for g in goals:
+        if g not in GOAL_LABELS:
+            raise HTTPException(400, f"Unknown goal '{g}'. Options: {', '.join(GOAL_LABELS)}")
+    for k in with_types:
+        if k not in HELPER_TYPES:
+            raise HTTPException(400, f"Unknown helper kind '{k}'. Options: {', '.join(HELPER_TYPES)}")
+
+
 def validate_generate(req: GenerateRequest, catalog: dict) -> None:
     classes = {c["name"].lower(): c for c in catalog["classes"]}
     if req.cls and req.cls.lower() not in classes:
@@ -186,6 +200,7 @@ def validate_generate(req: GenerateRequest, catalog: dict) -> None:
     for w in req.with_skills:
         if w not in catalog["skills"]:
             raise HTTPException(400, f"Unknown skill '{w}'")
+    _check_goals(req.goals, req.with_types)
     for w in req.weapons:
         if w not in catalog["weapon_types"]:
             raise HTTPException(400, f"Unknown weapon type '{w}'")

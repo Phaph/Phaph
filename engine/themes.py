@@ -5,6 +5,7 @@ a "bleed" build whose damage mostly isn't bleed has failed its brief, however st
 """
 from __future__ import annotations
 
+from goals import FOCUS, focus_value
 from optimize import AILMENT_FIELD, ailment_dps, total_dps
 
 AILMENT_MIN_SHARE = 0.4   # at least 40% of damage from the theme's ailment
@@ -19,6 +20,11 @@ def check(spec: dict, stats: dict, catalog: list[dict]) -> list[str]:
         if share < AILMENT_MIN_SHARE:
             issues.append(f"Only {share:.0%} of damage is {ailment}; a {ailment} build should be at least "
                           f"{AILMENT_MIN_SHARE:.0%}.")
+    for g in spec.get("goals") or []:
+        if g in FOCUS and FOCUS[g][3] is not None and focus_value(stats, g) < FOCUS[g][3]:
+            label, need = FOCUS[g][2], FOCUS[g][3]
+            unit = "%" if g in ("crit", "block") else ""
+            issues.append(f"{label} is {focus_value(stats, g):,.0f}{unit}; a build built on it should reach {need:,}{unit}.")
     skills = {s["name"]: set(s["types"]) for s in catalog}
     types = skills.get(spec["skill"], set())
     for d in spec.get("damage") or []:

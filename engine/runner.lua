@@ -22,6 +22,7 @@ local DEFAULT_FIELDS = {
 	"Life", "EnergyShield", "Mana", "Armour", "Evasion", "TotalEHP",
 	"PhysicalMaximumHitTaken", "FireResist", "ColdResist", "LightningResist", "ChaosResist",
 	"Str", "Dex", "Int", "Spirit", "SpiritUnreserved", "EffectiveMovementSpeedMod", "EffectiveLootRarityMod",
+	"BlockChance", "SpellBlockChance", "LifeLeechRate", "LifeRegen",
 }
 
 -- Supports that put a usage condition on the skill (move first, build Glory, etc.).
@@ -900,7 +901,25 @@ function handlers.optimise_tree(cmd)
 		return v
 	end
 	local dpsRaw
-	local function dps(o) return sane(dpsRaw(o)) end
+	-- Stat focuses ("+crit", "+es"... in the metric): same table as goals.FOCUS, damage x (1 + stat / scale), max x2.
+	local FOCUS = {
+		crit = { { "CritChance" }, 100 }, speed = { { "Speed" }, 6 }, block = { { "BlockChance", "SpellBlockChance" }, 75 },
+		es = { { "EnergyShield" }, 8000 }, life = { { "Life" }, 6000 }, armour = { { "Armour" }, 30000 },
+		evasion = { { "Evasion" }, 30000 }, leech = { { "LifeLeechRate" }, 1500 }, regen = { { "LifeRegen" }, 500 },
+		mana = { { "Mana" }, 4000 }, str = { { "Str" }, 400 }, dex = { { "Dex" }, 400 }, int = { { "Int" }, 400 },
+		spirit = { { "Spirit" }, 400 },
+	}
+	local focus = {}
+	for part in metric:gmatch("[^+]+") do if FOCUS[part] then focus[#focus + 1] = FOCUS[part] end end
+	local function dps(o)
+		local v = sane(dpsRaw(o))
+		for _, f in ipairs(focus) do
+			local x = 0
+			for _, field in ipairs(f[1]) do x = math.max(x, o[field] or 0) end
+			v = v * (1 + math.min(math.max(x, 0), f[2]) / f[2])
+		end
+		return v
+	end
 	dpsRaw = function(o)
 		if ailmentField then
 			-- Same as optimize.score_of: the ailment counts fully, hits a quarter, minions included.
