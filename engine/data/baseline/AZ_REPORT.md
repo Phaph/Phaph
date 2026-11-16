@@ -26,6 +26,24 @@ Passed: crossbow crit bleed, lightning minions, cast on crit fire spells\*, pois
 
 Kyle's "poison totem" prompt gave Sunder, which isn't a totem. The word "totem" was matched to skills a totem *could* use. It now matches skills that place a totem: Shockwave Totem, Siege Ballista, Artillery Ballista and Dark Effigy. "Trap" had the same bug, and PoE 2 has no trap skills yet, so the site now says that instead of returning a random skill.
 
+## Fixed and live on 2026-11-16 (engine 2026-11-16.2)
+
+| Problem | Before | After |
+|---|---|---|
+| "poison totem build" | Sunder, not a totem | Dark Effigy, a real totem. No totem build could be mostly poison, so poison was dropped and the page says so. |
+| Totem skills scored 0 DPS | PoB scored the "place totem" part, so every totem skill was thrown out | Scored on what the totem does (Shockwave Slam, Ballista Bolt, Vile Effusion) |
+| "block energy shield build" | Staff or bow, 0% block | Wand and shield, 50% block. Energy shield is 421 against its 1,000 target; the page tells the player. |
+| Defensive buffs never picked | Damage buffs always won the spirit | Wind Dancer, Scavenged Plating, Iron Ward and others are kept when the EHP is worth the damage (Defence row) |
+| One skill for everything | | A separate clear skill on the same weapon when it clears 25%+ better (Clearing row) |
+| Passive-granted skills | Could be picked for any build | Never picked (Virtuous Barrier, Parry and others need their passive) |
+
+### Mechanics check (74 prompts)
+
+- **Fixed misreads:** "storm" (was lightning), "grenade build" (was the gem Grenade), "cast on freeze/ignite/shock" (now Cast on Elemental Ailment), "low life" (was read as more life), "shield build" (now block), "spectre", "corpse explosion", "electrocute".
+- **Shown to the player as not understood:** mine, frenzy/power/endurance charges, rage, dual wield, unarmed, archon, infusion, ground effects, exposure, thorns, recoup, blood magic, flask, charm, glass cannon, one button.
+- **Next for totems:** PoB scores Spell Totem, Ancestral Warrior Totem and Mortar Cannon with a skill socketed in them. Using them would let any totemable spell or slam be a totem build, which is how most PoE 2 totem builds work.
+- **Defence limit:** PoB doesn't count Time of Need's healing or Ghost Dance, so those can't be picked yet.
+
 ## Worth a look later
 
 Detonate Dead was picked for 4 of the 16 prompts (cast on crit fire, tanky ignite, block ES, fire spells with no minions). It may be legitimately strong in PoB, or PoB may be overrating it, for example by assuming a corpse is always there.
