@@ -13,7 +13,7 @@ def spirit_candidates(catalog: list[dict], minion_build: bool) -> list[str]:
     names = []
     for s in catalog:
         types = set(s["types"])
-        if "Persistent" not in types or not s.get("spirit") or types & SKIP_TYPES:
+        if "Persistent" not in types or not s.get("spirit") or types & SKIP_TYPES or s.get("from_item"):
             continue
         if types & {"Buff", "Aura", "Herald"} or (minion_build and "Minion" in types):
             names.append(s["name"])
@@ -33,7 +33,7 @@ def optimise_spirit(pob: PoB, catalog: list[dict], mode: str = "bossing", minion
         out0 = pob.calc(FIELDS)
         if out0.get("SpiritUnreserved", 0) <= 0:
             break
-        d0, e0 = max(dps(out0), 1), max(out0.get("TotalEHP", 0), 1)
+        d0, e0 = max(dps(out0), 1), max(out0.get("TotalEHP") or 0, 1)
         remaining = [c for c in cands if c not in chosen]
         if not remaining:
             break
@@ -47,7 +47,7 @@ def optimise_spirit(pob: PoB, catalog: list[dict], mode: str = "bossing", minion
             o = res["output"]
             if o.get("SpiritUnreserved", -1) < 0 or res["warnings"]:
                 continue
-            sc = (dps(o) - d0) / d0 + def_weight * (o.get("TotalEHP", 0) - e0) / e0
+            sc = (dps(o) - d0) / d0 + def_weight * (o.get("TotalEHP") or 0 - e0) / e0
             if sc > best_score:
                 best, best_score = c, sc
         if not best:

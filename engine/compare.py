@@ -106,7 +106,7 @@ def evaluate(pob: PoB, build: dict) -> Report:
         dps=dps,
         hit_dps=hit,
         ailment_dps=ailment,
-        ehp=s.get("TotalEHP", 0),
+        ehp=s.get("TotalEHP") or 0,
         stats=s,
         code=pob.save_code(),
         supports=build.get("chosen_supports") or list(build.get("skills", [[None]])[0][1:]),
@@ -182,7 +182,7 @@ def evaluate_spec(spec: dict, budget: str, stage: str = "end", progress=None) ->
     s = dict(g.stats, MappingDPS=g.dps)
     return Report(
         name=spec.get("name") or spec["skill"], main_skill=spec["skill"], dps=g.boss_dps or g.dps,
-        hit_dps=s.get("TotalDPS", 0), ailment_dps=s.get("TotalDotDPS", 0), ehp=s.get("TotalEHP", 0),
+        hit_dps=s.get("TotalDPS", 0), ailment_dps=s.get("TotalDotDPS", 0), ehp=s.get("TotalEHP") or 0,
         stats=s, code=g.code, supports=g.supports, notables=g.notables,
         ascendancy=spec.get("ascendancy"), mapping_dps=g.dps, clear=g.clear, damage_split=g.damage_split, rating=g.rating,
     )

@@ -378,6 +378,18 @@ local function capGemLevels(group)
 end
 
 -- text is PoB's paste format, one gem per line: "Name level/quality  count"
+-- A totem gem holds two skills: placing the totem (no damage) and what the totem does (Shockwave Slam, Ballista
+-- Bolt...). PoB scores the first by default, which reads as 0 DPS; score the totem's own skill instead.
+local function scoreTotemSkill(group)
+	local first = group.gemList[1]
+	local gd = first and first.gemData
+	local ge = gd and gd.grantedEffect
+	if ge and ge.skillTypes and ge.skillTypes[SkillType.SummonsTotem] and #(gd.additionalGrantedEffects or {}) > 0 then
+		group.mainActiveSkill = 2
+		group.mainActiveSkillCalcs = 2
+	end
+end
+
 function handlers.add_skill(cmd)
 	local before = #build.skillsTab.socketGroupList
 	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
@@ -385,6 +397,7 @@ function handlers.add_skill(cmd)
 	if index == before then error("no gems recognised in: " .. cmd.text) end
 	capGemLevels(build.skillsTab.socketGroupList[index])
 	build.skillsTab:ProcessSocketGroup(build.skillsTab.socketGroupList[index])
+	scoreTotemSkill(build.skillsTab.socketGroupList[index])
 	-- Full DPS costs a second calculation pass, so it is only switched on for builds that
 	-- need it (several damage sources or minion counts); see set_full_dps.
 	build.skillsTab.socketGroupList[index].includeInFullDPS = cmd.full_dps == true
@@ -486,6 +499,7 @@ function handlers.try_skill(cmd)
 	-- Resolve gems and global gem counts before recalculating, otherwise the
 	-- calculation sees the previous gem list and results lag one step behind.
 	build.skillsTab:ProcessSocketGroup(new)
+	scoreTotemSkill(new)
 	build.skillsTab:UpdateGlobalGemCountAssignments()
 	build.buildFlag = true
 	frame()
@@ -1332,7 +1346,9 @@ function handlers.skill_catalog(cmd)
 			table.insert(out, {
 				name = gem.name, id = ge.id, types = types, weapons = weapons, tags = tags,
 				spirit = lvl and lvl.spiritReservationFlat or 0,
-				from_item = ge.fromItem and true or false,
+				-- Not a gem anyone can socket: granted by an item, or by a passive / ascendancy node (Virtuous Barrier).
+				from_item = (ge.fromItem or ge.fromTree) and true or false,
+				from_tree = ge.fromTree and true or false,
 				tier = gem.Tier, str = gem.reqStr, dex = gem.reqDex, int = gem.reqInt,
 			})
 		end

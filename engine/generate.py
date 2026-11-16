@@ -137,7 +137,7 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
         if "Persistent" in types and not is_minion:
             continue
         if s.get("from_item"):
-            continue   # granted by a unique item, not a gem (needs that item; not handled yet)
+            continue   # granted by a unique item or a passive, not a gem (needs that item or node; not handled yet)
         if "Movement" in types and "Spell" in types:
             continue   # teleports like Lightning Warp: PoB scores them as if spammed
         if not (types & {"Attack", "Damage", "Spell"} or is_minion):
@@ -176,9 +176,9 @@ def weapon_options(skill: dict, req: dict) -> list[tuple[str, str | None, str | 
     else:
         opts = SPELL_WEAPONS
     if "block" in (req.get("goals") or []):
-        # Block comes from a shield: a block build holds a one-handed weapon and a shield.
-        shield = [(w, sub, "Shield") for w, sub, off in opts if w in ONE_HANDED]
-        opts = shield or opts
+        # Block comes from a shield: a block build holds a one-handed weapon and a shield. A skill that needs a
+        # bow or a two-handed weapon can't, so it isn't a block build.
+        opts = [(w, sub, "Shield") for w, sub, off in opts if w in ONE_HANDED]
     if req.get("weapons"):
         wanted = {w.lower() for w in req["weapons"]}
         opts = [o for o in opts if o[0].lower() in wanted]
@@ -235,7 +235,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         if (bad := broken_numbers(out)):
             raise ValueError(f"impossible damage from Path of Building ({', '.join(bad)}), a calculation bug: skipped")
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
-        c.clear, c.ehp = clear_score(out), out.get("TotalEHP", 0)
+        c.clear, c.ehp = clear_score(out), out.get("TotalEHP") or 0
         c.boss = score_of(out, metric_for("bossing", req.get("ailment")))
         # Theme check: an ailment build that gets most of its damage elsewhere is off brief.
         if req.get("ailment") in AILMENT_FIELD:
@@ -541,6 +541,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
 
 
 BOSS_SKILL_MIN_GAIN = 1.25   # a separate boss skill must hit this much harder than the mapping skill
+CLEAR_SKILL_MIN_GAIN = 1.25  # a separate clear skill must clear this much better than the main skill
 
 
 def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = None) -> dict:
@@ -584,6 +585,13 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         spec["boss_skill"] = boss["skill"]
         spec["boss_weapon_type"] = boss["weapon_type"]
         spec["boss_weapon_subtype"] = boss["weapon_subtype"]
+    # A separate clear skill (Glacial Lance beside Whirlwind Lance): a skill on the same weapon that clears clearly
+    # better than the main skill, which stays for bosses. Same weapon set, so it's a button away.
+    clearers = [r for r in same_asc if r["weapon_type"] == main["weapon_type"]
+                and r.get("offhand_type") == main.get("offhand_type") and r["skill"] != spec.get("boss_skill")]
+    clear = max(clearers, key=lambda r: r.get("clear") or 0, default=None)
+    if clear and (clear.get("clear") or 0) >= CLEAR_SKILL_MIN_GAIN * max(main.get("clear") or 0, 1):
+        spec["clear_skill"] = clear["skill"]
     best = ranked[0]
     cost = 1 - main["score"] / best["score"] if best["score"] else 0
     return {

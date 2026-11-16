@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-16.1"
+ENGINE_VERSION = "2026-11-16.2"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -60,6 +60,7 @@ class BuildSpec(BaseModel):
     boss_skill: str | None = None          # a second skill for bosses
     boss_weapon_type: str | None = None    # set when the boss skill uses weapon set 2
     boss_weapon_subtype: str | None = None
+    clear_skill: str | None = None         # a second skill for clearing packs, same weapon
     ailment: Literal["bleed", "poison", "ignite"] | None = None   # optimise for this ailment
     goals: list[str] = Field(default_factory=list, max_length=8)  # beyond damage: goals.GOAL_LABELS
     # Skills the player asked for that boost the main skill instead of dealing damage (e.g. Charged Staff).
@@ -155,6 +156,8 @@ def validate_spec(spec: BuildSpec, catalog: dict) -> None:
         raise HTTPException(400, f"Unknown skill '{spec.skill}'")
     if spec.boss_skill and spec.boss_skill not in catalog["skills"]:
         raise HTTPException(400, f"Unknown boss skill '{spec.boss_skill}'")
+    if spec.clear_skill and spec.clear_skill not in catalog["skills"]:
+        raise HTTPException(400, f"Unknown clear skill '{spec.clear_skill}'")
     for w in spec.with_skills:
         if w not in catalog["skills"]:
             raise HTTPException(400, f"Unknown skill '{w}'")

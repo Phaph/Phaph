@@ -157,3 +157,17 @@ def test_said_twice_and_two_handed():
     full = parse_prompt("fast mapping build with movement speed", CATALOG)
     assert full["request"]["goals"].count("movement") == 1 and full["unused"] == []
     assert parse("armour tank two handed")["weapons"] == ["Two Hand Mace", "Staff"]   # the 2H types in the test catalog
+
+
+def test_mechanic_words():
+    cat = {"skills": ["Cast on Elemental Ailment", "Summon Spectre", "Detonate Dead", "Grenade", "Orb of Storms"],
+           "classes": [], "helper_skills": ["Cast on Elemental Ailment"]}
+    r = lambda t: parse_prompt(t, cat)["request"]
+    assert r("storm build")["kinds"] == ["storm"] and r("storm build")["damage"] == []
+    assert r("grenade build")["kinds"] == ["grenade"] and "skill" not in r("grenade build")
+    assert r("cast on freeze")["with_skills"] == ["Cast on Elemental Ailment"] and "ailment" not in r("cast on freeze")
+    assert "life" not in r("low life build")["goals"]
+    assert r("shield build")["goals"] == ["block"]
+    assert r("energy shield build")["goals"] == ["es"]
+    assert r("spectre build")["skill"] == "Summon Spectre"
+    assert r("corpse explosion")["skill"] == "Detonate Dead"

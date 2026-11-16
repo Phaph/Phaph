@@ -33,6 +33,8 @@ from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_sc
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
 from pob import PoB
 from rating import rate
+from defence import optimise_defence
+from goals import weights as goal_weights
 from spirit import optimise_spirit
 from themes import check as theme_check
 from utility import optimise_utility
@@ -81,6 +83,9 @@ class StageGuide:
     boss_supports: list[str] = field(default_factory=list)
     boss_dps: float = 0.0   # single target vs a pinnacle boss, with the boss setup
     boss_skill: str | None = None      # a second skill used for bosses, if the build has one
+    clear_skill: str | None = None     # a second skill for clearing packs, if the build has one
+    clear_supports: list[str] = field(default_factory=list)
+    clear_dps: float = 0.0
     boss_weapon_set: int = 1           # 2 when the boss skill is on the weapon swap
     spirit: list[str] = field(default_factory=list)       # auras, heralds, buffs, extra minions
     conditions: list[dict] = field(default_factory=list)  # bonuses assumed up, and why
@@ -161,6 +166,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 pob.add_skill([pick], main=False)
                 helpers.append(pick)
                 picked_helpers.append((kind, pick))
+        clear_skill = spec.get("clear_skill") if stage_key != "leveling" else None
+        clear_group = pob.add_skill([clear_skill], main=False)["group"] if clear_skill else None
         boss_group = None
         if boss_skill:
             boss_group = pob.add_skill([boss_skill], main=False, full_dps=True)["group"]
@@ -232,6 +239,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                     trigger = None
             if not trigger:
                 pob.load_xml(plain_xml)
+        # Defensive buffs (Wind Dancer, Scavenged Plating...): kept when the EHP is worth the damage they cost.
+        spirit, defence = optimise_defence(pob, catalog, spirit, map_metric,
+                                           def_mult=goal_weights(goals)["def_mult"], log=quiet)
+        spirit += [d["skill"] for d in defence]
         if spirit:
             report("spirit", ", ".join(spirit))
         # Curses, marks, banners, warcries: kept when they raise the main skill's damage. One
@@ -282,10 +293,24 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         if trigger:
             trigger["mapping"] = cast_on_crit(pob, group, find_groups(pob)[0], mode="mapping")
             trigger.pop("group", None)
+        clear, clear_dps = None, 0.0
+        if clear_group:
+            # The clear skill gets its own supports (none the main skill already uses), scored on clearing.
+            pob.send("set_main", group=clear_group)
+            pob.auto_config("mapping")
+            res = optimise_supports(pob, clear_group, clear_skill, slots=slots, metric=map_metric, log=quiet,
+                                    exclude=set(best.supports))
+            clear = res[0] if res else None
+            clear_dps = total_dps(pob.calc(STAT_FIELDS))
+            pob.send("set_main", group=group)
+            conditions = pob.auto_config("mapping")
         alloc = pob.send("allocated")
-        used = set(best.supports) | set(boss.supports if boss else [])
+        used = set(best.supports) | set(boss.supports if boss else []) | set(clear.supports if clear else [])
         setups = kit_out(pob, group, spirit, utility + [{"skill": h} for h in helpers], mobility[:1], map_metric, slots,
                          used, log=quiet)
+        for x in setups:
+            if x["skill"] in {d["skill"] for d in defence}:
+                x["role"] = "defence"
         report("kit", f"Supports for {len(setups)} more skills")
         # Every gem is in now: balance attributes once more; if that isn't enough, use lower-level extra gems; and say
         # plainly if anything is still short.
@@ -302,6 +327,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             ailment=spec.get("ailment"),
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
+            clear_skill=clear_skill, clear_supports=clear.supports if clear else [], clear_dps=clear_dps,
             spirit=spirit, conditions=conditions, goals=goals, utility=utility, trigger=trigger,
             mobility=mobility, setups=setups,
             tree_nodes=[int(n) for n in alloc.get("nodes") or []], tree_version=alloc.get("version"),
@@ -322,6 +348,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for h in sorted(metas):
             guide.notes.append(f"{h}: {skill} is socketed in it. How often it triggers isn't modelled yet, so the "
                                f"damage shown is {skill} cast normally.")
+        for d in defence:
+            guide.notes.append(f"{d['skill']} for defence: {d['ehp']:+.0%} effective HP, {d['dps']:+.0%} damage"
+                               + (f" (in place of {d['replaced']})" if d["replaced"] else "") + ".")
         for kind, pick in picked_helpers:
             guide.notes.append(f"You asked for a {kind}: {pick} adds the most to this build, so it's in the skills.")
         for issue in guide.theme_issues:
@@ -397,6 +426,8 @@ def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
                    f"{s.get('EnergyShield', 0):,.0f} | {s.get('TotalEHP', 0):,.0f} | {res} |")
     for g in guides:
         out += ["", f"## {g.name}", f"**Mapping:** {spec['skill']} + " + ", ".join(g.supports)]
+        if g.clear_skill:
+            out.append(f"**Clearing:** {g.clear_skill} + " + ", ".join(g.clear_supports))
         if g.boss_skill:
             where = " (weapon set 2)" if g.boss_weapon_set == 2 else ""
             out.append(f"**Bossing:** {g.boss_skill}{where} + " + ", ".join(g.boss_supports))

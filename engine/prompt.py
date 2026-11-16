@@ -14,7 +14,7 @@ from goals import FOCUS
 # phrase pattern (regex, matched on whole words) -> value
 DAMAGE = {
     r"phys(ical)?": "physical", r"fire|flames?|burning": "fire", r"cold|ice|icy|frost": "cold",
-    r"lightning|lighting|electric|thunder|storms?": "lightning", r"chaos": "chaos",
+    r"lightning|lighting|electric|thunder|electrocut(e|es|ion|ing)": "lightning", r"chaos": "chaos",
 }
 AILMENT = {
     r"bleed(s|ing)?": "bleed", r"poison(s|ous)?": "poison", r"ignites?": "ignite",
@@ -31,7 +31,7 @@ KINDS = {
     r"ranged": "ranged", r"bears?": "bear", r"wolf|wolves|werewolf": "wolf", r"wyverns?|dragons?": "wyvern",
     r"plants?|vines?|nature": "plant", r"barrage": "barrage", r"rains?": "rain", r"invocations?": "invocation",
     r"detonat(e|or|ion)s?": "detonate", r"ice crystals?": "ice crystal", r"skeletons?|skellies": "skeleton",
-    r"undead": "undead", r"demons?": "demon",
+    r"undead": "undead", r"demons?": "demon", r"storms?": "storm",
 }
 # weapon word -> PoB weapon types it means (kept only if PoB's catalog has them)
 WEAPONS = {
@@ -59,10 +59,10 @@ FOCUS_WORDS = {
     r"crit(ical)? (strike|hit)s?( chance)?|crit (chance|multi(plier)?|damage)|crit(ical)? stack(ing|er)?|crits?|critical(ly)?": "crit",
     r"((fast|faster|high|more) )?(attack|cast(ing)?|skill|swing) speed|fast (attacks?|cast(s|ing)?|hits?)|speed stack(ing|er)?|ias|ics": "speed",
     r"energy shield( stack(ing|er)?)?|es stack(ing|er)?|ci|chaos inoculation|es": "es",
-    r"(max(imum)? |spell |shield )?block(ing| chance)?|blocker": "block",
+    r"(max(imum)? |spell |shield )?block(ing| chance)?|blocker|shields?": "block",
     r"(life )?leech(ing|er)?|lifesteal|life steal": "leech",
     r"(life )?regen(eration)?|recovery": "regen",
-    r"life( stack(ing|er)?)?|hp|health|high life": "life",
+    r"(?<!low )(?:life( stack(ing|er)?)?|hp|health|high life)": "life",   # not "low life", the opposite
     r"armou?r( stack(ing|er)?)?|armou?red": "armour",
     r"evasion( stack(ing|er)?)?|evade|evasive|eva|dodge": "evasion",
     r"mana( stack(ing|er)?)?|mom|mind over matter": "mana",
@@ -103,7 +103,12 @@ SKILL_ALIASES = {
     "coc": "Cast on Critical", "cast on crit": "Cast on Critical",
     "coea": "Cast on Elemental Ailment", "cast on ailment": "Cast on Elemental Ailment",
     "com": "Cast on Minion Death", "cod": "Cast on Dodge",
+    "cast on freeze": "Cast on Elemental Ailment", "cast on ignite": "Cast on Elemental Ailment",
+    "cast on shock": "Cast on Elemental Ailment", "cast on chill": "Cast on Elemental Ailment",
+    "spectre": "Summon Spectre", "spectres": "Summon Spectre", "corpse explosion": "Detonate Dead",
 }
+# One-word skill names that are also a kind of skill: "grenade build" means grenade skills, not the gem "Grenade".
+KIND_NOT_SKILL = {"Grenade"}
 
 
 def skill_pattern(name: str) -> str:
@@ -213,7 +218,7 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
     for alias, skill in sorted(SKILL_ALIASES.items(), key=lambda kv: -len(kv[0])):
         if skill in known:
             take(skill, re.escape(alias))
-    for skill in sorted(known, key=len, reverse=True):
+    for skill in sorted(known - KIND_NOT_SKILL, key=len, reverse=True):
         take(skill, skill_pattern(skill))
     named.sort()
     helpers = []

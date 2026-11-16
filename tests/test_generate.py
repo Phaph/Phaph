@@ -315,4 +315,29 @@ def test_block_build_holds_a_shield():
     spell = {"name": "Fireball", "types": ["Spell", "Fire"], "weapons": []}
     assert weapon_options(spell, {"goals": ["block"]}) == [("Wand", None, "Shield")]
     bow = {"name": "Lightning Arrow", "types": ["Attack", "Lightning"], "weapons": ["Bow"]}
-    assert weapon_options(bow, {"goals": ["block"]}) == [("Bow", None, None)]   # nothing to swap to: left as is
+    assert weapon_options(bow, {"goals": ["block"]}) == []   # a bow can't go with a shield: not a block build
+
+
+def test_tree_granted_skills_are_not_picked():
+    # Virtuous Barrier comes from a Gemling Legionnaire passive: the catalog marks it from_item, and no picker uses it.
+    from spirit import spirit_candidates
+    cat = [{"name": "Virtuous Barrier", "types": ["Buff", "Persistent"], "spirit": 30, "from_item": True, "weapons": []},
+           {"name": "Wind Dancer", "types": ["Buff", "Persistent"], "spirit": 30, "weapons": []}]
+    assert spirit_candidates(cat, minion_build=False) == ["Wind Dancer"]
+
+
+def test_defence_candidates_are_defensive_buffs_only():
+    from defence import defence_candidates
+    cat = [{"name": "Wind Dancer", "types": ["Buff", "Persistent"], "spirit": 30, "weapons": []},
+           {"name": "Herald of Ice", "types": ["Buff", "Persistent", "Herald", "Damage"], "spirit": 30, "weapons": []},
+           {"name": "Virtuous Barrier", "types": ["Buff", "Persistent"], "spirit": 0, "from_item": True, "weapons": []}]
+    assert defence_candidates(cat) == ["Wind Dancer"]
+
+
+def test_plan_adds_a_clear_skill_on_the_same_weapon():
+    rows = [_row("Whirlwind Lance", "Invoker", 100, 100, "Spear") | {"clear": 50},
+            _row("Glacial Lance", "Invoker", 80, 60, "Spear") | {"clear": 90},
+            _row("Fireball", "Invoker", 70, 50, "Wand") | {"clear": 200}]   # better clear, but another weapon
+    plan = plan_build({"request": {"budget": "high"}, "ranked": rows})
+    assert plan["spec"]["clear_skill"] == "Glacial Lance"
+    assert "clear_skill" not in plan_build(RESULT)["spec"]   # no "clear" numbers: no clear skill
