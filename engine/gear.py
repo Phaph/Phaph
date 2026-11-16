@@ -360,11 +360,21 @@ def _swap_for(work: _Work, stage: Stage, res_group: str) -> bool:
     return False
 
 
+def _req_fields(slot: str) -> list[str]:
+    return [f"{a}RequirementsOn{slot}" for a in ("Str", "Dex", "Int")]
+
+
+def own_deficit(out: dict, slot: str) -> float:
+    """Attribute points this slot's own item needs that the character doesn't have. The build's requirement is the
+    highest of all items and gems, so once one item is short every other item looks free; this looks at the item."""
+    return sum(max(0.0, (out.get(f"{a}RequirementsOn{slot}") or 0) - (out.get(a) or 0)) for a in ("Str", "Dex", "Int"))
+
+
 def _try(pob: PoB, slot: str, raws: list[str]) -> list[dict | None]:
     """Score candidate items for a slot without equipping them (PoB's fast what-if calc)."""
     if not raws:
         return []
-    res = pob.send("try_items", slot=slot, items=raws, fields=SCORE_FIELDS)["results"]
+    res = pob.send("try_items", slot=slot, items=raws, fields=SCORE_FIELDS + _req_fields(slot))["results"]
     return [None if (not isinstance(r, dict) or "error" in r) else r for r in res]
 
 
@@ -558,18 +568,32 @@ def unique_lines(pob: PoB, raw: str) -> tuple[list[str], list[str]]:
     return mods, variants
 
 
+def unique_limit_ok(u: dict, counts: dict[str, int]) -> bool:
+    """Within the unique's "Limited to: N" (by name, across bases: Grand Spectrum on a Ruby and an Emerald counts
+    twice). A unique with no limit text is still taken once per name and base (the `used` sets)."""
+    m = re.search(r"Limited to: (\d+)", u.get("raw") or "")
+    return not m or counts.get(u["name"].split(",")[0], 0) < int(m.group(1))
+
+
+def count_unique(u: dict, counts: dict[str, int]) -> None:
+    key = u["name"].split(",")[0]
+    counts[key] = counts.get(key, 0) + 1
+
+
 def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scorer",
                       weapon_types: dict[str, tuple[str, str | None]], min_gain: float = 0.02) -> None:
     """Swap a crafted rare for a unique wherever a unique scores clearly better."""
     uniques = pob.list_uniques()
     used: set[str] = set()
+    counts: dict[str, int] = {}
     for w in works:
         if w.slot in weapon_types:
             wtype, wsub = weapon_types[w.slot]
             pool = [u for u in uniques if u["type"] == wtype and _sub_ok(u.get("subType"), wsub)]
         else:
             pool = [u for u in uniques if u["type"] == SLOT_TYPES.get(w.slot)]
-        pool = [u for u in pool if (u.get("level") or 0) <= stage.level and u["name"] not in used]
+        pool = [u for u in pool if (u.get("level") or 0) <= stage.level and u["name"] not in used
+                and unique_limit_ok(u, counts)]
         allowed = [(u, note) for u in pool for ok, note in [_unique_allowed(u["name"], stage)] if ok]
         if not allowed:
             continue
@@ -581,13 +605,14 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
         for (u, note), out in zip(allowed, outs):
             if out is None:
                 continue
-            sc = score(out, current)
+            sc = score(out, current) - score.attr_weight * own_deficit(out, w.slot)
             if sc > best_score:
                 best, best_score = (u, note), sc
         if best:
             u, note = best
             w.unique, w.unique_raw, w.price_note = u["name"], u["raw"], note
             used.add(u["name"])
+            count_unique(u, counts)
             pob.send("equip", slot=w.slot, raw=u["raw"], fields=SCORE_FIELDS)
 
 
@@ -600,7 +625,7 @@ def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score:
     for c, out in zip(candidates, outs):
         if out is None:
             continue
-        sc = score(out, ref)
+        sc = score(out, ref) - score.attr_weight * own_deficit(out, slot)
         if sc > best_score:
             best, best_score = c["name"], sc
     return best
@@ -615,8 +640,18 @@ def _sub_ok(actual: str | None, wanted: str | None) -> bool:
     return actual == wanted
 
 
-def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, per_subtype: int = 1) -> list[dict]:
-    """Highest-level base of each defence subtype (or of the given subtype)."""
+def _meets(base: dict, attrs: dict | None) -> bool:
+    """The character has the attributes this base asks for (attrs: current Str / Dex / Int)."""
+    req = base.get("req") or {}
+    req = req if isinstance(req, dict) else {}
+    return attrs is None or all((req.get(k) or 0) <= (attrs.get(a) or 0)
+                                for k, a in (("str", "Str"), ("dex", "Dex"), ("int", "Int")))
+
+
+def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, per_subtype: int = 1,
+               attrs: dict | None = None) -> list[dict]:
+    """Highest-level base of each defence subtype (or of the given subtype). With `attrs`, also the best one the
+    character can wear: at level 55 the top bases ask 86 of one attribute, which many characters don't have yet."""
     pool = [b for b in bases if b["type"] == item_type and (sub_type is None or b.get("subType") == sub_type)
             and not b["name"].startswith("Runeforged") and base_usable(b)]
     groups: dict[str, list[dict]] = {}
@@ -626,6 +661,10 @@ def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, p
     for items in groups.values():
         items.sort(key=lambda b: -b["level"])
         out += items[:per_subtype]
+        if attrs is not None:
+            wearable = next((b for b in items if _meets(b, attrs)), None)
+            if wearable and wearable not in out:
+                out.append(wearable)
     return out
 
 
@@ -653,6 +692,8 @@ def craft_gear(
     score = Scorer(def_weight=def_weight, mode=mode, metric=metric, goals=goals, attr_weight=attr_weight)
     keep = {"ItemFoundRarityIncrease"} if goals and "rarity" in goals else set()
     bases = pob.send("bases", max_level=stage.item_level)["bases"]
+    # The final pass (attr_weight set) also offers bases the character can wear right now.
+    attrs = pob.calc(["Str", "Dex", "Int"]) if attr_weight else None
 
     slot_bases: list[tuple[str, list[dict]]] = []
     weapon_slots = [("Weapon 1", weapon_type, weapon_subtype)]
@@ -661,15 +702,18 @@ def craft_gear(
     elif offhand_type:
         weapon_slots.append(("Weapon 2", offhand_type, None))
     for slot, wtype, wsub in weapon_slots:
-        cands = sorted((b for b in bases if b["type"] == wtype and _sub_ok(b.get("subType"), wsub)
-                        and not b["name"].startswith("Runeforged") and base_usable(b)),
-                       key=lambda b: -b["level"])[:6]
+        pool = sorted((b for b in bases if b["type"] == wtype and _sub_ok(b.get("subType"), wsub)
+                       and not b["name"].startswith("Runeforged") and base_usable(b)),
+                      key=lambda b: -b["level"])
+        cands = pool[:6]
+        if attrs is not None:
+            cands += [b for b in pool if _meets(b, attrs) and b not in cands][:2]
         if not cands:
             raise ValueError(f"No {wtype} bases up to item level {stage.item_level}")
         slot_bases.append((slot, cands))
     for slot, item_type in {**ARMOUR_SLOTS, **JEWELLERY_SLOTS}.items():
         per = 1 if item_type in ARMOUR_SLOTS.values() else 40   # every ring, amulet and belt base competes
-        cands = _top_bases(bases, item_type, per_subtype=per)
+        cands = _top_bases(bases, item_type, per_subtype=per, attrs=attrs)
         if cands:
             slot_bases.append((slot, cands))
 

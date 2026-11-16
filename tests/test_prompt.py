@@ -138,3 +138,22 @@ def test_one_and_two_handed_weapons():
     assert parse("mace build")["weapons"] == ["One Hand Mace", "Two Hand Mace"]
     full = parse_prompt("two hand mace slam for a new player", CATALOG)
     assert full["unused"] == []
+
+
+def test_negations_are_kept():
+    full = parse_prompt("fire spell build, no minions", CATALOG)
+    assert full["request"]["avoid"] == ["minion"]
+    assert "minion" not in full["request"]["kinds"]
+    assert full["unused"] == []
+    assert parse("lightning build without chaos")["avoid"] == ["chaos"]
+
+
+def test_ascendancy_words_are_not_kinds():
+    r = parse("invoker build")
+    assert r["ascendancy"] == "Invoker" and r["kinds"] == []
+
+
+def test_said_twice_and_two_handed():
+    full = parse_prompt("fast mapping build with movement speed", CATALOG)
+    assert full["request"]["goals"].count("movement") == 1 and full["unused"] == []
+    assert parse("armour tank two handed")["weapons"] == ["Two Hand Mace", "Staff"]   # the 2H types in the test catalog

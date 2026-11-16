@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-15.4"
+ENGINE_VERSION = "2026-11-16.1"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -87,6 +87,7 @@ class GenerateRequest(BaseModel):
     goals: list[str] = Field(default_factory=list, max_length=8)  # beyond damage: goals.GOAL_LABELS
     with_skills: list[str] = Field(default_factory=list, max_length=3)   # kept beside the main skill (Cast on X, buffs)
     with_types: list[str] = Field(default_factory=list, max_length=3)    # "warcry", "curse"...: the best one is picked
+    avoid: list[str] = Field(default_factory=list, max_length=5)   # "no minions": kinds or damage types never main
     deep: bool = False   # deep search: wider net, each skill on its own best ascendancies (slower)
 
     model_config = {"populate_by_name": True}

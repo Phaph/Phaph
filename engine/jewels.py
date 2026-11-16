@@ -16,7 +16,7 @@ How it fits in a build stage:
 from __future__ import annotations
 
 from gear import (SCORE_FIELDS, Scorer, SlotPlan, Stage, _affix_info, _fill, _tier_choices, _try, _unique_allowed,
-                  _Work, _enforce_rules, unique_lines)
+                  _Work, _enforce_rules, count_unique, unique_limit_ok, unique_lines)
 from pob import PoB
 
 JEWEL_BASES = ("Ruby", "Emerald", "Sapphire")
@@ -96,8 +96,9 @@ def craft_jewels(pob: PoB, stage: Stage, score: Scorer, uniques: bool = True, mi
             pool = [u for u in pob.list_uniques() if u["type"] == "Jewel" and (u.get("level") or 0) <= stage.level]
             allowed = [(u, note) for u in pool for ok, note in [_unique_allowed(u["name"], stage)] if ok]
             used: set[str] = set()
+            counts: dict[str, int] = {}
             for w in works:
-                cands = [(u, note) for u, note in allowed if u["name"] not in used]
+                cands = [(u, note) for u, note in allowed if u["name"] not in used and unique_limit_ok(u, counts)]
                 if not cands:
                     break
                 current = pob.calc(SCORE_FIELDS)
@@ -110,6 +111,7 @@ def craft_jewels(pob: PoB, stage: Stage, score: Scorer, uniques: bool = True, mi
                     u, note = best
                     w.unique, w.unique_raw, w.price_note = u["name"], u["raw"], note
                     used.add(u["name"])
+                    count_unique(u, counts)
                     pob.send("equip", slot=w.slot, raw=u["raw"], fields=SCORE_FIELDS)
 
     blank = [w for w in works if not w.unique and not w.picked]

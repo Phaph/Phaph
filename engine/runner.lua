@@ -813,6 +813,36 @@ function handlers.balance_attributes(cmd)
 	return { switched = switched, short = short }
 end
 
+-- What sets each attribute requirement that isn't met: an item (slot, name), one gem, or "Support Gems" (5 per
+-- support gem of that colour, added up across the build). Used by the item audit and by fit_gems.
+local function requirementSource(attr)
+	local out = build.calcsTab.mainOutput
+	local src = out["Req" .. attr .. "Item"]
+	if not src then return nil end
+	local r = { source = src.source, need = out["Req" .. attr] or 0, have = out[attr] or 0 }
+	if src.source == "Item" and src.sourceItem then
+		r.name = src.sourceItem.name
+		r.slot = src.sourceSlot
+	elseif src.source == "Gem" and src.sourceGem then
+		r.name = src.sourceGem.nameSpec
+		r.level = src.sourceGem.level
+	elseif src.source == "Support Gems" then
+		r.count = (src[attr] or 0) / 5
+	end
+	return r
+end
+
+function handlers.attribute_sources(cmd)
+	build.buildFlag = true
+	frame()
+	local res = {}
+	for _, a in ipairs(ATTRS) do
+		local s = requirementSource(a.have)
+		if s and s.need > s.have then res[a.have] = s end
+	end
+	return { short = res }
+end
+
 -- Last resort for attribute requirements: lower the level of the gems that need the short attribute, one level at a
 -- time, extra skills first (movement, auras, curses) and the main skill's group last. In game you'd simply use a
 -- lower-level gem. Returns the gems lowered and anything still short.

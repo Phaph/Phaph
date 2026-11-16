@@ -29,7 +29,7 @@ KINDS = {
     r"dot|damage over time|degen": "dot", r"novas?": "nova", r"walls?": "wall", r"orbs?": "orb",
     r"remnants?": "remnant", r"ballista(e|s)?": "ballista", r"companions?|beasts?|tamed": "companion",
     r"ranged": "ranged", r"bears?": "bear", r"wolf|wolves|werewolf": "wolf", r"wyverns?|dragons?": "wyvern",
-    r"plants?|vines?|nature": "plant", r"barrage": "barrage", r"rains?": "rain", r"invocations?|invoker": "invocation",
+    r"plants?|vines?|nature": "plant", r"barrage": "barrage", r"rains?": "rain", r"invocations?": "invocation",
     r"detonat(e|or|ion)s?": "detonate", r"ice crystals?": "ice crystal", r"skeletons?|skellies": "skeleton",
     r"undead": "undead", r"demons?": "demon",
 }
@@ -42,13 +42,14 @@ WEAPONS = {
     r"(one|1)[- ]?hand(ed)? swords?|1h swords?": ["One Hand Sword"],
     r"(two|2)[- ]?hand(ed)? axes?|2h axes?|greataxes?": ["Two Hand Axe"],
     r"(one|1)[- ]?hand(ed)? axes?|1h axes?": ["One Hand Axe"],
+    r"(two|2)[- ]?hand(ed)?( weapons?)?|2h( weapons?)?": ["Two Hand Mace", "Two Hand Sword", "Two Hand Axe", "Staff"],
     r"bows?": ["Bow"], r"crossbows?|xbows?": ["Crossbow"], r"daggers?": ["Dagger"], r"claws?": ["Claw"],
     r"spears?": ["Spear"], r"(quarter)?sta(ff|ves)": ["Staff"], r"wands?": ["Wand"], r"scept(re|er)s?": ["Sceptre"],
     r"maces?|hammers?": ["One Hand Mace", "Two Hand Mace"], r"swords?": ["One Hand Sword", "Two Hand Sword"],
     r"axes?": ["One Hand Axe", "Two Hand Axe"], r"flails?": ["Flail"], r"talismans?": ["Talisman"],
 }
 GOALS = {
-    r"fast|faster|speedy|zoom(y|ing)?|movement|move speed": "movement",
+    r"move(ment)? ?speed|movespeed|fast|faster|speedy|zoom(y|ing)?|movement": "movement",
     r"loot|rarity|magic find|mf|iir": "rarity",
     r"tank(y|ier)?|tough(er)?|surviv(e|able|al)|durable|safe|hardcore|hc|defen[cs]ive": "tanky",
 }
@@ -126,7 +127,7 @@ FILLER = set("""a an the and or with without for of to in on at by from as is ar
 im i'm want wants need give make makes made build builds character char setup please some any can you could would
 should like using use uses used good great nice strong strongest best top high highest max maximum most possible
 dps damage league new also but very really just one two which what who how do does get got so all every whole game
-ever time around based player players new newbie beginner first focus focused focusing type style playstyle version no not non avoid avoiding hate""".split())
+ever time around based killer killing slayer player players new newbie beginner first focus focused focusing type style playstyle version no not non avoid avoiding hate""".split())
 
 
 def unused_words(text: str, found: list[tuple[str, str]]) -> list[str]:
@@ -230,12 +231,16 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
             if not req.get("ascendancy") and (m := _find(re.escape(asc.lower()) + "s?", t)):
                 req["ascendancy"], req["class"] = asc, c["name"]
                 found.append((m.group(0), f"Ascendancy: {asc} ({c['name']})"))
+                t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
     if not req.get("class"):
         for c in catalog.get("classes", []):
             if (m := _find(re.escape(c["name"].lower()) + "e?s?", t)):
                 req["class"] = c["name"]
                 found.append((m.group(0), f"Class: {c['name']}"))
+                t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
                 break
+
+    consumed: list[str] = []
 
     def blank(m):
         nonlocal t
@@ -255,11 +260,24 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
                 found.append((m.group(0), f"With: best {val}"))
             blank(m)
 
+    # "no minions", "without chaos": the build never uses that as its main skill (generate.main_skills).
+    for table in (DAMAGE, KINDS):
+        for pat, val in table.items():
+            while (m := re.search(rf"(?<![\w']){NEGATION}(?:{pat})(?![\w'])", t)):
+                if val not in req.setdefault("avoid", []):
+                    req["avoid"].append(val)
+                    found.append((m.group(0), f"Not: {val}"))
+                blank(m)
+
     for table, field, label in ((DAMAGE, "damage", "Damage"), (KINDS, "kinds", "Kind"), (GOALS, "goals", "Goal")):
         for pat, val in table.items():
-            if val not in req[field] and (m := _find(pat, t)):
-                req[field].append(val)
-                found.append((m.group(0), f"{label}: {val}"))
+            while (m := _find(pat, t)):
+                if val not in req[field]:
+                    req[field].append(val)
+                    found.append((m.group(0), f"{label}: {val}"))
+                else:
+                    consumed.append(m.group(0))   # said twice ("fast ... movement speed"): understood, shown once
+                blank(m)
 
     for pat, val in AILMENT.items():
         if (m := _find(pat, t)):
@@ -298,4 +316,4 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
     if "with_types" in req:
         req["with_types"] = req["with_types"][:3]
     return {"request": req, "found": [{"text": a, "means": b} for a, b in found], "budget_set": "budget" in req,
-            "unused": unused_words(prompt_text, found)}
+            "unused": unused_words(prompt_text, found + [(c, "") for c in consumed])}

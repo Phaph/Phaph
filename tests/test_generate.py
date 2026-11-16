@@ -292,3 +292,11 @@ def test_named_spell_with_a_cast_on_x_gem(monkeypatch):
         def add_skill(self, gems, main=True, **k): groups.append(gems)
     g.add_helpers(Rec(), seen, "Spark")
     assert groups == [["Spark", "Cast on Elemental Ailment"]]
+
+
+def test_avoid_keeps_kind_out_of_main_skills():
+    from generate import main_skills
+    cat = [{"name": "Raise Zombie", "types": ["Minion", "Physical"], "weapons": []},
+           {"name": "Fireball", "types": ["Spell", "Fire", "Projectile"], "weapons": []}]
+    assert [s["name"] for s in main_skills(cat, {"avoid": ["minion"]})] == ["Fireball"]
+    assert [s["name"] for s in main_skills(cat, {"avoid": ["fire"]})] == ["Raise Zombie"]

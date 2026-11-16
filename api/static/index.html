@@ -619,7 +619,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // so the player can see and fix it before forging.
   const HINT = "<span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span>";
   function resetPicker() {
-    state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null; state.withSkills = []; state.withTypes = [];
+    state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null; state.withSkills = []; state.withTypes = []; state.avoid = [];
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
     $("deep").checked = false;
   }
@@ -642,6 +642,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if (r.ascendancy) $("asc").value = r.ascendancy;
     state.skill = r.skill || null;
     state.withTypes = r.with_types || [];   // "warcries": the best one for the build is picked
+    state.avoid = r.avoid || [];   // "no minions": never the main skill
     state.withSkills = r.with_skills || [];   // Cast on X gems, buffs: kept beside the main skill
     syncAll();
     $("readas").innerHTML = out.found.length
@@ -1211,6 +1212,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if (state.skill) req.skill = state.skill;
     if ((state.withSkills || []).length) req.with_skills = state.withSkills;
     if ((state.withTypes || []).length) req.with_types = state.withTypes;
+    if ((state.avoid || []).length) req.avoid = state.avoid;   // "no minions"
     if ($("deep").checked) req.deep = true;
     $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
     heat(true);

@@ -125,6 +125,7 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
     """Skills that can carry a build and fit the theme."""
     want_damage = {d.capitalize() for d in req.get("damage") or []}
     want_kinds = [KIND_TYPES.get(k.lower(), k) for k in req.get("kinds") or []]
+    avoid = {KIND_TYPES.get(a.lower()) or a.capitalize() for a in req.get("avoid") or []}
     ailment = (req.get("ailment") or "").lower() or None
     seen, out = set(), []
     for s in catalog:
@@ -144,6 +145,8 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
             continue
         if any(k not in types for k in want_kinds):
             continue
+        if types & avoid:
+            continue   # "no minions", "without chaos": never relaxed
         if ailment in AILMENT_DAMAGE and not types & AILMENT_DAMAGE[ailment]:
             continue
         if req.get("skill") and s["name"] != req["skill"]:

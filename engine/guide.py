@@ -246,7 +246,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # are balanced first, and this pass treats an unmet requirement as costly: an item you can't equip is useless.
         pob.send("balance_attributes")
         gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals,
-                          log=quiet, attr_weight=0.05)
+                          log=quiet, attr_weight=0.25)   # a point short costs like 25% damage: usable first
         if boss_swap:
             gear.append(boss_weapon())
         # Each socket's jewel for real, now the tree, gems and gear are settled.

@@ -68,9 +68,13 @@ def audit_stage(pob: PoB, g) -> dict:
             issues["readable"].append(f"{label}: {e}")
     pob.load_code(g.code)
     out = pob.calc([f for pair in ATTR for f in pair])
+    sources = pob.send("attribute_sources").get("short") or {}
     for have, need in ATTR:
         if (out.get(have) or 0) < (out.get(need) or 0):
-            issues["attributes"].append(f"{have} {out.get(have, 0):.0f} < {out.get(need, 0):.0f} needed")
+            src = sources.get(have) or {}
+            why = {"Item": f"{src.get('slot')} {src.get('name')}", "Gem": f"gem {src.get('name')} {src.get('level')}",
+                   "Support Gems": f"{src.get('count', 0):.0f} {have} support gems"}.get(src.get("source"), "?")
+            issues["attributes"].append(f"{have} {out.get(have, 0):.0f} < {out.get(need, 0):.0f} needed ({why})")
     over = {}
     for grp in pob.send("groups")["groups"]:
         for name, lv in zip(grp["gems"], grp.get("levels") or []):
