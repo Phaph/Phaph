@@ -47,7 +47,9 @@ def optimise_spirit(pob: PoB, catalog: list[dict], mode: str = "bossing", minion
             o = res["output"]
             if o.get("SpiritUnreserved", -1) < 0 or res["warnings"]:
                 continue
-            sc = (dps(o) - d0) / d0 + def_weight * (o.get("TotalEHP") or 0 - e0) / e0
+            # No EHP from PoB (a totem as the main skill): score on damage alone.
+            ehp_gain = ((o.get("TotalEHP") or 0) - e0) / e0 if out0.get("TotalEHP") else 0.0
+            sc = (dps(o) - d0) / d0 + def_weight * ehp_gain
             if sc > best_score:
                 best, best_score = c, sc
         if not best:

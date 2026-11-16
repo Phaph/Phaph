@@ -88,11 +88,12 @@ class Candidate:
     supports: list[str] = field(default_factory=list)
     is_minion: bool = False
     error: str | None = None
+    totem: str | None = None   # the totem gem that places the skill (Spell Totem), if any
 
     def spec(self) -> dict:
         return {"class": self.cls, "ascendancy": self.ascendancy, "skill": self.skill,
                 "weapon_type": self.weapon_type, "weapon_subtype": self.weapon_subtype,
-                "offhand_type": self.offhand_type}
+                "offhand_type": self.offhand_type, **({"totem": self.totem} if self.totem else {})}
 
 
 _local = threading.local()
@@ -122,6 +123,28 @@ def _close_all(pobs: list[PoB]) -> None:
             pass
 
 
+MACES = {"One Hand Mace", "Two Hand Mace"}
+TOTEM_GEMS = ("Spell Totem", "Ancestral Warrior Totem")
+
+
+def totem_gem(skill: dict) -> str | None:
+    """The totem gem that can place this skill: Spell Totem for spells, Ancestral Warrior Totem for mace attacks."""
+    types = set(skill["types"])
+    if "Totemable" not in types or "Minion" in types or "SummonsTotem" in types:
+        return None
+    if "Spell" in types:
+        return "Spell Totem"
+    if "Attack" in types and MACES & set(skill.get("weapons") or []):
+        return "Ancestral Warrior Totem"
+    return None
+
+
+def as_totem(skill: dict, gem: str) -> dict:
+    """The skill placed by a totem gem: counts as a totem skill; Ancestral Warrior Totem needs a mace."""
+    weapons = [w for w in skill.get("weapons") or [] if w in MACES] if gem == "Ancestral Warrior Totem" else skill.get("weapons")
+    return {**skill, "types": [*skill["types"], "SummonsTotem"], "weapons": weapons, "totem": gem}
+
+
 def main_skills(catalog: list[dict], req: dict) -> list[dict]:
     """Skills that can carry a build and fit the theme."""
     want_damage = {d.capitalize() for d in req.get("damage") or []}
@@ -129,6 +152,13 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
     avoid = {KIND_TYPES.get(a.lower()) or a.capitalize() for a in req.get("avoid") or []}
     ailment = (req.get("ailment") or "").lower() or None
     seen, out = set(), []
+    totem_gems = {s["name"] for s in catalog if s["name"] in TOTEM_GEMS}
+    if req.get("_totem_gem"):
+        totem_gems &= {req["_totem_gem"]}
+    if "SummonsTotem" in want_kinds:
+        # A totem build can also be any skill a totem gem places (Spell Totem + Fireball, Ancestral Warrior Totem +
+        # Boneshatter): those are offered as totem skills too.
+        catalog = list(catalog) + [as_totem(s, g) for s in catalog if (g := totem_gem(s)) in totem_gems]
     for s in catalog:
         types = damage_types(s["types"])
         if s["name"] in seen or types & NOT_MAIN:
@@ -146,6 +176,8 @@ def main_skills(catalog: list[dict], req: dict) -> list[dict]:
             continue
         if any(k not in types for k in want_kinds):
             continue
+        if req.get("_totem_gem") and "SummonsTotem" in want_kinds and s.get("totem") != req["_totem_gem"]:
+            continue   # "Spell Totem build": only skills that totem gem places
         if types & avoid:
             continue   # "no minions", "without chaos": never relaxed
         if ailment in AILMENT_DAMAGE and not types & AILMENT_DAMAGE[ailment]:
@@ -212,6 +244,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
     p = _pob()
     quiet = lambda *a: None
     try:
+        p.totem_for = {c.skill: c.totem} if c.totem else None
         p.new()
         p.set_class(c.cls, c.ascendancy)
         p.set_level(stage.level)
@@ -297,6 +330,7 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
     mode = "mapping" if req.get("mode", "balanced") == "mapping" else "bossing"
     metric = metric_for(mode, req.get("ailment"), req.get("goals"))
     try:
+        p.totem_for = {f.skill: f.totem} if f.totem else None
         p.new()
         p.set_class(f.cls)
         p.set_level(stage.level)
@@ -367,6 +401,12 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
             helpers.insert(0, req["skill"])
             req = {**req, "skill": None}
         req = dict(req)
+        # "Spell Totem build", "Ancestral Warrior Totem slam": a totem build where that gem places the main skill.
+        for g in [h for h in helpers if h in TOTEM_GEMS]:
+            helpers.remove(g)
+            req["kinds"] = list(dict.fromkeys([*(req.get("kinds") or []), "totem"]))
+            req["_totem_gem"] = g
+        req["with_skills"] = helpers
         metas = [h for h in helpers if "Meta" in cat.get(h, {}).get("types", [])]
         for h in helpers:
             info = cat.get(h, {})
@@ -459,7 +499,8 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     for s in skills:
         cls = base_class or DEFAULT_CLASS.get("Minion" if "Minion" in s["types"] else "Spell" if "Spell" in s["types"] else "", "Mercenary")
         for wtype, wsub, off in weapon_options(s, req):
-            round1.append(Candidate(s["name"], wtype, wsub, off, cls, is_minion="Minion" in s["types"]))
+            round1.append(Candidate(s["name"], wtype, wsub, off, cls, is_minion="Minion" in s["types"],
+                                    totem=s.get("totem")))
     round_start(1, f"Round 1: {len(round1)} skill and weapon options", len(round1))
     round1 = list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=False), 1), round1))
     ok1 = sorted((c for c in round1 if not c.error and c.score > 0), key=lambda c: -c.score)
@@ -486,14 +527,16 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         round_start(1.5, f"Round 1b: best {len(finalists)} skills again, with passives", len(finalists),
                     f"Deep search: the best {len(finalists)} skills again, now with passive trees, so skills that "
                     f"need passives to shine aren't cut early.")
-        again = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, f.cls, is_minion=f.is_minion)
+        again = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, f.cls, is_minion=f.is_minion,
+                           totem=f.totem)
                  for f in finalists]
         again = list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=True), 1.5), again))
         ok1b = sorted((c for c in again if not c.error and c.score > 0), key=lambda c: -c.score)
         finalists = one_per_skill(ok1b, DEEP_SKILLS) or finalists[:DEEP_SKILLS]
 
     def build_round(pairs):
-        cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion)
+        cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion,
+                           totem=f.totem)
                  for f, (cls, asc) in pairs]
         return list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=True), 2), cands))
 
@@ -592,6 +635,12 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
     clear = max(clearers, key=lambda r: r.get("clear") or 0, default=None)
     if clear and (clear.get("clear") or 0) >= CLEAR_SKILL_MIN_GAIN * max(main.get("clear") or 0, 1):
         spec["clear_skill"] = clear["skill"]
+    # Skills placed by a totem gem (Spell Totem + Fireball): the guide puts the gem in front of each.
+    picked = {main["skill"]: main} | {r["skill"]: r for r in same_asc
+                                      if r["skill"] in (spec.get("boss_skill"), spec.get("clear_skill"))}
+    totems = {name: r["totem"] for name, r in picked.items() if r.get("totem")}
+    if totems:
+        spec["totems"] = totems
     best = ranked[0]
     cost = 1 - main["score"] / best["score"] if best["score"] else 0
     return {

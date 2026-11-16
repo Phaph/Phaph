@@ -341,3 +341,24 @@ def test_plan_adds_a_clear_skill_on_the_same_weapon():
     plan = plan_build({"request": {"budget": "high"}, "ranked": rows})
     assert plan["spec"]["clear_skill"] == "Glacial Lance"
     assert "clear_skill" not in plan_build(RESULT)["spec"]   # no "clear" numbers: no clear skill
+
+
+def test_totem_build_offers_skills_a_totem_gem_places():
+    from generate import main_skills
+    cat = [{"name": "Fireball", "types": ["Spell", "Fire", "Totemable"], "weapons": []},
+           {"name": "Boneshatter", "types": ["Attack", "Melee", "Totemable", "Physical"], "weapons": ["One Hand Mace", "Two Hand Mace"]},
+           {"name": "Lightning Arrow", "types": ["Attack", "Lightning", "Totemable"], "weapons": ["Bow"]},
+           {"name": "Spell Totem", "types": ["Meta", "SummonsTotem"], "weapons": []},
+           {"name": "Ancestral Warrior Totem", "types": ["Meta", "SummonsTotem"], "weapons": ["One Hand Mace", "Two Hand Mace"]}]
+    got = {s["name"]: s.get("totem") for s in main_skills(cat, {"kinds": ["totem"]})}
+    assert got == {"Fireball": "Spell Totem", "Boneshatter": "Ancestral Warrior Totem"}   # no totem for bows
+    assert [s["name"] for s in main_skills(cat, {"kinds": ["totem"], "_totem_gem": "Spell Totem"})] == ["Fireball"]
+    assert [s["name"] for s in main_skills(cat, {})] == ["Fireball", "Boneshatter", "Lightning Arrow"]   # self-cast
+
+
+def test_pob_client_puts_the_totem_gem_in_front():
+    from pob import PoB
+    p = PoB.__new__(PoB)
+    p.totem_for = {"Fireball": "Spell Totem"}
+    assert p._with_totem(["Fireball", "Spell Echo"]) == ["Spell Totem", "Fireball", "Spell Echo"]
+    assert p._with_totem(["Frostbolt"]) == ["Frostbolt"]

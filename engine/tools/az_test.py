@@ -112,6 +112,8 @@ def asked_for(req: dict, spec: dict, guides: list, game: dict, expect: dict, gro
             fails.append(f"with: no {kind} in the endgame skills")
     main = game["skills"].get(spec["skill"], {})
     main_types = damage_types(main.get("types") or [])
+    if spec["skill"] in (spec.get("totems") or {}):
+        main_types.add("SummonsTotem")   # placed by Spell Totem / Ancestral Warrior Totem
     split = end.damage_split or {}
     total = sum(split.values()) or 1
     for d in req.get("damage") or []:

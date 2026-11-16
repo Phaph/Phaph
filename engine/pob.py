@@ -51,6 +51,13 @@ class PoB:
         self.version = self._read()["version"]
 
     on_event = None   # called with live events (e.g. tree steps) that arrive before a command's reply
+    # Skills placed by a totem gem in this build: {"Fireball": "Spell Totem"}. Every group whose first gem is one of
+    # these skills gets the totem gem put in front, so supports, gear and the exported code all keep the totem.
+    totem_for: dict | None = None   # set per build: pob.totem_for = {...}
+
+    def _with_totem(self, gems: list[str]) -> list[str]:
+        meta = (self.totem_for or {}).get(gems[0]) if gems else None
+        return [meta, *gems] if meta else list(gems)
 
     def _read(self) -> dict:
         assert self.proc.stdout
@@ -103,7 +110,7 @@ class PoB:
 
     def add_skill(self, gems: list[str], level: int = 20, quality: int = 0, main: bool = True,
                   full_dps: bool = False):
-        text = "\n".join(f"{g} {level}/{quality}  1" for g in gems)
+        text = "\n".join(f"{g} {level}/{quality}  1" for g in self._with_totem(gems))
         return self.send("add_skill", text=text, main=main, full_dps=full_dps)
 
     def use_full_dps(self) -> None:
@@ -115,7 +122,7 @@ class PoB:
     def try_skill(self, group: int, gems: list[str], fields: list[str], level: int = 20, quality: int = 0,
                   keep_main: bool = False) -> dict:
         """Replace a group's gems and recalculate. keep_main: score the current main skill, not this group."""
-        text = "\n".join(f"{g} {level}/{quality}  1" for g in gems)
+        text = "\n".join(f"{g} {level}/{quality}  1" for g in self._with_totem(gems))
         res = self.send("try_skill", group=group, text=text, fields=fields, keep_main=keep_main)
         # dkjson encodes empty tables as [], normalise to dicts
         for key in ("supported", "output"):

@@ -48,7 +48,9 @@ def optimise_defence(pob: PoB, catalog: list[dict], spirit: list[str], metric: s
     added: list[dict] = []
     for _ in range(limit):
         out0 = pob.calc(FIELDS)
-        d0, e0 = max(score_of(out0, metric), 1), max(out0.get("TotalEHP") or 0, 1)
+        if not out0.get("TotalEHP"):
+            break   # PoB gives no effective HP here (e.g. a totem is the main skill): nothing to measure against
+        d0, e0 = max(score_of(out0, metric), 1), out0["TotalEHP"]
         groups = {g["gems"][0]: g["group"] for g in pob.send("groups")["groups"] if g["gems"]}
         best, best_val = None, min_gain
         for cand in defence_candidates(catalog):
@@ -73,7 +75,7 @@ def optimise_defence(pob: PoB, catalog: list[dict], spirit: list[str], metric: s
                 o = res["output"]
                 if o.get("SpiritUnreserved", -1) < 0 or res.get("warnings"):
                     continue
-                dps, ehp = (score_of(o, metric) - d0) / d0, (o.get("TotalEHP") or 0 - e0) / e0
+                dps, ehp = (score_of(o, metric) - d0) / d0, ((o.get("TotalEHP") or 0) - e0) / e0
                 val = dps + w * ehp
                 if ehp >= MIN_EHP and val > best_val:
                     best, best_val = {"skill": cand, "ehp": ehp, "dps": dps, "replaced": replace, "config": cfg}, val

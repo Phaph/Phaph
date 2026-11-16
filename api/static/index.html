@@ -1462,6 +1462,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const gemUrl = n => ICONS.gems?.[n] || GEM_LOOSE[loose(n)] || null;
   const img = (url, size) => url ? `<img src="${esc(url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"${size ? ` width="${size}" height="${size}"` : ""} onerror="this.remove()">` : "";
   const gem = (n, cls = "") => `<span class="gem ${cls}">${img(gemUrl(n))}${esc(n)}</span>`;
+  // A skill placed by a totem gem (Spell Totem + Fireball) shows the totem gem first, then the skill and supports.
+  const totemRow = (plan, name, supports) => {
+    const t = (plan.spec.totems || {})[name];
+    return t ? gemRow(t, [name, ...supports]) : gemRow(name, supports);
+  };
   const gemRow = (main, supports) => `<span class="gems">${main ? gem(main, "main") + (supports.length ? '<span class="plus">+</span>' : "") : ""}${supports.map(x => gem(x)).join("")}</span>`;
 
   // Our own slot silhouettes, for bases with no known icon (poe.ninja only lists level 80+ characters,
@@ -1628,10 +1633,10 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     // One line, thin spaces around the slashes so it never stacks.
     const res = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round(st[k] || 0)).join(" / ");
     const kv = [];
-    kv.push([s.clear_skill ? "Main" : "Mapping", gemRow(plan.spec.skill, s.supports)]);
-    if (s.clear_skill) kv.push(["Clearing", gemRow(s.clear_skill, s.clear_supports || [])]);
-    if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
-    else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
+    kv.push([s.clear_skill ? "Main" : "Mapping", totemRow(plan, plan.spec.skill, s.supports)]);
+    if (s.clear_skill) kv.push(["Clearing", totemRow(plan, s.clear_skill, s.clear_supports || [])]);
+    if (s.boss_skill) kv.push(["Bossing", totemRow(plan, s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
+    else if (s.boss_supports.length) kv.push(["Bossing swap", totemRow(plan, plan.spec.skill, s.boss_supports)]);
     triggerRow(s).forEach(r => kv.push(r));
     extraRows(s).forEach(r => kv.push(r));
     kv.push(...priorityRow(s));
@@ -1724,10 +1729,10 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // ---------- Saving and sharing ----------
   function kvFor(plan, s) {
     const kv = [];
-    kv.push([s.clear_skill ? "Main" : "Mapping", gemRow(plan.spec.skill, s.supports)]);
-    if (s.clear_skill) kv.push(["Clearing", gemRow(s.clear_skill, s.clear_supports || [])]);
-    if (s.boss_skill) kv.push(["Bossing", gemRow(s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
-    else if (s.boss_supports.length) kv.push(["Bossing swap", gemRow(plan.spec.skill, s.boss_supports)]);
+    kv.push([s.clear_skill ? "Main" : "Mapping", totemRow(plan, plan.spec.skill, s.supports)]);
+    if (s.clear_skill) kv.push(["Clearing", totemRow(plan, s.clear_skill, s.clear_supports || [])]);
+    if (s.boss_skill) kv.push(["Bossing", totemRow(plan, s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
+    else if (s.boss_supports.length) kv.push(["Bossing swap", totemRow(plan, plan.spec.skill, s.boss_supports)]);
     triggerRow(s).forEach(r => kv.push(r));
     extraRows(s).forEach(r => kv.push(r));
     kv.push(...priorityRow(s));

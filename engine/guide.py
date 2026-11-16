@@ -153,6 +153,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_class(spec["class"], spec.get("ascendancy"))
         pob.set_level(stage.level)
         skill = spec["skill"]
+        pob.totem_for = dict(spec.get("totems") or {}) or None   # Spell Totem + Fireball: the gem goes in front
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
         seed_ailment(pob, group, skill, spec.get("ailment"))   # so gear and tree chase the ailment from the start
         helpers = list(spec.get("with_skills") or [])   # skills the player asked for (Charged Staff, Cast on X)
@@ -351,6 +352,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for d in defence:
             guide.notes.append(f"{d['skill']} for defence: {d['ehp']:+.0%} effective HP, {d['dps']:+.0%} damage"
                                + (f" (in place of {d['replaced']})" if d["replaced"] else "") + ".")
+        for name, gem in (spec.get("totems") or {}).items():
+            guide.notes.append(f"{name} is placed by {gem}: socket {name} in {gem}, and the totems use it.")
         for kind, pick in picked_helpers:
             guide.notes.append(f"You asked for a {kind}: {pick} adds the most to this build, so it's in the skills.")
         for issue in guide.theme_issues:

@@ -384,7 +384,9 @@ local function scoreTotemSkill(group)
 	local first = group.gemList[1]
 	local gd = first and first.gemData
 	local ge = gd and gd.grantedEffect
-	if ge and ge.skillTypes and ge.skillTypes[SkillType.SummonsTotem] and #(gd.additionalGrantedEffects or {}) > 0 then
+	local second = group.gemList[2] and group.gemList[2].gemData
+	local socketed = second and not (second.tags and second.tags.support)   -- Spell Totem + Fireball
+	if ge and ge.skillTypes and ge.skillTypes[SkillType.SummonsTotem] and (#(gd.additionalGrantedEffects or {}) > 0 or socketed) then
 		group.mainActiveSkill = 2
 		group.mainActiveSkillCalcs = 2
 	end
