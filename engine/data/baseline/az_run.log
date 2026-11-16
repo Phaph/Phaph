@@ -1,0 +1,57 @@
+#1 crossbow crit bleed build [high] ...
+   High Velocity Rounds Ritualist Crossbow  356,550 dps  959s  2 issues
+     - early made-up gem: 
+     - end made-up gem: 
+#2 lightning minion build [medium] ...
+   Skeletal Storm Mage Lich Sceptre  211,304 dps  1274s  PASS
+#4 cast on crit fire spells [unlimited] ...
+   Detonate Dead Blood Mage Staff  12,108,836 dps  898s  4 issues
+     - relaxed (the site says what changed): ["Cast on Critical is kept with the main spell socketed in it. How often it triggers isn't modelled yet, so the damage shown is the spell cast normally."]
+     - early made-up gem: 
+     - early made-up gem: 
+     - early made-up gem: 
+#5 poison bow build [budget] ...
+   Spiral Volley Amazon Bow  87,223 dps  518s  1 issues
+     - early made-up gem: 
+#6 tanky ignite build [high] ...
+   Detonate Dead Infernalist Staff  1,982,022 dps  1063s  2 issues
+     - relaxed (the site says what changed): ['No build got most of its damage from ignite, so builds where ignite is a smaller part were allowed.']
+     - early made-up gem: 
+#8 two hand mace slam warrior [free] ...
+   Hammer of the Gods Smith of Kitava Two Hand Mace  221,312 dps  381s  PASS
+#9 spear attack speed build [high] ...
+   Fangs of Frost Acolyte of Chayula Spear  1,434,802 dps  899s  PASS
+#10 chaos damage over time witch [medium] ...
+   Essence Drain Blood Mage Staff  347,943 dps  403s  PASS
+#11 warcry build [high] ...
+   Hexblast Blood Mage Staff  2,423,605 dps  1904s  PASS
+#12 block energy shield build [high] ...
+   Detonate Dead Infernalist Staff  1,985,413 dps  1746s  4 issues
+     - focus: Block chance 0.0, minimum 30
+     - early made-up gem: 
+     - mid made-up gem: 
+     - end made-up gem: 
+#13 lightning arrow with heralds [medium] ...
+   Lightning Arrow Invoker Bow  284,194 dps  689s  1 issues
+     - leveling attributes: Int 32 < 35 needed (7 Int support gems)
+#16 fire spell build, no minions [medium] ...
+   Detonate Dead Blood Mage Staff  2,101,226 dps  854s  3 issues
+     - early made-up gem: 
+     - early made-up gem: 
+     - early made-up gem: 
+#17 sorceress cold build [high] ...
+   Comet Stormweaver Staff  1,515,813 dps  595s  PASS
+#22 invoker build [high] ...
+   Rain of Arrows Invoker Bow  3,104,238 dps  1751s  PASS
+#24 fast mapping build with movement speed [medium] ...
+   Rain of Arrows Invoker Bow  2,265,498 dps  2274s  PASS
+#28 evasion crit bow build [high] ...
+   Rain of Arrows Oracle Bow  1,588,931 dps  895s  2 issues
+     - focus: Evasion 2848.0, minimum 3000
+     - mid made-up gem: 
+
+8 of 16 prompts pass every check (PoB 0.23.1)
+   14  made-up gem
+    2  relaxed (the site says what changed)
+    2  focus
+    1  attributes

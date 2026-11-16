@@ -159,7 +159,7 @@ def real_and_usable(pob: PoB, guides: list, game: dict, budget: str) -> list[str
         pob.load_code(g.code)
         for grp in pob.send("groups")["groups"]:
             for gem in grp["gems"]:
-                if gem not in game["gems"]:
+                if gem and gem not in game["gems"]:   # "" is a skill the character gets for free (Thorns)
                     fails.append(f"{tag} made-up gem: {gem}")
     return fails
 

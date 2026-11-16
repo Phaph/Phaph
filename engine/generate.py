@@ -48,7 +48,7 @@ from goals import FOCUS_FIELDS, focus_factor  # noqa: E402
 
 KIND_TYPES = {
     "minion": "Minion", "spell": "Spell", "attack": "Attack", "melee": "Melee", "projectile": "Projectile",
-    "totem": "Totemable", "trap": "Trappable", "slam": "Slam", "strike": "MeleeSingleTarget", "area": "Area",
+    "totem": "SummonsTotem", "slam": "Slam", "strike": "MeleeSingleTarget", "area": "Area",
     "channel": "Channel", "chaining": "Chains", "grenade": "Grenade", "ammo": "CrossbowAmmoSkill",
     "dot": "DamageOverTime", "nova": "Nova", "storm": "Storm", "wall": "Wall", "orb": "Orb", "remnant": "GeneratesRemnants",
     "ballista": "TotemsAreBallistae", "companion": "Companion", "ranged": "RangedAttack", "bear": "Bear",
@@ -66,6 +66,7 @@ AILMENT_FIELD = {"bleed": "BleedDPS", "poison": "PoisonDPS", "ignite": "IgniteDP
 SPELL_WEAPONS = [("Wand", None, None), ("Staff", "none", None)]
 MINION_WEAPONS = [("Sceptre", None, None), ("Wand", None, None)]
 SHIELD_WEAPONS = [("One Hand Mace", None, "Shield"), ("Spear", None, "Shield")]
+ONE_HANDED = {"One Hand Mace", "One Hand Sword", "One Hand Axe", "Claw", "Dagger", "Wand", "Sceptre", "Spear", "Flail"}
 THEME_MIN_SHARE = 0.3   # candidates below this share of their theme's ailment are dropped
 DEFAULT_CLASS = {"Minion": "Witch", "Spell": "Sorceress"}
 DEEP_POOL, DEEP_SKILLS, DEEP_ASCS = 24, 10, 3
@@ -174,6 +175,10 @@ def weapon_options(skill: dict, req: dict) -> list[tuple[str, str | None, str | 
         opts = MINION_WEAPONS
     else:
         opts = SPELL_WEAPONS
+    if "block" in (req.get("goals") or []):
+        # Block comes from a shield: a block build holds a one-handed weapon and a shield.
+        shield = [(w, sub, "Shield") for w, sub, off in opts if w in ONE_HANDED]
+        opts = shield or opts
     if req.get("weapons"):
         wanted = {w.lower() for w in req["weapons"]}
         opts = [o for o in opts if o[0].lower() in wanted]

@@ -300,3 +300,19 @@ def test_avoid_keeps_kind_out_of_main_skills():
            {"name": "Fireball", "types": ["Spell", "Fire", "Projectile"], "weapons": []}]
     assert [s["name"] for s in main_skills(cat, {"avoid": ["minion"]})] == ["Fireball"]
     assert [s["name"] for s in main_skills(cat, {"avoid": ["fire"]})] == ["Raise Zombie"]
+
+
+def test_totem_means_a_skill_that_summons_a_totem():
+    # "Totemable" only means a totem *could* use the skill (Sunder); a totem build needs a skill that places one.
+    from generate import main_skills
+    cat = [{"name": "Sunder", "types": ["Attack", "Melee", "Slam", "Totemable", "Physical"], "weapons": ["Two Hand Mace"]},
+           {"name": "Shockwave Totem", "types": ["Attack", "SummonsTotem", "Slam", "Physical"], "weapons": ["Two Hand Mace"]}]
+    assert [s["name"] for s in main_skills(cat, {"kinds": ["totem"]})] == ["Shockwave Totem"]
+
+
+def test_block_build_holds_a_shield():
+    from generate import weapon_options
+    spell = {"name": "Fireball", "types": ["Spell", "Fire"], "weapons": []}
+    assert weapon_options(spell, {"goals": ["block"]}) == [("Wand", None, "Shield")]
+    bow = {"name": "Lightning Arrow", "types": ["Attack", "Lightning"], "weapons": ["Bow"]}
+    assert weapon_options(bow, {"goals": ["block"]}) == [("Bow", None, None)]   # nothing to swap to: left as is

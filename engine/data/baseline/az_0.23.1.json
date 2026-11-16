@@ -1,0 +1,1038 @@
+{
+ "pob_version": "0.23.1",
+ "results": {
+  "crossbow crit bleed build [high]": {
+   "prompt": "crossbow crit bleed build",
+   "budget": "high",
+   "read_as": [
+    "Focus: Critical hits (crit chance)",
+    "Ailment: bleed",
+    "Weapon: Crossbow"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "High Velocity Rounds",
+   "ascendancy": "Ritualist",
+   "weapon": "Crossbow",
+   "fails": [
+    "early made-up gem: ",
+    "end made-up gem: "
+   ],
+   "seconds": 959,
+   "stages": {
+    "leveling": {
+     "dps": 10009,
+     "items": 11,
+     "uniques": []
+    },
+    "early": {
+     "dps": 71086,
+     "items": 12,
+     "uniques": [
+      "Assailum, Closed Helm",
+      "Edyrn's Tusks, Iron Cuirass",
+      "Valako's Vice, Plate Gauntlets",
+      "Berek's Pass, Two-Stone Ring",
+      "Ryslatha's Coil, Ornate Belt"
+     ]
+    },
+    "mid": {
+     "dps": 218849,
+     "items": 13,
+     "uniques": [
+      "Valako's Vice, Plate Gauntlets",
+      "Venopuncture, Iron Ring",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "end": {
+     "dps": 356550,
+     "items": 12,
+     "uniques": [
+      "Edyrn's Tusks, Iron Cuirass",
+      "Nightscale, Pauascale Gloves",
+      "Berek's Pass, Two-Stone Ring"
+     ]
+    }
+   },
+   "setups": [
+    "Sniper's Mark + Dialla's Desire, Uhtred's Exodus",
+    "Temporal Chains + Heightened Curse",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Brutality III",
+    "Deep Cuts II",
+    "Heft",
+    "Inexorable Critical I",
+    "Pinpoint Critical"
+   ],
+   "total_dps": 356550,
+   "focus": {
+    "crit": {
+     "value": 61.2,
+     "target": 40
+    }
+   },
+   "off_theme": [],
+   "ailment": "bleed",
+   "ailment_share": 0.705
+  },
+  "lightning minion build [medium]": {
+   "prompt": "lightning minion build",
+   "budget": "medium",
+   "read_as": [
+    "Damage: lightning",
+    "Kind: minion"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Skeletal Storm Mage",
+   "ascendancy": "Lich",
+   "weapon": "Sceptre",
+   "fails": [],
+   "seconds": 1274,
+   "stages": {
+    "leveling": {
+     "dps": 7069,
+     "items": 11,
+     "uniques": []
+    },
+    "early": {
+     "dps": 56258,
+     "items": 11,
+     "uniques": [
+      "Guiding Palm of the Eye, Shrine Sceptre",
+      "Mind of the Council, Death Mask",
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "mid": {
+     "dps": 193648,
+     "items": 14,
+     "uniques": []
+    },
+    "end": {
+     "dps": 211304,
+     "items": 14,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    }
+   },
+   "setups": [
+    "Rhoa Mount + Cold Attunement, Dialla's Desire, Embitter, Feeding Frenzy II, Rapid Attacks II",
+    "Skeletal Warrior + Fire Attunement, Minion Mastery",
+    "Elemental Weakness + Heightened Curse",
+    "Sniper's Mark + "
+   ],
+   "main_supports": [
+    "Elemental Focus",
+    "Feeding Frenzy I",
+    "Fiery Death",
+    "Muster",
+    "Rapid Casting II"
+   ],
+   "total_dps": 211304,
+   "focus": {},
+   "off_theme": []
+  },
+  "cast on crit fire spells [unlimited]": {
+   "prompt": "cast on crit fire spells",
+   "budget": "unlimited",
+   "read_as": [
+    "With: Cast on Critical",
+    "Damage: fire",
+    "Kind: spell"
+   ],
+   "unused": [],
+   "relaxed": [
+    "Cast on Critical is kept with the main spell socketed in it. How often it triggers isn't modelled yet, so the damage shown is the spell cast normally."
+   ],
+   "skill": "Detonate Dead",
+   "ascendancy": "Blood Mage",
+   "weapon": "Staff",
+   "fails": [
+    "relaxed (the site says what changed): [\"Cast on Critical is kept with the main spell socketed in it. How often it triggers isn't modelled yet, so the damage shown is the spell cast normally.\"]",
+    "early made-up gem: ",
+    "early made-up gem: ",
+    "early made-up gem: "
+   ],
+   "seconds": 898,
+   "stages": {
+    "leveling": {
+     "dps": 25476,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 568660,
+     "items": 11,
+     "uniques": [
+      "The Unborn Lich, Ravenous Staff",
+      "Atsak's Sight, Veiled Mask",
+      "Icetomb, Mail Vestments",
+      "Wondertrap, Silk Slippers",
+      "Choir of the Storm, Jade Amulet"
+     ]
+    },
+    "mid": {
+     "dps": 2247169,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 12108836,
+     "items": 13,
+     "uniques": [
+      "Deathblow, Doubled Gauntlets",
+      "Mageblood, Utility Belt"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Weakness + Heightened Curse",
+    "Freezing Mark + ",
+    "Lightning Warp + Dialla's Desire, Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Considered Casting",
+    "Deliberation",
+    "Elemental Focus",
+    "Inexorable Critical I",
+    "Magnified Area II"
+   ],
+   "total_dps": 12108836,
+   "focus": {},
+   "off_theme": []
+  },
+  "poison bow build [budget]": {
+   "prompt": "poison bow build",
+   "budget": "budget",
+   "read_as": [
+    "Ailment: poison",
+    "Weapon: Bow"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Spiral Volley",
+   "ascendancy": "Amazon",
+   "weapon": "Bow",
+   "fails": [
+    "early made-up gem: "
+   ],
+   "seconds": 518,
+   "stages": {
+    "leveling": {
+     "dps": 4181,
+     "items": 11,
+     "uniques": []
+    },
+    "early": {
+     "dps": 54321,
+     "items": 11,
+     "uniques": [
+      "Lioneye's Glare, Heavy Bow",
+      "Atsak's Sight, Veiled Mask",
+      "Icetomb, Mail Vestments",
+      "Nightscale, Pauascale Gloves",
+      "Choir of the Storm, Jade Amulet",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "mid": {
+     "dps": 103214,
+     "items": 11,
+     "uniques": [
+      "Atsak's Sight, Veiled Mask",
+      "Eventide Petals, Veridical Chain",
+      "Berek's Respite, Two-Stone Ring"
+     ]
+    },
+    "end": {
+     "dps": 87223,
+     "items": 12,
+     "uniques": [
+      "Atsak's Sight, Veiled Mask",
+      "Berek's Respite, Two-Stone Ring"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Precision II",
+    "Despair + Dialla's Desire, Heightened Curse, Uhtred's Exodus",
+    "Freezing Mark + ",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Close Combat II",
+    "Deadly Poison II",
+    "Heft",
+    "Inexorable Critical I",
+    "Poison II"
+   ],
+   "total_dps": 87223,
+   "focus": {},
+   "off_theme": [],
+   "ailment": "poison",
+   "ailment_share": 0.669
+  },
+  "tanky ignite build [high]": {
+   "prompt": "tanky ignite build",
+   "budget": "high",
+   "read_as": [
+    "Goal: tanky",
+    "Ailment: ignite"
+   ],
+   "unused": [],
+   "relaxed": [
+    "No build got most of its damage from ignite, so builds where ignite is a smaller part were allowed."
+   ],
+   "skill": "Detonate Dead",
+   "ascendancy": "Infernalist",
+   "weapon": "Staff",
+   "fails": [
+    "relaxed (the site says what changed): ['No build got most of its damage from ignite, so builds where ignite is a smaller part were allowed.']",
+    "early made-up gem: "
+   ],
+   "seconds": 1063,
+   "stages": {
+    "leveling": {
+     "dps": 33912,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 608106,
+     "items": 12,
+     "uniques": [
+      "Atziri's Rule, Reflecting Staff",
+      "The Vertex, Tribal Mask",
+      "Icetomb, Mail Vestments"
+     ]
+    },
+    "mid": {
+     "dps": 1150819,
+     "items": 13,
+     "uniques": [
+      "Perfidy, Knight Armour",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "end": {
+     "dps": 1982022,
+     "items": 13,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Dialla's Desire, Uhtred's Exodus",
+    "Elemental Weakness + Heightened Curse",
+    "Sniper's Mark + ",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Considered Casting",
+    "Deliberation",
+    "Fire Attunement",
+    "Magnified Area II",
+    "Scouring Flame"
+   ],
+   "total_dps": 1982022,
+   "focus": {},
+   "off_theme": [],
+   "ailment": "ignite",
+   "ailment_share": 0.565
+  },
+  "two hand mace slam warrior [free]": {
+   "prompt": "two hand mace slam warrior",
+   "budget": "free",
+   "read_as": [
+    "Class: Warrior",
+    "Kind: slam",
+    "Weapon: Two Hand Mace"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hammer of the Gods",
+   "ascendancy": "Smith of Kitava",
+   "weapon": "Two Hand Mace",
+   "fails": [],
+   "seconds": 381,
+   "stages": {
+    "leveling": {
+     "dps": 39217,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 91126,
+     "items": 10,
+     "uniques": []
+    },
+    "mid": {
+     "dps": 222283,
+     "items": 11,
+     "uniques": []
+    },
+    "end": {
+     "dps": 221312,
+     "items": 11,
+     "uniques": []
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Dialla's Desire, Precision II, Uhtred's Exodus",
+    "Wind Dancer + ",
+    "Elemental Weakness + Heightened Curse",
+    "Freezing Mark + "
+   ],
+   "main_supports": [
+    "Close Combat II",
+    "Deliberation",
+    "Elemental Armament II",
+    "Fire Attunement",
+    "Rapid Attacks II"
+   ],
+   "total_dps": 221312,
+   "focus": {},
+   "off_theme": []
+  },
+  "spear attack speed build [high]": {
+   "prompt": "spear attack speed build",
+   "budget": "high",
+   "read_as": [
+    "Focus: Attack / cast speed",
+    "Weapon: Spear"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Fangs of Frost",
+   "ascendancy": "Acolyte of Chayula",
+   "weapon": "Spear",
+   "fails": [],
+   "seconds": 899,
+   "stages": {
+    "leveling": {
+     "dps": 26092,
+     "items": 11,
+     "uniques": []
+    },
+    "early": {
+     "dps": 318043,
+     "items": 11,
+     "uniques": [
+      "Spire of Ire, Helix Spear",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "mid": {
+     "dps": 757290,
+     "items": 12,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "end": {
+     "dps": 1434802,
+     "items": 13,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Dialla's Desire, Uhtred's Exodus",
+    "Wind Dancer + ",
+    "Elemental Weakness + Heightened Curse",
+    "Voltaic Mark + "
+   ],
+   "main_supports": [
+    "Close Combat II",
+    "Elemental Armament II",
+    "Elemental Focus",
+    "Magnified Area II",
+    "Rapid Attacks II"
+   ],
+   "total_dps": 1434802,
+   "focus": {
+    "speed": {
+     "value": 6.1,
+     "target": null
+    }
+   },
+   "off_theme": []
+  },
+  "chaos damage over time witch [medium]": {
+   "prompt": "chaos damage over time witch",
+   "budget": "medium",
+   "read_as": [
+    "Class: Witch",
+    "Damage: chaos",
+    "Kind: dot"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Essence Drain",
+   "ascendancy": "Blood Mage",
+   "weapon": "Staff",
+   "fails": [],
+   "seconds": 403,
+   "stages": {
+    "leveling": {
+     "dps": 4684,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 31651,
+     "items": 10,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "mid": {
+     "dps": 234067,
+     "items": 12,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "end": {
+     "dps": 347943,
+     "items": 12,
+     "uniques": [
+      "Maligaro's Virtuosity, Fine Bracers",
+      "Astramentis, Stellar Amulet"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + ",
+    "Despair + Dialla's Desire, Heightened Curse, Uhtred's Exodus",
+    "Sniper's Mark + ",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Considered Casting",
+    "Deliberation",
+    "Extraction",
+    "Inexorable Critical II"
+   ],
+   "total_dps": 347943,
+   "focus": {},
+   "off_theme": []
+  },
+  "warcry build [high]": {
+   "prompt": "warcry build",
+   "budget": "high",
+   "read_as": [
+    "With: best warcry"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Blood Mage",
+   "weapon": "Staff",
+   "fails": [],
+   "seconds": 1904,
+   "stages": {
+    "leveling": {
+     "dps": 12560,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 174374,
+     "items": 10,
+     "uniques": [
+      "Atziri's Rule, Reflecting Staff",
+      "The Vertex, Tribal Mask",
+      "Blackbraid, Fur Plate",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "mid": {
+     "dps": 1030679,
+     "items": 12,
+     "uniques": [
+      "Loreweave, Ornate Ringmail"
+     ]
+    },
+    "end": {
+     "dps": 2423605,
+     "items": 13,
+     "uniques": []
+    }
+   },
+   "setups": [
+    "Archmage + ",
+    "Despair + Dialla's Desire, Heightened Curse",
+    "Sniper's Mark + ",
+    "Infernal Cry + "
+   ],
+   "main_supports": [
+    "Deliberation",
+    "Extraction"
+   ],
+   "total_dps": 2423605,
+   "focus": {},
+   "off_theme": []
+  },
+  "block energy shield build [high]": {
+   "prompt": "block energy shield build",
+   "budget": "high",
+   "read_as": [
+    "Focus: Energy shield",
+    "Focus: Block chance"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Detonate Dead",
+   "ascendancy": "Infernalist",
+   "weapon": "Staff",
+   "fails": [
+    "focus: Block chance 0.0, minimum 30",
+    "early made-up gem: ",
+    "mid made-up gem: ",
+    "end made-up gem: "
+   ],
+   "seconds": 1746,
+   "stages": {
+    "leveling": {
+     "dps": 23184,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 616792,
+     "items": 12,
+     "uniques": [
+      "The Unborn Lich, Ravenous Staff",
+      "Atsak's Sight, Veiled Mask",
+      "Waveshaper, Tideseer Mantle",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "mid": {
+     "dps": 3040733,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 1985413,
+     "items": 11,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + ",
+    "Sniper's Mark + Dialla's Desire, Uhtred's Exodus",
+    "Elemental Weakness + Heightened Curse",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Atalui's Bloodletting",
+    "Considered Casting",
+    "Deliberation",
+    "Inexorable Critical I",
+    "Magnified Area II"
+   ],
+   "total_dps": 1985413,
+   "focus": {
+    "es": {
+     "value": 6151,
+     "target": 1000
+    },
+    "block": {
+     "value": 0,
+     "target": 30
+    }
+   },
+   "off_theme": [
+    "Off theme: Block chance is 0%; a build built on it should reach 30%."
+   ]
+  },
+  "lightning arrow with heralds [medium]": {
+   "prompt": "lightning arrow with heralds",
+   "budget": "medium",
+   "read_as": [
+    "Skill: Lightning Arrow",
+    "With: best herald"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Lightning Arrow",
+   "ascendancy": "Invoker",
+   "weapon": "Bow",
+   "fails": [
+    "leveling attributes: Int 32 < 35 needed (7 Int support gems)"
+   ],
+   "seconds": 689,
+   "stages": {
+    "leveling": {
+     "dps": 4429,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 103101,
+     "items": 12,
+     "uniques": [
+      "Lioneye's Glare, Heavy Bow",
+      "The Vertex, Tribal Mask",
+      "Waveshaper, Tideseer Mantle"
+     ]
+    },
+    "mid": {
+     "dps": 259372,
+     "items": 13,
+     "uniques": []
+    },
+    "end": {
+     "dps": 284194,
+     "items": 13,
+     "uniques": [
+      "Loreweave, Ornate Ringmail"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Cold Mastery, Dialla's Desire, Uhtred's Exodus",
+    "Elemental Weakness + Esh's Prowess, Heightened Curse",
+    "Voltaic Mark + ",
+    "Herald of Ash + "
+   ],
+   "main_supports": [
+    "Elemental Armament II",
+    "Elemental Focus",
+    "Fiery Death",
+    "Magnified Area II",
+    "Runeforged Blades"
+   ],
+   "total_dps": 284194,
+   "focus": {},
+   "off_theme": []
+  },
+  "fire spell build, no minions [medium]": {
+   "prompt": "fire spell build, no minions",
+   "budget": "medium",
+   "read_as": [
+    "Not: minion",
+    "Damage: fire",
+    "Kind: spell"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Detonate Dead",
+   "ascendancy": "Blood Mage",
+   "weapon": "Staff",
+   "fails": [
+    "early made-up gem: ",
+    "early made-up gem: ",
+    "early made-up gem: "
+   ],
+   "seconds": 854,
+   "stages": {
+    "leveling": {
+     "dps": 21969,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 446579,
+     "items": 11,
+     "uniques": [
+      "The Unborn Lich, Ravenous Staff",
+      "Atsak's Sight, Veiled Mask",
+      "Icetomb, Mail Vestments",
+      "Wondertrap, Silk Slippers",
+      "Choir of the Storm, Jade Amulet"
+     ]
+    },
+    "mid": {
+     "dps": 2157243,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 2101226,
+     "items": 12,
+     "uniques": []
+    }
+   },
+   "setups": [
+    "Archmage + ",
+    "Sniper's Mark + Dialla's Desire, Uhtred's Exodus",
+    "Elemental Weakness + Heightened Curse",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Considered Casting",
+    "Deliberation",
+    "Elemental Focus",
+    "Inexorable Critical I",
+    "Pinpoint Critical"
+   ],
+   "total_dps": 2101226,
+   "focus": {},
+   "off_theme": []
+  },
+  "sorceress cold build [high]": {
+   "prompt": "sorceress cold build",
+   "budget": "high",
+   "read_as": [
+    "Class: Sorceress",
+    "Damage: cold"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Comet",
+   "ascendancy": "Stormweaver",
+   "weapon": "Staff",
+   "fails": [],
+   "seconds": 595,
+   "stages": {
+    "leveling": {
+     "dps": 8082,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 63828,
+     "items": 10,
+     "uniques": [
+      "Heatshiver, Velvet Cap"
+     ]
+    },
+    "mid": {
+     "dps": 1272143,
+     "items": 12,
+     "uniques": [
+      "Perfidy, Knight Armour",
+      "Maligaro's Virtuosity, Fine Bracers",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "end": {
+     "dps": 1515813,
+     "items": 12,
+     "uniques": []
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Dialla's Desire",
+    "Elemental Weakness + Cold Mastery, Heightened Curse",
+    "Sniper's Mark + ",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Considered Casting",
+    "Elemental Focus"
+   ],
+   "total_dps": 1515813,
+   "focus": {},
+   "off_theme": []
+  },
+  "invoker build [high]": {
+   "prompt": "invoker build",
+   "budget": "high",
+   "read_as": [
+    "Ascendancy: Invoker (Monk)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Rain of Arrows",
+   "ascendancy": "Invoker",
+   "weapon": "Bow",
+   "fails": [],
+   "seconds": 1751,
+   "stages": {
+    "leveling": {
+     "dps": 21229,
+     "items": 11,
+     "uniques": []
+    },
+    "early": {
+     "dps": 214588,
+     "items": 14,
+     "uniques": [
+      "Lioneye's Glare, Heavy Bow",
+      "Silks of Veneration, Enlightened Robe"
+     ]
+    },
+    "mid": {
+     "dps": 1693803,
+     "items": 13,
+     "uniques": [
+      "Deathblow, Doubled Gauntlets",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "end": {
+     "dps": 3104238,
+     "items": 15,
+     "uniques": [
+      "Deathblow, Doubled Gauntlets"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Dialla's Desire, Uhtred's Exodus",
+    "Wind Dancer + ",
+    "Elemental Weakness + Atziri's Allure",
+    "Voltaic Mark + "
+   ],
+   "main_supports": [
+    "Elemental Armament II",
+    "Elemental Focus",
+    "Fiery Death",
+    "Hourglass",
+    "Magnified Area II"
+   ],
+   "total_dps": 3104238,
+   "focus": {},
+   "off_theme": []
+  },
+  "fast mapping build with movement speed [medium]": {
+   "prompt": "fast mapping build with movement speed",
+   "budget": "medium",
+   "read_as": [
+    "Goal: movement",
+    "Focus: mapping"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Rain of Arrows",
+   "ascendancy": "Invoker",
+   "weapon": "Bow",
+   "fails": [],
+   "seconds": 2274,
+   "stages": {
+    "leveling": {
+     "dps": 21395,
+     "items": 11,
+     "uniques": []
+    },
+    "early": {
+     "dps": 414317,
+     "items": 12,
+     "uniques": [
+      "Lioneye's Glare, Heavy Bow"
+     ]
+    },
+    "mid": {
+     "dps": 2215309,
+     "items": 13,
+     "uniques": [
+      "Deathblow, Doubled Gauntlets",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "end": {
+     "dps": 2265498,
+     "items": 13,
+     "uniques": [
+      "Deathblow, Doubled Gauntlets",
+      "Kalandra's Touch, Ring"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Dialla's Desire, Uhtred's Exodus",
+    "Elemental Weakness + Atziri's Allure",
+    "Voltaic Mark + ",
+    "Lightning Warp + Efficiency II, Rapid Casting II, Zenith II"
+   ],
+   "main_supports": [
+    "Elemental Armament II",
+    "Elemental Focus",
+    "Expanse",
+    "Fiery Death",
+    "Magnified Area II"
+   ],
+   "total_dps": 2265498,
+   "focus": {},
+   "off_theme": []
+  },
+  "evasion crit bow build [high]": {
+   "prompt": "evasion crit bow build",
+   "budget": "high",
+   "read_as": [
+    "Focus: Critical hits (crit chance)",
+    "Focus: Evasion",
+    "Weapon: Bow"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Rain of Arrows",
+   "ascendancy": "Oracle",
+   "weapon": "Bow",
+   "fails": [
+    "focus: Evasion 2848.0, minimum 3000",
+    "mid made-up gem: "
+   ],
+   "seconds": 895,
+   "stages": {
+    "leveling": {
+     "dps": 25103,
+     "items": 12,
+     "uniques": []
+    },
+    "early": {
+     "dps": 354354,
+     "items": 12,
+     "uniques": [
+      "Periphery, Heartwood Shortbow",
+      "Nightscale, Pauascale Gloves"
+     ]
+    },
+    "mid": {
+     "dps": 985963,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 1588931,
+     "items": 13,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    }
+   },
+   "setups": [
+    "Elemental Conflux + Dialla's Desire, Uhtred's Exodus",
+    "Wind Dancer + ",
+    "Elemental Weakness + Cold Mastery, Heightened Curse",
+    "Sniper's Mark + "
+   ],
+   "main_supports": [
+    "Charged Shots II",
+    "Deliberation",
+    "Elemental Armament II",
+    "Elemental Focus",
+    "Hourglass"
+   ],
+   "total_dps": 1588931,
+   "focus": {
+    "crit": {
+     "value": 100,
+     "target": 40
+    },
+    "evasion": {
+     "value": 2848,
+     "target": 3000
+    }
+   },
+   "off_theme": [
+    "Off theme: Evasion is 2,848; a build built on it should reach 3,000."
+   ]
+  }
+ },
+ "updated": "2026-11-16 05:58"
+}

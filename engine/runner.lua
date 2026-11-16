@@ -1313,6 +1313,18 @@ function handlers.skill_catalog(cmd)
 			for k in pairs(ge.skillTypes or {}) do
 				if skillTypeName[k] then table.insert(types, skillTypeName[k]) end
 			end
+			-- A totem gem's own effect only places the totem; what the totem does (Attack, Physical...) is in
+			-- its additional effects, so those types count too.
+			if ge.skillTypes and ge.skillTypes[SkillType.SummonsTotem] then
+				local have = {}
+				for _, t in ipairs(types) do have[t] = true end
+				for _, extra in ipairs(gem.additionalGrantedEffects or {}) do
+					for k in pairs(extra.skillTypes or {}) do
+						local n = skillTypeName[k]
+						if n and not have[n] then have[n] = true; table.insert(types, n) end
+					end
+				end
+			end
 			for k in pairs(ge.weaponTypes or {}) do table.insert(weapons, k) end
 			for k in pairs(gem.tags or {}) do table.insert(tags, k) end
 			table.sort(types); table.sort(weapons); table.sort(tags)
