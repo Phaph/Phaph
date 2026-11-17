@@ -25,7 +25,10 @@ def test_seven_stages_in_order():
     assert [s.sockets for s in stages] == [2, 3, 3, 3, 4, 5, 5]
     assert all(make_stage(k).light and make_stage(k).jewel_affixes == 0 for k in CAMPAIGN)
     assert not any(make_stage(k).light for k in ("early", "mid", "end"))
-    assert make_stage("act1").uniques == "none" and make_stage("end").uniques == "all"
+    assert make_stage("act1").uniques == "common" and make_stage("end").uniques == "all"
+    # The acts: a few common uniques the build can use, never a full set of them.
+    assert [make_stage(k).max_uniques for k in CAMPAIGN] == [2, 2, 3, 3]
+    assert make_stage("end").max_uniques is None
     uber = make_stage("end")
     assert uber.focus == "bossing" and uber.def_mult > 1 and uber.chaos_target > 0 and uber.res_target == 75
 
@@ -106,8 +109,8 @@ def test_unique_access_grows_with_the_stage(monkeypatch):
     monkeypatch.setattr(gear, "_PRICES", {"Mageblood": 112, "Headhunter": 8.5, "Bramblejack": 0.05})
     allowed = {k: [n for n in ("Mageblood", "Headhunter", "Bramblejack") if _unique_allowed(n, make_stage(k))]
                for k in STAGE_DEFS}
-    assert allowed["act1"] == allowed["act2"] == allowed["act34"] == []        # self-found rares in the acts
-    assert allowed["interludes"] == allowed["early"] == ["Bramblejack"]         # common uniques
+    for k in ("act1", "act2", "act34", "interludes", "early"):
+        assert allowed[k] == ["Bramblejack"], k                                 # common uniques drop from Act 1 on
     assert allowed["mid"] == ["Headhunter", "Bramblejack"]
     assert allowed["end"] == ["Mageblood", "Headhunter", "Bramblejack"]         # best in slot
 

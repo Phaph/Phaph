@@ -2,7 +2,7 @@
 Act 1, Act 2, Acts 3-4, Interludes, Early Endgame, Mid Endgame, Uber Endgame (gear.STAGE_DEFS).
 
 Each stage gets its own level, passive points, gear, support gems and passives, from what a player realistically has
-there: self-found rares and few sockets in the acts, easy gear when maps start, best-in-slot uniques for the pinnacle
+there: found rares, common uniques and few sockets in the acts, easy gear when maps start, best-in-slot uniques for the pinnacle
 bosses. Endgame stages:
     supports (bare) -> gear -> passive tree (jewel sockets valued with a stand-in jewel) -> supports again
     -> gear again -> a jewel for every socket taken

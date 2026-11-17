@@ -17,7 +17,7 @@ Owner: Kyle. Day-one target: PoE 2 1.0 (Dec 11, 2026). First real test case is a
 
 ## Decisions already made
 - Free app, not paid.
-- No budget or prices (Kyle reversed the old budget picker on 2026-11-18). Gear and uniques follow what a player realistically has at each stage (`gear.STAGE_DEFS`, `UNIQUE_ACCESS`); poe.ninja data only measures how common a unique is and is never shown.
+- No budget or prices (Kyle reversed the old budget picker on 2026-11-18). Gear and uniques follow what a player realistically has at each stage (`gear.STAGE_DEFS`, `UNIQUE_ACCESS`); poe.ninja data only measures how common a unique is and is never shown. Common uniques the build can use are allowed from Act 1 on (Kyle: uniques drop all through the campaign).
 - Every build gets 7 Mobalytics-style stages: Act 1, Act 2, Acts 3-4, Interludes, Early Endgame, Mid Endgame, Uber Endgame. Act stages are light (one tree pass, no jewels, no boss setups); Uber Endgame builds for pinnacle bosses first, with best-in-slot uniques, more toughness and chaos resistance.
 - Compare takes up to 3 builds and shows DPS numbers plus basic pros and cons.
 - Hosting plan: one Hetzner server (website + PoB workers), Claude API for prompts and write-ups.

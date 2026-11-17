@@ -117,7 +117,9 @@ def test_random_unique_fits_the_stage(pob):
     for seed in range(3):
         u = random_unique(pob, random.Random(seed), stage)
         assert u is None or (not u["slot"].startswith("Weapon") and _unique_allowed(u["name"], stage))
-    assert random_unique(pob, random.Random(0), make_stage("act1")) is None   # no uniques in the acts
+    for seed in range(3):   # the acts: only common uniques a level 12 character can wear
+        u = random_unique(pob, random.Random(seed), make_stage("act1"))
+        assert u is None or ((u.get("level") or 0) <= 12 and _unique_allowed(u["name"], make_stage("act1")))
     assert find_unique(pob.list_uniques(), "no such unique") is None
 
 

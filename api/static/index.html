@@ -578,7 +578,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-18.1";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-18.2";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -779,9 +779,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const STAGE_KEYS = Object.keys(STAGE_NAMES);
   // What a player realistically has at each stage (engine/gear.py STAGE_DEFS): shown above each stage's gear.
   const STAGE_HAVE = {
-    act1: "Self-found rares with a couple of useful mods, 2 support sockets per skill, no ascendancy yet. Pick up what drops; the affixes listed are what to keep an eye out for.",
-    act2: "Self-found rares, a Lesser Jeweller's Orb for 3 support sockets, and your first 2 ascendancy points.",
-    act34: "Self-found rares with three useful mods, 3 support sockets, 4 ascendancy points.",
+    act1: "Rares you find with a couple of useful mods, up to two common uniques where the build can use them, 2 support sockets per skill, no ascendancy yet. Pick up what drops; the affixes listed are what to keep an eye out for.",
+    act2: "Found rares and up to two common uniques, a Lesser Jeweller's Orb for 3 support sockets, and your first 2 ascendancy points.",
+    act34: "Found rares with three useful mods, up to three common uniques that fit, 3 support sockets, 4 ascendancy points.",
     interludes: "Rares you found or bought cheaply, common uniques where they help, 3 support sockets. Resistances capped before maps.",
     early: "Easy gear for your first maps: decent rares, common uniques, a Greater Jeweller's Orb for 4 support sockets, simple jewels. Built for clearing maps.",
     mid: "Strong rares with a couple of top-tier mods, most uniques, Perfect Jeweller's Orbs for 5 support sockets and good jewels.",

@@ -36,6 +36,7 @@ class Stage:
     max_affixes: int    # how many good affixes a typical item has at this stage
     top_mods: int = 0   # how many of an item's affixes can be the best tier; the rest sit tier_drop tiers lower
     uniques: str = "all"        # which uniques a player realistically has: none / common / most / all (UNIQUE_ACCESS)
+    max_uniques: int | None = None   # most uniques worn at once (the acts: a few lucky drops, not a full set)
     sockets: int = 5            # support sockets per skill gem (2 base; Lesser / Greater / Perfect Jeweller's Orb)
     points: int | None = None   # passive points (None: PoB's count for the level, every quest done)
     ascendancy_points: int = 8
@@ -51,19 +52,19 @@ class Stage:
         return self.key in CAMPAIGN
 
 
-# Seven stages, as a player meets them. What the player realistically has at each one decides the gear: self-found
-# rares with two or three mods in the acts, easy uniques once maps start, most uniques by mid endgame, and
+# Seven stages, as a player meets them. What the player realistically has at each one decides the gear: rares with
+# two or three mods and common uniques the build can use in the acts, easy gear once maps start, most uniques by mid endgame, and
 # best-in-slot items against the pinnacle bosses. Support sockets: every skill gem starts with 2; a Lesser Jeweller's
 # Orb (campaign) sets 3, a Greater (early endgame) 4, a Perfect 5. Passive points in the acts are level - 1 plus the
 # quest points a player has picked up by then; ascendancy points come from the trials (2 per trial).
 STAGE_DEFS = {
-    "act1": Stage("act1", "Act 1", 12, 12, 0.3, 1, 2, uniques="none", sockets=2, points=13, ascendancy_points=0,
+    "act1": Stage("act1", "Act 1", 12, 12, 0.3, 1, 2, uniques="common", max_uniques=2, sockets=2, points=13, ascendancy_points=0,
                   res_target=30, chaos_target=-100, jewel_affixes=0, light=True),
-    "act2": Stage("act2", "Act 2", 25, 25, 0.35, 1, 3, uniques="none", sockets=3, points=29, ascendancy_points=2,
+    "act2": Stage("act2", "Act 2", 25, 25, 0.35, 1, 3, uniques="common", max_uniques=2, sockets=3, points=29, ascendancy_points=2,
                   res_target=45, chaos_target=-100, jewel_affixes=0, light=True),
-    "act34": Stage("act34", "Acts 3–4", 45, 45, 0.4, 1, 3, uniques="none", sockets=3, points=56,
+    "act34": Stage("act34", "Acts 3–4", 45, 45, 0.4, 1, 3, uniques="common", max_uniques=3, sockets=3, points=56,
                    ascendancy_points=4, res_target=60, chaos_target=-100, jewel_affixes=0, light=True),
-    "interludes": Stage("interludes", "Interludes", 60, 62, 0.45, 1, 3, uniques="common", sockets=3, points=79,
+    "interludes": Stage("interludes", "Interludes", 60, 62, 0.45, 1, 3, uniques="common", max_uniques=3, sockets=3, points=79,
                         ascendancy_points=4, res_target=75, chaos_target=-100, jewel_affixes=0, light=True),
     "early": Stage("early", "Early Endgame", 72, 75, 0.5, 1, 4, uniques="common", sockets=4, ascendancy_points=6,
                    jewel_affixes=2),
@@ -459,7 +460,8 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
 # Which uniques a player realistically has at each stage. How common a unique is comes from poe.ninja (a unique
 # everyone finds is listed cheaply by everyone). It is only a measure of how easy a unique is to get: nothing about
 # money is shown and the player never sets a spending limit.
-#   none: self-found rares only (the acts)   common: uniques that drop all the time   most: all but the rarest
+#   none: rares only   common: uniques that drop all the time (from Act 1 on: a common unique the build can use is
+#   worth wearing while leveling)   most: all but the rarest
 #   all: every unique, best in slot (pinnacle bosses)
 UNIQUE_ACCESS = {"none": 0.0, "common": 1.0, "most": 15.0, "all": float("inf")}
 SLOT_TYPES = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots",
@@ -587,8 +589,10 @@ def count_unique(u: dict, counts: dict[str, int]) -> None:
 
 def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scorer",
                       weapon_types: dict[str, tuple[str, str | None]], min_gain: float = 0.02) -> None:
-    """Swap a crafted rare for a unique wherever a unique scores clearly better."""
+    """Swap a crafted rare for a unique wherever a unique scores clearly better. With stage.max_uniques (the acts),
+    only the uniques that gain the most stay; the other slots go back to their rares."""
     uniques = pob.list_uniques()
+    gains: list[tuple[float, "_Work"]] = []
     used: set[str] = set()
     counts: dict[str, int] = {}
     for w in works:
@@ -626,7 +630,12 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
             w.unique, w.unique_raw = u["name"], u["raw"]
             used.add(u["name"])
             count_unique(u, counts)
+            gains.append((best_score, w))
             pob.send("equip", slot=w.slot, raw=u["raw"], fields=SCORE_FIELDS)
+    if stage.max_uniques is not None and len(gains) > stage.max_uniques:
+        for _, w in sorted(gains, key=lambda g: -g[0])[stage.max_uniques:]:
+            w.unique = w.unique_raw = None
+            pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
 
 
 def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score: Scorer) -> str:
