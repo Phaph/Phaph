@@ -147,7 +147,8 @@ select option:checked { background: #3a2f20; color: var(--brass-hi); }
 .go.alt { background: none; color: var(--brass); box-shadow: inset 0 0 0 1px var(--brass); }
 .go.alt:hover { box-shadow: inset 0 0 0 1px var(--brass), 0 8px 24px rgba(232,115,58,.18); }
 .anchor { display: grid; gap: 6px; max-width: 640px; margin: 0 0 12px; }
-.anchor input { width: 100%; }
+.anchor .lock { flex-wrap: wrap; min-height: 34px; }
+.anchor .empty { color: var(--muted); font-style: italic; font-size: 15px; }
 .anchor small, .ladder { color: var(--muted); font-size: 14px; line-height: 1.4; }
 .ladder b { color: var(--text, inherit); font-weight: 600; }
 .link { background: none; border: 0; color: var(--brass); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
@@ -491,9 +492,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <textarea id="prompt" rows="1" maxlength="500" placeholder="lightning minion build for a monk, 5 div"></textarea>
       <div class="readas" id="readas" aria-live="polite"><span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span></div>
     </div>
-    <div class="anchor field"><label for="anchor">Build around</label>
-      <input id="anchor" list="anchorList" maxlength="80" autocomplete="off" placeholder="a unique, keystone or support gem">
-      <datalist id="anchorList"></datalist>
+    <div class="anchor field" aria-live="polite"><span class="label">Build around</span>
+      <span class="lock"><span class="empty" id="anchorEmpty">Nothing locked. Name a unique, keystone or support gem above, e.g. “build around Chaos Inoculation”.</span>
+        <span class="tag" id="anchorName" hidden></span><button class="link" type="button" id="anchorClear" hidden>Unlock</button></span>
       <small>Locked first; the skill, ascendancy, passives and the rest of the gear are picked to suit it.</small></div>
     <div class="gobar"><button class="go" id="go" type="submit">Forge it</button>
       <button class="go alt" id="randomGo" type="button" title="Skill, weapon, ascendancy and a unique picked at random within what you set">Random build</button></div>
@@ -625,9 +626,6 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   };
   fetch(API + "/catalog").then(r => r.json()).then(cat => {
     catalog = cat;
-    const list = $("anchorList");
-    [["uniques", "Unique"], ["keystones", "Keystone"], ["supports", "Support"]].forEach(([k, label]) =>
-      (cat[k] || []).forEach(n => { const o = document.createElement("option"); o.value = n; o.label = label; list.appendChild(o); }));
     cat.classes.forEach(c => { const o = document.createElement("option"); o.value = c.name; o.textContent = c.name; $("cls").appendChild(o); });
     fillAscendancies(); weaponChips();
   }).catch(() => {});
@@ -638,7 +636,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   function resetPicker() {
     state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null; state.withSkills = []; state.withTypes = []; state.avoid = [];
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
-    $("deep").checked = false; $("offmeta").checked = false; $("anchor").value = ""; state.random = false;
+    $("deep").checked = false; $("offmeta").checked = false; setAnchor(null); state.random = false;
   }
   function syncAll() {
     syncs.forEach(f => f()); weaponSyncs.forEach(f => f()); syncBudget();
@@ -656,7 +654,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if (r.mode) $("mode").value = r.mode;
     if (r.deep) $("deep").checked = true;
     if (r.off_meta) $("offmeta").checked = true;
-    $("anchor").value = r.anchor_unique || r.anchor_keystone || r.anchor_support || "";
+    const af = ["anchor_unique", "anchor_keystone", "anchor_support"].find(f => r[f]);
+    setAnchor(af ? { field: af, name: r[af] } : null);
     state.random = !!r.random;
     if (r.class) { $("cls").value = r.class; fillAscendancies(); }
     if (r.ascendancy) $("asc").value = r.ascendancy;
@@ -1236,8 +1235,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if ((state.avoid || []).length) req.avoid = state.avoid;   // "no minions"
     if ($("deep").checked) req.deep = true;
     if ($("offmeta").checked) req.off_meta = true;
-    const anchor = anchorOf($("anchor").value);
-    if (anchor) req[anchor.field] = anchor.name;
+    if (state.anchor) req[state.anchor.field] = state.anchor.name;
     if (state.random || randomClick) { req.random = true; req.seed = Math.floor(Math.random() * 2 ** 31); delete req.deep; }
     randomClick = false;
     $("go").disabled = $("randomGo").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
@@ -1257,16 +1255,14 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       setStatus(`<span class="error">${esc(err.message)}</span>`);
     } finally { $("go").disabled = $("randomGo").disabled = false; heat(false); }
   };
-  // "Build around": which kind of name it is (unique, keystone, support), matched without regard to case.
-  function anchorOf(text) {
-    const t = (text || "").trim().toLowerCase();
-    if (!t || !catalog) return null;
-    for (const [k, field] of [["uniques", "anchor_unique"], ["keystones", "anchor_keystone"], ["supports", "anchor_support"]]) {
-      const name = (catalog[k] || []).find(n => n.toLowerCase() === t);
-      if (name) return { field, name };
-    }
-    return null;
+  // "Build around" is filled from the prompt as the player types (not typed into); Unlock clears it.
+  function setAnchor(a) {
+    const ANCHOR_KIND = { anchor_unique: "Unique", anchor_keystone: "Keystone", anchor_support: "Support" };
+    state.anchor = a;
+    $("anchorEmpty").hidden = !!a; $("anchorName").hidden = $("anchorClear").hidden = !a;
+    $("anchorName").textContent = a ? `${ANCHOR_KIND[a.field]}: ${a.name.split(",")[0]}` : "";
   }
+  $("anchorClear").onclick = () => setAnchor(null);
   // On Forge, Claude reads the prompt (once per text): it understands wording the instant reader misses
   // ("I want to punch things"). If it can't (no key, a limit, an error), the instant reading stands.
   let claudeText = "";
