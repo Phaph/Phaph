@@ -666,7 +666,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     state.withSkills = r.with_skills || [];   // Cast on X gems, buffs: kept beside the main skill
     syncAll();
     $("readas").innerHTML = out.found.length
-      ? `<span>Read as</span>${out.found.map(f => `<span class="tag">${esc(f.means)} <i>“${esc(f.text)}”</i></span>`).join("")}`
+      ? `<span>${out.reader === "claude" ? "Read by Claude as" : "Read as"}</span>${out.found.map(f => `<span class="tag">${esc(f.means)} <i>“${esc(f.text)}”</i></span>`).join("")}`
         + (out.budget_set ? "" : "<span>· no budget named, so it uses the one picked below</span>")
         + ((out.unused || []).length ? `<span class="unused">· not understood, so not used: ${out.unused.map(w => `<b>${esc(w)}</b>`).join(", ")}</span>` : "")
       : "<span>Nothing it recognises yet. Try a damage type, skill, class, weapon or budget.</span>";
@@ -1224,6 +1224,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     e.preventDefault();
     sparks($("go"), 46);
     clearTimeout(parseTimer); await parseNow();
+    await readWithClaude();
     const req = { damage: [...state.damage], kinds: [...state.kinds], weapons: [...state.weapons].slice(0, 5), budget: state.budget,
       mode: $("mode").value, goals: [...state.goals] };
     if ($("ailment").value) req.ailment = $("ailment").value;
@@ -1265,6 +1266,19 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       if (name) return { field, name };
     }
     return null;
+  }
+  // On Forge, Claude reads the prompt (once per text): it understands wording the instant reader misses
+  // ("I want to punch things"). If it can't (no key, a limit, an error), the instant reading stands.
+  let claudeText = "";
+  async function readWithClaude() {
+    const text = $("prompt").value.trim();
+    if (!catalog?.ai_reader || !text || text === claudeText) return;
+    setStatus("Claude is reading your prompt…");
+    try {
+      const out = await api("/parse", { text, ai: true });
+      if (out.reader === "claude") { applyParse(out); claudeText = text; }
+    } catch {}
+    setStatus("");
   }
   let randomClick = false;
   $("randomGo").onclick = () => { randomClick = true; $("form").requestSubmit(); };

@@ -15,6 +15,10 @@ services:
       MAX_ACTIVE_JOBS_PER_CLIENT: ${MAX_ACTIVE_JOBS_PER_CLIENT:-2}
       JOB_WORKERS: ${JOB_WORKERS:-2}
       GENERATE_WORKERS: ${GENERATE_WORKERS:-8}
+      # Claude reads prompts when this is set in .env (never in the repo). Caps: see api/app.py.
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      AI_DAILY_LIMIT: ${AI_DAILY_LIMIT:-1000}
+      PROMPT_LOG: /data/prompt_log.jsonl
     volumes:
       - jobs:/data
     # Leave CPU for games and everything else on the PC.

@@ -34,12 +34,13 @@ sys.path.insert(0, str(ROOT / "engine"))
 from gear import BUDGET_ORDER, BUDGETS, STAGE_DEFS  # noqa: E402
 from pob import PoB  # noqa: E402
 
+from . import prompt_ai  # noqa: E402
 from .jobs import JobStore  # noqa: E402
 
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-16.4"
+ENGINE_VERSION = "2026-11-16.5"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -110,6 +111,7 @@ class GenerateRequest(BaseModel):
 
 class ParseRequest(BaseModel):
     text: str = Field(..., max_length=500)
+    ai: bool = False   # let Claude read it (api/prompt_ai.py); the word lists answer if it can't
 
 
 class PlanRequest(BaseModel):
@@ -375,7 +377,7 @@ def site_notice() -> str | None:
 
 @app.get("/catalog")
 def catalog(request: Request):
-    return request.app.state.catalog
+    return {**request.app.state.catalog, "ai_reader": prompt_ai.available()}
 
 
 @app.post("/guides")
@@ -408,7 +410,31 @@ def parse(req: ParseRequest, request: Request):
     recognised phrase was read as. No job and no PoB work, so the website can call it as the player types."""
     from prompt import parse_prompt
 
+    if req.ai and prompt_ai.available() and _ai_allowed(_client(request)):
+        read = prompt_ai.read_prompt(req.text, request.app.state.catalog)
+        if read:
+            return read
     return parse_prompt(req.text, request.app.state.catalog)
+
+
+# Claude readings cost about a cent each: a cap per player per hour and for the whole site per day keeps the bill
+# small. Over a cap, the word lists read the prompt instead (the player still gets a build).
+AI_PER_CLIENT_HOUR = int(os.environ.get("AI_PER_CLIENT_HOUR", "30"))
+AI_DAILY_LIMIT = int(os.environ.get("AI_DAILY_LIMIT", "1000"))
+_ai_calls: dict[str, list[float]] = {}
+_ai_day: list[float] = []
+
+
+def _ai_allowed(client: str) -> bool:
+    now = time.time()
+    mine = [t for t in _ai_calls.get(client, []) if now - t < 3600]
+    _ai_day[:] = [t for t in _ai_day if now - t < 86400]
+    if len(mine) >= AI_PER_CLIENT_HOUR or (AI_DAILY_LIMIT and len(_ai_day) >= AI_DAILY_LIMIT):
+        _ai_calls[client] = mine
+        return False
+    _ai_calls[client] = [*mine, now]
+    _ai_day.append(now)
+    return True
 
 
 @app.post("/generate")

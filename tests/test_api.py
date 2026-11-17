@@ -193,3 +193,10 @@ def test_site_notice(client, tmp_path, monkeypatch):
     assert client.get("/health").json()["notice"] is None
     notice.write_text("Path of Exile 2 1.0 is out. Builds are being updated.\n", encoding="utf-8")
     assert client.get("/health").json()["notice"] == "Path of Exile 2 1.0 is out. Builds are being updated."
+
+
+def test_parse_with_ai_falls_back_without_a_key(client, monkeypatch):
+    monkeypatch.delenv("ANTHROPIC_API_KEY", raising=False)
+    r = client.post("/parse", json={"text": "lightning minion build for a monk", "ai": True})
+    assert r.status_code == 200 and r.json()["request"]["damage"] == ["lightning"] and "reader" not in r.json()
+    assert client.get("/catalog").json()["ai_reader"] is False
