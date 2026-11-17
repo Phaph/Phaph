@@ -245,6 +245,8 @@ def optimise_supports(
     skip = set(exclude or ())
     if not allow_conditional:
         skip |= {g["name"] for g in gems if g.get("conditional")}
+    if getattr(pob, "no_lineage", False):
+        skip |= {g["name"] for g in gems if g.get("lineage")}   # the acts: lineage supports are rare endgame drops
     pool = [n for n in (candidates or [g["name"] for g in gems]) if n not in skip]
     # PoB's own type rules rule out most supports for any given skill without a calculation.
     compatible = pob.send("compatible_supports", group=group).get("supports")

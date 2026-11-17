@@ -11,7 +11,7 @@ How it fits in a build stage:
    socket it takes with a copy so later picks see the jewel.
 2. craft_jewels(): after the tree, gear and gems are settled, craft each socket's jewel for real, one
    after another (so the second jewel is crafted with the first one in place), and swap in a unique
-   jewel where one clearly beats the rare and fits the budget.
+   jewel where one clearly beats the rare and the player has it by this stage.
 """
 from __future__ import annotations
 
@@ -20,8 +20,6 @@ from gear import (SCORE_FIELDS, Scorer, SlotPlan, Stage, _affix_info, _fill, _ti
 from pob import PoB
 
 JEWEL_BASES = ("Ruby", "Emerald", "Sapphire")
-# How many good affixes a rare jewel has at each budget (a jewel holds up to 2 prefixes and 2 suffixes).
-JEWEL_AFFIXES = {"free": 1, "budget": 2, "medium": 3, "high": 3, "unlimited": 4}
 
 
 def jewel_sockets(pob: PoB) -> list[dict]:
@@ -30,7 +28,7 @@ def jewel_sockets(pob: PoB) -> list[dict]:
 
 
 def _affix_count(stage: Stage) -> int:
-    return JEWEL_AFFIXES.get(stage.budget_key, 4)
+    return max(1, stage.jewel_affixes)   # good affixes on a rare jewel (it holds up to 2 prefixes and 2 suffixes)
 
 
 def _craft_in(pob: PoB, slot: str, stage: Stage, score: Scorer, bases, cache: dict) -> tuple[_Work, float]:
@@ -91,25 +89,25 @@ def craft_jewels(pob: PoB, stage: Stage, score: Scorer, uniques: bool = True, mi
         base_order = (w.base,)
 
     if uniques:
-        from gear import BUDGET_DIVINES
-        if BUDGET_DIVINES.get(stage.budget_key, 0) > 0:
+        from gear import UNIQUE_ACCESS
+        if UNIQUE_ACCESS.get(stage.uniques, 0) > 0:
             pool = [u for u in pob.list_uniques() if u["type"] == "Jewel" and (u.get("level") or 0) <= stage.level]
-            allowed = [(u, note) for u in pool for ok, note in [_unique_allowed(u["name"], stage)] if ok]
+            allowed = [u for u in pool if _unique_allowed(u["name"], stage)]
             used: set[str] = set()
             counts: dict[str, int] = {}
             for w in works:
-                cands = [(u, note) for u, note in allowed if u["name"] not in used and unique_limit_ok(u, counts)]
+                cands = [u for u in allowed if u["name"] not in used and unique_limit_ok(u, counts)]
                 if not cands:
                     break
                 current = pob.calc(SCORE_FIELDS)
-                outs = _try(pob, w.slot, [u["raw"] for u, _ in cands])
+                outs = _try(pob, w.slot, [u["raw"] for u in cands])
                 best, best_score = None, min_unique_gain
-                for (u, note), out in zip(cands, outs):
+                for u, out in zip(cands, outs):
                     if out is not None and (sc := score(out, current)) > best_score:
-                        best, best_score = (u, note), sc
+                        best, best_score = u, sc
                 if best:
-                    u, note = best
-                    w.unique, w.unique_raw, w.price_note = u["name"], u["raw"], note
+                    u = best
+                    w.unique, w.unique_raw = u["name"], u["raw"]
                     used.add(u["name"])
                     count_unique(u, counts)
                     pob.send("equip", slot=w.slot, raw=u["raw"], fields=SCORE_FIELDS)
@@ -120,9 +118,9 @@ def craft_jewels(pob: PoB, stage: Stage, score: Scorer, uniques: bool = True, mi
     works = [w for w in works if w not in blank]
     for w in works:
         if w.unique:
-            log(f"  {w.slot:<12} UNIQUE {w.unique} ({w.price_note})")
+            log(f"  {w.slot:<12} UNIQUE {w.unique}")
             mods, variants = unique_lines(pob, w.unique_raw)
-            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note,
+            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique,
                                   mods=mods, variants=variants))
         else:
             log(f"  {w.slot:<12} {w.base:<10} " + "; ".join(w.picked))

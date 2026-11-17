@@ -174,7 +174,7 @@ def test_jewels_fill_the_sockets_the_tree_takes(pob, monk):
     from gear import Scorer, make_stage
     from jewels import craft_jewels, jewel_sockets, proxy_jewel
 
-    stage = make_stage("end", "high")
+    stage = make_stage("end")
     score = Scorer()
     nodes, stats = pob.send("allocated")["nodes"], pob.calc(FIELDS)
     raw = proxy_jewel(pob, stage, score)

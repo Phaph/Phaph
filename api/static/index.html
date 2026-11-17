@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Whetstone: PoE 2 build forge</title>
-<meta name="description" content="Pick a budget and a build idea. Whetstone tests thousands of versions in Path of Building and hands back the strongest one.">
+<meta name="description" content="Say what you want to play. Whetstone tests thousands of versions in Path of Building and hands back the strongest one.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;600&display=swap">
@@ -124,16 +124,6 @@ select:focus { border-color: var(--brass); outline: none; }
 select option { background: #1c1916; color: var(--ink); }
 select option:checked { background: #3a2f20; color: var(--brass-hi); }
 .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 26px; }
-/* Budget: coins stacked on the bench. */
-.rungs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
-.rung { background: linear-gradient(180deg, var(--iron2), var(--iron)); border: 1px solid var(--edge); border-radius: 3px; padding: 12px; text-align: left; cursor: pointer;
-  display: grid; gap: 4px; min-width: 0; box-shadow: inset 0 1px 0 rgba(255,236,200,.05), 0 2px 0 var(--seam); transition: border-color 250ms, box-shadow 300ms var(--ease); }
-.rung .coins { display: flex; gap: 3px; height: 30px; align-items: end; min-width: 0; overflow: hidden; }
-.rung .coins i { flex: 0 1 11px; min-width: 4px; border-radius: 2px; transition: filter 400ms var(--ease); background: repeating-linear-gradient(0deg, #2c2721 0 1px, #9b8e7a 1px 2px, #73685a 2px 3.5px); }
-.rung b { font: 600 22px/1 var(--display); } .rung span { font-size: 14px; color: var(--muted); }
-.rung[aria-pressed="true"] { border-color: var(--brass); box-shadow: inset 0 1px 0 rgba(255,220,160,.12), 0 2px 0 var(--seam), 0 0 22px rgba(208,164,90,.16); }
-.rung[aria-pressed="true"] .coins i { background: repeating-linear-gradient(0deg, #5a3f12 0 1px, #f6d797 1px 2px, #c99a50 2px 3.5px); filter: drop-shadow(0 0 5px rgba(240,201,127,.4)); }
-@media (max-width: 620px) { .rungs { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 /* The forge button: a heavy brass plate. */
 .go { justify-self: start; position: relative; border: 0; border-radius: 3px; padding: 14px 34px 12px; cursor: pointer;
   font: 700 28px/1 var(--display); color: #241a0b; letter-spacing: .01em;
@@ -326,7 +316,7 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
 .cand .bar i { display: block; height: 100%; width: 0; border-radius: 2px; background: #5c544a; transition: width 700ms var(--ease); }
 .cand.best .name, .cand.best .score { color: var(--brass-hi); }
 .cand.best .bar i { background: linear-gradient(90deg, var(--ember), var(--brass-hi)); box-shadow: 0 0 10px rgba(232,115,58,.45); }
-.lanes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+.lanes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
 @media (max-width: 760px) { .lanes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 /* Each stage is an anvil: it heats while worked, and cools to brass when done. */
 .lane { position: relative; border: 1px solid var(--edge); border-radius: 3px; padding: 14px; display: grid; gap: 8px; align-content: start; min-width: 0;
@@ -390,16 +380,13 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
   footer { color: #444; }
 }
 
-.price { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
-.item.unique .price { color: #e2913f; font-weight: 500; }
+.kind { font-size: 15px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.item.unique .kind { color: #e2913f; font-weight: 500; }
 a.trade { color: var(--brass); font-size: 14px; white-space: nowrap; text-underline-offset: 3px; }
 a.trade::after { content: " \2197"; }
-.cost { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; padding: 10px 14px; border: 1px solid var(--edge); border-radius: 3px;
-  background: linear-gradient(180deg, #221d16, var(--iron)); font-size: 17px; }
-.cost b { font: 600 19px var(--mono); color: var(--brass-hi); }
-.cost-h { font: 600 21px/1 var(--display); margin-right: 4px; }
-.cost-note { flex-basis: 100%; font-size: 14px; }
-.buildcost { font-size: 18px; color: var(--muted); } .buildcost b { font: 600 20px var(--mono); color: var(--brass-hi); }
+.have { display: grid; gap: 4px; padding: 10px 14px; border: 1px solid var(--edge); border-radius: 3px; }
+.have-h { font: 600 21px/1 var(--display); }
+.have p { margin: 0; font-size: 15px; color: var(--muted); }
 
 .treelink { justify-self: start; text-decoration: none; color: var(--ink); border-color: var(--brass-lo); }
 .kv dd .setup { display: block; margin-bottom: 6px; }
@@ -527,7 +514,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <path fill="#0e0d0c" opacity=".35" d="M28 65h88v3H28z"/>
     </svg>
     <span class="wordmark">Whetstone</span>
-    <p class="sub">Say what you want to play. It grinds through <b>every skill, weapon and ascendancy</b> that fits in Path of Building's own damage maths, and hands you the sharpest version at your budget, from the campaign to endgame. <a class="howlink" href="/how.html">How it works</a></p>
+    <p class="sub">Say what you want to play. It grinds through <b>every skill, weapon and ascendancy</b> that fits in Path of Building's own damage maths, and hands you the sharpest version for every step of the game: each act of the campaign, early and mid endgame, and the pinnacle bosses. <a class="howlink" href="/how.html">How it works</a></p>
   </header>
 
   <div class="notice" id="notice" hidden role="status"></div>
@@ -538,8 +525,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   <form class="panel" id="form" novalidate>
     <div class="prompt">
       <label for="prompt">What are you playing?</label>
-      <textarea id="prompt" rows="1" maxlength="500" placeholder="lightning minion build for a monk, 5 div"></textarea>
-      <div class="readas" id="readas" aria-live="polite"><span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span></div>
+      <textarea id="prompt" rows="1" maxlength="500" placeholder="lightning minion build for a monk"></textarea>
+      <div class="readas" id="readas" aria-live="polite"><span>A damage type, a skill, a class or ascendancy, a weapon. Whatever it understands gets stamped here.</span></div>
     </div>
     <div class="anchor field" aria-live="polite"><span class="label">Build around</span>
       <span class="lock"><span class="empty" id="anchorEmpty">Nothing locked. Name a unique, keystone or support gem above, e.g. “build around Chaos Inoculation”.</span>
@@ -549,10 +536,6 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <button class="go alt" id="randomGo" type="button" title="Skill, weapon, ascendancy and a unique picked at random within what you set">Random build</button></div>
     <div class="status" id="status" hidden></div>
     <div class="divider">or set it up by hand</div>
-    <div class="field">
-      <span class="label">How much you can spend</span>
-      <div class="rungs" id="rungs" role="group" aria-label="Budget"></div>
-    </div>
     <div class="row">
       <div class="field"><span class="label">Damage</span><div class="chips" id="damage" role="group" aria-label="Damage type"></div></div>
       <div class="field"><span class="label">Kind of skill</span><div class="chips" id="kinds" role="group" aria-label="Skill kind"></div></div>
@@ -582,7 +565,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   <section class="panel" id="guide" hidden></section>
 
   <footer>
-    <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2" style="color:var(--brass)">Path of Building Community</a> (MIT licence), run by this site. Unique prices from <a href="https://poe.ninja/poe2/economy" style="color:var(--brass)">poe.ninja</a>. Use DPS to compare builds; in-game numbers depend on your settings.</p>
+    <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2" style="color:var(--brass)">Path of Building Community</a> (MIT licence), run by this site. Which uniques a player has at each stage is judged from <a href="https://poe.ninja/poe2/economy" style="color:var(--brass)">poe.ninja</a>. Use DPS to compare builds; in-game numbers depend on your settings.</p>
     <p><a href="/how.html" style="color:var(--brass)">How Whetstone works</a></p>
     <p class="bugfree">This site is free of <span class="bugword" data-lavabug role="button" tabindex="0" aria-label="bugs (an easter egg: each click releases another lava bug, Esc sends them away)">bugs</span>.</p>
     <p>Fan-made and free. This product isn't affiliated with or endorsed by Grinding Gear Games in any way. Path of Exile is a trademark of Grinding Gear Games.</p>
@@ -595,7 +578,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-17.6";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-18.1";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -604,10 +587,10 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const fmt = n => Math.round(n || 0).toLocaleString("en-US");
   const pct = x => `${Math.round(x * 100)}%`;
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const state = { budget: "budget", damage: new Set(), kinds: new Set(), goals: new Set(), weapons: new Set(), weapons2: new Set(), skill: null, gen: null, genJob: null, guide: null };
+  const state = { damage: new Set(), kinds: new Set(), goals: new Set(), weapons: new Set(), weapons2: new Set(), skill: null, gen: null, genJob: null, guide: null };
   let catalog = null;
 
-  const BUDGETS = [["free", "Free", "Self-found", 1], ["budget", "Budget", "Up to ~5 div", 2], ["medium", "Medium", "~5-30 div", 4], ["high", "High", "~30-100 div", 7], ["unlimited", "No limit", "100+ div", 11]];
+
   const DAMAGE = ["physical", "fire", "cold", "lightning", "chaos"];
   const KINDS = [["minion", "Minions"], ["spell", "Spells"], ["attack", "Attacks"], ["melee", "Melee"], ["projectile", "Projectiles"], ["area", "Area"],
     ["totem", "Totems"], ["trap", "Traps"], ["slam", "Slams"], ["strike", "Strikes"], ["channel", "Channelling"], ["chaining", "Chaining"], ["grenade", "Grenades"]];
@@ -659,19 +642,10 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     });
   }
   weaponChips();
-  BUDGETS.forEach(([key, name, sub, coins]) => {
-    const b = document.createElement("button");
-    b.type = "button"; b.className = "rung"; b.setAttribute("aria-pressed", key === state.budget);
-    b.innerHTML = `<span class="coins">${Array.from({ length: coins }, (_, j) => `<i style="height:${7 + j * 2}px"></i>`).join("")}</span><b>${name}</b><span>${sub}</span>`;
-    b.dataset.budget = key;
-    b.onclick = () => { state.budget = key; syncBudget(); };
-    $("rungs").appendChild(b);
-  });
   chipGroup($("damage"), DAMAGE.map(d => [d, d[0].toUpperCase() + d.slice(1)]), state.damage, "dmg");
   chipGroup($("kinds"), KINDS, state.kinds);
   chipGroup($("goals"), GOALS, state.goals);
 
-  function syncBudget() { $("rungs").querySelectorAll(".rung").forEach(x => x.setAttribute("aria-pressed", x.dataset.budget === state.budget)); }
 
   function fillAscendancies() {
     const keep = $("asc").value;
@@ -694,14 +668,14 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   // Prompt mode: the server reads the text (POST /parse); we show what it understood and set the picker to match,
   // so the player can see and fix it before forging.
-  const HINT = "<span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span>";
+  const HINT = "<span>A damage type, a skill, a class or ascendancy, a weapon. Whatever it understands gets stamped here.</span>";
   function resetPicker() {
     state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.weapons2.clear(); state.skill = null; state.withSkills = []; state.withTypes = []; state.avoid = [];
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
     $("deep").checked = false; $("offmeta").checked = false; setAnchor(null); state.random = false;
   }
   function syncAll() {
-    syncs.forEach(f => f()); weaponSyncs.forEach(f => f()); syncBudget();
+    syncs.forEach(f => f()); weaponSyncs.forEach(f => f());
     const named = [state.skill, ...(state.withSkills || [])].filter(Boolean);
     $("skillField").hidden = !named.length;
     $("skillName").innerHTML = named.map(n => gem(n)).join('<span class="plus"> + </span>');
@@ -712,7 +686,6 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     r.damage.forEach(d => state.damage.add(d)); r.kinds.forEach(k => state.kinds.add(k));
     r.goals.forEach(g => state.goals.add(g)); r.weapons.forEach(w => state.weapons.add(w));
     (r.second_weapons || []).forEach(w => state.weapons2.add(w));
-    if (r.budget) state.budget = r.budget;
     if (r.ailment) $("ailment").value = r.ailment;
     if (r.mode) $("mode").value = r.mode;
     if (r.deep) $("deep").checked = true;
@@ -729,9 +702,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     syncAll();
     $("readas").innerHTML = out.found.length
       ? `<span>${out.reader === "claude" ? "Read by Claude as" : "Read as"}</span>${out.found.map(f => `<span class="tag">${esc(f.means)} <i>“${esc(f.text)}”</i></span>`).join("")}`
-        + (out.budget_set ? "" : "<span>· no budget named, so it uses the one picked below</span>")
         + ((out.unused || []).length ? `<span class="unused">· not understood, so not used: ${out.unused.map(w => `<b>${esc(w)}</b>`).join(", ")}</span>` : "")
-      : "<span>Nothing it recognises yet. Try a damage type, skill, class, weapon or budget.</span>";
+      : "<span>Nothing it recognises yet. Try a damage type, skill, class or weapon.</span>";
   }
   $("skillClear").onclick = () => { state.skill = null; state.withSkills = []; syncAll(); };
   let parseSeq = 0, parsing = Promise.resolve(), parsedText = "", parseTimer;
@@ -803,7 +775,18 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   // ---------- The workbench: shows the optimiser's real steps while a job runs ----------
   const REDUCE = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const STAGE_NAMES = { leveling: "Leveling", early: "Early maps", mid: "Mid maps", end: "Endgame" };
+  const STAGE_NAMES = { act1: "Act 1", act2: "Act 2", act34: "Acts 3–4", interludes: "Interludes", early: "Early Endgame", mid: "Mid Endgame", end: "Uber Endgame" };
+  const STAGE_KEYS = Object.keys(STAGE_NAMES);
+  // What a player realistically has at each stage (engine/gear.py STAGE_DEFS): shown above each stage's gear.
+  const STAGE_HAVE = {
+    act1: "Self-found rares with a couple of useful mods, 2 support sockets per skill, no ascendancy yet. Pick up what drops; the affixes listed are what to keep an eye out for.",
+    act2: "Self-found rares, a Lesser Jeweller's Orb for 3 support sockets, and your first 2 ascendancy points.",
+    act34: "Self-found rares with three useful mods, 3 support sockets, 4 ascendancy points.",
+    interludes: "Rares you found or bought cheaply, common uniques where they help, 3 support sockets. Resistances capped before maps.",
+    early: "Easy gear for your first maps: decent rares, common uniques, a Greater Jeweller's Orb for 4 support sockets, simple jewels. Built for clearing maps.",
+    mid: "Strong rares with a couple of top-tier mods, most uniques, Perfect Jeweller's Orbs for 5 support sockets and good jewels.",
+    end: "Pinnacle bosses: best-in-slot uniques and near-perfect rares, capped resistances and positive chaos resistance, more weight on toughness. Gear and passives are built for boss damage first.",
+  };
   const STEP_ORDER = ["start", "gear", "tree", "supports", "spirit", "kit", "done"];
   const STEP_TEXT = { start: "Setting up", gear: "Crafting gear", tree: "Passives allocated", supports: "Supports picked", kit: "Every skill kitted out",
     spirit: "Spirit filled", done: "Finished" };
@@ -1117,8 +1100,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       const names = opt.names || STAGE_NAMES;
       w.innerHTML = `<div class="buildhead"><canvas class="sigil-cv" aria-hidden="true"></canvas>
         <div class="work-head"><div style="display:grid;gap:4px"><span class="eyebrow">On the anvil</span>
-          <h2>${opt.title || "Four anvils, one build"}</h2></div><span class="clock"></span></div>
-        <p class="muted">${opt.blurb || "Leveling, early maps, mid maps and endgame are forged side by side: gear, passives, supports and spirit, each at your budget. Passives drop in as they're picked."}</p></div>
+          <h2>${opt.title || "Seven anvils, one build"}</h2></div><span class="clock"></span></div>
+        <p class="muted">${opt.blurb || "Every act of the campaign, early and mid endgame and the pinnacle bosses are forged side by side: gear, passives, supports and spirit, each with what a player has at that point. Passives drop in as they're picked."}</p></div>
         ${opt.brain === false ? "" : `<div class="brain" id="brain">
           <canvas class="brain-cv" aria-label="The passive tree, as the engine searches it"></canvas>
           <div class="brain-hud"><span class="brain-stage" id="brainStage">Lighting the forge…</span><span class="brain-count" id="brainCount"></span></div>
@@ -1289,7 +1272,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     sparks($("go"), 46);
     clearTimeout(parseTimer); await parseNow();
     await readWithClaude();
-    const req = { damage: [...state.damage], kinds: [...state.kinds], weapons: [...state.weapons].slice(0, 5), budget: state.budget,
+    const req = { damage: [...state.damage], kinds: [...state.kinds], weapons: [...state.weapons].slice(0, 5),
       ...(state.weapons2.size ? { second_weapons: [...state.weapons2].slice(0, 5) } : {}),
       mode: $("mode").value, goals: [...state.goals] };
     if ($("ailment").value) req.ailment = $("ailment").value;
@@ -1368,8 +1351,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   $("randomGo").onclick = () => { randomClick = true; $("form").requestSubmit(); };
 
   async function buildGuide(plan) {
-    const stages = ["leveling", "early", "mid", "end"];
-    let job = await api("/guides", { spec: plan.spec, budget: plan.spec.budget || state.budget, stages });
+    const stages = STAGE_KEYS;
+    let job = await api("/guides", { spec: plan.spec, stages });
     if (!job.cached) work.startGuide(stages, { cls: plan.spec.class });
     // Stages arrive one by one as they finish; each is readable at once while the rest are still forging.
     let partial = null;
@@ -1435,7 +1418,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <h2>${result.random ? `Rolled: ${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)}` : `${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)} came out on top`}</h2>
       ${(result.relaxed || []).length ? `<ul class="relaxed">${result.relaxed.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
       ${(result.about || []).map(n => `<p class="ladder">${esc(n)}</p>`).join("")}
-      <p class="muted">${result.skills_considered.length} skills tested on every weapon they can use, then the best on each ascendancy. Pick another row to rebuild with it, or tick up to 3 to compare them at your budget.</p></div>
+      <p class="muted">${result.skills_considered.length} skills tested on every weapon they can use, then the best on each ascendancy. Pick another row to rebuild with it, or tick up to 3 to compare them.</p></div>
       <div class="tablewrap"><table><thead><tr><th></th><th>Skill</th><th>Ascendancy</th><th>Weapon</th><th class="num">vs best</th><th></th></tr></thead><tbody>
       ${rows.map((r, i) => `<tr class="${i === 0 ? "best" : ""}"><td><input type="checkbox" aria-label="Compare ${esc(r.skill)} ${esc(r.ascendancy)}" data-i="${i}"></td>
         <td>${gem(r.skill)}</td><td>${esc(r.ascendancy)}</td><td>${esc(r.weapon_type)}</td><td class="num">${pct(r.relative)}</td>
@@ -1456,11 +1439,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
         weapon_type: r.weapon_type, weapon_subtype: r.weapon_subtype, offhand_type: r.offhand_type }));
       try {
         $("compare").hidden = true;
-        let job = await api("/compare", { builds, budget: state.budget, stage: "end" });
+        let job = await api("/compare", { builds, stage: "end" });
         const keys = builds.map((_, i) => `b${i}`);
         if (!job.cached) work.startGuide(keys, { names: Object.fromEntries(builds.map((b, i) => [`b${i}`, b.name])),
-          title: builds.length > 1 ? `${builds.length} builds, one budget` : "One build, at your budget",
-          blurb: "Each build gets its own endgame gear, passives, supports and spirit at your budget, so the fight is fair.", brain: false });
+          title: builds.length > 1 ? `${builds.length} builds, one fair fight` : "One build, fully forged",
+          blurb: "Each build gets its own Uber Endgame gear, passives, supports and spirit, so the fight is fair.", brain: false });
         heat(true);
         try {
           job = await waitFor(job, job.cached ? "Loading" : "A few minutes",
@@ -1485,9 +1468,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     duel = { builds: res.builds, picked, metric: duel?.metric || "boss" };
     const b = res.builds;
     $("compare").hidden = false;
-    $("compare").innerHTML = `<div style="display:grid;gap:6px"><span class="eyebrow">Side by side, at your budget</span>
+    $("compare").innerHTML = `<div style="display:grid;gap:6px"><span class="eyebrow">Side by side, Uber Endgame</span>
         <h2>${b.length > 1 ? "The duel" : esc(b[0].name)}</h2>
-        <p class="muted">Every build here was fully forged at the same budget, so this is a fair fight. Pick what matters to you.</p></div>
+        <p class="muted">Every build here was fully forged for the pinnacle bosses with the same rules, so this is a fair fight. Pick what matters to you.</p></div>
       <div class="tabs" id="duelTabs" role="tablist">${DUEL_METRICS.map(m => `<button class="chip" type="button" role="tab" data-m="${m.key}">${m.label}</button>`).join("")}</div>
       <div class="duel" id="duelBars"></div>
       <div class="duelists">${b.map((x, i) => `<div class="duelist">
@@ -1545,7 +1528,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     state.guide = res; state.plan = plan; shownGear = null; shownStage = null; revealNext = !live && !opt.keepStage;
     guideSigil?.stop(); guideSigil = null;
     const stages = res.stages;
-    // While forging, only the endgame stage can speak for the whole build (rating, cost, tree).
+    // While forging, only the endgame stage can speak for the whole build (rating, tree).
     const endStage = stages.find(s => s.stage === "end");
     const end = endStage || stages[stages.length - 1];
     $("guide").hidden = false;
@@ -1554,7 +1537,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     const showTree = !live && (end.tree_nodes || []).length;
     $("guide").innerHTML = `<div class="buildhead${showTree ? " with-tree" : ""}"><canvas class="sigil-cv" aria-hidden="true"></canvas>
       ${showTree ? `<a class="mini-tree" ${treeHref ? `href="${treeHref}" target="_blank" rel="noopener"` : ""} title="Open the passive tree">
-        <canvas aria-label="Endgame passive tree"></canvas><span>${treeHref ? "Open the passive tree &#8599;" : "Endgame passive tree"}</span></a>` : ""}
+        <canvas aria-label="Uber Endgame passive tree"></canvas><span>${treeHref ? "Open the passive tree &#8599;" : "Uber Endgame passive tree"}</span></a>` : ""}
       <div style="display:grid;gap:6px"><span class="eyebrow">Your build${plan.spec.class ? ` · ${esc(plan.spec.class)}` : ""}</span><div class="skillhead">${img(gemUrl(plan.spec.skill))}<h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2></div>
       ${motif ? `<span class="motif">${esc(motif)}</span>` : ""}
       ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}
@@ -1562,8 +1545,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       ${live ? `<p class="live-note" id="liveNote">${stages.length} of ${opt.total || 4} stages ready · the rest are still on the anvil</p>` : ""}
       ${!live && end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
         <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
-        <p class="muted" style="font-size:15px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}
-      ${live ? "" : buildCostLine(end)}</div>
+        <p class="muted" style="font-size:15px">Uber Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}
+</div>
       ${live ? "" : overviewHtml(res.writeup)}
       <div class="sharebar"${live ? " hidden" : ""}>
         <button class="chip" type="button" id="shareBtn">Copy share link</button>
@@ -1687,44 +1670,22 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Gear plates. Against the stage shown before (prev), unchanged lines stay still and only upgrades
   // are struck again, so switching stages shows each slot improving.
   let shownGear = null, shownStage = null;
-  const STAGE_RANK = { leveling: 0, early: 1, mid: 2, end: 3 };
+  const STAGE_RANK = { leveling: -1, ...Object.fromEntries(STAGE_KEYS.map((k, i) => [k, i])) };   // leveling: builds made before the seven stages
   function tierMarks(info) {
     if (!info || !info.tier || !info.of) return "";
     const filled = Math.max(1, Math.round(5 * (info.of - info.tier + 1) / info.of));
     return `<span class="t" title="Tier ${info.tier} of ${info.of}${info.type ? ", " + info.type.toLowerCase() : ""}"><b>T${info.tier}</b>${
       Array.from({ length: 5 }, (_, i) => `<i class="${i < filled ? "on" : ""}"></i>`).join("")}</span>`;
   }
-  // ---------- Prices ----------
-  // Most a player at each budget pays for one item, in divines (gear.BUDGET_DIVINES).
-  const ITEM_CAP = { free: 0, budget: 2, medium: 10, high: 40, unlimited: Infinity };
-  const divs = v => v >= 10 ? fmt(v) : v >= 1 ? (Math.round(v * 10) / 10).toString() : v >= 0.1 ? v.toFixed(2) : "<0.1";
-  const aboutDiv = v => v < 0.1 ? "under 0.1 div" : `~${divs(v)} div`;
   const tradeLink = g => g.trade_url ? `<a class="trade" href="${esc(g.trade_url)}" target="_blank" rel="noopener noreferrer">Find on trade</a>` : "";
   // Gear plus one jewel per socket ("Jewel 1", "Jewel 2"... in the order the tree took the sockets).
   const items = s => [...(s?.gear || []), ...(s?.jewels || []).map((j, i) => ({ ...j, slot: `Jewel ${i + 1}`, jewel: true }))];
-  // One line at the top of the build: what the endgame version costs.
-  function buildCostLine(s) {
-    const gear = items(s);
-    if (!gear.length) return "";
-    const priced = gear.filter(g => g.unique && g.price != null), rares = gear.filter(g => !g.unique);
-    const total = priced.reduce((t, g) => t + g.price, 0), cap = ITEM_CAP[s.budget_key];
-    const rareJewels = rares.filter(g => g.jewel).length;
-    const most = rares.length && isFinite(cap) ? total + rares.length * cap : null;
-    return `<p class="buildcost">Endgame gear: <b>${aboutDiv(total)}</b> in uniques${rares.length - rareJewels ? ` + ${rares.length - rareJewels} crafted rares` : ""}${rareJewels ? ` + ${rareJewels} rare jewels` : ""}${most != null && cap > 0 ? `, at most ${aboutDiv(most)} in all` : ""}</p>`;
-  }
-  function costHtml(s) {
-    const gear = items(s);
-    const uniques = gear.filter(g => g.unique), rares = gear.filter(g => !g.unique);
-    const priced = uniques.filter(g => g.price != null);
-    const total = priced.reduce((t, g) => t + g.price, 0);
-    const cap = ITEM_CAP[s.budget_key];
-    const parts = [];
-    if (uniques.length) parts.push(`<b>${aboutDiv(total)}</b> in uniques${priced.length < uniques.length ? ` (${uniques.length - priced.length} unpriced)` : ""}`);
-    if (rares.length) parts.push(`${rares.length} crafted rare${rares.length > 1 ? "s" : ""}${cap === 0 ? ", self-found" : cap === Infinity ? "" : `, budgeted up to ~${cap} div each`}`);
-    if (!parts.length) return "";
-    const most = rares.length && isFinite(cap) && cap > 0 ? total + rares.length * cap : null;
-    return `<div class="cost"><span class="cost-h">Gear cost</span> ${parts.join(" + ")}${most != null ? ` <span class="muted">· at most ${aboutDiv(most)}</span>` : ""}
-      <span class="muted cost-note">Unique prices are from poe.ninja. Rares have no fixed price: each item's "Find on trade" link opens the trade site with its stats filled in.</span></div>`;
+  // What a player realistically has at this stage (no money involved: gear follows the stage).
+  function haveHtml(s) {
+    const text = STAGE_HAVE[s.stage];
+    if (!text) return "";
+    return `<div class="have"><span class="have-h">At this stage</span><p>${esc(text)}</p>
+      <p>Rares have no fixed recipe: each item's "Find on trade" link opens the trade site with its stats filled in.</p></div>`;
   }
 
   function gearHtml(gear, prev, forward = true) {
@@ -1738,7 +1699,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       const baseStyle = baseChanged ? ` style="animation-delay:${step(120)}ms"` : "";
       if (g.unique) {
         return `<div class="item unique"><div class="item-head"><div><span class="slot">${esc(g.slot)}</span><span class="${baseCls}"${baseStyle}>${esc(name)}</span>
-          <span class="price">${g.price != null ? aboutDiv(g.price) : "Unique · price unknown"}</span>${tradeLink(g)}</div>
+          <span class="kind">Unique</span>${tradeLink(g)}</div>
           ${art(ICONS.uniques?.[name], g.slot)}</div>${(g.variants || []).length
           ? `<p class="muted" style="margin:6px 0 0;font-size:14px">Choices for this build: ${g.variants.map(esc).join(", ")}</p>` : ""}${(g.mods || []).length
           ? `<ul class="impl" style="border:0;text-align:left;color:#c9b38a">${g.mods.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}</div>`;
@@ -1751,7 +1712,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       }).join("");
       const upgraded = before && !baseChanged ? g.affixes.filter(a => !had.has(a)).length : 0;
       return `<div class="item"><div class="item-head"><div><span class="slot">${esc(g.slot)}${upgraded ? ` <span class="upg">· ${upgraded} ${forward ? "upgraded" : "changed"}</span>` : ""}</span>
-        <span class="${baseCls}"${baseStyle}>${esc(name)}</span><span class="price">Crafted rare ${tradeLink(g)}</span></div>
+        <span class="${baseCls}"${baseStyle}>${esc(name)}</span><span class="kind">Crafted rare ${tradeLink(g)}</span></div>
         ${art(ICONS.bases?.[name], g.slot)}</div>${(g.implicits || []).length
           ? `<ul class="impl">${g.implicits.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}<ol>${lines}</ol></div>`;
     }).join("");
@@ -1880,7 +1841,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   function stageHtml(plan, s, prevGear, forward, kv, res, st, printing = false) {
     return `
-      ${costHtml(s)}
+      ${haveHtml(s)}
       <div class="stats">
         <p class="stagefor">${esc(s.name)} numbers · level ${s.level}</p>
         <div class="stat"><b class="${dpsClass(s.damage_split)}" data-n="${s.dps || 0}">${fmt(s.dps)}</b><span>Mapping DPS</span></div>
@@ -1890,7 +1851,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
         <div class="stat res"><b>${res}</b><span>Fire / cold / lightning / chaos res</span></div>
       </div>
       ${mixHtml(s.damage_split)}
-      <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
+      <p class="muted" style="font-size:13px">Level ${s.level}${s.sockets ? ` · ${s.sockets} support sockets per skill` : ""}</p>
       ${!printing && state.guideJob && (s.tree_nodes || []).length ? `<a class="chip treelink" href="/tree.html?b=${state.guideJob}&s=${s.stage}" target="_blank" rel="noopener">Open the passive tree &#8599;</a>` : ""}
       ${printing ? "" : skillCardsHtml(plan, s)}
       <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
@@ -1898,7 +1859,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       ${printing
         ? `<p class="muted" style="font-size:16px">Affix 1 is what to buy first. Diamonds show the affix tier: more means a better roll.</p>
            <div class="items">${gearHtml(items(s), prevGear, forward)}</div>`
-        : `<p class="muted" style="font-size:16px">Hover or tap an item for its affixes in the order to buy them, tiers, price and a trade link.</p>
+        : `<p class="muted" style="font-size:16px">Hover or tap an item for its affixes in the order to buy them, tiers and a trade link.</p>
            ${dollHtml(items(s), prevGear)}`}</div>
       ${s.notes.length ? `<ul class="notes">${s.notes.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
       ${printing ? "" : `<div class="field"><label for="code">Path of Building code</label>
@@ -2061,7 +2022,6 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       if (job.kind !== "guide" || job.status !== "done") { setStatus("That build link isn't finished or doesn't exist."); return; }
       state.guideJob = id;
       const plan = { spec: job.result.spec, note: null };
-      state.budget = job.result.spec.budget || state.budget;
       renderGuide(plan, job.result);
       setStatus("");
     } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }

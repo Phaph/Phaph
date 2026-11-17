@@ -24,18 +24,19 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 os.environ.setdefault("STRICT_ITEMS", "1")
 
+from gear import STAGE_DEFS  # noqa: E402
 from guide import build_guide  # noqa: E402
 from pob import PoB  # noqa: E402
 
 SPECS = [
-    {"class": "Monk", "ascendancy": "Invoker", "skill": "Tempest Flurry", "weapon_type": "Staff", "weapon_subtype": "Warstaff", "budget": "high"},
-    {"class": "Sorceress", "ascendancy": "Stormweaver", "skill": "Spark", "weapon_type": "Wand", "budget": "unlimited", "with_skills": ["Cast on Critical"]},
-    {"class": "Witch", "ascendancy": "Infernalist", "skill": "Skeletal Storm Mage", "weapon_type": "Sceptre", "budget": "medium"},
-    {"class": "Ranger", "ascendancy": "Deadeye", "skill": "Lightning Arrow", "weapon_type": "Bow", "budget": "budget"},
-    {"class": "Mercenary", "ascendancy": "Witchhunter", "skill": "Explosive Shot", "weapon_type": "Crossbow", "budget": "high"},
-    {"class": "Huntress", "ascendancy": "Amazon", "skill": "Twister", "weapon_type": "Spear", "offhand_type": "Shield", "budget": "unlimited"},
-    {"class": "Warrior", "ascendancy": "Titan", "skill": "Boneshatter", "weapon_type": "Two Hand Mace", "budget": "free"},
-    {"class": "Witch", "ascendancy": "Lich", "skill": "Hexblast", "weapon_type": "Staff", "weapon_subtype": "none", "budget": "unlimited"},
+    {"class": "Monk", "ascendancy": "Invoker", "skill": "Tempest Flurry", "weapon_type": "Staff", "weapon_subtype": "Warstaff"},
+    {"class": "Sorceress", "ascendancy": "Stormweaver", "skill": "Spark", "weapon_type": "Wand", "with_skills": ["Cast on Critical"]},
+    {"class": "Witch", "ascendancy": "Infernalist", "skill": "Skeletal Storm Mage", "weapon_type": "Sceptre"},
+    {"class": "Ranger", "ascendancy": "Deadeye", "skill": "Lightning Arrow", "weapon_type": "Bow"},
+    {"class": "Mercenary", "ascendancy": "Witchhunter", "skill": "Explosive Shot", "weapon_type": "Crossbow"},
+    {"class": "Huntress", "ascendancy": "Amazon", "skill": "Twister", "weapon_type": "Spear", "offhand_type": "Shield"},
+    {"class": "Warrior", "ascendancy": "Titan", "skill": "Boneshatter", "weapon_type": "Two Hand Mace"},
+    {"class": "Witch", "ascendancy": "Lich", "skill": "Hexblast", "weapon_type": "Staff", "weapon_subtype": "none"},
 ]
 ATTR = [("Str", "ReqStr"), ("Dex", "ReqDex"), ("Int", "ReqInt")]
 
@@ -87,10 +88,10 @@ def audit_stage(pob: PoB, g) -> dict:
 
 
 def run(i: int, spec: dict) -> list[str]:
-    name = f"#{i} {spec['skill']} {spec['ascendancy']} ({spec['budget']})"
+    name = f"#{i} {spec['skill']} {spec['ascendancy']}"
     t = time.time()
     try:
-        guides = build_guide(spec, ["leveling", "early", "mid", "end"], log=lambda *a: None)
+        guides = build_guide(spec, list(STAGE_DEFS), log=lambda *a: None)
     except AssertionError as e:
         return [f"{name}: ILLEGAL ITEM: {e}"]
     except Exception as e:  # noqa: BLE001

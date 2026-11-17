@@ -15,7 +15,6 @@ CATALOG = {
     "keystones": ["Chaos Inoculation"],
     "supports": ["Brutality II"],
     "weapon_types": {"Wand": [], "Staff": []},
-    "budgets": [{"key": "budget"}, {"key": "high"}],
 }
 
 
@@ -71,17 +70,6 @@ def test_reads_through_a_client(monkeypatch, tmp_path):
     assert prompt_ai.read_prompt("i want to throw fireballs", CATALOG) is r   # cached
     assert len(calls) == 1 and calls[0]["model"] == prompt_ai.MODEL
     assert (tmp_path / "log.jsonl").read_text().count("\n") == 1
-
-
-def test_typed_amount_sets_the_budget():
-    from api.app import _amount_budget
-    cat = {"classes": [], "skills": [], "weapon_types": {}}
-    read = {"request": {"budget": "high", "damage": []}, "found": [{"text": "900 div budget", "means": "high budget"}],
-            "unused": [], "budget_set": True, "reader": "claude"}
-    out = _amount_budget(read, "bear druid 900 div budget", cat)
-    assert out["request"]["budget"] == "unlimited"
-    assert [f["means"] for f in out["found"]] == ["Budget: unlimited"]
-    assert _amount_budget(read, "cheap bear druid", cat) is read   # no amount typed: Claude's reading stands
 
 
 def test_writeup_facts_come_from_the_build():

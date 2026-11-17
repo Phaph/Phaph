@@ -17,7 +17,7 @@ with PoB() as p:
     catalog = p.send("skill_catalog")["skills"]
 skills = main_skills(catalog, req)
 print(f"{len(skills)} skills match: {[s['name'] for s in skills]}")
-stage = make_stage("mid", req.get("budget", "high"))
+stage = make_stage("mid")
 for s in skills:
     cls = req.get("class") or DEFAULT_CLASS.get("Minion" if "Minion" in s["types"] else "Spell", "Mercenary")
     for wt, ws, off in weapon_options(s, req):

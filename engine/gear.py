@@ -32,53 +32,54 @@ class Stage:
     level: int          # character level for this stage
     item_level: int     # highest affix level available
     roll: float         # where in each affix's range the target value sits (0 = min, 1 = max)
-    tier_drop: int      # tiers below the best available (budget)
-    max_affixes: int    # how many good affixes a typical item has at this budget
-    budget: str
-    budget_key: str = "unlimited"
+    tier_drop: int      # tiers below the best available
+    max_affixes: int    # how many good affixes a typical item has at this stage
     top_mods: int = 0   # how many of an item's affixes can be the best tier; the rest sit tier_drop tiers lower
+    uniques: str = "all"        # which uniques a player realistically has: none / common / most / all (UNIQUE_ACCESS)
+    sockets: int = 5            # support sockets per skill gem (2 base; Lesser / Greater / Perfect Jeweller's Orb)
+    points: int | None = None   # passive points (None: PoB's count for the level, every quest done)
+    ascendancy_points: int = 8
+    res_target: int = 75        # elemental resistance the gear aims for
+    chaos_target: int = 0
+    focus: str = "mapping"      # what gear and passives are built for first: mapping, or bossing (pinnacle bosses)
+    def_mult: float = 1.0       # toughness weight on top of the build's own
+    jewel_affixes: int = 3      # good affixes on a rare jewel (0: no jewels at this stage)
+    light: bool = False         # campaign: one tree pass, no jewels, no boss or trigger setups, so it builds fast
+
+    @property
+    def campaign(self) -> bool:
+        return self.key in CAMPAIGN
 
 
-@dataclass(frozen=True)
-class Budget:
-    key: str
-    label: str
-    roll: float
-    tier_drop: int
-    max_affixes: int
-    top_mods: int = 0
-
-
-# Ordered cheapest to most expensive. The player picks one up front; no stage goes above it.
-# What that money really buys per item: a few good mods, only some of them top tier. Six top-tier mods on one item
-# is a mirror-tier item, not something a 100-divine build has. The crafter spends the top-tier slots on the mods that
-# matter most to the build (it picks the best gain first).
-#                 key          label                        roll  tiers below best  good mods  top-tier mods
-BUDGETS = {
-    "free": Budget("free", "Free, self-found", 0.35, 3, 2, 0),
-    "budget": Budget("budget", "Budget, up to ~5 divine", 0.5, 2, 3, 0),
-    "medium": Budget("medium", "Medium, ~5-30 divine", 0.6, 1, 4, 1),
-    "high": Budget("high", "High, ~30-100 divine", 0.75, 1, 5, 2),
-    "unlimited": Budget("unlimited", "No limit, 100+ divine", 0.9, 1, 6, 4),
-}
-BUDGET_ORDER = list(BUDGETS)
-
-# key: (name, character level, item level, the budget this stage would use with no cap)
+# Seven stages, as a player meets them. What the player realistically has at each one decides the gear: self-found
+# rares with two or three mods in the acts, easy uniques once maps start, most uniques by mid endgame, and
+# best-in-slot items against the pinnacle bosses. Support sockets: every skill gem starts with 2; a Lesser Jeweller's
+# Orb (campaign) sets 3, a Greater (early endgame) 4, a Perfect 5. Passive points in the acts are level - 1 plus the
+# quest points a player has picked up by then; ascendancy points come from the trials (2 per trial).
 STAGE_DEFS = {
-    "leveling": ("Leveling (campaign)", 55, 55, "free"),
-    "early": ("Early maps (league start)", 75, 70, "budget"),
-    "mid": ("Mid maps", 90, 82, "medium"),
-    "end": ("Endgame", 95, 82, "unlimited"),
+    "act1": Stage("act1", "Act 1", 12, 12, 0.3, 1, 2, uniques="none", sockets=2, points=13, ascendancy_points=0,
+                  res_target=30, chaos_target=-100, jewel_affixes=0, light=True),
+    "act2": Stage("act2", "Act 2", 25, 25, 0.35, 1, 3, uniques="none", sockets=3, points=29, ascendancy_points=2,
+                  res_target=45, chaos_target=-100, jewel_affixes=0, light=True),
+    "act34": Stage("act34", "Acts 3–4", 45, 45, 0.4, 1, 3, uniques="none", sockets=3, points=56,
+                   ascendancy_points=4, res_target=60, chaos_target=-100, jewel_affixes=0, light=True),
+    "interludes": Stage("interludes", "Interludes", 60, 62, 0.45, 1, 3, uniques="common", sockets=3, points=79,
+                        ascendancy_points=4, res_target=75, chaos_target=-100, jewel_affixes=0, light=True),
+    "early": Stage("early", "Early Endgame", 72, 75, 0.5, 1, 4, uniques="common", sockets=4, ascendancy_points=6,
+                   jewel_affixes=2),
+    "mid": Stage("mid", "Mid Endgame", 86, 81, 0.65, 1, 5, top_mods=2, uniques="most", jewel_affixes=3),
+    "end": Stage("end", "Uber Endgame", 95, 82, 0.9, 1, 6, top_mods=4, uniques="all", chaos_target=30,
+                 focus="bossing", def_mult=1.5, jewel_affixes=4),
 }
+CAMPAIGN = ("act1", "act2", "act34", "interludes")
 
 
-def make_stage(key: str, budget: str = "unlimited") -> Stage:
-    """A stage with its gear capped at the player's budget."""
-    if budget not in BUDGETS:
-        raise ValueError(f"budget must be one of {BUDGET_ORDER}")
-    name, level, ilvl, natural = STAGE_DEFS[key]
-    tier = BUDGETS[min(natural, budget, key=BUDGET_ORDER.index)]
-    return Stage(key, name, level, ilvl, tier.roll, tier.tier_drop, tier.max_affixes, tier.label, tier.key, tier.top_mods)
+def make_stage(key: str) -> Stage:
+    """The stage's settings (a copy, so a build can't change the shared table)."""
+    from dataclasses import replace
+    if key not in STAGE_DEFS:
+        raise ValueError(f"stage must be one of {list(STAGE_DEFS)}")
+    return replace(STAGE_DEFS[key])
 
 
 STAGES = {k: make_stage(k) for k in STAGE_DEFS}
@@ -91,10 +92,8 @@ class SlotPlan:
     affixes: list[str] = field(default_factory=list)   # in priority order, with target values
     raw: str = ""
     unique: str | None = None       # unique item name when a unique beats the crafted rare
-    price_note: str | None = None   # e.g. "price unknown" until poe.ninja prices are loaded
     # Per affix, same order: {"tier": 1 = best roll in the game, "of": tiers that exist, "type": Prefix/Suffix}
     affix_info: list[dict] = field(default_factory=list)
-    price: float | None = None      # divines, uniques with a poe.ninja price
     trade_url: str | None = None    # official trade search for this base + affixes (or this unique)
     implicits: list[str] = field(default_factory=list)   # the base's own modifiers, shown above the affixes
     mods: list[str] = field(default_factory=list)        # a unique's own mods, its chosen variants applied
@@ -222,7 +221,6 @@ class _Work:
     meta: list = field(default_factory=list)   # (group, affix, lines) per pick, in order
     unique: str | None = None
     unique_raw: str | None = None
-    price_note: str | None = None
     max_total: int | None = None    # affix cap for this item (jewels); None: the stage's
     max_kind: int = 3               # prefixes (or suffixes) at most
     implicits: tuple = ()           # the base's implicit lines, at this stage's roll
@@ -239,7 +237,11 @@ class _Work:
         return out
 
     def allows(self, affix: dict) -> bool:
-        """Can this affix roll on the item as it is now? The first of the mod's weight tags the item has decides."""
+        """Can this affix roll on the item as it is now? The first of the mod's weight tags the item has decides.
+        Never two mods with the same stat (a rarity prefix and a rarity suffix, say): the game won't allow it."""
+        st = tuple(affix.get("stats") or ())
+        if st and any(tuple(a.get("stats") or ()) == st for _, a, _ in self.meta):
+            return False
         if self.base_tags is None or "wk" not in affix:
             return True
         tags = self.tags()
@@ -411,7 +413,8 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
     keys = {"fire": "FireResist", "cold": "ColdResist", "lightning": "LightningResist", "chaos": "ChaosResist"}
     groups = {"fire": "FireResistance", "cold": "ColdResistance", "lightning": "LightningResistance",
               "chaos": "ChaosResistance"}
-    targets = {"fire": RES_CAP, "cold": RES_CAP, "lightning": RES_CAP, "chaos": 0 if stage.key != "leveling" else -100}
+    targets = {"fire": stage.res_target, "cold": stage.res_target, "lightning": stage.res_target,
+               "chaos": stage.chaos_target}
     for _ in range(40):
         out = pob.calc(list(keys.values()))
         need = {e: targets[e] - out.get(k, -60) for e, k in keys.items() if out.get(k, -60) < targets[e]}
@@ -453,17 +456,19 @@ def _cap_resistances(pob: PoB, works: list[_Work], stage: Stage) -> None:
         pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
 
 
-# Most a player at each budget would pay for one item, in divines.
-# The most one unique may cost at each budget: well under the whole build's budget (a 30-100 divine build can't spend
-# 112 divines on Mageblood).
-BUDGET_DIVINES = {"free": 0, "budget": 2, "medium": 10, "high": 40, "unlimited": float("inf")}
+# Which uniques a player realistically has at each stage. How common a unique is comes from poe.ninja (a unique
+# everyone finds is listed cheaply by everyone). It is only a measure of how easy a unique is to get: nothing about
+# money is shown and the player never sets a spending limit.
+#   none: self-found rares only (the acts)   common: uniques that drop all the time   most: all but the rarest
+#   all: every unique, best in slot (pinnacle bosses)
+UNIQUE_ACCESS = {"none": 0.0, "common": 1.0, "most": 15.0, "all": float("inf")}
 SLOT_TYPES = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots",
               "Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 _PRICES: dict | None = None
 
 
 def price_league() -> str:
-    """The league unique prices came from (engine/data/unique_prices.meta.json), for trade links."""
+    """The league the poe.ninja unique data came from (engine/data/unique_prices.meta.json), for trade links."""
     import json
     from pathlib import Path
     try:
@@ -484,11 +489,9 @@ def trade_link(query: dict, league: str) -> str:
 
 
 def add_trade_info(pob: "PoB", plans: list["SlotPlan"]) -> None:
-    """Price each unique from poe.ninja and give every item a trade search link."""
+    """Give every item a trade search link."""
     league = price_league()
     for p in plans:
-        if p.unique:
-            p.price = unique_prices().get(p.unique.split(",")[0])
         if p.raw:
             try:
                 p.trade_url = trade_link(pob.send("trade_query", raw=p.raw)["query"], league)
@@ -497,7 +500,8 @@ def add_trade_info(pob: "PoB", plans: list["SlotPlan"]) -> None:
 
 
 def unique_prices() -> dict:
-    """Unique prices in divines (engine/data/unique_prices.json, filled from poe.ninja)."""
+    """How rare each unique is: its poe.ninja value (engine/data/unique_prices.json). Used only to tell which
+    uniques a player has at each stage (UNIQUE_ACCESS); never shown."""
     global _PRICES
     if _PRICES is None:
         import json
@@ -509,14 +513,14 @@ def unique_prices() -> dict:
     return _PRICES
 
 
-def _unique_allowed(name: str, stage: Stage) -> tuple[bool, str | None]:
-    cap = BUDGET_DIVINES.get(stage.budget_key, 0)
-    price = unique_prices().get(name.split(",")[0])
-    if price is not None:
-        return price <= cap, f"~{price:g} div"
-    # No price data: some uniques cost hundreds of divines (Mageblood), so an unpriced unique is
-    # only suggested when the player chose "no limit". Prices from poe.ninja lift this.
-    return cap == float("inf"), "price unknown"
+def _unique_allowed(name: str, stage: Stage) -> bool:
+    """A player at this stage realistically has this unique (anchors skip this: the player asked for them)."""
+    cap = UNIQUE_ACCESS.get(stage.uniques, 0.0)
+    if cap == float("inf"):
+        return True
+    rarity = unique_prices().get(name.split(",")[0])
+    # No poe.ninja data: a new or very rare unique, so only the pinnacle stage counts on it.
+    return rarity is not None and rarity <= cap
 
 
 VARIANT_KEYS = ["Selected Variant", "Selected Alt Variant", "Selected Alt Variant Two", "Selected Alt Variant Three",
@@ -601,25 +605,25 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
             pool = [u for u in uniques if u["type"] == SLOT_TYPES.get(w.slot)]
         pool = [u for u in pool if (u.get("level") or 0) <= stage.level and u["name"] not in used
                 and unique_limit_ok(u, counts)]
-        allowed = [(u, note) for u in pool for ok, note in [_unique_allowed(u["name"], stage)] if ok]
+        allowed = [u for u in pool if _unique_allowed(u["name"], stage)]
         if not allowed:
             continue
         current = pob.calc(SCORE_FIELDS)
         # Uniques with choices (Mageblood) are tried with their best choices for this build.
-        allowed = [({**u, "raw": best_variants(pob, u["raw"], w.slot, score)}, note) for u, note in allowed]
-        outs = _try(pob, w.slot, [u["raw"] for u, _ in allowed])
+        allowed = [{**u, "raw": best_variants(pob, u["raw"], w.slot, score)} for u in allowed]
+        outs = _try(pob, w.slot, [u["raw"] for u in allowed])
         best, best_score = None, min_gain
-        for (u, note), out in zip(allowed, outs):
+        for u, out in zip(allowed, outs):
             if out is None:
                 continue
             sc = score(out, current) - score.attr_weight * own_deficit(out, w.slot)
             if getattr(pob, "off_meta", False):
                 sc *= meta_factor(unique=u["name"])   # off-meta: a unique half the ladder wears counts for less
             if sc > best_score:
-                best, best_score = (u, note), sc
+                best, best_score = u, sc
         if best:
-            u, note = best
-            w.unique, w.unique_raw, w.price_note = u["name"], u["raw"], note
+            u = best
+            w.unique, w.unique_raw = u["name"], u["raw"]
             used.add(u["name"])
             count_unique(u, counts)
             pob.send("equip", slot=w.slot, raw=u["raw"], fields=SCORE_FIELDS)
@@ -688,9 +692,7 @@ def _anchor_work(pob: PoB, stage: Stage, score: "Scorer") -> "_Work | None":
             notes.append(f"unique_level:{u['name']}")
         return None
     raw = best_variants(pob, u["raw"], u["slot"], score)
-    price = unique_prices().get(u["name"].split(",")[0])
-    w = _Work(u["slot"], u.get("base") or u["name"], u["name"], {}, unique=u["name"], unique_raw=raw,
-              price_note=f"~{price:g} div" if price is not None else "price unknown")
+    w = _Work(u["slot"], u.get("base") or u["name"], u["name"], {}, unique=u["name"], unique_raw=raw)
     pob.send("equip", slot=w.slot, raw=raw, fields=SCORE_FIELDS)
     return w
 
@@ -766,7 +768,7 @@ def craft_gear(
     for w in works:
         _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
 
-    if uniques and BUDGET_DIVINES.get(stage.budget_key, 0) > 0:
+    if uniques and UNIQUE_ACCESS.get(stage.uniques, 0) > 0:
         wt = {slot: (t, sub) for slot, t, sub in weapon_slots if not (anchor and anchor.slot == slot)}
         _consider_uniques(pob, works, stage, score, wt)
         if any(w.unique for w in works):
@@ -780,9 +782,9 @@ def craft_gear(
         if _enforce_rules(w, stage, log):
             pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
         if w.unique:
-            log(f"  {w.slot:<12} UNIQUE {w.unique} ({w.price_note})")
+            log(f"  {w.slot:<12} UNIQUE {w.unique}")
             mods, variants = unique_lines(pob, w.unique_raw)
-            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique, w.price_note,
+            plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique,
                                   mods=mods, variants=variants))
         else:
             log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))

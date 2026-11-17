@@ -1,6 +1,6 @@
 """Claude writes a short overview of each finished build (like the "Build Overview" on a Mobalytics guide).
 
-It gets the endgame stage's real data (skills and what each one is for, supports, uniques, key passives, damage,
+It gets the Uber Endgame stage's real data (skills and what each one is for, supports, uniques, key passives, damage,
 defences, spirit, the conditions assumed, the engine's notes) and writes from those facts only: how the build works,
 its key items and why, and which stats to chase. It runs once when a guide is made and is stored with it, so a shared
 or cached build costs nothing more. Without ANTHROPIC_API_KEY, or if the call fails, the guide simply has no overview.
@@ -46,7 +46,7 @@ STAT_KEYS = ["Life", "EnergyShield", "Mana", "Spirit", "TotalEHP", "Armour", "Ev
 
 
 def facts(spec: dict, stages: list[dict]) -> dict:
-    """The endgame stage, boiled down to what a player needs to understand the build."""
+    """The Uber Endgame stage, boiled down to what a player needs to understand the build."""
     end = next((s for s in stages if s.get("stage") == "end"), stages[-1] if stages else {})
     st = end.get("stats") or {}
     skills = [{"skill": spec.get("skill"), "role": "main (mapping)", "supports": end.get("supports") or []}]
@@ -66,7 +66,7 @@ def facts(spec: dict, stages: list[dict]) -> dict:
             if g.get("unique")]
     return {
         "class": spec.get("class"), "ascendancy": spec.get("ascendancy"), "weapon": spec.get("weapon_type"),
-        "offhand": spec.get("offhand_type"), "budget": spec.get("budget"), "goals": spec.get("goals") or [],
+        "offhand": spec.get("offhand_type"), "goals": spec.get("goals") or [],
         "built_around": [spec[k] for k in ("anchor_unique", "anchor_keystone", "anchor_support") if spec.get(k)],
         "skills": skills, "uniques": gear,
         "key_passives": [p.get("name") for p in end.get("tree_order") or [] if p.get("type") in ("Notable", "Keystone")][:12],

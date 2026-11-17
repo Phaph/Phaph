@@ -5,10 +5,10 @@ FastAPI service around the engine. Jobs run in the background; results are cache
 | Method | Path | What |
 |---|---|---|
 | GET | `/health` | Up check and PoB version |
-| GET | `/catalog` | Classes, ascendancies, skills, weapon types, budgets, stages (for dropdowns and the prompt layer) |
-| POST | `/guides` | `{"spec": {...}, "budget": "budget", "stages": ["early","end"]}` -> job |
-| POST | `/compare` | `{"builds": [spec, spec], "budget": "medium", "stage": "end"}` -> job |
-| POST | `/generate` | `{"damage": ["lightning"], "kinds": ["minion"], "class": "Monk", "budget": "medium", "mode": "balanced"}` -> job; result has `plan.spec` (post to `/guides`) and `options` |
+| GET | `/catalog` | Classes, ascendancies, skills, weapon types, stages (for dropdowns and the prompt layer) |
+| POST | `/guides` | `{"spec": {...}, "stages": ["act1","early","end"]}` -> job |
+| POST | `/compare` | `{"builds": [spec, spec], "stage": "end"}` -> job |
+| POST | `/generate` | `{"damage": ["lightning"], "kinds": ["minion"], "class": "Monk", "mode": "balanced"}` -> job; result has `plan.spec` (post to `/guides`) and `options` |
 | POST | `/parse` | `{"text": "lightning minion build for a monk, 5 div"}` -> `request` (fields for `/generate`) and `found` (each phrase and what it was read as). Keyword based, instant, no job |
 | POST | `/generate/{id}/plan` | Feedback: `{"ascendancy": "Martial Artist"}` -> best build with that locked, plus how much damage it gives up. Instant |
 | GET | `/jobs/{id}?since=N` | Status (`queued`/`running`/`done`/`failed`), queue position, result. While running: `progress` (steps after the first N: search candidates and their scores, or per-stage gear/passives/supports/spirit with DPS) and `progress_next` |

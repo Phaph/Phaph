@@ -11,7 +11,7 @@ option ("I want the other ascendancy"): we already know how much damage it costs
 
 Request:
     {"damage": ["lightning"], "kinds": ["minion"], "ailment": null, "weapons": [],
-     "class": "Monk", "ascendancy": null, "skill": null, "budget": "high", "mode": "balanced"}
+     "class": "Monk", "ascendancy": null, "skill": null, "mode": "balanced"}
 mode: balanced (default: geometric mean of clear and single-target damage) | mapping | bossing
 Everything is optional; locked fields (class, ascendancy, skill, weapons) narrow the search.
 
@@ -37,7 +37,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from anchors import find_unique, resolve as resolve_anchors, unique_slot
-from gear import BUDGET_DIVINES, Scorer, Stage, craft_gear, make_stage, unique_prices
+from gear import Scorer, Stage, _unique_allowed, craft_gear, make_stage
 from jewels import proxy_jewel
 from meta import meta_factor, popularity
 from optimize import (MODE_CONFIG, ailment_dps, broken_numbers, ailment_score, clear_score, damage_types, hit_dps, metric_for, seed_ailment, optimise_supports,
@@ -480,7 +480,7 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
     steps = _relax_steps(req)
     while True:
         try:
-            result = _generate_once({k: v for k, v in tried.items() if v not in (None, [], "")} | {"budget": req.get("budget", "high")},
+            result = _generate_once({k: v for k, v in tried.items() if v not in (None, [], "")},
                                     workers, top_skills, log, progress)
         except ValueError as e:
             if not steps:
@@ -531,7 +531,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     skills = main_skills(catalog, req)
     if not skills:
         raise ValueError("No skills match that theme. Try fewer filters.")
-    stage = make_stage("mid", req.get("budget", "high"))
+    stage = make_stage("mid")
 
     # Which ascendancies are allowed.
     if req.get("ascendancy"):
@@ -716,20 +716,12 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
 RANDOM_TRIES = 8   # random builds tried at once; the first that works (in random order, not the strongest) is kept
 
 
-def random_unique(pob: PoB, rng: random.Random, stage: Stage, budget: str) -> dict | None:
-    """A random armour or jewellery unique the budget allows and the stage's level can wear."""
-    cap = BUDGET_DIVINES.get(budget, 0)
-    if cap <= 0:
-        return None
-    prices = unique_prices()
-
-    def affordable(u: dict) -> bool:
-        price = prices.get(u["name"].split(",")[0])
-        return cap == float("inf") or (price is not None and price <= cap)
+def random_unique(pob: PoB, rng: random.Random, stage: Stage) -> dict | None:
+    """A random armour or jewellery unique a player has by this stage and can wear at its level."""
     # Armour and jewellery only: a random weapon unique would fight the random skill's weapon.
     pool = [u for u in pob.list_uniques()
             if unique_slot(u) and not unique_slot(u).startswith("Weapon") and (u.get("level") or 0) <= stage.level
-            and affordable(u)]
+            and _unique_allowed(u["name"], stage)]
     if not pool:
         return None
     pick = rng.choice(pool)
@@ -750,7 +742,7 @@ def _random_search(req: dict, pool: ThreadPoolExecutor, skills: list[dict], ascs
         for s in order[:RANDOM_TRIES]:
             w = rng.choice(weapon_options(s, req))
             cls, asc = rng.choice(ascs)
-            u = None if (req.get("_anchors") or {}).get("unique") else random_unique(p, rng, stage, req.get("budget", "high"))
+            u = None if (req.get("_anchors") or {}).get("unique") else random_unique(p, rng, stage)
             c = Candidate(s["name"], w[0], w[1], w[2], cls, asc, is_minion="Minion" in s["types"], totem=s.get("totem"),
                           anchor_unique=u["name"] if u else None)
             tries.append((c, u))
@@ -806,7 +798,7 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         "name": f"{main['skill']} {main['ascendancy']}",
         "class": main["cls"], "ascendancy": main["ascendancy"], "skill": main["skill"],
         "weapon_type": main["weapon_type"], "weapon_subtype": main["weapon_subtype"],
-        "offhand_type": main["offhand_type"], "budget": req.get("budget", "high"),
+        "offhand_type": main["offhand_type"],
     }
     for key in ("ailment", "damage", "kinds", "goals"):
         if req.get(key):

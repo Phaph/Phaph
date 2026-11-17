@@ -1,6 +1,6 @@
 """Theme -> generated build -> plan -> guide, printed as markdown. Slow (10-20 minutes).
 
-  python3 tools/end_to_end.py '{"ailment":"bleed","kinds":["melee"],"budget":"medium"}' [--stages end]
+  python3 tools/end_to_end.py '{"ailment":"bleed","kinds":["melee"]}' [--stages end]
 """
 import argparse
 import json

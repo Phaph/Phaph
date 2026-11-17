@@ -29,10 +29,10 @@ def catalog() -> dict:
     return _CATALOG
 
 
-def check(text: str, stage: str = "end", budget: str = "high", workers: int = 3) -> dict:
+def check(text: str, stage: str = "end", workers: int = 3) -> dict:
     """Everything that says whether the build is what the prompt asked for, as plain data."""
     parsed = parse_prompt(text, catalog())
-    req = {"budget": budget, **parsed["request"]}
+    req = dict(parsed["request"])
     out = {"prompt": text, "read_as": [f["means"] for f in parsed["found"]], "unused": parsed["unused"]}
     t0 = time.time()
     try:
@@ -40,7 +40,7 @@ def check(text: str, stage: str = "end", budget: str = "high", workers: int = 3)
         plan = plan_build(result)
     except Exception as e:  # noqa: BLE001
         return {**out, "error": f"generate: {e}"}
-    spec = {**plan["spec"], "budget": req["budget"]}
+    spec = plan["spec"]
     out.update(relaxed=result.get("relaxed") or [], skill=spec["skill"], ascendancy=spec["ascendancy"],
                weapon=spec["weapon_type"])
     try:

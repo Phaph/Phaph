@@ -12,7 +12,7 @@ Overall = 50% damage + 30% clear + 20% toughness.
 
 The reference set (data/rating_calibration.json) is the endgame build of every ascendancy
 from tools/sweep.py, built by this engine with the same PoB settings, so the comparison is
-like for like. Rate the Endgame stage: that's the build's ceiling at its budget.
+like for like. Rate the Uber Endgame stage: that's the build's ceiling.
 Planned: add the strongest builds the generator finds and poe.ninja's top ladder builds
 (re-run through this engine) as the top anchors.
 """

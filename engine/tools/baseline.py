@@ -11,6 +11,7 @@ Takes about 10 minutes a prompt (WORKERS=3).
 """
 import json
 import os
+import re
 import sys
 import time
 from pathlib import Path
@@ -24,21 +25,21 @@ from optimize import AILMENT_TARGET  # noqa: E402
 
 # What players ask for, across themes, weapons, focuses and helpers. Keep it fixed so runs compare.
 PROMPTS = [
-    ("crossbow crit bleed build", "high"),
-    ("lightning minion build", "medium"),
-    ("dagger bleed build", "high"),
-    ("cast on crit fire spells", "unlimited"),
-    ("poison bow build", "budget"),
-    ("tanky ignite build", "high"),
-    ("cheap cold spell build", "budget"),
-    ("two hand mace slam warrior", "free"),
-    ("spear attack speed build", "high"),
-    ("chaos damage over time witch", "medium"),
-    ("warcry build", "high"),
-    ("block energy shield build", "high"),
-    ("lightning arrow with heralds", "medium"),
-    ("starter minion build for a new player", "free"),
-    ("highest dps build possible", "unlimited"),
+    "crossbow crit bleed build",
+    "lightning minion build",
+    "dagger bleed build",
+    "cast on crit fire spells",
+    "poison bow build",
+    "tanky ignite build",
+    "cold spell build",
+    "two hand mace slam warrior",
+    "spear attack speed build",
+    "chaos damage over time witch",
+    "warcry build",
+    "block energy shield build",
+    "lightning arrow with heralds",
+    "minion build for a new player",
+    "highest dps build possible",
 ]
 
 
@@ -51,12 +52,12 @@ def run(out_path: Path | None) -> None:
     done = json.loads(out_path.read_text(encoding="utf-8")) if out_path.exists() else {}
     if done.get("pob_version") != version:
         done = {"pob_version": version, "results": {}}
-    for text, budget in PROMPTS:
-        key = f"{text} [{budget}]"
+    for text in PROMPTS:
+        key = text
         if key in done["results"]:
             continue   # resumes where it stopped
         print(f"{key} ...", flush=True)
-        r = check(text, "end", budget, workers=int(os.environ.get("WORKERS", "3")))
+        r = check(text, "end", workers=int(os.environ.get("WORKERS", "3")))
         done["results"][key] = r
         done["updated"] = time.strftime("%Y-%m-%d %H:%M")
         out_path.write_text(json.dumps(done, indent=1, ensure_ascii=False), encoding="utf-8")
@@ -90,6 +91,9 @@ def compare(old_path: Path, new_path: Path) -> int:
     old, new = (json.loads(p.read_text(encoding="utf-8")) for p in (old_path, new_path))
     print(f"PoB {old['pob_version']} -> {new['pob_version']}")
     failed = 0
+    # Runs from before 2026-11-18 keyed prompts as "text [budget]"; there is no budget now.
+    for run in (old, new):
+        run["results"] = {re.sub(r" \[\w+\]$", "", k): v for k, v in run["results"].items()}
     for key in new["results"]:
         a, b = old["results"].get(key), new["results"][key]
         bad = problems(b)

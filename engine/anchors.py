@@ -11,11 +11,10 @@ what makes it work.
             optimise_tree `locked`). Stages too low to reach it go without, with a note.
   support:  always in the main skill's supports; only skills it can support are candidates.
 
-The anchor ignores the budget (the player asked for it by name); the page says what it costs.
+The anchor is worn at every stage its level allows (the player asked for it by name), however rare it is.
 """
 from __future__ import annotations
 
-from gear import unique_prices
 
 ARMOUR = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots",
           "Amulet": "Amulet", "Ring": "Ring 1", "Belt": "Belt"}
@@ -63,10 +62,8 @@ def resolve(pob, req: dict) -> tuple[dict, dict, list[str]]:
                 change["_weapon_subtype"] = u["subType"]
         elif u["slot"] == "Weapon 2":
             change["_offhand"] = u["type"]
-        price = unique_prices().get(u["name"].split(",")[0])
         name = u["name"].split(",")[0]
-        notes.append(f"Built around {name}" + (f" (about {price:g} divines)" if price is not None else "")
-                     + ": it's worn at every stage that meets its level, and everything else was picked to suit it.")
+        notes.append(f"Built around {name}: it's worn at every stage that meets its level, and everything else was picked to suit it.")
     if req.get("anchor_keystone"):
         names = {k["name"].lower(): k["name"] for k in pob.list_keystones()}
         ks = names.get(req["anchor_keystone"].lower())

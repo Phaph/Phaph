@@ -43,7 +43,7 @@ def _row(skill, asc, score, dps, weapon="Staff"):
             "offhand_type": None, "score": score, "dps": dps}
 
 
-RESULT = {"request": {"budget": "medium"}, "ranked": [
+RESULT = {"request": {}, "ranked": [
     _row("Snap", "Invoker", 100, 100), _row("Snap", "Acolyte of Chayula", 90, 90),
     _row("Arc", "Invoker", 40, 140, "Wand"), _row("Arc", "Acolyte of Chayula", 35, 35, "Wand")]}
 
@@ -97,7 +97,7 @@ def test_boss_skill_on_weapon_set_two(pob, monk):
     boss = pob.add_skill(["Spark"], main=False, full_dps=True)["group"]
     pob.send("set_weapon_set", group=boss, set=2)
     pob.send("set_main", group=boss)
-    plan = craft_weapon(pob, make_stage("mid", "medium"), "Weapon 1 Swap", "Wand", log=lambda *a: None)
+    plan = craft_weapon(pob, make_stage("mid"), "Weapon 1 Swap", "Wand", log=lambda *a: None)
     assert plan.base and plan.affixes
     assert pob.calc(["TotalDPS"]).get("TotalDPS", 0) > 0, "Spark uses the swap wand"
     pob.send("set_main", group=monk)
@@ -123,7 +123,7 @@ def test_goals_trade_damage_for_speed_and_loot(pob, catalog):
     from goals import mobility_skills, weights
     with pytest.raises(ValueError):
         weights(["fishing"])
-    stage = make_stage("mid", "medium")
+    stage = make_stage("mid")
     fields = ["EffectiveMovementSpeedMod", "EffectiveLootRarityMod"]
     results = {}
     for goals in (None, ["movement", "rarity"]):
@@ -252,7 +252,7 @@ def test_a_named_buff_is_kept_as_a_helper(monkeypatch):
 
     monkeypatch.setattr(g, "PoB", FakePoB)
     monkeypatch.setattr(g, "_generate_once", fake_once)
-    out = g.generate({"skill": "Charged Staff", "budget": "high"}, log=lambda *a: None)
+    out = g.generate({"skill": "Charged Staff"}, log=lambda *a: None)
     assert seen.get("with_skills") == ["Charged Staff"] and not seen.get("skill")
     assert seen.get("weapons") == ["Staff"] and seen.get("_attack_only")
     # ...so a staff spell can't be paired with it, only staff attacks.
@@ -338,7 +338,7 @@ def test_plan_adds_a_clear_skill_on_the_same_weapon():
     rows = [_row("Whirlwind Lance", "Invoker", 100, 100, "Spear") | {"clear": 50},
             _row("Glacial Lance", "Invoker", 80, 60, "Spear") | {"clear": 90},
             _row("Fireball", "Invoker", 70, 50, "Wand") | {"clear": 200}]   # better clear, but another weapon
-    plan = plan_build({"request": {"budget": "high"}, "ranked": rows})
+    plan = plan_build({"request": {}, "ranked": rows})
     assert plan["spec"]["clear_skill"] == "Glacial Lance"
     assert "clear_skill" not in plan_build(RESULT)["spec"]   # no "clear" numbers: no clear skill
 

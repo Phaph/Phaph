@@ -1,5 +1,5 @@
 """Prompt mode parser. No PoB needed: uses a small fake catalog."""
-from prompt import divines_to_budget, parse_prompt
+from prompt import parse_prompt
 
 CATALOG = {
     "classes": [
@@ -8,7 +8,7 @@ CATALOG = {
         {"name": "Ranger", "ascendancies": ["Deadeye", "Pathfinder"]},
     ],
     "skills": ["Lightning Arrow", "Tempest Flurry", "Raise Zombie", "Fireball", "Spark"],
-    "weapon_types": {"Bow": [], "Dagger": [], "Staff": ["Warstaff"], "One Hand Mace": [], "Two Hand Mace": []},
+    "weapon_types": {"Bow": [], "Crossbow": [], "Dagger": [], "Staff": ["Warstaff"], "One Hand Mace": [], "Two Hand Mace": []},
 }
 
 
@@ -21,24 +21,15 @@ def test_example_prompt():
     assert r["damage"] == ["lightning"]
     assert r["kinds"] == ["minion"]
     assert r["class"] == "Monk"
-    assert r["budget"] == "budget"
+    assert "budget" not in r   # the site has no budget: amounts are ignored
 
 
-def test_currency_amounts():
-    assert parse("30 divines")["budget"] == "medium"
-    assert parse("50div")["budget"] == "high"
-    assert parse("300 ex")["budget"] == "budget"           # under a divine
-    assert parse("2k chaos poison build")["budget"] == "unlimited"
-    assert "chaos" not in parse("20 chaos fire build")["damage"]
-    assert divines_to_budget(0) == "free" and divines_to_budget(100) == "high" and divines_to_budget(101) == "unlimited"
-
-
-def test_budget_words():
-    assert parse("league starter")["budget"] == "budget"
-    assert parse("ssf witch")["budget"] == "free"
-    assert parse("high budget bow")["budget"] == "high"
-    assert parse("mirror tier spark")["budget"] == "unlimited"
-    assert "budget" not in parse("fire spells")
+def test_currency_amounts_mean_nothing():
+    for text in ("30 divines", "50div", "300 ex", "2k chaos poison build", "league starter", "ssf witch",
+                 "high budget bow", "mirror tier spark"):
+        assert "budget" not in parse(text), text
+    assert "chaos" not in parse("20 chaos fire build")["damage"]   # an amount is still not chaos damage
+    assert parse("2k chaos poison build")["ailment"] == "poison"
 
 
 def test_skill_ascendancy_and_class():
@@ -68,15 +59,14 @@ def test_found_lists_what_was_understood():
     out = parse_prompt("fire totem witch", CATALOG)
     means = [f["means"] for f in out["found"]]
     assert "Damage: fire" in means and "Kind: totem" in means and "Class: Witch" in means
-    assert out["budget_set"] is False
+    assert "budget_set" not in out
 
 
 def test_deep_search_prompts():
     r = parse("any build highest dps possible in the game")
-    assert r.get("deep") is True and r["budget"] == "unlimited" and r["mode"] == "bossing"
+    assert r.get("deep") is True and r["mode"] == "bossing" and "budget" not in r
     r = parse("strongest build for a monk, 10 div")
-    assert r.get("deep") is True and r["budget"] == "medium" and r["class"] == "Monk"   # a named budget wins
-    assert parse("highest damage witch").get("budget") is None                           # no "possible": budget untouched
+    assert r.get("deep") is True and r["class"] == "Monk"
 
 
 def test_normal_prompts_stay_normal():
@@ -173,13 +163,13 @@ def test_mechanic_words():
     assert r("corpse explosion")["skill"] == "Detonate Dead"
 
 
-def test_ascendancy_with_its_class_and_budget_word():
+def test_ascendancy_with_its_class_and_an_amount():
     cat = {**CATALOG, "classes": [*CATALOG["classes"], {"name": "Druid", "ascendancies": ["Shaman", "Oracle"]}],
            "skills": [*CATALOG["skills"], "Furious Slam", "Walking Calamity"], "helper_skills": ["Walking Calamity"]}
-    out = parse_prompt("shaman bear druid 900 div budget furious slam walking calamity", cat)
+    out = parse_prompt("shaman bear druid 900 div furious slam walking calamity", cat)
     r = out["request"]
     assert r["skill"] == "Furious Slam" and r["with_skills"] == ["Walking Calamity"]
-    assert r["ascendancy"] == "Shaman" and r["class"] == "Druid" and r["budget"] == "unlimited"
+    assert r["ascendancy"] == "Shaman" and r["class"] == "Druid" and "budget" not in r
     assert out["unused"] == []
 
 

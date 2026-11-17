@@ -18,15 +18,15 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 - Passive tree: `optimise_tree` (in runner.lua) greedily spends passive and ascendancy points using PoB's fast what-if calculator. Each step scores every reachable node by (DPS gain + 0.25 x EHP gain) per point.
 - `compare.py`: evaluate 1 build or compare up to 3. Gives a DPS/defence table and basic pros and cons. Builds can be PoB codes or recipes, and can ask the optimiser to pick supports. Example: `python3 compare.py examples/compare_three.json`.
 - `gear.py`: crafts a rare for every slot from PoB's affix tables, per stage. Picks the best base, then damage and defence affixes, then only the resistances still needed, then fills the rest. Output is a per-slot shopping list (base + affixes in priority order with target values).
-- `guide.py`: full build guide. One spec becomes 4 stages: Leveling (lvl 55, free), Early maps (lvl 75, 0-5 div), Mid maps (lvl 90, 5-30 div), Endgame (lvl 95, 50+ div). Each stage: supports, gear, passive tree, supports again. Example: `python3 guide.py examples/tempest_flurry_invoker.json` (output in `examples/tempest_flurry_invoker_guide.md`, about 2.5 minutes).
-- Budget: players pick one up front, `free`, `budget` (<=5 div), `medium` (5-30), `high` (30-100) or `unlimited`. No stage's gear goes above it: a 5 divine player still gets mid maps and endgame versions, built with 5 divine gear. `python3 guide.py spec.json --budget budget`, `python3 compare.py examples/compare_specs.json --budget budget`.
+- `guide.py`: full build guide. One spec becomes 7 stages (`gear.STAGE_DEFS`): Act 1 (lvl 12), Act 2 (25), Acts 3-4 (45), Interludes (60), Early Endgame (72), Mid Endgame (86), Uber Endgame (95). Each stage sets its item level, affix strength, which uniques a player has (none in the acts, common ones from the interludes, most by mid endgame, all for ubers), support sockets (2, then 3 / 4 / 5 with Lesser / Greater / Perfect Jeweller's Orbs), passive and ascendancy points and resistance targets. Act stages are light: one tree pass, no jewels, no boss or trigger setups. Uber Endgame builds gear and passives for bossing first, with 1.5x toughness weight and +30% chaos resistance. Each stage: supports, gear, passive tree, supports again. Example: `python3 guide.py examples/tempest_flurry_invoker.json` (output in `examples/tempest_flurry_invoker_guide.md`, about 2.5 minutes).
+- No budget: gear follows the stage, never a spending limit. `python3 guide.py spec.json --stages act1,early,end`, `python3 compare.py examples/compare_specs.json --full`.
 - `tools/sweep.py`: smoke test that builds one stage for all 23 ascendancies (about 9 minutes on 4 cores). Run it after a PoB update.
-- `generate.py`: the build generator. A theme (damage types, kinds like minion or melee, an ailment, weapons, optional class/ascendancy/skill locks, budget) becomes a ranked list of skill + weapon + ascendancy builds. `plan_build()` turns it into a guide spec, adding a boss skill (on weapon set 2 if needed) when one hits 25%+ harder; with a lock it reports the damage given up ("10% less than the recommended Invoker"). `options()` lists the alternatives for the feedback screen.
+- `generate.py`: the build generator. A theme (damage types, kinds like minion or melee, an ailment, weapons, optional class/ascendancy/skill locks) becomes a ranked list of skill + weapon + ascendancy builds. `plan_build()` turns it into a guide spec, adding a boss skill (on weapon set 2 if needed) when one hits 25%+ harder; with a lock it reports the damage given up ("10% less than the recommended Invoker"). `options()` lists the alternatives for the feedback screen.
 - `spirit.py`: fills spirit with the auras, heralds, buffs and extra minions that help most.
 - `utility.py`: curses, marks, banners and warcries, each kept when it raises the main skill's score (PoB applies their effects). One needing a weapon the main hand can't use goes on weapon set 2 with that weapon.
 - `goals.py`: build goals beyond damage, ticked by the player: `movement` (faster mapping), `rarity` (more loot), `tanky`. Each is a weight in gear, passive and support scoring. Also recommends a movement skill.
 - `themes.py`: checks the finished build still matches the request (e.g. 40%+ of a bleed build's damage is bleed) and lists issues in the guide.
-- `rating.py`: 1-10 rating of the endgame stage (damage, clear, toughness) against a reference set: every ascendancy's endgame build from `tools/sweep.py --stage end --budget high --calibrate data/rating_calibration.json`.
+- `rating.py`: 1-10 rating of the Uber Endgame stage (damage, clear, toughness) against a reference set: every ascendancy's endgame build from `tools/sweep.py --stage end --calibrate data/rating_calibration.json`.
 - `tools/end_to_end.py`: theme -> generate -> plan -> guide in one command.
 - `demo.py`: command-line demo.
 
@@ -34,7 +34,7 @@ Needs git, make and gcc. PoB needs LuaJIT at commit 2460b3ff or newer (it uses `
 `new`, `load_xml`, `save_xml`, `set_class`, `set_level`, `add_item`, `add_skill`, `try_skill`, `remove_skill`, `clear_skills`, `set_main`, `set_config`, `alloc_nodes`, `calc`, `list_gems`, `list_classes`, `list_uniques`.
 
 ## Mapping vs bossing
-Gear and passives are built for mapping. Each stage (except leveling) then gets two support setups: mapping, and a bossing swap.
+Gear and passives are built for mapping. Each endgame stage then gets two support setups: mapping, and a bossing swap.
 - Bossing: total DPS vs a pinnacle boss (PoB's default enemy).
 - Mapping: PoB has no clear speed stat, so we score (hit DPS + half of DoT) x sqrt(area) x sqrt(projectiles) vs normal monsters. This is our heuristic, not PoB's, and is worth tuning against real play.
 
@@ -46,7 +46,7 @@ Total DPS = hit DPS + damage over time (bleed, ignite, poison, DoT skills). We d
 - Ascendancy, chosen by testing each one with passives spent.
 - Supports for mapping and for bossing, limited to supports PoB's own rules allow on the skill.
 - Passive tree and ascendancy points.
-- Gear for every slot: crafted rares, and uniques where they beat the rare (budget-gated).
+- Gear for every slot: crafted rares, and uniques where they beat the rare (those a player has by that stage).
 - Spirit: auras, heralds, buffs and extra minions.
 - A second boss skill, on weapon set 2 when it needs another weapon.
 - Conditional bonuses the build keeps up (`auto_config`): hit/used skill recently, killed recently while mapping, enemy ailments kept up 90%+ of the time, crit recently at 40%+ crit, charges the build says it gains, armour break, exposure. Each guide lists them with the reason.
@@ -64,6 +64,6 @@ Minion damage lives in PoB's separate minion output; the engine exposes it as `M
 - Tree search is greedy: from the same start, a different path choice once gave 138k DPS instead of 120k. A look-ahead search could find those.
 - Support rules: the optimiser rejects any combo that triggers a PoB rule warning (e.g. lineage copy limit). Pass `exclude` for gems used in other skills.
 - Conditional supports (Hit and Run, Glory gems, combo finishers; 12 in total) are skipped by default because PoB counts their bonus but not their downtime.
-- Unique prices come from poe.ninja (`tools/fetch_prices.py`, one price per name, corrupted and thinly listed copies skipped). Budget tier divine limits are still estimates.
-- Leveling stage is one snapshot at level 55, not a step-by-step leveling route.
+- How common each unique is comes from poe.ninja values (`tools/fetch_prices.py`); only used for `gear.UNIQUE_ACCESS`, never shown. The common / most cut-offs are estimates.
+- Act stages are snapshots (levels 12 / 25 / 45 / 60), not a step-by-step leveling route.
 - New 1.0 content (Shadow, new gems, daggers' new skills) needs a PoB update first.

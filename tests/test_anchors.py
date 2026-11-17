@@ -90,7 +90,7 @@ def test_anchor_unique_is_worn_and_keystone_held(pob):
     pob.set_level(90)
     pob.add_skill(["Spark"])
     pob.anchors = {**anchors, "main": "Spark"}
-    plans = craft_gear(pob, make_stage("end", "high"), "Wand", log=lambda *a: None)
+    plans = craft_gear(pob, make_stage("end"), "Wand", log=lambda *a: None)
     ring = next(p for p in plans if p.slot == "Ring 1")
     assert ring.unique and ring.unique.startswith("Kalandra's Touch")
     pob.optimise_tree(refine=True, refine_seconds=3)
@@ -111,12 +111,13 @@ def test_anchor_support_always_kept(pob, monk):
         pob.anchors = None
 
 
-def test_random_unique_respects_budget(pob):
-    stage = make_stage("mid", "budget")
+def test_random_unique_fits_the_stage(pob):
+    from gear import _unique_allowed
+    stage = make_stage("mid")
     for seed in range(3):
-        u = random_unique(pob, random.Random(seed), stage, "budget")
-        assert u is None or not u["slot"].startswith("Weapon")
-    assert random_unique(pob, random.Random(0), stage, "free") is None
+        u = random_unique(pob, random.Random(seed), stage)
+        assert u is None or (not u["slot"].startswith("Weapon") and _unique_allowed(u["name"], stage))
+    assert random_unique(pob, random.Random(0), make_stage("act1")) is None   # no uniques in the acts
     assert find_unique(pob.list_uniques(), "no such unique") is None
 
 

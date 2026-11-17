@@ -1,4 +1,4 @@
-"""A-to-Z test: build many prompts end to end, all four stages, and check the result is what was asked for and that
+"""A-to-Z test: build many prompts end to end, all seven stages, and check the result is what was asked for and that
 every item and gem is real.
 
     python tools/az_test.py run [--only 1,5] [--out data/baseline/az_<PoB version>.json]
@@ -10,7 +10,7 @@ Per prompt:
   real        every gem, unique and base exists in Path of Building; every base is one players can find on trade;
               every rare passes the crafting rules (strict mode); PoB reads every item back with all its affixes
   usable      attributes met, gem levels fit the character level, no unique over its "Limited to"
-  budget      every unique fits the budget picked (prices from poe.ninja)
+  stage       every unique is one a player has by that stage (gear.UNIQUE_ACCESS; anchors are exempt)
 Results are saved as they come in (resumable). Also writes the end-stage numbers in the same shape as
 tools/baseline.py, so the run doubles as the pre-1.0 baseline. About 15 minutes a prompt.
 """
@@ -31,50 +31,51 @@ from check_prompt import catalog  # noqa: E402
 from gear import _unique_allowed, base_available, make_stage  # noqa: E402
 from generate import HELPER_TYPES, KIND_TYPES, generate, plan_build  # noqa: E402
 from goals import FOCUS, focus_value  # noqa: E402
+from gear import STAGE_DEFS  # noqa: E402
 from guide import build_guide  # noqa: E402
 from item_audit import audit_stage  # noqa: E402
 from optimize import AILMENT_FIELD, AILMENT_TARGET, ailment_dps, damage_types, total_dps  # noqa: E402
 from pob import PoB  # noqa: E402
 from prompt import parse_prompt  # noqa: E402
 
-STAGES = ["leveling", "early", "mid", "end"]
+STAGES = list(STAGE_DEFS)
 
-# (prompt, budget the player picked, extra expectations). The prompt's own budget words win over the picked one.
+# (prompt, extra expectations).
 PROMPTS = [
     # The baseline set (tools/baseline.py)
-    ("crossbow crit bleed build", "high", {}),
-    ("lightning minion build", "medium", {}),
-    ("dagger bleed build", "high", {}),
-    ("cast on crit fire spells", "unlimited", {}),
-    ("poison bow build", "budget", {}),
-    ("tanky ignite build", "high", {}),
-    ("cheap cold spell build", "budget", {}),
-    ("two hand mace slam warrior", "free", {}),
-    ("spear attack speed build", "high", {}),
-    ("chaos damage over time witch", "medium", {}),
-    ("warcry build", "high", {}),
-    ("block energy shield build", "high", {}),
-    ("lightning arrow with heralds", "medium", {}),
-    ("starter minion build for a new player", "free", {}),
-    ("highest dps build possible", "unlimited", {}),
+    ("crossbow crit bleed build", {}),
+    ("lightning minion build", {}),
+    ("dagger bleed build", {}),
+    ("cast on crit fire spells", {}),
+    ("poison bow build", {}),
+    ("tanky ignite build", {}),
+    ("cold spell build", {}),
+    ("two hand mace slam warrior", {}),
+    ("spear attack speed build", {}),
+    ("chaos damage over time witch", {}),
+    ("warcry build", {}),
+    ("block energy shield build", {}),
+    ("lightning arrow with heralds", {}),
+    ("minion build for a new player", {}),
+    ("highest dps build possible", {}),
     # Every class, more weapons, ascendancies, named skills, negations, goals
-    ("fire spell build, no minions", "medium", {"not_kind": "minion"}),
-    ("sorceress cold build", "high", {}),
-    ("mercenary grenade build", "medium", {}),
-    ("huntress spear build", "budget", {}),
-    ("monk quarterstaff lightning build", "high", {}),
-    ("ranger poison build", "medium", {}),
-    ("invoker build", "high", {}),
-    ("infernalist minions", "medium", {}),
-    ("fast mapping build with movement speed", "medium", {}),
-    ("magic find build", "medium", {}),
-    ("life leech melee build", "high", {}),
-    ("armour tank build two handed", "medium", {}),
-    ("evasion crit bow build", "high", {}),
-    ("curse build for a witch", "medium", {}),
-    ("totem build", "medium", {}),
-    ("ssf boss killer", "free", {}),
-    ("10 div physical crossbow", "high", {}),
+    ("fire spell build, no minions", {"not_kind": "minion"}),
+    ("sorceress cold build", {}),
+    ("mercenary grenade build", {}),
+    ("huntress spear build", {}),
+    ("monk quarterstaff lightning build", {}),
+    ("ranger poison build", {}),
+    ("invoker build", {}),
+    ("infernalist minions", {}),
+    ("fast mapping build with movement speed", {}),
+    ("magic find build", {}),
+    ("life leech melee build", {}),
+    ("armour tank build two handed", {}),
+    ("evasion crit bow build", {}),
+    ("curse build for a witch", {}),
+    ("totem build", {}),
+    ("boss killer", {}),
+    ("physical crossbow", {}),
 ]
 
 
@@ -139,7 +140,7 @@ def asked_for(req: dict, spec: dict, guides: list, game: dict, expect: dict, gro
     return fails
 
 
-def real_and_usable(pob: PoB, guides: list, game: dict, budget: str) -> list[str]:
+def real_and_usable(pob: PoB, guides: list, game: dict, anchor: str | None = None) -> list[str]:
     fails = []
     for g in guides:
         tag = g.stage
@@ -150,9 +151,8 @@ def real_and_usable(pob: PoB, guides: list, game: dict, budget: str) -> list[str
             if p.unique:
                 if p.unique not in game["uniques"]:
                     fails.append(f"{tag} made-up unique: {p.unique}")
-                ok, note = _unique_allowed(p.unique, make_stage(g.stage, budget))
-                if not ok:
-                    fails.append(f"{tag} over budget: {p.unique} ({note})")
+                if p.unique != anchor and not _unique_allowed(p.unique, make_stage(g.stage)):
+                    fails.append(f"{tag} unique a player wouldn't have yet: {p.unique}")
             else:
                 if p.base not in game["bases"]:
                     fails.append(f"{tag} made-up base: {p.base}")
@@ -166,15 +166,15 @@ def real_and_usable(pob: PoB, guides: list, game: dict, budget: str) -> list[str
     return fails
 
 
-def run_one(text: str, budget: str, expect: dict, game: dict) -> dict:
+def run_one(text: str, expect: dict, game: dict) -> dict:
     parsed = parse_prompt(text, catalog())
-    req = {"budget": budget, **parsed["request"]}
-    r = {"prompt": text, "budget": req["budget"], "read_as": [f["means"] for f in parsed["found"]],
+    req = dict(parsed["request"])
+    r = {"prompt": text, "read_as": [f["means"] for f in parsed["found"]],
          "unused": parsed["unused"]}
     t0 = time.time()
     try:
         result = generate(req, workers=int(os.environ.get("WORKERS", "3")), log=lambda *a: None)
-        spec = {**plan_build(result)["spec"], "budget": req["budget"]}
+        spec = plan_build(result)["spec"]
         r.update(relaxed=result.get("relaxed") or [], skill=spec["skill"], ascendancy=spec["ascendancy"],
                  weapon=spec["weapon_type"])
         guides = build_guide(spec, STAGES, log=lambda *a: None)
@@ -191,7 +191,7 @@ def run_one(text: str, budget: str, expect: dict, game: dict) -> dict:
             fails.append(f"relaxed (the site says what changed): {r['relaxed']}")
         if r["unused"]:
             fails.append(f"words not understood: {r['unused']}")
-        fails += real_and_usable(pob, guides, game, req["budget"])
+        fails += real_and_usable(pob, guides, game, spec.get("anchor_unique"))
     fails += build_checks(guides, time.time() - t0)
     end = guides[-1]
     s = end.stats
@@ -215,7 +215,7 @@ def run_one(text: str, budget: str, expect: dict, game: dict) -> dict:
     return r
 
 
-SLOW_SECONDS = 1200   # a whole build (search + 4 stages) over 20 minutes is too slow for players
+SLOW_SECONDS = 1200   # a whole build (search + 7 stages) over 20 minutes is too slow for players
 
 
 def build_checks(guides: list, seconds: float) -> list[str]:
@@ -240,8 +240,8 @@ def build_checks(guides: list, seconds: float) -> list[str]:
 
 
 def sweep_prompts() -> list:
-    """One build per ascendancy ("Invoker build"), high budget: the same checks for every ascendancy."""
-    return [(f"{asc} build", "high", {}) for c in catalog()["classes"] for asc in c["ascendancies"]]
+    """One build per ascendancy ("Invoker build"): the same checks for every ascendancy."""
+    return [(f"{asc} build", {}) for c in catalog()["classes"] for asc in c["ascendancies"]]
 
 
 def run(only: set[int] | None, out: Path | None) -> None:
@@ -252,12 +252,12 @@ def run(only: set[int] | None, out: Path | None) -> None:
     if done.get("pob_version") != game["version"]:
         done = {"pob_version": game["version"], "results": {}}
     prompts = sweep_prompts() if os.environ.get("SWEEP") else PROMPTS
-    for i, (text, budget, expect) in enumerate(prompts, 1):
-        key = f"{text} [{budget}]"
+    for i, (text, expect) in enumerate(prompts, 1):
+        key = text
         if (only and i not in only) or key in done["results"]:
             continue
         print(f"#{i} {key} ...", flush=True)
-        r = run_one(text, budget, expect, game)
+        r = run_one(text, expect, game)
         done["results"][key] = r
         done["updated"] = time.strftime("%Y-%m-%d %H:%M")
         out.write_text(json.dumps(done, indent=1, ensure_ascii=False), encoding="utf-8")
@@ -272,7 +272,7 @@ def run(only: set[int] | None, out: Path | None) -> None:
 def write_baseline(done: dict) -> None:
     """The baseline-prompt subset in tools/baseline.py's format, for `baseline.py compare` after 1.0."""
     from baseline import PROMPTS as BASE
-    keys = {f"{t} [{b}]" for t, b in BASE}
+    keys = set(BASE)
     res = {k: v for k, v in done["results"].items() if k in keys and "skill" in v}
     if res:
         path = TOOLS.parent / "data" / "baseline" / f"prompts_{done['pob_version']}.json"
@@ -287,7 +287,7 @@ def report(done: dict) -> None:
     kinds: dict[str, int] = {}
     for r in res.values():
         for f in r["fails"]:
-            k = re.sub(r"^(leveling|early|mid|end) ", "", f).split(":")[0]
+            k = re.sub(r"^(" + "|".join(STAGES) + r"|leveling) ", "", f).split(":")[0]
             kinds[k] = kinds.get(k, 0) + 1
     for k, n in sorted(kinds.items(), key=lambda x: -x[1]):
         print(f"  {n:>3}  {k}")

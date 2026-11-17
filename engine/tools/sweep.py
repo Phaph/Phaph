@@ -1,7 +1,7 @@
 """Smoke test: build one stage for every ascendancy with a typical skill and weapon.
 Reports crashes, zero damage and uncapped resistances. Takes a few minutes.
 
-  python3 tools/sweep.py [--stage early] [--budget budget]
+  python3 tools/sweep.py [--stage early]
 """
 import argparse
 import json
@@ -12,6 +12,7 @@ from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from gear import make_stage  # noqa: E402
 from guide import build_stage  # noqa: E402
 
 # (class, ascendancy, skill, weapon type, weapon subtype)
@@ -45,12 +46,12 @@ SPECS = [
 RESULTS: list[dict] = []
 
 
-def run(spec, stage, budget):
+def run(spec, stage):
     cls, asc, skill, wtype, wsub = spec
     t = time.time()
     try:
         g = build_stage({"class": cls, "ascendancy": asc, "skill": skill, "weapon_type": wtype,
-                         "weapon_subtype": wsub, "budget": budget}, stage)
+                         "weapon_subtype": wsub}, stage)
         RESULTS.append({"ascendancy": asc, "skill": skill, "damage": g.boss_dps or g.dps, "clear": g.clear,
                         "toughness": g.stats.get("TotalEHP", 0), "mapping_dps": g.dps})
         s = g.stats
@@ -58,7 +59,7 @@ def run(spec, stage, budget):
         flags = []
         if g.dps <= 0:
             flags.append("ZERO DPS")
-        if min(res) < 75 and stage != "leveling":
+        if min(res) < make_stage(stage).res_target:
             flags.append(f"res {res}")
         if not g.supports:
             flags.append("no supports")
@@ -70,15 +71,14 @@ def run(spec, stage, budget):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--stage", default="early")
-    ap.add_argument("--budget", default="budget")
     ap.add_argument("--workers", type=int, default=4)
     ap.add_argument("--calibrate", help="write rating calibration JSON to this path")
     a = ap.parse_args()
     with ThreadPoolExecutor(a.workers) as ex:
-        for line in ex.map(lambda s: run(s, a.stage, a.budget), SPECS):
+        for line in ex.map(lambda s: run(s, a.stage), SPECS):
             print(line, flush=True)
     if a.calibrate:
-        out = {"source": f"tools/sweep.py --stage {a.stage} --budget {a.budget}", "builds": RESULTS,
+        out = {"source": f"tools/sweep.py --stage {a.stage}", "builds": RESULTS,
                "metrics": {k: sorted(r[k] for r in RESULTS) for k in ("damage", "clear", "toughness")}}
         Path(a.calibrate).write_text(json.dumps(out, indent=1))
         print(f"Calibration from {len(RESULTS)} builds written to {a.calibrate}")

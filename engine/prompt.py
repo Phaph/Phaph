@@ -80,20 +80,10 @@ MODE = {
     r"boss(es|ing|er)?|pinnacle|single target|ubers?": "bossing",
     r"mapp(ing|er)|maps|clear(ing)?|clear speed|farm(ing)?": "mapping",
 }
-# Checked in this order, so "high budget" is high, not the plain "budget" rule.
-BUDGET_WORDS = {
-    r"no limit|unlimited|mirror(ed)?|money is no object|max budget": "unlimited",
-    r"expensive|high budget|rich": "high",
-    r"medium|mid budget|moderate": "medium",
-    r"ssf|self found|no money|broke|zero budget|free": "free",
-    r"cheap|budget|league start(er|ing)?|starter": "budget",
-}
 # "Find me the strongest build there is": a deep search (see generate.py).
 DEEP = (r"(highest|max(imum)?|most|biggest|top|insane|crazy)\s+(possible\s+)?(dps|damage)"
         r"|(strongest|most broken|broken|overpowered)\s+(possible\s+)?builds?"
         r"|(highest|max(imum)?|strongest|best)\s+possible|deep search|search everything|try everything")
-# ...and with no budget named, "in the whole game" style wording means no budget limit either.
-NO_LIMIT_HINT = r"possible|in the game|in game|of all time|ever|no matter the cost|whatever it costs"
 NEGATION = r"(?:no|not|non|without|avoid|avoiding|hate)\s+(?:\w+\s+)?"
 CURRENCY = r"(\d+(?:\.\d+)?)\s*(k\b)?\s*(div(?:ine)?s?|d\b|ex(?:alt(?:ed)?s?)?\b|chaos(?: orbs?)?)"
 
@@ -184,20 +174,8 @@ def _find(pattern: str, text: str) -> re.Match | None:
     return None
 
 
-def divines_to_budget(div: float) -> str:
-    if div <= 0:
-        return "free"
-    if div <= 5:
-        return "budget"
-    if div <= 30:
-        return "medium"
-    if div <= 100:
-        return "high"
-    return "unlimited"
-
-
-def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine_in_chaos: float = 10) -> dict:
-    """Returns {"request": <GenerateRequest fields>, "found": [(phrase, meaning)], "budget_set": bool}.
+def parse_prompt(text: str, catalog: dict) -> dict:
+    """Returns {"request": <GenerateRequest fields>, "found": [(phrase, meaning)], "unused": [words]}.
 
     catalog is the API's /catalog: classes (with ascendancies), skills and weapon_types.
     """
@@ -206,24 +184,12 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
     req: dict = {"damage": [], "kinds": [], "weapons": [], "goals": []}
     found: list[tuple[str, str]] = []
 
-    # Budget from an amount first ("5 div", "300 ex", "2k chaos"), then from words.
-    m = re.search(CURRENCY, t)
-    if m:
-        n = float(m.group(1)) * (1000 if m.group(2) else 1)
-        unit = m.group(3)
-        div = n if unit.startswith("d") else n / divine_in_exalts if unit.startswith("ex") else n / divine_in_chaos
-        req["budget"] = divines_to_budget(div)
-        found.append((m.group(0).strip(), f"Budget: {req['budget']}"))
-        t = t[:m.start()] + " " + t[m.end():]   # so "20 chaos" isn't also chaos damage
-        if (b := re.search(r"(?<![\w'])budget(?![\w'])", t)):
-            found.append((b.group(0), f"Budget: {req['budget']}"))   # "900 div budget": the word is understood too
-            t = t[:b.start()] + " " * (b.end() - b.start()) + t[b.end():]
-    else:
-        for pat, key in BUDGET_WORDS.items():
-            if (m := _find(pat, t)):
-                req["budget"] = key
-                found.append((m.group(0), f"Budget: {key}"))
-                break
+    # Currency amounts ("5 div", "20 chaos") mean nothing (the site has no budget), but are blanked out so "20 chaos"
+    # isn't read as chaos damage.
+    amounts = []
+    while (m := re.search(CURRENCY, t)):
+        amounts.append(m.group(0))
+        t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
 
     # Random and off-meta first ("random build", "off meta"), then what the build is made around (anchors.py): a unique,
     # a keystone, a support gem. Each is blanked out, so "Chaos Inoculation" isn't also read as chaos damage.
@@ -388,9 +354,6 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
     if (m := _find(DEEP, t)):
         req["deep"] = True
         found.append((m.group(0), "Deep search: every skill gets a fair chance"))
-        if "budget" not in req and _find(NO_LIMIT_HINT, t):
-            req["budget"] = "unlimited"
-            found.append(((_find(NO_LIMIT_HINT, t)).group(0), "Budget: unlimited"))
         if "mode" not in req and re.search(r"dps|damage", m.group(0)):
             req["mode"] = "bossing"
             found.append((m.group(0), "Focus: bossing (raw damage)"))
@@ -401,5 +364,5 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
     req["goals"] = req["goals"][:8]
     if "with_types" in req:
         req["with_types"] = req["with_types"][:3]
-    return {"request": req, "found": [{"text": a, "means": b} for a, b in found], "budget_set": "budget" in req,
-            "unused": unused_words(prompt_text, found + [(c, "") for c in consumed])}
+    return {"request": req, "found": [{"text": a, "means": b} for a, b in found],
+            "unused": unused_words(prompt_text, found + [(c, "") for c in consumed + amounts])}

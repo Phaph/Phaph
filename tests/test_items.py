@@ -72,7 +72,7 @@ BUILDS = [
     ("Warrior", "Two Hand Mace", None, None, True),
     ("Warrior", "One Hand Mace", None, "Shield", True),
 ]
-STAGES = [("leveling", "free"), ("early", "budget"), ("end", "unlimited")]
+STAGES = ["act1", "early", "end"]
 
 
 @pytest.mark.parametrize("cls,wtype,wsub,off,attack", BUILDS, ids=[f"{b[0]}-{b[1]}" for b in BUILDS])
@@ -81,8 +81,8 @@ def test_every_crafted_item_is_legal(pob, monkeypatch, cls, wtype, wsub, off, at
     catalog = pob.send("skill_catalog")["skills"]
     skill = _skill_for(catalog, wtype, attack) or _skill_for(catalog, wtype, not attack) or ("Spark" if not attack else None)
     assert skill, f"no skill found for {wtype}"
-    for key, budget in STAGES:
-        stage = make_stage(key, budget)
+    for key in STAGES:
+        stage = make_stage(key)
         pob.new()
         pob.set_class(cls)
         pob.set_level(stage.level)

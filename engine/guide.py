@@ -1,20 +1,21 @@
-"""Full build guide: one build spec -> Leveling, Early maps, Mid maps and Endgame versions.
+"""Full build guide: one build spec -> seven stages, as a player meets them:
+Act 1, Act 2, Acts 3-4, Interludes, Early Endgame, Mid Endgame, Uber Endgame (gear.STAGE_DEFS).
 
-Each stage gets its own level, passive points, gear budget, support gems and passives:
+Each stage gets its own level, passive points, gear, support gems and passives, from what a player realistically has
+there: self-found rares and few sockets in the acts, easy gear when maps start, best-in-slot uniques for the pinnacle
+bosses. Endgame stages:
     supports (bare) -> gear -> passive tree (jewel sockets valued with a stand-in jewel) -> supports again
     -> gear again -> a jewel for every socket taken
+Act stages are light: one tree pass, no jewels, no boss or trigger setups.
+Uber Endgame builds gear and passives for bossing first, with more weight on toughness and chaos resistance.
 Stages run side by side, one PoB process each.
 
 Spec:
     {"name": "Tempest Flurry Invoker", "class": "Monk", "ascendancy": "Invoker",
      "skill": "Tempest Flurry", "weapon_type": "Staff", "weapon_subtype": "Warstaff",
-     "dual_wield": false, "budget": "budget", "stages": ["leveling", "early", "mid", "end"]}
+     "dual_wield": false, "stages": ["act1", "early", "end"]}
 
-budget: free | budget (<=5 div) | medium (5-30) | high (30-100) | unlimited. Default: high.
-Every stage's gear is capped at the budget, so a 5 divine player still gets mid maps
-and endgame versions, built with gear they can afford.
-
-CLI:  python3 guide.py spec.json [--budget budget] [--stages early,end] [--json]
+CLI:  python3 guide.py spec.json [--stages early,end] [--json]
 """
 from __future__ import annotations
 
@@ -24,7 +25,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from anchors import find_unique, stage_notes
-from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
+from gear import STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
 from jewels import craft_jewels, proxy_jewel
 from weaponsets import specialise_set2
 from triggers import best_triggers, cast_on_crit, find_groups
@@ -75,7 +76,6 @@ class StageGuide:
     stage: str
     name: str
     level: int
-    budget: str
     supports: list[str]
     notables: list[str]
     gear: list[SlotPlan]
@@ -107,15 +107,12 @@ class StageGuide:
     # Supports for every other skill in the build: [{"skill", "role": spirit/utility/movement, "supports"}]
     setups: list[dict] = field(default_factory=list)
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
-    budget_key: str = "high"                                 # free / budget / medium / high / unlimited
+    sockets: int = 5                                         # support sockets per skill at this stage
     tree_nodes: list[int] = field(default_factory=list)      # allocated passive ids, for the tree viewer
     # The order to take passives: each pick (most value per point first) with the path that reaches it.
     tree_order: list[dict] = field(default_factory=list)
     tree_version: str | None = None
     jewels: list[SlotPlan] = field(default_factory=list)    # one per jewel socket taken, slot "Jewel <node id>"
-
-
-DEFAULT_BUDGET = "high"
 
 
 def condition_label(var: str) -> str:
@@ -125,7 +122,7 @@ def condition_label(var: str) -> str:
     return re.sub(r"(?<!^)([A-Z])", r" \1", name).lower()
 
 
-STAGE_SOCKETS = {"leveling": 3, "early": 4, "mid": 5, "end": 5}
+STAGE_SOCKETS = {k: st.sockets for k, st in STAGE_DEFS.items()}
 SOCKET_ORB = {3: "a Lesser Jeweller's Orb", 4: "a Greater Jeweller's Orb", 5: "a Perfect Jeweller's Orb"}
 
 
@@ -140,22 +137,27 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
     progress, if given, receives one dict per real step ({"stage", "step", "label", "dps"}) so the
     website can show the work as it happens.
     """
-    stage = make_stage(stage_key, spec.get("budget", DEFAULT_BUDGET))
+    stage = make_stage(stage_key)
+    light = stage.light   # campaign: fewer passes, no jewels, no boss or trigger setups
     weapon = dict(weapon_type=spec["weapon_type"], weapon_subtype=spec.get("weapon_subtype"),
                   dual_wield=spec.get("dual_wield", False), offhand_type=spec.get("offhand_type"))
-    dw_gear, dw_tree = spec.get("defence_weight", 0.4), spec.get("defence_weight", 0.25)
-    boss_skill = spec.get("boss_skill") if stage_key != "leveling" else None
+    dw_gear = spec.get("defence_weight", 0.4) * stage.def_mult
+    dw_tree = spec.get("defence_weight", 0.25) * stage.def_mult
+    boss_skill = spec.get("boss_skill") if not light else None
     boss_swap = bool(boss_skill and spec.get("boss_weapon_type")
                      and (spec.get("boss_weapon_type"), spec.get("boss_weapon_subtype"))
                      != (spec["weapon_type"], spec.get("weapon_subtype")))
     quiet = lambda *a: None
     # Support sockets a player has by this stage: every skill gem starts with 2; a Lesser Jeweller's Orb (campaign) sets
-    # it to 3, a Greater (early maps) to 4, a Perfect to 5. The same limit applies to every skill in the build.
-    slots = min(spec.get("support_slots", 5), STAGE_SOCKETS.get(stage_key, 5))
+    # it to 3, a Greater (early endgame) to 4, a Perfect to 5. The same limit applies to every skill in the build.
+    slots = min(spec.get("support_slots", 5), stage.sockets)
     # The build's goal: e.g. a bleed build optimises bleed damage everywhere, not raw hits.
     map_metric = metric_for("mapping", spec.get("ailment"), spec.get("goals"))
     boss_metric = metric_for("bossing", spec.get("ailment"), spec.get("goals"))
     goals = list(spec.get("goals") or [])
+    # What gear and passives are built for first: mapping, or the pinnacle bosses (Uber Endgame).
+    focus = stage.focus
+    focus_metric = boss_metric if focus == "bossing" else map_metric
     with PoB() as pob:
         catalog = pob.send("skill_catalog")["skills"]
         minion_build = any(s["name"] == spec["skill"] and "Minion" in s["types"] for s in catalog)
@@ -174,6 +176,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 anchors[key] = spec[f"anchor_{key}"]
         pob.anchors = anchors if len(anchors) > 1 else None
         pob.off_meta = bool(spec.get("off_meta"))
+        pob.no_lineage = stage.campaign   # lineage supports (Uhtred's Exodus...) are rare endgame drops
         pob.anchor_notes = []
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
         seed_ailment(pob, group, skill, spec.get("ailment"))   # so gear and tree chase the ailment from the start
@@ -188,7 +191,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 pob.add_skill([pick], main=False)
                 helpers.append(pick)
                 picked_helpers.append((kind, pick))
-        clear_skill = spec.get("clear_skill") if stage_key != "leveling" else None
+        clear_skill = spec.get("clear_skill") if not light else None
         clear_group = pob.add_skill([clear_skill], main=False)["group"] if clear_skill else None
         boss_group = None
         if boss_skill:
@@ -203,7 +206,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 progress({"stage": stage_key, "step": step, "label": label,
                           "dps": round(total_dps(pob.calc(STAT_FIELDS)), 1), **extra})
 
-        report("start", f"{stage.name}: level {stage.level}, {stage.budget}")
+        report("start", f"{stage.name}: level {stage.level}")
 
         def boss_weapon():
             # The swap weapon is scored with the boss skill as the main skill.
@@ -213,15 +216,16 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             pob.send("set_main", group=group)
             return plan
 
-        pob.set_config(**MODE_CONFIG["mapping"])
-        pob.auto_config("mapping")
-        craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals, log=quiet)
+        pob.set_config(**MODE_CONFIG[focus])
+        pob.auto_config(focus)
+        craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode=focus, metric=focus_metric, goals=goals, log=quiet)
         if boss_swap:
             boss_weapon()
         report("gear", "First gear pass")
         # The best jewel this build could socket: the tree weighs every socket as its path plus this jewel.
-        jewel_score = Scorer(def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals)
-        stand_in = proxy_jewel(pob, stage, jewel_score)
+        # (No jewels in the acts: few sockets are in reach and a player has no jewels to put in them yet.)
+        jewel_score = Scorer(def_weight=dw_gear, mode=focus, metric=focus_metric, goals=goals)
+        stand_in = None if light else proxy_jewel(pob, stage, jewel_score)
         def tree_live(ev):
             if progress:
                 progress({"stage": stage_key, "step": "tree_live", "chosen": ev.get("chosen"), "name": ev.get("name"),
@@ -230,7 +234,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                           "ascendancy": bool(ev.get("ascendancy")), "score": round(ev.get("score") or 0, 1),
                           "removed": ev.get("removed") or [], "added": ev.get("added") or []})
 
-        tree = pob.optimise_tree(def_weight=dw_tree, metric=map_metric, goals=goals, jewel=stand_in,
+        tree = pob.optimise_tree(def_weight=dw_tree, metric=focus_metric, goals=goals, jewel=stand_in,
+                                 points=stage.points, ascendancy_points=stage.ascendancy_points, refine=not light,
                                  on_step=tree_live if progress else None)
         if progress:
             for s in tree["steps"]:
@@ -239,6 +244,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                               "ascendancy": bool(s.get("ascendancy")), "gain": round(s.get("gain_per_point", 0), 4)})
         report("tree", f"{sum(s['cost'] for s in tree['steps'])} passive points spent")
         pob.send("balance_attributes")   # "+5 any attribute" passives go where the gear and gems need them
+        pob.set_config(**MODE_CONFIG["mapping"])
         pob.auto_config("mapping")
         first = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
         report("supports", ", ".join(first[0].supports) if first else "")
@@ -247,7 +253,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         triggers: list[dict] = []
         before_spirit = pob.save_xml()
         spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
-        if not minion_build:
+        if not minion_build and not light:
             plain_score, plain_xml = score_of(pob.calc(STAT_FIELDS + CLEAR_FIELDS), map_metric), pob.save_xml()
             pob.load_xml(before_spirit)
             triggers = best_triggers(pob, group, catalog, mode="mapping", slots=slots, log=quiet)
@@ -277,7 +283,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # Curses, marks, banners, warcries: kept when they raise the main skill's damage. One
         # that needs a weapon the main hand can't use goes on weapon set 2.
         utility = []
-        if stage_key != "leveling":
+        if not light:
             pob.set_config(**MODE_CONFIG["bossing"])
             utility = optimise_utility(pob, catalog, spec["weapon_type"], boss_metric, item_level=stage.item_level,
                                        swap_weapon=spec.get("boss_weapon_type") if boss_swap else None, log=quiet)
@@ -285,8 +291,14 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # Passives, supports and spirit moved damage and resistances around: re-craft gear to fit. Attribute passives
         # are balanced first, and this pass treats an unmet requirement as costly: an item you can't equip is useless.
         pob.send("balance_attributes")
-        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode="mapping", metric=map_metric, goals=goals,
+        if focus != "mapping":
+            pob.set_config(**MODE_CONFIG[focus])
+            pob.auto_config(focus)
+        gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode=focus, metric=focus_metric, goals=goals,
                           log=quiet, attr_weight=0.25)   # a point short costs like 25% damage: usable first
+        if focus != "mapping":
+            pob.set_config(**MODE_CONFIG["mapping"])
+            pob.auto_config("mapping")
         if boss_swap:
             gear.append(boss_weapon())
         # Safety net: a build must never reserve more spirit than it has. If the gear still came up short, take buffs
@@ -302,7 +314,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                     spare.remove(name)
                 dropped_spirit.append(name)
         # Each socket's jewel for real, now the tree, gems and gear are settled.
-        jewels = craft_jewels(pob, stage, jewel_score, log=quiet)
+        jewels = [] if light else craft_jewels(pob, stage, jewel_score, log=quiet)
         add_trade_info(pob, gear + jewels)
         report("gear", "Gear re-crafted to fit" + (f", {len(jewels)} jewels" if jewels else ""),
                slots=[g.unique.split(",")[0] if g.unique else g.base for g in gear + jewels])
@@ -311,7 +323,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_config(**MODE_CONFIG["bossing"])
         boss, boss_dps = None, 0.0
         weapon_sets = None
-        if stage_key != "leveling":
+        if not light:
             # boss_dps is real single-target damage (not the theme score used to pick supports).
             if boss_group:
                 pob.send("set_main", group=boss_group)
@@ -369,7 +381,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
                          + MINION_AILMENT_FIELDS)
         guide = StageGuide(
-            stage=stage.key, name=stage.name, level=stage.level, budget=stage.budget, budget_key=stage.budget_key,
+            stage=stage.key, name=stage.name, level=stage.level, sockets=slots,
             supports=best.supports,
             notables=[s["node"] for s in tree["steps"] if s["type"] != "Normal"],
             gear=gear, jewels=jewels, stats=stats, dps=total_dps(stats), code=pob.save_code(),
@@ -398,7 +410,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for h in sorted(metas):
             guide.notes.append(f"{h}: {skill} is socketed in it. How often it triggers isn't modelled yet, so the "
                                f"damage shown is {skill} cast normally.")
-        if slots < 5 and slots in SOCKET_ORB:
+        if slots == 2:
+            guide.notes.append("2 supports per skill at this stage: skill gems start with 2 sockets. A Lesser "
+                               "Jeweller's Orb takes them to 3 later in the campaign.")
+        elif slots < 5 and slots in SOCKET_ORB:
             guide.notes.append(f"{slots} supports per skill at this stage: skill gems start with 2 sockets and "
                                f"{SOCKET_ORB[slots]} sets them to {slots}. More sockets come in later stages.")
         if weapon_sets:
@@ -426,11 +441,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for issue in guide.theme_issues:
             guide.notes.append("Off theme: " + issue)
         for k, label in (("FireResist", "fire"), ("ColdResist", "cold"), ("LightningResist", "lightning")):
-            if stats.get(k, 0) < 75:
-                guide.notes.append(f"{label} resistance {stats.get(k, 0):.0f}%: cap it with jewels or by swapping a gear affix")
-        for p in gear + jewels:
-            if p.unique and p.price_note == "price unknown":
-                guide.notes.append(f"{p.unique.split(',')[0]}: price not checked yet")
+            if stats.get(k, 0) < stage.res_target:
+                guide.notes.append(f"{label} resistance {stats.get(k, 0):.0f}%, aim for {stage.res_target}% here: "
+                                   + ("pick up resistance on the gear you find." if light
+                                      else "cap it with jewels or by swapping a gear affix."))
         log(f"{stage.name}: {guide.dps:,.0f} mapping DPS, {guide.boss_dps:,.0f} boss DPS")
         if progress:
             progress({"stage": stage_key, "step": "done", "label": f"{guide.dps:,.0f} mapping DPS",
@@ -496,6 +510,8 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
     long as PoB accepts them (supported, no rule warning). The group ends up holding the result."""
     chosen = list(chosen)
     alone = _alone_supports(pob)
+    banned = ({g["name"] for g in pob.list_gems("support") if g.get("lineage")}
+              if getattr(pob, "no_lineage", False) else set())
     if any(c in alone for c in chosen):
         return chosen   # e.g. Uhtred's Exodus: only works with no other supports, so the other sockets stay empty
     fams = {}
@@ -504,7 +520,7 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
         fams[s["name"]] = "/".join(fam) if isinstance(fam, list) else (fam or s["name"])
         if len(chosen) >= slots:
             break
-        if s["name"] in chosen or s["name"] in alone or (s.get("specific") or 0) < FIT_MIN:
+        if s["name"] in chosen or s["name"] in alone or (s.get("specific") or 0) < FIT_MIN or s["name"] in banned:
             continue
         if fams[s["name"]] in {fams.get(c, c) for c in chosen}:
             continue
@@ -532,14 +548,14 @@ def build_guide(spec: dict, stages: list[str] | None = None, log=print, progress
 
 def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
     out = [f"# {spec.get('name') or spec['skill']}", "",
-           f"Budget: **{make_stage('end', spec.get('budget', DEFAULT_BUDGET)).budget}**", ""]
-    out.append("| Stage | Level | Budget | Mapping DPS | Boss DPS | Life / ES | Effective HP | Res (F/C/L/Chaos) |")
-    out.append("|---|---|---|---|---|---|---|---|")
+           ]
+    out.append("| Stage | Level | Mapping DPS | Boss DPS | Life / ES | Effective HP | Res (F/C/L/Chaos) |")
+    out.append("|---|---|---|---|---|---|---|")
     for g in guides:
         s = g.stats
         res = "/".join(f"{s.get(k, 0):.0f}" for k in ("FireResist", "ColdResist", "LightningResist", "ChaosResist"))
         boss = f"{g.boss_dps:,.0f}" if g.boss_dps else "-"
-        out.append(f"| {g.name} | {g.level} | {g.budget} | {g.dps:,.0f} | {boss} | {s.get('Life', 0):,.0f} / "
+        out.append(f"| {g.name} | {g.level} | {g.dps:,.0f} | {boss} | {s.get('Life', 0):,.0f} / "
                    f"{s.get('EnergyShield', 0):,.0f} | {s.get('TotalEHP', 0):,.0f} | {res} |")
     for g in guides:
         out += ["", f"## {g.name}", f"**Mapping:** {spec['skill']} + " + ", ".join(g.supports)]
@@ -577,13 +593,13 @@ def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
         out.append("\n**Gear** (affixes in priority order):")
         for p in g.gear:
             if p.unique:
-                out.append(f"- **{p.slot}**: {p.unique} (unique, {p.price_note})")
+                out.append(f"- **{p.slot}**: {p.unique} (unique)")
             else:
                 out.append(f"- **{p.slot}**: {p.base}. " + ("; ".join(p.affixes) or "base only"))
         if g.jewels:
             out.append("\n**Jewels** (one per socket):")
             for p in g.jewels:
-                out.append(f"- **{p.slot}**: " + (f"{p.unique} (unique, {p.price_note})" if p.unique
+                out.append(f"- **{p.slot}**: " + (f"{p.unique} (unique)" if p.unique
                                                    else f"{p.base}. " + "; ".join(p.affixes)))
         for n in g.notes:
             out.append(f"- Note: {n}")
@@ -595,12 +611,9 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("spec", help="JSON build spec")
     ap.add_argument("--stages", help="comma list, e.g. early,end")
-    ap.add_argument("--budget", choices=BUDGET_ORDER, help="cap all gear at this budget")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
     spec = json.load(open(args.spec))
-    if args.budget:
-        spec["budget"] = args.budget
     stages = args.stages.split(",") if args.stages else None
     guides = build_guide(spec, stages, log=lambda *a: None)
     if args.json:

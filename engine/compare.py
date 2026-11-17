@@ -46,7 +46,7 @@ class Report:
     code: str = ""
     supports: list[str] = field(default_factory=list)
     notables: list[str] = field(default_factory=list)
-    # Filled when builds are built at a budget (evaluate_spec):
+    # Filled when builds are fully built from a spec (evaluate_spec):
     ascendancy: str | None = None
     mapping_dps: float = 0.0
     clear: float = 0.0
@@ -174,11 +174,11 @@ def relative_notes(reports: list[Report]) -> None:
         by_ehp[-1].cons.append(f"Squishiest ({by_ehp[-1].ehp:,.0f} effective HP)")
 
 
-def evaluate_spec(spec: dict, budget: str, stage: str = "end", progress=None) -> Report:
-    """Build a guide spec at one stage, capped at `budget`, and report on it."""
+def evaluate_spec(spec: dict, stage: str = "end", progress=None) -> Report:
+    """Build a guide spec at one stage and report on it."""
     from guide import build_stage  # local import: guide imports this module's helpers indirectly
 
-    g = build_stage({**spec, "budget": budget}, stage, progress=progress)
+    g = build_stage(spec, stage, progress=progress)
     s = dict(g.stats, MappingDPS=g.dps)
     return Report(
         name=spec.get("name") or spec["skill"], main_skill=spec["skill"], dps=g.boss_dps or g.dps,
@@ -188,18 +188,18 @@ def evaluate_spec(spec: dict, budget: str, stage: str = "end", progress=None) ->
     )
 
 
-def compare(builds: list[dict], pob: PoB | None = None, budget: str | None = None,
+def compare(builds: list[dict], pob: PoB | None = None, full_build: bool = False,
             stage: str = "end", progress=None) -> list[Report]:
-    """Compare 1-3 builds. With `budget`, builds are guide specs (class, skill, weapon type)
-    and each is fully built (supports, gear, tree) at that budget before comparing.
+    """Compare 1-3 builds. With `full_build`, builds are guide specs (class, skill, weapon type)
+    and each is fully built (supports, gear, tree) at `stage` before comparing.
     progress gets the stage builder's steps, with "stage" set to "b0", "b1", "b2" for each build."""
     if not 1 <= len(builds) <= MAX_BUILDS:
         raise ValueError(f"Give 1 to {MAX_BUILDS} builds")
-    if budget:
+    if full_build:
         def tagged(i):
             return (lambda e: progress({**e, "stage": f"b{i}"})) if progress else None
         with ThreadPoolExecutor(max_workers=len(builds)) as ex:
-            reports = list(ex.map(lambda ib: evaluate_spec(ib[1], budget, stage, tagged(ib[0])), enumerate(builds)))
+            reports = list(ex.map(lambda ib: evaluate_spec(ib[1], stage, tagged(ib[0])), enumerate(builds)))
     elif pob is not None:
         reports = [evaluate(pob, b) for b in builds]
     else:
@@ -251,12 +251,12 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("builds", help="JSON file with a list of 1-3 builds")
     ap.add_argument("--json", action="store_true", help="print JSON instead of markdown")
-    ap.add_argument("--budget", help="free|budget|medium|high|unlimited: fully build each spec at this budget")
-    ap.add_argument("--stage", default="end", help="leveling|early|mid|end (with --budget)")
+    ap.add_argument("--full", action="store_true", help="builds are guide specs: fully build each one first")
+    ap.add_argument("--stage", default="end", help="act1|act2|act34|interludes|early|mid|end (with --full)")
     args = ap.parse_args()
     with open(args.builds) as f:
         builds = json.load(f)
-    reports = compare(builds, budget=args.budget, stage=args.stage)
+    reports = compare(builds, full_build=args.full, stage=args.stage)
     if args.json:
         print(json.dumps([asdict(r) for r in reports], indent=2))
     else:

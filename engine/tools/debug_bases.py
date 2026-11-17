@@ -1,6 +1,6 @@
 """Trace base choice in the final gear pass of one stage: candidates, their scores and the attributes.
 
-    python tools/debug_bases.py '<spec json>' leveling "Body Armour"
+    python tools/debug_bases.py '<spec json>' act34 "Body Armour"
 """
 import json
 import sys

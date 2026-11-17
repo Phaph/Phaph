@@ -23,7 +23,7 @@ print("weapons:", generate.weapon_options(s, req))
 print("main_skills has it:", any(m["name"] == skill for m in generate.main_skills(catalog, req)))
 wt, ws, off = generate.weapon_options(s, req)[0]
 c = generate.Candidate(skill, wt, ws, off, cls, asc)
-stage = make_stage("end", req.get("budget", "high"))
+stage = make_stage("end")
 try:
     generate.evaluate(c, stage, req, tree="--tree" in sys.argv)
 except Exception:

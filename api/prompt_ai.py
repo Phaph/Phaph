@@ -37,7 +37,7 @@ Rules:
   "throw fireballs" is Fireball). Skills that boost others (Cast on X, auras, heralds, buffs) go in "with_skills".
 - "anchor_unique" / "anchor_keystone" / "anchor_support": the one item, keystone or support gem the build is
   made around, only if the player names it or asks for a build around it.
-- "kinds", "damage", "ailment", "weapons", "goals", "avoid", "mode", "budget": from the allowed values only.
+- "kinds", "damage", "ailment", "weapons", "goals", "avoid", "mode": from the allowed values only.
 - "weapons" is the main weapon. If the player names a second weapon ("crossbow build with a mace", "bow and spear"),
   the first is "weapons" and the second "second_weapons" (it goes on weapon set 2). Never more than two.
   "avoid" is for things the player said no to ("no minions" -> kinds "minion" in avoid).
@@ -90,7 +90,6 @@ def _schema(catalog: dict, tables: dict) -> dict:
         "with_types": strs(tables["helper_kinds"]),
         "avoid": strs(tables["damage"] | tables["kinds"]),
         "mode": one({"balanced", "mapping", "bossing"}),
-        "budget": one({b["key"] for b in catalog["budgets"]}),
         "off_meta": {"type": "boolean"},
         "random": {"type": "boolean"},
         "deep": {"type": "boolean"},
@@ -131,7 +130,6 @@ def _clean(out: dict, catalog: dict, tables: dict) -> dict:
         "class": {c["name"] for c in catalog["classes"]},
         "ascendancy": {a for c in catalog["classes"] for a in c["ascendancies"]},
         "ailment": tables["ailments"], "mode": {"balanced", "mapping", "bossing"},
-        "budget": {b["key"] for b in catalog["budgets"]},
     }
     lists = {"with_skills": set(catalog["skills"]), "damage": tables["damage"], "kinds": tables["kinds"],
              "weapons": set(catalog["weapon_types"]), "second_weapons": set(catalog["weapon_types"]), "goals": tables["goals"], "with_types": tables["helper_kinds"],
@@ -155,7 +153,7 @@ def _clean(out: dict, catalog: dict, tables: dict) -> dict:
     if req.get("ascendancy") and not req.get("class"):
         req["class"] = next(c["name"] for c in catalog["classes"] if req["ascendancy"] in c["ascendancies"])
     return {"request": req, "found": [f for f in out.get("found") or [] if f.get("text") and f.get("means")],
-            "budget_set": "budget" in req, "unused": [*(out.get("unused") or []), *dropped], "reader": "claude"}
+            "unused": [*(out.get("unused") or []), *dropped], "reader": "claude"}
 
 
 def read_prompt(text: str, catalog: dict) -> dict | None:

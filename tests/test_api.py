@@ -50,7 +50,9 @@ def test_health_and_catalog(client):
     cat = client.get("/catalog").json()
     assert "Tempest Flurry" in cat["skills"]
     assert "Staff" in cat["weapon_types"]
-    assert [b["key"] for b in cat["budgets"]] == ["free", "budget", "medium", "high", "unlimited"]
+    assert "budgets" not in cat
+    assert [s["key"] for s in cat["stages"]] == ["act1", "act2", "act34", "interludes", "early", "mid", "end"]
+    assert [s["sockets"] for s in cat["stages"]] == [2, 3, 3, 3, 4, 5, 5]
 
 
 @pytest.mark.parametrize("change,msg", [
@@ -64,32 +66,33 @@ def test_validation(client, change, msg):
     assert r.status_code == 400 and msg in r.json()["detail"]
 
 
-def test_bad_budget_and_too_many_builds(client):
-    assert client.post("/guides", json={"spec": SPEC, "budget": "mirror"}).status_code == 422
+def test_bad_stage_and_too_many_builds(client):
+    assert client.post("/guides", json={"spec": SPEC, "stages": ["leveling"]}).status_code == 422
     assert client.post("/compare", json={"builds": [SPEC] * 4}).status_code == 422
 
 
 def test_job_lifecycle_and_cache(client):
     client.release.set()
-    j = client.post("/guides", json={"spec": SPEC, "budget": "budget"}).json()
+    j = client.post("/guides", json={"spec": SPEC}).json()
     done = wait(client, j["id"])
     assert done["status"] == "done" and done["result"]["spec"]["skill"] == "Tempest Flurry"
+    # An old page still sending a budget gets the same build: the field is ignored.
     again = client.post("/guides", json={"spec": SPEC, "budget": "budget"}).json()
     assert again["cached"] is True and again["id"] == j["id"]
     assert len(client.calls) == 1, "cached request should not run the engine again"
 
 
 def test_same_request_while_running_joins_the_job(client):
-    a = client.post("/guides", json={"spec": SPEC, "budget": "free"}).json()
-    b = client.post("/guides", json={"spec": SPEC, "budget": "free"}).json()
+    a = client.post("/guides", json={"spec": SPEC}).json()
+    b = client.post("/guides", json={"spec": SPEC}).json()
     assert a["id"] == b["id"]
     client.release.set()
     wait(client, a["id"])
 
 
 def test_rate_limit_per_client(client):
-    ids = [client.post("/guides", json={"spec": SPEC, "budget": b}).json()["id"] for b in ("free", "budget")]
-    r = client.post("/guides", json={"spec": SPEC, "budget": "medium"})
+    ids = [client.post("/guides", json={"spec": SPEC, "stages": st}).json()["id"] for st in (["act1"], ["end"])]
+    r = client.post("/guides", json={"spec": SPEC, "stages": ["mid"]})
     assert r.status_code == 429
     client.release.set()
     for i in ids:
@@ -97,7 +100,7 @@ def test_rate_limit_per_client(client):
 
 
 def test_compare(client):
-    j = client.post("/compare", json={"builds": [SPEC, {**SPEC, "skill": "Falling Thunder"}], "budget": "budget"}).json()
+    j = client.post("/compare", json={"builds": [SPEC, {**SPEC, "skill": "Falling Thunder"}]}).json()
     done = wait(client, j["id"])
     assert [b["name"] for b in done["result"]["builds"]] == ["Tempest Flurry", "Falling Thunder"]
 
@@ -109,7 +112,7 @@ def test_unknown_job(client):
 def test_generate_and_feedback_plan(client, monkeypatch):
     import api.app as app_module
 
-    result = {"request": {"budget": "budget"}, "ranked": [
+    result = {"request": {}, "ranked": [
         {"skill": "Snap", "ascendancy": "Invoker", "cls": "Monk", "weapon_type": "Staff", "weapon_subtype": None,
          "offhand_type": None, "score": 100, "dps": 100},
         {"skill": "Snap", "ascendancy": "Martial Artist", "cls": "Monk", "weapon_type": "Staff",
@@ -117,7 +120,7 @@ def test_generate_and_feedback_plan(client, monkeypatch):
     monkeypatch.setitem(app_module.app.state.jobs.runners, "generate",
                         lambda req: {"result": result, "plan": {}, "options": {}})
     assert client.post("/generate", json={"class": "Wizard"}).status_code == 400
-    j = client.post("/generate", json={"damage": ["lightning"], "class": "Monk", "budget": "budget"}).json()
+    j = client.post("/generate", json={"damage": ["lightning"], "class": "Monk"}).json()
     early = client.post(f"/generate/{j['id']}/plan", json={"ascendancy": "Martial Artist"})
     assert early.status_code in (200, 409)
     wait(client, j["id"])
@@ -156,7 +159,7 @@ def test_parse_prompt(client):
     out = client.post("/parse", json={"text": "lightning minion build for a monk, 5 div"}).json()
     assert out["request"]["class"] == "Monk"
     assert out["request"]["damage"] == ["lightning"] and out["request"]["kinds"] == ["minion"]
-    assert out["request"]["budget"] == "budget"
+    assert "budget" not in out["request"] and "budget_set" not in out
     # The parsed request fits /generate's schema as is.
     from api.app import GenerateRequest
     GenerateRequest.model_validate(out["request"])

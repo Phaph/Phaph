@@ -2,10 +2,10 @@
 
 Endpoints:
   GET  /health
-  GET  /catalog              classes, ascendancies, skills, weapon types, budgets, stages
+  GET  /catalog              classes, ascendancies, skills, weapon types, stages
   GET  /icons                icon links for uniques, item bases and gems
   POST /guides               build guide for one spec -> job
-  POST /compare              compare 1-3 specs at a budget -> job
+  POST /compare              compare 1-3 specs at one stage -> job
   POST /parse                prompt text -> /generate request (instant, keyword based)
   GET  /jobs/{job_id}        job status and result
 
@@ -31,16 +31,15 @@ from pydantic import BaseModel, Field
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / "engine"))
 
-from gear import BUDGET_ORDER, BUDGETS, STAGE_DEFS  # noqa: E402
+from gear import STAGE_DEFS  # noqa: E402
 from pob import PoB  # noqa: E402
 
 from . import prompt_ai, writeup  # noqa: E402
 from .jobs import JobStore  # noqa: E402
 
-Budget = Literal["free", "budget", "medium", "high", "unlimited"]
-StageKey = Literal["leveling", "early", "mid", "end"]
+StageKey = Literal["act1", "act2", "act34", "interludes", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-17.7"
+ENGINE_VERSION = "2026-11-18.1"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -93,7 +92,6 @@ class GenerateRequest(BaseModel):
     cls: str | None = Field(None, alias="class")
     ascendancy: str | None = None
     skill: str | None = None
-    budget: Budget = "high"
     mode: Literal["balanced", "mapping", "bossing"] = "balanced"
     goals: list[str] = Field(default_factory=list, max_length=8)  # beyond damage: goals.GOAL_LABELS
     with_skills: list[str] = Field(default_factory=list, max_length=3)   # kept beside the main skill (Cast on X, buffs)
@@ -124,13 +122,11 @@ class PlanRequest(BaseModel):
 
 class GuideRequest(BaseModel):
     spec: BuildSpec
-    budget: Budget = "high"
     stages: list[StageKey] = Field(default_factory=lambda: list(STAGE_DEFS))
 
 
 class CompareRequest(BaseModel):
     builds: list[BuildSpec] = Field(..., min_length=1, max_length=3)
-    budget: Budget = "high"
     stage: StageKey = "end"
 
 
@@ -165,8 +161,7 @@ def load_catalog() -> dict:
         "keystones": keystones,
         "supports": supports,
         "weapon_types": {k: sorted(v) for k, v in sorted(weapon_types.items())},
-        "budgets": [{"key": k, "label": BUDGETS[k].label} for k in BUDGET_ORDER],
-        "stages": [{"key": k, "label": v[0], "level": v[1]} for k, v in STAGE_DEFS.items()],
+        "stages": [{"key": k, "label": v.name, "level": v.level, "sockets": v.sockets} for k, v in STAGE_DEFS.items()],
     }
 
 
@@ -200,7 +195,7 @@ def validate_spec(spec: BuildSpec, catalog: dict) -> None:
 def run_guide(req: dict, progress=None) -> dict:
     from guide import build_guide
 
-    spec = {**req["spec"], "budget": req["budget"]}
+    spec = {k: v for k, v in req["spec"].items() if k != "budget"}
     guides = build_guide(spec, req["stages"], log=lambda *a: None, progress=progress)
     out = {"spec": spec, "stages": [asdict(g) for g in guides]}
     if writeup.enabled():
@@ -261,8 +256,8 @@ def validate_generate(req: GenerateRequest, catalog: dict) -> None:
 def run_compare(req: dict, progress=None) -> dict:
     from compare import compare
 
-    reports = compare(req["builds"], budget=req["budget"], stage=req["stage"], progress=progress)
-    return {"budget": req["budget"], "stage": req["stage"], "builds": [asdict(r) for r in reports]}
+    reports = compare(req["builds"], full_build=True, stage=req["stage"], progress=progress)
+    return {"stage": req["stage"], "builds": [asdict(r) for r in reports]}
 
 
 @asynccontextmanager
@@ -435,7 +430,7 @@ def catalog(request: Request):
 @app.post("/guides")
 def create_guide(req: GuideRequest, request: Request):
     validate_spec(req.spec, request.app.state.catalog)
-    payload = {"spec": req.spec.as_engine_spec(), "budget": req.budget, "stages": req.stages}
+    payload = {"spec": req.spec.as_engine_spec(), "stages": req.stages}
     return _submit(request, "guide", payload)
 
 
@@ -443,7 +438,7 @@ def create_guide(req: GuideRequest, request: Request):
 def create_compare(req: CompareRequest, request: Request):
     for b in req.builds:
         validate_spec(b, request.app.state.catalog)
-    payload = {"builds": [b.as_engine_spec() for b in req.builds], "budget": req.budget, "stage": req.stage}
+    payload = {"builds": [b.as_engine_spec() for b in req.builds], "stage": req.stage}
     return _submit(request, "compare", payload)
 
 
@@ -458,31 +453,15 @@ def get_job(job_id: str, request: Request, since: int = 0):
 
 @app.post("/parse")
 def parse(req: ParseRequest, request: Request):
-    """Prompt mode: "lightning minion build for a monk, 5 div" -> the fields for POST /generate, plus what each
+    """Prompt mode: "lightning minion build for a monk" -> the fields for POST /generate, plus what each
     recognised phrase was read as. No job and no PoB work, so the website can call it as the player types."""
     from prompt import parse_prompt
 
     if req.ai and prompt_ai.available() and _ai_allowed(_client(request)):
         read = prompt_ai.read_prompt(req.text, request.app.state.catalog)
         if read:
-            return _amount_budget(read, req.text, request.app.state.catalog)
+            return read
     return parse_prompt(req.text, request.app.state.catalog)
-
-
-def _amount_budget(read: dict, text: str, catalog: dict) -> dict:
-    """An amount the player typed ("900 div", "300 ex") sets the budget by the site's own bands, not by Claude's
-    reading of it (Claude once read 900 divines as "high" when it is above 100, so "no limit")."""
-    from prompt import CURRENCY, _norm, parse_prompt
-    import re
-    if not re.search(CURRENCY, _norm(text)):
-        return read
-    budget = parse_prompt(text, catalog)["request"].get("budget")
-    if not budget or read["request"].get("budget") == budget:
-        return read
-    req = {**read["request"], "budget": budget}
-    found = [f for f in read.get("found", []) if "budget" not in f.get("means", "").lower()]
-    m = re.search(CURRENCY, _norm(text))
-    return {**read, "request": req, "budget_set": True, "found": [*found, {"text": m.group(0).strip(), "means": f"Budget: {budget}"}]}
 
 
 # Claude readings cost about a cent each: a cap per player per hour and for the whole site per day keeps the bill

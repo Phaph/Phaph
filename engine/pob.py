@@ -60,6 +60,7 @@ class PoB:
     # unique, optimise_supports always keeps the support on the main skill, optimise_tree always holds the keystone.
     anchors: dict | None = None
     off_meta: bool = False   # off-meta toggle: popular uniques score lower (meta.py)
+    no_lineage: bool = False   # campaign stages: no lineage supports (optimize.optimise_supports)
     anchor_notes: list | None = None   # what an anchor couldn't do at this stage, for the guide's notes
 
     def _with_totem(self, gems: list[str]) -> list[str]:
@@ -161,7 +162,8 @@ class PoB:
 
     def optimise_tree(self, max_dist: int = 6, def_weight: float = 0.25, points: int | None = None,
                       metric: str = "total", goals=None, on_step=None, far_dist: int = 12,
-                      refine: bool = True, refine_seconds: float | None = None, jewel: str | None = None) -> dict:
+                      refine: bool = True, refine_seconds: float | None = None, jewel: str | None = None,
+                      ascendancy_points: int | None = None) -> dict:
         """Spend passive and ascendancy points (see runner.lua optimise_tree).
 
         far_dist: how far away a notable or keystone may be (small passives: max_dist).
@@ -180,6 +182,8 @@ class PoB:
             kwargs["jewel"] = jewel   # a raw jewel: sockets become targets worth their path plus this jewel
         if points is not None:
             kwargs["points"] = points
+        if ascendancy_points is not None:
+            kwargs["ascendancy_points"] = ascendancy_points   # 0 in Act 1: no trial done yet
         keystone = (self.anchors or {}).get("keystone")
         if keystone and self.hold_keystone(keystone):
             kwargs["locked"] = [keystone]
@@ -196,7 +200,7 @@ class PoB:
 
     def hold_keystone(self, name: str) -> bool:
         """Allocate an anchor keystone and the path to it. False (and nothing allocated) when the path costs more
-        points than this level has, e.g. a far keystone at the leveling stage."""
+        points than this level has, e.g. a far keystone in the act stages."""
         before = set(self.send("allocated").get("nodes") or [])
         res = self.alloc_nodes([name])
         if res.get("missing"):

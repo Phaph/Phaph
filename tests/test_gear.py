@@ -1,9 +1,9 @@
-"""Gear crafting and budget rules."""
+"""Gear crafting and the seven stages."""
 import re
 
 import pytest
 
-from gear import BUDGET_ORDER, SCORE_FIELDS, _value_at, craft_gear, make_stage
+from gear import CAMPAIGN, SCORE_FIELDS, STAGE_DEFS, _value_at, craft_gear, make_stage
 
 
 def test_value_at():
@@ -12,25 +12,38 @@ def test_value_at():
     assert _value_at("+(1.5-2.5)% to Critical Hit Chance", 0.0) == "+1.5% to Critical Hit Chance"
 
 
-def test_budget_caps_every_stage():
-    for budget in BUDGET_ORDER:
-        cap = BUDGET_ORDER.index(budget)
-        for key in ("leveling", "early", "mid", "end"):
-            st = make_stage(key, budget)
-            assert st.max_affixes <= make_stage(key, "unlimited").max_affixes
-            # The label is the budget actually used, never above the cap.
-            used = next(b for b in BUDGET_ORDER if make_stage("end", b).budget == st.budget)
-            assert BUDGET_ORDER.index(used) <= cap
+def test_seven_stages_in_order():
+    assert list(STAGE_DEFS) == ["act1", "act2", "act34", "interludes", "early", "mid", "end"]
+    assert [make_stage(k).name for k in STAGE_DEFS] == ["Act 1", "Act 2", "Acts 3\u20134", "Interludes", "Early Endgame",
+                                                        "Mid Endgame", "Uber Endgame"]
+    stages = [make_stage(k) for k in STAGE_DEFS]
+    # Everything a player has only grows: level, item level, affixes, sockets, unique access, ascendancy points.
+    for a, b in zip(stages, stages[1:]):
+        assert a.level < b.level and a.item_level <= b.item_level and a.max_affixes <= b.max_affixes
+        assert a.sockets <= b.sockets and a.ascendancy_points <= b.ascendancy_points and a.roll <= b.roll
+    # Support sockets: 2 base, a Lesser Jeweller's Orb (3) in the campaign, a Greater (4) early endgame, a Perfect (5).
+    assert [s.sockets for s in stages] == [2, 3, 3, 3, 4, 5, 5]
+    assert all(make_stage(k).light and make_stage(k).jewel_affixes == 0 for k in CAMPAIGN)
+    assert not any(make_stage(k).light for k in ("early", "mid", "end"))
+    assert make_stage("act1").uniques == "none" and make_stage("end").uniques == "all"
+    uber = make_stage("end")
+    assert uber.focus == "bossing" and uber.def_mult > 1 and uber.chaos_target > 0 and uber.res_target == 75
 
 
-def test_unknown_budget_rejected():
+def test_unknown_stage_rejected():
     with pytest.raises(ValueError):
-        make_stage("end", "mirror")
+        make_stage("leveling")
+
+
+def test_make_stage_is_a_copy():
+    st = make_stage("end")
+    st.level = 1
+    assert make_stage("end").level == 95
 
 
 @pytest.fixture(scope="module")
 def crafted(pob):
-    st = make_stage("early", "budget")
+    st = make_stage("early")
     pob.new()
     pob.set_class("Monk", "Invoker")
     pob.set_level(st.level)
@@ -67,7 +80,7 @@ def test_no_wasted_triple_resist_items(crafted):
 
 def test_caster_caps_resistances_when_items_are_full(pob):
     """Regression: with every affix slot used, resistances stopped short (e.g. 73% or 45%)."""
-    st = make_stage("early", "budget")
+    st = make_stage("early")
     pob.new()
     pob.set_class("Sorceress", "Stormweaver")
     pob.set_level(st.level)
@@ -78,24 +91,25 @@ def test_caster_caps_resistances_when_items_are_full(pob):
         assert stats[k] >= 75, k
 
 
-def test_unpriced_uniques_only_on_no_limit(monkeypatch):
-    """Regression: Mageblood was suggested for a 5-30 divine build because it had no price."""
+def test_unknown_uniques_only_for_pinnacle_bosses(monkeypatch):
+    """Regression: Mageblood was suggested for a mid-game build because poe.ninja had no data on it."""
     import gear
     from gear import _unique_allowed
     monkeypatch.setattr(gear, "_PRICES", {})
-    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "medium"))[0] is False
-    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "high"))[0] is False
-    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "unlimited")) == (True, "price unknown")
+    assert _unique_allowed("Mageblood, Utility Belt", make_stage("mid")) is False
+    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end")) is True
 
 
-def test_priced_uniques_follow_budget(monkeypatch):
+def test_unique_access_grows_with_the_stage(monkeypatch):
     import gear
     from gear import _unique_allowed
-    monkeypatch.setattr(gear, "_PRICES", {"Mageblood": 112, "Headhunter": 8.5})
-    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "high")) == (False, "~112 div")
-    assert _unique_allowed("Mageblood, Utility Belt", make_stage("end", "unlimited")) == (True, "~112 div")
-    assert _unique_allowed("Headhunter, Heavy Belt", make_stage("end", "medium")) == (True, "~8.5 div")
-    assert _unique_allowed("Headhunter, Heavy Belt", make_stage("end", "budget"))[0] is False
+    monkeypatch.setattr(gear, "_PRICES", {"Mageblood": 112, "Headhunter": 8.5, "Bramblejack": 0.05})
+    allowed = {k: [n for n in ("Mageblood", "Headhunter", "Bramblejack") if _unique_allowed(n, make_stage(k))]
+               for k in STAGE_DEFS}
+    assert allowed["act1"] == allowed["act2"] == allowed["act34"] == []        # self-found rares in the acts
+    assert allowed["interludes"] == allowed["early"] == ["Bramblejack"]         # common uniques
+    assert allowed["mid"] == ["Headhunter", "Bramblejack"]
+    assert allowed["end"] == ["Mageblood", "Headhunter", "Bramblejack"]         # best in slot
 
 
 def test_price_picker_skips_fixed_and_corrupted_listings():
@@ -117,19 +131,18 @@ def test_price_picker_skips_fixed_and_corrupted_listings():
 def test_tier_choices_record_tier():
     from gear import _tier_choices
     affixes = [{"group": "Life", "level": lvl, "type": "Prefix"} for lvl in (1, 10, 30, 60)]
-    # No limit: one tier below best by default, the best tier offered for the item's few top-tier slots.
-    opt = _tier_choices(affixes, make_stage("end", "unlimited"))["Life"]
+    # Uber Endgame: one tier below best by default, the best tier offered for the item's few top-tier slots.
+    opt = _tier_choices(affixes, make_stage("end"))["Life"]
     assert (opt["level"], opt["_tier"], opt["_tiers"]) == (30, 2, 4)
     assert (opt["_best"]["level"], opt["_best"]["_tier"], opt["_best"]["_is_top"]) == (60, 1, True)
-    assert make_stage("end", "unlimited").top_mods == 4 and make_stage("end", "high").top_mods == 2
-    cheap = _tier_choices(affixes, make_stage("end", "free"))["Life"]
-    assert cheap["_tier"] == 1 + make_stage("end", "free").tier_drop and make_stage("end", "free").top_mods == 0
+    assert make_stage("end").top_mods == 4 and make_stage("mid").top_mods == 2
+    assert make_stage("act1").top_mods == 0   # self-found: no top-tier mods
 
 
 def test_top_tier_slots_are_capped(pob, monk):
-    """A High budget item may hold at most 2 best-tier mods; the crafter spends them on what matters most."""
+    """A Mid Endgame item may hold at most 2 best-tier mods; the crafter spends them on what matters most."""
     from gear import craft_gear
-    stage = make_stage("end", "high")
+    stage = make_stage("mid")
     for p in craft_gear(pob, stage, "Staff", "Warstaff", log=lambda *a: None):
         if not p.unique:
             assert sum(1 for i in p.affix_info if i.get("tier") == 1 and (i.get("of") or 0) > 1) <= stage.top_mods, p

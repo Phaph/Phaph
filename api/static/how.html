@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>How it works · Whetstone</title>
-<meta name="description" content="How Whetstone turns a build idea into its strongest version: the search, the four stages, the passive tree, gear, supports and the numbers behind them.">
+<meta name="description" content="How Whetstone turns a build idea into its strongest version: the search, the seven stages, the passive tree, gear, supports and the numbers behind them.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;600&display=swap">
@@ -86,7 +86,7 @@ footer a { color: var(--brass); }
   <header class="hero">
     <span class="eyebrow">How it works</span>
     <h1>From an idea to its sharpest version</h1>
-    <p class="lede">You describe a build. Whetstone runs <b>Path of Building's own damage maths</b> on tens of thousands of versions of it: every skill that fits, every weapon it can use, every ascendancy, every passive worth taking, every support gem, gear crafted to your budget. What comes back is the strongest one it found, in four stages from the campaign to endgame.</p>
+    <p class="lede">You describe a build. Whetstone runs <b>Path of Building's own damage maths</b> on tens of thousands of versions of it: every skill that fits, every weapon it can use, every ascendancy, every passive worth taking, every support gem, gear crafted for each point in the game. What comes back is the strongest one it found, in seven stages from Act 1 to the pinnacle bosses.</p>
   </header>
 
   <div class="stats" aria-label="A typical build in numbers">
@@ -101,7 +101,7 @@ footer a { color: var(--brass); }
     <div class="steps">
       <article class="step">
         <h3>You describe it</h3>
-        <p>Type what you want to play, like <b>"lightning minion build for a monk, 5 div"</b>, or pick it with the buttons. Whetstone reads damage types, kinds of skill, ailments, weapons, classes, ascendancies, skill names and budgets ("5 div", "300 ex", "league starter"), and shows you exactly how it read each word before you forge.</p>
+        <p>Type what you want to play, like <b>"lightning minion build for a monk"</b>, or pick it with the buttons. Whetstone reads damage types, kinds of skill, ailments, weapons, classes, ascendancies and skill names, and shows you exactly how it read each word before you forge.</p>
         <p>If nothing can match everything you asked for, it doesn't give up. It loosens the request one step at a time (first how strict the theme is, then the ailment, the weapon, the damage type, the kind of skill, the class) and tells you what it changed.</p>
       </article>
 
@@ -109,7 +109,7 @@ footer a { color: var(--brass); }
         <h3>The search</h3>
         <p>Two rounds, run side by side on several copies of Path of Building:</p>
         <ul>
-          <li><b>First pass:</b> every skill that fits your idea, on every weapon it can use, with crafted gear at your budget. No passives yet, just raw power, so weak options drop out fast.</li>
+          <li><b>First pass:</b> every skill that fits your idea, on every weapon it can use, with crafted mid-endgame gear. No passives yet, just raw power, so weak options drop out fast.</li>
           <li><b>Second pass:</b> the strongest few skills on each ascendancy, now with full passive trees. When no class is chosen, the best skill is tried on all 23 ascendancies first to find the few that suit it.</li>
           <li><b>Deep search</b> (tick it, or ask for something like "highest DPS possible"): the best 24 skills get a second look with passive trees, so a skill that only shines with the right passives isn't cut early. The best 10 are each tried on every ascendancy, and each goes forward on its own best 3. It takes about twice as long and finds builds the normal search can miss.</li>
         </ul>
@@ -119,11 +119,11 @@ footer a { color: var(--brass); }
 
       <article class="step">
         <h3>Four anvils</h3>
-        <p>The winner is forged four times at once: <b>Leveling</b> (level 55), <b>Early maps</b> (75), <b>Mid maps</b> (90) and <b>Endgame</b> (95), each capped at your budget. Each stage goes through the same steps:</p>
+        <p>The winner is forged seven times at once, the way a player meets the game: <b>Act 1</b> (level 12), <b>Act 2</b> (25), <b>Acts 3&ndash;4</b> (45), <b>Interludes</b> (60), <b>Early Endgame</b> (72), <b>Mid Endgame</b> (86) and <b>Uber Endgame</b> (95). Money never comes into it: each stage gets what a player realistically has there. The acts use self-found rares with two or three useful mods, the passive points and ascendancy points a player has by then, and 2 to 3 support sockets per skill (a Lesser Jeweller's Orb), and are built light: no jewels and no boss setups. Early Endgame is built for mapping with easy gear, common uniques and 4 sockets (a Greater Jeweller's Orb). Mid Endgame has strong rares, most uniques and 5 sockets. Uber Endgame is for the pinnacle bosses: best-in-slot uniques, near-perfect rares, capped resistances with positive chaos resistance, more weight on toughness, and gear and passives built for boss damage first. Each endgame stage goes through the same steps:</p>
         <ul>
-          <li><b>Gear:</b> a rare is crafted for every slot from Path of Building's affix tables: the best base, then damage and defence affixes, then only the resistances still needed. A unique replaces the rare when it scores clearly better and its poe.ninja price fits your budget.</li>
+          <li><b>Gear:</b> a rare is crafted for every slot from Path of Building's affix tables: the best base, then damage and defence affixes, then only the resistances still needed. A unique replaces the rare when it scores clearly better and a player has it by that stage: common uniques early, most of them by mid endgame, every one for the pinnacle bosses.</li>
           <li><b>Passive tree:</b> the engine scores the whole path to every passive in reach (small ones up to 6 points away, notables and keystones up to 12) and takes the path that adds the most damage and toughness per point, weak passives on the way included. Then it goes back over its own work: it takes back the weakest branches one by one, re-spends those points, and keeps the change only if the whole build gets stronger. That's the "brain" you watch on the workbench, and the order it settles on is the order to take them.</li>
-          <li><b>Jewels:</b> before the tree, the engine crafts the best jewel this build could socket. Every jewel socket then counts as its path plus that jewel, so the tree travels to sockets exactly when jewels are worth it. Once the build is settled, each socket gets its own jewel, crafted with the others in place, or a unique jewel when one clearly wins and fits your budget. Jewel types and mods come from Path of Building, so they change with the game.</li>
+          <li><b>Jewels:</b> before the tree, the engine crafts the best jewel this build could socket. Every jewel socket then counts as its path plus that jewel, so the tree travels to sockets exactly when jewels are worth it. Once the build is settled, each socket gets its own jewel, crafted with the others in place, or a unique jewel when one clearly wins and a player has it by that stage. Jewel types and mods come from Path of Building, so they change with the game.</li>
           <li><b>Supports:</b> every support gem is screened on your skill, then the best combination is built up one gem at a time, following Path of Building's own rules on what can support what.</li>
           <li><b>Spirit and utility:</b> auras, heralds and buffs that fill your spirit, plus curses, marks and banners, are kept only when they raise your damage. A second skill goes on weapon swap when it hits bosses much harder.</li>
           <li><b>Every skill kitted out:</b> auras, curses and your movement skill get their own supports too, and each support gem is used once in the whole build, as in game.</li>
@@ -134,15 +134,15 @@ footer a { color: var(--brass); }
 
       <article class="step">
         <h3>Checks and the rating</h3>
-        <p>The finished build is checked against what you asked for (a bleed build should really bleed), and the endgame stage is <b>rated 1 to 10</b> on damage, clear and toughness against reference builds for every ascendancy at the same settings. Builds tuned for a theme, speed or loot give up some raw numbers, so they rate a little lower, and that's expected.</p>
+        <p>The finished build is checked against what you asked for (a bleed build should really bleed), and the Uber Endgame stage is <b>rated 1 to 10</b> on damage, clear and toughness against reference builds for every ascendancy at the same settings. Builds tuned for a theme, speed or loot give up some raw numbers, so they rate a little lower, and that's expected.</p>
       </article>
 
       <article class="step">
         <h3>Your build</h3>
         <ul>
           <li><b>The passive tree,</b> drawn on the site, with every point numbered in the order to take it and your ascendancy in the centre.</li>
-          <li><b>Gear in buy order:</b> line 1 is what to buy first, with affix tiers, unique prices and a "Find on trade" link that opens the official trade site with the stats filled in.</li>
-          <li><b>Every skill with its supports,</b> the damage mix, the gear cost, and a Path of Building code if you want it in PoB.</li>
+          <li><b>Gear in buy order:</b> line 1 is what to buy first, with affix tiers and a "Find on trade" link that opens the official trade site with the stats filled in.</li>
+          <li><b>Every skill with its supports,</b> the damage mix, what a player has at each stage, and a Path of Building code if you want it in PoB.</li>
           <li><b>A share link and a PDF,</b> so you can keep it or send it to a friend.</li>
         </ul>
       </article>
@@ -168,7 +168,7 @@ footer a { color: var(--brass); }
     <h2>Where it all comes from</h2>
     <div class="grid2">
       <div class="card"><h3>Path of Building</h3><p>The open-source <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">Path of Building Community</a> (MIT licence) does every calculation, run without its window. Its game data covers skills, supports, items, affixes and the passive tree.</p></div>
-      <div class="card"><h3>poe.ninja</h3><p>Unique item prices come from <a href="https://poe.ninja/poe2/economy">poe.ninja</a>, refreshed for the current league. Crafted rares have no fixed price, so each one links to the official trade site instead.</p></div>
+      <div class="card"><h3>poe.ninja</h3><p>How common each unique is comes from <a href="https://poe.ninja/poe2/economy">poe.ninja</a>, refreshed for the current league. It only decides which uniques a player has by each stage; no prices are shown. Every item links to the official trade site.</p></div>
       <div class="card"><h3>Grinding Gear Games</h3><p>Item and gem pictures load straight from GGG's own image server. The passive tree is drawn by Whetstone from Path of Building's data, with no game art.</p></div>
       <div class="card"><h3>No AI guesswork</h3><p>Nothing here is a language model's opinion. Reading your prompt is plain keyword matching, and every number is a calculation. Free to use, and it costs nothing to run a build.</p></div>
     </div>
@@ -179,9 +179,8 @@ footer a { color: var(--brass); }
     <ul class="notyet">
       <li><span><b>Flasks and charms</b> aren't in builds yet, and Time-Lost (radius) jewels aren't crafted yet. Rare jewels and unique jewels are.</span></li>
       <li><span><b>The passive tree isn't a perfect search.</b> It reaches notables up to 12 points away and swaps out weak branches afterwards, but a tree has more combinations than any computer could try, so a better tree may still exist.</span></li>
-      <li><span><b>Leveling is one snapshot</b> at level 55, not a step-by-step route through the campaign.</span></li>
+      <li><span><b>The acts are snapshots</b> (levels 12, 25, 45 and 60), not a step-by-step route through the campaign, and the passive and ascendancy points per act follow typical quest progress.</span></li>
       <li><span><b>Cast on X triggers</b> run on an energy system Path of Building doesn't model. For Cast on Critical, Whetstone uses its own energy maths on Path of Building's numbers: a build gets a Cast on Critical setup when that estimate says it adds damage, and the extra damage is labelled as an estimate, not checked in game. It doesn't yet decide which skill a build uses, and other Cast on X gems and combo finishers aren't modelled yet.</span></li>
-      <li><span><b>Rare item prices</b> are estimates by budget; check the trade links for real prices.</span></li>
       <li><span><b>Path of Exile 2 1.0</b> (December 11) needs a Path of Building update first; new classes like the Shadow arrive as soon as it supports them.</span></li>
     </ul>
   </section>
@@ -193,12 +192,12 @@ footer a { color: var(--brass); }
 
   <div class="cta">
     <h2>Ready to forge one?</h2>
-    <p class="muted">Describe a build, pick a budget, and watch it get made.</p>
+    <p class="muted">Describe a build and watch it get made, from Act 1 to the pinnacle bosses.</p>
     <a class="go" href="/">Forge a build</a>
   </div>
 
   <footer>
-    <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">Path of Building Community</a> (MIT licence), run by this site. Unique prices from <a href="https://poe.ninja/poe2/economy">poe.ninja</a>.</p>
+    <p>Numbers come from <a href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2">Path of Building Community</a> (MIT licence), run by this site. Unique data from <a href="https://poe.ninja/poe2/economy">poe.ninja</a>.</p>
     <p>Fan-made and free. This product isn't affiliated with or endorsed by Grinding Gear Games in any way. Path of Exile is a trademark of Grinding Gear Games.</p>
     <p class="bugfree">This site is free of <span class="bugword" data-lavabug role="button" tabindex="0" aria-label="bugs (an easter egg: each click releases another lava bug, Esc sends them away)">bugs</span>.</p>
   </footer>
