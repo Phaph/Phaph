@@ -122,6 +122,10 @@ def condition_label(var: str) -> str:
     return re.sub(r"(?<!^)([A-Z])", r" \1", name).lower()
 
 
+STAGE_SOCKETS = {"leveling": 3, "early": 4, "mid": 5, "end": 5}
+SOCKET_ORB = {3: "a Lesser Jeweller's Orb", 4: "a Greater Jeweller's Orb", 5: "a Perfect Jeweller's Orb"}
+
+
 def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) -> StageGuide:
     """One stage of a guide. Gear and passives are built for mapping (where players spend most
     of their time); then a bossing setup is picked: a support swap, or a separate boss skill
@@ -142,7 +146,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                      and (spec.get("boss_weapon_type"), spec.get("boss_weapon_subtype"))
                      != (spec["weapon_type"], spec.get("weapon_subtype")))
     quiet = lambda *a: None
-    slots = spec.get("support_slots", 5)
+    # Support sockets a player has by this stage: every skill gem starts with 2; a Lesser Jeweller's Orb (campaign) sets
+    # it to 3, a Greater (early maps) to 4, a Perfect to 5. The same limit applies to every skill in the build.
+    slots = min(spec.get("support_slots", 5), STAGE_SOCKETS.get(stage_key, 5))
     # The build's goal: e.g. a bleed build optimises bleed damage everywhere, not raw hits.
     map_metric = metric_for("mapping", spec.get("ailment"), spec.get("goals"))
     boss_metric = metric_for("bossing", spec.get("ailment"), spec.get("goals"))
@@ -361,6 +367,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for h in sorted(metas):
             guide.notes.append(f"{h}: {skill} is socketed in it. How often it triggers isn't modelled yet, so the "
                                f"damage shown is {skill} cast normally.")
+        if slots < 5 and slots in SOCKET_ORB:
+            guide.notes.append(f"{slots} supports per skill at this stage: skill gems start with 2 sockets and "
+                               f"{SOCKET_ORB[slots]} sets them to {slots}. More sockets come in later stages.")
         for d in defence:
             guide.notes.append(f"{d['skill']} for defence: {d['ehp']:+.0%} effective HP, {d['dps']:+.0%} damage"
                                + (f" (in place of {d['replaced']})" if d["replaced"] else "") + ".")

@@ -368,3 +368,12 @@ def test_shapeshift_attacks_are_main_skills(catalog):
     # Bear, wolf and wyvern attacks carry builds; shapeshift buffs (Walking Calamity) stay helpers.
     bear = {s["name"] for s in main_skills(catalog, {"kinds": ["bear"]})}
     assert "Furious Slam" in bear and "Walking Calamity" not in bear
+
+
+def test_supports_fill_every_socket(pob, monk):
+    # A player fills every socket: the search returns 5 supports, best set first, and the build holds that set.
+    from optimize import optimise_supports
+    best = optimise_supports(pob, monk, "Tempest Flurry", slots=5, top_k=8, log=lambda *a: None)[0]
+    assert len(best.supports) == 5
+    held = next(g for g in pob.send("groups")["groups"] if g["group"] == monk)["gems"]
+    assert sorted(held[1:]) == sorted(best.supports)

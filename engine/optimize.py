@@ -303,13 +303,42 @@ def optimise_supports(
                 scored[combo] = Result([*required, *combo], score_of(res["output"], field_name), res["output"])
         if not scored:
             break
+        # Keep going to every depth even when this one is no better: a support that is strong alone (Uhtred's Exodus:
+        # +3 levels, but only with no other supports) beats every pair, yet five other supports together beat it.
         frontier = sorted(scored.values(), key=lambda r: -r.score)[:beam]
-        if frontier[0].score <= best.score * (1 + min_gain):
-            break
-        best = frontier[0]
-        log(f"{depth + 1} supports: {best.score:,.0f} ({best.score / max(base_score, 1e-9):.2f}x) {best.supports}")
+        if frontier[0].score > best.score * (1 + min_gain):
+            best = frontier[0]
+        log(f"{depth + 1} supports: {frontier[0].score:,.0f} ({frontier[0].score / max(base_score, 1e-9):.2f}x) {frontier[0].supports}")
 
-    # Leave the build holding the winning setup.
+    # A player fills every socket: top the best set up with any support that still adds something, best first.
+    if len(best.supports) < slots + len(required):
+        best = _fill_sockets(pob, group, active_gems, best, required, [n for n in sorted(solo, key=lambda n: -solo[n]) if solo[n] > base_score], family,
+                             slots + len(required), fields, field_name, keep_main)
+    # Leave the build holding the winning setup, and return it first (callers read [0]).
     pob.try_skill(group, [active, *best.supports], fields, keep_main=keep_main)
-    log(f"Done in {time.time() - t0:.1f}s")
-    return frontier
+    log(f"Best: {best.supports}. Done in {time.time() - t0:.1f}s")
+    return [best, *[r for r in frontier if r.supports != best.supports]]
+
+
+FILL_GAIN = 0.001   # a support fills an empty socket only if it adds at least 0.1% (no do-nothing filler)
+
+
+def _fill_sockets(pob, group, active_gems, best, required, ranked, family, total, fields, field_name, keep_main):
+    """Add supports to `best` one at a time (the strongest that fits) while each still adds at least FILL_GAIN."""
+    while len(best.supports) < total:
+        used = {family.get(s, s) for s in best.supports}
+        pick = None
+        for name in ranked:
+            if name in best.supports or family.get(name, name) in used:
+                continue
+            combo = [s for s in best.supports if s not in required] + [name]
+            res = pob.try_skill(group, [*active_gems, *combo], fields, keep_main=keep_main)
+            if not all(res["supported"].get(s) for s in combo) or res.get("warnings"):
+                continue
+            sc = score_of(res["output"], field_name)
+            if sc > best.score * (1 + FILL_GAIN) and (pick is None or sc > pick.score):
+                pick = Result([*required, *combo], sc, res["output"])
+        if pick is None:
+            break
+        best = pick
+    return best
