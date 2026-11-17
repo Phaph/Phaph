@@ -101,3 +101,22 @@ known strong builds)  5. Claude research  6. Discoveries page  7. Launch-day pla
 - Minion builds now read: Skeletal Storm Mage Martial Artist minion speed 0.40, damage 0.35, count 0.28; Skeletal
   Sniper Lich 0.13 / 0.11 / 0.16. Low because the player's own skill does most of the damage in these guides; a real
   minion build is needed to judge the minion scalers (none saved yet).
+- **Interaction finder built** (`breaker.py pairs`, `breaker.py report`). Per saved build (one per skill +
+  ascendancy, end stage, vs pinnacle boss): every fitting support added to the main skill (~200), every keystone
+  (applied as PoB's parsed node mods, so their conditions hold), every non-weapon unique at top rolls (~290) alone,
+  then all pairs among the 30 best singles plus every keystone (~1,900 pairs, ~15 min a build on this PC with the
+  A-to-Z sweep running). Output data/breaker/pairs.json, resumable. Fixes found on the way: keystone text split into
+  lines lost its scope (Wildsurge's "Storm and Plant Spells:" read as a global 50% more); culling against normal
+  monsters read as up to x2.2 damage (now scored vs boss); a runner crash in `warnings()` after Unleash silently
+  dropped every later support.
+  First outliers (synergy >= 1.10 and the pair worth 10%+), first 2 builds of the run:
+  - Fireball Blood Mage: Leopold's Applause + Fire Penetration I, +10% and +10% alone, **+38% together (1.15)**.
+    Same pair on Skeletal Sniper Lich: +10% / +8% -> +31% (1.10). To explain: two ways of lowering fire resistance
+    should add, not multiply; likely Leopold's mods unlock or scale off penetration.
+  - Skeletal Sniper Lich: Maligaro's Virtuosity + Pinpoint Critical, +22% / +9% -> +50% (1.14): crit chance x crit
+    damage, the expected kind of multiplying, not a break.
+  No keystone pair clears the bar yet; the strongest "synergies" between keystones (Avatar of Fire + Blackflame
+  Covenant, CI + Resolute Technique) are both-negative overlaps, which `report` filters out.
+  The full run (about 30 builds, ~8 h) is still going in container `whetstone-pairs`; rerun `report` when it ends.
+- Next: explain Leopold's + Fire Penetration and the Skyfall / Rain of Arrows speed flags; test Rapid Shot + Fresh
+  Clip in game; then part 3 (leads to full builds via anchors).
