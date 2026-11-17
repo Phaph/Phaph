@@ -32,9 +32,9 @@ from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_sc
                       seed_ailment,
                       score_of, total_dps)
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
-from pob import PoB
+from pob import PoB, PoBError
 from rating import rate
-from defence import optimise_defence
+from defence import fill_spare_spirit, optimise_defence
 from goals import weights as goal_weights
 from spirit import optimise_spirit
 from themes import check as theme_check
@@ -262,6 +262,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         spirit, defence = optimise_defence(pob, catalog, spirit, map_metric,
                                            def_mult=goal_weights(goals)["def_mult"], log=quiet)
         spirit += [d["skill"] for d in defence]
+        # Spirit left over: the defensive buffs real builds run that PoB can't score (Ghost Dance, Time of Need...).
+        spare = fill_spare_spirit(pob, catalog, spec["weapon_type"], spec.get("offhand_type"),
+                                  set(spirit) | set(helpers), log=quiet)
+        spirit += spare
         if spirit:
             report("spirit", ", ".join(spirit))
         # Curses, marks, banners, warcries: kept when they raise the main skill's damage. One
@@ -318,17 +322,20 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             pob.send("set_main", group=clear_group)
             pob.auto_config("mapping")
             res = optimise_supports(pob, clear_group, clear_skill, slots=slots, metric=map_metric, log=quiet,
-                                    exclude=set(best.supports))
+                                    )
             clear = res[0] if res else None
             clear_dps = total_dps(pob.calc(STAT_FIELDS))
             pob.send("set_main", group=group)
             conditions = pob.auto_config("mapping")
         alloc = pob.send("allocated")
         used = set(best.supports) | set(boss.supports if boss else []) | set(clear.supports if clear else [])
+        skip = {skill, boss_skill, clear_skill, *(spec.get("totems") or {}).values()}
+        if trigger:
+            skip |= {"Cast on Critical", trigger.get("spell")}
         setups = kit_out(pob, group, spirit, utility + [{"skill": h} for h in helpers], mobility[:1], map_metric, slots,
-                         used, log=quiet)
+                         used, log=quiet, skip={n for n in skip if n})
         for x in setups:
-            if x["skill"] in {d["skill"] for d in defence}:
+            if x["skill"] in {d["skill"] for d in defence} or x["skill"] in spare:
                 x["role"] = "defence"
         report("kit", f"Supports for {len(setups)} more skills")
         # Every gem is in now: balance attributes once more; if that isn't enough, use lower-level extra gems; and say
@@ -370,6 +377,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         if slots < 5 and slots in SOCKET_ORB:
             guide.notes.append(f"{slots} supports per skill at this stage: skill gems start with 2 sockets and "
                                f"{SOCKET_ORB[slots]} sets them to {slots}. More sockets come in later stages.")
+        for name in spare:
+            guide.notes.append(f"{name} uses spare spirit for defence. Path of Building doesn't count what it does, so "
+                               f"it isn't in the numbers.")
         for d in defence:
             guide.notes.append(f"{d['skill']} for defence: {d['ehp']:+.0%} effective HP, {d['dps']:+.0%} damage"
                                + (f" (in place of {d['replaced']})" if d["replaced"] else "") + ".")
@@ -398,33 +408,79 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
 
 
 def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], movement: list[str], metric: str,
-            slots: int, used: set[str], log=lambda *a: None) -> list[dict]:
+            slots: int, used: set[str], log=lambda *a: None, skip: set[str] = frozenset()) -> list[dict]:
     """Supports for every skill besides the main one, so the build is complete, not just its main attack.
 
     Spirit and utility skills (auras, heralds, curses, banners) are scored by what they do for the main skill:
     the main skill stays main while their supports are tried (keep_main). The movement skill gets its own group
-    and is scored on uses per second per mana spent. Each support gem is used once in the whole build, as in game.
+    and is scored on uses per second per mana spent. Skills the build gets from its ascendancy, passives or items
+    (Life Remnants...) are listed too ("granted"). Any socket the scoring leaves empty is filled with supports made
+    for that kind of skill (fit_supports), since PoB can't score what a buff or a remnant support does.
+    A support may sit on several skills (PoE 2 allows it); PoB's own warnings stop a lineage support used twice.
     """
     groups = pob.send("groups")["groups"]
     by_skill = {g["gems"][0]: g["group"] for g in groups if g["gems"] and g["group"] != main_group}
     setups = []
     todo = [(n, "spirit") for n in spirit] + [(u["skill"], "utility") for u in utility]
+    known = {n for n, _ in todo} | set(skip) | set(movement)
+    todo += [(n, "granted") for n in by_skill if n not in known and not n.startswith(("Weapon", "Default"))]
     for name, role in todo:
         gid = by_skill.get(name)
         if not gid:
             continue
-        res = optimise_supports(pob, gid, name, slots=slots, metric=metric, exclude=used, keep_main=True, log=log)
-        chosen = res[0].supports if res else []
-        used |= set(chosen)
+        try:
+            res = optimise_supports(pob, gid, name, slots=slots, metric=metric, keep_main=True, log=log)
+            chosen = res[0].supports if res else []
+        except (PoBError, ValueError):
+            chosen = []
+        chosen = fit_supports(pob, gid, name, chosen, slots, keep_main=True)
         setups.append({"skill": name, "role": role, "supports": chosen})
     for name in movement:
         gid = pob.add_skill([name], main=False)["group"]
-        res = optimise_supports(pob, gid, name, slots=slots, metric="movement", exclude=used, log=log)
-        chosen = res[0].supports if res else []
-        used |= set(chosen)
+        res = optimise_supports(pob, gid, name, slots=slots, metric="movement", log=log)
+        chosen = fit_supports(pob, gid, name, res[0].supports if res else [], slots)
         setups.append({"skill": name, "role": "movement", "supports": chosen})
         pob.send("set_main", group=main_group)
     return setups
+
+
+_ALONE: set[str] | None = None
+
+
+def _alone_supports(pob: PoB) -> set[str]:
+    """Supports that only work with no other supports on the skill (their text says so: Uhtred's Exodus)."""
+    global _ALONE
+    if _ALONE is None:
+        texts = pob.send("gem_texts")["gems"]
+        _ALONE = {n for n, g in texts.items() if g.get("support") and "no other support" in (g.get("desc") or "").lower()}
+    return _ALONE
+
+
+FIT_MIN = 0.6   # a support counts as made for a skill when the skill type it needs is rarer than 60% of skills
+
+
+def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int, keep_main: bool = False) -> list[str]:
+    """Fill the sockets the damage search left empty with supports made for this skill (most specific first), as
+    long as PoB accepts them (supported, no rule warning). The group ends up holding the result."""
+    chosen = list(chosen)
+    alone = _alone_supports(pob)
+    if any(c in alone for c in chosen):
+        return chosen   # e.g. Uhtred's Exodus: only works with no other supports, so the other sockets stay empty
+    fams = {}
+    for s in pob.send("fitting_supports", group=group).get("supports") or []:
+        fam = s.get("family")
+        fams[s["name"]] = "/".join(fam) if isinstance(fam, list) else (fam or s["name"])
+        if len(chosen) >= slots:
+            break
+        if s["name"] in chosen or s["name"] in alone or (s.get("specific") or 0) < FIT_MIN:
+            continue
+        if fams[s["name"]] in {fams.get(c, c) for c in chosen}:
+            continue
+        res = pob.try_skill(group, [name, *chosen, s["name"]], ["TotalDPS"], keep_main=keep_main)
+        if res["supported"].get(s["name"]) and not res.get("warnings"):
+            chosen.append(s["name"])
+    pob.try_skill(group, [name, *chosen], ["TotalDPS"], keep_main=keep_main)
+    return chosen
 
 
 def build_guide(spec: dict, stages: list[str] | None = None, log=print, progress=None) -> list[StageGuide]:

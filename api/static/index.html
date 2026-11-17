@@ -237,6 +237,26 @@ tr.best td { color: var(--brass-hi); }
 .gems .plus { color: var(--faint); }
 .gem.main img { width: 30px; height: 30px; }
 .gem[data-gem] { cursor: help; }
+.skillgems { display: grid; gap: 8px; }
+.overview { background: var(--iron); border: 1px solid var(--edge); border-radius: 4px; padding: 14px 18px; display: grid; gap: 6px; max-width: 900px; }
+.overview h3 { margin: 0; }
+.overview h4 { margin: 8px 0 0; font: 600 15px/1.3 var(--body); color: var(--brass); }
+.overview p, .overview li { font-size: 16px; line-height: 1.5; }
+.overview ul, .overview ol { margin: 0; padding-left: 20px; display: grid; gap: 3px; }
+.overview .gem img { width: 20px; height: 20px; }
+.overview .ov-name { color: var(--brass-hi); font-weight: 600; }
+.overview .ov-by { color: var(--faint); font-size: 12px; margin-top: 6px; }
+.skillcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+.skillcard { background: var(--iron); border: 1px solid var(--edge); border-radius: 4px; overflow: hidden; }
+.skillcard header { display: flex; gap: 10px; align-items: center; padding: 9px 12px; border-bottom: 1px solid var(--iron3); background: var(--iron2); }
+.skillcard header .gem { font: 600 17px/1.2 var(--body); white-space: normal; }
+.skillcard header .gem img { width: 34px; height: 34px; }
+.skillcard .num { margin-left: auto; font: 600 12px/1 var(--mono); color: var(--muted); background: var(--iron3); border-radius: 3px; padding: 3px 6px; }
+.skillcard .role { display: block; padding: 6px 12px 0; font: 600 11px/1.2 var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); }
+.skillcard .role i { font-style: normal; color: var(--faint); text-transform: none; letter-spacing: 0; font-weight: 400; }
+.skillcard ul { list-style: none; margin: 0; padding: 6px 12px 10px; display: grid; gap: 4px; }
+.skillcard li .gem { white-space: normal; }
+.skillcard .none { color: var(--faint); font-style: italic; font-size: 14px; }
 .gemcard { position: fixed; z-index: 60; width: min(380px, calc(100vw - 32px)); padding: 0 0 10px; pointer-events: none;
   background: #0b0b0c; border: 1px solid #2c6b66; border-radius: 3px; box-shadow: 0 12px 34px rgba(0,0,0,.65);
   font: 15px/1.4 var(--body); color: var(--ink); max-height: calc(100vh - 16px); overflow: hidden; }
@@ -564,7 +584,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-17.1";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-17.2";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -1497,6 +1517,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
         <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
         <p class="muted" style="font-size:15px">Endgame version, rated 1 to 10 on raw damage, clear and toughness against every ascendancy's reference build at the same settings. Builds tuned for a theme (like bleed), speed or loot give up some raw numbers, so they rate lower.</p>` : ""}
       ${live ? "" : buildCostLine(end)}</div>
+      ${live ? "" : overviewHtml(res.writeup)}
       <div class="sharebar"${live ? " hidden" : ""}>
         <button class="chip" type="button" id="shareBtn">Copy share link</button>
         <button class="chip" type="button" id="pdfBtn">Save as PDF</button>
@@ -1757,13 +1778,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     const st = s.stats || {};
     // One line, thin spaces around the slashes so it never stacks.
     const res = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round(st[k] || 0)).join(" / ");
-    const kv = [];
-    kv.push([s.clear_skill ? "Main" : "Mapping", totemRow(plan, plan.spec.skill, s.supports)]);
-    if (s.clear_skill) kv.push(["Clearing", totemRow(plan, s.clear_skill, s.clear_supports || [])]);
-    if (s.boss_skill) kv.push(["Bossing", totemRow(plan, s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
-    else if (s.boss_supports.length) kv.push(["Bossing swap", totemRow(plan, plan.spec.skill, s.boss_supports)]);
-    triggerRow(s).forEach(r => kv.push(r));
-    extraRows(s).forEach(r => kv.push(r));
+    const kv = [];   // the skills are cards (skillCardsHtml); the list keeps passives and assumptions
+    if (s.trigger) {   // Cast on Critical's damage is Whetstone's own estimate, so it says so
+      const m = s.trigger.mapping || {}, b = s.trigger.bossing || {};
+      kv.push(["Trigger estimate", `<span class="est">+${fmt(m.trigger_dps || 0)} mapping${b.trigger_dps != null ? ` / +${fmt(b.trigger_dps)} boss` : ""} DPS · ~${(m.casts_per_sec || 0).toFixed(2)} casts/s (Path of Building doesn't model trigger energy)</span>`]);
+    }
     kv.push(...priorityRow(s));
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = stageHtml(plan, s, prevGear, forward, kv, res, st);
@@ -1802,6 +1821,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       ${mixHtml(s.damage_split)}
       <p class="muted" style="font-size:13px">Level ${s.level} · ${esc(s.budget)}</p>
       ${!printing && state.guideJob && (s.tree_nodes || []).length ? `<a class="chip treelink" href="/tree.html?b=${state.guideJob}&s=${s.stage}" target="_blank" rel="noopener">Open the passive tree &#8599;</a>` : ""}
+      ${printing ? "" : skillCardsHtml(plan, s)}
       <dl class="kv">${kv.map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join("")}</dl>
       <div style="display:grid;gap:8px"><h3>Gear</h3>
       ${printing
@@ -1816,6 +1836,50 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   // Every other skill in the build with its own supports (guide.kit_out). Older results without setups fall
   // back to the plain lists.
+  // Claude's overview of the build (api/writeup.py), written from the build's own data. [[Name]] marks a gem, item or
+  // passive: gems get their icon and hover card, other names are highlighted.
+  function overviewHtml(w) {
+    if (!w || !w.overview) return "";
+    const known = new Set([...(catalog?.skills || []), ...(catalog?.supports || []), ...(catalog?.helper_skills || [])]);
+    const rich = t => esc(t).replace(/\[\[([^\]]+)\]\]/g, (_, n) => {
+      const name = n.replace(/&#39;|&amp;#39;/g, "'");
+      return known.has(name) ? gem(name) : `<b class="ov-name">${n}</b>`;
+    });
+    const list = (title, items) => items && items.length ? `<h4>${title}</h4><ul>${items.map(x => `<li>${rich(x)}</li>`).join("")}</ul>` : "";
+    return `<section class="overview"><h3>Build overview</h3>
+      <p>${rich(w.overview)}</p>
+      ${list("How it works", w.how_it_works)}
+      ${(w.key_items || []).length ? `<h4>Key items</h4><ul>${w.key_items.map(k => `<li><b class="ov-name">${esc(k.name.replace(/\[|\]/g, ""))}</b>: ${rich(k.why)}</li>`).join("")}</ul>` : ""}
+      ${(w.stat_priority || []).length ? `<h4>Stats to look for, most important first</h4><ol>${w.stat_priority.map(x => `<li>${rich(x)}</li>`).join("")}</ol>` : ""}
+      ${w.playstyle ? `<h4>How to play it</h4><p>${rich(w.playstyle)}</p>` : ""}
+      <p class="ov-by">Written by Claude from this build's Path of Building data.</p></section>`;
+  }
+
+  // The skill gems as cards, like the game's skill panel: each skill, its role, its supports. Hover a gem for its stats.
+  const ROLE_LABEL = { spirit: "Spirit", defence: "Defence", utility: "Curse / utility", granted: "From passives or items",
+    movement: "Movement" };
+  function skillCardsHtml(plan, s) {
+    const cards = [];
+    const add = (role, skill, supports, extra = "") => skill && cards.push({ role, skill, supports: supports || [], extra });
+    const totem = name => (plan.spec.totems || {})[name];
+    add(s.clear_skill ? "Bosses and main" : "Mapping", plan.spec.skill, s.supports, totem(plan.spec.skill) ? `placed by ${totem(plan.spec.skill)}` : "");
+    if (s.clear_skill) add("Clearing", s.clear_skill, s.clear_supports);
+    if (s.boss_skill) add("Bossing", s.boss_skill, s.boss_supports, s.boss_weapon_set === 2 ? "weapon set 2" : "");
+    else if ((s.boss_supports || []).length) add("Bossing swap", plan.spec.skill, s.boss_supports, "same skill, these supports for bosses");
+    if (s.trigger) add("Cast on Critical", s.trigger.spell, s.trigger.supports, "triggered: damage is an estimate");
+    const order = ["spirit", "defence", "utility", "granted", "movement"];
+    (s.setups || []).slice().sort((a, b) => order.indexOf(a.role) - order.indexOf(b.role)).forEach(x => {
+      const u = (s.utility || []).find(u => u.skill === x.skill);
+      add(ROLE_LABEL[x.role] || x.role, x.skill, x.supports, u?.weapon_set === 2 ? `weapon set 2, ${u.weapon}` : "");
+    });
+    if (!cards.length) return "";
+    return `<div class="skillgems"><h3>Skill gems</h3><div class="skillcards">${cards.map((c, i) => `<div class="skillcard">
+      <header>${gem(c.skill, "main")}<span class="num">${i + 1}</span></header>
+      <span class="role">${esc(c.role)}${c.extra ? ` <i>· ${esc(c.extra)}</i>` : ""}</span>
+      ${c.supports.length ? `<ul>${c.supports.map(x => `<li>${gem(x)}</li>`).join("")}</ul>` : `<ul><li class="none">No supports that help it</li></ul>`}
+    </div>`).join("")}</div></div>`;
+  }
+
   // Cast on Critical: Whetstone's own energy maths on top of Path of Building's numbers, so it's labelled.
   function triggerRow(s) {
     if (!s.trigger) return [];

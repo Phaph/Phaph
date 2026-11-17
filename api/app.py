@@ -34,13 +34,13 @@ sys.path.insert(0, str(ROOT / "engine"))
 from gear import BUDGET_ORDER, BUDGETS, STAGE_DEFS  # noqa: E402
 from pob import PoB  # noqa: E402
 
-from . import prompt_ai  # noqa: E402
+from . import prompt_ai, writeup  # noqa: E402
 from .jobs import JobStore  # noqa: E402
 
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-17.2"
+ENGINE_VERSION = "2026-11-17.3"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -200,7 +200,16 @@ def run_guide(req: dict, progress=None) -> dict:
 
     spec = {**req["spec"], "budget": req["budget"]}
     guides = build_guide(spec, req["stages"], log=lambda *a: None, progress=progress)
-    return {"spec": spec, "stages": [asdict(g) for g in guides]}
+    out = {"spec": spec, "stages": [asdict(g) for g in guides]}
+    if writeup.enabled():
+        # Claude's overview of the finished build, written from its real data (api/writeup.py). Stored with the guide.
+        if progress:
+            progress({"step": "writeup", "label": "Writing the build overview"})
+        try:
+            out["writeup"] = writeup.write_up(spec, out["stages"])
+        except Exception:  # noqa: BLE001 - an overview must never cost the player their build
+            out["writeup"] = None
+    return out
 
 
 def run_generate(req: dict, progress=None) -> dict:

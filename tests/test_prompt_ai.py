@@ -82,3 +82,18 @@ def test_typed_amount_sets_the_budget():
     assert out["request"]["budget"] == "unlimited"
     assert [f["means"] for f in out["found"]] == ["Budget: unlimited"]
     assert _amount_budget(read, "cheap bear druid", cat) is read   # no amount typed: Claude's reading stands
+
+
+def test_writeup_facts_come_from_the_build():
+    from api.writeup import facts
+    spec = {"class": "Witch", "ascendancy": "Blood Mage", "skill": "Hexblast", "weapon_type": "Staff",
+            "anchor_keystone": "Chaos Inoculation"}
+    end = {"stage": "end", "supports": ["Deliberation"], "boss_supports": ["Fiery Death"], "dps": 9.4e6,
+           "setups": [{"skill": "Life Remnants", "role": "granted", "supports": ["Remnant Potency III"]}],
+           "gear": [{"slot": "Belt", "unique": "Mageblood, Heavy Belt"}, {"slot": "Ring 1", "unique": None}],
+           "tree_order": [{"name": "Pure Chaos", "type": "Notable"}, {"name": "Gore Spike", "type": "Notable", "ascendancy": True}],
+           "stats": {"Life": 3300.4, "Spirit": 100}}
+    f = facts(spec, [{"stage": "early"}, end])
+    assert [s["role"] for s in f["skills"]] == ["main (mapping)", "bossing (support swap)", "granted"]
+    assert f["uniques"] == [{"slot": "Belt", "unique": "Mageblood"}] and f["built_around"] == ["Chaos Inoculation"]
+    assert f["ascendancy_passives"] == ["Gore Spike"] and f["stats"]["Life"] == 3300.4 and f["mapping_dps"] == 9400000

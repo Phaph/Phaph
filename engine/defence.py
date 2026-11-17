@@ -95,3 +95,43 @@ def optimise_defence(pob: PoB, catalog: list[dict], spirit: list[str], metric: s
         log(f"  defence: + {best['skill']} (EHP {best['ehp']:+.0%}, damage {best['dps']:+.0%}"
             + (f", replaces {best['replaced']})" if best["replaced"] else ")"))
     return spirit, added
+
+
+# Spare spirit: defensive buffs real builds run that PoB can't put a number on, most common first. Anything else that
+# fits (another defensive persistent buff) comes after these.
+SPARE_FIRST = ["Ghost Dance", "Time of Need", "Convalescence", "Arctic Armour", "Siphon Elements", "Iron Ward",
+               "Wind Dancer", "Scavenged Plating", "Berserk", "Charge Regulation"]
+
+
+def fill_spare_spirit(pob: PoB, catalog: list[dict], weapon_type: str | None, offhand_type: str | None,
+                      have: set[str], limit: int = 3, log=print) -> list[str]:
+    """Add defensive buffs while spirit is left over, even when PoB shows no gain (it doesn't model them). A buff is
+    kept only if it fits in the spirit left and PoB raises no warning. Returns the names added."""
+    by_name = {s["name"]: s for s in catalog}
+    cands = [n for n in SPARE_FIRST if n in by_name] + [n for n in defence_candidates(catalog) if n not in SPARE_FIRST]
+    added: list[str] = []
+    for name in cands:
+        if len(added) >= limit:
+            break
+        if name in have or name in added:
+            continue
+        s = by_name.get(name) or {}
+        types = set(s.get("types") or [])
+        if types & {"RequiresShield", "RequiresBuckler"} and offhand_type != "Shield":
+            continue
+        weapons = [w for w in s.get("weapons") or [] if w != "None"]
+        if weapons and weapon_type not in weapons:
+            continue
+        if (pob.calc(["SpiritUnreserved"]).get("SpiritUnreserved") or 0) <= 0:
+            break
+        try:
+            g = pob.add_skill([name], main=False)["group"]
+        except PoBError:
+            continue
+        out = pob.calc(["SpiritUnreserved"])
+        if (out.get("SpiritUnreserved") or 0) < 0 or pob.warnings():
+            pob.remove_skill(g)
+            continue
+        added.append(name)
+        log(f"  spare spirit: + {name}")
+    return added

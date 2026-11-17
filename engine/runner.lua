@@ -607,6 +607,52 @@ function handlers.compatible_supports(cmd)
 	return { supports = names }
 end
 
+-- Supports made for a skill, most specific first. For skills PoB can't score (buffs, remnants, defensive skills), the
+-- best supports are the ones built for that kind of skill: a support that needs a rare skill type (GeneratesRemnants,
+-- Herald, Cooldown) is made for it, while one that only needs Damage or Spell is generic. Rarity of a type = how few
+-- active skills have it. Returns { name, specific (0..1), family, tier } for every compatible support.
+local typeRarity
+local function skillTypeRarity()
+	if typeRarity then return typeRarity end
+	local count, total = {}, 0
+	for _, gem in pairs(data.gems) do
+		local ge = gem.grantedEffect
+		if ge and not ge.support and ge.skillTypes then
+			total = total + 1
+			for t in pairs(ge.skillTypes) do count[t] = (count[t] or 0) + 1 end
+		end
+	end
+	typeRarity = {}
+	for t, n in pairs(count) do typeRarity[t] = 1 - n / math.max(total, 1) end
+	return typeRarity
+end
+
+function handlers.fitting_supports(cmd)
+	local g = build.skillsTab.socketGroupList[cmd.group]
+	if not g then error("no group " .. tostring(cmd.group)) end
+	local active = g.displaySkillList and g.displaySkillList[g.mainActiveSkill or 1]
+	if not active then return { supports = {} } end
+	local rarity, out, seen = skillTypeRarity(), {}, {}
+	local types = active.skillTypes or {}
+	for _, gem in pairs(data.gems) do
+		local ge = gem.grantedEffect
+		if ge and ge.support and not seen[gem.name] and calcLib.canGrantedEffectSupportActiveSkill(ge, active) then
+			seen[gem.name] = true
+			local specific = 0
+			for _, t in ipairs(ge.requireSkillTypes or {}) do
+				if type(t) == "number" and types[t] then specific = math.max(specific, rarity[t] or 0) end
+			end
+			table.insert(out, { name = gem.name, specific = specific, family = gem.gemFamily, tier = gem.Tier or 0 })
+		end
+	end
+	table.sort(out, function(a, b)
+		if a.specific ~= b.specific then return a.specific > b.specific end
+		if a.tier ~= b.tier then return a.tier > b.tier end
+		return a.name < b.name
+	end)
+	return { supports = out }
+end
+
 function handlers.set_main(cmd)
 	build.mainSocketGroup = cmd.group
 	-- Optional: which active skill of the group is the main one (e.g. a spell socketed in a Cast on X gem).
