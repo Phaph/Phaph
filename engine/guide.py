@@ -23,6 +23,7 @@ import json
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
+from anchors import find_unique, stage_notes
 from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
 from jewels import craft_jewels, proxy_jewel
 from triggers import best_cast_on_crit, cast_on_crit, find_groups
@@ -154,6 +155,17 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_level(stage.level)
         skill = spec["skill"]
         pob.totem_for = dict(spec.get("totems") or {}) or None   # Spell Totem + Fireball: the gem goes in front
+        # What the build is made around (anchors.py): the unique is always worn, the keystone always taken, the
+        # support always on the main skill. Popular uniques score lower when the player chose off-meta.
+        anchors = {"main": skill}
+        if spec.get("anchor_unique"):
+            anchors["unique"] = find_unique(pob.list_uniques(), spec["anchor_unique"])
+        for key in ("keystone", "support"):
+            if spec.get(f"anchor_{key}"):
+                anchors[key] = spec[f"anchor_{key}"]
+        pob.anchors = anchors if len(anchors) > 1 else None
+        pob.off_meta = bool(spec.get("off_meta"))
+        pob.anchor_notes = []
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
         seed_ailment(pob, group, skill, spec.get("ailment"))   # so gear and tree chase the ailment from the start
         helpers = list(spec.get("with_skills") or [])   # skills the player asked for (Charged Staff, Cast on X)
@@ -352,6 +364,11 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         for d in defence:
             guide.notes.append(f"{d['skill']} for defence: {d['ehp']:+.0%} effective HP, {d['dps']:+.0%} damage"
                                + (f" (in place of {d['replaced']})" if d["replaced"] else "") + ".")
+        for k in ("unique", "keystone", "support"):
+            if spec.get(f"anchor_{k}"):
+                why = "picked at random" if spec.get("random") and k == "unique" else "you asked for it"
+                guide.notes.append(f"Built around {spec[f'anchor_{k}'].split(',')[0]} ({why}).")
+        guide.notes += stage_notes(pob.anchor_notes)
         for name, gem in (spec.get("totems") or {}).items():
             guide.notes.append(f"{name} is placed by {gem}: socket {name} in {gem}, and the totems use it.")
         for kind, pick in picked_helpers:

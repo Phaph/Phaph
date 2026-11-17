@@ -55,6 +55,13 @@ class PoB:
     # these skills gets the totem gem put in front, so supports, gear and the exported code all keep the totem.
     totem_for: dict | None = None   # set per build: pob.totem_for = {...}
 
+    # What the build is made around (see anchors.py), set per build: {"unique": {name, raw, type, slot...},
+    # "keystone": "Chaos Inoculation", "support": "Brutality", "main": main skill name}. craft_gear always equips the
+    # unique, optimise_supports always keeps the support on the main skill, optimise_tree always holds the keystone.
+    anchors: dict | None = None
+    off_meta: bool = False   # off-meta toggle: popular uniques score lower (meta.py)
+    anchor_notes: list | None = None   # what an anchor couldn't do at this stage, for the guide's notes
+
     def _with_totem(self, gems: list[str]) -> list[str]:
         meta = (self.totem_for or {}).get(gems[0]) if gems else None
         return [meta, *gems] if meta else list(gems)
@@ -173,6 +180,9 @@ class PoB:
             kwargs["jewel"] = jewel   # a raw jewel: sockets become targets worth their path plus this jewel
         if points is not None:
             kwargs["points"] = points
+        keystone = (self.anchors or {}).get("keystone")
+        if keystone and self.hold_keystone(keystone):
+            kwargs["locked"] = [keystone]
         if on_step:
             kwargs["live"] = True
             self.on_event = on_step
@@ -183,6 +193,25 @@ class PoB:
         if not isinstance(res.get("steps"), list):
             res["steps"] = []
         return res
+
+    def hold_keystone(self, name: str) -> bool:
+        """Allocate an anchor keystone and the path to it. False (and nothing allocated) when the path costs more
+        points than this level has, e.g. a far keystone at the leveling stage."""
+        before = set(self.send("allocated").get("nodes") or [])
+        res = self.alloc_nodes([name])
+        if res.get("missing"):
+            return False
+        after = set(self.send("allocated").get("nodes") or [])
+        pts = self.points()
+        if pts.get("used", 0) > pts.get("available", 0):
+            self.send("dealloc_ids", ids=sorted(after - before))
+            if self.anchor_notes is not None and f"keystone:{name}" not in self.anchor_notes:
+                self.anchor_notes.append(f"keystone:{name}")
+            return False
+        return True
+
+    def list_keystones(self) -> list[dict]:
+        return self.send("list_keystones")["keystones"]
 
     def reset_tree(self):
         return self.send("reset_tree")

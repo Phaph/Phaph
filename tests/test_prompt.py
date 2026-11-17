@@ -171,3 +171,13 @@ def test_mechanic_words():
     assert r("energy shield build")["goals"] == ["es"]
     assert r("spectre build")["skill"] == "Summon Spectre"
     assert r("corpse explosion")["skill"] == "Detonate Dead"
+
+
+def test_ascendancy_with_its_class_and_budget_word():
+    cat = {**CATALOG, "classes": [*CATALOG["classes"], {"name": "Druid", "ascendancies": ["Shaman", "Oracle"]}],
+           "skills": [*CATALOG["skills"], "Furious Slam", "Walking Calamity"], "helper_skills": ["Walking Calamity"]}
+    out = parse_prompt("shaman bear druid 900 div budget furious slam walking calamity", cat)
+    r = out["request"]
+    assert r["skill"] == "Furious Slam" and r["with_skills"] == ["Walking Calamity"]
+    assert r["ascendancy"] == "Shaman" and r["class"] == "Druid" and r["budget"] == "unlimited"
+    assert out["unused"] == []

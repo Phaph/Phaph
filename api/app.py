@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-16.3"
+ENGINE_VERSION = "2026-11-16.4"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -67,6 +67,12 @@ class BuildSpec(BaseModel):
     # Skills the player asked for that boost the main skill instead of dealing damage (e.g. Charged Staff).
     with_skills: list[str] = Field(default_factory=list, max_length=3)
     with_types: list[str] = Field(default_factory=list, max_length=3)   # "warcry": the best one is picked
+    # What the build is made around (engine/anchors.py), kept at every stage.
+    anchor_unique: str | None = Field(None, max_length=80)
+    anchor_keystone: str | None = Field(None, max_length=80)
+    anchor_support: str | None = Field(None, max_length=80)
+    off_meta: bool = False   # popular uniques score lower
+    random: bool = False     # a random build: notes say the unique was rolled
 
     model_config = {"populate_by_name": True}
 
@@ -91,6 +97,13 @@ class GenerateRequest(BaseModel):
     with_types: list[str] = Field(default_factory=list, max_length=3)    # "warcry", "curse"...: the best one is picked
     avoid: list[str] = Field(default_factory=list, max_length=5)   # "no minions": kinds or damage types never main
     deep: bool = False   # deep search: wider net, each skill on its own best ascendancies (slower)
+    # Build around one thing (engine/anchors.py): a unique, a keystone or a support gem, by name.
+    anchor_unique: str | None = Field(None, max_length=80)
+    anchor_keystone: str | None = Field(None, max_length=80)
+    anchor_support: str | None = Field(None, max_length=80)
+    off_meta: bool = False   # skills, ascendancies and uniques many players use score lower (engine/meta.py)
+    random: bool = False     # a random build within the filters, not the strongest
+    seed: int | None = Field(None, ge=0, le=2**31)   # random builds: a new seed is a new roll (and a new cache key)
 
     model_config = {"populate_by_name": True}
 
@@ -126,6 +139,11 @@ def load_catalog() -> dict:
         helper_skills = sorted({s["name"] for s in pob.send("skill_catalog")["skills"] if set(s["types"]) & NOT_MAIN})
         bases = pob.send("bases")["bases"]
         version = pob.version
+        from anchors import unique_slot
+        # What a build can be made around: wearable uniques, keystones, support gems.
+        uniques = sorted({u["name"].split(",")[0] for u in pob.list_uniques() if unique_slot(u)})
+        keystones = sorted(k["name"] for k in pob.list_keystones())
+        supports = sorted(g["name"] for g in pob.list_gems("support"))
     weapon_types: dict[str, set] = {}
     for b in bases:
         if b["type"] in {"Amulet", "Belt", "Body Armour", "Boots", "Charm", "Flask", "Gloves", "Helmet", "Jewel",
@@ -139,6 +157,9 @@ def load_catalog() -> dict:
         "classes": sorted(classes, key=lambda c: c["name"]),
         "skills": skills,
         "helper_skills": helper_skills,
+        "uniques": uniques,
+        "keystones": keystones,
+        "supports": supports,
         "weapon_types": {k: sorted(v) for k, v in sorted(weapon_types.items())},
         "budgets": [{"key": k, "label": BUDGETS[k].label} for k in BUDGET_ORDER],
         "stages": [{"key": k, "label": v[0], "level": v[1]} for k, v in STAGE_DEFS.items()],
@@ -160,6 +181,7 @@ def validate_spec(spec: BuildSpec, catalog: dict) -> None:
     for s, g in spec.totems.items():
         if s not in catalog["skills"] or g not in ("Spell Totem", "Ancestral Warrior Totem"):
             raise HTTPException(400, f"Unknown totem setup '{g}' for '{s}'")
+    _check_anchors(spec, catalog)
     if spec.clear_skill and spec.clear_skill not in catalog["skills"]:
         raise HTTPException(400, f"Unknown clear skill '{spec.clear_skill}'")
     for w in spec.with_skills:
@@ -197,6 +219,14 @@ def _check_goals(goals: list[str], with_types: list[str]) -> None:
             raise HTTPException(400, f"Unknown helper kind '{k}'. Options: {', '.join(HELPER_TYPES)}")
 
 
+def _check_anchors(req, catalog: dict) -> None:
+    for field, key, label in (("anchor_unique", "uniques", "wearable unique"), ("anchor_keystone", "keystones", "keystone"),
+                              ("anchor_support", "supports", "support gem")):
+        name = getattr(req, field)
+        if name and catalog.get(key) and name.split(",")[0].strip().lower() not in {n.lower() for n in catalog[key]}:
+            raise HTTPException(400, f"Unknown {label} '{name}'")
+
+
 def validate_generate(req: GenerateRequest, catalog: dict) -> None:
     classes = {c["name"].lower(): c for c in catalog["classes"]}
     if req.cls and req.cls.lower() not in classes:
@@ -209,6 +239,7 @@ def validate_generate(req: GenerateRequest, catalog: dict) -> None:
         if w not in catalog["skills"]:
             raise HTTPException(400, f"Unknown skill '{w}'")
     _check_goals(req.goals, req.with_types)
+    _check_anchors(req, catalog)
     for w in req.weapons:
         if w not in catalog["weapon_types"]:
             raise HTTPException(400, f"Unknown weapon type '{w}'")

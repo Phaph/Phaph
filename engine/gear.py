@@ -13,6 +13,7 @@ from dataclasses import dataclass, field
 
 from goals import GOAL_FIELDS, goal_terms, weights as goal_weights
 from optimize import CLEAR_FIELDS, DPS_FIELDS, clear_score, score_of, total_dps
+from meta import meta_factor
 from pob import PoB, PoBError
 
 ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Gloves", "Boots": "Boots"}
@@ -587,6 +588,12 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
     used: set[str] = set()
     counts: dict[str, int] = {}
     for w in works:
+        if w.unique:
+            used.add(w.unique)   # the anchor unique: already chosen
+            count_unique({"name": w.unique}, counts)
+    for w in works:
+        if w.unique:
+            continue
         if w.slot in weapon_types:
             wtype, wsub = weapon_types[w.slot]
             pool = [u for u in uniques if u["type"] == wtype and _sub_ok(u.get("subType"), wsub)]
@@ -606,6 +613,8 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
             if out is None:
                 continue
             sc = score(out, current) - score.attr_weight * own_deficit(out, w.slot)
+            if getattr(pob, "off_meta", False):
+                sc *= meta_factor(unique=u["name"])   # off-meta: a unique half the ladder wears counts for less
             if sc > best_score:
                 best, best_score = (u, note), sc
         if best:
@@ -668,6 +677,24 @@ def _top_bases(bases: list[dict], item_type: str, sub_type: str | None = None, p
     return out
 
 
+def _anchor_work(pob: PoB, stage: Stage, score: "Scorer") -> "_Work | None":
+    """The anchor unique as an equipped, finished item (None: no anchor, or the stage is below its level)."""
+    u = (getattr(pob, "anchors", None) or {}).get("unique")
+    if not u:
+        return None
+    if (u.get("level") or 0) > stage.level:
+        notes = getattr(pob, "anchor_notes", None)
+        if notes is not None and f"unique_level:{u['name']}" not in notes:
+            notes.append(f"unique_level:{u['name']}")
+        return None
+    raw = best_variants(pob, u["raw"], u["slot"], score)
+    price = unique_prices().get(u["name"].split(",")[0])
+    w = _Work(u["slot"], u.get("base") or u["name"], u["name"], {}, unique=u["name"], unique_raw=raw,
+              price_note=f"~{price:g} div" if price is not None else "price unknown")
+    pob.send("equip", slot=w.slot, raw=raw, fields=SCORE_FIELDS)
+    return w
+
+
 def craft_gear(
     pob: PoB,
     stage: Stage,
@@ -701,7 +728,11 @@ def craft_gear(
         weapon_slots.append(("Weapon 2", weapon_type, weapon_subtype))
     elif offhand_type:
         weapon_slots.append(("Weapon 2", offhand_type, None))
+    # The anchor unique (the build is made around it) is equipped first, so every other slot is crafted around it.
+    anchor = _anchor_work(pob, stage, score)
     for slot, wtype, wsub in weapon_slots:
+        if anchor and anchor.slot == slot:
+            continue
         pool = sorted((b for b in bases if b["type"] == wtype and _sub_ok(b.get("subType"), wsub)
                        and not b["name"].startswith("Runeforged") and base_usable(b)),
                       key=lambda b: -b["level"])
@@ -712,12 +743,14 @@ def craft_gear(
             raise ValueError(f"No {wtype} bases up to item level {stage.item_level}")
         slot_bases.append((slot, cands))
     for slot, item_type in {**ARMOUR_SLOTS, **JEWELLERY_SLOTS}.items():
+        if anchor and anchor.slot == slot:
+            continue
         per = 1 if item_type in ARMOUR_SLOTS.values() else 40   # every ring, amulet and belt base competes
         cands = _top_bases(bases, item_type, per_subtype=per, attrs=attrs)
         if cands:
             slot_bases.append((slot, cands))
 
-    works: list[_Work] = []
+    works: list[_Work] = [anchor] if anchor else []
     for slot, cands in slot_bases:
         base = _best_base(pob, slot, cands, stage, score)
         res = pob.send("affixes", base=base, max_level=stage.item_level)
@@ -734,7 +767,7 @@ def craft_gear(
         _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
 
     if uniques and BUDGET_DIVINES.get(stage.budget_key, 0) > 0:
-        wt = {slot: (t, sub) for slot, t, sub in weapon_slots}
+        wt = {slot: (t, sub) for slot, t, sub in weapon_slots if not (anchor and anchor.slot == slot)}
         _consider_uniques(pob, works, stage, score, wt)
         if any(w.unique for w in works):
             # A unique replaced a rare: its resistances and stats may be gone, so re-balance the rares.

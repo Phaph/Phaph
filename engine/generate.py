@@ -29,20 +29,25 @@ CLI:  python3 generate.py '{"damage":["lightning"],"kinds":["minion"]}'
 from __future__ import annotations
 
 import json
+import random
 import sys
 import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
-from gear import Scorer, Stage, craft_gear, make_stage
+from anchors import find_unique, resolve as resolve_anchors, unique_slot
+from gear import BUDGET_DIVINES, Scorer, Stage, craft_gear, make_stage, unique_prices
 from jewels import proxy_jewel
+from meta import meta_factor, popularity
 from optimize import (MODE_CONFIG, ailment_dps, broken_numbers, ailment_score, clear_score, damage_types, hit_dps, metric_for, seed_ailment, optimise_supports,
                       score_of, total_dps)
 from pob import PoB, PoBError
 
 # Types that make a skill a support act rather than a main damage skill.
-NOT_MAIN = {"Buff", "Aura", "Herald", "Meta", "Triggered", "InbuiltTrigger", "OngoingSkill", "Shapeshift",
+# Shapeshift is not one of them: bear, wolf and wyvern attacks (Furious Slam, Rampage, Rend) are a druid's main skills;
+# the shapeshift skills that only buff (Walking Calamity, Arctic Howl, Demon Form) are Buff, Warcry or Meta anyway.
+NOT_MAIN = {"Buff", "Aura", "Herald", "Meta", "Triggered", "InbuiltTrigger", "OngoingSkill",
             "AppliesCurse", "ActiveBlock"}
 from goals import FOCUS_FIELDS, focus_factor  # noqa: E402
 
@@ -89,6 +94,8 @@ class Candidate:
     is_minion: bool = False
     error: str | None = None
     totem: str | None = None   # the totem gem that places the skill (Spell Totem), if any
+    meta: float = 1.0          # off-meta toggle: the popularity factor the score was multiplied by
+    anchor_unique: str | None = None   # random builds: the unique this one was built around
 
     def spec(self) -> dict:
         return {"class": self.cls, "ascendancy": self.ascendancy, "skill": self.skill,
@@ -211,9 +218,16 @@ def weapon_options(skill: dict, req: dict) -> list[tuple[str, str | None, str | 
         # Block comes from a shield: a block build holds a one-handed weapon and a shield. A skill that needs a
         # bow or a two-handed weapon can't, so it isn't a block build.
         opts = [(w, sub, "Shield") for w, sub, off in opts if w in ONE_HANDED]
+    if req.get("_offhand"):
+        # An anchor off-hand unique: a quiver goes with a bow, a shield or focus with any one-handed weapon.
+        off = req["_offhand"]
+        opts = [(w, sub, off) for w, sub, _ in opts if (w == "Bow" if off == "Quiver" else w in ONE_HANDED)]
     if req.get("weapons"):
         wanted = {w.lower() for w in req["weapons"]}
         opts = [o for o in opts if o[0].lower() in wanted]
+        if req.get("_weapon_subtype"):
+            # An anchor weapon unique (a quarterstaff is a Staff with a subtype): its exact kind.
+            opts = [(w, req["_weapon_subtype"], off) for w, _, off in opts]
     return opts[:3]
 
 
@@ -245,9 +259,12 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
     quiet = lambda *a: None
     try:
         p.totem_for = {c.skill: c.totem} if c.totem else None
+        use_anchors(p, req, c.skill)
         p.new()
         p.set_class(c.cls, c.ascendancy)
         p.set_level(stage.level)
+        if (p.anchors or {}).get("keystone") and not tree:
+            p.hold_keystone(p.anchors["keystone"])   # round 1 has no tree, but the anchor keystone is always there
         group = p.add_skill([c.skill], full_dps=c.is_minion)["group"]
         seed_ailment(p, group, c.skill, req.get("ailment"))
         add_helpers(p, req, c.skill)
@@ -270,6 +287,9 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
         c.clear, c.ehp = clear_score(out), out.get("TotalEHP") or 0
         c.boss = score_of(out, metric_for("bossing", req.get("ailment")))
+        if req.get("off_meta"):
+            c.meta = meta_factor(skill=c.skill, ascendancy=c.ascendancy)
+            c.score *= c.meta
         # Theme check: an ailment build that gets most of its damage elsewhere is off brief.
         if req.get("ailment") in AILMENT_FIELD:
             share = ailment_dps(out, req["ailment"]) / max(total_dps(out), 1)
@@ -279,7 +299,22 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         c.error = str(e)
     except Exception as e:  # noqa: BLE001 - one broken candidate must not end the whole search
         c.error = f"{type(e).__name__}: {e}"
+    _drop_if_dead(p)
     return c
+
+
+def _drop_if_dead(p: PoB) -> None:
+    """A PoB process that crashed is replaced on the worker's next candidate, instead of failing all of them."""
+    if p.proc.poll() is not None and getattr(_local, "pob", None) is p:
+        _local.pob = None
+
+
+def use_anchors(p, req: dict, main_skill: str) -> None:
+    """Point this worker's PoB at the request's anchors (anchors.py) and off-meta setting."""
+    anchors = req.get("_anchors") or {}
+    p.anchors = {**anchors, "main": main_skill} if anchors else None
+    p.off_meta = bool(req.get("off_meta"))
+    p.anchor_notes = None
 
 
 def best_helper(p, catalog: list[dict], kind: str, metric: str, weapon_type: str | None, offhand_type: str | None = None,
@@ -331,6 +366,7 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
     metric = metric_for(mode, req.get("ailment"), req.get("goals"))
     try:
         p.totem_for = {f.skill: f.totem} if f.totem else None
+        use_anchors(p, req, f.skill)
         p.new()
         p.set_class(f.cls)
         p.set_level(stage.level)
@@ -349,9 +385,11 @@ def scout_ascendancies(f: Candidate, ascs: list[tuple[str, str]], stage: Stage, 
             p.set_class(cls, asc)
             p.optimise_tree(points=0, def_weight=0.25, metric=metric, refine=False)
             p.auto_config(mode)
-            scores.append((_score(p.calc(FIELDS), req), cls, asc))
+            sc = _score(p.calc(FIELDS), req)
+            scores.append((sc * meta_factor(ascendancy=asc) if req.get("off_meta") else sc, cls, asc))
         except Exception:  # noqa: BLE001 - skip an ascendancy that fails to build
             continue
+    _drop_if_dead(p)
     scores.sort(key=lambda t: -t[0])
     return [(c, a) for _, c, a in scores[:keep]] or ascs[:keep]
 
@@ -366,7 +404,7 @@ def _relax_steps(req: dict) -> list[tuple[str, dict]]:
                       {"_min_share": 0.0}))
     if ail:
         steps.append((f"No {ail} build worked with these choices, so {ail} isn't required.", {"ailment": None}))
-    if req.get("weapons"):
+    if req.get("weapons") and not req.get("_weapon_anchor"):
         steps.append((f"Nothing worked with {' or '.join(req['weapons'])}, so any weapon was allowed.", {"weapons": []}))
     if req.get("damage"):
         steps.append((f"No {'/'.join(req['damage'])} skill worked with these choices, so any damage type was allowed.",
@@ -389,6 +427,7 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
     progress, if given, gets {"step": "round", ...} when a round starts, {"step": "candidate", ...} as each
     skill/weapon/ascendancy option is scored, and {"step": "relaxed", "label": note} when the request is loosened."""
     notes: list[str] = []
+    about: list[str] = []   # what the build is made around, off-meta: shown as information, not as a change
     # Every skill the player named is a requirement. A damage skill is the main skill; one that boosts others instead
     # (Cast on X, a buff like Charged Staff, a herald, an aura) is kept in every candidate beside it:
     #   - a Cast on X gem gets the main spell socketed into it, so the main skill must be a spell;
@@ -427,6 +466,16 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
                 else:
                     notes.append(f"{h} boosts other skills rather than dealing damage itself, so it's kept in the build "
                                  f"and the best skill to use with it was picked.")
+    if req.get("anchor_unique") or req.get("anchor_keystone") or req.get("anchor_support"):
+        with PoB() as p:
+            anchors, change, anchor_notes = resolve_anchors(p, req)
+        req = {**req, **change, "_anchors": anchors}
+        if "weapons" in change:
+            req["_weapon_anchor"] = True
+        about += anchor_notes
+    if req.get("off_meta"):
+        about.append("Off-meta: builds made of skills and ascendancies many players use score lower, so this is the "
+                     "strongest build few people play.")
     tried = dict(req)
     steps = _relax_steps(req)
     while True:
@@ -446,6 +495,7 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
         result["request"] = req
         result["searched"] = {k: v for k, v in tried.items() if not k.startswith("_")}
         result["relaxed"] = notes
+        result["about"] = about
         return result
 
 
@@ -493,6 +543,8 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     if not ascs:
         raise ValueError("Unknown class or ascendancy.")
     base_class = ascs[0][0] if len({c for c, _ in ascs}) == 1 else None
+    if req.get("random"):
+        return _random_search(req, pool, skills, ascs, stage, log, progress, t0)
 
     # Round 1: skills x weapons, no passives, on the requested class (or a neutral default).
     round1 = []
@@ -583,6 +635,72 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     }
 
 
+RANDOM_TRIES = 8   # random builds tried at once; the first that works (in random order, not the strongest) is kept
+
+
+def random_unique(pob: PoB, rng: random.Random, stage: Stage, budget: str) -> dict | None:
+    """A random armour or jewellery unique the budget allows and the stage's level can wear."""
+    cap = BUDGET_DIVINES.get(budget, 0)
+    if cap <= 0:
+        return None
+    prices = unique_prices()
+
+    def affordable(u: dict) -> bool:
+        price = prices.get(u["name"].split(",")[0])
+        return cap == float("inf") or (price is not None and price <= cap)
+    # Armour and jewellery only: a random weapon unique would fight the random skill's weapon.
+    pool = [u for u in pob.list_uniques()
+            if unique_slot(u) and not unique_slot(u).startswith("Weapon") and (u.get("level") or 0) <= stage.level
+            and affordable(u)]
+    if not pool:
+        return None
+    pick = rng.choice(pool)
+    u = find_unique([pick], pick["name"])
+    return {k: u.get(k) for k in ("name", "raw", "type", "subType", "level", "slot", "base")} if u else None
+
+
+def _random_search(req: dict, pool: ThreadPoolExecutor, skills: list[dict], ascs: list[tuple[str, str]],
+                   stage: Stage, log, progress, t0: float) -> dict:
+    """A random build: skill, weapon, ascendancy and (unless the player named one) a unique, all picked at random
+    within the player's filters. Damage plays no part in the pick; supports, passives and gear are still optimised
+    afterwards so the build works. A few are tried at once and the first that builds (in random order) is kept."""
+    rng = random.Random(req.get("seed"))
+    order = list(skills)
+    rng.shuffle(order)
+    tries = []
+    with PoB() as p:
+        for s in order[:RANDOM_TRIES]:
+            w = rng.choice(weapon_options(s, req))
+            cls, asc = rng.choice(ascs)
+            u = None if (req.get("_anchors") or {}).get("unique") else random_unique(p, rng, stage, req.get("budget", "high"))
+            c = Candidate(s["name"], w[0], w[1], w[2], cls, asc, is_minion="Minion" in s["types"], totem=s.get("totem"),
+                          anchor_unique=u["name"] if u else None)
+            tries.append((c, u))
+    if progress:
+        progress({"step": "round", "round": 1, "label": f"Random: {len(tries)} builds rolled", "count": len(tries),
+                  "text": "Random build: skill, weapon, ascendancy and a unique picked at random. Damage doesn't "
+                          "decide; the first one that builds is kept, then everything else is optimised around it."})
+
+    def one(cu):
+        c, u = cu
+        r = req if not u else {**req, "_anchors": {**(req.get("_anchors") or {}), "unique": u}}
+        c = evaluate(c, stage, r, tree=True)
+        if progress and not c.error and c.score > 0:
+            progress({"step": "candidate", "round": 1, "skill": c.skill, "weapon": c.weapon_type,
+                      "ascendancy": c.ascendancy, "score": round(c.score, 1)})
+        return c
+    done = list(pool.map(one, tries))
+    ok = [c for c in done if not c.error and c.score > 0]
+    if not ok:
+        raise ValueError("None of the random builds worked. Try again.")
+    log(f"Random pick: {ok[0].skill} {ok[0].ascendancy} {ok[0].weapon_type}"
+        + (f" around {ok[0].anchor_unique}" if ok[0].anchor_unique else "") + f" ({time.time() - t0:.0f}s)")
+    return {"request": req, "best": asdict(ok[0]),
+            "ranked": [asdict(c) | {"relative": c.score / ok[0].score} for c in ok],
+            "skills_considered": [c.skill for c, _ in tries], "failed": [asdict(c) for c in done if c.error],
+            "random": True}
+
+
 BOSS_SKILL_MIN_GAIN = 1.25   # a separate boss skill must hit this much harder than the mapping skill
 CLEAR_SKILL_MIN_GAIN = 1.25  # a separate clear skill must clear this much better than the main skill
 
@@ -619,6 +737,19 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         spec["with_skills"] = list(req["with_skills"])   # skills the player asked for, kept beside the main skill
     if req.get("with_types"):
         spec["with_types"] = list(req["with_types"])     # "warcries": the guide picks the best one
+    # What the build is made around (anchors.py): the guide keeps it at every stage. ("searched" drops the internal
+    # _keys, so the anchors come from the request as resolved.)
+    anchors = (result.get("request") or {}).get("_anchors") or {}
+    unique = main.get("anchor_unique") or (anchors.get("unique") or {}).get("name")
+    if unique:
+        spec["anchor_unique"] = unique
+    for key in ("keystone", "support"):
+        if anchors.get(key):
+            spec[f"anchor_{key}"] = anchors[key]
+    if req.get("off_meta"):
+        spec["off_meta"] = True
+    if result.get("random"):
+        spec["random"] = True   # the guide says the anchor unique was rolled, not asked for
     same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
     # Compare single-target strength in the theme's own terms (a bleed build wants a better
     # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.
@@ -647,6 +778,7 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         "spec": spec,
         "vs_recommended": cost,   # 0.12 = this choice deals 12% less than the recommended build
         "recommended": {"skill": best["skill"], "ascendancy": best["ascendancy"]},
+        "popularity": popularity(main["skill"], main["ascendancy"]),   # share of the ladder playing each part
         "note": None if cost <= 0 else (
             f"{main['ascendancy']} {main['skill']} does about {cost:.0%} less damage than the recommended "
             f"{best['ascendancy']} {best['skill']}."),

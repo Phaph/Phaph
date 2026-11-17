@@ -1129,6 +1129,12 @@ function handlers.optimise_tree(cmd)
 	local refineRounds = cmd.refine_rounds or 12
 	local refineTries = cmd.refine_tries or 4
 	local maxRemove = cmd.refine_max_remove or 8
+	-- Nodes the build is made around (an anchor keystone): the swap phase never takes them back.
+	local locked = {}
+	for _, spec in ipairs(cmd.locked or {}) do
+		local node = findNode(spec)
+		if node then locked[node.id] = true end
+	end
 	local deadline = os.clock() + (cmd.refine_seconds or math.max(5, buildSeconds * 0.6))
 	local function recalc()
 		build.buildFlag = true
@@ -1179,7 +1185,7 @@ function handlers.optimise_tree(cmd)
 					and not node.isMultipleChoiceOption and node.depends and #node.depends <= maxRemove then
 					local set, n, ok = {}, 0, true
 					for _, d in ipairs(node.depends) do
-						if d.ascendancyName or d.type == "ClassStart" then ok = false end
+						if d.ascendancyName or d.type == "ClassStart" or locked[d.id] then ok = false end
 						set[d] = true
 						n = n + 1
 					end
@@ -1377,6 +1383,18 @@ function handlers.gem_info(cmd)
 		end
 	end
 	return { gems = out }
+end
+
+-- Keystones on the passive tree (not ascendancy ones): what a build can be made around.
+function handlers.list_keystones(cmd)
+	local out = {}
+	for _, node in pairs(build.spec.nodes) do
+		if node.type == "Keystone" and not node.ascendancyName and node.dn then
+			table.insert(out, { name = node.dn, text = table.concat(node.sd or {}, " / ") })
+		end
+	end
+	table.sort(out, function(a, b) return a.name < b.name end)
+	return { keystones = out }
 end
 
 function handlers.list_classes(cmd)

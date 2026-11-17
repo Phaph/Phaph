@@ -230,6 +230,12 @@ def optimise_supports(
     and only re-check the 2 x top_k best supports from the first one.
     """
     field_name = METRICS.get(metric, metric)
+    # An anchor support (the build is made around it): always in the main skill's set, the search fills the rest.
+    anchors = getattr(pob, "anchors", None) or {}
+    required = [anchors["support"]] if anchors.get("support") and anchors.get("main") == active else []
+    if required:
+        slots -= len(required)
+        exclude = set(exclude or ()) | set(required)
     from goals import FOCUS_FIELDS
     fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS, *FOCUS_FIELDS] \
         + (["Speed", "ManaCost", "LifeCost", "ESCost"] if field_name == "movement" else ["Speed"] if field_name == "per_cast" else
@@ -250,14 +256,21 @@ def optimise_supports(
         pool = [n for n in shortlist[shortlist_key] if n not in skip]
 
     t0 = time.time()
-    base = pob.try_skill(group, [active], fields, keep_main=keep_main)
+    if required:
+        res = pob.try_skill(group, [active, *required], fields, keep_main=keep_main)
+        if not all(res["supported"].get(r) for r in required):
+            raise ValueError(f"{', '.join(required)} can't support {active}")
+        active_gems = [active, *required]
+    else:
+        active_gems = [active]
+    base = pob.try_skill(group, active_gems, fields, keep_main=keep_main)
     base_score = score_of(base["output"], field_name)
     log(f"Base {active}: {metric} DPS = {base_score:,.0f}")
 
     # Screen every support once on its own: drop ones that don't support the skill or add nothing.
     solo = {}
     for name in pool:
-        res = pob.try_skill(group, [active, name], fields, keep_main=keep_main)
+        res = pob.try_skill(group, [*active_gems, name], fields, keep_main=keep_main)
         if res["supported"].get(name):  # skip gems PoB says don't apply
             sc = score_of(res["output"], field_name)
             if base_score > 0 and sc > base_score * IMPOSSIBLE_SUPPORT_GAIN:
@@ -272,7 +285,7 @@ def optimise_supports(
     for n in useful[:10]:
         log(f"  {n:<32} {solo[n] / max(base_score, 1e-9) - 1:+.0%}")
 
-    frontier = [Result([], base_score, base["output"])]
+    frontier = [Result(list(required), base_score, base["output"])]
     best = frontier[0]
     for depth in range(slots):
         scored: dict[tuple, Result] = {}
@@ -281,13 +294,13 @@ def optimise_supports(
             for name in useful:
                 if name in state.supports or family[name] in used_families:
                     continue
-                combo = tuple(sorted(state.supports + [name]))
+                combo = tuple(sorted(s for s in state.supports + [name] if s not in required))
                 if combo in scored:
                     continue
-                res = pob.try_skill(group, [active, *combo], fields, keep_main=keep_main)
+                res = pob.try_skill(group, [*active_gems, *combo], fields, keep_main=keep_main)
                 if not all(res["supported"].get(s) for s in combo) or res.get("warnings"):
                     continue
-                scored[combo] = Result(list(combo), score_of(res["output"], field_name), res["output"])
+                scored[combo] = Result([*required, *combo], score_of(res["output"], field_name), res["output"])
         if not scored:
             break
         frontier = sorted(scored.values(), key=lambda r: -r.score)[:beam]

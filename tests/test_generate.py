@@ -362,3 +362,9 @@ def test_pob_client_puts_the_totem_gem_in_front():
     p.totem_for = {"Fireball": "Spell Totem"}
     assert p._with_totem(["Fireball", "Spell Echo"]) == ["Spell Totem", "Fireball", "Spell Echo"]
     assert p._with_totem(["Frostbolt"]) == ["Frostbolt"]
+
+
+def test_shapeshift_attacks_are_main_skills(catalog):
+    # Bear, wolf and wyvern attacks carry builds; shapeshift buffs (Walking Calamity) stay helpers.
+    bear = {s["name"] for s in main_skills(catalog, {"kinds": ["bear"]})}
+    assert "Furious Slam" in bear and "Walking Calamity" not in bear

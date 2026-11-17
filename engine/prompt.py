@@ -107,6 +107,28 @@ SKILL_ALIASES = {
     "cast on shock": "Cast on Elemental Ailment", "cast on chill": "Cast on Elemental Ailment",
     "spectre": "Summon Spectre", "spectres": "Summon Spectre", "corpse explosion": "Detonate Dead",
 }
+# Off-meta and random builds (generate.py): words for each.
+OFF_META = (r"off[- ]?meta|non[- ]?meta|anti[- ]?meta|unpopular|niche|under(played|used|rated)|hipster|unusual|unique "
+            r"builds?|nobody (plays|uses)|no ?one (plays|uses)|not (the )?meta|weird|jank(y)?|meme builds?|crazy builds?"
+            r"|creative|outside the box|something different")
+RANDOM = r"random(i[sz]e[ds]?|ly)?|surprise me|roll (me )?a build|anything goes|dealer'?s choice|spin the wheel"
+# Short names for keystones (only used when that keystone exists in PoB's tree).
+KEYSTONE_ALIASES = {"ci": "Chaos Inoculation", "mom": "Mind Over Matter", "eb": "Eldritch Battery",
+                    "rt": "Resolute Technique", "hollow palm": "Hollow Palm Technique",
+                    "unarmed": "Hollow Palm Technique"}
+# A keystone also says what the build stands on: CI means energy shield.
+KEYSTONE_GOALS = {"Chaos Inoculation": "es", "Mind Over Matter": "mana", "Eldritch Battery": "es"}
+# A support is only read as the anchor after "around" ("built around brutality"), or typed with its tier
+# ("Martial Tempo II"): support names are everyday words ("bleed", "life leech") the other tables need.
+AROUND = r"(?:(?:built?|made|centered|centred|based)\s+)?around\s+(?:the\s+)?"
+ROMAN = re.compile(r"\s+(I|II|III|IV|V)$")
+
+
+def name_pattern(name: str) -> str:
+    """A unique or keystone name as typed: any case, apostrophe optional ("atziris allure")."""
+    return r"\s+".join(re.escape(w).replace("'", "'?") for w in name.lower().split())
+
+
 # One-word skill names that are also a kind of skill: "grenade build" means grenade skills, not the gem "Grenade".
 KIND_NOT_SKILL = {"Grenade"}
 
@@ -193,12 +215,63 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
         req["budget"] = divines_to_budget(div)
         found.append((m.group(0).strip(), f"Budget: {req['budget']}"))
         t = t[:m.start()] + " " + t[m.end():]   # so "20 chaos" isn't also chaos damage
+        if (b := re.search(r"(?<![\w'])budget(?![\w'])", t)):
+            found.append((b.group(0), f"Budget: {req['budget']}"))   # "900 div budget": the word is understood too
+            t = t[:b.start()] + " " * (b.end() - b.start()) + t[b.end():]
     else:
         for pat, key in BUDGET_WORDS.items():
             if (m := _find(pat, t)):
                 req["budget"] = key
                 found.append((m.group(0), f"Budget: {key}"))
                 break
+
+    # Random and off-meta first ("random build", "off meta"), then what the build is made around (anchors.py): a unique,
+    # a keystone, a support gem. Each is blanked out, so "Chaos Inoculation" isn't also read as chaos damage.
+    def cut(m):
+        nonlocal t
+        t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
+    if (m := re.search(rf"(?<![\w'])(?:{OFF_META})(?![\w'])", t)):
+        req["off_meta"] = True
+        found.append((m.group(0), "Off-meta: popular skills, ascendancies and uniques score lower"))
+        cut(m)
+    if (m := _find(RANDOM, t)):
+        req["random"] = True
+        found.append((m.group(0), "Random build: picked at random, not by damage"))
+        cut(m)
+    for name in sorted(catalog.get("uniques", []), key=len, reverse=True):
+        if len(name) >= 5 and (m := _find(name_pattern(name), t)):
+            req["anchor_unique"] = name
+            found.append((m.group(0), f"Built around: {name}"))
+            cut(m)
+            break
+    keystones = set(catalog.get("keystones", []))
+    ks_pats = [(name_pattern(k), k) for k in sorted(keystones, key=len, reverse=True)]
+    ks_pats += [(a, k) for a, k in KEYSTONE_ALIASES.items() if k in keystones]
+    for pat, name in ks_pats:
+        if (m := _find(pat, t)):
+            req["anchor_keystone"] = name
+            found.append((m.group(0), f"Built around: {name}"))
+            cut(m)
+            if KEYSTONE_GOALS.get(name) and KEYSTONE_GOALS[name] not in req["goals"]:
+                req["goals"].append(KEYSTONE_GOALS[name])
+            break
+    # Supports: the full name ("Martial Tempo"), or the name without its tier ("brutality" = the top Brutality).
+    # Only after "around", unless typed with its tier (see AROUND).
+    tiers: dict[str, str] = {}
+    for sup in catalog.get("supports", []):
+        tiers[sup] = sup
+        base = ROMAN.sub("", sup)
+        if base != sup and (base not in tiers or sup > tiers[base]):
+            tiers[base] = sup
+    for typed, sup in sorted(tiers.items(), key=lambda kv: -len(kv[0])):
+        pat = name_pattern(typed)
+        if not ROMAN.search(typed):
+            pat = AROUND + pat
+        if (m := _find(pat, t)):
+            req["anchor_support"] = sup
+            found.append((m.group(0), f"Built around: {sup}"))
+            cut(m)
+            break
 
     # Names from PoB: skill (longest first so "Lightning Arrow" beats "Lightning"), ascendancy, class.
     # Every skill named, longest first ("Lightning Arrow" before "Lightning"). Each match is blanked out of the
@@ -237,6 +310,9 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
                 req["ascendancy"], req["class"] = asc, c["name"]
                 found.append((m.group(0), f"Ascendancy: {asc} ({c['name']})"))
                 t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
+                if (cm := _find(re.escape(c["name"].lower()) + "e?s?", t)):   # "shaman druid": the class said too
+                    found.append((cm.group(0), f"Class: {c['name']}"))
+                    t = t[:cm.start()] + " " * (cm.end() - cm.start()) + t[cm.end():]
     if not req.get("class"):
         for c in catalog.get("classes", []):
             if (m := _find(re.escape(c["name"].lower()) + "e?s?", t)):

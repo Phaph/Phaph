@@ -143,6 +143,13 @@ select option:checked { background: #3a2f20; color: var(--brass-hi); }
 .go:hover { box-shadow: inset 0 1px 0 rgba(255,255,255,.5), inset 0 -2px 0 rgba(0,0,0,.25), 0 3px 0 #4a3415, 0 10px 30px rgba(232,115,58,.32); }
 .go:active { transform: translateY(2px); box-shadow: inset 0 1px 0 rgba(255,255,255,.3), inset 0 -1px 0 rgba(0,0,0,.25), 0 1px 0 #4a3415; }
 .go:disabled { filter: saturate(.5) brightness(.75); cursor: progress; }
+.gobar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.go.alt { background: none; color: var(--brass); box-shadow: inset 0 0 0 1px var(--brass); }
+.go.alt:hover { box-shadow: inset 0 0 0 1px var(--brass), 0 8px 24px rgba(232,115,58,.18); }
+.anchor { display: grid; gap: 6px; max-width: 640px; margin: 0 0 12px; }
+.anchor input { width: 100%; }
+.anchor small, .ladder { color: var(--muted); font-size: 14px; line-height: 1.4; }
+.ladder b { color: var(--text, inherit); font-weight: 600; }
 .link { background: none; border: 0; color: var(--brass); cursor: pointer; padding: 0; font: inherit; text-decoration: underline; text-underline-offset: 3px; }
 .status { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--muted); }
 .spinner { width: 14px; height: 14px; border: 2px solid var(--edge); border-top-color: var(--ember); border-radius: 50%; animation: spin 1s linear infinite; }
@@ -508,7 +515,14 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     <div class="field"><span class="label">Also care about</span><div class="chips" id="goals" role="group" aria-label="Goals"></div></div>
     <label class="deep"><input type="checkbox" id="deep"><span><b>Deep search</b>
       <small>Tries far more skills, each on its own best ascendancies, so it can find builds the normal search misses. Takes about twice as long.</small></span></label>
-    <button class="go" id="go" type="submit">Forge it</button>
+    <label class="deep"><input type="checkbox" id="offmeta"><span><b>Off-meta</b>
+      <small>Skills, ascendancies and uniques lots of players use count for less, so you get the strongest build few people play. Uses poe.ninja's ladder.</small></span></label>
+    <div class="anchor field"><label for="anchor">Build around</label>
+      <input id="anchor" list="anchorList" maxlength="80" autocomplete="off" placeholder="a unique, a keystone or a support gem, e.g. Chaos Inoculation">
+      <datalist id="anchorList"></datalist>
+      <small>Locked first; the skill, ascendancy, passives and the rest of the gear are picked to suit it.</small></div>
+    <div class="gobar"><button class="go" id="go" type="submit">Forge it</button>
+      <button class="go alt" id="randomGo" type="button" title="Skill, weapon, ascendancy and a unique picked at random within what you set above">Random build</button></div>
     <div class="status" id="status" hidden></div>
   </form>
 
@@ -611,6 +625,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   };
   fetch(API + "/catalog").then(r => r.json()).then(cat => {
     catalog = cat;
+    const list = $("anchorList");
+    [["uniques", "Unique"], ["keystones", "Keystone"], ["supports", "Support"]].forEach(([k, label]) =>
+      (cat[k] || []).forEach(n => { const o = document.createElement("option"); o.value = n; o.label = label; list.appendChild(o); }));
     cat.classes.forEach(c => { const o = document.createElement("option"); o.value = c.name; o.textContent = c.name; $("cls").appendChild(o); });
     fillAscendancies(); weaponChips();
   }).catch(() => {});
@@ -621,7 +638,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   function resetPicker() {
     state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null; state.withSkills = []; state.withTypes = []; state.avoid = [];
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
-    $("deep").checked = false;
+    $("deep").checked = false; $("offmeta").checked = false; $("anchor").value = ""; state.random = false;
   }
   function syncAll() {
     syncs.forEach(f => f()); weaponSyncs.forEach(f => f()); syncBudget();
@@ -638,6 +655,9 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if (r.ailment) $("ailment").value = r.ailment;
     if (r.mode) $("mode").value = r.mode;
     if (r.deep) $("deep").checked = true;
+    if (r.off_meta) $("offmeta").checked = true;
+    $("anchor").value = r.anchor_unique || r.anchor_keystone || r.anchor_support || "";
+    state.random = !!r.random;
     if (r.class) { $("cls").value = r.class; fillAscendancies(); }
     if (r.ascendancy) $("asc").value = r.ascendancy;
     state.skill = r.skill || null;
@@ -1214,12 +1234,17 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if ((state.withTypes || []).length) req.with_types = state.withTypes;
     if ((state.avoid || []).length) req.avoid = state.avoid;   // "no minions"
     if ($("deep").checked) req.deep = true;
-    $("go").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
+    if ($("offmeta").checked) req.off_meta = true;
+    const anchor = anchorOf($("anchor").value);
+    if (anchor) req[anchor.field] = anchor.name;
+    if (state.random || randomClick) { req.random = true; req.seed = Math.floor(Math.random() * 2 ** 31); delete req.deep; }
+    randomClick = false;
+    $("go").disabled = $("randomGo").disabled = true; $("options").hidden = $("guide").hidden = $("compare").hidden = true;
     heat(true);
     try {
       let job = await api("/generate", req);
       if (!job.cached) work.startSearch();
-      job = await waitFor(job, job.cached ? "Loading" : req.deep ? "Deep search: about 10-15 minutes" : "About 2-4 minutes for a new idea",
+      job = await waitFor(job, job.cached ? "Loading" : req.deep ? "Deep search: about 10-15 minutes" : req.random ? "Rolling a random build: about 2 minutes" : "About 2-4 minutes for a new idea",
         (t, status) => { work.clock(t); setStatus(status === "queued" ? t : "", status === "queued"); },
         e => e.step === "round" ? work.round(e) : e.step === "candidate" ? work.candidate(e) : e.step === "relaxed" && work.relaxed(e));
       work.hide(); setStatus("");
@@ -1229,8 +1254,20 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     } catch (err) {
       work.hide();
       setStatus(`<span class="error">${esc(err.message)}</span>`);
-    } finally { $("go").disabled = false; heat(false); }
+    } finally { $("go").disabled = $("randomGo").disabled = false; heat(false); }
   };
+  // "Build around": which kind of name it is (unique, keystone, support), matched without regard to case.
+  function anchorOf(text) {
+    const t = (text || "").trim().toLowerCase();
+    if (!t || !catalog) return null;
+    for (const [k, field] of [["uniques", "anchor_unique"], ["keystones", "anchor_keystone"], ["supports", "anchor_support"]]) {
+      const name = (catalog[k] || []).find(n => n.toLowerCase() === t);
+      if (name) return { field, name };
+    }
+    return null;
+  }
+  let randomClick = false;
+  $("randomGo").onclick = () => { randomClick = true; $("form").requestSubmit(); };
 
   async function buildGuide(plan) {
     const stages = ["leveling", "early", "mid", "end"];
@@ -1279,14 +1316,27 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     return b;
   }
 
+  function anchorLine(spec) {
+    const parts = [spec.anchor_unique, spec.anchor_keystone, spec.anchor_support].filter(Boolean).map(n => `<b>${esc(n.split(",")[0])}</b>`);
+    if (!parts.length) return "";
+    return `<p class="ladder">${spec.random ? "Rolled around" : "Built around"} ${parts.join(" + ")}${spec.off_meta ? " · off-meta" : ""}</p>`;
+  }
+  function ladderLine(plan) {
+    const p = plan.popularity;
+    if (!p || !p.characters) return "";
+    const pct = x => x >= 0.1 ? `${Math.round(x * 100)}%` : x >= 0.001 ? `${(x * 100).toFixed(1)}%` : "almost nobody";
+    return `<p class="ladder">On the ${esc(p.league || "")} ladder: ${esc(plan.spec.skill)} <b>${pct(p.skill)}</b> · ${esc(plan.spec.ascendancy)} <b>${pct(p.ascendancy)}</b> of ${Number(p.characters).toLocaleString()} characters</p>`;
+  }
+
   function renderOptions() {
     const { result, plan, options } = state.gen;
     const rows = result.ranked.slice(0, 12);
     $("options").hidden = false;
     $("options").innerHTML = `
       <div style="display:grid;gap:6px"><span class="eyebrow">What it tried</span>
-      <h2>${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)} came out on top</h2>
+      <h2>${result.random ? `Rolled: ${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)}` : `${esc(plan.spec.skill)} ${esc(plan.spec.ascendancy)} came out on top`}</h2>
       ${(result.relaxed || []).length ? `<ul class="relaxed">${result.relaxed.map(n => `<li>${esc(n)}</li>`).join("")}</ul>` : ""}
+      ${(result.about || []).map(n => `<p class="ladder">${esc(n)}</p>`).join("")}
       <p class="muted">${result.skills_considered.length} skills tested on every weapon they can use, then the best on each ascendancy. Pick another row to rebuild with it, or tick up to 3 to compare them at your budget.</p></div>
       <div class="tablewrap"><table><thead><tr><th></th><th>Skill</th><th>Ascendancy</th><th>Weapon</th><th class="num">vs best</th><th></th></tr></thead><tbody>
       ${rows.map((r, i) => `<tr class="${i === 0 ? "best" : ""}"><td><input type="checkbox" aria-label="Compare ${esc(r.skill)} ${esc(r.ascendancy)}" data-i="${i}"></td>
@@ -1408,7 +1458,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
         <canvas aria-label="Endgame passive tree"></canvas><span>${treeHref ? "Open the passive tree &#8599;" : "Endgame passive tree"}</span></a>` : ""}
       <div style="display:grid;gap:6px"><span class="eyebrow">Your build${plan.spec.class ? ` · ${esc(plan.spec.class)}` : ""}</span><div class="skillhead">${img(gemUrl(plan.spec.skill))}<h2>${esc(plan.spec.skill)} · ${esc(plan.spec.ascendancy)}</h2></div>
       ${motif ? `<span class="motif">${esc(motif)}</span>` : ""}
-      ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}</div>
+      ${plan.note ? `<p class="muted">${esc(plan.note)}</p>` : ""}
+      ${anchorLine(plan.spec)}${ladderLine(plan)}</div>
       ${live ? `<p class="live-note" id="liveNote">${stages.length} of ${opt.total || 4} stages ready · the rest are still on the anvil</p>` : ""}
       ${!live && end.rating ? `<div class="rating"><span class="score">${end.rating.overall}</span><span class="label">${esc(end.rating.label)}</span>
         <span class="subs"><span>Damage ${end.rating.damage}</span><span>Clear ${end.rating.clear}</span><span>Toughness ${end.rating.toughness}</span></span></div>
