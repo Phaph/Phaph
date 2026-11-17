@@ -192,6 +192,7 @@ def run_one(text: str, budget: str, expect: dict, game: dict) -> dict:
         if r["unused"]:
             fails.append(f"words not understood: {r['unused']}")
         fails += real_and_usable(pob, guides, game, req["budget"])
+    fails += build_checks(guides, time.time() - t0)
     end = guides[-1]
     s = end.stats
     r.update(
@@ -200,7 +201,10 @@ def run_one(text: str, budget: str, expect: dict, game: dict) -> dict:
                           "uniques": [p.unique for p in list(g.gear) + list(g.jewels or []) if p.unique]}
                 for g in guides},
         setups=[f'{x.get("skill")} + {", ".join(x.get("supports") or [])}' for x in end.setups[:4]],
-        main_supports=end.supports, total_dps=round(total_dps(s)),
+        main_supports=end.supports, total_dps=round(total_dps(s)), boss_dps=round(end.boss_dps or 0),
+        skills=1 + len(end.setups) + len(end.triggers or []) + (1 if end.boss_skill else 0) + (1 if end.clear_skill else 0),
+        boss_skill=end.boss_skill, weapon_sets=bool(end.weapon_sets),
+        triggers=[f'{t.get("gem")}: {", ".join(t.get("spells") or [])}' for t in end.triggers or []],
         focus={k: {"value": round(focus_value(s, k), 1), "target": FOCUS[k][3]}
                for k in req.get("goals") or [] if k in FOCUS},
         off_theme=[n for n in end.notes if n.startswith("Off theme")],
@@ -211,6 +215,35 @@ def run_one(text: str, budget: str, expect: dict, game: dict) -> dict:
     return r
 
 
+SLOW_SECONDS = 1200   # a whole build (search + 4 stages) over 20 minutes is too slow for players
+
+
+def build_checks(guides: list, seconds: float) -> list[str]:
+    """The checks added with fuller builds (2026-11-17): every stage fits its spirit, the main skill fills the sockets
+    its stage allows, the endgame build runs a full kit of skills, and the build doesn't take too long."""
+    from guide import STAGE_SOCKETS
+    out = []
+    for g in guides:
+        left = (g.stats or {}).get("SpiritUnreserved")
+        if left is not None and left < 0:
+            out.append(f"SPIRIT OVERDRAWN at {g.stage}: {left:.0f}")
+        want = STAGE_SOCKETS.get(g.stage, 5)
+        if len(g.supports) < want:
+            out.append(f"main skill has {len(g.supports)} of {want} supports at {g.stage}")
+    end = guides[-1]
+    n = 1 + len(end.setups) + len(end.triggers or []) + (1 if end.boss_skill else 0) + (1 if end.clear_skill else 0)
+    if n < 6:
+        out.append(f"only {n} skills at endgame")
+    if seconds > SLOW_SECONDS:
+        out.append(f"slow: {seconds / 60:.0f} minutes")
+    return out
+
+
+def sweep_prompts() -> list:
+    """One build per ascendancy ("Invoker build"), high budget: the same checks for every ascendancy."""
+    return [(f"{asc} build", "high", {}) for c in catalog()["classes"] for asc in c["ascendancies"]]
+
+
 def run(only: set[int] | None, out: Path | None) -> None:
     game = load_game()
     out = out or TOOLS.parent / "data" / "baseline" / f"az_{game['version']}.json"
@@ -218,7 +251,8 @@ def run(only: set[int] | None, out: Path | None) -> None:
     done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {}
     if done.get("pob_version") != game["version"]:
         done = {"pob_version": game["version"], "results": {}}
-    for i, (text, budget, expect) in enumerate(PROMPTS, 1):
+    prompts = sweep_prompts() if os.environ.get("SWEEP") else PROMPTS
+    for i, (text, budget, expect) in enumerate(prompts, 1):
         key = f"{text} [{budget}]"
         if (only and i not in only) or key in done["results"]:
             continue
