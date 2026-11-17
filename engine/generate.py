@@ -622,6 +622,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     ranked = sorted((c for c in round2 if not c.error and c.score > 0), key=lambda c: -c.score)
     if not ranked:
         raise ValueError("Every candidate failed to build.")
+    ranked = _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, scored, log)
     best = ranked[0]
     for c in ranked[:10]:
         log(f"  {c.ascendancy:<22} {c.skill:<24} {c.weapon_type:<10} {c.score:>12,.0f}  {c.score / best.score:6.0%}")
@@ -633,6 +634,58 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         "skills_considered": [c.skill for c in ok1],
         "failed": [asdict(c) for c in round1 + round2 if c.error],
     }
+
+
+ROLE_PICKS = 3   # Round 3: this many single-target and this many clearing specialists are tried as a second skill
+
+
+def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, scored, log) -> list:
+    """Round 3: specialists for a second skill. Many builds clear with one skill and kill bosses with another. The
+    finalists were picked as all-rounders, so a skill that is only great at bosses (or only at clearing) rarely got
+    that far. Here the best single-target skills and the best clearing skills from round 1 are built on the winner's
+    ascendancy with passives, so plan_build can pick a real boss skill and clear skill from them.
+    A skill the player named stays the main skill: its specialists are only added after it."""
+    best = ranked[0]
+    have = {r.skill for r in ranked if r.ascendancy == best.ascendancy}
+    open_req = {**req, "skill": None}
+    pool1 = list(ok1)
+    if req.get("skill"):
+        # Round 1 only scored the named skill: score the others now (no passives, quick) to find its partners.
+        others = [s for s in main_skills(catalog, open_req) if s["name"] not in have]
+        extra = [Candidate(s["name"], w, sub, off, best.cls, is_minion="Minion" in s["types"], totem=s.get("totem"))
+                 for s in others for w, sub, off in weapon_options(s, open_req)[:2]]
+        if extra:
+            round_start(2.5, f"Round 3a: {len(extra)} other skills scored for a boss or clear role", len(extra),
+                        "Looking for a second skill to go with yours: one for bosses, or one for clearing packs.")
+            extra = list(pool.map(lambda c: scored(evaluate(c, stage, open_req, tree=False), 2.5), extra))
+            pool1 += [c for c in extra if not c.error and c.score > 0]
+    pool1 = [c for c in pool1 if c.skill not in have]
+    picks: dict[str, Candidate] = {}
+    for c in sorted(pool1, key=lambda c: -(c.boss or c.dps)):   # single target: any weapon (set 2 if it differs)
+        if len(picks) >= ROLE_PICKS:
+            break
+        picks.setdefault(c.skill, c)
+    same_weapon = [c for c in pool1 if c.weapon_type == best.weapon_type and c.offhand_type == best.offhand_type]
+    n = 0
+    for c in sorted(same_weapon, key=lambda c: -c.clear):     # clearing: same weapon, a button away
+        if n >= ROLE_PICKS:
+            break
+        if c.skill not in picks:
+            picks[c.skill] = c
+            n += 1
+    if not picks:
+        return ranked
+    round_start(3, f"Round 3: {len(picks)} skills tried as a second skill for bosses or clearing", len(picks),
+                f"Many builds clear with one skill and kill bosses with another: {len(picks)} specialists built on "
+                f"{best.ascendancy} to see if one earns a place.")
+    cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, best.cls, best.ascendancy,
+                       is_minion=f.is_minion, totem=f.totem) for f in picks.values()]
+    third = [c for c in pool.map(lambda c: scored(evaluate(c, stage, open_req, tree=True), 3), cands)
+             if not c.error and c.score > 0]
+    log(f"Round 3: " + ", ".join(f"{c.skill} (boss {c.boss:,.0f}, clear {c.clear:,.0f})" for c in third))
+    if req.get("skill"):
+        return ranked + sorted(third, key=lambda c: -c.score)   # the named skill stays first
+    return sorted(ranked + third, key=lambda c: -c.score)
 
 
 RANDOM_TRIES = 8   # random builds tried at once; the first that works (in random order, not the strongest) is kept
