@@ -423,7 +423,8 @@ def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], m
     setups = []
     todo = [(n, "spirit") for n in spirit] + [(u["skill"], "utility") for u in utility]
     known = {n for n, _ in todo} | set(skip) | set(movement)
-    todo += [(n, "granted") for n in by_skill if n not in known and not n.startswith(("Weapon", "Default"))]
+    # (A skill PoB saves without a name, like Thorns, is skipped: there's nothing to show or support.)
+    todo += [(n, "granted") for n in by_skill if n and n.strip() and n not in known and not n.startswith(("Weapon", "Default"))]
     for name, role in todo:
         gid = by_skill.get(name)
         if not gid:
