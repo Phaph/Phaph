@@ -238,6 +238,8 @@ tr.best td { color: var(--brass-hi); }
 .gem.main img { width: 30px; height: 30px; }
 .gem[data-gem] { cursor: help; }
 .skillgems { display: grid; gap: 8px; }
+.wset { display: flex; gap: 8px; justify-content: center; margin-bottom: 10px; }
+.wset-tab.on { border-color: var(--brass); color: var(--brass-hi); }
 .overview { background: var(--iron); border: 1px solid var(--edge); border-radius: 4px; padding: 14px 18px; display: grid; gap: 6px; max-width: 900px; }
 .overview h3 { margin: 0; }
 .overview h4 { margin: 8px 0 0; font: 600 15px/1.3 var(--body); color: var(--brass); }
@@ -584,7 +586,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-17.4";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-17.5";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -1716,8 +1718,15 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const DOLL_AREA = { "Weapon 1": "w1", "Weapon 2": "w2", "Helmet": "he", "Body Armour": "bo", "Gloves": "gl", "Boots": "bt",
     "Amulet": "am", "Ring 1": "r1", "Ring 2": "r2", "Belt": "be" };
   let dollItems = [], dollPrev = null, tipPinned = null;
-  function dollHtml(list, prev) {
+  // Weapon set 2 (a boss weapon swap): tabs above the figure switch which weapons sit in the weapon slots.
+  // "Weapon 1 Swap" / "Weapon 2 Swap" items take the main-hand / off-hand places when set 2 is shown.
+  const SWAP_OF = { "Weapon 1 Swap": "Weapon 1", "Weapon 2 Swap": "Weapon 2" };
+  let dollSet = 1;
+  function dollHtml(list, prev, set = dollSet) {
     dollItems = list; dollPrev = prev;
+    const hasSwap = list.some(g => SWAP_OF[g.slot]);
+    if (!hasSwap) set = 1;
+    dollSet = set;
     const cell = (g, i, area) => {
       const name = g.unique ? g.unique.split(",")[0] : g.base;
       const url = g.unique ? ICONS.uniques?.[name] : ICONS.bases?.[name];
@@ -1727,13 +1736,24 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
         ${area ? `style="grid-area:${area}"` : ""} data-i="${i}" aria-label="${esc(g.slot)}: ${esc(name)}${g.unique ? " (unique)" : ""}">
         <span class="slot-art">${url ? img(url) : slotShape(g.slot)}</span><span class="slot-label">${esc(g.slot)}</span></button>`;
     };
+    // Where each item goes for the set shown: set 2's swap weapons take the weapon places, set 1's weapons step out.
+    const place = g => SWAP_OF[g.slot] ? (set === 2 ? SWAP_OF[g.slot] : null)
+      : (set === 2 && (g.slot === "Weapon 1" || g.slot === "Weapon 2")) ? null : g.slot;
     const main = [], extra = [];
-    list.forEach((g, i) => (DOLL_AREA[g.slot] ? main : extra).push([g, i]));
-    const empty = Object.entries(DOLL_AREA).filter(([slot]) => !list.some(g => g.slot === slot))
+    list.forEach((g, i) => { const at = place(g); if (at === null) return; (DOLL_AREA[at] ? main : extra).push([g, i, at]); });
+    const empty = Object.entries(DOLL_AREA).filter(([slot]) => !main.some(([, , at]) => at === slot))
       .map(([slot, area]) => `<span class="slot empty" style="grid-area:${area}" title="${esc(slot)}: nothing needed"></span>`).join("");
-    return `<div class="doll-wrap"><div class="doll">${main.map(([g, i]) => cell(g, i, DOLL_AREA[g.slot])).join("")}${empty}</div>
+    const tabs = hasSwap ? `<div class="wset" role="tablist" aria-label="Weapon set">${[1, 2].map(n =>
+      `<button type="button" class="chip wset-tab${n === set ? " on" : ""}" role="tab" aria-selected="${n === set}" data-set="${n}">Weapon set ${n}</button>`).join("")}</div>` : "";
+    return `<div class="doll-wrap">${tabs}<div class="doll">${main.map(([g, i, at]) => cell(g, i, DOLL_AREA[at])).join("")}${empty}</div>
       ${extra.length ? `<div class="doll-extra">${extra.map(([g, i]) => cell(g, i)).join("")}</div>` : ""}</div>`;
   }
+  document.addEventListener("click", e => {
+    const tab = e.target.closest?.(".wset-tab"); if (!tab) return;
+    const wrap = tab.closest(".doll-wrap"); if (!wrap) return;
+    hideTip(true);
+    wrap.outerHTML = dollHtml(dollItems, dollPrev, +tab.dataset.set);
+  });
   const tipEl = () => {
     let t = document.getElementById("itemTip");
     if (!t) { t = document.createElement("div"); t.id = "itemTip"; t.className = "itemtip"; t.hidden = true; document.body.appendChild(t); }
