@@ -664,6 +664,17 @@ function handlers.set_main(cmd)
 end
 
 -- Config tab inputs, e.g. {"customMods": "...", "enemyIsBoss": "Pinnacle"}
+-- PoB's "Custom Modifiers" box (one mod per line), for experiments like the Breaker's stat scans. Empty text clears it.
+function handlers.set_custom_mods(cmd)
+	local cfg = build.configTab
+	local set = cfg.configSets[cfg.activeConfigSetId]
+	set.customModsList = { { title = "Breaker", enabled = true, text = cmd.text or "" } }
+	cfg:BuildModList()
+	build.buildFlag = true
+	frame()
+	return {}
+end
+
 function handlers.set_config(cmd)
 	for k, v in pairs(cmd.values or {}) do
 		build.configTab.input[k] = v

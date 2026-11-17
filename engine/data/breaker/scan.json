@@ -1,0 +1,7664 @@
+{
+ "74928ed168834f66b72bfa306594dd93": {
+  "skill": "Fireball",
+  "ascendancy": "Blood Mage",
+  "dps": 2562219.7777873,
+  "stats": {
+   "mana": {
+    "base": 504,
+    "steps": [
+     {
+      "add": 252,
+      "stat": 743,
+      "dps": 2562220,
+      "elasticity": 0.0
+     },
+     {
+      "add": 504,
+      "stat": 982,
+      "dps": 2562220,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2789,
+    "steps": [
+     {
+      "add": 1394,
+      "stat": 4448,
+      "dps": 2697695,
+      "elasticity": 0.11
+     },
+     {
+      "add": 2789,
+      "stat": 6108,
+      "dps": 2837276,
+      "elasticity": 0.13
+     }
+    ],
+    "elasticity": 0.13
+   },
+   "energy shield": {
+    "base": 2295,
+    "steps": [
+     {
+      "add": 1148,
+      "stat": 7093,
+      "dps": 2562220,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2295,
+      "stat": 11888,
+      "dps": 2562220,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 137,
+    "steps": [
+     {
+      "add": 68,
+      "stat": 205,
+      "dps": 2578641,
+      "elasticity": 0.016
+     },
+     {
+      "add": 137,
+      "stat": 274,
+      "dps": 2590957,
+      "elasticity": 0.016
+     }
+    ],
+    "elasticity": 0.016
+   },
+   "dexterity": {
+    "base": 27,
+    "steps": [
+     {
+      "add": 14,
+      "stat": 41,
+      "dps": 2562220,
+      "elasticity": 0.0
+     },
+     {
+      "add": 27,
+      "stat": 54,
+      "dps": 2562220,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 60,
+    "steps": [
+     {
+      "add": 30,
+      "stat": 90,
+      "dps": 2562220,
+      "elasticity": 0.0
+     },
+     {
+      "add": 60,
+      "stat": 120,
+      "dps": 2562220,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 2562220,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 2562220,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 10838,
+    "steps": [
+     {
+      "add": 5419,
+      "stat": 29208,
+      "dps": 2562220,
+      "elasticity": 0.0
+     },
+     {
+      "add": 10838,
+      "stat": 47579,
+      "dps": 2562220,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 3381,
+    "steps": [
+     {
+      "add": 1690,
+      "stat": 8299,
+      "dps": 2562220,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3381,
+      "stat": 13220,
+      "dps": 2562220,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 81.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 89.2,
+      "dps": 2726148,
+      "elasticity": 0.707
+     },
+     {
+      "add": 100,
+      "stat": 96.8,
+      "dps": 2889970,
+      "elasticity": 0.715
+     }
+    ],
+    "elasticity": 0.715
+   },
+   "speed": {
+    "base": 1.7,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.0,
+      "dps": 3028301,
+      "elasticity": 0.877
+     },
+     {
+      "add": 100,
+      "stat": 2.4,
+      "dps": 3504711,
+      "elasticity": 0.884
+     }
+    ],
+    "elasticity": 0.884
+   }
+  },
+  "red_flags": []
+ },
+ "f18689634978400280741d22367afb05": {
+  "skill": "Skeletal Sniper",
+  "ascendancy": "Lich",
+  "dps": 473627.64154361,
+  "stats": {
+   "mana": {
+    "base": 680,
+    "steps": [
+     {
+      "add": 340,
+      "stat": 1058,
+      "dps": 479770,
+      "elasticity": 0.029
+     },
+     {
+      "add": 680,
+      "stat": 1435,
+      "dps": 485910,
+      "elasticity": 0.034
+     }
+    ],
+    "elasticity": 0.034
+   },
+   "life": {
+    "base": 2024,
+    "steps": [
+     {
+      "add": 1012,
+      "stat": 3140,
+      "dps": 473628,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2024,
+      "stat": 4255,
+      "dps": 473628,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 853,
+    "steps": [
+     {
+      "add": 426,
+      "stat": 2859,
+      "dps": 473628,
+      "elasticity": 0.0
+     },
+     {
+      "add": 853,
+      "stat": 4870,
+      "dps": 473628,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 170,
+    "steps": [
+     {
+      "add": 85,
+      "stat": 255,
+      "dps": 473628,
+      "elasticity": 0.0
+     },
+     {
+      "add": 170,
+      "stat": 340,
+      "dps": 473628,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 7,
+    "steps": [
+     {
+      "add": 4,
+      "stat": 11,
+      "dps": 473628,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7,
+      "stat": 14,
+      "dps": 473628,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 40,
+    "steps": [
+     {
+      "add": 20,
+      "stat": 60,
+      "dps": 475160,
+      "elasticity": 0.008
+     },
+     {
+      "add": 40,
+      "stat": 80,
+      "dps": 475160,
+      "elasticity": 0.005
+     }
+    ],
+    "elasticity": 0.008
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 473628,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 473628,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 12799,
+    "steps": [
+     {
+      "add": 6400,
+      "stat": 38143,
+      "dps": 473628,
+      "elasticity": 0.0
+     },
+     {
+      "add": 12799,
+      "stat": 63483,
+      "dps": 473628,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1126,
+    "steps": [
+     {
+      "add": 563,
+      "stat": 1689,
+      "dps": 473628,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1126,
+      "stat": 2252,
+      "dps": 473628,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   }
+  },
+  "red_flags": []
+ },
+ "f885a5715e514fc0b82bbda6c2a2500b": {
+  "skill": "Ember Fusillade",
+  "ascendancy": "Oracle",
+  "dps": 9194128.8824423,
+  "stats": {
+   "mana": {
+    "base": 429,
+    "steps": [
+     {
+      "add": 214,
+      "stat": 633,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 429,
+      "stat": 837,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2392,
+    "steps": [
+     {
+      "add": 1196,
+      "stat": 3744,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2392,
+      "stat": 5095,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 1172,
+    "steps": [
+     {
+      "add": 586,
+      "stat": 2754,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1172,
+      "stat": 4336,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 179,
+    "steps": [
+     {
+      "add": 90,
+      "stat": 269,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 179,
+      "stat": 358,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 7,
+    "steps": [
+     {
+      "add": 4,
+      "stat": 11,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7,
+      "stat": 14,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 21,
+    "steps": [
+     {
+      "add": 10,
+      "stat": 31,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 21,
+      "stat": 42,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 12811,
+    "steps": [
+     {
+      "add": 6406,
+      "stat": 42599,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 12811,
+      "stat": 72382,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 123,
+    "steps": [
+     {
+      "add": 62,
+      "stat": 185,
+      "dps": 9194129,
+      "elasticity": 0.0
+     },
+     {
+      "add": 123,
+      "stat": 246,
+      "dps": 9194129,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "speed": {
+    "base": 5.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 6.2,
+      "dps": 11104020,
+      "elasticity": 1.0
+     },
+     {
+      "add": 100,
+      "stat": 7.3,
+      "dps": 12969496,
+      "elasticity": 1.0
+     }
+    ],
+    "elasticity": 1.0
+   }
+  },
+  "red_flags": []
+ },
+ "efa4785aea76432fa0a057c48a19e15a": {
+  "skill": "Skeletal Storm Mage",
+  "ascendancy": "Invoker",
+  "dps": 120521.85531145,
+  "stats": {
+   "mana": {
+    "base": 607,
+    "steps": [
+     {
+      "add": 304,
+      "stat": 926,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 607,
+      "stat": 1244,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1726,
+    "steps": [
+     {
+      "add": 863,
+      "stat": 2632,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1726,
+      "stat": 3539,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 1267,
+    "steps": [
+     {
+      "add": 634,
+      "stat": 3568,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1267,
+      "stat": 5866,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 167,
+    "steps": [
+     {
+      "add": 84,
+      "stat": 251,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 167,
+      "stat": 334,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 121,
+    "steps": [
+     {
+      "add": 60,
+      "stat": 186,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 121,
+      "stat": 252,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 39,
+    "steps": [
+     {
+      "add": 20,
+      "stat": 59,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 39,
+      "stat": 78,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 160,
+    "steps": [
+     {
+      "add": 80,
+      "stat": 240,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 160,
+      "stat": 320,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 132,
+    "steps": [
+     {
+      "add": 66,
+      "stat": 198,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 132,
+      "stat": 264,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 24613,
+    "steps": [
+     {
+      "add": 12306,
+      "stat": 154675,
+      "dps": 120522,
+      "elasticity": 0.0
+     },
+     {
+      "add": 24613,
+      "stat": 284748,
+      "dps": 120522,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   }
+  },
+  "red_flags": []
+ },
+ "c4b82701c9b74ad288dfe72665e2ee53": {
+  "skill": "Skeletal Storm Mage",
+  "ascendancy": "Martial Artist",
+  "dps": 175478.2317154,
+  "stats": {
+   "mana": {
+    "base": 580,
+    "steps": [
+     {
+      "add": 290,
+      "stat": 884,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 580,
+      "stat": 1189,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1926,
+    "steps": [
+     {
+      "add": 963,
+      "stat": 2937,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1926,
+      "stat": 3948,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 713,
+    "steps": [
+     {
+      "add": 356,
+      "stat": 1802,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 713,
+      "stat": 2895,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 207,
+    "steps": [
+     {
+      "add": 104,
+      "stat": 311,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 207,
+      "stat": 414,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 21,
+    "steps": [
+     {
+      "add": 10,
+      "stat": 31,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 21,
+      "stat": 42,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 26,
+    "steps": [
+     {
+      "add": 13,
+      "stat": 39,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 26,
+      "stat": 52,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 200,
+    "steps": [
+     {
+      "add": 100,
+      "stat": 300,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 200,
+      "stat": 400,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 3508,
+    "steps": [
+     {
+      "add": 1754,
+      "stat": 7401,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3508,
+      "stat": 11295,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1999,
+    "steps": [
+     {
+      "add": 1000,
+      "stat": 3749,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1999,
+      "stat": 5497,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   }
+  },
+  "red_flags": []
+ },
+ "e77b335005cf440abec1f2dccdfad7ee": {
+  "skill": "Skeletal Storm Mage",
+  "ascendancy": "Martial Artist",
+  "dps": 175478.2317154,
+  "stats": {
+   "mana": {
+    "base": 580,
+    "steps": [
+     {
+      "add": 290,
+      "stat": 884,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 580,
+      "stat": 1189,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1785,
+    "steps": [
+     {
+      "add": 892,
+      "stat": 2722,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1785,
+      "stat": 3659,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 906,
+    "steps": [
+     {
+      "add": 453,
+      "stat": 2237,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 906,
+      "stat": 3569,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 207,
+    "steps": [
+     {
+      "add": 104,
+      "stat": 311,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 207,
+      "stat": 414,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 21,
+    "steps": [
+     {
+      "add": 10,
+      "stat": 31,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 21,
+      "stat": 42,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 26,
+    "steps": [
+     {
+      "add": 13,
+      "stat": 39,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 26,
+      "stat": 52,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 200,
+    "steps": [
+     {
+      "add": 100,
+      "stat": 300,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 200,
+      "stat": 400,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 3128,
+    "steps": [
+     {
+      "add": 1564,
+      "stat": 6225,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3128,
+      "stat": 9322,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 2364,
+    "steps": [
+     {
+      "add": 1182,
+      "stat": 4811,
+      "dps": 175478,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2364,
+      "stat": 7257,
+      "dps": 175478,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   }
+  },
+  "red_flags": []
+ },
+ "e7428d8453e7446cb947f703b0029c8d": {
+  "skill": "Hexblast",
+  "ascendancy": "Blood Mage",
+  "dps": 22162018.874874,
+  "stats": {
+   "mana": {
+    "base": 751,
+    "steps": [
+     {
+      "add": 376,
+      "stat": 1109,
+      "dps": 22897475,
+      "elasticity": 0.084
+     },
+     {
+      "add": 751,
+      "stat": 1465,
+      "dps": 23449063,
+      "elasticity": 0.084
+     }
+    ],
+    "elasticity": 0.084
+   },
+   "life": {
+    "base": 2286,
+    "steps": [
+     {
+      "add": 1143,
+      "stat": 3646,
+      "dps": 23079716,
+      "elasticity": 0.087
+     },
+     {
+      "add": 2286,
+      "stat": 5006,
+      "dps": 24031402,
+      "elasticity": 0.103
+     }
+    ],
+    "elasticity": 0.103
+   },
+   "strength": {
+    "base": 212,
+    "steps": [
+     {
+      "add": 106,
+      "stat": 318,
+      "dps": 22331963,
+      "elasticity": 0.019
+     },
+     {
+      "add": 212,
+      "stat": 424,
+      "dps": 22501907,
+      "elasticity": 0.022
+     }
+    ],
+    "elasticity": 0.022
+   },
+   "dexterity": {
+    "base": 12,
+    "steps": [
+     {
+      "add": 6,
+      "stat": 18,
+      "dps": 22162019,
+      "elasticity": 0.0
+     },
+     {
+      "add": 12,
+      "stat": 24,
+      "dps": 22162019,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 40,
+    "steps": [
+     {
+      "add": 20,
+      "stat": 60,
+      "dps": 22162019,
+      "elasticity": 0.0
+     },
+     {
+      "add": 40,
+      "stat": 80,
+      "dps": 22345886,
+      "elasticity": 0.012
+     }
+    ],
+    "elasticity": 0.012
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 22162019,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 22162019,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 7629,
+    "steps": [
+     {
+      "add": 3814,
+      "stat": 19071,
+      "dps": 22162019,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7629,
+      "stat": 30516,
+      "dps": 22162019,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1798,
+    "steps": [
+     {
+      "add": 899,
+      "stat": 2697,
+      "dps": 22162019,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1798,
+      "stat": 3596,
+      "dps": 22162019,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 90.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 98.2,
+      "dps": 23662419,
+      "elasticity": 0.825
+     },
+     {
+      "add": 100,
+      "stat": 100,
+      "dps": 24012500,
+      "elasticity": 0.826
+     }
+    ],
+    "elasticity": 0.826
+   },
+   "speed": {
+    "base": 2.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.7,
+      "dps": 26337091,
+      "elasticity": 0.987
+     },
+     {
+      "add": 100,
+      "stat": 3.1,
+      "dps": 30414458,
+      "elasticity": 0.988
+     }
+    ],
+    "elasticity": 0.988
+   }
+  },
+  "red_flags": []
+ },
+ "fec188d52fde42a0a588e4e4dba9260b": {
+  "skill": "Fireball",
+  "ascendancy": "Infernalist",
+  "dps": 1700867.9390245,
+  "stats": {
+   "mana": {
+    "base": 515,
+    "steps": [
+     {
+      "add": 258,
+      "stat": 785,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 515,
+      "stat": 1055,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2116,
+    "steps": [
+     {
+      "add": 1058,
+      "stat": 3375,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2116,
+      "stat": 4634,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 444,
+    "steps": [
+     {
+      "add": 222,
+      "stat": 893,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 444,
+      "stat": 1341,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 137,
+    "steps": [
+     {
+      "add": 68,
+      "stat": 205,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 137,
+      "stat": 274,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 27,
+    "steps": [
+     {
+      "add": 14,
+      "stat": 41,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 27,
+      "stat": 54,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 40,
+    "steps": [
+     {
+      "add": 20,
+      "stat": 60,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 40,
+      "stat": 80,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 3970,
+    "steps": [
+     {
+      "add": 1985,
+      "stat": 7860,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3970,
+      "stat": 11751,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1765,
+    "steps": [
+     {
+      "add": 882,
+      "stat": 2965,
+      "dps": 1700868,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1765,
+      "stat": 4166,
+      "dps": 1700868,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 50.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 56.2,
+      "dps": 1802442,
+      "elasticity": 0.553
+     },
+     {
+      "add": 100,
+      "stat": 61.8,
+      "dps": 1903389,
+      "elasticity": 0.563
+     }
+    ],
+    "elasticity": 0.563
+   },
+   "speed": {
+    "base": 2.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.3,
+      "dps": 1963934,
+      "elasticity": 0.856
+     },
+     {
+      "add": 100,
+      "stat": 2.7,
+      "dps": 2219965,
+      "elasticity": 0.863
+     }
+    ],
+    "elasticity": 0.863
+   }
+  },
+  "red_flags": []
+ },
+ "9452370b616d4f5c9fdfba2069aa8f2e": {
+  "skill": "Tempest Flurry",
+  "ascendancy": "Invoker",
+  "dps": 2613639.0261741,
+  "stats": {
+   "mana": {
+    "base": 506,
+    "steps": [
+     {
+      "add": 253,
+      "stat": 772,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 506,
+      "stat": 1037,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2277,
+    "steps": [
+     {
+      "add": 1138,
+      "stat": 3563,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2277,
+      "stat": 4850,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 210,
+    "steps": [
+     {
+      "add": 105,
+      "stat": 331,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 210,
+      "stat": 452,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 187,
+    "steps": [
+     {
+      "add": 94,
+      "stat": 281,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 187,
+      "stat": 374,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 61,
+    "steps": [
+     {
+      "add": 30,
+      "stat": 91,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 61,
+      "stat": 122,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 36,
+    "steps": [
+     {
+      "add": 18,
+      "stat": 54,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 36,
+      "stat": 72,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 3608,
+    "steps": [
+     {
+      "add": 1804,
+      "stat": 6278,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3608,
+      "stat": 8948,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1178,
+    "steps": [
+     {
+      "add": 589,
+      "stat": 1855,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1178,
+      "stat": 2532,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 86.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 93.8,
+      "dps": 2829637,
+      "elasticity": 0.903
+     },
+     {
+      "add": 100,
+      "stat": 100,
+      "dps": 3020664,
+      "elasticity": 0.956
+     }
+    ],
+    "elasticity": 0.956
+   },
+   "speed": {
+    "base": 4.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 5.1,
+      "dps": 3254617,
+      "elasticity": 1.036
+     },
+     {
+      "add": 100,
+      "stat": 6.1,
+      "dps": 3862526,
+      "elasticity": 1.011
+     }
+    ],
+    "elasticity": 1.036
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "61022ae8878d4295a5297483e1f7eead": {
+  "skill": "Killing Palm",
+  "ascendancy": "Invoker",
+  "dps": 17126030.797317,
+  "stats": {
+   "mana": {
+    "base": 688,
+    "steps": [
+     {
+      "add": 344,
+      "stat": 1049,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 688,
+      "stat": 1410,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2059,
+    "steps": [
+     {
+      "add": 1030,
+      "stat": 3223,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2059,
+      "stat": 4386,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 214,
+    "steps": [
+     {
+      "add": 107,
+      "stat": 337,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 214,
+      "stat": 460,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 175,
+    "steps": [
+     {
+      "add": 88,
+      "stat": 263,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 175,
+      "stat": 350,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 94,
+    "steps": [
+     {
+      "add": 47,
+      "stat": 141,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 94,
+      "stat": 188,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 36,
+    "steps": [
+     {
+      "add": 18,
+      "stat": 54,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 36,
+      "stat": 72,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 6918,
+    "steps": [
+     {
+      "add": 3459,
+      "stat": 17295,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 6918,
+      "stat": 27672,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1546,
+    "steps": [
+     {
+      "add": 773,
+      "stat": 2435,
+      "dps": 17126031,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1546,
+      "stat": 3323,
+      "dps": 17126031,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 77.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 85.4,
+      "dps": 18592404,
+      "elasticity": 0.836
+     },
+     {
+      "add": 100,
+      "stat": 93.4,
+      "dps": 20058612,
+      "elasticity": 0.842
+     }
+    ],
+    "elasticity": 0.842
+   },
+   "speed": {
+    "base": 2.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.3,
+      "dps": 21106898,
+      "elasticity": 0.916
+     },
+     {
+      "add": 100,
+      "stat": 4.0,
+      "dps": 24902028,
+      "elasticity": 0.904
+     }
+    ],
+    "elasticity": 0.916
+   }
+  },
+  "red_flags": []
+ },
+ "bd67dabf2c324f488783a3eeb0c5295e": {
+  "skill": "Skyfall",
+  "ascendancy": "Infernalist",
+  "dps": 36094288.990462,
+  "stats": {
+   "mana": {
+    "base": 525,
+    "steps": [
+     {
+      "add": 262,
+      "stat": 800,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 525,
+      "stat": 1076,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2259,
+    "steps": [
+     {
+      "add": 1130,
+      "stat": 3569,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2259,
+      "stat": 4879,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 225,
+    "steps": [
+     {
+      "add": 112,
+      "stat": 337,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 225,
+      "stat": 450,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 17,
+    "steps": [
+     {
+      "add": 8,
+      "stat": 25,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 17,
+      "stat": 34,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 45,
+    "steps": [
+     {
+      "add": 22,
+      "stat": 67,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 45,
+      "stat": 90,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 8888,
+    "steps": [
+     {
+      "add": 4444,
+      "stat": 21109,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 8888,
+      "stat": 33330,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 845,
+    "steps": [
+     {
+      "add": 422,
+      "stat": 1161,
+      "dps": 36094289,
+      "elasticity": 0.0
+     },
+     {
+      "add": 845,
+      "stat": 1478,
+      "dps": 36094289,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 86.5,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 93.5,
+      "dps": 37337297,
+      "elasticity": 0.435
+     },
+     {
+      "add": 100,
+      "stat": 100,
+      "dps": 38279354,
+      "elasticity": 0.406
+     }
+    ],
+    "elasticity": 0.435
+   },
+   "speed": {
+    "base": 0.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 0.7,
+      "dps": 37863972,
+      "elasticity": 0.548
+     },
+     {
+      "add": 100,
+      "stat": 0.7,
+      "dps": 39268530,
+      "elasticity": 0.574
+     }
+    ],
+    "elasticity": 0.574
+   }
+  },
+  "red_flags": []
+ },
+ "1cf54c7a7d1748d79a5a61baa42813fd": {
+  "skill": "Hexblast",
+  "ascendancy": "Blood Mage",
+  "dps": 36026007.744731,
+  "stats": {
+   "mana": {
+    "base": 723,
+    "steps": [
+     {
+      "add": 362,
+      "stat": 1104,
+      "dps": 37036875,
+      "elasticity": 0.065
+     },
+     {
+      "add": 723,
+      "stat": 1483,
+      "dps": 37795020,
+      "elasticity": 0.067
+     }
+    ],
+    "elasticity": 0.067
+   },
+   "life": {
+    "base": 2077,
+    "steps": [
+     {
+      "add": 1038,
+      "stat": 3229,
+      "dps": 36943177,
+      "elasticity": 0.057
+     },
+     {
+      "add": 2077,
+      "stat": 4382,
+      "dps": 37860347,
+      "elasticity": 0.067
+     }
+    ],
+    "elasticity": 0.067
+   },
+   "strength": {
+    "base": 187,
+    "steps": [
+     {
+      "add": 94,
+      "stat": 281,
+      "dps": 36185516,
+      "elasticity": 0.011
+     },
+     {
+      "add": 187,
+      "stat": 374,
+      "dps": 36345023,
+      "elasticity": 0.013
+     }
+    ],
+    "elasticity": 0.013
+   },
+   "dexterity": {
+    "base": 17,
+    "steps": [
+     {
+      "add": 8,
+      "stat": 25,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 17,
+      "stat": 34,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 45,
+    "steps": [
+     {
+      "add": 22,
+      "stat": 67,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 45,
+      "stat": 90,
+      "dps": 36278711,
+      "elasticity": 0.01
+     }
+    ],
+    "elasticity": 0.01
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 11379,
+    "steps": [
+     {
+      "add": 5690,
+      "stat": 28449,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 11379,
+      "stat": 45516,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1295,
+    "steps": [
+     {
+      "add": 648,
+      "stat": 2040,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1295,
+      "stat": 2784,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 93,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 100,
+      "dps": 38385425,
+      "elasticity": 0.874
+     },
+     {
+      "add": 100,
+      "stat": 100,
+      "dps": 38385425,
+      "elasticity": 0.874
+     }
+    ],
+    "elasticity": 0.874
+   },
+   "speed": {
+    "base": 2.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.6,
+      "dps": 42944815,
+      "elasticity": 0.989
+     },
+     {
+      "add": 100,
+      "stat": 3.0,
+      "dps": 50027396,
+      "elasticity": 0.989
+     }
+    ],
+    "elasticity": 0.989
+   }
+  },
+  "red_flags": []
+ },
+ "efbb8686892a4ca4b0fb568b345e54fe": {
+  "skill": "Tempest Flurry",
+  "ascendancy": "Invoker",
+  "dps": 2613639.0261741,
+  "stats": {
+   "mana": {
+    "base": 506,
+    "steps": [
+     {
+      "add": 253,
+      "stat": 772,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 506,
+      "stat": 1037,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2277,
+    "steps": [
+     {
+      "add": 1138,
+      "stat": 3563,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2277,
+      "stat": 4850,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 210,
+    "steps": [
+     {
+      "add": 105,
+      "stat": 331,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 210,
+      "stat": 452,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 187,
+    "steps": [
+     {
+      "add": 94,
+      "stat": 281,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 187,
+      "stat": 374,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 61,
+    "steps": [
+     {
+      "add": 30,
+      "stat": 91,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 61,
+      "stat": 122,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 36,
+    "steps": [
+     {
+      "add": 18,
+      "stat": 54,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 36,
+      "stat": 72,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 3608,
+    "steps": [
+     {
+      "add": 1804,
+      "stat": 6278,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3608,
+      "stat": 8948,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1178,
+    "steps": [
+     {
+      "add": 589,
+      "stat": 1855,
+      "dps": 2613639,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1178,
+      "stat": 2532,
+      "dps": 2613639,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 86.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 93.8,
+      "dps": 2829637,
+      "elasticity": 0.903
+     },
+     {
+      "add": 100,
+      "stat": 100,
+      "dps": 3020664,
+      "elasticity": 0.956
+     }
+    ],
+    "elasticity": 0.956
+   },
+   "speed": {
+    "base": 4.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 5.1,
+      "dps": 3254617,
+      "elasticity": 1.036
+     },
+     {
+      "add": 100,
+      "stat": 6.1,
+      "dps": 3862526,
+      "elasticity": 1.011
+     }
+    ],
+    "elasticity": 1.036
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "b462692f337f47258014650dd60c788b": {
+  "skill": "Hexblast",
+  "ascendancy": "Blood Mage",
+  "dps": 36026007.744731,
+  "stats": {
+   "mana": {
+    "base": 723,
+    "steps": [
+     {
+      "add": 362,
+      "stat": 1104,
+      "dps": 37036875,
+      "elasticity": 0.065
+     },
+     {
+      "add": 723,
+      "stat": 1483,
+      "dps": 37795020,
+      "elasticity": 0.067
+     }
+    ],
+    "elasticity": 0.067
+   },
+   "life": {
+    "base": 2077,
+    "steps": [
+     {
+      "add": 1038,
+      "stat": 3229,
+      "dps": 36943177,
+      "elasticity": 0.057
+     },
+     {
+      "add": 2077,
+      "stat": 4382,
+      "dps": 37860347,
+      "elasticity": 0.067
+     }
+    ],
+    "elasticity": 0.067
+   },
+   "strength": {
+    "base": 187,
+    "steps": [
+     {
+      "add": 94,
+      "stat": 281,
+      "dps": 36185516,
+      "elasticity": 0.011
+     },
+     {
+      "add": 187,
+      "stat": 374,
+      "dps": 36345023,
+      "elasticity": 0.013
+     }
+    ],
+    "elasticity": 0.013
+   },
+   "dexterity": {
+    "base": 17,
+    "steps": [
+     {
+      "add": 8,
+      "stat": 25,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 17,
+      "stat": 34,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 45,
+    "steps": [
+     {
+      "add": 22,
+      "stat": 67,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 45,
+      "stat": 90,
+      "dps": 36278711,
+      "elasticity": 0.01
+     }
+    ],
+    "elasticity": 0.01
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 11379,
+    "steps": [
+     {
+      "add": 5690,
+      "stat": 28449,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 11379,
+      "stat": 45516,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1295,
+    "steps": [
+     {
+      "add": 648,
+      "stat": 2040,
+      "dps": 36026008,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1295,
+      "stat": 2784,
+      "dps": 36026008,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 93,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 100,
+      "dps": 38385425,
+      "elasticity": 0.874
+     },
+     {
+      "add": 100,
+      "stat": 100,
+      "dps": 38385425,
+      "elasticity": 0.874
+     }
+    ],
+    "elasticity": 0.874
+   },
+   "speed": {
+    "base": 2.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.6,
+      "dps": 42944815,
+      "elasticity": 0.989
+     },
+     {
+      "add": 100,
+      "stat": 3.0,
+      "dps": 50027396,
+      "elasticity": 0.989
+     }
+    ],
+    "elasticity": 0.989
+   }
+  },
+  "red_flags": []
+ },
+ "83ea9a6173f54e598194bebdbf9f0f7b": {
+  "skill": "Flicker Strike",
+  "ascendancy": "Acolyte of Chayula",
+  "dps": 19210432.31175,
+  "stats": {
+   "mana": {
+    "base": 575,
+    "steps": [
+     {
+      "add": 288,
+      "stat": 878,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 575,
+      "stat": 1179,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2363,
+    "steps": [
+     {
+      "add": 1182,
+      "stat": 3698,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2363,
+      "stat": 5033,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 262,
+    "steps": [
+     {
+      "add": 131,
+      "stat": 393,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 262,
+      "stat": 524,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 223,
+    "steps": [
+     {
+      "add": 112,
+      "stat": 335,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 223,
+      "stat": 446,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 51,
+    "steps": [
+     {
+      "add": 26,
+      "stat": 77,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 51,
+      "stat": 102,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 69,
+    "steps": [
+     {
+      "add": 34,
+      "stat": 103,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 69,
+      "stat": 138,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 10257,
+    "steps": [
+     {
+      "add": 5128,
+      "stat": 25641,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 10257,
+      "stat": 41028,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 644,
+    "steps": [
+     {
+      "add": 322,
+      "stat": 966,
+      "dps": 19210432,
+      "elasticity": 0.0
+     },
+     {
+      "add": 644,
+      "stat": 1288,
+      "dps": 19210432,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 90.5,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 100,
+      "dps": 20985089,
+      "elasticity": 0.885
+     },
+     {
+      "add": 100,
+      "stat": 100,
+      "dps": 21250690,
+      "elasticity": 1.011
+     }
+    ],
+    "elasticity": 1.011
+   },
+   "speed": {
+    "base": 7.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 8.7,
+      "dps": 23816375,
+      "elasticity": 0.974
+     },
+     {
+      "add": 100,
+      "stat": 10.4,
+      "dps": 28411957,
+      "elasticity": 0.973
+     }
+    ],
+    "elasticity": 0.974
+   }
+  },
+  "red_flags": [
+   "crit chance"
+  ]
+ },
+ "4c9d0060edcd46d783cb29f9ffab6497": {
+  "skill": "Flicker Strike",
+  "ascendancy": "Acolyte of Chayula",
+  "dps": 19095541.225243,
+  "stats": {
+   "mana": {
+    "base": 861,
+    "steps": [
+     {
+      "add": 430,
+      "stat": 1313,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 861,
+      "stat": 1765,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2561,
+    "steps": [
+     {
+      "add": 1280,
+      "stat": 4161,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2561,
+      "stat": 5763,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 236,
+    "steps": [
+     {
+      "add": 118,
+      "stat": 354,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 236,
+      "stat": 472,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 64,
+    "steps": [
+     {
+      "add": 32,
+      "stat": 96,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 64,
+      "stat": 128,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 49,
+    "steps": [
+     {
+      "add": 24,
+      "stat": 73,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 49,
+      "stat": 98,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 10752,
+    "steps": [
+     {
+      "add": 5376,
+      "stat": 26880,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 10752,
+      "stat": 43008,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 123,
+    "steps": [
+     {
+      "add": 62,
+      "stat": 185,
+      "dps": 19095541,
+      "elasticity": 0.0
+     },
+     {
+      "add": 123,
+      "stat": 246,
+      "dps": 19095541,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 77.9,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 85.6,
+      "dps": 20732388,
+      "elasticity": 0.873
+     },
+     {
+      "add": 100,
+      "stat": 93.3,
+      "dps": 22369074,
+      "elasticity": 0.877
+     }
+    ],
+    "elasticity": 0.877
+   },
+   "speed": {
+    "base": 6.3,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 8.0,
+      "dps": 24216483,
+      "elasticity": 0.986
+     },
+     {
+      "add": 100,
+      "stat": 9.8,
+      "dps": 29260357,
+      "elasticity": 0.979
+     }
+    ],
+    "elasticity": 0.986
+   }
+  },
+  "red_flags": []
+ },
+ "672cff3c150f4919ad9e19323ce02e0f": {
+  "skill": "Skyfall",
+  "ascendancy": "Stormweaver",
+  "dps": 5080828.2111457,
+  "stats": {
+   "mana": {
+    "base": 769,
+    "steps": [
+     {
+      "add": 384,
+      "stat": 1172,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 769,
+      "stat": 1576,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2354,
+    "steps": [
+     {
+      "add": 1177,
+      "stat": 3590,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2354,
+      "stat": 4826,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 202,
+    "steps": [
+     {
+      "add": 101,
+      "stat": 303,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 202,
+      "stat": 404,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 17,
+    "steps": [
+     {
+      "add": 8,
+      "stat": 25,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 17,
+      "stat": 34,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 45,
+    "steps": [
+     {
+      "add": 22,
+      "stat": 67,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 45,
+      "stat": 90,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 4900,
+    "steps": [
+     {
+      "add": 2450,
+      "stat": 8526,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 4900,
+      "stat": 12152,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 344,
+    "steps": [
+     {
+      "add": 172,
+      "stat": 516,
+      "dps": 5080828,
+      "elasticity": 0.0
+     },
+     {
+      "add": 344,
+      "stat": 688,
+      "dps": 5080828,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 78.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 85.4,
+      "dps": 5458881,
+      "elasticity": 0.839
+     },
+     {
+      "add": 100,
+      "stat": 92.4,
+      "dps": 5836933,
+      "elasticity": 0.844
+     }
+    ],
+    "elasticity": 0.844
+   },
+   "speed": {
+    "base": 0.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 0.7,
+      "dps": 5824285,
+      "elasticity": 1.406
+     },
+     {
+      "add": 100,
+      "stat": 0.7,
+      "dps": 6471549,
+      "elasticity": 1.466
+     }
+    ],
+    "elasticity": 1.466
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "4fd405c441cc4890b341b70342f1a373": {
+  "skill": "Hexblast",
+  "ascendancy": "Smith of Kitava",
+  "dps": 4280820.8881938,
+  "stats": {
+   "mana": {
+    "base": 539,
+    "steps": [
+     {
+      "add": 270,
+      "stat": 795,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 539,
+      "stat": 1051,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2856,
+    "steps": [
+     {
+      "add": 1428,
+      "stat": 4469,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2856,
+      "stat": 6083,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 186,
+    "steps": [
+     {
+      "add": 93,
+      "stat": 279,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 186,
+      "stat": 372,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 377,
+    "steps": [
+     {
+      "add": 188,
+      "stat": 574,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 377,
+      "stat": 773,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 37,
+    "steps": [
+     {
+      "add": 18,
+      "stat": 55,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 37,
+      "stat": 74,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 17,
+    "steps": [
+     {
+      "add": 8,
+      "stat": 25,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 17,
+      "stat": 34,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 7973,
+    "steps": [
+     {
+      "add": 3986,
+      "stat": 20529,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7973,
+      "stat": 33088,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 13188,
+    "steps": [
+     {
+      "add": 6594,
+      "stat": 32970,
+      "dps": 4280821,
+      "elasticity": 0.0
+     },
+     {
+      "add": 13188,
+      "stat": 52752,
+      "dps": 4280821,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 28.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 31.9,
+      "dps": 4596735,
+      "elasticity": 0.612
+     },
+     {
+      "add": 100,
+      "stat": 35.4,
+      "dps": 4911956,
+      "elasticity": 0.623
+     }
+    ],
+    "elasticity": 0.623
+   },
+   "speed": {
+    "base": 2.9,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.4,
+      "dps": 4990504,
+      "elasticity": 0.97
+     },
+     {
+      "add": 100,
+      "stat": 3.9,
+      "dps": 5699371,
+      "elasticity": 0.972
+     }
+    ],
+    "elasticity": 0.972
+   }
+  },
+  "red_flags": []
+ },
+ "cbbb2b112ecb4c7e9b7093112d1762b3": {
+  "skill": "Spark",
+  "ascendancy": "Titan",
+  "dps": 1630641.2776723,
+  "stats": {
+   "mana": {
+    "base": 422,
+    "steps": [
+     {
+      "add": 211,
+      "stat": 622,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 422,
+      "stat": 823,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 3286,
+    "steps": [
+     {
+      "add": 1643,
+      "stat": 5270,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3286,
+      "stat": 7253,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 183,
+    "steps": [
+     {
+      "add": 92,
+      "stat": 275,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 183,
+      "stat": 366,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 388,
+    "steps": [
+     {
+      "add": 194,
+      "stat": 597,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 388,
+      "stat": 807,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 7,
+    "steps": [
+     {
+      "add": 4,
+      "stat": 11,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7,
+      "stat": 14,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 17,
+    "steps": [
+     {
+      "add": 8,
+      "stat": 25,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 17,
+      "stat": 34,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 8655,
+    "steps": [
+     {
+      "add": 4328,
+      "stat": 17224,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 8655,
+      "stat": 25792,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1279,
+    "steps": [
+     {
+      "add": 640,
+      "stat": 1919,
+      "dps": 1630641,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1279,
+      "stat": 2558,
+      "dps": 1630641,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 48.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 52.5,
+      "dps": 1745185,
+      "elasticity": 0.757
+     },
+     {
+      "add": 100,
+      "stat": 57.0,
+      "dps": 1859728,
+      "elasticity": 0.765
+     }
+    ],
+    "elasticity": 0.765
+   },
+   "speed": {
+    "base": 3.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.6,
+      "dps": 1956514,
+      "elasticity": 1.004
+     },
+     {
+      "add": 100,
+      "stat": 4.2,
+      "dps": 2287727,
+      "elasticity": 1.0
+     }
+    ],
+    "elasticity": 1.004
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "d79fda4d2b274120a2b7442012459b39": {
+  "skill": "Hexblast",
+  "ascendancy": "Lich",
+  "dps": 5266706.2273766,
+  "stats": {
+   "mana": {
+    "base": 1040,
+    "steps": [
+     {
+      "add": 520,
+      "stat": 1566,
+      "dps": 5639828,
+      "elasticity": 0.167
+     },
+     {
+      "add": 1040,
+      "stat": 2091,
+      "dps": 6012944,
+      "elasticity": 0.19
+     }
+    ],
+    "elasticity": 0.19
+   },
+   "life": {
+    "base": 2529,
+    "steps": [
+     {
+      "add": 1264,
+      "stat": 3932,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2529,
+      "stat": 5336,
+      "dps": 5266706,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 281,
+    "steps": [
+     {
+      "add": 140,
+      "stat": 494,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 281,
+      "stat": 708,
+      "dps": 5266706,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 229,
+    "steps": [
+     {
+      "add": 114,
+      "stat": 343,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 229,
+      "stat": 458,
+      "dps": 5266706,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 7,
+    "steps": [
+     {
+      "add": 4,
+      "stat": 11,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7,
+      "stat": 14,
+      "dps": 5266706,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 50,
+    "steps": [
+     {
+      "add": 25,
+      "stat": 75,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 50,
+      "stat": 100,
+      "dps": 5341338,
+      "elasticity": 0.02
+     }
+    ],
+    "elasticity": 0.02
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 5266706,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 5590,
+    "steps": [
+     {
+      "add": 2795,
+      "stat": 10900,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 5590,
+      "stat": 16211,
+      "dps": 5266706,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1175,
+    "steps": [
+     {
+      "add": 588,
+      "stat": 1880,
+      "dps": 5266706,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1175,
+      "stat": 2585,
+      "dps": 5266706,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 29.5,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 33.0,
+      "dps": 5633153,
+      "elasticity": 0.599
+     },
+     {
+      "add": 100,
+      "stat": 36.5,
+      "dps": 5999599,
+      "elasticity": 0.611
+     }
+    ],
+    "elasticity": 0.611
+   },
+   "speed": {
+    "base": 2.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.1,
+      "dps": 6260424,
+      "elasticity": 1.0
+     },
+     {
+      "add": 100,
+      "stat": 3.6,
+      "dps": 7254143,
+      "elasticity": 1.0
+     }
+    ],
+    "elasticity": 1.0
+   }
+  },
+  "red_flags": []
+ },
+ "81e96071954b440c86f157823b2097ba": {
+  "skill": "Hexblast",
+  "ascendancy": "Blood Mage",
+  "dps": 14869345.1889,
+  "stats": {
+   "mana": {
+    "base": 1011,
+    "steps": [
+     {
+      "add": 506,
+      "stat": 1542,
+      "dps": 15556827,
+      "elasticity": 0.107
+     },
+     {
+      "add": 1011,
+      "stat": 2073,
+      "dps": 16244292,
+      "elasticity": 0.123
+     }
+    ],
+    "elasticity": 0.123
+   },
+   "life": {
+    "base": 3091,
+    "steps": [
+     {
+      "add": 1546,
+      "stat": 4807,
+      "dps": 15440940,
+      "elasticity": 0.085
+     },
+     {
+      "add": 3091,
+      "stat": 6522,
+      "dps": 15996204,
+      "elasticity": 0.098
+     }
+    ],
+    "elasticity": 0.098
+   },
+   "energy shield": {
+    "base": 547,
+    "steps": [
+     {
+      "add": 274,
+      "stat": 821,
+      "dps": 14869345,
+      "elasticity": 0.0
+     },
+     {
+      "add": 547,
+      "stat": 1094,
+      "dps": 14869345,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 255,
+    "steps": [
+     {
+      "add": 128,
+      "stat": 383,
+      "dps": 14967333,
+      "elasticity": 0.016
+     },
+     {
+      "add": 255,
+      "stat": 510,
+      "dps": 15065321,
+      "elasticity": 0.019
+     }
+    ],
+    "elasticity": 0.019
+   },
+   "dexterity": {
+    "base": 17,
+    "steps": [
+     {
+      "add": 8,
+      "stat": 25,
+      "dps": 14869345,
+      "elasticity": 0.0
+     },
+     {
+      "add": 17,
+      "stat": 34,
+      "dps": 14869345,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 45,
+    "steps": [
+     {
+      "add": 22,
+      "stat": 67,
+      "dps": 14869345,
+      "elasticity": 0.0
+     },
+     {
+      "add": 45,
+      "stat": 90,
+      "dps": 15006828,
+      "elasticity": 0.013
+     }
+    ],
+    "elasticity": 0.013
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 14869345,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 14869345,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 9285,
+    "steps": [
+     {
+      "add": 4642,
+      "stat": 23211,
+      "dps": 14869345,
+      "elasticity": 0.0
+     },
+     {
+      "add": 9285,
+      "stat": 37140,
+      "dps": 14869345,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 12023,
+    "steps": [
+     {
+      "add": 6012,
+      "stat": 30600,
+      "dps": 14869345,
+      "elasticity": 0.0
+     },
+     {
+      "add": 12023,
+      "stat": 49174,
+      "dps": 14869345,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 76.3,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 83.8,
+      "dps": 16101540,
+      "elasticity": 0.85
+     },
+     {
+      "add": 100,
+      "stat": 91.3,
+      "dps": 17333632,
+      "elasticity": 0.855
+     }
+    ],
+    "elasticity": 0.855
+   },
+   "speed": {
+    "base": 2.5,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.0,
+      "dps": 17764519,
+      "elasticity": 0.986
+     },
+     {
+      "add": 100,
+      "stat": 3.5,
+      "dps": 20659214,
+      "elasticity": 0.987
+     }
+    ],
+    "elasticity": 0.987
+   }
+  },
+  "red_flags": []
+ },
+ "93d832ed309e4dd2ae7ef1b682b76cfc": {
+  "skill": "Spark",
+  "ascendancy": "Infernalist",
+  "dps": 5916185.5935391,
+  "stats": {
+   "mana": {
+    "base": 633,
+    "steps": [
+     {
+      "add": 316,
+      "stat": 965,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 633,
+      "stat": 1298,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2857,
+    "steps": [
+     {
+      "add": 1428,
+      "stat": 4485,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2857,
+      "stat": 6114,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 140,
+    "steps": [
+     {
+      "add": 70,
+      "stat": 192,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 140,
+      "stat": 245,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 263,
+    "steps": [
+     {
+      "add": 132,
+      "stat": 395,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 263,
+      "stat": 526,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 27,
+    "steps": [
+     {
+      "add": 14,
+      "stat": 41,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 27,
+      "stat": 54,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 45,
+    "steps": [
+     {
+      "add": 22,
+      "stat": 67,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 45,
+      "stat": 90,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 12029,
+    "steps": [
+     {
+      "add": 6014,
+      "stat": 28567,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 12029,
+      "stat": 45108,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 7625,
+    "steps": [
+     {
+      "add": 3812,
+      "stat": 16202,
+      "dps": 5916186,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7625,
+      "stat": 24782,
+      "dps": 5916186,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 54.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 58.7,
+      "dps": 6328744,
+      "elasticity": 0.845
+     },
+     {
+      "add": 100,
+      "stat": 63.2,
+      "dps": 6740582,
+      "elasticity": 0.849
+     }
+    ],
+    "elasticity": 0.849
+   },
+   "speed": {
+    "base": 3.3,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.9,
+      "dps": 6921259,
+      "elasticity": 0.932
+     },
+     {
+      "add": 100,
+      "stat": 4.5,
+      "dps": 7940346,
+      "elasticity": 0.932
+     }
+    ],
+    "elasticity": 0.932
+   }
+  },
+  "red_flags": []
+ },
+ "dfe09616fab442e580f16cd4a0860a38": {
+  "skill": "Whirling Assault",
+  "ascendancy": "Martial Artist",
+  "dps": 1365103.4447535,
+  "stats": {
+   "mana": {
+    "base": 1146,
+    "steps": [
+     {
+      "add": 573,
+      "stat": 1747,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1146,
+      "stat": 2349,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2556,
+    "steps": [
+     {
+      "add": 1278,
+      "stat": 3975,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2556,
+      "stat": 5393,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 298,
+    "steps": [
+     {
+      "add": 149,
+      "stat": 447,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 298,
+      "stat": 596,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 54,
+    "steps": [
+     {
+      "add": 27,
+      "stat": 81,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 54,
+      "stat": 108,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 117,
+    "steps": [
+     {
+      "add": 58,
+      "stat": 175,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 117,
+      "stat": 234,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 11913,
+    "steps": [
+     {
+      "add": 5956,
+      "stat": 29781,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 11913,
+      "stat": 47652,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 2441,
+    "steps": [
+     {
+      "add": 1220,
+      "stat": 3844,
+      "dps": 1365103,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2441,
+      "stat": 5249,
+      "dps": 1365103,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 72.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 80.0,
+      "dps": 1468616,
+      "elasticity": 0.748
+     },
+     {
+      "add": 100,
+      "stat": 87.5,
+      "dps": 1571893,
+      "elasticity": 0.755
+     }
+    ],
+    "elasticity": 0.755
+   },
+   "speed": {
+    "base": 0.7,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 0.8,
+      "dps": 1711216,
+      "elasticity": 3.153
+     },
+     {
+      "add": 100,
+      "stat": 0.8,
+      "dps": 2050470,
+      "elasticity": 3.427
+     }
+    ],
+    "elasticity": 3.427
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "cd91e05a805842e3b2e386c2213def33": {
+  "skill": "Rapid Shot",
+  "ascendancy": "Oracle",
+  "dps": 10058560.038433,
+  "stats": {
+   "mana": {
+    "base": 1145,
+    "steps": [
+     {
+      "add": 572,
+      "stat": 1688,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1145,
+      "stat": 2233,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2336,
+    "steps": [
+     {
+      "add": 1168,
+      "stat": 3656,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2336,
+      "stat": 4975,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 207,
+    "steps": [
+     {
+      "add": 104,
+      "stat": 340,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 207,
+      "stat": 472,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 180,
+    "steps": [
+     {
+      "add": 90,
+      "stat": 270,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 180,
+      "stat": 360,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 170,
+    "steps": [
+     {
+      "add": 85,
+      "stat": 255,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 170,
+      "stat": 340,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 169,
+    "steps": [
+     {
+      "add": 84,
+      "stat": 253,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 169,
+      "stat": 338,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 6345,
+    "steps": [
+     {
+      "add": 3172,
+      "stat": 12911,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 6345,
+      "stat": 19479,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 7,
+    "steps": [
+     {
+      "add": 4,
+      "stat": 11,
+      "dps": 10058560,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7,
+      "stat": 14,
+      "dps": 10058560,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "speed": {
+    "base": 23.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 27.9,
+      "dps": 13723652,
+      "elasticity": 1.604
+     },
+     {
+      "add": 100,
+      "stat": 28.6,
+      "dps": 14458564,
+      "elasticity": 1.665
+     }
+    ],
+    "elasticity": 1.665
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "bb8a378e5efe4188b06ea2795a277319": {
+  "skill": "High Velocity Rounds",
+  "ascendancy": "Gemling Legionnaire",
+  "dps": 873222.9008597,
+  "stats": {
+   "mana": {
+    "base": 771,
+    "steps": [
+     {
+      "add": 386,
+      "stat": 1176,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 771,
+      "stat": 1580,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2591,
+    "steps": [
+     {
+      "add": 1296,
+      "stat": 4159,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2591,
+      "stat": 5726,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 128,
+    "steps": [
+     {
+      "add": 64,
+      "stat": 194,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 128,
+      "stat": 260,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 158,
+    "steps": [
+     {
+      "add": 79,
+      "stat": 239,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 158,
+      "stat": 320,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 162,
+    "steps": [
+     {
+      "add": 81,
+      "stat": 245,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 162,
+      "stat": 329,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 14052,
+    "steps": [
+     {
+      "add": 7026,
+      "stat": 35833,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 14052,
+      "stat": 57614,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 623,
+    "steps": [
+     {
+      "add": 312,
+      "stat": 966,
+      "dps": 873223,
+      "elasticity": 0.0
+     },
+     {
+      "add": 623,
+      "stat": 1308,
+      "dps": 873223,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 44.5,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 49.9,
+      "dps": 928226,
+      "elasticity": 0.528
+     },
+     {
+      "add": 100,
+      "stat": 55.4,
+      "dps": 977812,
+      "elasticity": 0.516
+     }
+    ],
+    "elasticity": 0.528
+   },
+   "speed": {
+    "base": 1.3,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.7,
+      "dps": 1039434,
+      "elasticity": 0.596
+     },
+     {
+      "add": 100,
+      "stat": 2.2,
+      "dps": 1173934,
+      "elasticity": 0.574
+     }
+    ],
+    "elasticity": 0.596
+   }
+  },
+  "red_flags": []
+ },
+ "990b3c79593c4b2294169fcbbdc747fc": {
+  "skill": "Snap",
+  "ascendancy": "Amazon",
+  "dps": 4758431.1543673,
+  "stats": {
+   "mana": {
+    "base": 699,
+    "steps": [
+     {
+      "add": 350,
+      "stat": 1032,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 699,
+      "stat": 1363,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2237,
+    "steps": [
+     {
+      "add": 1118,
+      "stat": 3410,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2237,
+      "stat": 4585,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 292,
+    "steps": [
+     {
+      "add": 146,
+      "stat": 401,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 292,
+      "stat": 511,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 214,
+    "steps": [
+     {
+      "add": 107,
+      "stat": 321,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 214,
+      "stat": 428,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 96,
+    "steps": [
+     {
+      "add": 48,
+      "stat": 144,
+      "dps": 4758441,
+      "elasticity": 0.0
+     },
+     {
+      "add": 96,
+      "stat": 192,
+      "dps": 4758441,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 163,
+    "steps": [
+     {
+      "add": 82,
+      "stat": 245,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 163,
+      "stat": 326,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 11992,
+    "steps": [
+     {
+      "add": 5996,
+      "stat": 31839,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 11992,
+      "stat": 51686,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 3646,
+    "steps": [
+     {
+      "add": 1823,
+      "stat": 6180,
+      "dps": 4758431,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3646,
+      "stat": 8714,
+      "dps": 4758431,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 67.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 73.5,
+      "dps": 5134620,
+      "elasticity": 0.821
+     },
+     {
+      "add": 100,
+      "stat": 80.0,
+      "dps": 5510809,
+      "elasticity": 0.827
+     }
+    ],
+    "elasticity": 0.827
+   },
+   "speed": {
+    "base": 1.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.4,
+      "dps": 4790838,
+      "elasticity": 1.01
+     },
+     {
+      "add": 100,
+      "stat": 1.4,
+      "dps": 4791154,
+      "elasticity": 1.019
+     }
+    ],
+    "elasticity": 1.019
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "4b5e627543cf4f698ee01cae23ee5aca": {
+  "skill": "Sunder",
+  "ascendancy": "Pathfinder",
+  "dps": 2838366.3467228,
+  "stats": {
+   "mana": {
+    "base": 771,
+    "steps": [
+     {
+      "add": 386,
+      "stat": 1176,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 771,
+      "stat": 1580,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2402,
+    "steps": [
+     {
+      "add": 1201,
+      "stat": 3807,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2402,
+      "stat": 5212,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 191,
+    "steps": [
+     {
+      "add": 96,
+      "stat": 263,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 191,
+      "stat": 335,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 221,
+    "steps": [
+     {
+      "add": 110,
+      "stat": 331,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 221,
+      "stat": 442,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 89,
+    "steps": [
+     {
+      "add": 44,
+      "stat": 133,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 89,
+      "stat": 178,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 162,
+    "steps": [
+     {
+      "add": 81,
+      "stat": 243,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 162,
+      "stat": 324,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 4333,
+    "steps": [
+     {
+      "add": 2166,
+      "stat": 7040,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 4333,
+      "stat": 9749,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1450,
+    "steps": [
+     {
+      "add": 725,
+      "stat": 2458,
+      "dps": 2838366,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1450,
+      "stat": 3465,
+      "dps": 2838366,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 64.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 71.7,
+      "dps": 3067856,
+      "elasticity": 0.763
+     },
+     {
+      "add": 100,
+      "stat": 78.7,
+      "dps": 3292652,
+      "elasticity": 0.764
+     }
+    ],
+    "elasticity": 0.764
+   },
+   "speed": {
+    "base": 0.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.0,
+      "dps": 3281003,
+      "elasticity": 0.565
+     },
+     {
+      "add": 100,
+      "stat": 1.2,
+      "dps": 3633784,
+      "elasticity": 0.537
+     }
+    ],
+    "elasticity": 0.565
+   }
+  },
+  "red_flags": []
+ },
+ "541f4ddcef7a4425ad3f97e0d513416f": {
+  "skill": "Rain of Arrows",
+  "ascendancy": "Shaman",
+  "dps": 6676323.6631205,
+  "stats": {
+   "mana": {
+    "base": 986,
+    "steps": [
+     {
+      "add": 493,
+      "stat": 1454,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 986,
+      "stat": 1923,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1874,
+    "steps": [
+     {
+      "add": 937,
+      "stat": 2886,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1874,
+      "stat": 3898,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 43,
+    "steps": [
+     {
+      "add": 22,
+      "stat": 70,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 43,
+      "stat": 95,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 198,
+    "steps": [
+     {
+      "add": 99,
+      "stat": 297,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 198,
+      "stat": 396,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 164,
+    "steps": [
+     {
+      "add": 82,
+      "stat": 246,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 164,
+      "stat": 328,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 7410,
+    "steps": [
+     {
+      "add": 3705,
+      "stat": 14487,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 7410,
+      "stat": 21563,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 16993,
+    "steps": [
+     {
+      "add": 8496,
+      "stat": 48598,
+      "dps": 6676324,
+      "elasticity": 0.0
+     },
+     {
+      "add": 16993,
+      "stat": 80207,
+      "dps": 6676324,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 37.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 42.4,
+      "dps": 7211290,
+      "elasticity": 0.62
+     },
+     {
+      "add": 100,
+      "stat": 47.3,
+      "dps": 7745803,
+      "elasticity": 0.633
+     }
+    ],
+    "elasticity": 0.633
+   }
+  },
+  "red_flags": []
+ },
+ "119b1f2aadbb4bfb8b7fe0b3cf38f0c4": {
+  "skill": "Furious Slam",
+  "ascendancy": "Shaman",
+  "dps": 634538.48484928,
+  "stats": {
+   "mana": {
+    "base": 1330,
+    "steps": [
+     {
+      "add": 665,
+      "stat": 2029,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1330,
+      "stat": 2727,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2174,
+    "steps": [
+     {
+      "add": 1087,
+      "stat": 3315,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2174,
+      "stat": 4456,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 158,
+    "steps": [
+     {
+      "add": 79,
+      "stat": 245,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 158,
+      "stat": 332,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 116,
+    "steps": [
+     {
+      "add": 58,
+      "stat": 174,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 116,
+      "stat": 232,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 166,
+    "steps": [
+     {
+      "add": 83,
+      "stat": 249,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 166,
+      "stat": 332,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 231,
+    "steps": [
+     {
+      "add": 116,
+      "stat": 347,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 231,
+      "stat": 462,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 8103,
+    "steps": [
+     {
+      "add": 4052,
+      "stat": 17342,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 8103,
+      "stat": 26578,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 8,
+    "steps": [
+     {
+      "add": 4,
+      "stat": 12,
+      "dps": 634538,
+      "elasticity": 0.0
+     },
+     {
+      "add": 8,
+      "stat": 17,
+      "dps": 634538,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 31.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 35.7,
+      "dps": 678148,
+      "elasticity": 0.494
+     },
+     {
+      "add": 100,
+      "stat": 40.2,
+      "dps": 721758,
+      "elasticity": 0.509
+     }
+    ],
+    "elasticity": 0.509
+   },
+   "speed": {
+    "base": 2.1,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.7,
+      "dps": 822674,
+      "elasticity": 1.101
+     },
+     {
+      "add": 100,
+      "stat": 3.2,
+      "dps": 1010809,
+      "elasticity": 1.092
+     }
+    ],
+    "elasticity": 1.101
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "38de7650eb9e423e9f2eeafc812a98ba": {
+  "skill": "Siege Ballista",
+  "ascendancy": "Tactician",
+  "dps": 106530.42643144,
+  "stats": {
+   "mana": {
+    "base": 775,
+    "steps": [
+     {
+      "add": 388,
+      "stat": 1182,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 775,
+      "stat": 1589,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1550,
+    "steps": [
+     {
+      "add": 775,
+      "stat": 2364,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1550,
+      "stat": 3177,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 155,
+    "steps": [
+     {
+      "add": 78,
+      "stat": 233,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 155,
+      "stat": 310,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 95,
+    "steps": [
+     {
+      "add": 48,
+      "stat": 143,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 95,
+      "stat": 190,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 162,
+    "steps": [
+     {
+      "add": 81,
+      "stat": 247,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 162,
+      "stat": 332,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 164,
+    "steps": [
+     {
+      "add": 82,
+      "stat": 246,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 164,
+      "stat": 328,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 344,
+    "steps": [
+     {
+      "add": 172,
+      "stat": 585,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 344,
+      "stat": 826,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 9619,
+    "steps": [
+     {
+      "add": 4810,
+      "stat": 36362,
+      "dps": 106530,
+      "elasticity": 0.0
+     },
+     {
+      "add": 9619,
+      "stat": 63100,
+      "dps": 106530,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 6.5,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 9,
+      "dps": 110019,
+      "elasticity": 0.099
+     },
+     {
+      "add": 100,
+      "stat": 11.5,
+      "dps": 113507,
+      "elasticity": 0.111
+     }
+    ],
+    "elasticity": 0.111
+   },
+   "speed": {
+    "base": 1.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.5,
+      "dps": 136109,
+      "elasticity": 1.283
+     },
+     {
+      "add": 100,
+      "stat": 1.8,
+      "dps": 162913,
+      "elasticity": 1.21
+     }
+    ],
+    "elasticity": 1.283
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "d8b79e6ccafe485a93cb24ca4b0fcb91": {
+  "skill": "Arc",
+  "ascendancy": "Blood Mage",
+  "dps": 120572.66892377,
+  "stats": {
+   "mana": {
+    "base": 897,
+    "steps": [
+     {
+      "add": 448,
+      "stat": 1367,
+      "dps": 134870,
+      "elasticity": 0.266
+     },
+     {
+      "add": 897,
+      "stat": 1839,
+      "dps": 149167,
+      "elasticity": 0.296
+     }
+    ],
+    "elasticity": 0.296
+   },
+   "life": {
+    "base": 1719,
+    "steps": [
+     {
+      "add": 860,
+      "stat": 2648,
+      "dps": 124653,
+      "elasticity": 0.077
+     },
+     {
+      "add": 1719,
+      "stat": 3576,
+      "dps": 128960,
+      "elasticity": 0.092
+     }
+    ],
+    "elasticity": 0.092
+   },
+   "energy shield": {
+    "base": 287,
+    "steps": [
+     {
+      "add": 144,
+      "stat": 431,
+      "dps": 120573,
+      "elasticity": 0.0
+     },
+     {
+      "add": 287,
+      "stat": 574,
+      "dps": 120573,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 52,
+    "steps": [
+     {
+      "add": 26,
+      "stat": 78,
+      "dps": 120799,
+      "elasticity": 0.005
+     },
+     {
+      "add": 52,
+      "stat": 104,
+      "dps": 121026,
+      "elasticity": 0.005
+     }
+    ],
+    "elasticity": 0.005
+   },
+   "dexterity": {
+    "base": 176,
+    "steps": [
+     {
+      "add": 88,
+      "stat": 264,
+      "dps": 120573,
+      "elasticity": 0.0
+     },
+     {
+      "add": 176,
+      "stat": 352,
+      "dps": 120573,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 180,
+    "steps": [
+     {
+      "add": 90,
+      "stat": 270,
+      "dps": 126292,
+      "elasticity": 0.114
+     },
+     {
+      "add": 180,
+      "stat": 360,
+      "dps": 132013,
+      "elasticity": 0.131
+     }
+    ],
+    "elasticity": 0.131
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 120573,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 120573,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 418,
+    "steps": [
+     {
+      "add": 209,
+      "stat": 627,
+      "dps": 120573,
+      "elasticity": 0.0
+     },
+     {
+      "add": 418,
+      "stat": 836,
+      "dps": 120573,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 72,
+    "steps": [
+     {
+      "add": 36,
+      "stat": 108,
+      "dps": 120573,
+      "elasticity": 0.0
+     },
+     {
+      "add": 72,
+      "stat": 144,
+      "dps": 120573,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 81.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 89.2,
+      "dps": 128632,
+      "elasticity": 0.737
+     },
+     {
+      "add": 100,
+      "stat": 96.8,
+      "dps": 136567,
+      "elasticity": 0.739
+     }
+    ],
+    "elasticity": 0.739
+   },
+   "speed": {
+    "base": 1.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.8,
+      "dps": 152289,
+      "elasticity": 0.937
+     },
+     {
+      "add": 100,
+      "stat": 2.2,
+      "dps": 182832,
+      "elasticity": 0.937
+     }
+    ],
+    "elasticity": 0.937
+   }
+  },
+  "red_flags": []
+ },
+ "a8dce593fcad40449884a5ad0cdf7378": {
+  "skill": "Hexblast",
+  "ascendancy": "Blood Mage",
+  "dps": 9375012.8087162,
+  "stats": {
+   "mana": {
+    "base": 1172,
+    "steps": [
+     {
+      "add": 586,
+      "stat": 1787,
+      "dps": 9892561,
+      "elasticity": 0.127
+     },
+     {
+      "add": 1172,
+      "stat": 2402,
+      "dps": 10496343,
+      "elasticity": 0.157
+     }
+    ],
+    "elasticity": 0.157
+   },
+   "life": {
+    "base": 3316,
+    "steps": [
+     {
+      "add": 1658,
+      "stat": 5256,
+      "dps": 9790101,
+      "elasticity": 0.094
+     },
+     {
+      "add": 3316,
+      "stat": 7196,
+      "dps": 10194547,
+      "elasticity": 0.108
+     }
+    ],
+    "elasticity": 0.108
+   },
+   "energy shield": {
+    "base": 840,
+    "steps": [
+     {
+      "add": 420,
+      "stat": 1260,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 840,
+      "stat": 1680,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 126,
+    "steps": [
+     {
+      "add": 63,
+      "stat": 189,
+      "dps": 9406943,
+      "elasticity": 0.008
+     },
+     {
+      "add": 126,
+      "stat": 252,
+      "dps": 9438873,
+      "elasticity": 0.01
+     }
+    ],
+    "elasticity": 0.01
+   },
+   "dexterity": {
+    "base": 182,
+    "steps": [
+     {
+      "add": 91,
+      "stat": 273,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 182,
+      "stat": 364,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 190,
+    "steps": [
+     {
+      "add": 95,
+      "stat": 285,
+      "dps": 9547529,
+      "elasticity": 0.045
+     },
+     {
+      "add": 190,
+      "stat": 380,
+      "dps": 9720033,
+      "elasticity": 0.052
+     }
+    ],
+    "elasticity": 0.052
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 8921,
+    "steps": [
+     {
+      "add": 4460,
+      "stat": 25200,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 8921,
+      "stat": 41482,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 697,
+    "steps": [
+     {
+      "add": 348,
+      "stat": 1045,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 697,
+      "stat": 1394,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 83.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 90.8,
+      "dps": 10094844,
+      "elasticity": 0.858
+     },
+     {
+      "add": 100,
+      "stat": 98.2,
+      "dps": 10814627,
+      "elasticity": 0.862
+     }
+    ],
+    "elasticity": 0.862
+   },
+   "speed": {
+    "base": 2.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.1,
+      "dps": 11133747,
+      "elasticity": 0.988
+     },
+     {
+      "add": 100,
+      "stat": 3.6,
+      "dps": 12892248,
+      "elasticity": 0.989
+     }
+    ],
+    "elasticity": 0.989
+   }
+  },
+  "red_flags": []
+ },
+ "3ae6835292174dfdbc241252e997aaf9": {
+  "skill": "Solar Orb",
+  "ascendancy": "Blood Mage",
+  "dps": 1460188.1400442,
+  "stats": {
+   "mana": {
+    "base": 813,
+    "steps": [
+     {
+      "add": 406,
+      "stat": 1239,
+      "dps": 1460188,
+      "elasticity": 0.0
+     },
+     {
+      "add": 813,
+      "stat": 1666,
+      "dps": 1460188,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2157,
+    "steps": [
+     {
+      "add": 1078,
+      "stat": 3386,
+      "dps": 1501690,
+      "elasticity": 0.062
+     },
+     {
+      "add": 2157,
+      "stat": 4616,
+      "dps": 1544920,
+      "elasticity": 0.074
+     }
+    ],
+    "elasticity": 0.074
+   },
+   "strength": {
+    "base": 155,
+    "steps": [
+     {
+      "add": 78,
+      "stat": 233,
+      "dps": 1465376,
+      "elasticity": 0.009
+     },
+     {
+      "add": 155,
+      "stat": 310,
+      "dps": 1472293,
+      "elasticity": 0.012
+     }
+    ],
+    "elasticity": 0.012
+   },
+   "dexterity": {
+    "base": 169,
+    "steps": [
+     {
+      "add": 84,
+      "stat": 253,
+      "dps": 1460188,
+      "elasticity": 0.0
+     },
+     {
+      "add": 169,
+      "stat": 338,
+      "dps": 1460188,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 182,
+    "steps": [
+     {
+      "add": 91,
+      "stat": 273,
+      "dps": 1460188,
+      "elasticity": 0.0
+     },
+     {
+      "add": 182,
+      "stat": 364,
+      "dps": 1460188,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 1460188,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 1460188,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 10437,
+    "steps": [
+     {
+      "add": 5218,
+      "stat": 25778,
+      "dps": 1460188,
+      "elasticity": 0.0
+     },
+     {
+      "add": 10437,
+      "stat": 41122,
+      "dps": 1460188,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 687,
+    "steps": [
+     {
+      "add": 344,
+      "stat": 1031,
+      "dps": 1460188,
+      "elasticity": 0.0
+     },
+     {
+      "add": 687,
+      "stat": 1374,
+      "dps": 1460188,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 82.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 89.5,
+      "dps": 1525752,
+      "elasticity": 0.502
+     },
+     {
+      "add": 100,
+      "stat": 97.0,
+      "dps": 1578184,
+      "elasticity": 0.463
+     }
+    ],
+    "elasticity": 0.502
+   },
+   "speed": {
+    "base": 1.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.7,
+      "dps": 1460188,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 2.2,
+      "dps": 1460188,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   }
+  },
+  "red_flags": []
+ },
+ "5d43bd0d812242c1b75cfcab7e07b94a": {
+  "skill": "Whirlwind Lance",
+  "ascendancy": "Invoker",
+  "dps": 576190.98107662,
+  "stats": {
+   "mana": {
+    "base": 771,
+    "steps": [
+     {
+      "add": 386,
+      "stat": 1176,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 771,
+      "stat": 1580,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1478,
+    "steps": [
+     {
+      "add": 739,
+      "stat": 2254,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1478,
+      "stat": 3030,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 131,
+    "steps": [
+     {
+      "add": 66,
+      "stat": 207,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 131,
+      "stat": 282,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 61,
+    "steps": [
+     {
+      "add": 30,
+      "stat": 91,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 61,
+      "stat": 122,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 173,
+    "steps": [
+     {
+      "add": 86,
+      "stat": 259,
+      "dps": 581764,
+      "elasticity": 0.024
+     },
+     {
+      "add": 173,
+      "stat": 346,
+      "dps": 589195,
+      "elasticity": 0.032
+     }
+    ],
+    "elasticity": 0.032
+   },
+   "intelligence": {
+    "base": 162,
+    "steps": [
+     {
+      "add": 81,
+      "stat": 243,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 162,
+      "stat": 324,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 604,
+    "steps": [
+     {
+      "add": 302,
+      "stat": 906,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 604,
+      "stat": 1208,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 696,
+    "steps": [
+     {
+      "add": 348,
+      "stat": 1271,
+      "dps": 576191,
+      "elasticity": 0.0
+     },
+     {
+      "add": 696,
+      "stat": 1845,
+      "dps": 576191,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 21.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 24.9,
+      "dps": 616209,
+      "elasticity": 0.442
+     },
+     {
+      "add": 100,
+      "stat": 28.4,
+      "dps": 656227,
+      "elasticity": 0.459
+     }
+    ],
+    "elasticity": 0.459
+   },
+   "speed": {
+    "base": 2.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.4,
+      "dps": 693230,
+      "elasticity": 0.958
+     },
+     {
+      "add": 100,
+      "stat": 4.0,
+      "dps": 808412,
+      "elasticity": 0.961
+     }
+    ],
+    "elasticity": 0.961
+   }
+  },
+  "red_flags": []
+ },
+ "915ee9499bad492498537f46ef3d6275": {
+  "skill": "Entangle",
+  "ascendancy": "Shaman",
+  "dps": 36777.934332185,
+  "stats": {
+   "mana": {
+    "base": 760,
+    "steps": [
+     {
+      "add": 380,
+      "stat": 1159,
+      "dps": 39944,
+      "elasticity": 0.196
+     },
+     {
+      "add": 760,
+      "stat": 1558,
+      "dps": 43109,
+      "elasticity": 0.221
+     }
+    ],
+    "elasticity": 0.221
+   },
+   "life": {
+    "base": 1457,
+    "steps": [
+     {
+      "add": 728,
+      "stat": 2222,
+      "dps": 36778,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1457,
+      "stat": 2987,
+      "dps": 36778,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 95,
+    "steps": [
+     {
+      "add": 48,
+      "stat": 147,
+      "dps": 36778,
+      "elasticity": 0.0
+     },
+     {
+      "add": 95,
+      "stat": 199,
+      "dps": 36778,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 86,
+    "steps": [
+     {
+      "add": 43,
+      "stat": 129,
+      "dps": 36778,
+      "elasticity": 0.0
+     },
+     {
+      "add": 86,
+      "stat": 172,
+      "dps": 36778,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 42,
+    "steps": [
+     {
+      "add": 21,
+      "stat": 63,
+      "dps": 36778,
+      "elasticity": 0.0
+     },
+     {
+      "add": 42,
+      "stat": 84,
+      "dps": 36778,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 115,
+    "steps": [
+     {
+      "add": 58,
+      "stat": 173,
+      "dps": 37567,
+      "elasticity": 0.052
+     },
+     {
+      "add": 115,
+      "stat": 230,
+      "dps": 39151,
+      "elasticity": 0.09
+     }
+    ],
+    "elasticity": 0.09
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 36778,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 36778,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 1800,
+    "steps": [
+     {
+      "add": 900,
+      "stat": 2925,
+      "dps": 36778,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1800,
+      "stat": 4050,
+      "dps": 36778,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1392,
+    "steps": [
+     {
+      "add": 696,
+      "stat": 2157,
+      "dps": 36778,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1392,
+      "stat": 2923,
+      "dps": 36778,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 35.1,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 40.1,
+      "dps": 39974,
+      "elasticity": 0.626
+     },
+     {
+      "add": 100,
+      "stat": 45.1,
+      "dps": 43171,
+      "elasticity": 0.639
+     }
+    ],
+    "elasticity": 0.639
+   },
+   "speed": {
+    "base": 1.9,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.5,
+      "dps": 47017,
+      "elasticity": 0.977
+     },
+     {
+      "add": 100,
+      "stat": 3.1,
+      "dps": 57191,
+      "elasticity": 0.977
+     }
+    ],
+    "elasticity": 0.977
+   }
+  },
+  "red_flags": []
+ },
+ "40c913d7a9884d11b6168f4eca877893": {
+  "skill": "Hexblast",
+  "ascendancy": "Blood Mage",
+  "dps": 9375012.8087162,
+  "stats": {
+   "mana": {
+    "base": 1172,
+    "steps": [
+     {
+      "add": 586,
+      "stat": 1787,
+      "dps": 9892561,
+      "elasticity": 0.127
+     },
+     {
+      "add": 1172,
+      "stat": 2402,
+      "dps": 10496343,
+      "elasticity": 0.157
+     }
+    ],
+    "elasticity": 0.157
+   },
+   "life": {
+    "base": 3316,
+    "steps": [
+     {
+      "add": 1658,
+      "stat": 5256,
+      "dps": 9790101,
+      "elasticity": 0.094
+     },
+     {
+      "add": 3316,
+      "stat": 7196,
+      "dps": 10194547,
+      "elasticity": 0.108
+     }
+    ],
+    "elasticity": 0.108
+   },
+   "energy shield": {
+    "base": 840,
+    "steps": [
+     {
+      "add": 420,
+      "stat": 1260,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 840,
+      "stat": 1680,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 126,
+    "steps": [
+     {
+      "add": 63,
+      "stat": 189,
+      "dps": 9406943,
+      "elasticity": 0.008
+     },
+     {
+      "add": 126,
+      "stat": 252,
+      "dps": 9438873,
+      "elasticity": 0.01
+     }
+    ],
+    "elasticity": 0.01
+   },
+   "dexterity": {
+    "base": 182,
+    "steps": [
+     {
+      "add": 91,
+      "stat": 273,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 182,
+      "stat": 364,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 190,
+    "steps": [
+     {
+      "add": 95,
+      "stat": 285,
+      "dps": 9547529,
+      "elasticity": 0.045
+     },
+     {
+      "add": 190,
+      "stat": 380,
+      "dps": 9720033,
+      "elasticity": 0.052
+     }
+    ],
+    "elasticity": 0.052
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 8921,
+    "steps": [
+     {
+      "add": 4460,
+      "stat": 25200,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 8921,
+      "stat": 41482,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 697,
+    "steps": [
+     {
+      "add": 348,
+      "stat": 1045,
+      "dps": 9375013,
+      "elasticity": 0.0
+     },
+     {
+      "add": 697,
+      "stat": 1394,
+      "dps": 9375013,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 83.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 90.8,
+      "dps": 10094844,
+      "elasticity": 0.858
+     },
+     {
+      "add": 100,
+      "stat": 98.2,
+      "dps": 10814627,
+      "elasticity": 0.862
+     }
+    ],
+    "elasticity": 0.862
+   },
+   "speed": {
+    "base": 2.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.1,
+      "dps": 11133747,
+      "elasticity": 0.988
+     },
+     {
+      "add": 100,
+      "stat": 3.6,
+      "dps": 12892248,
+      "elasticity": 0.989
+     }
+    ],
+    "elasticity": 0.989
+   }
+  },
+  "red_flags": []
+ },
+ "19ece511f72b4408ba81f0f5d80104ea": {
+  "skill": "Furious Slam",
+  "ascendancy": "Shaman",
+  "dps": 2557004.0076421,
+  "stats": {
+   "mana": {
+    "base": 1149,
+    "steps": [
+     {
+      "add": 574,
+      "stat": 1694,
+      "dps": 2557004,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1149,
+      "stat": 2240,
+      "dps": 2557004,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 2416,
+    "steps": [
+     {
+      "add": 1208,
+      "stat": 3818,
+      "dps": 2557004,
+      "elasticity": 0.0
+     },
+     {
+      "add": 2416,
+      "stat": 5219,
+      "dps": 2557004,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 168,
+    "steps": [
+     {
+      "add": 84,
+      "stat": 252,
+      "dps": 2557004,
+      "elasticity": 0.0
+     },
+     {
+      "add": 168,
+      "stat": 336,
+      "dps": 2557004,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 162,
+    "steps": [
+     {
+      "add": 81,
+      "stat": 243,
+      "dps": 2557004,
+      "elasticity": 0.0
+     },
+     {
+      "add": 162,
+      "stat": 324,
+      "dps": 2557004,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 176,
+    "steps": [
+     {
+      "add": 88,
+      "stat": 264,
+      "dps": 2557004,
+      "elasticity": 0.0
+     },
+     {
+      "add": 176,
+      "stat": 352,
+      "dps": 2557004,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 2557004,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 2557004,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 7310,
+    "steps": [
+     {
+      "add": 3655,
+      "stat": 15132,
+      "dps": 2600231,
+      "elasticity": 0.023
+     },
+     {
+      "add": 7310,
+      "stat": 22954,
+      "dps": 2643462,
+      "elasticity": 0.029
+     }
+    ],
+    "elasticity": 0.029
+   },
+   "evasion": {
+    "base": 1076,
+    "steps": [
+     {
+      "add": 538,
+      "stat": 1668,
+      "dps": 2557004,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1076,
+      "stat": 2259,
+      "dps": 2557004,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 65.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 71.8,
+      "dps": 2745401,
+      "elasticity": 0.732
+     },
+     {
+      "add": 100,
+      "stat": 78.5,
+      "dps": 2933798,
+      "elasticity": 0.74
+     }
+    ],
+    "elasticity": 0.74
+   },
+   "speed": {
+    "base": 1.7,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 2.1,
+      "dps": 3296944,
+      "elasticity": 1.062
+     },
+     {
+      "add": 100,
+      "stat": 2.6,
+      "dps": 4036883,
+      "elasticity": 1.057
+     }
+    ],
+    "elasticity": 1.062
+   }
+  },
+  "red_flags": []
+ },
+ "d57a36f048e845318bca587131169625": {
+  "skill": "Flame Wall",
+  "ascendancy": "Disciple of Varashta",
+  "dps": 2658346.4475305,
+  "stats": {
+   "mana": {
+    "base": 922,
+    "steps": [
+     {
+      "add": 461,
+      "stat": 1480,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 922,
+      "stat": 2038,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1508,
+    "steps": [
+     {
+      "add": 754,
+      "stat": 2300,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1508,
+      "stat": 3091,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 5857,
+    "steps": [
+     {
+      "add": 2928,
+      "stat": 16808,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 5857,
+      "stat": 27762,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 57,
+    "steps": [
+     {
+      "add": 28,
+      "stat": 85,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 57,
+      "stat": 114,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 178,
+    "steps": [
+     {
+      "add": 89,
+      "stat": 267,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 178,
+      "stat": 356,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 176,
+    "steps": [
+     {
+      "add": 88,
+      "stat": 264,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 176,
+      "stat": 352,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 3643,
+    "steps": [
+     {
+      "add": 1822,
+      "stat": 6048,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 3643,
+      "stat": 8452,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 635,
+    "steps": [
+     {
+      "add": 318,
+      "stat": 953,
+      "dps": 2658346,
+      "elasticity": 0.0
+     },
+     {
+      "add": 635,
+      "stat": 1270,
+      "dps": 2658346,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "speed": {
+    "base": 2.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.3,
+      "dps": 3284702,
+      "elasticity": 1.296
+     },
+     {
+      "add": 100,
+      "stat": 3.8,
+      "dps": 3911059,
+      "elasticity": 1.272
+     }
+    ],
+    "elasticity": 1.296
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ },
+ "3ddeeb744cb64c77901c2a01718d91ef": {
+  "skill": "Rapid Shot",
+  "ascendancy": "Invoker",
+  "dps": 3151604.9303092,
+  "stats": {
+   "mana": {
+    "base": 790,
+    "steps": [
+     {
+      "add": 395,
+      "stat": 1204,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 790,
+      "stat": 1619,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1713,
+    "steps": [
+     {
+      "add": 856,
+      "stat": 2611,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1713,
+      "stat": 3511,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 247,
+    "steps": [
+     {
+      "add": 124,
+      "stat": 390,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 247,
+      "stat": 531,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 90,
+    "steps": [
+     {
+      "add": 45,
+      "stat": 135,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 90,
+      "stat": 180,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 157,
+    "steps": [
+     {
+      "add": 78,
+      "stat": 235,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 157,
+      "stat": 314,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 171,
+    "steps": [
+     {
+      "add": 86,
+      "stat": 257,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 171,
+      "stat": 342,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 1950,
+    "steps": [
+     {
+      "add": 975,
+      "stat": 3334,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1950,
+      "stat": 4719,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 1399,
+    "steps": [
+     {
+      "add": 700,
+      "stat": 2554,
+      "dps": 3151605,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1399,
+      "stat": 3708,
+      "dps": 3151605,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 5.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 8.1,
+      "dps": 3253074,
+      "elasticity": 0.086
+     },
+     {
+      "add": 100,
+      "stat": 10.6,
+      "dps": 3354543,
+      "elasticity": 0.098
+     }
+    ],
+    "elasticity": 0.098
+   },
+   "speed": {
+    "base": 20.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 24.9,
+      "dps": 4181427,
+      "elasticity": 1.568
+     },
+     {
+      "add": 100,
+      "stat": 28.4,
+      "dps": 5159694,
+      "elasticity": 1.591
+     }
+    ],
+    "elasticity": 1.591
+   }
+  },
+  "red_flags": [
+   "speed"
+  ]
+ }
+}
