@@ -40,7 +40,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-16.5"
+ENGINE_VERSION = "2026-11-16.6"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -413,8 +413,24 @@ def parse(req: ParseRequest, request: Request):
     if req.ai and prompt_ai.available() and _ai_allowed(_client(request)):
         read = prompt_ai.read_prompt(req.text, request.app.state.catalog)
         if read:
-            return read
+            return _amount_budget(read, req.text, request.app.state.catalog)
     return parse_prompt(req.text, request.app.state.catalog)
+
+
+def _amount_budget(read: dict, text: str, catalog: dict) -> dict:
+    """An amount the player typed ("900 div", "300 ex") sets the budget by the site's own bands, not by Claude's
+    reading of it (Claude once read 900 divines as "high" when it is above 100, so "no limit")."""
+    from prompt import CURRENCY, _norm, parse_prompt
+    import re
+    if not re.search(CURRENCY, _norm(text)):
+        return read
+    budget = parse_prompt(text, catalog)["request"].get("budget")
+    if not budget or read["request"].get("budget") == budget:
+        return read
+    req = {**read["request"], "budget": budget}
+    found = [f for f in read.get("found", []) if "budget" not in f.get("means", "").lower()]
+    m = re.search(CURRENCY, _norm(text))
+    return {**read, "request": req, "budget_set": True, "found": [*found, {"text": m.group(0).strip(), "means": f"Budget: {budget}"}]}
 
 
 # Claude readings cost about a cent each: a cap per player per hour and for the whole site per day keeps the bill
