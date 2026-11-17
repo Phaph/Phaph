@@ -41,9 +41,15 @@ local function warnings()
 	local w = {}
 	local env = build.calcsTab.mainEnv
 	for kind, list in pairs(env and env.itemWarnings or {}) do
+		-- some warnings are a flag, not a list (seen after a support like Unleash): report the name alone
+		if type(list) ~= "table" then
+			if list then table.insert(w, kind) end
+			list = {}
+		end
 		for _, entry in ipairs(list) do
 			table.insert(w, kind .. ": " .. table.concat((function()
 				local parts = {}
+				if type(entry) ~= "table" then return { tostring(entry) } end
 				for _, v in ipairs(entry) do
 					if type(v) ~= "table" then table.insert(parts, tostring(v)) end
 				end
@@ -576,7 +582,8 @@ function handlers.sync_minion_counts(cmd)
 			frame()
 			local limit = build.calcsTab.mainOutput.ActiveMinionLimit
 			local active = g.gemList[1]
-			if active and limit and limit > 1 and active.count ~= limit then
+			-- also lowers a count back down (e.g. a one-minion skill after a Breaker test raised its limit)
+			if active and limit and active.count ~= limit and (limit > 1 or (active.count or 1) > limit) then
 				active.count = limit
 				counts[tostring(i)] = limit
 			end
@@ -586,6 +593,36 @@ function handlers.sync_minion_counts(cmd)
 	build.buildFlag = true
 	frame()
 	return { counts = counts }
+end
+
+-- How many minions Full DPS counts (gem counts of minion groups in Full DPS), and every minion limit stat PoB's
+-- skills use (ActiveSkeletonLimit, WolfLimit, ...), so the Breaker can raise them all with raw mods.
+local minionLimitStats
+function handlers.minion_count(cmd)
+	if not minionLimitStats then
+		local seen = {}
+		minionLimitStats = {}
+		for _, gem in pairs(data.gems) do
+			local ge = gem.grantedEffect
+			for _, id in ipairs(ge and ge.minionList or {}) do
+				local m = data.minions[id]
+				if m and m.limit and not seen[m.limit] then seen[m.limit] = true; table.insert(minionLimitStats, m.limit) end
+			end
+		end
+		for name in pairs({ ActiveSkeletonLimit = 1, ActiveZombieLimit = 1, ActiveRagingSpiritLimit = 1, ActiveSpectreLimit = 1 }) do
+			if not seen[name] then table.insert(minionLimitStats, name) end
+		end
+		table.sort(minionLimitStats)
+	end
+	local total = 0
+	for _, g in ipairs(build.skillsTab.socketGroupList) do
+		if g.includeInFullDPS and g.enabled ~= false then
+			for _, s in ipairs(g.displaySkillList or {}) do
+				if s.minion then total = total + ((g.gemList[1] and g.gemList[1].count) or 1); break end
+			end
+		end
+	end
+	return { count = total, limits = minionLimitStats }
 end
 
 -- Support gems PoB's own rules allow on a group's active skill (skill type requirements and
@@ -665,8 +702,30 @@ end
 
 -- Config tab inputs, e.g. {"customMods": "...", "enemyIsBoss": "Pinnacle"}
 -- PoB's "Custom Modifiers" box (one mod per line), for experiments like the Breaker's stat scans. Empty text clears it.
+-- `raw` adds mods PoB has no text for, as {name, type, value} (e.g. ActiveSkeletonLimit BASE 1); they ride on the
+-- config mod list, so they are rebuilt every time PoB rebuilds it, until the next set_custom_mods.
+local breakerRaw, breakerNodes = {}, {}
 function handlers.set_custom_mods(cmd)
 	local cfg = build.configTab
+	if not cfg.breakerWrapped then   -- per config tab: loading a build makes a new one
+		local orig = cfg.BuildModList
+		cfg.BuildModList = function(self, ...)
+			local r = orig(self, ...)
+			for _, m in ipairs(breakerRaw) do self.modList:NewMod(m.name, m.type or "BASE", m.value, "Breaker") end
+			for _, node in ipairs(breakerNodes) do if node.modList then self.modList:AddList(node.modList) end end
+			return r
+		end
+		cfg.breakerWrapped = true
+	end
+	breakerRaw = cmd.raw or {}
+	-- `nodes`: passive nodes by name (keystones) whose parsed mods apply as if allocated, with their own conditions
+	-- kept (text would lose them: "Storm and Plant Spells:" is a line of its own on Wildsurge Incantation).
+	breakerNodes = {}
+	for _, name in ipairs(cmd.nodes or {}) do
+		local node = findNode(name)
+		if not node then error("no passive node called " .. name) end
+		table.insert(breakerNodes, node)
+	end
 	local set = cfg.configSets[cfg.activeConfigSetId]
 	set.customModsList = { { title = "Breaker", enabled = true, text = cmd.text or "" } }
 	cfg:BuildModList()
@@ -1404,6 +1463,33 @@ function handlers.calc(cmd)
 	local out = build.calcsTab.mainOutput
 	local result = pick(out, cmd.fields)
 	return { main_skill = mainSkillName(), output = result, warnings = warnings() }
+end
+
+-- Every numeric output of the main skill (minion ones prefixed "Minion"), and PoB's breakdown lines for the
+-- requested keys. The Breaker uses it to see which mechanic moves when one stat changes.
+function handlers.outputs(cmd)
+	build.buildFlag = true
+	frame()
+	local out, res, bd = build.calcsTab.mainOutput, {}, {}
+	for k, v in pairs(out) do if type(v) == "number" then res[k] = v end end
+	if type(out.Minion) == "table" then
+		for k, v in pairs(out.Minion) do if type(v) == "number" then res["Minion" .. k] = v end end
+	end
+	local env = build.calcsTab.mainEnv
+	local breakdown = env and env.player and env.player.breakdown or {}
+	for _, key in ipairs(cmd.breakdown or {}) do
+		local b = breakdown[key]
+		if type(b) == "table" then
+			local lines = {}
+			for _, l in ipairs(b) do if type(l) == "string" then table.insert(lines, l) end end
+			bd[key] = lines
+		end
+	end
+	local skill = env and env.player and env.player.mainSkill
+	local part = skill and skill.skillPart
+	local parts = {}
+	for i, p in ipairs(skill and skill.activeEffect.grantedEffect.parts or {}) do parts[i] = p.name end
+	return { output = res, breakdown = bd, skill_part = part, parts = parts }
 end
 
 -- Lists gems. filter: "support" | "active" | nil; tags: every tag must match

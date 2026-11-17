@@ -69,3 +69,35 @@ known strong builds)  5. Claude research  6. Discoveries page  7. Launch-day pla
   Invoker 1.59, Skyfall Stormweaver 1.47, Flame Wall 1.30, Siege Ballista 1.28. Mana scaling is dead everywhere
   (max 0.30), matching the 0.2 Archmage nerf. Minion builds read 0: the scan needs minion stats (minion damage, attack
   speed, count) for them. Next: explain the Whirling Assault lead, add minion scalers, then the interaction finder.
+- 2026-11-17 (later): **Whirling Assault lead explained: a measurement artefact, not a real multiplier.** The build's
+  damage is PoB's Full DPS, the sum of several skills: Quarterstaff Strike 593k, Whirling Assault 179k, Lightning Warp
+  22k and smaller ones (1.37M). The scan read "speed" from the main skill, Whirling Assault, whose speed barely moves:
+  its use time is about 1 s of fixed duration plus 1 / attack rate (PoB: base 1.49/s x 1.62 increased, yet 0.71 uses/s),
+  so +100% attack speed gives it only +12.6% speed, while Quarterstaff Strike gets +62% speed and +62% damage. Full DPS
+  rose 50% against a "speed" that rose 12.6%: ln 1.50 / ln 1.126 = 3.43. Nothing multiplies. Fix: the scan now makes
+  the build's biggest damage source the main skill first (`breaker.dominant_group`); this build now reads 0.85.
+  The other "speed" flags (Rapid Shot, Skyfall, Flame Wall, Siege Ballista, Snap, Furious Slam) need a rescan with that
+  fix before they count as leads.
+  **Side finding (engine, not Breaker):** this guide's headline 1.37M adds Whirling Assault and Quarterstaff Strike
+  together as if both ran all the time, but they are two attacks sharing one character's time. Full DPS should only sum
+  skills that run alongside the main one (minions, totems, triggers, auras), not alternating attacks.
+- Minion scalers added: minion damage ("Minions deal n% increased Damage", read on the minion's average damage), minion
+  attack/cast speed, and minion count (+n to every minion limit stat PoB's skills use, as raw mods through
+  `set_custom_mods raw=`, because PoB has no mod text for most limits; then `sync_minion_counts` so Full DPS counts
+  them). Checked on Skeletal Sniper Lich and Skeletal Storm Mage Martial Artist: count elasticity 0.10 / 0.26, damage
+  0.06, speed 0.07: in those builds the minions are a small part of the damage (the player's own skill dominates).
+  Runner: new `outputs` command (every numeric output plus PoB's breakdown lines) for this kind of digging.
+- Scaler scan rerun with the fixes (the Breaker now scores against a pinnacle boss, see below; biggest damage source as
+  main skill; minion scalers): data/breaker/scan.json. Whirling Assault is gone. Left: **Rapid Shot Oracle 1.67 /
+  Invoker 1.59**, Skyfall Stormweaver 1.41, Rain of Arrows Shaman 1.28; everything else is at or under 1.10.
+  **Rapid Shot explained: a real multiplier (as PoB models it).** Fresh Clip II gives 1% more damage per crossbow bolt
+  reloaded in the last 8 seconds, and PoB counts those as clip size x 8 / (firing time + reload time). Rapid Shot fires
+  about 100 bolts a clip, so this build reloads ~184 bolts per 8 s (+184% more damage); +100% skill speed raises that to
+  ~229, so speed buys both more bolts per second and more damage per bolt (+24% rate x +15.6% per bolt = +44%).
+  Without Fresh Clip II damage per bolt doesn't move; Rapid Attacks II adds to it. Damage grows with roughly speed
+  squared, with no cap in PoB's gem data. To check in game: does Fresh Clip have a hidden cap, and does Rapid Shot's
+  clip count as "bolts reloaded" one by one? If both hold, a Rapid Shot speed-stacker with Fresh Clip is the first
+  real Breaker lead. Skyfall and Rain of Arrows still to explain.
+- Minion builds now read: Skeletal Storm Mage Martial Artist minion speed 0.40, damage 0.35, count 0.28; Skeletal
+  Sniper Lich 0.13 / 0.11 / 0.16. Low because the player's own skill does most of the damage in these guides; a real
+  minion build is needed to judge the minion scalers (none saved yet).

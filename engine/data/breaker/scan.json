@@ -2,7 +2,8 @@
  "74928ed168834f66b72bfa306594dd93": {
   "skill": "Fireball",
   "ascendancy": "Blood Mage",
-  "dps": 2562219.7777873,
+  "dps": 871737.96418002,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 504,
@@ -10,13 +11,13 @@
      {
       "add": 252,
       "stat": 743,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      },
      {
       "add": 504,
       "stat": 982,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      }
     ],
@@ -28,13 +29,13 @@
      {
       "add": 1394,
       "stat": 4448,
-      "dps": 2697695,
+      "dps": 917830,
       "elasticity": 0.11
      },
      {
       "add": 2789,
       "stat": 6108,
-      "dps": 2837276,
+      "dps": 965320,
       "elasticity": 0.13
      }
     ],
@@ -46,13 +47,13 @@
      {
       "add": 1148,
       "stat": 7093,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      },
      {
       "add": 2295,
       "stat": 11888,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      }
     ],
@@ -64,13 +65,13 @@
      {
       "add": 68,
       "stat": 205,
-      "dps": 2578641,
+      "dps": 877325,
       "elasticity": 0.016
      },
      {
       "add": 137,
       "stat": 274,
-      "dps": 2590957,
+      "dps": 881515,
       "elasticity": 0.016
      }
     ],
@@ -82,13 +83,13 @@
      {
       "add": 14,
       "stat": 41,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      },
      {
       "add": 27,
       "stat": 54,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      }
     ],
@@ -100,13 +101,13 @@
      {
       "add": 30,
       "stat": 90,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      },
      {
       "add": 60,
       "stat": 120,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      }
     ],
@@ -118,13 +119,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      }
     ],
@@ -136,13 +137,13 @@
      {
       "add": 5419,
       "stat": 29208,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      },
      {
       "add": 10838,
       "stat": 47579,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      }
     ],
@@ -154,13 +155,13 @@
      {
       "add": 1690,
       "stat": 8299,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      },
      {
       "add": 3381,
       "stat": 13220,
-      "dps": 2562220,
+      "dps": 871738,
       "elasticity": 0.0
      }
     ],
@@ -172,17 +173,17 @@
      {
       "add": 50,
       "stat": 89.2,
-      "dps": 2726148,
-      "elasticity": 0.707
+      "dps": 927494,
+      "elasticity": 0.706
      },
      {
       "add": 100,
       "stat": 96.8,
-      "dps": 2889970,
-      "elasticity": 0.715
+      "dps": 983216,
+      "elasticity": 0.714
      }
     ],
-    "elasticity": 0.715
+    "elasticity": 0.714
    },
    "speed": {
     "base": 1.7,
@@ -190,13 +191,13 @@
      {
       "add": 50,
       "stat": 2.0,
-      "dps": 3028301,
+      "dps": 1030302,
       "elasticity": 0.877
      },
      {
       "add": 100,
       "stat": 2.4,
-      "dps": 3504711,
+      "dps": 1192380,
       "elasticity": 0.884
      }
     ],
@@ -208,7 +209,8 @@
  "f18689634978400280741d22367afb05": {
   "skill": "Skeletal Sniper",
   "ascendancy": "Lich",
-  "dps": 473627.64154361,
+  "dps": 170411.0812209,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 680,
@@ -216,17 +218,17 @@
      {
       "add": 340,
       "stat": 1058,
-      "dps": 479770,
-      "elasticity": 0.029
+      "dps": 174308,
+      "elasticity": 0.051
      },
      {
       "add": 680,
       "stat": 1435,
-      "dps": 485910,
-      "elasticity": 0.034
+      "dps": 178199,
+      "elasticity": 0.06
      }
     ],
-    "elasticity": 0.034
+    "elasticity": 0.06
    },
    "life": {
     "base": 2024,
@@ -234,13 +236,13 @@
      {
       "add": 1012,
       "stat": 3140,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      },
      {
       "add": 2024,
       "stat": 4255,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      }
     ],
@@ -252,13 +254,13 @@
      {
       "add": 426,
       "stat": 2859,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      },
      {
       "add": 853,
       "stat": 4870,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      }
     ],
@@ -270,13 +272,13 @@
      {
       "add": 85,
       "stat": 255,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      },
      {
       "add": 170,
       "stat": 340,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      }
     ],
@@ -288,13 +290,13 @@
      {
       "add": 4,
       "stat": 11,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      },
      {
       "add": 7,
       "stat": 14,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      }
     ],
@@ -306,17 +308,17 @@
      {
       "add": 20,
       "stat": 60,
-      "dps": 475160,
-      "elasticity": 0.008
+      "dps": 171388,
+      "elasticity": 0.014
      },
      {
       "add": 40,
       "stat": 80,
-      "dps": 475160,
-      "elasticity": 0.005
+      "dps": 171388,
+      "elasticity": 0.008
      }
     ],
-    "elasticity": 0.008
+    "elasticity": 0.014
    },
    "spirit": {
     "base": 100,
@@ -324,13 +326,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      }
     ],
@@ -342,13 +344,13 @@
      {
       "add": 6400,
       "stat": 38143,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      },
      {
       "add": 12799,
       "stat": 63483,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      }
     ],
@@ -360,17 +362,71 @@
      {
       "add": 563,
       "stat": 1689,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      },
      {
       "add": 1126,
       "stat": 2252,
-      "dps": 473628,
+      "dps": 170411,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
+   },
+   "minion damage": {
+    "base": 8525.7,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 9275.7,
+      "dps": 171902,
+      "elasticity": 0.103
+     },
+     {
+      "add": 100,
+      "stat": 10025.3,
+      "dps": 173396,
+      "elasticity": 0.107
+     }
+    ],
+    "elasticity": 0.107
+   },
+   "minion speed": {
+    "base": 0.8,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.2,
+      "dps": 177181,
+      "elasticity": 0.114
+     },
+     {
+      "add": 100,
+      "stat": 1.5,
+      "dps": 183950,
+      "elasticity": 0.128
+     }
+    ],
+    "elasticity": 0.128
+   },
+   "minion count": {
+    "base": 3,
+    "steps": [
+     {
+      "add": 2,
+      "stat": 6,
+      "dps": 187064,
+      "elasticity": 0.135
+     },
+     {
+      "add": 3,
+      "stat": 9,
+      "dps": 203717,
+      "elasticity": 0.162
+     }
+    ],
+    "elasticity": 0.162
    }
   },
   "red_flags": []
@@ -378,7 +434,8 @@
  "f885a5715e514fc0b82bbda6c2a2500b": {
   "skill": "Ember Fusillade",
   "ascendancy": "Oracle",
-  "dps": 9194128.8824423,
+  "dps": 3160554.8561053,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 429,
@@ -386,13 +443,13 @@
      {
       "add": 214,
       "stat": 633,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 429,
       "stat": 837,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -404,13 +461,13 @@
      {
       "add": 1196,
       "stat": 3744,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 2392,
       "stat": 5095,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -422,13 +479,13 @@
      {
       "add": 586,
       "stat": 2754,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 1172,
       "stat": 4336,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -440,13 +497,13 @@
      {
       "add": 90,
       "stat": 269,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 179,
       "stat": 358,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -458,13 +515,13 @@
      {
       "add": 4,
       "stat": 11,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 7,
       "stat": 14,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -476,13 +533,13 @@
      {
       "add": 10,
       "stat": 31,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 21,
       "stat": 42,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -494,13 +551,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -512,13 +569,13 @@
      {
       "add": 6406,
       "stat": 42599,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 12811,
       "stat": 72382,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -530,13 +587,13 @@
      {
       "add": 62,
       "stat": 185,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      },
      {
       "add": 123,
       "stat": 246,
-      "dps": 9194129,
+      "dps": 3160555,
       "elasticity": 0.0
      }
     ],
@@ -548,13 +605,13 @@
      {
       "add": 50,
       "stat": 6.2,
-      "dps": 11104020,
+      "dps": 3817095,
       "elasticity": 1.0
      },
      {
       "add": 100,
       "stat": 7.3,
-      "dps": 12969496,
+      "dps": 4458367,
       "elasticity": 1.0
      }
     ],
@@ -566,7 +623,8 @@
  "efa4785aea76432fa0a057c48a19e15a": {
   "skill": "Skeletal Storm Mage",
   "ascendancy": "Invoker",
-  "dps": 120521.85531145,
+  "dps": 34736.821292219,
+  "main_group": 7,
   "stats": {
    "mana": {
     "base": 607,
@@ -574,13 +632,13 @@
      {
       "add": 304,
       "stat": 926,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 607,
       "stat": 1244,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -592,13 +650,13 @@
      {
       "add": 863,
       "stat": 2632,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 1726,
       "stat": 3539,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -610,13 +668,13 @@
      {
       "add": 634,
       "stat": 3568,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 1267,
       "stat": 5866,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -628,13 +686,13 @@
      {
       "add": 84,
       "stat": 251,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 167,
       "stat": 334,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -646,13 +704,13 @@
      {
       "add": 60,
       "stat": 186,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 121,
       "stat": 252,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -664,13 +722,13 @@
      {
       "add": 20,
       "stat": 59,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 39,
       "stat": 78,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -682,13 +740,13 @@
      {
       "add": 80,
       "stat": 240,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 160,
       "stat": 320,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -700,13 +758,13 @@
      {
       "add": 66,
       "stat": 198,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 132,
       "stat": 264,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
@@ -718,17 +776,71 @@
      {
       "add": 12306,
       "stat": 154675,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      },
      {
       "add": 24613,
       "stat": 284748,
-      "dps": 120522,
+      "dps": 34737,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 11,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 16.5,
+      "dps": 34737,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 22,
+      "dps": 34737,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "speed": {
+    "base": 2.4,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 3.4,
+      "dps": 48364,
+      "elasticity": 0.95
+     },
+     {
+      "add": 100,
+      "stat": 4.4,
+      "dps": 61991,
+      "elasticity": 0.956
+     }
+    ],
+    "elasticity": 0.956
+   },
+   "minion count": {
+    "base": 3,
+    "steps": [
+     {
+      "add": 2,
+      "stat": 5,
+      "dps": 35193,
+      "elasticity": 0.026
+     },
+     {
+      "add": 3,
+      "stat": 7,
+      "dps": 35649,
+      "elasticity": 0.031
+     }
+    ],
+    "elasticity": 0.031
    }
   },
   "red_flags": []
@@ -736,7 +848,8 @@
  "c4b82701c9b74ad288dfe72665e2ee53": {
   "skill": "Skeletal Storm Mage",
   "ascendancy": "Martial Artist",
-  "dps": 175478.2317154,
+  "dps": 61334.647335105,
+  "main_group": 2,
   "stats": {
    "mana": {
     "base": 580,
@@ -744,13 +857,13 @@
      {
       "add": 290,
       "stat": 884,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 580,
       "stat": 1189,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -762,13 +875,13 @@
      {
       "add": 963,
       "stat": 2937,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 1926,
       "stat": 3948,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -780,13 +893,13 @@
      {
       "add": 356,
       "stat": 1802,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 713,
       "stat": 2895,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -798,13 +911,13 @@
      {
       "add": 104,
       "stat": 311,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 207,
       "stat": 414,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -816,13 +929,13 @@
      {
       "add": 10,
       "stat": 31,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 21,
       "stat": 42,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -834,13 +947,13 @@
      {
       "add": 13,
       "stat": 39,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 26,
       "stat": 52,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -852,13 +965,13 @@
      {
       "add": 100,
       "stat": 300,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 200,
       "stat": 400,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -870,13 +983,13 @@
      {
       "add": 1754,
       "stat": 7401,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 3508,
       "stat": 11295,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -888,17 +1001,89 @@
      {
       "add": 1000,
       "stat": 3749,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 1999,
       "stat": 5497,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
+   },
+   "speed": {
+    "base": 1.3,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.8,
+      "dps": 75100,
+      "elasticity": 0.618
+     },
+     {
+      "add": 100,
+      "stat": 2.3,
+      "dps": 88865,
+      "elasticity": 0.646
+     }
+    ],
+    "elasticity": 0.646
+   },
+   "minion damage": {
+    "base": 9255.7,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 10231.8,
+      "dps": 63473,
+      "elasticity": 0.342
+     },
+     {
+      "add": 100,
+      "stat": 11209.8,
+      "dps": 65619,
+      "elasticity": 0.352
+     }
+    ],
+    "elasticity": 0.352
+   },
+   "minion speed": {
+    "base": 1.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.6,
+      "dps": 68238,
+      "elasticity": 0.375
+     },
+     {
+      "add": 100,
+      "stat": 2.0,
+      "dps": 75141,
+      "elasticity": 0.402
+     }
+    ],
+    "elasticity": 0.402
+   },
+   "minion count": {
+    "base": 3,
+    "steps": [
+     {
+      "add": 2,
+      "stat": 5,
+      "dps": 69570,
+      "elasticity": 0.247
+     },
+     {
+      "add": 3,
+      "stat": 7,
+      "dps": 77805,
+      "elasticity": 0.281
+     }
+    ],
+    "elasticity": 0.281
    }
   },
   "red_flags": []
@@ -906,7 +1091,8 @@
  "e77b335005cf440abec1f2dccdfad7ee": {
   "skill": "Skeletal Storm Mage",
   "ascendancy": "Martial Artist",
-  "dps": 175478.2317154,
+  "dps": 61334.647335105,
+  "main_group": 2,
   "stats": {
    "mana": {
     "base": 580,
@@ -914,13 +1100,13 @@
      {
       "add": 290,
       "stat": 884,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 580,
       "stat": 1189,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -932,13 +1118,13 @@
      {
       "add": 892,
       "stat": 2722,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 1785,
       "stat": 3659,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -950,13 +1136,13 @@
      {
       "add": 453,
       "stat": 2237,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 906,
       "stat": 3569,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -968,13 +1154,13 @@
      {
       "add": 104,
       "stat": 311,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 207,
       "stat": 414,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -986,13 +1172,13 @@
      {
       "add": 10,
       "stat": 31,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 21,
       "stat": 42,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -1004,13 +1190,13 @@
      {
       "add": 13,
       "stat": 39,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 26,
       "stat": 52,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -1022,13 +1208,13 @@
      {
       "add": 100,
       "stat": 300,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 200,
       "stat": 400,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -1040,13 +1226,13 @@
      {
       "add": 1564,
       "stat": 6225,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 3128,
       "stat": 9322,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
@@ -1058,17 +1244,89 @@
      {
       "add": 1182,
       "stat": 4811,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      },
      {
       "add": 2364,
       "stat": 7257,
-      "dps": 175478,
+      "dps": 61335,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
+   },
+   "speed": {
+    "base": 1.3,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.8,
+      "dps": 75100,
+      "elasticity": 0.618
+     },
+     {
+      "add": 100,
+      "stat": 2.3,
+      "dps": 88865,
+      "elasticity": 0.646
+     }
+    ],
+    "elasticity": 0.646
+   },
+   "minion damage": {
+    "base": 9255.7,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 10231.8,
+      "dps": 63473,
+      "elasticity": 0.342
+     },
+     {
+      "add": 100,
+      "stat": 11209.8,
+      "dps": 65619,
+      "elasticity": 0.352
+     }
+    ],
+    "elasticity": 0.352
+   },
+   "minion speed": {
+    "base": 1.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 1.6,
+      "dps": 68238,
+      "elasticity": 0.375
+     },
+     {
+      "add": 100,
+      "stat": 2.0,
+      "dps": 75141,
+      "elasticity": 0.402
+     }
+    ],
+    "elasticity": 0.402
+   },
+   "minion count": {
+    "base": 3,
+    "steps": [
+     {
+      "add": 2,
+      "stat": 5,
+      "dps": 69570,
+      "elasticity": 0.247
+     },
+     {
+      "add": 3,
+      "stat": 7,
+      "dps": 77805,
+      "elasticity": 0.281
+     }
+    ],
+    "elasticity": 0.281
    }
   },
   "red_flags": []
@@ -1076,7 +1334,8 @@
  "e7428d8453e7446cb947f703b0029c8d": {
   "skill": "Hexblast",
   "ascendancy": "Blood Mage",
-  "dps": 22162018.874874,
+  "dps": 10736021.838952,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 751,
@@ -1084,17 +1343,17 @@
      {
       "add": 376,
       "stat": 1109,
-      "dps": 22897475,
-      "elasticity": 0.084
+      "dps": 10987625,
+      "elasticity": 0.059
      },
      {
       "add": 751,
       "stat": 1465,
-      "dps": 23449063,
-      "elasticity": 0.084
+      "dps": 11176327,
+      "elasticity": 0.06
      }
     ],
-    "elasticity": 0.084
+    "elasticity": 0.06
    },
    "life": {
     "base": 2286,
@@ -1102,13 +1361,13 @@
      {
       "add": 1143,
       "stat": 3646,
-      "dps": 23079716,
+      "dps": 11180554,
       "elasticity": 0.087
      },
      {
       "add": 2286,
       "stat": 5006,
-      "dps": 24031402,
+      "dps": 11641551,
       "elasticity": 0.103
      }
     ],
@@ -1120,13 +1379,13 @@
      {
       "add": 106,
       "stat": 318,
-      "dps": 22331963,
+      "dps": 10818343,
       "elasticity": 0.019
      },
      {
       "add": 212,
       "stat": 424,
-      "dps": 22501907,
+      "dps": 10900663,
       "elasticity": 0.022
      }
     ],
@@ -1138,13 +1397,13 @@
      {
       "add": 6,
       "stat": 18,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      },
      {
       "add": 12,
       "stat": 24,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      }
     ],
@@ -1156,17 +1415,17 @@
      {
       "add": 20,
       "stat": 60,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      },
      {
       "add": 40,
       "stat": 80,
-      "dps": 22345886,
-      "elasticity": 0.012
+      "dps": 10798924,
+      "elasticity": 0.008
      }
     ],
-    "elasticity": 0.012
+    "elasticity": 0.008
    },
    "spirit": {
     "base": 100,
@@ -1174,13 +1433,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      }
     ],
@@ -1192,13 +1451,13 @@
      {
       "add": 3814,
       "stat": 19071,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      },
      {
       "add": 7629,
       "stat": 30516,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      }
     ],
@@ -1210,13 +1469,13 @@
      {
       "add": 899,
       "stat": 2697,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      },
      {
       "add": 1798,
       "stat": 3596,
-      "dps": 22162019,
+      "dps": 10736022,
       "elasticity": 0.0
      }
     ],
@@ -1228,17 +1487,17 @@
      {
       "add": 50,
       "stat": 98.2,
-      "dps": 23662419,
-      "elasticity": 0.825
+      "dps": 11465942,
+      "elasticity": 0.828
      },
      {
       "add": 100,
       "stat": 100,
-      "dps": 24012500,
-      "elasticity": 0.826
+      "dps": 11636253,
+      "elasticity": 0.83
      }
     ],
-    "elasticity": 0.826
+    "elasticity": 0.83
    },
    "speed": {
     "base": 2.2,
@@ -1246,17 +1505,17 @@
      {
       "add": 50,
       "stat": 2.7,
-      "dps": 26337091,
-      "elasticity": 0.987
+      "dps": 12767149,
+      "elasticity": 0.991
      },
      {
       "add": 100,
       "stat": 3.1,
-      "dps": 30414458,
-      "elasticity": 0.988
+      "dps": 14750831,
+      "elasticity": 0.991
      }
     ],
-    "elasticity": 0.988
+    "elasticity": 0.991
    }
   },
   "red_flags": []
@@ -1264,7 +1523,8 @@
  "fec188d52fde42a0a588e4e4dba9260b": {
   "skill": "Fireball",
   "ascendancy": "Infernalist",
-  "dps": 1700867.9390245,
+  "dps": 850653.18711078,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 515,
@@ -1272,13 +1532,13 @@
      {
       "add": 258,
       "stat": 785,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 515,
       "stat": 1055,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1290,13 +1550,13 @@
      {
       "add": 1058,
       "stat": 3375,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 2116,
       "stat": 4634,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1308,13 +1568,13 @@
      {
       "add": 222,
       "stat": 893,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 444,
       "stat": 1341,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1326,13 +1586,13 @@
      {
       "add": 68,
       "stat": 205,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 137,
       "stat": 274,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1344,13 +1604,13 @@
      {
       "add": 14,
       "stat": 41,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 27,
       "stat": 54,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1362,13 +1622,13 @@
      {
       "add": 20,
       "stat": 60,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 40,
       "stat": 80,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1380,13 +1640,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1398,13 +1658,13 @@
      {
       "add": 1985,
       "stat": 7860,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 3970,
       "stat": 11751,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1416,13 +1676,13 @@
      {
       "add": 882,
       "stat": 2965,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      },
      {
       "add": 1765,
       "stat": 4166,
-      "dps": 1700868,
+      "dps": 850653,
       "elasticity": 0.0
      }
     ],
@@ -1434,17 +1694,17 @@
      {
       "add": 50,
       "stat": 56.2,
-      "dps": 1802442,
-      "elasticity": 0.553
+      "dps": 901397,
+      "elasticity": 0.552
      },
      {
       "add": 100,
       "stat": 61.8,
-      "dps": 1903389,
-      "elasticity": 0.563
+      "dps": 951835,
+      "elasticity": 0.562
      }
     ],
-    "elasticity": 0.563
+    "elasticity": 0.562
    },
    "speed": {
     "base": 2.0,
@@ -1452,17 +1712,17 @@
      {
       "add": 50,
       "stat": 2.3,
-      "dps": 1963934,
+      "dps": 982167,
       "elasticity": 0.856
      },
      {
       "add": 100,
       "stat": 2.7,
-      "dps": 2219965,
-      "elasticity": 0.863
+      "dps": 1110161,
+      "elasticity": 0.862
      }
     ],
-    "elasticity": 0.863
+    "elasticity": 0.862
    }
   },
   "red_flags": []
@@ -1470,7 +1730,8 @@
  "9452370b616d4f5c9fdfba2069aa8f2e": {
   "skill": "Tempest Flurry",
   "ascendancy": "Invoker",
-  "dps": 2613639.0261741,
+  "dps": 1323925.8494784,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 506,
@@ -1478,13 +1739,13 @@
      {
       "add": 253,
       "stat": 772,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 506,
       "stat": 1037,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1496,13 +1757,13 @@
      {
       "add": 1138,
       "stat": 3563,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 2277,
       "stat": 4850,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1514,13 +1775,13 @@
      {
       "add": 105,
       "stat": 331,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 210,
       "stat": 452,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1532,13 +1793,13 @@
      {
       "add": 94,
       "stat": 281,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 187,
       "stat": 374,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1550,13 +1811,13 @@
      {
       "add": 30,
       "stat": 91,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 61,
       "stat": 122,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1568,13 +1829,13 @@
      {
       "add": 18,
       "stat": 54,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 36,
       "stat": 72,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1586,13 +1847,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1604,13 +1865,13 @@
      {
       "add": 1804,
       "stat": 6278,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 3608,
       "stat": 8948,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1622,13 +1883,13 @@
      {
       "add": 589,
       "stat": 1855,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 1178,
       "stat": 2532,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -1640,17 +1901,17 @@
      {
       "add": 50,
       "stat": 93.8,
-      "dps": 2829637,
-      "elasticity": 0.903
+      "dps": 1433431,
+      "elasticity": 0.904
      },
      {
       "add": 100,
       "stat": 100,
-      "dps": 3020664,
-      "elasticity": 0.956
+      "dps": 1530349,
+      "elasticity": 0.957
      }
     ],
-    "elasticity": 0.956
+    "elasticity": 0.957
    },
    "speed": {
     "base": 4.2,
@@ -1658,27 +1919,26 @@
      {
       "add": 50,
       "stat": 5.1,
-      "dps": 3254617,
+      "dps": 1648644,
       "elasticity": 1.036
      },
      {
       "add": 100,
       "stat": 6.1,
-      "dps": 3862526,
+      "dps": 1956556,
       "elasticity": 1.011
      }
     ],
     "elasticity": 1.036
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "61022ae8878d4295a5297483e1f7eead": {
   "skill": "Killing Palm",
   "ascendancy": "Invoker",
-  "dps": 17126030.797317,
+  "dps": 2857867.6532015,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 688,
@@ -1686,13 +1946,13 @@
      {
       "add": 344,
       "stat": 1049,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 688,
       "stat": 1410,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1704,13 +1964,13 @@
      {
       "add": 1030,
       "stat": 3223,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 2059,
       "stat": 4386,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1722,13 +1982,13 @@
      {
       "add": 107,
       "stat": 337,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 214,
       "stat": 460,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1740,13 +2000,13 @@
      {
       "add": 88,
       "stat": 263,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 175,
       "stat": 350,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1758,17 +2018,17 @@
      {
       "add": 47,
       "stat": 141,
-      "dps": 17126031,
-      "elasticity": 0.0
+      "dps": 2884158,
+      "elasticity": 0.023
      },
      {
       "add": 94,
       "stat": 188,
-      "dps": 17126031,
-      "elasticity": 0.0
+      "dps": 2884158,
+      "elasticity": 0.013
      }
     ],
-    "elasticity": 0.0
+    "elasticity": 0.023
    },
    "intelligence": {
     "base": 36,
@@ -1776,13 +2036,13 @@
      {
       "add": 18,
       "stat": 54,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 36,
       "stat": 72,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1794,13 +2054,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1812,13 +2072,13 @@
      {
       "add": 3459,
       "stat": 17295,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 6918,
       "stat": 27672,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1830,13 +2090,13 @@
      {
       "add": 773,
       "stat": 2435,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      },
      {
       "add": 1546,
       "stat": 3323,
-      "dps": 17126031,
+      "dps": 2857868,
       "elasticity": 0.0
      }
     ],
@@ -1848,13 +2108,13 @@
      {
       "add": 50,
       "stat": 85.4,
-      "dps": 18592404,
+      "dps": 3102549,
       "elasticity": 0.836
      },
      {
       "add": 100,
       "stat": 93.4,
-      "dps": 20058612,
+      "dps": 3347207,
       "elasticity": 0.842
      }
     ],
@@ -1866,14 +2126,14 @@
      {
       "add": 50,
       "stat": 3.3,
-      "dps": 21106898,
+      "dps": 3522625,
       "elasticity": 0.916
      },
      {
       "add": 100,
       "stat": 4.0,
-      "dps": 24902028,
-      "elasticity": 0.904
+      "dps": 4156664,
+      "elasticity": 0.905
      }
     ],
     "elasticity": 0.916
@@ -1884,7 +2144,8 @@
  "bd67dabf2c324f488783a3eeb0c5295e": {
   "skill": "Skyfall",
   "ascendancy": "Infernalist",
-  "dps": 36094288.990462,
+  "dps": 12719291.917001,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 525,
@@ -1892,13 +2153,13 @@
      {
       "add": 262,
       "stat": 800,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 525,
       "stat": 1076,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -1910,13 +2171,13 @@
      {
       "add": 1130,
       "stat": 3569,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 2259,
       "stat": 4879,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -1928,13 +2189,13 @@
      {
       "add": 112,
       "stat": 337,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 225,
       "stat": 450,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -1946,13 +2207,13 @@
      {
       "add": 8,
       "stat": 25,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 17,
       "stat": 34,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -1964,13 +2225,13 @@
      {
       "add": 22,
       "stat": 67,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 45,
       "stat": 90,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -1982,13 +2243,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -2000,13 +2261,13 @@
      {
       "add": 4444,
       "stat": 21109,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 8888,
       "stat": 33330,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -2018,13 +2279,13 @@
      {
       "add": 422,
       "stat": 1161,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      },
      {
       "add": 845,
       "stat": 1478,
-      "dps": 36094289,
+      "dps": 12719292,
       "elasticity": 0.0
      }
     ],
@@ -2036,17 +2297,17 @@
      {
       "add": 50,
       "stat": 93.5,
-      "dps": 37337297,
-      "elasticity": 0.435
+      "dps": 13171218,
+      "elasticity": 0.449
      },
      {
       "add": 100,
       "stat": 100,
-      "dps": 38279354,
-      "elasticity": 0.406
+      "dps": 13517902,
+      "elasticity": 0.421
      }
     ],
-    "elasticity": 0.435
+    "elasticity": 0.449
    },
    "speed": {
     "base": 0.6,
@@ -2054,17 +2315,17 @@
      {
       "add": 50,
       "stat": 0.7,
-      "dps": 37863972,
-      "elasticity": 0.548
+      "dps": 13349225,
+      "elasticity": 0.553
      },
      {
       "add": 100,
       "stat": 0.7,
-      "dps": 39268530,
-      "elasticity": 0.574
+      "dps": 13843958,
+      "elasticity": 0.577
      }
     ],
-    "elasticity": 0.574
+    "elasticity": 0.577
    }
   },
   "red_flags": []
@@ -2072,7 +2333,8 @@
  "1cf54c7a7d1748d79a5a61baa42813fd": {
   "skill": "Hexblast",
   "ascendancy": "Blood Mage",
-  "dps": 36026007.744731,
+  "dps": 17670823.835568,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 723,
@@ -2080,17 +2342,17 @@
      {
       "add": 362,
       "stat": 1104,
-      "dps": 37036875,
-      "elasticity": 0.065
+      "dps": 18016647,
+      "elasticity": 0.046
      },
      {
       "add": 723,
       "stat": 1483,
-      "dps": 37795020,
-      "elasticity": 0.067
+      "dps": 18276012,
+      "elasticity": 0.047
      }
     ],
-    "elasticity": 0.067
+    "elasticity": 0.047
    },
    "life": {
     "base": 2077,
@@ -2098,13 +2360,13 @@
      {
       "add": 1038,
       "stat": 3229,
-      "dps": 36943177,
+      "dps": 18120683,
       "elasticity": 0.057
      },
      {
       "add": 2077,
       "stat": 4382,
-      "dps": 37860347,
+      "dps": 18570541,
       "elasticity": 0.067
      }
     ],
@@ -2116,13 +2378,13 @@
      {
       "add": 94,
       "stat": 281,
-      "dps": 36185516,
+      "dps": 17749060,
       "elasticity": 0.011
      },
      {
       "add": 187,
       "stat": 374,
-      "dps": 36345023,
+      "dps": 17827296,
       "elasticity": 0.013
      }
     ],
@@ -2134,13 +2396,13 @@
      {
       "add": 8,
       "stat": 25,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 17,
       "stat": 34,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2152,17 +2414,17 @@
      {
       "add": 22,
       "stat": 67,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 45,
       "stat": 90,
-      "dps": 36278711,
-      "elasticity": 0.01
+      "dps": 17757275,
+      "elasticity": 0.007
      }
     ],
-    "elasticity": 0.01
+    "elasticity": 0.007
    },
    "spirit": {
     "base": 100,
@@ -2170,13 +2432,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2188,13 +2450,13 @@
      {
       "add": 5690,
       "stat": 28449,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 11379,
       "stat": 45516,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2206,13 +2468,13 @@
      {
       "add": 648,
       "stat": 2040,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 1295,
       "stat": 2784,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2224,17 +2486,17 @@
      {
       "add": 50,
       "stat": 100,
-      "dps": 38385425,
-      "elasticity": 0.874
+      "dps": 18832483,
+      "elasticity": 0.877
      },
      {
       "add": 100,
       "stat": 100,
-      "dps": 38385425,
-      "elasticity": 0.874
+      "dps": 18832483,
+      "elasticity": 0.877
      }
     ],
-    "elasticity": 0.874
+    "elasticity": 0.877
    },
    "speed": {
     "base": 2.2,
@@ -2242,17 +2504,17 @@
      {
       "add": 50,
       "stat": 2.6,
-      "dps": 42944815,
-      "elasticity": 0.989
+      "dps": 21077305,
+      "elasticity": 0.992
      },
      {
       "add": 100,
       "stat": 3.0,
-      "dps": 50027396,
-      "elasticity": 0.989
+      "dps": 24564565,
+      "elasticity": 0.993
      }
     ],
-    "elasticity": 0.989
+    "elasticity": 0.993
    }
   },
   "red_flags": []
@@ -2260,7 +2522,8 @@
  "efbb8686892a4ca4b0fb568b345e54fe": {
   "skill": "Tempest Flurry",
   "ascendancy": "Invoker",
-  "dps": 2613639.0261741,
+  "dps": 1323925.8494784,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 506,
@@ -2268,13 +2531,13 @@
      {
       "add": 253,
       "stat": 772,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 506,
       "stat": 1037,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2286,13 +2549,13 @@
      {
       "add": 1138,
       "stat": 3563,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 2277,
       "stat": 4850,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2304,13 +2567,13 @@
      {
       "add": 105,
       "stat": 331,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 210,
       "stat": 452,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2322,13 +2585,13 @@
      {
       "add": 94,
       "stat": 281,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 187,
       "stat": 374,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2340,13 +2603,13 @@
      {
       "add": 30,
       "stat": 91,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 61,
       "stat": 122,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2358,13 +2621,13 @@
      {
       "add": 18,
       "stat": 54,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 36,
       "stat": 72,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2376,13 +2639,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2394,13 +2657,13 @@
      {
       "add": 1804,
       "stat": 6278,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 3608,
       "stat": 8948,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2412,13 +2675,13 @@
      {
       "add": 589,
       "stat": 1855,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      },
      {
       "add": 1178,
       "stat": 2532,
-      "dps": 2613639,
+      "dps": 1323926,
       "elasticity": 0.0
      }
     ],
@@ -2430,17 +2693,17 @@
      {
       "add": 50,
       "stat": 93.8,
-      "dps": 2829637,
-      "elasticity": 0.903
+      "dps": 1433431,
+      "elasticity": 0.904
      },
      {
       "add": 100,
       "stat": 100,
-      "dps": 3020664,
-      "elasticity": 0.956
+      "dps": 1530349,
+      "elasticity": 0.957
      }
     ],
-    "elasticity": 0.956
+    "elasticity": 0.957
    },
    "speed": {
     "base": 4.2,
@@ -2448,27 +2711,26 @@
      {
       "add": 50,
       "stat": 5.1,
-      "dps": 3254617,
+      "dps": 1648644,
       "elasticity": 1.036
      },
      {
       "add": 100,
       "stat": 6.1,
-      "dps": 3862526,
+      "dps": 1956556,
       "elasticity": 1.011
      }
     ],
     "elasticity": 1.036
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "b462692f337f47258014650dd60c788b": {
   "skill": "Hexblast",
   "ascendancy": "Blood Mage",
-  "dps": 36026007.744731,
+  "dps": 17670823.835568,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 723,
@@ -2476,17 +2738,17 @@
      {
       "add": 362,
       "stat": 1104,
-      "dps": 37036875,
-      "elasticity": 0.065
+      "dps": 18016647,
+      "elasticity": 0.046
      },
      {
       "add": 723,
       "stat": 1483,
-      "dps": 37795020,
-      "elasticity": 0.067
+      "dps": 18276012,
+      "elasticity": 0.047
      }
     ],
-    "elasticity": 0.067
+    "elasticity": 0.047
    },
    "life": {
     "base": 2077,
@@ -2494,13 +2756,13 @@
      {
       "add": 1038,
       "stat": 3229,
-      "dps": 36943177,
+      "dps": 18120683,
       "elasticity": 0.057
      },
      {
       "add": 2077,
       "stat": 4382,
-      "dps": 37860347,
+      "dps": 18570541,
       "elasticity": 0.067
      }
     ],
@@ -2512,13 +2774,13 @@
      {
       "add": 94,
       "stat": 281,
-      "dps": 36185516,
+      "dps": 17749060,
       "elasticity": 0.011
      },
      {
       "add": 187,
       "stat": 374,
-      "dps": 36345023,
+      "dps": 17827296,
       "elasticity": 0.013
      }
     ],
@@ -2530,13 +2792,13 @@
      {
       "add": 8,
       "stat": 25,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 17,
       "stat": 34,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2548,17 +2810,17 @@
      {
       "add": 22,
       "stat": 67,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 45,
       "stat": 90,
-      "dps": 36278711,
-      "elasticity": 0.01
+      "dps": 17757275,
+      "elasticity": 0.007
      }
     ],
-    "elasticity": 0.01
+    "elasticity": 0.007
    },
    "spirit": {
     "base": 100,
@@ -2566,13 +2828,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2584,13 +2846,13 @@
      {
       "add": 5690,
       "stat": 28449,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 11379,
       "stat": 45516,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2602,13 +2864,13 @@
      {
       "add": 648,
       "stat": 2040,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      },
      {
       "add": 1295,
       "stat": 2784,
-      "dps": 36026008,
+      "dps": 17670824,
       "elasticity": 0.0
      }
     ],
@@ -2620,17 +2882,17 @@
      {
       "add": 50,
       "stat": 100,
-      "dps": 38385425,
-      "elasticity": 0.874
+      "dps": 18832483,
+      "elasticity": 0.877
      },
      {
       "add": 100,
       "stat": 100,
-      "dps": 38385425,
-      "elasticity": 0.874
+      "dps": 18832483,
+      "elasticity": 0.877
      }
     ],
-    "elasticity": 0.874
+    "elasticity": 0.877
    },
    "speed": {
     "base": 2.2,
@@ -2638,17 +2900,17 @@
      {
       "add": 50,
       "stat": 2.6,
-      "dps": 42944815,
-      "elasticity": 0.989
+      "dps": 21077305,
+      "elasticity": 0.992
      },
      {
       "add": 100,
       "stat": 3.0,
-      "dps": 50027396,
-      "elasticity": 0.989
+      "dps": 24564565,
+      "elasticity": 0.993
      }
     ],
-    "elasticity": 0.989
+    "elasticity": 0.993
    }
   },
   "red_flags": []
@@ -2656,7 +2918,8 @@
  "83ea9a6173f54e598194bebdbf9f0f7b": {
   "skill": "Flicker Strike",
   "ascendancy": "Acolyte of Chayula",
-  "dps": 19210432.31175,
+  "dps": 6982168.0596016,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 575,
@@ -2664,13 +2927,13 @@
      {
       "add": 288,
       "stat": 878,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 575,
       "stat": 1179,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2682,13 +2945,13 @@
      {
       "add": 1182,
       "stat": 3698,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 2363,
       "stat": 5033,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2700,13 +2963,13 @@
      {
       "add": 131,
       "stat": 393,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 262,
       "stat": 524,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2718,13 +2981,13 @@
      {
       "add": 112,
       "stat": 335,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 223,
       "stat": 446,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2736,13 +2999,13 @@
      {
       "add": 26,
       "stat": 77,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 51,
       "stat": 102,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2754,13 +3017,13 @@
      {
       "add": 34,
       "stat": 103,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 69,
       "stat": 138,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2772,13 +3035,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2790,13 +3053,13 @@
      {
       "add": 5128,
       "stat": 25641,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 10257,
       "stat": 41028,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2808,13 +3071,13 @@
      {
       "add": 322,
       "stat": 966,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      },
      {
       "add": 644,
       "stat": 1288,
-      "dps": 19210432,
+      "dps": 6982168,
       "elasticity": 0.0
      }
     ],
@@ -2826,17 +3089,17 @@
      {
       "add": 50,
       "stat": 100,
-      "dps": 20985089,
-      "elasticity": 0.885
+      "dps": 7629149,
+      "elasticity": 0.888
      },
      {
       "add": 100,
       "stat": 100,
-      "dps": 21250690,
-      "elasticity": 1.011
+      "dps": 7751595,
+      "elasticity": 1.047
      }
     ],
-    "elasticity": 1.011
+    "elasticity": 1.047
    },
    "speed": {
     "base": 7.0,
@@ -2844,27 +3107,26 @@
      {
       "add": 50,
       "stat": 8.7,
-      "dps": 23816375,
-      "elasticity": 0.974
+      "dps": 8643742,
+      "elasticity": 0.968
      },
      {
       "add": 100,
       "stat": 10.4,
-      "dps": 28411957,
-      "elasticity": 0.973
+      "dps": 10298190,
+      "elasticity": 0.967
      }
     ],
-    "elasticity": 0.974
+    "elasticity": 0.968
    }
   },
-  "red_flags": [
-   "crit chance"
-  ]
+  "red_flags": []
  },
  "4c9d0060edcd46d783cb29f9ffab6497": {
   "skill": "Flicker Strike",
   "ascendancy": "Acolyte of Chayula",
-  "dps": 19095541.225243,
+  "dps": 6955629.2278207,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 861,
@@ -2872,13 +3134,13 @@
      {
       "add": 430,
       "stat": 1313,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 861,
       "stat": 1765,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -2890,13 +3152,13 @@
      {
       "add": 1280,
       "stat": 4161,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 2561,
       "stat": 5763,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -2908,13 +3170,13 @@
      {
       "add": 118,
       "stat": 354,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 236,
       "stat": 472,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -2926,13 +3188,13 @@
      {
       "add": 32,
       "stat": 96,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 64,
       "stat": 128,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -2944,13 +3206,13 @@
      {
       "add": 24,
       "stat": 73,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 49,
       "stat": 98,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -2962,13 +3224,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -2980,13 +3242,13 @@
      {
       "add": 5376,
       "stat": 26880,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 10752,
       "stat": 43008,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -2998,13 +3260,13 @@
      {
       "add": 62,
       "stat": 185,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      },
      {
       "add": 123,
       "stat": 246,
-      "dps": 19095541,
+      "dps": 6955629,
       "elasticity": 0.0
      }
     ],
@@ -3016,17 +3278,17 @@
      {
       "add": 50,
       "stat": 85.6,
-      "dps": 20732388,
-      "elasticity": 0.873
+      "dps": 7549982,
+      "elasticity": 0.87
      },
      {
       "add": 100,
       "stat": 93.3,
-      "dps": 22369074,
-      "elasticity": 0.877
+      "dps": 8144281,
+      "elasticity": 0.875
      }
     ],
-    "elasticity": 0.877
+    "elasticity": 0.875
    },
    "speed": {
     "base": 6.3,
@@ -3034,17 +3296,17 @@
      {
       "add": 50,
       "stat": 8.0,
-      "dps": 24216483,
-      "elasticity": 0.986
+      "dps": 8814038,
+      "elasticity": 0.983
      },
      {
       "add": 100,
       "stat": 9.8,
-      "dps": 29260357,
-      "elasticity": 0.979
+      "dps": 10634294,
+      "elasticity": 0.974
      }
     ],
-    "elasticity": 0.986
+    "elasticity": 0.983
    }
   },
   "red_flags": []
@@ -3052,7 +3314,8 @@
  "672cff3c150f4919ad9e19323ce02e0f": {
   "skill": "Skyfall",
   "ascendancy": "Stormweaver",
-  "dps": 5080828.2111457,
+  "dps": 1876923.9633237,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 769,
@@ -3060,13 +3323,13 @@
      {
       "add": 384,
       "stat": 1172,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 769,
       "stat": 1576,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3078,13 +3341,13 @@
      {
       "add": 1177,
       "stat": 3590,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 2354,
       "stat": 4826,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3096,13 +3359,13 @@
      {
       "add": 101,
       "stat": 303,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 202,
       "stat": 404,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3114,13 +3377,13 @@
      {
       "add": 8,
       "stat": 25,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 17,
       "stat": 34,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3132,13 +3395,13 @@
      {
       "add": 22,
       "stat": 67,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 45,
       "stat": 90,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3150,13 +3413,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3168,13 +3431,13 @@
      {
       "add": 2450,
       "stat": 8526,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 4900,
       "stat": 12152,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3186,13 +3449,13 @@
      {
       "add": 172,
       "stat": 516,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      },
      {
       "add": 344,
       "stat": 688,
-      "dps": 5080828,
+      "dps": 1876924,
       "elasticity": 0.0
      }
     ],
@@ -3204,13 +3467,13 @@
      {
       "add": 50,
       "stat": 85.4,
-      "dps": 5458881,
+      "dps": 2016514,
       "elasticity": 0.839
      },
      {
       "add": 100,
       "stat": 92.4,
-      "dps": 5836933,
+      "dps": 2156105,
       "elasticity": 0.844
      }
     ],
@@ -3222,17 +3485,17 @@
      {
       "add": 50,
       "stat": 0.7,
-      "dps": 5824285,
-      "elasticity": 1.406
+      "dps": 2140347,
+      "elasticity": 1.352
      },
      {
       "add": 100,
       "stat": 0.7,
-      "dps": 6471549,
-      "elasticity": 1.466
+      "dps": 2366815,
+      "elasticity": 1.405
      }
     ],
-    "elasticity": 1.466
+    "elasticity": 1.405
    }
   },
   "red_flags": [
@@ -3242,7 +3505,8 @@
  "4fd405c441cc4890b341b70342f1a373": {
   "skill": "Hexblast",
   "ascendancy": "Smith of Kitava",
-  "dps": 4280820.8881938,
+  "dps": 2124116.9473415,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 539,
@@ -3250,13 +3514,13 @@
      {
       "add": 270,
       "stat": 795,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 539,
       "stat": 1051,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3268,13 +3532,13 @@
      {
       "add": 1428,
       "stat": 4469,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 2856,
       "stat": 6083,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3286,13 +3550,13 @@
      {
       "add": 93,
       "stat": 279,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 186,
       "stat": 372,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3304,13 +3568,13 @@
      {
       "add": 188,
       "stat": 574,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 377,
       "stat": 773,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3322,13 +3586,13 @@
      {
       "add": 18,
       "stat": 55,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 37,
       "stat": 74,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3340,13 +3604,13 @@
      {
       "add": 8,
       "stat": 25,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 17,
       "stat": 34,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3358,13 +3622,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3376,13 +3640,13 @@
      {
       "add": 3986,
       "stat": 20529,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 7973,
       "stat": 33088,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3394,13 +3658,13 @@
      {
       "add": 6594,
       "stat": 32970,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      },
      {
       "add": 13188,
       "stat": 52752,
-      "dps": 4280821,
+      "dps": 2124117,
       "elasticity": 0.0
      }
     ],
@@ -3412,17 +3676,17 @@
      {
       "add": 50,
       "stat": 31.9,
-      "dps": 4596735,
-      "elasticity": 0.612
+      "dps": 2282267,
+      "elasticity": 0.617
      },
      {
       "add": 100,
       "stat": 35.4,
-      "dps": 4911956,
-      "elasticity": 0.623
+      "dps": 2440174,
+      "elasticity": 0.629
      }
     ],
-    "elasticity": 0.623
+    "elasticity": 0.629
    },
    "speed": {
     "base": 2.9,
@@ -3430,17 +3694,17 @@
      {
       "add": 50,
       "stat": 3.4,
-      "dps": 4990504,
-      "elasticity": 0.97
+      "dps": 2479864,
+      "elasticity": 0.98
      },
      {
       "add": 100,
       "stat": 3.9,
-      "dps": 5699371,
-      "elasticity": 0.972
+      "dps": 2835323,
+      "elasticity": 0.981
      }
     ],
-    "elasticity": 0.972
+    "elasticity": 0.981
    }
   },
   "red_flags": []
@@ -3448,7 +3712,8 @@
  "cbbb2b112ecb4c7e9b7093112d1762b3": {
   "skill": "Spark",
   "ascendancy": "Titan",
-  "dps": 1630641.2776723,
+  "dps": 584137.13446513,
+  "main_group": 5,
   "stats": {
    "mana": {
     "base": 422,
@@ -3456,13 +3721,13 @@
      {
       "add": 211,
       "stat": 622,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 422,
       "stat": 823,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3474,13 +3739,13 @@
      {
       "add": 1643,
       "stat": 5270,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 3286,
       "stat": 7253,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3492,13 +3757,13 @@
      {
       "add": 92,
       "stat": 275,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 183,
       "stat": 366,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3510,13 +3775,13 @@
      {
       "add": 194,
       "stat": 597,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 388,
       "stat": 807,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3528,13 +3793,13 @@
      {
       "add": 4,
       "stat": 11,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 7,
       "stat": 14,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3546,13 +3811,13 @@
      {
       "add": 8,
       "stat": 25,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 17,
       "stat": 34,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3564,13 +3829,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3582,13 +3847,13 @@
      {
       "add": 4328,
       "stat": 17224,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 8655,
       "stat": 25792,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
@@ -3600,63 +3865,62 @@
      {
       "add": 640,
       "stat": 1919,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      },
      {
       "add": 1279,
       "stat": 2558,
-      "dps": 1630641,
+      "dps": 584137,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "crit chance": {
-    "base": 48.0,
+    "base": 47.6,
     "steps": [
      {
       "add": 50,
-      "stat": 52.5,
-      "dps": 1745185,
-      "elasticity": 0.757
+      "stat": 53.1,
+      "dps": 625169,
+      "elasticity": 0.621
      },
      {
       "add": 100,
-      "stat": 57.0,
-      "dps": 1859728,
-      "elasticity": 0.765
+      "stat": 58.6,
+      "dps": 666202,
+      "elasticity": 0.633
      }
     ],
-    "elasticity": 0.765
+    "elasticity": 0.633
    },
    "speed": {
-    "base": 3.0,
+    "base": 5.3,
     "steps": [
      {
       "add": 50,
-      "stat": 3.6,
-      "dps": 1956514,
-      "elasticity": 1.004
+      "stat": 6.3,
+      "dps": 700873,
+      "elasticity": 1.047
      },
      {
       "add": 100,
-      "stat": 4.2,
-      "dps": 2287727,
-      "elasticity": 1.0
+      "stat": 7.3,
+      "dps": 819522,
+      "elasticity": 1.051
      }
     ],
-    "elasticity": 1.004
+    "elasticity": 1.051
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "d79fda4d2b274120a2b7442012459b39": {
   "skill": "Hexblast",
   "ascendancy": "Lich",
-  "dps": 5266706.2273766,
+  "dps": 2744517.7745379,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 1040,
@@ -3664,17 +3928,17 @@
      {
       "add": 520,
       "stat": 1566,
-      "dps": 5639828,
-      "elasticity": 0.167
+      "dps": 2909136,
+      "elasticity": 0.142
      },
      {
       "add": 1040,
       "stat": 2091,
-      "dps": 6012944,
-      "elasticity": 0.19
+      "dps": 3073752,
+      "elasticity": 0.162
      }
     ],
-    "elasticity": 0.19
+    "elasticity": 0.162
    },
    "life": {
     "base": 2529,
@@ -3682,13 +3946,13 @@
      {
       "add": 1264,
       "stat": 3932,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 2529,
       "stat": 5336,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      }
     ],
@@ -3700,13 +3964,13 @@
      {
       "add": 140,
       "stat": 494,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 281,
       "stat": 708,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      }
     ],
@@ -3718,13 +3982,13 @@
      {
       "add": 114,
       "stat": 343,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 229,
       "stat": 458,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      }
     ],
@@ -3736,13 +4000,13 @@
      {
       "add": 4,
       "stat": 11,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 7,
       "stat": 14,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      }
     ],
@@ -3754,17 +4018,17 @@
      {
       "add": 25,
       "stat": 75,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 50,
       "stat": 100,
-      "dps": 5341338,
-      "elasticity": 0.02
+      "dps": 2777445,
+      "elasticity": 0.017
      }
     ],
-    "elasticity": 0.02
+    "elasticity": 0.017
    },
    "spirit": {
     "base": 100,
@@ -3772,13 +4036,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      }
     ],
@@ -3790,13 +4054,13 @@
      {
       "add": 2795,
       "stat": 10900,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 5590,
       "stat": 16211,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      }
     ],
@@ -3808,13 +4072,13 @@
      {
       "add": 588,
       "stat": 1880,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      },
      {
       "add": 1175,
       "stat": 2585,
-      "dps": 5266706,
+      "dps": 2744518,
       "elasticity": 0.0
      }
     ],
@@ -3826,13 +4090,13 @@
      {
       "add": 50,
       "stat": 33.0,
-      "dps": 5633153,
+      "dps": 2935476,
       "elasticity": 0.599
      },
      {
       "add": 100,
       "stat": 36.5,
-      "dps": 5999599,
+      "dps": 3126433,
       "elasticity": 0.611
      }
     ],
@@ -3844,13 +4108,13 @@
      {
       "add": 50,
       "stat": 3.1,
-      "dps": 6260424,
+      "dps": 3262351,
       "elasticity": 1.0
      },
      {
       "add": 100,
       "stat": 3.6,
-      "dps": 7254143,
+      "dps": 3780185,
       "elasticity": 1.0
      }
     ],
@@ -3862,7 +4126,8 @@
  "81e96071954b440c86f157823b2097ba": {
   "skill": "Hexblast",
   "ascendancy": "Blood Mage",
-  "dps": 14869345.1889,
+  "dps": 7330078.4274556,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 1011,
@@ -3870,17 +4135,17 @@
      {
       "add": 506,
       "stat": 1542,
-      "dps": 15556827,
-      "elasticity": 0.107
+      "dps": 7565269,
+      "elasticity": 0.075
      },
      {
       "add": 1011,
       "stat": 2073,
-      "dps": 16244292,
-      "elasticity": 0.123
+      "dps": 7800455,
+      "elasticity": 0.087
      }
     ],
-    "elasticity": 0.123
+    "elasticity": 0.087
    },
    "life": {
     "base": 3091,
@@ -3888,13 +4153,13 @@
      {
       "add": 1546,
       "stat": 4807,
-      "dps": 15440940,
+      "dps": 7611809,
       "elasticity": 0.085
      },
      {
       "add": 3091,
       "stat": 6522,
-      "dps": 15996204,
+      "dps": 7885489,
       "elasticity": 0.098
      }
     ],
@@ -3906,13 +4171,13 @@
      {
       "add": 274,
       "stat": 821,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      },
      {
       "add": 547,
       "stat": 1094,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      }
     ],
@@ -3924,13 +4189,13 @@
      {
       "add": 128,
       "stat": 383,
-      "dps": 14967333,
+      "dps": 7378375,
       "elasticity": 0.016
      },
      {
       "add": 255,
       "stat": 510,
-      "dps": 15065321,
+      "dps": 7426672,
       "elasticity": 0.019
      }
     ],
@@ -3942,13 +4207,13 @@
      {
       "add": 8,
       "stat": 25,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      },
      {
       "add": 17,
       "stat": 34,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      }
     ],
@@ -3960,17 +4225,17 @@
      {
       "add": 22,
       "stat": 67,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      },
      {
       "add": 45,
       "stat": 90,
-      "dps": 15006828,
-      "elasticity": 0.013
+      "dps": 7377112,
+      "elasticity": 0.009
      }
     ],
-    "elasticity": 0.013
+    "elasticity": 0.009
    },
    "spirit": {
     "base": 100,
@@ -3978,13 +4243,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      }
     ],
@@ -3996,13 +4261,13 @@
      {
       "add": 4642,
       "stat": 23211,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      },
      {
       "add": 9285,
       "stat": 37140,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      }
     ],
@@ -4014,13 +4279,13 @@
      {
       "add": 6012,
       "stat": 30600,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      },
      {
       "add": 12023,
       "stat": 49174,
-      "dps": 14869345,
+      "dps": 7330078,
       "elasticity": 0.0
      }
     ],
@@ -4032,17 +4297,17 @@
      {
       "add": 50,
       "stat": 83.8,
-      "dps": 16101540,
-      "elasticity": 0.85
+      "dps": 7940281,
+      "elasticity": 0.853
      },
      {
       "add": 100,
       "stat": 91.3,
-      "dps": 17333632,
-      "elasticity": 0.855
+      "dps": 8550451,
+      "elasticity": 0.859
      }
     ],
-    "elasticity": 0.855
+    "elasticity": 0.859
    },
    "speed": {
     "base": 2.5,
@@ -4050,17 +4315,17 @@
      {
       "add": 50,
       "stat": 3.0,
-      "dps": 17764519,
-      "elasticity": 0.986
+      "dps": 8763846,
+      "elasticity": 0.991
      },
      {
       "add": 100,
       "stat": 3.5,
-      "dps": 20659214,
-      "elasticity": 0.987
+      "dps": 10197450,
+      "elasticity": 0.991
      }
     ],
-    "elasticity": 0.987
+    "elasticity": 0.991
    }
   },
   "red_flags": []
@@ -4068,7 +4333,8 @@
  "93d832ed309e4dd2ae7ef1b682b76cfc": {
   "skill": "Spark",
   "ascendancy": "Infernalist",
-  "dps": 5916185.5935391,
+  "dps": 2024323.2433319,
+  "main_group": 6,
   "stats": {
    "mana": {
     "base": 633,
@@ -4076,13 +4342,13 @@
      {
       "add": 316,
       "stat": 965,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 633,
       "stat": 1298,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4094,13 +4360,13 @@
      {
       "add": 1428,
       "stat": 4485,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 2857,
       "stat": 6114,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4112,13 +4378,13 @@
      {
       "add": 70,
       "stat": 192,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 140,
       "stat": 245,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4130,13 +4396,13 @@
      {
       "add": 132,
       "stat": 395,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 263,
       "stat": 526,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4148,13 +4414,13 @@
      {
       "add": 14,
       "stat": 41,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 27,
       "stat": 54,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4166,13 +4432,13 @@
      {
       "add": 22,
       "stat": 67,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 45,
       "stat": 90,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4184,13 +4450,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4202,13 +4468,13 @@
      {
       "add": 6014,
       "stat": 28567,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 12029,
       "stat": 45108,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
@@ -4220,53 +4486,53 @@
      {
       "add": 3812,
       "stat": 16202,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      },
      {
       "add": 7625,
       "stat": 24782,
-      "dps": 5916186,
+      "dps": 2024323,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "crit chance": {
-    "base": 54.2,
+    "base": 55.2,
     "steps": [
      {
       "add": 50,
-      "stat": 58.7,
-      "dps": 6328744,
-      "elasticity": 0.845
+      "stat": 60.7,
+      "dps": 2165505,
+      "elasticity": 0.71
      },
      {
       "add": 100,
-      "stat": 63.2,
-      "dps": 6740582,
-      "elasticity": 0.849
+      "stat": 66.2,
+      "dps": 2306446,
+      "elasticity": 0.718
      }
     ],
-    "elasticity": 0.849
+    "elasticity": 0.718
    },
    "speed": {
-    "base": 3.3,
+    "base": 5.8,
     "steps": [
      {
       "add": 50,
-      "stat": 3.9,
-      "dps": 6921259,
-      "elasticity": 0.932
+      "stat": 6.8,
+      "dps": 2368326,
+      "elasticity": 0.984
      },
      {
       "add": 100,
-      "stat": 4.5,
-      "dps": 7940346,
-      "elasticity": 0.932
+      "stat": 7.8,
+      "dps": 2717130,
+      "elasticity": 0.991
      }
     ],
-    "elasticity": 0.932
+    "elasticity": 0.991
    }
   },
   "red_flags": []
@@ -4274,7 +4540,8 @@
  "dfe09616fab442e580f16cd4a0860a38": {
   "skill": "Whirling Assault",
   "ascendancy": "Martial Artist",
-  "dps": 1365103.4447535,
+  "dps": 496819.88958144,
+  "main_group": 4,
   "stats": {
    "mana": {
     "base": 1146,
@@ -4282,13 +4549,13 @@
      {
       "add": 573,
       "stat": 1747,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      },
      {
       "add": 1146,
       "stat": 2349,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      }
     ],
@@ -4300,13 +4567,13 @@
      {
       "add": 1278,
       "stat": 3975,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      },
      {
       "add": 2556,
       "stat": 5393,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      }
     ],
@@ -4318,13 +4585,13 @@
      {
       "add": 149,
       "stat": 447,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      },
      {
       "add": 298,
       "stat": 596,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      }
     ],
@@ -4336,17 +4603,17 @@
      {
       "add": 27,
       "stat": 81,
-      "dps": 1365103,
-      "elasticity": 0.0
+      "dps": 505465,
+      "elasticity": 0.043
      },
      {
       "add": 54,
       "stat": 108,
-      "dps": 1365103,
-      "elasticity": 0.0
+      "dps": 505465,
+      "elasticity": 0.025
      }
     ],
-    "elasticity": 0.0
+    "elasticity": 0.043
    },
    "intelligence": {
     "base": 117,
@@ -4354,13 +4621,13 @@
      {
       "add": 58,
       "stat": 175,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      },
      {
       "add": 117,
       "stat": 234,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      }
     ],
@@ -4372,13 +4639,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      }
     ],
@@ -4390,13 +4657,13 @@
      {
       "add": 5956,
       "stat": 29781,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      },
      {
       "add": 11913,
       "stat": 47652,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      }
     ],
@@ -4408,63 +4675,62 @@
      {
       "add": 1220,
       "stat": 3844,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      },
      {
       "add": 2441,
       "stat": 5249,
-      "dps": 1365103,
+      "dps": 496820,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "crit chance": {
-    "base": 72.6,
+    "base": 71.8,
     "steps": [
      {
       "add": 50,
-      "stat": 80.0,
-      "dps": 1468616,
-      "elasticity": 0.748
+      "stat": 79.2,
+      "dps": 534467,
+      "elasticity": 0.747
      },
      {
       "add": 100,
-      "stat": 87.5,
-      "dps": 1571893,
+      "stat": 86.6,
+      "dps": 572037,
       "elasticity": 0.755
      }
     ],
     "elasticity": 0.755
    },
    "speed": {
-    "base": 0.7,
+    "base": 2.8,
     "steps": [
      {
       "add": 50,
-      "stat": 0.8,
-      "dps": 1711216,
-      "elasticity": 3.153
+      "stat": 3.7,
+      "dps": 622961,
+      "elasticity": 0.841
      },
      {
       "add": 100,
-      "stat": 0.8,
-      "dps": 2050470,
-      "elasticity": 3.427
+      "stat": 4.6,
+      "dps": 746632,
+      "elasticity": 0.847
      }
     ],
-    "elasticity": 3.427
+    "elasticity": 0.847
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "cd91e05a805842e3b2e386c2213def33": {
   "skill": "Rapid Shot",
   "ascendancy": "Oracle",
-  "dps": 10058560.038433,
+  "dps": 5675540.0870979,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 1145,
@@ -4472,13 +4738,13 @@
      {
       "add": 572,
       "stat": 1688,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 1145,
       "stat": 2233,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4490,13 +4756,13 @@
      {
       "add": 1168,
       "stat": 3656,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 2336,
       "stat": 4975,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4508,13 +4774,13 @@
      {
       "add": 104,
       "stat": 340,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 207,
       "stat": 472,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4526,13 +4792,13 @@
      {
       "add": 90,
       "stat": 270,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 180,
       "stat": 360,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4544,13 +4810,13 @@
      {
       "add": 85,
       "stat": 255,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 170,
       "stat": 340,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4562,13 +4828,13 @@
      {
       "add": 84,
       "stat": 253,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 169,
       "stat": 338,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4580,13 +4846,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4598,13 +4864,13 @@
      {
       "add": 3172,
       "stat": 12911,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 6345,
       "stat": 19479,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4616,13 +4882,13 @@
      {
       "add": 4,
       "stat": 11,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      },
      {
       "add": 7,
       "stat": 14,
-      "dps": 10058560,
+      "dps": 5675540,
       "elasticity": 0.0
      }
     ],
@@ -4634,17 +4900,17 @@
      {
       "add": 50,
       "stat": 27.9,
-      "dps": 13723652,
-      "elasticity": 1.604
+      "dps": 7744032,
+      "elasticity": 1.605
      },
      {
       "add": 100,
       "stat": 28.6,
-      "dps": 14458564,
-      "elasticity": 1.665
+      "dps": 8160538,
+      "elasticity": 1.666
      }
     ],
-    "elasticity": 1.665
+    "elasticity": 1.666
    }
   },
   "red_flags": [
@@ -4654,7 +4920,8 @@
  "bb8a378e5efe4188b06ea2795a277319": {
   "skill": "High Velocity Rounds",
   "ascendancy": "Gemling Legionnaire",
-  "dps": 873222.9008597,
+  "dps": 802934.05543431,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 771,
@@ -4662,13 +4929,13 @@
      {
       "add": 386,
       "stat": 1176,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 771,
       "stat": 1580,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4680,13 +4947,13 @@
      {
       "add": 1296,
       "stat": 4159,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 2591,
       "stat": 5726,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4698,13 +4965,13 @@
      {
       "add": 64,
       "stat": 194,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 128,
       "stat": 260,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4716,13 +4983,13 @@
      {
       "add": 79,
       "stat": 239,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 158,
       "stat": 320,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4734,13 +5001,13 @@
      {
       "add": 81,
       "stat": 245,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 162,
       "stat": 329,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4752,13 +5019,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4770,13 +5037,13 @@
      {
       "add": 7026,
       "stat": 35833,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 14052,
       "stat": 57614,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4788,13 +5055,13 @@
      {
       "add": 312,
       "stat": 966,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      },
      {
       "add": 623,
       "stat": 1308,
-      "dps": 873223,
+      "dps": 802934,
       "elasticity": 0.0
      }
     ],
@@ -4806,17 +5073,17 @@
      {
       "add": 50,
       "stat": 49.9,
-      "dps": 928226,
-      "elasticity": 0.528
+      "dps": 860305,
+      "elasticity": 0.597
      },
      {
       "add": 100,
       "stat": 55.4,
-      "dps": 977812,
-      "elasticity": 0.516
+      "dps": 913492,
+      "elasticity": 0.588
      }
     ],
-    "elasticity": 0.528
+    "elasticity": 0.597
    },
    "speed": {
     "base": 1.3,
@@ -4824,17 +5091,17 @@
      {
       "add": 50,
       "stat": 1.7,
-      "dps": 1039434,
-      "elasticity": 0.596
+      "dps": 975044,
+      "elasticity": 0.664
      },
      {
       "add": 100,
       "stat": 2.2,
-      "dps": 1173934,
-      "elasticity": 0.574
+      "dps": 1117816,
+      "elasticity": 0.642
      }
     ],
-    "elasticity": 0.596
+    "elasticity": 0.664
    }
   },
   "red_flags": []
@@ -4842,7 +5109,8 @@
  "990b3c79593c4b2294169fcbbdc747fc": {
   "skill": "Snap",
   "ascendancy": "Amazon",
-  "dps": 4758431.1543673,
+  "dps": 2441698.5154352,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 699,
@@ -4850,13 +5118,13 @@
      {
       "add": 350,
       "stat": 1032,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 699,
       "stat": 1363,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -4868,13 +5136,13 @@
      {
       "add": 1118,
       "stat": 3410,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 2237,
       "stat": 4585,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -4886,13 +5154,13 @@
      {
       "add": 146,
       "stat": 401,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 292,
       "stat": 511,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -4904,13 +5172,13 @@
      {
       "add": 107,
       "stat": 321,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 214,
       "stat": 428,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -4922,13 +5190,13 @@
      {
       "add": 48,
       "stat": 144,
-      "dps": 4758441,
+      "dps": 2441715,
       "elasticity": 0.0
      },
      {
       "add": 96,
       "stat": 192,
-      "dps": 4758441,
+      "dps": 2441715,
       "elasticity": 0.0
      }
     ],
@@ -4940,13 +5208,13 @@
      {
       "add": 82,
       "stat": 245,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 163,
       "stat": 326,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -4958,13 +5226,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -4976,13 +5244,13 @@
      {
       "add": 5996,
       "stat": 31839,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 11992,
       "stat": 51686,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -4994,13 +5262,13 @@
      {
       "add": 1823,
       "stat": 6180,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      },
      {
       "add": 3646,
       "stat": 8714,
-      "dps": 4758431,
+      "dps": 2441699,
       "elasticity": 0.0
      }
     ],
@@ -5012,13 +5280,13 @@
      {
       "add": 50,
       "stat": 73.5,
-      "dps": 5134620,
+      "dps": 2634734,
       "elasticity": 0.821
      },
      {
       "add": 100,
       "stat": 80.0,
-      "dps": 5510809,
+      "dps": 2827769,
       "elasticity": 0.827
      }
     ],
@@ -5030,27 +5298,26 @@
      {
       "add": 50,
       "stat": 1.4,
-      "dps": 4790838,
-      "elasticity": 1.01
+      "dps": 2458268,
+      "elasticity": 1.006
      },
      {
       "add": 100,
       "stat": 1.4,
-      "dps": 4791154,
-      "elasticity": 1.019
+      "dps": 2458370,
+      "elasticity": 1.012
      }
     ],
-    "elasticity": 1.019
+    "elasticity": 1.012
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "4b5e627543cf4f698ee01cae23ee5aca": {
   "skill": "Sunder",
   "ascendancy": "Pathfinder",
-  "dps": 2838366.3467228,
+  "dps": 2249657.4730667,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 771,
@@ -5058,13 +5325,13 @@
      {
       "add": 386,
       "stat": 1176,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 771,
       "stat": 1580,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
@@ -5076,13 +5343,13 @@
      {
       "add": 1201,
       "stat": 3807,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 2402,
       "stat": 5212,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
@@ -5094,13 +5361,13 @@
      {
       "add": 96,
       "stat": 263,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 191,
       "stat": 335,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
@@ -5112,13 +5379,13 @@
      {
       "add": 110,
       "stat": 331,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 221,
       "stat": 442,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
@@ -5130,17 +5397,17 @@
      {
       "add": 44,
       "stat": 133,
-      "dps": 2838366,
-      "elasticity": 0.0
+      "dps": 2312530,
+      "elasticity": 0.069
      },
      {
       "add": 89,
       "stat": 178,
-      "dps": 2838366,
-      "elasticity": 0.0
+      "dps": 2312530,
+      "elasticity": 0.04
      }
     ],
-    "elasticity": 0.0
+    "elasticity": 0.069
    },
    "intelligence": {
     "base": 162,
@@ -5148,13 +5415,13 @@
      {
       "add": 81,
       "stat": 243,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 162,
       "stat": 324,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
@@ -5166,13 +5433,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
@@ -5184,13 +5451,13 @@
      {
       "add": 2166,
       "stat": 7040,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 4333,
       "stat": 9749,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
@@ -5202,35 +5469,35 @@
      {
       "add": 725,
       "stat": 2458,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      },
      {
       "add": 1450,
       "stat": 3465,
-      "dps": 2838366,
+      "dps": 2249657,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "crit chance": {
-    "base": 64.8,
+    "base": 63.5,
     "steps": [
      {
       "add": 50,
-      "stat": 71.7,
-      "dps": 3067856,
-      "elasticity": 0.763
+      "stat": 70.3,
+      "dps": 2433512,
+      "elasticity": 0.771
      },
      {
       "add": 100,
-      "stat": 78.7,
-      "dps": 3292652,
-      "elasticity": 0.764
+      "stat": 77.1,
+      "dps": 2614677,
+      "elasticity": 0.773
      }
     ],
-    "elasticity": 0.764
+    "elasticity": 0.773
    },
    "speed": {
     "base": 0.8,
@@ -5238,17 +5505,17 @@
      {
       "add": 50,
       "stat": 1.0,
-      "dps": 3281003,
-      "elasticity": 0.565
+      "dps": 2613080,
+      "elasticity": 0.584
      },
      {
       "add": 100,
       "stat": 1.2,
-      "dps": 3633784,
-      "elasticity": 0.537
+      "dps": 2906782,
+      "elasticity": 0.557
      }
     ],
-    "elasticity": 0.565
+    "elasticity": 0.584
    }
   },
   "red_flags": []
@@ -5256,7 +5523,8 @@
  "541f4ddcef7a4425ad3f97e0d513416f": {
   "skill": "Rain of Arrows",
   "ascendancy": "Shaman",
-  "dps": 6676323.6631205,
+  "dps": 3353403.3171852,
+  "main_group": 4,
   "stats": {
    "mana": {
     "base": 986,
@@ -5264,13 +5532,13 @@
      {
       "add": 493,
       "stat": 1454,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 986,
       "stat": 1923,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5282,13 +5550,13 @@
      {
       "add": 937,
       "stat": 2886,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 1874,
       "stat": 3898,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5300,13 +5568,13 @@
      {
       "add": 22,
       "stat": 70,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 43,
       "stat": 95,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5318,31 +5586,31 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "dexterity": {
-    "base": 198,
+    "base": 168,
     "steps": [
      {
-      "add": 99,
-      "stat": 297,
-      "dps": 6676324,
+      "add": 84,
+      "stat": 252,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
-      "add": 198,
-      "stat": 396,
-      "dps": 6676324,
+      "add": 168,
+      "stat": 336,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5354,13 +5622,13 @@
      {
       "add": 82,
       "stat": 246,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 164,
       "stat": 328,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5372,13 +5640,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5390,13 +5658,13 @@
      {
       "add": 3705,
       "stat": 14487,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 7410,
       "stat": 21563,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5408,13 +5676,13 @@
      {
       "add": 8496,
       "stat": 48598,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      },
      {
       "add": 16993,
       "stat": 80207,
-      "dps": 6676324,
+      "dps": 3353403,
       "elasticity": 0.0
      }
     ],
@@ -5426,25 +5694,46 @@
      {
       "add": 50,
       "stat": 42.4,
-      "dps": 7211290,
-      "elasticity": 0.62
+      "dps": 3622366,
+      "elasticity": 0.621
      },
      {
       "add": 100,
       "stat": 47.3,
-      "dps": 7745803,
-      "elasticity": 0.633
+      "dps": 3891100,
+      "elasticity": 0.634
      }
     ],
-    "elasticity": 0.633
+    "elasticity": 0.634
+   },
+   "speed": {
+    "base": 14.6,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 19.5,
+      "dps": 4770386,
+      "elasticity": 1.225
+     },
+     {
+      "add": 100,
+      "stat": 24.4,
+      "dps": 6430540,
+      "elasticity": 1.275
+     }
+    ],
+    "elasticity": 1.275
    }
   },
-  "red_flags": []
+  "red_flags": [
+   "speed"
+  ]
  },
  "119b1f2aadbb4bfb8b7fe0b3cf38f0c4": {
   "skill": "Furious Slam",
   "ascendancy": "Shaman",
-  "dps": 634538.48484928,
+  "dps": 320690.34290076,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 1330,
@@ -5452,13 +5741,13 @@
      {
       "add": 665,
       "stat": 2029,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 1330,
       "stat": 2727,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5470,13 +5759,13 @@
      {
       "add": 1087,
       "stat": 3315,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 2174,
       "stat": 4456,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5488,13 +5777,13 @@
      {
       "add": 79,
       "stat": 245,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 158,
       "stat": 332,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5506,13 +5795,13 @@
      {
       "add": 58,
       "stat": 174,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 116,
       "stat": 232,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5524,13 +5813,13 @@
      {
       "add": 83,
       "stat": 249,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 166,
       "stat": 332,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5542,13 +5831,13 @@
      {
       "add": 116,
       "stat": 347,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 231,
       "stat": 462,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5560,13 +5849,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5578,13 +5867,13 @@
      {
       "add": 4052,
       "stat": 17342,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 8103,
       "stat": 26578,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5596,13 +5885,13 @@
      {
       "add": 4,
       "stat": 12,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      },
      {
       "add": 8,
       "stat": 17,
-      "dps": 634538,
+      "dps": 320690,
       "elasticity": 0.0
      }
     ],
@@ -5614,17 +5903,17 @@
      {
       "add": 50,
       "stat": 35.7,
-      "dps": 678148,
-      "elasticity": 0.494
+      "dps": 342800,
+      "elasticity": 0.495
      },
      {
       "add": 100,
       "stat": 40.2,
-      "dps": 721758,
-      "elasticity": 0.509
+      "dps": 364909,
+      "elasticity": 0.51
      }
     ],
-    "elasticity": 0.509
+    "elasticity": 0.51
    },
    "speed": {
     "base": 2.1,
@@ -5632,27 +5921,26 @@
      {
       "add": 50,
       "stat": 2.7,
-      "dps": 822674,
-      "elasticity": 1.101
+      "dps": 415716,
+      "elasticity": 1.1
      },
      {
       "add": 100,
       "stat": 3.2,
-      "dps": 1010809,
-      "elasticity": 1.092
+      "dps": 510741,
+      "elasticity": 1.091
      }
     ],
-    "elasticity": 1.101
+    "elasticity": 1.1
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "38de7650eb9e423e9f2eeafc812a98ba": {
   "skill": "Siege Ballista",
   "ascendancy": "Tactician",
-  "dps": 106530.42643144,
+  "dps": 55602.749397245,
+  "main_group": 2,
   "stats": {
    "mana": {
     "base": 775,
@@ -5660,13 +5948,13 @@
      {
       "add": 388,
       "stat": 1182,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 775,
       "stat": 1589,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5678,13 +5966,13 @@
      {
       "add": 775,
       "stat": 2364,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 1550,
       "stat": 3177,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5696,13 +5984,13 @@
      {
       "add": 78,
       "stat": 233,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 155,
       "stat": 310,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5714,13 +6002,13 @@
      {
       "add": 48,
       "stat": 143,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 95,
       "stat": 190,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5732,13 +6020,13 @@
      {
       "add": 81,
       "stat": 247,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 162,
       "stat": 332,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5750,13 +6038,13 @@
      {
       "add": 82,
       "stat": 246,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 164,
       "stat": 328,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5768,13 +6056,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5786,13 +6074,13 @@
      {
       "add": 172,
       "stat": 585,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 344,
       "stat": 826,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
@@ -5804,63 +6092,62 @@
      {
       "add": 4810,
       "stat": 36362,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      },
      {
       "add": 9619,
       "stat": 63100,
-      "dps": 106530,
+      "dps": 55603,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "crit chance": {
-    "base": 6.5,
+    "base": 5,
     "steps": [
      {
       "add": 50,
-      "stat": 9,
-      "dps": 110019,
-      "elasticity": 0.099
+      "stat": 7.5,
+      "dps": 57450,
+      "elasticity": 0.081
      },
      {
       "add": 100,
-      "stat": 11.5,
-      "dps": 113507,
-      "elasticity": 0.111
+      "stat": 10,
+      "dps": 59297,
+      "elasticity": 0.093
      }
     ],
-    "elasticity": 0.111
+    "elasticity": 0.093
    },
    "speed": {
-    "base": 1.2,
+    "base": 2.3,
     "steps": [
      {
       "add": 50,
-      "stat": 1.5,
-      "dps": 136109,
-      "elasticity": 1.283
+      "stat": 3.0,
+      "dps": 71061,
+      "elasticity": 0.966
      },
      {
       "add": 100,
-      "stat": 1.8,
-      "dps": 162913,
-      "elasticity": 1.21
+      "stat": 3.7,
+      "dps": 85100,
+      "elasticity": 0.933
      }
     ],
-    "elasticity": 1.283
+    "elasticity": 0.966
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "d8b79e6ccafe485a93cb24ca4b0fcb91": {
   "skill": "Arc",
   "ascendancy": "Blood Mage",
-  "dps": 120572.66892377,
+  "dps": 73361.840838111,
+  "main_group": 8,
   "stats": {
    "mana": {
     "base": 897,
@@ -5868,13 +6155,13 @@
      {
       "add": 448,
       "stat": 1367,
-      "dps": 134870,
+      "dps": 82051,
       "elasticity": 0.266
      },
      {
       "add": 897,
       "stat": 1839,
-      "dps": 149167,
+      "dps": 90740,
       "elasticity": 0.296
      }
     ],
@@ -5886,13 +6173,13 @@
      {
       "add": 860,
       "stat": 2648,
-      "dps": 124653,
+      "dps": 75854,
       "elasticity": 0.077
      },
      {
       "add": 1719,
       "stat": 3576,
-      "dps": 128960,
+      "dps": 78484,
       "elasticity": 0.092
      }
     ],
@@ -5904,13 +6191,13 @@
      {
       "add": 144,
       "stat": 431,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      },
      {
       "add": 287,
       "stat": 574,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      }
     ],
@@ -5922,13 +6209,13 @@
      {
       "add": 26,
       "stat": 78,
-      "dps": 120799,
+      "dps": 73500,
       "elasticity": 0.005
      },
      {
       "add": 52,
       "stat": 104,
-      "dps": 121026,
+      "dps": 73639,
       "elasticity": 0.005
      }
     ],
@@ -5940,13 +6227,13 @@
      {
       "add": 88,
       "stat": 264,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      },
      {
       "add": 176,
       "stat": 352,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      }
     ],
@@ -5958,13 +6245,13 @@
      {
       "add": 90,
       "stat": 270,
-      "dps": 126292,
+      "dps": 76837,
       "elasticity": 0.114
      },
      {
       "add": 180,
       "stat": 360,
-      "dps": 132013,
+      "dps": 80315,
       "elasticity": 0.131
      }
     ],
@@ -5976,13 +6263,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      }
     ],
@@ -5994,13 +6281,13 @@
      {
       "add": 209,
       "stat": 627,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      },
      {
       "add": 418,
       "stat": 836,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      }
     ],
@@ -6012,53 +6299,53 @@
      {
       "add": 36,
       "stat": 108,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      },
      {
       "add": 72,
       "stat": 144,
-      "dps": 120573,
+      "dps": 73362,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "crit chance": {
-    "base": 81.8,
+    "base": 66.8,
     "steps": [
      {
       "add": 50,
-      "stat": 89.2,
-      "dps": 128632,
-      "elasticity": 0.737
+      "stat": 74.2,
+      "dps": 78110,
+      "elasticity": 0.589
      },
      {
       "add": 100,
-      "stat": 96.8,
-      "dps": 136567,
-      "elasticity": 0.739
+      "stat": 81.8,
+      "dps": 82735,
+      "elasticity": 0.593
      }
     ],
-    "elasticity": 0.739
+    "elasticity": 0.593
    },
    "speed": {
-    "base": 1.4,
+    "base": 4.0,
     "steps": [
      {
       "add": 50,
-      "stat": 1.8,
-      "dps": 152289,
-      "elasticity": 0.937
+      "stat": 5.0,
+      "dps": 91650,
+      "elasticity": 0.993
      },
      {
       "add": 100,
-      "stat": 2.2,
-      "dps": 182832,
-      "elasticity": 0.937
+      "stat": 6.0,
+      "dps": 109075,
+      "elasticity": 0.974
      }
     ],
-    "elasticity": 0.937
+    "elasticity": 0.993
    }
   },
   "red_flags": []
@@ -6066,7 +6353,8 @@
  "a8dce593fcad40449884a5ad0cdf7378": {
   "skill": "Hexblast",
   "ascendancy": "Blood Mage",
-  "dps": 9375012.8087162,
+  "dps": 6737189.0228389,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 1172,
@@ -6074,17 +6362,17 @@
      {
       "add": 586,
       "stat": 1787,
-      "dps": 9892561,
-      "elasticity": 0.127
+      "dps": 6995963,
+      "elasticity": 0.089
      },
      {
       "add": 1172,
       "stat": 2402,
-      "dps": 10496343,
-      "elasticity": 0.157
+      "dps": 7297854,
+      "elasticity": 0.111
      }
     ],
-    "elasticity": 0.157
+    "elasticity": 0.111
    },
    "life": {
     "base": 3316,
@@ -6092,13 +6380,13 @@
      {
       "add": 1658,
       "stat": 5256,
-      "dps": 9790101,
+      "dps": 7035456,
       "elasticity": 0.094
      },
      {
       "add": 3316,
       "stat": 7196,
-      "dps": 10194547,
+      "dps": 7326075,
       "elasticity": 0.108
      }
     ],
@@ -6110,13 +6398,13 @@
      {
       "add": 420,
       "stat": 1260,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 840,
       "stat": 1680,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -6128,13 +6416,13 @@
      {
       "add": 63,
       "stat": 189,
-      "dps": 9406943,
+      "dps": 6760133,
       "elasticity": 0.008
      },
      {
       "add": 126,
       "stat": 252,
-      "dps": 9438873,
+      "dps": 6783076,
       "elasticity": 0.01
      }
     ],
@@ -6146,13 +6434,13 @@
      {
       "add": 91,
       "stat": 273,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 182,
       "stat": 364,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -6164,17 +6452,17 @@
      {
       "add": 95,
       "stat": 285,
-      "dps": 9547529,
-      "elasticity": 0.045
+      "dps": 6823447,
+      "elasticity": 0.031
      },
      {
       "add": 190,
       "stat": 380,
-      "dps": 9720033,
-      "elasticity": 0.052
+      "dps": 6909699,
+      "elasticity": 0.036
      }
     ],
-    "elasticity": 0.052
+    "elasticity": 0.036
    },
    "spirit": {
     "base": 100,
@@ -6182,13 +6470,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -6200,13 +6488,13 @@
      {
       "add": 4460,
       "stat": 25200,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 8921,
       "stat": 41482,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -6218,13 +6506,13 @@
      {
       "add": 348,
       "stat": 1045,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 697,
       "stat": 1394,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -6236,17 +6524,17 @@
      {
       "add": 50,
       "stat": 90.8,
-      "dps": 10094844,
-      "elasticity": 0.858
+      "dps": 7256582,
+      "elasticity": 0.861
      },
      {
       "add": 100,
       "stat": 98.2,
-      "dps": 10814627,
-      "elasticity": 0.862
+      "dps": 7775952,
+      "elasticity": 0.866
      }
     ],
-    "elasticity": 0.862
+    "elasticity": 0.866
    },
    "speed": {
     "base": 2.6,
@@ -6254,17 +6542,17 @@
      {
       "add": 50,
       "stat": 3.1,
-      "dps": 11133747,
-      "elasticity": 0.988
+      "dps": 8006227,
+      "elasticity": 0.992
      },
      {
       "add": 100,
       "stat": 3.6,
-      "dps": 12892248,
-      "elasticity": 0.989
+      "dps": 9275149,
+      "elasticity": 0.992
      }
     ],
-    "elasticity": 0.989
+    "elasticity": 0.992
    }
   },
   "red_flags": []
@@ -6272,7 +6560,8 @@
  "3ae6835292174dfdbc241252e997aaf9": {
   "skill": "Solar Orb",
   "ascendancy": "Blood Mage",
-  "dps": 1460188.1400442,
+  "dps": 599744.19535805,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 813,
@@ -6280,13 +6569,13 @@
      {
       "add": 406,
       "stat": 1239,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      },
      {
       "add": 813,
       "stat": 1666,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      }
     ],
@@ -6298,13 +6587,13 @@
      {
       "add": 1078,
       "stat": 3386,
-      "dps": 1501690,
+      "dps": 616789,
       "elasticity": 0.062
      },
      {
       "add": 2157,
       "stat": 4616,
-      "dps": 1544920,
+      "dps": 634543,
       "elasticity": 0.074
      }
     ],
@@ -6316,13 +6605,13 @@
      {
       "add": 78,
       "stat": 233,
-      "dps": 1465376,
+      "dps": 601875,
       "elasticity": 0.009
      },
      {
       "add": 155,
       "stat": 310,
-      "dps": 1472293,
+      "dps": 604716,
       "elasticity": 0.012
      }
     ],
@@ -6334,13 +6623,13 @@
      {
       "add": 84,
       "stat": 253,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      },
      {
       "add": 169,
       "stat": 338,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      }
     ],
@@ -6352,13 +6641,13 @@
      {
       "add": 91,
       "stat": 273,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      },
      {
       "add": 182,
       "stat": 364,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      }
     ],
@@ -6370,13 +6659,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      }
     ],
@@ -6388,13 +6677,13 @@
      {
       "add": 5218,
       "stat": 25778,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      },
      {
       "add": 10437,
       "stat": 41122,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      }
     ],
@@ -6406,13 +6695,13 @@
      {
       "add": 344,
       "stat": 1031,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      },
      {
       "add": 687,
       "stat": 1374,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      }
     ],
@@ -6424,17 +6713,17 @@
      {
       "add": 50,
       "stat": 89.5,
-      "dps": 1525752,
-      "elasticity": 0.502
+      "dps": 630824,
+      "elasticity": 0.578
      },
      {
       "add": 100,
       "stat": 97.0,
-      "dps": 1578184,
-      "elasticity": 0.463
+      "dps": 653374,
+      "elasticity": 0.51
      }
     ],
-    "elasticity": 0.502
+    "elasticity": 0.578
    },
    "speed": {
     "base": 1.2,
@@ -6442,13 +6731,13 @@
      {
       "add": 50,
       "stat": 1.7,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 2.2,
-      "dps": 1460188,
+      "dps": 599744,
       "elasticity": 0.0
      }
     ],
@@ -6460,7 +6749,8 @@
  "5d43bd0d812242c1b75cfcab7e07b94a": {
   "skill": "Whirlwind Lance",
   "ascendancy": "Invoker",
-  "dps": 576190.98107662,
+  "dps": 206005.66235607,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 771,
@@ -6468,13 +6758,13 @@
      {
       "add": 386,
       "stat": 1176,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 771,
       "stat": 1580,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6486,13 +6776,13 @@
      {
       "add": 739,
       "stat": 2254,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 1478,
       "stat": 3030,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6504,13 +6794,13 @@
      {
       "add": 66,
       "stat": 207,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 131,
       "stat": 282,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6522,13 +6812,13 @@
      {
       "add": 30,
       "stat": 91,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 61,
       "stat": 122,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6540,13 +6830,13 @@
      {
       "add": 86,
       "stat": 259,
-      "dps": 581764,
+      "dps": 208000,
       "elasticity": 0.024
      },
      {
       "add": 173,
       "stat": 346,
-      "dps": 589195,
+      "dps": 210659,
       "elasticity": 0.032
      }
     ],
@@ -6558,13 +6848,13 @@
      {
       "add": 81,
       "stat": 243,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 162,
       "stat": 324,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6576,13 +6866,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6594,13 +6884,13 @@
      {
       "add": 302,
       "stat": 906,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 604,
       "stat": 1208,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6612,13 +6902,13 @@
      {
       "add": 348,
       "stat": 1271,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      },
      {
       "add": 696,
       "stat": 1845,
-      "dps": 576191,
+      "dps": 206006,
       "elasticity": 0.0
      }
     ],
@@ -6630,17 +6920,17 @@
      {
       "add": 50,
       "stat": 24.9,
-      "dps": 616209,
-      "elasticity": 0.442
+      "dps": 220506,
+      "elasticity": 0.448
      },
      {
       "add": 100,
       "stat": 28.4,
-      "dps": 656227,
-      "elasticity": 0.459
+      "dps": 235006,
+      "elasticity": 0.464
      }
     ],
-    "elasticity": 0.459
+    "elasticity": 0.464
    },
    "speed": {
     "base": 2.8,
@@ -6648,17 +6938,17 @@
      {
       "add": 50,
       "stat": 3.4,
-      "dps": 693230,
-      "elasticity": 0.958
+      "dps": 247883,
+      "elasticity": 0.959
      },
      {
       "add": 100,
       "stat": 4.0,
-      "dps": 808412,
-      "elasticity": 0.961
+      "dps": 289096,
+      "elasticity": 0.962
      }
     ],
-    "elasticity": 0.961
+    "elasticity": 0.962
    }
   },
   "red_flags": []
@@ -6666,7 +6956,8 @@
  "915ee9499bad492498537f46ef3d6275": {
   "skill": "Entangle",
   "ascendancy": "Shaman",
-  "dps": 36777.934332185,
+  "dps": 29593.912478952,
+  "main_group": 6,
   "stats": {
    "mana": {
     "base": 760,
@@ -6674,17 +6965,17 @@
      {
       "add": 380,
       "stat": 1159,
-      "dps": 39944,
-      "elasticity": 0.196
+      "dps": 31177,
+      "elasticity": 0.123
      },
      {
       "add": 760,
       "stat": 1558,
-      "dps": 43109,
-      "elasticity": 0.221
+      "dps": 32760,
+      "elasticity": 0.142
      }
     ],
-    "elasticity": 0.221
+    "elasticity": 0.142
    },
    "life": {
     "base": 1457,
@@ -6692,13 +6983,13 @@
      {
       "add": 728,
       "stat": 2222,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      },
      {
       "add": 1457,
       "stat": 2987,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      }
     ],
@@ -6710,13 +7001,13 @@
      {
       "add": 48,
       "stat": 147,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      },
      {
       "add": 95,
       "stat": 199,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      }
     ],
@@ -6728,13 +7019,13 @@
      {
       "add": 43,
       "stat": 129,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      },
      {
       "add": 86,
       "stat": 172,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      }
     ],
@@ -6746,13 +7037,13 @@
      {
       "add": 21,
       "stat": 63,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      },
      {
       "add": 42,
       "stat": 84,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      }
     ],
@@ -6764,17 +7055,17 @@
      {
       "add": 58,
       "stat": 173,
-      "dps": 37567,
-      "elasticity": 0.052
+      "dps": 29988,
+      "elasticity": 0.032
      },
      {
       "add": 115,
       "stat": 230,
-      "dps": 39151,
-      "elasticity": 0.09
+      "dps": 30781,
+      "elasticity": 0.057
      }
     ],
-    "elasticity": 0.09
+    "elasticity": 0.057
    },
    "spirit": {
     "base": 100,
@@ -6782,13 +7073,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      }
     ],
@@ -6800,13 +7091,13 @@
      {
       "add": 900,
       "stat": 2925,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      },
      {
       "add": 1800,
       "stat": 4050,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      }
     ],
@@ -6818,53 +7109,53 @@
      {
       "add": 696,
       "stat": 2157,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      },
      {
       "add": 1392,
       "stat": 2923,
-      "dps": 36778,
+      "dps": 29594,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "crit chance": {
-    "base": 35.1,
+    "base": 38.6,
     "steps": [
      {
       "add": 50,
-      "stat": 40.1,
-      "dps": 39974,
-      "elasticity": 0.626
+      "stat": 44.1,
+      "dps": 32205,
+      "elasticity": 0.635
      },
      {
       "add": 100,
-      "stat": 45.1,
-      "dps": 43171,
-      "elasticity": 0.639
+      "stat": 49.6,
+      "dps": 34817,
+      "elasticity": 0.648
      }
     ],
-    "elasticity": 0.639
+    "elasticity": 0.648
    },
    "speed": {
-    "base": 1.9,
+    "base": 3.9,
     "steps": [
      {
       "add": 50,
-      "stat": 2.5,
-      "dps": 47017,
-      "elasticity": 0.977
+      "stat": 4.9,
+      "dps": 37780,
+      "elasticity": 1.07
      },
      {
       "add": 100,
-      "stat": 3.1,
-      "dps": 57191,
-      "elasticity": 0.977
+      "stat": 5.9,
+      "dps": 45902,
+      "elasticity": 1.06
      }
     ],
-    "elasticity": 0.977
+    "elasticity": 1.07
    }
   },
   "red_flags": []
@@ -6872,7 +7163,8 @@
  "40c913d7a9884d11b6168f4eca877893": {
   "skill": "Hexblast",
   "ascendancy": "Blood Mage",
-  "dps": 9375012.8087162,
+  "dps": 6737189.0228389,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 1172,
@@ -6880,17 +7172,17 @@
      {
       "add": 586,
       "stat": 1787,
-      "dps": 9892561,
-      "elasticity": 0.127
+      "dps": 6995963,
+      "elasticity": 0.089
      },
      {
       "add": 1172,
       "stat": 2402,
-      "dps": 10496343,
-      "elasticity": 0.157
+      "dps": 7297854,
+      "elasticity": 0.111
      }
     ],
-    "elasticity": 0.157
+    "elasticity": 0.111
    },
    "life": {
     "base": 3316,
@@ -6898,13 +7190,13 @@
      {
       "add": 1658,
       "stat": 5256,
-      "dps": 9790101,
+      "dps": 7035456,
       "elasticity": 0.094
      },
      {
       "add": 3316,
       "stat": 7196,
-      "dps": 10194547,
+      "dps": 7326075,
       "elasticity": 0.108
      }
     ],
@@ -6916,13 +7208,13 @@
      {
       "add": 420,
       "stat": 1260,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 840,
       "stat": 1680,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -6934,13 +7226,13 @@
      {
       "add": 63,
       "stat": 189,
-      "dps": 9406943,
+      "dps": 6760133,
       "elasticity": 0.008
      },
      {
       "add": 126,
       "stat": 252,
-      "dps": 9438873,
+      "dps": 6783076,
       "elasticity": 0.01
      }
     ],
@@ -6952,13 +7244,13 @@
      {
       "add": 91,
       "stat": 273,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 182,
       "stat": 364,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -6970,17 +7262,17 @@
      {
       "add": 95,
       "stat": 285,
-      "dps": 9547529,
-      "elasticity": 0.045
+      "dps": 6823447,
+      "elasticity": 0.031
      },
      {
       "add": 190,
       "stat": 380,
-      "dps": 9720033,
-      "elasticity": 0.052
+      "dps": 6909699,
+      "elasticity": 0.036
      }
     ],
-    "elasticity": 0.052
+    "elasticity": 0.036
    },
    "spirit": {
     "base": 100,
@@ -6988,13 +7280,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -7006,13 +7298,13 @@
      {
       "add": 4460,
       "stat": 25200,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 8921,
       "stat": 41482,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -7024,13 +7316,13 @@
      {
       "add": 348,
       "stat": 1045,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      },
      {
       "add": 697,
       "stat": 1394,
-      "dps": 9375013,
+      "dps": 6737189,
       "elasticity": 0.0
      }
     ],
@@ -7042,17 +7334,17 @@
      {
       "add": 50,
       "stat": 90.8,
-      "dps": 10094844,
-      "elasticity": 0.858
+      "dps": 7256582,
+      "elasticity": 0.861
      },
      {
       "add": 100,
       "stat": 98.2,
-      "dps": 10814627,
-      "elasticity": 0.862
+      "dps": 7775952,
+      "elasticity": 0.866
      }
     ],
-    "elasticity": 0.862
+    "elasticity": 0.866
    },
    "speed": {
     "base": 2.6,
@@ -7060,17 +7352,17 @@
      {
       "add": 50,
       "stat": 3.1,
-      "dps": 11133747,
-      "elasticity": 0.988
+      "dps": 8006227,
+      "elasticity": 0.992
      },
      {
       "add": 100,
       "stat": 3.6,
-      "dps": 12892248,
-      "elasticity": 0.989
+      "dps": 9275149,
+      "elasticity": 0.992
      }
     ],
-    "elasticity": 0.989
+    "elasticity": 0.992
    }
   },
   "red_flags": []
@@ -7078,7 +7370,8 @@
  "19ece511f72b4408ba81f0f5d80104ea": {
   "skill": "Furious Slam",
   "ascendancy": "Shaman",
-  "dps": 2557004.0076421,
+  "dps": 2409289.997844,
+  "main_group": 3,
   "stats": {
    "mana": {
     "base": 1149,
@@ -7086,13 +7379,13 @@
      {
       "add": 574,
       "stat": 1694,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      },
      {
       "add": 1149,
       "stat": 2240,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      }
     ],
@@ -7104,13 +7397,13 @@
      {
       "add": 1208,
       "stat": 3818,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      },
      {
       "add": 2416,
       "stat": 5219,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      }
     ],
@@ -7122,13 +7415,13 @@
      {
       "add": 84,
       "stat": 252,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      },
      {
       "add": 168,
       "stat": 336,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      }
     ],
@@ -7140,13 +7433,13 @@
      {
       "add": 81,
       "stat": 243,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      },
      {
       "add": 162,
       "stat": 324,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      }
     ],
@@ -7158,13 +7451,13 @@
      {
       "add": 88,
       "stat": 264,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      },
      {
       "add": 176,
       "stat": 352,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      }
     ],
@@ -7176,13 +7469,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      }
     ],
@@ -7194,17 +7487,17 @@
      {
       "add": 3655,
       "stat": 15132,
-      "dps": 2600231,
-      "elasticity": 0.023
+      "dps": 2516459,
+      "elasticity": 0.06
      },
      {
       "add": 7310,
       "stat": 22954,
-      "dps": 2643462,
-      "elasticity": 0.029
+      "dps": 2623635,
+      "elasticity": 0.074
      }
     ],
-    "elasticity": 0.029
+    "elasticity": 0.074
    },
    "evasion": {
     "base": 1076,
@@ -7212,13 +7505,13 @@
      {
       "add": 538,
       "stat": 1668,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      },
      {
       "add": 1076,
       "stat": 2259,
-      "dps": 2557004,
+      "dps": 2409290,
       "elasticity": 0.0
      }
     ],
@@ -7230,17 +7523,17 @@
      {
       "add": 50,
       "stat": 71.8,
-      "dps": 2745401,
-      "elasticity": 0.732
+      "dps": 2579965,
+      "elasticity": 0.704
      },
      {
       "add": 100,
       "stat": 78.5,
-      "dps": 2933798,
-      "elasticity": 0.74
+      "dps": 2750640,
+      "elasticity": 0.713
      }
     ],
-    "elasticity": 0.74
+    "elasticity": 0.713
    },
    "speed": {
     "base": 1.7,
@@ -7248,17 +7541,17 @@
      {
       "add": 50,
       "stat": 2.1,
-      "dps": 3296944,
-      "elasticity": 1.062
+      "dps": 3093875,
+      "elasticity": 1.045
      },
      {
       "add": 100,
       "stat": 2.6,
-      "dps": 4036883,
-      "elasticity": 1.057
+      "dps": 3778460,
+      "elasticity": 1.041
      }
     ],
-    "elasticity": 1.062
+    "elasticity": 1.045
    }
   },
   "red_flags": []
@@ -7266,21 +7559,22 @@
  "d57a36f048e845318bca587131169625": {
   "skill": "Flame Wall",
   "ascendancy": "Disciple of Varashta",
-  "dps": 2658346.4475305,
+  "dps": 1425440.508826,
+  "main_group": 3,
   "stats": {
    "mana": {
-    "base": 922,
+    "base": 842,
     "steps": [
      {
-      "add": 461,
-      "stat": 1480,
-      "dps": 2658346,
+      "add": 421,
+      "stat": 1352,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
-      "add": 922,
-      "stat": 2038,
-      "dps": 2658346,
+      "add": 842,
+      "stat": 1861,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
@@ -7292,13 +7586,13 @@
      {
       "add": 754,
       "stat": 2300,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
       "add": 1508,
       "stat": 3091,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
@@ -7310,13 +7604,13 @@
      {
       "add": 2928,
       "stat": 16808,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
       "add": 5857,
       "stat": 27762,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
@@ -7328,13 +7622,13 @@
      {
       "add": 28,
       "stat": 85,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
       "add": 57,
       "stat": 114,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
@@ -7346,31 +7640,31 @@
      {
       "add": 89,
       "stat": 267,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
       "add": 178,
       "stat": 356,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
    "intelligence": {
-    "base": 176,
+    "base": 143,
     "steps": [
      {
-      "add": 88,
-      "stat": 264,
-      "dps": 2658346,
+      "add": 72,
+      "stat": 215,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
-      "add": 176,
-      "stat": 352,
-      "dps": 2658346,
+      "add": 143,
+      "stat": 286,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
@@ -7382,13 +7676,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
@@ -7400,13 +7694,13 @@
      {
       "add": 1822,
       "stat": 6048,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
       "add": 3643,
       "stat": 8452,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
@@ -7418,45 +7712,62 @@
      {
       "add": 318,
       "stat": 953,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      },
      {
       "add": 635,
       "stat": 1270,
-      "dps": 2658346,
+      "dps": 1425441,
       "elasticity": 0.0
      }
     ],
     "elasticity": 0.0
    },
-   "speed": {
-    "base": 2.8,
+   "crit chance": {
+    "base": 11.9,
     "steps": [
      {
       "add": 50,
-      "stat": 3.3,
-      "dps": 3284702,
-      "elasticity": 1.296
+      "stat": 16.6,
+      "dps": 1492769,
+      "elasticity": 0.14
      },
      {
       "add": 100,
-      "stat": 3.8,
-      "dps": 3911059,
-      "elasticity": 1.272
+      "stat": 21.2,
+      "dps": 1560098,
+      "elasticity": 0.156
      }
     ],
-    "elasticity": 1.296
+    "elasticity": 0.156
+   },
+   "speed": {
+    "base": 3.2,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 4.2,
+      "dps": 1764641,
+      "elasticity": 0.772
+     },
+     {
+      "add": 100,
+      "stat": 5.3,
+      "dps": 2103841,
+      "elasticity": 0.79
+     }
+    ],
+    "elasticity": 0.79
    }
   },
-  "red_flags": [
-   "speed"
-  ]
+  "red_flags": []
  },
  "3ddeeb744cb64c77901c2a01718d91ef": {
   "skill": "Rapid Shot",
   "ascendancy": "Invoker",
-  "dps": 3151604.9303092,
+  "dps": 1594098.566242,
+  "main_group": 1,
   "stats": {
    "mana": {
     "base": 790,
@@ -7464,13 +7775,13 @@
      {
       "add": 395,
       "stat": 1204,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 790,
       "stat": 1619,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7482,13 +7793,13 @@
      {
       "add": 856,
       "stat": 2611,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 1713,
       "stat": 3511,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7500,13 +7811,13 @@
      {
       "add": 124,
       "stat": 390,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 247,
       "stat": 531,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7518,13 +7829,13 @@
      {
       "add": 45,
       "stat": 135,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 90,
       "stat": 180,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7536,13 +7847,13 @@
      {
       "add": 78,
       "stat": 235,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 157,
       "stat": 314,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7554,13 +7865,13 @@
      {
       "add": 86,
       "stat": 257,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 171,
       "stat": 342,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7572,13 +7883,13 @@
      {
       "add": 50,
       "stat": 150,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 100,
       "stat": 200,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7590,13 +7901,13 @@
      {
       "add": 975,
       "stat": 3334,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 1950,
       "stat": 4719,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7608,13 +7919,13 @@
      {
       "add": 700,
       "stat": 2554,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      },
      {
       "add": 1399,
       "stat": 3708,
-      "dps": 3151605,
+      "dps": 1594099,
       "elasticity": 0.0
      }
     ],
@@ -7626,13 +7937,13 @@
      {
       "add": 50,
       "stat": 8.1,
-      "dps": 3253074,
+      "dps": 1645559,
       "elasticity": 0.086
      },
      {
       "add": 100,
       "stat": 10.6,
-      "dps": 3354543,
+      "dps": 1697019,
       "elasticity": 0.098
      }
     ],
@@ -7644,13 +7955,13 @@
      {
       "add": 50,
       "stat": 24.9,
-      "dps": 4181427,
+      "dps": 2115133,
       "elasticity": 1.568
      },
      {
       "add": 100,
       "stat": 28.4,
-      "dps": 5159694,
+      "dps": 2610259,
       "elasticity": 1.591
      }
     ],
@@ -7660,5 +7971,212 @@
   "red_flags": [
    "speed"
   ]
+ },
+ "c4bd9da1375844b4858f139a91f4a41e": {
+  "skill": "Lightning Spear",
+  "ascendancy": "Titan",
+  "dps": 199843.6261811,
+  "main_group": 2,
+  "stats": {
+   "mana": {
+    "base": 762,
+    "steps": [
+     {
+      "add": 381,
+      "stat": 1162,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 762,
+      "stat": 1562,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "life": {
+    "base": 1936,
+    "steps": [
+     {
+      "add": 968,
+      "stat": 3104,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1936,
+      "stat": 4273,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "energy shield": {
+    "base": 112,
+    "steps": [
+     {
+      "add": 56,
+      "stat": 168,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 112,
+      "stat": 224,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "strength": {
+    "base": 96,
+    "steps": [
+     {
+      "add": 48,
+      "stat": 148,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 96,
+      "stat": 200,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "dexterity": {
+    "base": 177,
+    "steps": [
+     {
+      "add": 88,
+      "stat": 270,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 177,
+      "stat": 363,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "intelligence": {
+    "base": 158,
+    "steps": [
+     {
+      "add": 79,
+      "stat": 237,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 158,
+      "stat": 316,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "spirit": {
+    "base": 100,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 150,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 100,
+      "stat": 200,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "armour": {
+    "base": 1621,
+    "steps": [
+     {
+      "add": 810,
+      "stat": 2593,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 1621,
+      "stat": 3566,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "evasion": {
+    "base": 598,
+    "steps": [
+     {
+      "add": 299,
+      "stat": 897,
+      "dps": 199844,
+      "elasticity": 0.0
+     },
+     {
+      "add": 598,
+      "stat": 1196,
+      "dps": 199844,
+      "elasticity": 0.0
+     }
+    ],
+    "elasticity": 0.0
+   },
+   "crit chance": {
+    "base": 5,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 7.5,
+      "dps": 205108,
+      "elasticity": 0.064
+     },
+     {
+      "add": 100,
+      "stat": 10,
+      "dps": 210371,
+      "elasticity": 0.074
+     }
+    ],
+    "elasticity": 0.074
+   },
+   "speed": {
+    "base": 4.0,
+    "steps": [
+     {
+      "add": 50,
+      "stat": 5.1,
+      "dps": 254367,
+      "elasticity": 1.042
+     },
+     {
+      "add": 100,
+      "stat": 6.2,
+      "dps": 308633,
+      "elasticity": 1.03
+     }
+    ],
+    "elasticity": 1.042
+   }
+  },
+  "red_flags": []
  }
 }
