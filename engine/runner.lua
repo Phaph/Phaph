@@ -1326,6 +1326,54 @@ function handlers.optimise_tree(cmd)
 		swaps = swaps, swap_tries = swapTries, score_before_swaps = scoreBefore, score_after_swaps = J(recalc()) }
 end
 
+-- Weapon set passive points: each weapon set gets this many points of its own (quest points, plus Weapon Master's
+-- "N passive skill points become weapon set skill points").
+function handlers.weapon_set_points(cmd)
+	frame()
+	local extra = build.calcsTab.mainOutput and build.calcsTab.mainOutput.PassivePointsToWeaponSetPoints or 0
+	local _, _, _, _, ws1, ws2 = build.spec:CountAllocNodes()
+	return { points = (build.maxWeaponSets or 0) + extra, set1_used = ws1, set2_used = ws2 }
+end
+
+-- Weapon set mode for the next allocations: 0 shared, 1 or 2 for that set only (PoB's PassiveSpec.allocMode).
+function handlers.set_alloc_mode(cmd)
+	build.spec.allocMode = cmd.mode or 0
+	return {}
+end
+
+-- Make room for set-specific passives: the `points` shared leaf nodes the current main skill (the other set's) needs
+-- least become `keep_set` only. They still work on that set; the freed points can then be spent on the other set.
+-- Only leaves (nothing else hangs off them), never keystones, sockets or ascendancy nodes, so no path breaks.
+function handlers.split_weapon_set(cmd)
+	local spec, keepSet, points = build.spec, cmd.keep_set or 1, cmd.points or 0
+	local function score(o)
+		if o.FullDPS and o.FullDPS > 0 then return o.FullDPS end
+		return (o.TotalDPS or 0) + (o.TotalDotDPS or 0)
+	end
+	local moved = {}
+	for _ = 1, points do
+		local calcFunc, base = build.calcsTab:GetMiscCalculator()
+		local useFullDPS = useFull()
+		local cur, best, bestLoss = score(base), nil, math.huge
+		for _, node in pairs(spec.allocNodes) do
+			if (node.allocMode or 0) == 0 and not node.ascendancyName and node.type ~= "ClassStart"
+				and node.type ~= "AscendClassStart" and node.type ~= "Keystone" and node.type ~= "Socket"
+				and not node.isJewelSocket and node.depends and #node.depends == 1 then
+				local loss = cur - score(calcFunc({ removeNodes = { [node] = true } }, useFullDPS))
+				if loss < bestLoss then best, bestLoss = node, loss end
+			end
+		end
+		if not best then break end
+		best.allocMode = keepSet
+		table.insert(moved, best.dn or tostring(best.id))
+		spec:BuildAllDependsAndPaths()
+		build.buildFlag = true
+		frame()
+	end
+	spec:AddUndoState()
+	return { moved = moved }
+end
+
 function handlers.reset_tree(cmd)
 	build.spec:ResetNodes()
 	build.spec:BuildAllDependsAndPaths()

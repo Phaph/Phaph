@@ -26,6 +26,7 @@ from dataclasses import asdict, dataclass, field
 from anchors import find_unique, stage_notes
 from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
 from jewels import craft_jewels, proxy_jewel
+from weaponsets import specialise_set2
 from triggers import best_triggers, cast_on_crit, find_groups
 from generate import add_helpers, best_helper
 from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports,
@@ -101,7 +102,8 @@ class StageGuide:
     # Cast on Critical setup when it pays: {"gem", "spell", "supports", "mapping": estimate, "bossing": estimate}.
     # Whetstone's estimate (engine/triggers.py), not Path of Building's; not part of dps / boss_dps.
     trigger: dict | None = None
-    triggers: list = field(default_factory=list)   # every Cast on X setup (trigger is the first, kept for old pages)
+    triggers: list = field(default_factory=list)
+    weapon_sets: dict | None = None   # set-specific passives when the build swaps weapons (weaponsets.py)   # every Cast on X setup (trigger is the first, kept for old pages)
     # Supports for every other skill in the build: [{"skill", "role": spirit/utility/movement, "supports"}]
     setups: list[dict] = field(default_factory=list)
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
@@ -308,12 +310,17 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # Bossing setup: a separate boss skill if the build has one, else a support swap.
         pob.set_config(**MODE_CONFIG["bossing"])
         boss, boss_dps = None, 0.0
+        weapon_sets = None
         if stage_key != "leveling":
             # boss_dps is real single-target damage (not the theme score used to pick supports).
             if boss_group:
                 pob.send("set_main", group=boss_group)
                 pob.auto_config("bossing")
                 boss = optimise_supports(pob, boss_group, boss_skill, slots=slots, metric=boss_metric, log=quiet)[0]
+                if boss_swap:
+                    # Two weapon sets: give set 2 passives of its own for the boss skill (weaponsets.py).
+                    weapon_sets = specialise_set2(pob, boss_group, group, boss_metric, def_weight=dw_tree, log=quiet)
+                    pob.send("set_main", group=boss_group)
                 boss_dps = total_dps(pob.calc(STAT_FIELDS))
                 pob.send("set_main", group=group)
             else:
@@ -371,7 +378,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
             clear_skill=clear_skill, clear_supports=clear.supports if clear else [], clear_dps=clear_dps,
             spirit=spirit, conditions=conditions, goals=goals, utility=utility, trigger=triggers[0] if triggers else None,
-            triggers=triggers,
+            triggers=triggers, weapon_sets=weapon_sets,
             mobility=mobility, setups=setups,
             tree_nodes=[int(n) for n in alloc.get("nodes") or []], tree_version=alloc.get("version"),
             tree_order=[{"id": s.get("id"), "name": s["node"], "type": s["type"], "path": s.get("path") or [],
@@ -394,6 +401,11 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         if slots < 5 and slots in SOCKET_ORB:
             guide.notes.append(f"{slots} supports per skill at this stage: skill gems start with 2 sockets and "
                                f"{SOCKET_ORB[slots]} sets them to {slots}. More sockets come in later stages.")
+        if weapon_sets:
+            guide.notes.append(
+                f"Weapon set passives: {weapon_sets['points']} points per set. Set 2 ({boss_skill}) takes "
+                f"{', '.join(weapon_sets['set2_only'][:6]) or 'its own passives'} instead of "
+                f"{', '.join(weapon_sets['set1_only'][:6])} (those stay on set 1): {weapon_sets['gain']:+.0%} boss damage.")
         for name in dropped_spirit:
             guide.notes.append(f"{name} was left out: the gear at this stage doesn't give enough spirit for it.")
         for name in spare:

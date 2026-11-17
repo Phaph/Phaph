@@ -673,14 +673,23 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
         if c.skill not in picks:
             picks[c.skill] = c
             n += 1
-    if not picks:
+    # The main skill itself on its other weapons: a stronger boss weapon on weapon set 2 (same skill, other weapon).
+    main_info = next((s for s in skills if s["name"] == best.skill), None) or next(
+        (s for s in main_skills(catalog, open_req) if s["name"] == best.skill), None)
+    same_skill = []
+    if main_info:
+        for w, sub, off in weapon_options(main_info, open_req):
+            if (w, sub, off) != (best.weapon_type, best.weapon_subtype, best.offhand_type):
+                same_skill.append(Candidate(best.skill, w, sub, off, best.cls, best.ascendancy, is_minion=best.is_minion,
+                                            totem=best.totem))
+    if not picks and not same_skill:
         return ranked
     round_start(3, f"Round 3: {len(picks)} skills tried as a second skill for bosses or clearing", len(picks),
                 f"Many builds clear with one skill and kill bosses with another: {len(picks)} specialists built on "
                 f"{best.ascendancy} to see if one earns a place.")
     cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, best.cls, best.ascendancy,
                        is_minion=f.is_minion, totem=f.totem) for f in picks.values()]
-    third = [c for c in pool.map(lambda c: scored(evaluate(c, stage, open_req, tree=True), 3), cands)
+    third = [c for c in pool.map(lambda c: scored(evaluate(c, stage, open_req, tree=True), 3), cands + same_skill[:2])
              if not c.error and c.score > 0]
     log(f"Round 3: " + ", ".join(f"{c.skill} (boss {c.boss:,.0f}, clear {c.clear:,.0f})" for c in third))
     if req.get("skill"):
@@ -803,7 +812,9 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         spec["off_meta"] = True
     if result.get("random"):
         spec["random"] = True   # the guide says the anchor unique was rolled, not asked for
-    same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"] and r["skill"] != main["skill"]]
+    # Other options on the same ascendancy: other skills, or the main skill on another weapon (a boss weapon swap).
+    same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"]
+                and (r["skill"] != main["skill"] or r["weapon_type"] != main["weapon_type"])]
     # Compare single-target strength in the theme's own terms (a bleed build wants a better
     # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.
     key = lambda r: r.get("boss") or r["dps"]
@@ -814,7 +825,7 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         spec["boss_weapon_subtype"] = boss["weapon_subtype"]
     # A separate clear skill (Glacial Lance beside Whirlwind Lance): a skill on the same weapon that clears clearly
     # better than the main skill, which stays for bosses. Same weapon set, so it's a button away.
-    clearers = [r for r in same_asc if r["weapon_type"] == main["weapon_type"]
+    clearers = [r for r in same_asc if r["weapon_type"] == main["weapon_type"] and r["skill"] != main["skill"]
                 and r.get("offhand_type") == main.get("offhand_type") and r["skill"] != spec.get("boss_skill")]
     clear = max(clearers, key=lambda r: r.get("clear") or 0, default=None)
     if clear and (clear.get("clear") or 0) >= CLEAR_SKILL_MIN_GAIN * max(main.get("clear") or 0, 1):

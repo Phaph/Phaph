@@ -584,7 +584,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-17.3";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-17.4";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -1785,6 +1785,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       kv.push([`${esc(t.gem || "Cast on Critical")} estimate`, `<span class="est">+${fmt(m.trigger_dps || 0)} mapping${b.trigger_dps != null ? ` / +${fmt(b.trigger_dps)} boss` : ""} DPS · ~${(m.casts_per_sec || 0).toFixed(2)} triggers/s (Path of Building doesn't model trigger energy)</span>`]);
     });
     kv.push(...priorityRow(s));
+    if (s.weapon_sets) {   // a two-set build: passives of their own for weapon set 2 (engine/weaponsets.py)
+      const w = s.weapon_sets;
+      kv.push(["Weapon set passives", `${w.points} points per set. <b>Set 2 only:</b> ${(w.set2_only || []).map(esc).join(", ") || "-"}.
+        <b>Set 1 only:</b> ${(w.set1_only || []).map(esc).join(", ") || "-"}. <span class="muted">(${w.gain >= 0 ? "+" : ""}${Math.round(w.gain * 100)}% boss damage)</span>`]);
+    }
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = stageHtml(plan, s, prevGear, forward, kv, res, st);
     if (revealNext && !REDUCE) {

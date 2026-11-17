@@ -74,6 +74,9 @@ def facts(spec: dict, stages: list[dict]) -> dict:
         "mapping_dps": round(end.get("dps") or 0), "boss_dps": round(end.get("boss_dps") or 0),
         "damage_split": end.get("damage_split") or {},
         "stats": {k: round(st[k], 1) for k in STAT_KEYS if isinstance(st.get(k), (int, float))},
+        "weapon_sets": ({"weapon_set_2_skill": end.get("boss_skill"), "set_2_only_passives": end["weapon_sets"].get("set2_only"),
+                         "set_1_only_passives": end["weapon_sets"].get("set1_only")} if end.get("weapon_sets") else None),
+        "boss_skill_weapon_set": end.get("boss_weapon_set"),
         "assumed": [c.get("why") for c in end.get("conditions") or []][:8],
         "notes": (end.get("notes") or [])[:10],
     }
