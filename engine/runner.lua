@@ -1315,6 +1315,49 @@ function handlers.gem_texts(cmd)
 	return { gems = out }
 end
 
+-- Full gem tooltips for the website: PoB's own gem tooltip (Classes/GemTooltip), drawn into a list of lines instead
+-- of onto the screen. Each line is {t = text, k = kind}: kind is "title", "type", "tags", "info", "desc", "stat",
+-- "unsupported", "head" or "sep". Gems are shown at their top natural level with quality 0, plus quality effects.
+local function tooltipLines(gem)
+	local GemTooltip = LoadModule("Classes/GemTooltip")
+	local lines, kinds = {}, {
+		{ colorCodes.GEMDESCRIPTION, "desc" }, { colorCodes.UNSUPPORTED, "unsupported" }, { colorCodes.MAGIC, "stat" },
+		{ colorCodes.ENCHANTED, "stat" }, { colorCodes.GEMINFO, "info" }, { colorCodes.GEM, "title" },
+	}
+	local tip = { maxWidth = 600 }
+	function tip:AddLine(_, text)
+		text = tostring(text or "")
+		local kind = "info"
+		for _, k in ipairs(kinds) do
+			if k[1] and text:sub(1, #k[1]) == k[1] then kind = k[2] break end
+		end
+		if text:find("Additional Effects From Quality", 1, true) then kind = "head" end
+		if text:find("^%^x7F7F7F") or text:find("^%s+%^x7F7F7F") then kind = "tags" end
+		local plain = text:gsub("%^x%x%x%x%x%x%x", ""):gsub("%^%d", ""):gsub("^%s+", ""):gsub("%s+$", "")
+		if plain ~= "" then table.insert(lines, { t = plain, k = kind }) end
+	end
+	function tip:AddSeparator() if #lines > 0 and lines[#lines].k ~= "sep" then table.insert(lines, { k = "sep" }) end end
+	function tip:AddBuildPlannerNote() end
+	local level = math.min(20, gem.naturalMaxLevel or 20)
+	local inst = { gemData = gem, level = level, quality = 0, nameSpec = gem.name, corruptLevel = 0, enabled = true }
+	GemTooltip.AddGemTooltip(tip, build, inst, { includeQualityRange = true })
+	if lines[1] then lines[1].k = "title" end
+	if lines[2] then lines[2].k = "type" end
+	if lines[#lines] and lines[#lines].k == "sep" then table.remove(lines) end
+	return lines
+end
+
+function handlers.gem_tooltips(cmd)
+	local out, failed = {}, 0
+	for _, gem in pairs(data.gems) do
+		if gem.name and gem.grantedEffect and not out[gem.name] then
+			local ok, lines = pcall(tooltipLines, gem)
+			if ok then out[gem.name] = lines else failed = failed + 1 end
+		end
+	end
+	return { gems = out, failed = failed }
+end
+
 function handlers.list_gems(cmd)
 	local gems = {}
 	for _, gem in pairs(data.gems) do

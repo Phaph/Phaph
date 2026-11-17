@@ -237,11 +237,23 @@ tr.best td { color: var(--brass-hi); }
 .gems .plus { color: var(--faint); }
 .gem.main img { width: 30px; height: 30px; }
 .gem[data-gem] { cursor: help; }
-.gemcard { position: fixed; z-index: 60; max-width: min(340px, calc(100vw - 32px)); padding: 10px 12px; pointer-events: none;
-  background: var(--iron2); border: 1px solid var(--edge); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,.55);
-  font: 15px/1.4 var(--body); color: var(--ink); }
-.gemcard b { display: block; font: 600 17px/1.2 var(--body); color: var(--brass-hi); }
-.gemcard i { display: block; margin: 2px 0 6px; color: var(--muted); font-size: 13px; font-style: normal; }
+.gemcard { position: fixed; z-index: 60; width: min(380px, calc(100vw - 32px)); padding: 0 0 10px; pointer-events: none;
+  background: #0b0b0c; border: 1px solid #2c6b66; border-radius: 3px; box-shadow: 0 12px 34px rgba(0,0,0,.65);
+  font: 15px/1.4 var(--body); color: var(--ink); max-height: calc(100vh - 16px); overflow: hidden; }
+.gemcard .gt-head { display: flex; gap: 10px; align-items: center; padding: 8px 12px; background: linear-gradient(90deg, #12302e, #0b0b0c 80%); }
+.gemcard .gt-head img { width: 34px; height: 34px; object-fit: contain; }
+.gemcard .gt-title { font: 600 19px/1.15 var(--body); color: #3fb8ae; }
+.gemcard .gt-type { font-size: 13px; color: var(--muted); }
+.gemcard .gt-body { padding: 4px 12px 0; }
+.gemcard hr { border: 0; border-top: 1px solid #23302f; margin: 7px 0; }
+.gemcard .gt-tags { color: #8d8d8d; }
+.gemcard .gt-info { color: #8d8d8d; }
+.gemcard .gt-info b { color: var(--ink); font-weight: 600; }
+.gemcard .gt-desc { color: #a7a7a7; font-style: italic; text-align: center; }
+.gemcard .gt-stat { color: #8b8bff; text-align: center; }
+.gemcard .gt-unsupported { color: #6a6a72; text-align: center; }
+.gemcard .gt-head2 { color: var(--ink); text-align: center; font-weight: 600; margin-top: 6px; }
+.gemcard .gt-note { color: var(--faint); font-size: 12px; text-align: center; margin-top: 8px; }
 .skillhead { display: flex; align-items: center; gap: 14px; }
 .skillhead img { width: 58px; height: 58px; object-fit: contain; filter: drop-shadow(0 3px 6px rgba(0,0,0,.6)); }
 .cand .name img, td .gem img { width: 22px; height: 22px; vertical-align: -5px; margin-right: 6px; }
@@ -1530,15 +1542,36 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const gemUrl = n => ICONS.gems?.[n] || GEM_LOOSE[loose(n)] || null;
   const img = (url, size) => url ? `<img src="${esc(url)}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer"${size ? ` width="${size}" height="${size}"` : ""} onerror="this.remove()">` : "";
   const gem = (n, cls = "") => `<span class="gem ${cls}" data-gem="${esc(n)}" tabindex="0">${img(gemUrl(n))}${esc(n)}</span>`;
-  // Hover (or tap / focus) a gem: what it does, from Path of Building's own gem text (GET /gems, fetched once).
-  let gemTexts = null, gemCard = null, gemFor = null;
+  // Hover (or tap / focus) a gem: its full tooltip as Path of Building draws it (GET /gems/{name}, cached per gem).
+  const gemTips = {};
+  let gemCard = null, gemFor = null;
+  function gemCardHtml(name, lines) {
+    const out = [], [title, type, ...rest] = lines;
+    out.push(`<div class="gt-head">${img(gemUrl(name))}<div><div class="gt-title">${esc(title?.t || name)}</div><div class="gt-type">${esc(type?.t || "")}</div></div></div><div class="gt-body">`);
+    let unsupported = false;
+    rest.forEach((l, i) => {
+      if (l.k === "sep") { if (i > 0) out.push("<hr>"); return; }
+      if (l.k === "unsupported") unsupported = true;
+      if (l.k === "info" || l.k === "tags") {
+        const at = l.t.indexOf(": ");
+        out.push(at > 0 ? `<div class="gt-info">${esc(l.t.slice(0, at))}: <b>${esc(l.t.slice(at + 2))}</b></div>` : `<div class="gt-${l.k}">${esc(l.t)}</div>`);
+        return;
+      }
+      out.push(`<div class="gt-${l.k === "head" ? "head2" : l.k}">${esc(l.t)}</div>`);
+    });
+    out.push(`${unsupported ? `<div class="gt-note">Grey lines aren't counted in the damage numbers yet</div>` : ""}</div>`);
+    return out.join("");
+  }
   async function showGem(el) {
+    const name = el.dataset.gem;
     gemFor = el;
-    if (!gemTexts) { try { gemTexts = await (await fetch(API + "/gems")).json(); } catch { gemTexts = {}; } }
-    if (gemFor !== el) return;
-    const g = gemTexts[el.dataset.gem]; if (!g || !(g.desc || g.tags)) return;
+    if (!(name in gemTips)) {
+      try { const r = await fetch(API + "/gems/" + encodeURIComponent(name)); gemTips[name] = r.ok ? (await r.json()).lines : null; }
+      catch { gemTips[name] = null; }
+    }
+    if (gemFor !== el || !gemTips[name]) return;
     gemCard = gemCard || document.body.appendChild(Object.assign(document.createElement("div"), { className: "gemcard", role: "tooltip" }));
-    gemCard.innerHTML = `<b>${esc(el.dataset.gem)}</b>${g.tags ? `<i>${esc(g.tags)}${g.support ? " · Support" : ""}</i>` : ""}${esc(g.desc)}`;
+    gemCard.innerHTML = gemCardHtml(name, gemTips[name]);
     gemCard.hidden = false;
     const r = el.getBoundingClientRect(), c = gemCard.getBoundingClientRect();
     const below = r.bottom + 8 + c.height < innerHeight;

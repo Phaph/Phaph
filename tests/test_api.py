@@ -206,3 +206,12 @@ def test_gem_texts_for_hover_cards(client):
     gems = client.get("/gems").json()
     assert "Arc" in gems["Arc"]["desc"] or "Lightning" in gems["Arc"]["desc"]
     assert any(g["support"] for g in gems.values()) and len(gems) > 300
+
+
+def test_full_gem_tooltip(client):
+    lines = client.get("/gems/Arc").json()["lines"]
+    text = [l.get("t", "") for l in lines]
+    assert text[0] == "Arc" and text[1] == "Spell"
+    assert any(t.startswith("Cost:") for t in text) and any("Chains" in t for t in text)
+    assert not any("Not supported in PoB" in t for t in text)
+    assert client.get("/gems/No Such Gem").status_code == 404

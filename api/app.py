@@ -40,7 +40,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-16.7"
+ENGINE_VERSION = "2026-11-16.8"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -257,6 +257,7 @@ def run_compare(req: dict, progress=None) -> dict:
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     app.state.catalog = load_catalog()
+    app.state.gem_tips = load_gem_tooltips()   # ~1 MB, half a second: the page's gem hover cards
     app.state.jobs = JobStore(
         db_path=os.environ.get("JOBS_DB", str(ROOT / "jobs.sqlite3")),
         workers=int(os.environ.get("JOB_WORKERS", "1")),
@@ -377,11 +378,42 @@ def site_notice() -> str | None:
 
 @app.get("/gems")
 def gem_texts(request: Request):
-    """What each gem does (PoB's description and tags), for the page's hover cards. Fetched once, on first hover."""
+    """What each gem does (PoB's description and tags), short. Fetched once by the page."""
     if not hasattr(request.app.state, "gem_texts"):
         with PoB() as pob:
             request.app.state.gem_texts = pob.send("gem_texts")["gems"]
     return request.app.state.gem_texts
+
+
+def load_gem_tooltips() -> dict:
+    """Every gem's full tooltip, as Path of Building draws it (runner.lua gem_tooltips), at top gem level, quality 0.
+    PoB's "(Not supported in PoB yet)" becomes a flag the page shows as a grey line; supports lose "Cast Time"."""
+    with PoB() as pob:
+        pob.new()
+        tips = pob.send("gem_tooltips")["gems"]
+    for lines in tips.values():
+        support = len(lines) > 1 and lines[1].get("t") == "Support"
+        keep = []
+        for ln in lines:
+            t = ln.get("t", "")
+            if ln.get("k") == "unsupported":
+                ln["t"] = t.replace("(Not supported in PoB yet)", "").strip()
+            if support and t.startswith("Cast Time"):
+                continue
+            keep.append(ln)
+        lines[:] = keep
+    return tips
+
+
+@app.get("/gems/{name}")
+def gem_tooltip(name: str, request: Request):
+    """One gem's full tooltip lines for the page's hover card: [{"t": text, "k": kind}, ...]."""
+    tips = getattr(request.app.state, "gem_tips", None)
+    if tips is None:
+        tips = request.app.state.gem_tips = load_gem_tooltips()
+    if name not in tips:
+        raise HTTPException(404, "No such gem")
+    return {"name": name, "lines": tips[name]}
 
 
 @app.get("/catalog")
