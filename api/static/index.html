@@ -564,6 +564,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
+  const PAGE_VERSION = "2026-11-17.1";   // shown in the console, so a report can say which page a tab was running
+  console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
 
@@ -922,12 +924,13 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
             }
           }
         }
-        embers = embers.filter(e => (e.life -= e.decay) > 0 && e.y > -1);
+        embers = embers.filter(e => (e.life -= e.decay) > 0 && e.y > -1 && e.x > 0 && e.x < cols);
         for (const e of embers) { e.x += e.vx + Math.sin(t * 3 + e.y) * 0.15; e.y += e.vy; e.vy *= 0.99; }
         cx.clearRect(0, 0, canvas.width, canvas.height);
         cx.font = `${CH}px "IBM Plex Mono", ui-monospace, monospace`; cx.textBaseline = "top";
         for (let y = 0; y < rows; y++) for (let x = 0; x < cols; x++) {
-          const v = cells[y * cols + x]; if (v < 0.05) continue;
+          // The sides fade out over a few columns, so the fire's edges are soft and an edge can never show as a block.
+          const v = cells[y * cols + x] * Math.min(1, (x + 1) / 5, (cols - x) / 5); if (v < 0.05) continue;
           const c = Math.min(1, v * (0.9 + 0.25 * (y / rows)));
           cx.fillStyle = COLORS[Math.min(COLORS.length - 1, (c * COLORS.length) | 0)];
           cx.fillText(RAMP[Math.min(RAMP.length - 1, (v * RAMP.length) | 0)], x * CW, y * CH);
