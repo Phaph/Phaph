@@ -26,7 +26,7 @@ from dataclasses import asdict, dataclass, field
 from anchors import find_unique, stage_notes
 from gear import BUDGET_ORDER, STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
 from jewels import craft_jewels, proxy_jewel
-from triggers import best_cast_on_crit, cast_on_crit, find_groups
+from triggers import best_triggers, cast_on_crit, find_groups
 from generate import add_helpers, best_helper
 from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports,
                       seed_ailment,
@@ -101,6 +101,7 @@ class StageGuide:
     # Cast on Critical setup when it pays: {"gem", "spell", "supports", "mapping": estimate, "bossing": estimate}.
     # Whetstone's estimate (engine/triggers.py), not Path of Building's; not part of dps / boss_dps.
     trigger: dict | None = None
+    triggers: list = field(default_factory=list)   # every Cast on X setup (trigger is the first, kept for old pages)
     # Supports for every other skill in the build: [{"skill", "role": spirit/utility/movement, "supports"}]
     setups: list[dict] = field(default_factory=list)
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
@@ -239,24 +240,26 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.auto_config("mapping")
         first = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist)
         report("supports", ", ".join(first[0].supports) if first else "")
-        # Cast on Critical reserves 100 spirit, so it competes with spirit buffs: fill spirit both ways, keep the better.
-        trigger = None
+        # Cast on X meta gems reserve 100 spirit each, so they compete with spirit buffs: fill spirit both ways, keep
+        # the better. Cast on Critical and Cast on Elemental Ailment can both run (each fills from the same hits).
+        triggers: list[dict] = []
         before_spirit = pob.save_xml()
         spirit = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
         if not minion_build:
             plain_score, plain_xml = score_of(pob.calc(STAT_FIELDS + CLEAR_FIELDS), map_metric), pob.save_xml()
             pob.load_xml(before_spirit)
-            trigger = best_cast_on_crit(pob, group, catalog, mode="mapping", slots=slots, log=quiet)
-            if trigger:
+            triggers = best_triggers(pob, group, catalog, mode="mapping", slots=slots, log=quiet)
+            if triggers:
                 spirit_t = optimise_spirit(pob, catalog, mode="mapping", minion_build=minion_build, metric=map_metric, log=quiet)
-                est = cast_on_crit(pob, group, find_groups(pob)[0], mode="mapping")
-                with_t = score_of(pob.calc(STAT_FIELDS + CLEAR_FIELDS), map_metric) * (1 + est["trigger_dps"] / max(est["attack"]["dps"], 1))
+                ests = [cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="mapping", gem=t["gem"]) for t in triggers]
+                extra = sum(e["trigger_dps"] for e in ests) / max(ests[0]["attack"]["dps"], 1)
+                with_t = score_of(pob.calc(STAT_FIELDS + CLEAR_FIELDS), map_metric) * (1 + extra)
                 if with_t > plain_score:
                     spirit = spirit_t
-                    report("spirit", f"Cast on Critical + {trigger['spell']} (estimate)")
+                    report("spirit", "; ".join(f"{t['gem']} + {', '.join(t['spells'])}" for t in triggers) + " (estimate)")
                 else:
-                    trigger = None
-            if not trigger:
+                    triggers = []
+            if not triggers:
                 pob.load_xml(plain_xml)
         # Defensive buffs (Wind Dancer, Scavenged Plating...): kept when the EHP is worth the damage they cost.
         spirit, defence = optimise_defence(pob, catalog, spirit, map_metric,
@@ -266,6 +269,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         spare = fill_spare_spirit(pob, catalog, spec["weapon_type"], spec.get("offhand_type"),
                                   set(spirit) | set(helpers), log=quiet)
         spirit += spare
+        dropped_spirit: list[str] = []
         if spirit:
             report("spirit", ", ".join(spirit))
         # Curses, marks, banners, warcries: kept when they raise the main skill's damage. One
@@ -283,6 +287,18 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                           log=quiet, attr_weight=0.25)   # a point short costs like 25% damage: usable first
         if boss_swap:
             gear.append(boss_weapon())
+        # Safety net: a build must never reserve more spirit than it has. If the gear still came up short, take buffs
+        # out (spare-spirit ones first, then the rest from the last chosen) until it fits.
+        for name in [*reversed(spare), *reversed([n for n in spirit if n not in spare])]:
+            if (pob.calc(["SpiritUnreserved"]).get("SpiritUnreserved") or 0) >= 0:
+                break
+            gid = next((g["group"] for g in pob.send("groups")["groups"] if g["gems"] and g["gems"][0] == name), None)
+            if gid:
+                pob.remove_skill(gid)
+                spirit.remove(name)
+                if name in spare:
+                    spare.remove(name)
+                dropped_spirit.append(name)
         # Each socket's jewel for real, now the tree, gems and gear are settled.
         jewels = craft_jewels(pob, stage, jewel_score, log=quiet)
         add_trade_info(pob, gear + jewels)
@@ -304,8 +320,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 pob.auto_config("bossing")
                 boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
                 boss_dps = total_dps(pob.calc(STAT_FIELDS))
-            if trigger:
-                trigger["bossing"] = cast_on_crit(pob, group, find_groups(pob)[0], mode="bossing")
+            for t in triggers:
+                t["bossing"] = cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="bossing", gem=t["gem"])
 
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
@@ -313,9 +329,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         mobility = mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type"))
         best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
                                  shortlist=shortlist)[0]
-        if trigger:
-            trigger["mapping"] = cast_on_crit(pob, group, find_groups(pob)[0], mode="mapping")
-            trigger.pop("group", None)
+        for t in triggers:
+            t["mapping"] = cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="mapping", gem=t["gem"])
+            t.pop("group", None)
         clear, clear_dps = None, 0.0
         if clear_group:
             # The clear skill gets its own supports (none the main skill already uses), scored on clearing.
@@ -330,8 +346,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         alloc = pob.send("allocated")
         used = set(best.supports) | set(boss.supports if boss else []) | set(clear.supports if clear else [])
         skip = {skill, boss_skill, clear_skill, *(spec.get("totems") or {}).values()}
-        if trigger:
-            skip |= {"Cast on Critical", trigger.get("spell")}
+        for t in triggers:
+            skip |= {t["gem"], *t.get("spells", [t.get("spell")])}
         setups = kit_out(pob, group, spirit, utility + [{"skill": h} for h in helpers], mobility[:1], map_metric, slots,
                          used, log=quiet, skip={n for n in skip if n})
         for x in setups:
@@ -354,7 +370,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             boss_supports=boss.supports if boss else [], boss_dps=boss_dps,
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
             clear_skill=clear_skill, clear_supports=clear.supports if clear else [], clear_dps=clear_dps,
-            spirit=spirit, conditions=conditions, goals=goals, utility=utility, trigger=trigger,
+            spirit=spirit, conditions=conditions, goals=goals, utility=utility, trigger=triggers[0] if triggers else None,
+            triggers=triggers,
             mobility=mobility, setups=setups,
             tree_nodes=[int(n) for n in alloc.get("nodes") or []], tree_version=alloc.get("version"),
             tree_order=[{"id": s.get("id"), "name": s["node"], "type": s["type"], "path": s.get("path") or [],
@@ -377,6 +394,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         if slots < 5 and slots in SOCKET_ORB:
             guide.notes.append(f"{slots} supports per skill at this stage: skill gems start with 2 sockets and "
                                f"{SOCKET_ORB[slots]} sets them to {slots}. More sockets come in later stages.")
+        for name in dropped_spirit:
+            guide.notes.append(f"{name} was left out: the gear at this stage doesn't give enough spirit for it.")
         for name in spare:
             guide.notes.append(f"{name} uses spare spirit for defence. Path of Building doesn't count what it does, so "
                                f"it isn't in the numbers.")
@@ -477,8 +496,8 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
             continue
         if fams[s["name"]] in {fams.get(c, c) for c in chosen}:
             continue
-        res = pob.try_skill(group, [name, *chosen, s["name"]], ["TotalDPS"], keep_main=keep_main)
-        if res["supported"].get(s["name"]) and not res.get("warnings"):
+        res = pob.try_skill(group, [name, *chosen, s["name"]], ["TotalDPS", "SpiritUnreserved"], keep_main=keep_main)
+        if res["supported"].get(s["name"]) and not res.get("warnings") and (res["output"].get("SpiritUnreserved") or 0) >= 0:
             chosen.append(s["name"])
     pob.try_skill(group, [name, *chosen], ["TotalDPS"], keep_main=keep_main)
     return chosen
@@ -529,9 +548,10 @@ def to_markdown(spec: dict, guides: list[StageGuide]) -> str:
             out.append("**Utility:** " + ", ".join(
                 f"{u['skill']}" + (f" (weapon set 2, {u['weapon']})" if u["weapon_set"] == 2 else "") + f" {u['gain']:+.0%}"
                 for u in g.utility))
-        if g.trigger:
-            t, m, b = g.trigger, g.trigger.get("mapping") or {}, g.trigger.get("bossing") or {}
-            out.append(f"**Cast on Critical:** {t['spell']}" + (f" + {', '.join(t['supports'])}" if t['supports'] else "")
+        for t in g.triggers or ([g.trigger] if g.trigger else []):
+            m, b = t.get("mapping") or {}, t.get("bossing") or {}
+            out.append(f"**{t.get('gem', 'Cast on Critical')}:** {', '.join(t.get('spells') or [t['spell']])}"
+                       + (f" + {', '.join(t['supports'])}" if t['supports'] else "")
                        + f", about {m.get('trigger_dps', 0):,.0f} mapping / {b.get('trigger_dps', 0):,.0f} boss DPS on top"
                        + " (Whetstone's estimate, not Path of Building's)")
         if g.mobility:

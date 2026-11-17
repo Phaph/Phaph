@@ -1,7 +1,10 @@
 {
   "_about": "Rules for Cast on X (meta gem) energy, which Path of Building does not model. Edit numbers here, not in code. 'verified' turns true per rule once an in-game check matches (see engine/tools/trigger_check.py).",
   "monster_power": {
-    "normal": 1, "magic": 2, "rare": 5, "unique_boss": 20,
+    "normal": 1,
+    "magic": 2,
+    "rare": 5,
+    "unique_boss": 20,
     "_source": "community figures (Mobalytics monster power guide, poe2wiki): base power x rarity, unique bosses 20",
     "verified": false
   },
@@ -20,6 +23,20 @@
     "max_energy_per_second_of_cast_time": 100,
     "triggered_damage_more": -20,
     "_source": "Path of Building gem data (MetaCastOnCritPlayer, SupportMetaCastOnCritPlayer) and poe2db",
+    "verified": false
+  },
+  "cast_on_elemental_ailment": {
+    "gem": "Cast on Elemental Ailment",
+    "energy_per_power": {
+      "ignite": 1.0,
+      "shock": 1.0,
+      "freeze": 10.0
+    },
+    "energy_increased_per_level": 3,
+    "max_energy_per_second_of_cast_time": 100,
+    "triggered_damage_more": -20,
+    "_note": "Energy from Ignite and Shock only: PoE 2 Freeze builds up over hits and PoB gives no per-hit freeze chance, so freeze energy is left out (a conservative estimate). No ailment-threshold scaling (the gem text doesn't mention it).",
+    "_source": "Path of Building gem data (MetaCastOnElementalAilmentPlayer: 100 / 100 / 1000 centienergy per monster power on ignite / shock / freeze, energy_generated_+% 3 per level)",
     "verified": false
   }
 }

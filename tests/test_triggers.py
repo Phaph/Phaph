@@ -72,7 +72,7 @@ def test_unverified_rules_are_flagged_and_groups_are_found():
 
 def test_spell_candidates_are_plain_damaging_spells():
     from triggers import spell_candidates
-    cat = [{"name": "Comet", "types": ["Spell", "Area"], "weapons": []},
+    cat = [{"name": "Comet", "types": ["Spell", "Area", "Triggerable"], "weapons": []},   # as in PoB's data
            {"name": "Herald of Ice", "types": ["Spell", "Herald", "Persistent"], "weapons": []},
            {"name": "Raise Zombie", "types": ["Spell", "Minion"], "weapons": []},
            {"name": "Wand Spell", "types": ["Spell"], "weapons": ["Wand"]},
@@ -87,3 +87,42 @@ def test_impossible_numbers_never_score():
     assert total_dps({"FullDPS": 2147483647}) == 0
     assert score_of({"TotalDPS": float("inf")}, "total") == 0
     assert broken_numbers({"TotalDPS": 2147483647, "Life": 5000, "FullDPS": 1e6}) == ["TotalDPS"]
+
+
+class AilmentPoB(FakePoB):
+    """Same attack, now shocking on 25% of hits and igniting on 10%, with Comet in Cast on Elemental Ailment."""
+    def send(self, cmd, **k):
+        if cmd == "groups":
+            return {"groups": [{"group": 1, "gems": ["Tempest Flurry"], "main": True},
+                               {"group": 2, "gems": ["Cast on Elemental Ailment", "Comet"], "main": False}]}
+        if cmd == "gem_info":
+            out = super().send(cmd, **k)
+            out["gems"]["Cast on Elemental Ailment"] = {"cast_time": 0, "cooldown": None, "types": ["Meta"], "support": False}
+            return out
+        return super().send(cmd, **k)
+
+    def calc(self, fields):
+        out = super().calc(fields)
+        if self.main[0] == 1:
+            out.update({"ShockChance": 25, "IgniteChance": 10})
+        return out
+
+
+def test_cast_on_elemental_ailment_energy_from_shocks_and_ignites():
+    e = cast_on_crit(AilmentPoB(), 1, 2, mode="bossing", gem_level=20, rules=load_rules(), gem="Cast on Elemental Ailment")
+    # 4 hits/s: 1 shock + 0.4 ignites per second, 1 energy each per monster power, boss power 20, +57% at level 20
+    per_sec = (1.0 + 0.4) * 1 * 20 * 1.57
+    assert e["gem"] == "Cast on Elemental Ailment"
+    assert e["attack"]["crits_per_sec"] == pytest.approx(1.4)          # ailments applied per second
+    assert e["casts_per_sec"] == pytest.approx(per_sec / 100)           # Comet needs 100 energy
+    assert e["trigger_dps"] == pytest.approx(e["casts_per_sec"] * 800)
+
+
+def test_trigger_spell_candidates():
+    from triggers import spell_candidates
+    cat = [{"name": "Comet", "types": ["Spell", "Damage", "Totemable", "Trappable", "Triggerable"], "weapons": []},
+           {"name": "Lightning Warp", "types": ["Spell", "Movement", "Travel", "Triggerable"], "weapons": []},
+           {"name": "Archmage", "types": ["Spell", "Buff", "Persistent"], "weapons": []},
+           {"name": "Untriggerable Nova", "types": ["Spell", "Damage"], "weapons": []}]
+    # "Totemable" is no bar (it once excluded almost every spell); teleports and buffs are; Triggerable is required.
+    assert spell_candidates(cat) == ["Comet"]

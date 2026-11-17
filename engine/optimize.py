@@ -237,7 +237,7 @@ def optimise_supports(
         slots -= len(required)
         exclude = set(exclude or ()) | set(required)
     from goals import FOCUS_FIELDS
-    fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", *CLEAR_FIELDS, *FOCUS_FIELDS] \
+    fields = [*DPS_FIELDS, "CombinedDPS", "Life", "TotalEHP", "SpiritUnreserved", *CLEAR_FIELDS, *FOCUS_FIELDS] \
         + (["Speed", "ManaCost", "LifeCost", "ESCost"] if field_name == "movement" else ["Speed"] if field_name == "per_cast" else
            [] if field_name in ("total", "mapping") or "+" in field_name or field_name in AILMENT_FIELD else [field_name])
     gems = pob.list_gems("support")
@@ -265,13 +265,15 @@ def optimise_supports(
         active_gems = [active]
     base = pob.try_skill(group, active_gems, fields, keep_main=keep_main)
     base_score = score_of(base["output"], field_name)
+    # Supports can raise a skill's spirit reservation ("Cost & Reservation Multiplier"): never one that overdraws spirit.
+    spirit_ok = lambda out: (base["output"].get("SpiritUnreserved") or 0) < 0 or (out.get("SpiritUnreserved") or 0) >= 0
     log(f"Base {active}: {metric} DPS = {base_score:,.0f}")
 
     # Screen every support once on its own: drop ones that don't support the skill or add nothing.
     solo = {}
     for name in pool:
         res = pob.try_skill(group, [*active_gems, name], fields, keep_main=keep_main)
-        if res["supported"].get(name):  # skip gems PoB says don't apply
+        if res["supported"].get(name) and spirit_ok(res["output"]):  # skip gems PoB says don't apply
             sc = score_of(res["output"], field_name)
             if base_score > 0 and sc > base_score * IMPOSSIBLE_SUPPORT_GAIN:
                 log(f"  {name}: skipped, a {sc / base_score:,.0f}x jump is a calculation error")
@@ -298,7 +300,7 @@ def optimise_supports(
                 if combo in scored:
                     continue
                 res = pob.try_skill(group, [*active_gems, *combo], fields, keep_main=keep_main)
-                if not all(res["supported"].get(s) for s in combo) or res.get("warnings"):
+                if not all(res["supported"].get(s) for s in combo) or res.get("warnings") or not spirit_ok(res["output"]):
                     continue
                 scored[combo] = Result([*required, *combo], score_of(res["output"], field_name), res["output"])
         if not scored:
@@ -333,7 +335,8 @@ def _fill_sockets(pob, group, active_gems, best, required, ranked, family, total
                 continue
             combo = [s for s in best.supports if s not in required] + [name]
             res = pob.try_skill(group, [*active_gems, *combo], fields, keep_main=keep_main)
-            if not all(res["supported"].get(s) for s in combo) or res.get("warnings"):
+            if not all(res["supported"].get(s) for s in combo) or res.get("warnings") \
+                    or (res["output"].get("SpiritUnreserved") or 0) < 0 <= (best.output.get("SpiritUnreserved") or 0):
                 continue
             sc = score_of(res["output"], field_name)
             if sc > best.score * (1 + FILL_GAIN) and (pick is None or sc > pick.score):

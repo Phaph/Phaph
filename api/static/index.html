@@ -584,7 +584,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-17.2";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-17.3";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -1779,10 +1779,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     // One line, thin spaces around the slashes so it never stacks.
     const res = ["FireResist", "ColdResist", "LightningResist", "ChaosResist"].map(k => Math.round(st[k] || 0)).join(" / ");
     const kv = [];   // the skills are cards (skillCardsHtml); the list keeps passives and assumptions
-    if (s.trigger) {   // Cast on Critical's damage is Whetstone's own estimate, so it says so
-      const m = s.trigger.mapping || {}, b = s.trigger.bossing || {};
-      kv.push(["Trigger estimate", `<span class="est">+${fmt(m.trigger_dps || 0)} mapping${b.trigger_dps != null ? ` / +${fmt(b.trigger_dps)} boss` : ""} DPS · ~${(m.casts_per_sec || 0).toFixed(2)} casts/s (Path of Building doesn't model trigger energy)</span>`]);
-    }
+    // Cast on X damage is Whetstone's own estimate (PoB has no trigger energy), so it has its own labelled row.
+    (s.triggers && s.triggers.length ? s.triggers : s.trigger ? [s.trigger] : []).forEach(t => {
+      const m = t.mapping || {}, b = t.bossing || {};
+      kv.push([`${esc(t.gem || "Cast on Critical")} estimate`, `<span class="est">+${fmt(m.trigger_dps || 0)} mapping${b.trigger_dps != null ? ` / +${fmt(b.trigger_dps)} boss` : ""} DPS · ~${(m.casts_per_sec || 0).toFixed(2)} triggers/s (Path of Building doesn't model trigger energy)</span>`]);
+    });
     kv.push(...priorityRow(s));
     if (s.conditions.length) kv.push(["Assumed", s.conditions.map(c => esc(c.why)).join("; ")]);
     $("stageBody").innerHTML = stageHtml(plan, s, prevGear, forward, kv, res, st);
@@ -1866,7 +1867,12 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     if (s.clear_skill) add("Clearing", s.clear_skill, s.clear_supports);
     if (s.boss_skill) add("Bossing", s.boss_skill, s.boss_supports, s.boss_weapon_set === 2 ? "weapon set 2" : "");
     else if ((s.boss_supports || []).length) add("Bossing swap", plan.spec.skill, s.boss_supports, "same skill, these supports for bosses");
-    if (s.trigger) add("Cast on Critical", s.trigger.spell, s.trigger.supports, "triggered: damage is an estimate");
+    // Cast on X: the meta gem heads the card, then the spells it triggers, then their supports.
+    (s.triggers && s.triggers.length ? s.triggers : s.trigger ? [s.trigger] : []).forEach(t => {
+      const spells = t.spells || [t.spell];
+      add(`Triggers ${spells.length > 1 ? spells.length + " spells" : "a spell"}`, t.gem || "Cast on Critical",
+          [...spells, ...(t.supports || [])], "damage is Whetstone's estimate");
+    });
     const order = ["spirit", "defence", "utility", "granted", "movement"];
     (s.setups || []).slice().sort((a, b) => order.indexOf(a.role) - order.indexOf(b.role)).forEach(x => {
       const u = (s.utility || []).find(u => u.skill === x.skill);

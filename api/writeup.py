@@ -56,9 +56,10 @@ def facts(spec: dict, stages: list[dict]) -> dict:
         skills.append({"skill": end["boss_skill"], "role": "bossing", "supports": end.get("boss_supports") or []})
     elif end.get("boss_supports"):
         skills.append({"skill": spec.get("skill"), "role": "bossing (support swap)", "supports": end["boss_supports"]})
-    if end.get("trigger"):
-        t = end["trigger"]
-        skills.append({"skill": t.get("spell"), "role": f"triggered by {t.get('gem')}", "supports": t.get("supports") or []})
+    for t in end.get("triggers") or ([end["trigger"]] if end.get("trigger") else []):
+        for sp in t.get("spells") or [t.get("spell")]:
+            skills.append({"skill": sp, "role": f"triggered by {t.get('gem')} (estimated damage)",
+                           "supports": t.get("supports") or []})
     for x in end.get("setups") or []:
         skills.append({"skill": x.get("skill"), "role": x.get("role"), "supports": x.get("supports") or []})
     gear = [{"slot": g.get("slot"), "unique": (g.get("unique") or "").split(",")[0]} for g in end.get("gear") or []
