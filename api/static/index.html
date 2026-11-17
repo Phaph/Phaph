@@ -491,6 +491,13 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <textarea id="prompt" rows="1" maxlength="500" placeholder="lightning minion build for a monk, 5 div"></textarea>
       <div class="readas" id="readas" aria-live="polite"><span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span></div>
     </div>
+    <div class="anchor field"><label for="anchor">Build around</label>
+      <input id="anchor" list="anchorList" maxlength="80" autocomplete="off" placeholder="a unique, keystone or support gem">
+      <datalist id="anchorList"></datalist>
+      <small>Locked first; the skill, ascendancy, passives and the rest of the gear are picked to suit it.</small></div>
+    <div class="gobar"><button class="go" id="go" type="submit">Forge it</button>
+      <button class="go alt" id="randomGo" type="button" title="Skill, weapon, ascendancy and a unique picked at random within what you set">Random build</button></div>
+    <div class="status" id="status" hidden></div>
     <div class="divider">or set it up by hand</div>
     <div class="field">
       <span class="label">How much you can spend</span>
@@ -517,13 +524,6 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       <small>Tries far more skills, each on its own best ascendancies, so it can find builds the normal search misses. Takes about twice as long.</small></span></label>
     <label class="deep"><input type="checkbox" id="offmeta"><span><b>Off-meta</b>
       <small>Skills, ascendancies and uniques lots of players use count for less, so you get the strongest build few people play. Uses poe.ninja's ladder.</small></span></label>
-    <div class="anchor field"><label for="anchor">Build around</label>
-      <input id="anchor" list="anchorList" maxlength="80" autocomplete="off" placeholder="a unique, a keystone or a support gem, e.g. Chaos Inoculation">
-      <datalist id="anchorList"></datalist>
-      <small>Locked first; the skill, ascendancy, passives and the rest of the gear are picked to suit it.</small></div>
-    <div class="gobar"><button class="go" id="go" type="submit">Forge it</button>
-      <button class="go alt" id="randomGo" type="button" title="Skill, weapon, ascendancy and a unique picked at random within what you set above">Random build</button></div>
-    <div class="status" id="status" hidden></div>
   </form>
 
   <section class="panel" id="work" hidden aria-live="polite" aria-busy="true"></section>
