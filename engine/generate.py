@@ -648,7 +648,22 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
     best = ranked[0]
     have = {r.skill for r in ranked if r.ascendancy == best.ascendancy}
     open_req = {**req, "skill": None}
+    picks_second: list[Candidate] = []
     pool1 = list(ok1)
+    second = req.get("second_weapons") or []
+    if second:
+        # The player picked a second weapon: weapon set 2 must use it. Score the skills it can use (no passives,
+        # quick), then the best few go through the full round below on the winner's ascendancy.
+        sreq = {**open_req, "weapons": second}
+        cands2 = [Candidate(s["name"], w, sub, off, best.cls, is_minion="Minion" in s["types"], totem=s.get("totem"))
+                  for s in main_skills(catalog, sreq) for w, sub, off in weapon_options(s, sreq)[:1]]
+        if cands2:
+            round_start(2.5, f"Round 3a: {len(cands2)} skills for your second weapon ({' or '.join(second)})", len(cands2),
+                        "You asked for a second weapon: finding the best skill to use with it on weapon set 2.")
+            cands2 = [c for c in pool.map(lambda c: scored(evaluate(c, stage, sreq, tree=False), 2.5), cands2)
+                      if not c.error and c.score > 0]
+            for c in sorted(cands2, key=lambda c: -(c.boss or c.dps))[:ROLE_PICKS]:
+                picks_second.append(c)
     if req.get("skill"):
         # Round 1 only scored the named skill: score the others now (no passives, quick) to find its partners.
         others = [s for s in main_skills(catalog, open_req) if s["name"] not in have]
@@ -660,17 +675,18 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
             extra = list(pool.map(lambda c: scored(evaluate(c, stage, open_req, tree=False), 2.5), extra))
             pool1 += [c for c in extra if not c.error and c.score > 0]
     pool1 = [c for c in pool1 if c.skill not in have]
-    picks: dict[str, Candidate] = {}
+    picks: dict[str, Candidate] = {f"{c.skill}@{c.weapon_type}": c for c in picks_second}
     for c in sorted(pool1, key=lambda c: -(c.boss or c.dps)):   # single target: any weapon (set 2 if it differs)
         if len(picks) >= ROLE_PICKS:
             break
-        picks.setdefault(c.skill, c)
+        if not any(p.skill == c.skill for p in picks.values()):
+            picks[c.skill] = c
     same_weapon = [c for c in pool1 if c.weapon_type == best.weapon_type and c.offhand_type == best.offhand_type]
     n = 0
     for c in sorted(same_weapon, key=lambda c: -c.clear):     # clearing: same weapon, a button away
         if n >= ROLE_PICKS:
             break
-        if c.skill not in picks:
+        if not any(p.skill == c.skill for p in picks.values()):
             picks[c.skill] = c
             n += 1
     # The main skill itself on its other weapons: a stronger boss weapon on weapon set 2 (same skill, other weapon).
@@ -819,7 +835,13 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
     # bleed boss skill, not just bigger hits). Older results without "boss" fall back to dps.
     key = lambda r: r.get("boss") or r["dps"]
     boss = max(same_asc, key=key, default=None)
-    if boss and key(boss) >= BOSS_SKILL_MIN_GAIN * key(main):
+    second = [w.lower() for w in req.get("second_weapons") or []]
+    forced = None
+    if second:
+        # The player asked for a second weapon: weapon set 2 uses it, even if that costs damage (their call).
+        forced = max((r for r in same_asc if r["weapon_type"].lower() in second), key=key, default=None)
+        boss = forced or boss
+    if boss and (forced or key(boss) >= BOSS_SKILL_MIN_GAIN * key(main)):
         spec["boss_skill"] = boss["skill"]
         spec["boss_weapon_type"] = boss["weapon_type"]
         spec["boss_weapon_subtype"] = boss["weapon_subtype"]

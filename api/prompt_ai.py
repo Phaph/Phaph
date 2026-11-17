@@ -38,6 +38,8 @@ Rules:
 - "anchor_unique" / "anchor_keystone" / "anchor_support": the one item, keystone or support gem the build is
   made around, only if the player names it or asks for a build around it.
 - "kinds", "damage", "ailment", "weapons", "goals", "avoid", "mode", "budget": from the allowed values only.
+- "weapons" is the main weapon. If the player names a second weapon ("crossbow build with a mace", "bow and spear"),
+  the first is "weapons" and the second "second_weapons" (it goes on weapon set 2). Never more than two.
   "avoid" is for things the player said no to ("no minions" -> kinds "minion" in avoid).
 - "off_meta": true when the player wants something unusual, unpopular, creative or not the meta.
 - "random": true only when the player asks for a random or surprise build.
@@ -83,6 +85,7 @@ def _schema(catalog: dict, tables: dict) -> dict:
         "kinds": strs(tables["kinds"]),
         "ailment": one(tables["ailments"]),
         "weapons": strs(list(catalog["weapon_types"])),
+        "second_weapons": strs(list(catalog["weapon_types"])),
         "goals": strs(tables["goals"]),
         "with_types": strs(tables["helper_kinds"]),
         "avoid": strs(tables["damage"] | tables["kinds"]),
@@ -131,7 +134,7 @@ def _clean(out: dict, catalog: dict, tables: dict) -> dict:
         "budget": {b["key"] for b in catalog["budgets"]},
     }
     lists = {"with_skills": set(catalog["skills"]), "damage": tables["damage"], "kinds": tables["kinds"],
-             "weapons": set(catalog["weapon_types"]), "goals": tables["goals"], "with_types": tables["helper_kinds"],
+             "weapons": set(catalog["weapon_types"]), "second_weapons": set(catalog["weapon_types"]), "goals": tables["goals"], "with_types": tables["helper_kinds"],
              "avoid": tables["damage"] | tables["kinds"]}
     req: dict = {"damage": [], "kinds": [], "weapons": [], "goals": []}
     dropped = []
@@ -145,7 +148,7 @@ def _clean(out: dict, catalog: dict, tables: dict) -> dict:
         vals = [v for v in out.get(k) or [] if v in allowed]
         dropped += [v for v in out.get(k) or [] if v not in allowed]
         if vals or k in req:
-            req[k] = vals[:8 if k == "goals" else 5 if k in ("damage", "kinds", "weapons", "avoid") else 3]
+            req[k] = vals[:8 if k == "goals" else 5 if k in ("damage", "kinds", "weapons", "second_weapons", "avoid") else 3]
     for k in ("off_meta", "random", "deep"):
         if out.get(k):
             req[k] = True

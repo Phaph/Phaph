@@ -238,6 +238,15 @@ tr.best td { color: var(--brass-hi); }
 .gem.main img { width: 30px; height: 30px; }
 .gem[data-gem] { cursor: help; }
 .skillgems { display: grid; gap: 8px; }
+/* The build page: the forge settings step aside; the logo leads home (after offering to save the build). */
+body.viewing #form, body.viewing .mast .sub { display: none; }
+body.viewing .mast .mark, body.viewing .mast .wordmark { cursor: pointer; }
+.leave { border: 1px solid var(--edge); background: var(--iron2); color: var(--ink); border-radius: 4px; padding: 20px 22px; max-width: 420px; }
+.leave::backdrop { background: rgba(0,0,0,.6); }
+.leave h3 { margin: 0 0 6px; }
+.leave p { margin: 0 0 14px; color: var(--muted); }
+.leave .row { display: flex; flex-wrap: wrap; gap: 8px; }
+#weapons .chip[data-set="2"]::after { content: "set 2"; margin-left: 6px; font-size: 11px; color: var(--brass); }
 .wset { display: flex; gap: 8px; justify-content: center; margin-bottom: 10px; }
 .wset-tab.on { border-color: var(--brass); color: var(--brass-hi); }
 .overview { background: var(--iron); border: 1px solid var(--edge); border-radius: 4px; padding: 14px 18px; display: grid; gap: 6px; max-width: 900px; }
@@ -586,7 +595,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-17.5";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-17.6";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -595,7 +604,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const fmt = n => Math.round(n || 0).toLocaleString("en-US");
   const pct = x => `${Math.round(x * 100)}%`;
   const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
-  const state = { budget: "budget", damage: new Set(), kinds: new Set(), goals: new Set(), weapons: new Set(), skill: null, gen: null, genJob: null, guide: null };
+  const state = { budget: "budget", damage: new Set(), kinds: new Set(), goals: new Set(), weapons: new Set(), weapons2: new Set(), skill: null, gen: null, genJob: null, guide: null };
   let catalog = null;
 
   const BUDGETS = [["free", "Free", "Self-found", 1], ["budget", "Budget", "Up to ~5 div", 2], ["medium", "Medium", "~5-30 div", 4], ["high", "High", "~30-100 div", 7], ["unlimited", "No limit", "100+ div", 11]];
@@ -631,10 +640,21 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       if (!ok.length) return;
       const b = document.createElement("button");
       b.type = "button"; b.className = "chip"; b.textContent = label;
-      const on = () => ok.every(t => state.weapons.has(t));
-      b.setAttribute("aria-pressed", on());
-      b.onclick = () => { const v = !on(); ok.forEach(t => v ? state.weapons.add(t) : state.weapons.delete(t)); b.setAttribute("aria-pressed", v); };
-      weaponSyncs.push(() => b.setAttribute("aria-pressed", on()));
+      // Two weapons at most: the first picked is the main weapon, the second goes on weapon set 2.
+      const inSet = set => ok.every(t => set.has(t));
+      const on = () => inSet(state.weapons) || inSet(state.weapons2);
+      const sync = () => { b.setAttribute("aria-pressed", on()); b.dataset.set = inSet(state.weapons2) ? "2" : ""; };
+      b.onclick = () => {
+        if (inSet(state.weapons)) {   // dropping the main weapon: the set-2 weapon becomes the main one
+          ok.forEach(t => state.weapons.delete(t));
+          if (!state.weapons.size) { state.weapons2.forEach(t => state.weapons.add(t)); state.weapons2.clear(); }
+        } else if (inSet(state.weapons2)) ok.forEach(t => state.weapons2.delete(t));
+        else if (!state.weapons.size) ok.forEach(t => state.weapons.add(t));
+        else if (!state.weapons2.size) ok.forEach(t => state.weapons2.add(t));
+        else { setStatus("Two weapons at most: the first is your main weapon, the second goes on weapon set 2."); return; }
+        weaponSyncs.forEach(f => f());
+      };
+      weaponSyncs.push(sync); sync();
       $("weapons").appendChild(b);
     });
   }
@@ -676,7 +696,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // so the player can see and fix it before forging.
   const HINT = "<span>A damage type, a skill, a class or ascendancy, a weapon, a budget. Whatever it understands gets stamped here.</span>";
   function resetPicker() {
-    state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.skill = null; state.withSkills = []; state.withTypes = []; state.avoid = [];
+    state.damage.clear(); state.kinds.clear(); state.goals.clear(); state.weapons.clear(); state.weapons2.clear(); state.skill = null; state.withSkills = []; state.withTypes = []; state.avoid = [];
     $("ailment").value = ""; $("mode").value = "balanced"; $("cls").value = ""; fillAscendancies(); $("asc").value = "";
     $("deep").checked = false; $("offmeta").checked = false; setAnchor(null); state.random = false;
   }
@@ -691,6 +711,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     resetPicker();
     r.damage.forEach(d => state.damage.add(d)); r.kinds.forEach(k => state.kinds.add(k));
     r.goals.forEach(g => state.goals.add(g)); r.weapons.forEach(w => state.weapons.add(w));
+    (r.second_weapons || []).forEach(w => state.weapons2.add(w));
     if (r.budget) state.budget = r.budget;
     if (r.ailment) $("ailment").value = r.ailment;
     if (r.mode) $("mode").value = r.mode;
@@ -1269,6 +1290,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     clearTimeout(parseTimer); await parseNow();
     await readWithClaude();
     const req = { damage: [...state.damage], kinds: [...state.kinds], weapons: [...state.weapons].slice(0, 5), budget: state.budget,
+      ...(state.weapons2.size ? { second_weapons: [...state.weapons2].slice(0, 5) } : {}),
       mode: $("mode").value, goals: [...state.goals] };
     if ($("ailment").value) req.ailment = $("ailment").value;
     if ($("cls").value) req.class = $("cls").value;
@@ -1320,6 +1342,28 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     } catch {}
     setStatus("");
   }
+  // The logo leads home from a build page, after offering to save the build (copy its link or save a PDF).
+  function goHome() { location.href = location.origin + location.pathname; }
+  function askLeave() {
+    if (!document.body.classList.contains("viewing")) return;
+    let d = document.getElementById("leaveDlg");
+    if (!d) {
+      d = document.createElement("dialog"); d.id = "leaveDlg"; d.className = "leave";
+      d.innerHTML = `<h3>Start a new build?</h3><p>This build stays saved at its link. Keep a copy before you go:</p>
+        <div class="row"><button class="chip" type="button" data-a="copy">Copy link</button><button class="chip" type="button" data-a="pdf">Save as PDF</button>
+        <button class="chip" type="button" data-a="leave">New build</button><button class="chip" type="button" data-a="stay">Stay here</button></div>`;
+      d.onclick = e => {
+        const a = e.target.closest("button")?.dataset.a; if (!a) return;
+        if (a === "copy") { $("shareBtn")?.click(); e.target.textContent = "Link copied"; }
+        if (a === "pdf") { d.close(); $("pdfBtn")?.click(); }
+        if (a === "leave") goHome();
+        if (a === "stay") d.close();
+      };
+      document.body.appendChild(d);
+    }
+    d.showModal();
+  }
+  document.querySelectorAll(".mast .mark, .mast .wordmark").forEach(el => el.addEventListener("click", askLeave));
   let randomClick = false;
   $("randomGo").onclick = () => { randomClick = true; $("form").requestSubmit(); };
 
@@ -1497,6 +1541,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
 
   function renderGuide(plan, res, opt = {}) {
     const live = !!opt.live;
+    if (!live) document.body.classList.add("viewing");   // a finished build: the forge settings step aside
     state.guide = res; state.plan = plan; shownGear = null; shownStage = null; revealNext = !live && !opt.keepStage;
     guideSigil?.stop(); guideSigil = null;
     const stages = res.stages;

@@ -181,3 +181,8 @@ def test_ascendancy_with_its_class_and_budget_word():
     assert r["skill"] == "Furious Slam" and r["with_skills"] == ["Walking Calamity"]
     assert r["ascendancy"] == "Shaman" and r["class"] == "Druid" and r["budget"] == "unlimited"
     assert out["unused"] == []
+
+
+def test_second_weapon_goes_on_weapon_set_2():
+    r = parse("crossbow mace build")
+    assert r["weapons"] == ["Crossbow"] and r["second_weapons"] == ["One Hand Mace", "Two Hand Mace"]

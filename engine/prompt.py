@@ -366,14 +366,19 @@ def parse_prompt(text: str, catalog: dict, divine_in_exalts: float = 640, divine
             found.append((m.group(0), f"Ailment: {val}"))
             break
 
+    # Weapons in the order they're named: the first is the main weapon; a second one goes on weapon set 2
+    # ("crossbow mace build" = a crossbow build with a mace swap). More than two: the rest are ignored.
     known_weapons = set(catalog.get("weapon_types", {}))
+    named = []
     for pat, types in WEAPONS.items():
         if (m := _find(pat, t)):
-            for w in types:
-                if (not known_weapons or w in known_weapons) and w not in req["weapons"]:
-                    req["weapons"].append(w)
-            found.append((m.group(0), f"Weapon: {' or '.join(types)}"))
+            named.append((m.start(), m.group(0), [w for w in types if not known_weapons or w in known_weapons]))
             t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
+    for i, (_, text, types) in enumerate(sorted(named)[:2]):
+        key = "weapons" if i == 0 else "second_weapons"
+        req.setdefault(key, [])
+        req[key] += [w for w in types if w not in req[key]]
+        found.append((text, f"Weapon: {' or '.join(types)}" if i == 0 else f"Weapon set 2: {' or '.join(types)}"))
 
     modes = [(m, val) for pat, val in MODE.items() if (m := _find(pat, t))]
     if len(modes) == 1:

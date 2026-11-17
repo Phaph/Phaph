@@ -40,7 +40,7 @@ from .jobs import JobStore  # noqa: E402
 Budget = Literal["free", "budget", "medium", "high", "unlimited"]
 StageKey = Literal["leveling", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-17.6"
+ENGINE_VERSION = "2026-11-17.7"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -88,6 +88,8 @@ class GenerateRequest(BaseModel):
     kinds: list[str] = Field(default_factory=list, max_length=5)    # e.g. ["minion"], ["melee"]
     ailment: Literal["bleed", "poison", "ignite", "shock", "chill", "freeze"] | None = None
     weapons: list[str] = Field(default_factory=list, max_length=5)
+    # A second weapon the player picked: weapon set 2 uses it (a skill on it), even if that costs damage.
+    second_weapons: list[str] = Field(default_factory=list, max_length=5)
     cls: str | None = Field(None, alias="class")
     ascendancy: str | None = None
     skill: str | None = None
@@ -251,7 +253,7 @@ def validate_generate(req: GenerateRequest, catalog: dict) -> None:
             raise HTTPException(400, f"Unknown skill '{w}'")
     _check_goals(req.goals, req.with_types)
     _check_anchors(req, catalog)
-    for w in req.weapons:
+    for w in [*req.weapons, *req.second_weapons]:
         if w not in catalog["weapon_types"]:
             raise HTTPException(400, f"Unknown weapon type '{w}'")
 
