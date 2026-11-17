@@ -1302,6 +1302,19 @@ function handlers.calc(cmd)
 end
 
 -- Lists gems. filter: "support" | "active" | nil; tags: every tag must match
+-- What each gem does, for the website's hover cards: PoB's own description and tag line, per gem name.
+function handlers.gem_texts(cmd)
+	local out = {}
+	for _, gem in pairs(data.gems) do
+		local ge = gem.grantedEffect
+		if gem.name and ge and not out[gem.name] then
+			local isSupport = (gem.tags and gem.tags.support) and true or false
+			out[gem.name] = { desc = ge.description or "", tags = gem.tagString or "", support = isSupport }
+		end
+	end
+	return { gems = out }
+end
+
 function handlers.list_gems(cmd)
 	local gems = {}
 	for _, gem in pairs(data.gems) do

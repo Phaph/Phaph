@@ -200,3 +200,9 @@ def test_parse_with_ai_falls_back_without_a_key(client, monkeypatch):
     r = client.post("/parse", json={"text": "lightning minion build for a monk", "ai": True})
     assert r.status_code == 200 and r.json()["request"]["damage"] == ["lightning"] and "reader" not in r.json()
     assert client.get("/catalog").json()["ai_reader"] is False
+
+
+def test_gem_texts_for_hover_cards(client):
+    gems = client.get("/gems").json()
+    assert "Arc" in gems["Arc"]["desc"] or "Lightning" in gems["Arc"]["desc"]
+    assert any(g["support"] for g in gems.values()) and len(gems) > 300
