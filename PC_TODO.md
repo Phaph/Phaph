@@ -100,6 +100,8 @@ The plan and checklist for moving to PoE 2 1.0 (new tree, gems, items) without b
 
 ## Mageblood (with the planned average-roll fix)
 Kyle 2026-11-18: a "More loot" build with Mageblood got Jade + Stibnite (evasion, ~2x toughness) instead of Legacy of
-Gold (+45% rarity): rarity is weighted low (goals.weights: +15% rarity ~ +6% damage). When fixing Mageblood (judge by
-an average random roll, list legacies to hunt for), a ticked goal guarantees its legacy: More loot -> Gold, Faster
-mapping -> Quicksilver; the other slots by score.
+Gold (+45% rarity): rarity is weighted low (goals.weights: +15% rarity ~ +6% damage). Kyle agreed the engine is right
+(rarity is cheaper on rings/amulet, the legacies buy more power). Decision: legacies stay picked by score; when a goal
+is ticked, the guide adds a swap line instead, e.g. "Hunting for loot? Legacy of Gold (+45% rarity) can replace
+Stibnite: -X% toughness" (Faster mapping -> Quicksilver), with the real cost measured in PoB. Do it with the
+average-roll fix.
