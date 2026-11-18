@@ -578,7 +578,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-18.2";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-18.3";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -915,6 +915,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     function fuel(x) {
       const f = x / SPACING, i = Math.floor(f), u = f - i, sm = u * u * (3 - 2 * u);
       const v = k => { const L = lattice[Math.min(lattice.length - 1, Math.max(0, k))]; return L.a + (L.b - L.a) * (0.5 + 0.5 * Math.sin(t * 0.7 * L.s + L.p)); };
+      // (Each point redraws whichever end it's furthest from, see frame(): fixed ends let a stretch where both
+      // were high burn at full heat for the whole build, a bright block that never moved.)
       let n = v(i) * (1 - sm) + v(i + 1) * sm;
       n = n * n * 1.6;   // sharper peaks: separate tongues with darker gaps between
       for (const g of surges) n += g.amp * Math.exp(-((x - g.x) ** 2) / (2 * g.w * g.w));
@@ -925,10 +927,15 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       if (now - last > 70) {
         last = now; t += 0.07;
         heat += (floor - heat) * 0.04;
+        for (const L of lattice) {
+          const w = 0.5 + 0.5 * Math.sin(t * 0.7 * L.s + L.p);
+          if (w > 0.97) L.a = Math.random(); else if (w < 0.03) L.b = Math.random();
+        }
         surges = surges.filter(g => (g.amp *= 0.92) > 0.03);
         if (Math.random() < 0.015 + heat * 0.02) surges.push({ x: Math.random() * cols, w: 2 + Math.random() * 3, amp: 0.2 + Math.random() * 0.25 });
         for (let x = 0; x < cols; x++) {
-          const v = Math.min(1, heat * (0.3 + 1.1 * fuel(x)) * (0.85 + Math.random() * 0.3));
+          // Flicker after the cap, so even a flaring column never sits at a flat maximum.
+          const v = Math.min(1, heat * (0.3 + 1.1 * fuel(x))) * (0.78 + Math.random() * 0.22);
           cells[(rows - 1) * cols + x] = v; cells[(rows - 2) * cols + x] = Math.max(cells[(rows - 2) * cols + x], v * 0.95);
         }
         const wind = Math.sin(t * 0.45) * 0.35 + Math.sin(t * 1.3) * 0.15;
@@ -971,9 +978,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     }
     if (!REDUCE) raf = requestAnimationFrame(frame);
     function flare(big) {
-      const at = Math.random() * cols;
-      surges.push({ x: at, w: big ? 14 + Math.random() * 8 : 6 + Math.random() * 4, amp: big ? 1.6 : 1.5 });
-      if (!big) surges.push({ x: at + (Math.random() - 0.5) * 10, w: 3, amp: 1.1 });
+      // A flare is a cluster of narrow tongues with dark gaps between them. One wide, strong surge maxed out a
+      // whole band of columns and drew a flat bright wall (it froze that way when a build finished on it).
+      const at = Math.random() * cols, n = big ? 5 : 3, spread = big ? 44 : 14;
+      for (let i = 0; i < n; i++) surges.push({ x: at + (i / (n - 1) - 0.5) * spread + (Math.random() - 0.5) * 4,
+        w: 0.8 + Math.random() * 1.0, amp: 0.45 + Math.random() * 0.45 });
       for (let i = 0; i < (big ? 45 : 28); i++) embers.push({ x: big ? Math.random() * cols : at + (Math.random() - 0.5) * 14, y: rows * (0.4 + Math.random() * 0.3),
         vx: (Math.random() - 0.5) * 0.9, vy: -(0.6 + Math.random() * 1.0), life: 1, decay: 0.02 + Math.random() * 0.035 });
     }
@@ -986,7 +995,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     return {
       bump(amount = 0.1) {
         const now = performance.now();
-        if (amount >= 0.45) { heat = Math.min(MAX, heat + 0.18); flare(true); lastFlare = now; }
+        // Several stages can finish in one poll: one big flare per gap, not a stack of them.
+        if (amount >= 0.45) { heat = Math.min(MAX, heat + 0.18); if (now - lastFlare > 1200) { flare(true); lastFlare = now; } }
         else if (amount >= 0.2 && now - lastFlare > FLARE_GAP) { heat = Math.min(MAX, heat + 0.06); flare(false); lastFlare = now; }
         else heat = Math.min(Math.max(heat, SMALL_MAX), heat + amount * 0.06);
       },
