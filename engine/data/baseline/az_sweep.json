@@ -1,0 +1,725 @@
+{
+ "pob_version": "0.23.1",
+ "results": {
+  "Infernalist build [high]": {
+   "prompt": "Infernalist build",
+   "budget": "high",
+   "read_as": [
+    "Ascendancy: Infernalist (Witch)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Infernalist",
+   "weapon": "Staff",
+   "fails": [
+    "SPIRIT OVERDRAWN at early: -80"
+   ],
+   "seconds": 843,
+   "stages": {
+    "leveling": {
+     "dps": 25250,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 164420,
+     "items": 10,
+     "uniques": [
+      "Atsak's Sight, Veiled Mask",
+      "The Coming Calamity, Heroic Armour"
+     ]
+    },
+    "mid": {
+     "dps": 1814916,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 7640898,
+     "items": 12,
+     "uniques": [
+      "Crown of the Victor, Iron Crown"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Heightened Curse, Chaos Mastery, Burning Inscription, Cursed Ground, Decaying Hex",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Demon Form + Helbrym's Hide, Second Wind III, Cooldown Recovery II, Uhtred's Rite"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Considered Casting",
+    "Deliberation",
+    "Dialla's Desire",
+    "Extraction"
+   ],
+   "total_dps": 7640898,
+   "boss_dps": 5450188,
+   "skills": 7,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Blood Mage build [high]": {
+   "prompt": "Blood Mage build",
+   "budget": "high",
+   "read_as": [
+    "Ascendancy: Blood Mage (Witch)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Blood Mage",
+   "weapon": "Staff",
+   "fails": [],
+   "seconds": 899,
+   "stages": {
+    "leveling": {
+     "dps": 15027,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 91291,
+     "items": 10,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "mid": {
+     "dps": 1262130,
+     "items": 12,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "end": {
+     "dps": 6788306,
+     "items": 12,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Heightened Curse, Burning Inscription, Cursed Ground, Decaying Hex, Hex Bloom",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Life Remnants + Remnant Potency III, Harmonic Remnants II, Selfless Remnants, Khatal's Rejuvenation, Magnetic Remnants"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Deliberation",
+    "Dialla's Desire",
+    "Extraction",
+    "Inexorable Critical I"
+   ],
+   "total_dps": 6788306,
+   "boss_dps": 5143521,
+   "skills": 7,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Lich build [high]": {
+   "prompt": "Lich build",
+   "budget": "high",
+   "read_as": [
+    "Ascendancy: Lich (Witch)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Lich",
+   "weapon": "Staff",
+   "fails": [],
+   "seconds": 1035,
+   "stages": {
+    "leveling": {
+     "dps": 13808,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 116909,
+     "items": 11,
+     "uniques": [
+      "The Unborn Lich, Ravenous Staff",
+      "Atsak's Sight, Veiled Mask"
+     ]
+    },
+    "mid": {
+     "dps": 1420389,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 6054814,
+     "items": 13,
+     "uniques": [
+      "Maligaro's Virtuosity, Fine Bracers",
+      "Gamblesprint, Embossed Boots"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Heightened Curse, Dialla's Desire, Burning Inscription, Cursed Ground, Decaying Hex",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Zarokh's Revolt, Expand"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Deliberation",
+    "Extraction",
+    "Inexorable Critical II",
+    "Pinpoint Critical"
+   ],
+   "total_dps": 6054814,
+   "boss_dps": 4636069,
+   "skills": 6,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Abyssal Lich build [high]": {
+   "prompt": "Abyssal Lich build",
+   "budget": "high",
+   "read_as": [
+    "Ascendancy: Lich (Witch)"
+   ],
+   "unused": [
+    "abyssal"
+   ],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Lich",
+   "weapon": "Staff",
+   "fails": [
+    "words not understood: ['abyssal']"
+   ],
+   "seconds": 990,
+   "stages": {
+    "leveling": {
+     "dps": 13808,
+     "items": 10,
+     "uniques": []
+    },
+    "early": {
+     "dps": 116909,
+     "items": 11,
+     "uniques": [
+      "The Unborn Lich, Ravenous Staff",
+      "Atsak's Sight, Veiled Mask"
+     ]
+    },
+    "mid": {
+     "dps": 1420389,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 6054814,
+     "items": 13,
+     "uniques": [
+      "Maligaro's Virtuosity, Fine Bracers",
+      "Gamblesprint, Embossed Boots"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Heightened Curse, Dialla's Desire, Burning Inscription, Cursed Ground, Decaying Hex",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Zarokh's Revolt, Expand"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Deliberation",
+    "Extraction",
+    "Inexorable Critical II",
+    "Pinpoint Critical"
+   ],
+   "total_dps": 6054814,
+   "boss_dps": 4636069,
+   "skills": 6,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Infernalist build": {
+   "prompt": "Infernalist build",
+   "read_as": [
+    "Ascendancy: Infernalist (Witch)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Infernalist",
+   "weapon": "Staff",
+   "fails": [
+    "slow: 45 minutes"
+   ],
+   "seconds": 2671,
+   "stages": {
+    "act1": {
+     "dps": 858,
+     "items": 9,
+     "uniques": [
+      "Greymake, Brimmed Helm",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act2": {
+     "dps": 2014,
+     "items": 9,
+     "uniques": [
+      "Goldrim, Felt Cap",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act34": {
+     "dps": 13199,
+     "items": 9,
+     "uniques": [
+      "Goldrim, Felt Cap",
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "interludes": {
+     "dps": 30694,
+     "items": 9,
+     "uniques": [
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "early": {
+     "dps": 317581,
+     "items": 10,
+     "uniques": []
+    },
+    "mid": {
+     "dps": 4736459,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 13303400,
+     "items": 14,
+     "uniques": [
+      "Mageblood, Utility Belt"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Decaying Hex, Heightened Curse, Dialla's Desire, Burning Inscription, Cursed Ground",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Zarokh's Revolt, Expand"
+   ],
+   "main_supports": [
+    "Considered Casting",
+    "Deliberation",
+    "Extraction",
+    "Magnified Area II",
+    "Poison II"
+   ],
+   "total_dps": 13303400,
+   "boss_dps": 10064659,
+   "skills": 7,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Lich build": {
+   "prompt": "Lich build",
+   "read_as": [
+    "Ascendancy: Lich (Witch)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Lich",
+   "weapon": "Staff",
+   "fails": [
+    "slow: 42 minutes"
+   ],
+   "seconds": 2532,
+   "stages": {
+    "act1": {
+     "dps": 738,
+     "items": 9,
+     "uniques": [
+      "Greymake, Brimmed Helm",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act2": {
+     "dps": 2341,
+     "items": 9,
+     "uniques": [
+      "Greymake, Brimmed Helm",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act34": {
+     "dps": 13178,
+     "items": 9,
+     "uniques": [
+      "Goldrim, Felt Cap",
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "interludes": {
+     "dps": 48559,
+     "items": 9,
+     "uniques": [
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "early": {
+     "dps": 162767,
+     "items": 10,
+     "uniques": []
+    },
+    "mid": {
+     "dps": 3314374,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 7320376,
+     "items": 13,
+     "uniques": [
+      "Mageblood, Utility Belt"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Dialla's Desire, Heightened Curse, Burning Inscription, Cursed Ground, Decaying Hex",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Zarokh's Revolt, Expand"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Considered Casting",
+    "Deliberation",
+    "Extraction",
+    "Magnified Area II"
+   ],
+   "total_dps": 7320376,
+   "boss_dps": 6896010,
+   "skills": 6,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Abyssal Lich build": {
+   "prompt": "Abyssal Lich build",
+   "read_as": [
+    "Ascendancy: Abyssal Lich (Witch)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Abyssal Lich",
+   "weapon": "Staff",
+   "fails": [
+    "slow: 41 minutes"
+   ],
+   "seconds": 2458,
+   "stages": {
+    "act1": {
+     "dps": 858,
+     "items": 9,
+     "uniques": [
+      "Greymake, Brimmed Helm",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act2": {
+     "dps": 1655,
+     "items": 9,
+     "uniques": [
+      "Goldrim, Felt Cap",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act34": {
+     "dps": 11158,
+     "items": 9,
+     "uniques": [
+      "Goldrim, Felt Cap",
+      "Perfidy, Knight Armour"
+     ]
+    },
+    "interludes": {
+     "dps": 34257,
+     "items": 9,
+     "uniques": [
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "early": {
+     "dps": 109746,
+     "items": 10,
+     "uniques": []
+    },
+    "mid": {
+     "dps": 2128720,
+     "items": 12,
+     "uniques": []
+    },
+    "end": {
+     "dps": 5774584,
+     "items": 13,
+     "uniques": [
+      "Mageblood, Utility Belt"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Heightened Curse, Dialla's Desire, Burning Inscription, Cursed Ground, Decaying Hex",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Zarokh's Revolt, Expand"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Considered Casting",
+    "Deliberation",
+    "Extraction",
+    "Magnified Area II"
+   ],
+   "total_dps": 5774584,
+   "boss_dps": 5417611,
+   "skills": 6,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Deadeye build": {
+   "prompt": "Deadeye build",
+   "read_as": [
+    "Ascendancy: Deadeye (Ranger)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Deadeye",
+   "weapon": "Staff",
+   "fails": [
+    "slow: 42 minutes"
+   ],
+   "seconds": 2501,
+   "stages": {
+    "act1": {
+     "dps": 258,
+     "items": 9,
+     "uniques": [
+      "Mask of the Sanguimancer, Face Mask",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act2": {
+     "dps": 930,
+     "items": 9,
+     "uniques": [
+      "Dusk Vigil, Ashen Staff",
+      "Erian's Cobble, Guarded Helm"
+     ]
+    },
+    "act34": {
+     "dps": 3978,
+     "items": 9,
+     "uniques": [
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "interludes": {
+     "dps": 36572,
+     "items": 9,
+     "uniques": [
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "early": {
+     "dps": 198089,
+     "items": 11,
+     "uniques": []
+    },
+    "mid": {
+     "dps": 2855234,
+     "items": 14,
+     "uniques": []
+    },
+    "end": {
+     "dps": 7116667,
+     "items": 12,
+     "uniques": [
+      "Mageblood, Utility Belt"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Dialla's Desire, Heightened Curse, Burning Inscription, Cursed Ground, Decaying Hex",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Zarokh's Revolt, Expand"
+   ],
+   "main_supports": [
+    "Considered Casting",
+    "Deliberation",
+    "Extraction",
+    "Inexorable Critical I",
+    "Magnified Area II"
+   ],
+   "total_dps": 7116667,
+   "boss_dps": 6753267,
+   "skills": 6,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  },
+  "Pathfinder build": {
+   "prompt": "Pathfinder build",
+   "read_as": [
+    "Ascendancy: Pathfinder (Ranger)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Hexblast",
+   "ascendancy": "Pathfinder",
+   "weapon": "Staff",
+   "fails": [
+    "slow: 42 minutes"
+   ],
+   "seconds": 2497,
+   "stages": {
+    "act1": {
+     "dps": 258,
+     "items": 9,
+     "uniques": [
+      "Mask of the Sanguimancer, Face Mask",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act2": {
+     "dps": 843,
+     "items": 9,
+     "uniques": [
+      "Dusk Vigil, Ashen Staff",
+      "Erian's Cobble, Guarded Helm"
+     ]
+    },
+    "act34": {
+     "dps": 7246,
+     "items": 9,
+     "uniques": [
+      "Goldrim, Felt Cap",
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "interludes": {
+     "dps": 40199,
+     "items": 9,
+     "uniques": [
+      "Starkonja's Head, Leatherbound Hood",
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "early": {
+     "dps": 282893,
+     "items": 12,
+     "uniques": [
+      "Starkonja's Head, Leatherbound Hood",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
+    "mid": {
+     "dps": 3997833,
+     "items": 14,
+     "uniques": [
+      "Maligaro's Virtuosity, Fine Bracers",
+      "Kalandra's Touch, Ring"
+     ]
+    },
+    "end": {
+     "dps": 5168362,
+     "items": 13,
+     "uniques": [
+      "Hyrri's Ire, Armoured Vest",
+      "Kalandra's Touch, Ring",
+      "Mageblood, Utility Belt"
+     ]
+    }
+   },
+   "setups": [
+    "Archmage + Lightning Mastery, Atziri's Communion, Healing Runes, Her Declaration, Seraph's Heart",
+    "Despair + Heightened Curse, Burning Inscription, Cursed Ground, Decaying Hex, Hex Bloom",
+    "Sniper's Mark + Uhtred's Exodus",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Zarokh's Revolt, Expand"
+   ],
+   "main_supports": [
+    "Chaos Mastery",
+    "Deliberation",
+    "Dialla's Desire",
+    "Extraction",
+    "Magnified Area II"
+   ],
+   "total_dps": 5168362,
+   "boss_dps": 5070864,
+   "skills": 6,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [],
+   "focus": {},
+   "off_theme": []
+  }
+ },
+ "updated": "2026-11-18 11:37",
+ "timeouts": {
+  "2": {
+   "limit_seconds": 2700,
+   "at": "2026-11-18 09:50"
+  },
+  "7": {
+   "limit_seconds": 2700,
+   "at": "2026-11-18 13:22"
+  },
+  "8": {
+   "limit_seconds": 2700,
+   "at": "2026-11-18 14:07"
+  },
+  "9": {
+   "limit_seconds": 2700,
+   "at": "2026-11-18 14:52"
+  }
+ }
+}
