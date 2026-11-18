@@ -1,3 +1,9 @@
+> **Where we stopped (2026-11-18, end of the long PC session):** Whetstone runs on the Contabo server; the PC is only
+> for heavy batch jobs. The "Whetstone server" session (bypass mode, kept going by ~/routines/keepalive.sh) works
+> through NIGHT_TASKS.md; the Lodestone (Breaker) queue runs engine-only scans from ~/breaker; nightly A-to-Z sweeps
+> at 10 pm Mazatlan; 8 am report to Kyle's phone. Kyle is away ~10 days (phone + laptop). Next big items: the
+> NIGHT_TASKS list, then BREAKER_ROADMAP.md weeks 2-3. Public name of the Breaker: Lodestone.
+
 > **Moving to a Contabo server (2026-11-17):** see `SERVER_MOVE.md` for the steps and the open work.
 
 # Go-public plan (current)
