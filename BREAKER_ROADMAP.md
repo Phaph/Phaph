@@ -38,3 +38,10 @@ What it can find, once fully built:
 - In-game tests: Kyle tests promising leads on his Standard character; requests go in `TESTS.md` with the PoB code,
   what to buy, what to do, and what confirms or kills the lead.
 - Usage: Kyle is on Pro. If the build-out weeks hit the limit, upgrading to Max for 1.0 month is his call.
+
+## Progress
+- 2026-11-18: research done (`research/broken_builds.md`: 10 groups of why builds broke). Text scanner built
+  (`engine/text_scan.py`, risky wording, `diff` for patch day). Condition scan built (`engine/condition_scan.py`):
+  rediscovered Lightning Conduit + Shock (a 0.1 broken build) blind, found the Armour Broken combo family. One-command
+  patch-day run built (`engine/tools/breaker_day.sh`). Hexblast scoring fixed (usage limits). Still to do in week 1:
+  blind test against poe.ninja's top builds. Week 2 starts with the combo finder's scoring (setup + payoff).
