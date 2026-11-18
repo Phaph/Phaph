@@ -105,3 +105,17 @@ Gold (+45% rarity): rarity is weighted low (goals.weights: +15% rarity ~ +6% dam
 is ticked, the guide adds a swap line instead, e.g. "Hunting for loot? Legacy of Gold (+45% rarity) can replace
 Stibnite: -X% toughness" (Faster mapping -> Quicksilver), with the real cost measured in PoB. Do it with the
 average-roll fix.
+
+## A-to-Z sweep 2026-11-18 (PC, Hexblast + class weapons fixes): what to fix
+22 of 23 ascendancies built (Gemling Legionnaire timed out at 45 min). Classes now keep to their weapons (Hexblast is
+gone). None pass every check:
+1. **Spirit overdrawn at Uber Endgame on 17 of 22** (-80 to -120). A regression: the spirit safety net doesn't hold at
+   the new "end" stage. Highest priority for Whetstone.
+2. **Attribute shortfalls on 6** (e.g. Int 43 of 45 for Loreweave + Ornate Ringmail at Interludes; Int 31 of 40 for
+   support gems in Act 1).
+3. **Detonate Dead wins on 4 (Blood Mage, Lich, Oracle, Shaman)**: needs the corpse usage limit (no corpses on bosses).
+4. **Huntress (Amazon, Spirit Walker, Ritualist) picks Rain of Arrows with a bow**, its "close" weapon, over a spear.
+   Kyle to decide: is that fine, or should a class's intended weapon win unless the close one is clearly stronger?
+5. **Every build takes 24-36 min** on the PC (slow check everywhere): find the slowest steps.
+6. Gemling Legionnaire timed out: find where it spends 45+ minutes (the mace exception widens its search).
+Results: engine/data/baseline/az_sweep.json (`python engine/tools/az_merge.py` prints the table).
