@@ -1,0 +1,48 @@
+166 skills scanned; 957 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +  100% (+100% above usual)  Dark Effigy                  when enemy is Poisoned
+  +   49% (+49% above usual)  Detonate Living              when enemy is ArmourBroken
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is OnShockedGround
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is Shocked
+  +   45% (+45% above usual)  Unearth                      when enemy is ArmourBroken
+  +   41% (+41% above usual)  Wolf Pack                    when enemy is ArmourBroken
+  +   36% (+36% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   34% (+34% above usual)  Rake                         when enemy is Moving
+  +   33% (+33% above usual)  Skeletal Reaver              when enemy is ArmourBroken
+  +   32% (+32% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   31% (+31% above usual)  Twister                      when enemy is ArmourBroken
+  +   31% (+31% above usual)  Seismic Cry                  when enemy is ArmourBroken
+  +   30% (+30% above usual)  Entangle                     when enemy is ArmourBroken
+  +   29% (+29% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   28% (+28% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   28% (+28% above usual)  Bonestorm                    when enemy is ArmourBroken
+  +   28% (+28% above usual)  Thrashing Vines              when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rend                         when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rampage                      when enemy is ArmourBroken
+  +   26% (+26% above usual)  Flicker Strike               when enemy is ArmourBroken
+  +   25% (+25% above usual)  Coiling Bolts                when enemy is ArmourBroken
+  +   24% (+24% above usual)  Oil Grenade                  when enemy is Moving
+  +   23% (+23% above usual)  Bone Cage                    when enemy is ArmourBroken
+  +   23% (+23% above usual)  Disengage                    when enemy is ArmourBroken
+  +   23% (+23% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround            155 skills, best: Lightning Conduit +68%, Arc +30%, Plasma Blast +30%
+  Shocked                    155 skills, best: Lightning Conduit +68%, Arc +30%, Plasma Blast +30%
+  Intimidated                155 skills, best: Arc +10%, Ball Lightning +10%, Artillery Ballista +10%
+  CriticalWeakness           153 skills, best: Rake +24%, Hexblast +23%, Bonestorm +22%
+  CoveredInAsh               104 skills, best: Cackling Companions +20%, Ember Fusillade +20%, Firestorm +20%
+  OnProfaneGround             81 skills, best: Bone Cage +16%, Detonate Living +16%, Bonestorm +14%
+  Unnerved                    47 skills, best: Arc +10%, Ball Lightning +10%, Bone Cage +10%
+  ArmourBroken                39 skills, best: Detonate Living +49%, Unearth +45%, Wolf Pack +41%
+  Crushed                     35 skills, best: Detonate Dead +15%, Bone Cage +15%, Coiling Bolts +15%
+  CoveredInFrost              15 skills, best: Comet +20%, Frost Bomb +20%, Frost Darts +20%
+  Moving                      12 skills, best: Rake +34%, Oil Grenade +24%, Flash Grenade +23%
+  Electrocuted                 1 skills, best: Siege Cascade +101%
+  Frozen                       1 skills, best: Siege Cascade +101%
+  HeavyStunned                 1 skills, best: Siege Cascade +101%
+  Immobilised                  1 skills, best: Siege Cascade +101%
