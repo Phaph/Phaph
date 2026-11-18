@@ -188,3 +188,44 @@ from payoffs that gain far more than usual).
   through this condition; those need text-based pairing and our own estimate.
 Next: combo finder step 2 (pair each payoff with skills that apply its condition, score setup time + uptime), then
 plug into Whetstone (combo mode, boss/mapping picks) and run it on patch day.
+
+### Combo finder step 2: setup + payoff scoring, Armour Broken (2026-11-18)
+`engine/combo_scan.py run | report` (data/breaker/combos.json). PoB only ticks "Is the enemy Armour Broken?" (armour 0,
++20% physical damage taken from hits); it never works out how long breaking takes, and it records "X% of physical
+damage dealt as Armour Break" (the Armour Break supports, some skills) as a flag with no amount. New runner command
+`armour_break` reads the amounts (each such stat now also feeds a stat of our own) plus flat break per hit, Armour
+Demolisher's more, hit damage per type, uses per second and the boss's armour (pinnacle: 8,063).
+Scoring, our own estimate: time to Fully Break T = boss armour / (break per hit x hits per second); Fully Broken lasts
+12 s; one cycle = T s of the setup skill, then 12 s of the payoff; +1 s per cycle when the setup needs weapon set 2.
+**Edge** = combo DPS / the better of the two skills alone - 1: a combo only counts if it beats both (otherwise a slow
+"setup" whose own damage carries it is just the stronger skill). Each skill is tried as a setup with Armour Break III +
+Armour Demolisher II in place of its weakest supports, and as its own setup ("itself").
+First run, 166 skills on round-1 builds (no tree), vs pinnacle boss: 104 can break armour, 30 payoffs (+10%+).
+- Fastest breakers: Armour Breaker 0.4 s, Armour Piercing Rounds 0.4 s, Flicker Strike 0.6 s, Bonestorm 0.7 s,
+  Bone Cage 0.9 s, Coiling Bolts 1.3 s (Detonate Dead 0.3 s, but it needs corpses a boss doesn't leave).
+- Best combos: Armour Piercing Rounds or Armour Breaker breaking for themselves +41-42% (94-95% uptime);
+  Bonestorm <-> Coiling Bolts +20-23% (same weapon); Flicker Strike + Armour Piercing Rounds on set 2 +20%;
+  Thrashing Vines / Rend / Rampage / Entangle + Armour Breaker on set 2 +12-21%.
+- **No Breaker lead here.** Armour Broken is a solid +20-45% payoff family, not a multiplier: the best combos land
+  just under PoB's "always broken" number, as they should.
+- Payoffs with no fast setup lose most of their PoB gain: Unearth +45% "always" -> +16% real (7 s to break),
+  Twister +31% -> +9%, Whirling Slash +36% -> +3%. **Engine follow-up:** `auto_config` ticks Armour Broken only for flat
+  break on hit and assumes 100% uptime; it ignores the Armour Break supports. It should use this uptime estimate.
+- Not modelled yet: partial break before Fully Broken (helps every combo a little), hits per use beyond 1, minion
+  setups, mapping (bossing only so far). Time to break needs an in-game check (one Armour Breaker hit on a pinnacle).
+Next: the same scoring for the other payoff families from the condition scan (Shocked / Electrocuted / Frozen /
+Poisoned / Immobilised: Siege Cascade, Dark Effigy, Lightning Conduit), then mapping combos.
+
+### Blind test (2026-11-18, built, not run yet)
+`engine/tools/blind_test.py run | report`: the search once per ascendancy ("<Ascendancy> build", off-meta off, no
+head starts, so nothing from poe.ninja reaches it), top 15 kept, compared with the ladder: how many of poe.ninja's 20
+most played main skills land in some ascendancy's top 5; Spearman of our best score per ascendancy vs its share of
+players; skills we rank top 3 that under 1% play (leads or modelling bugs). Trial on Infernalist: **50 min on 3
+cores** (server busy), picks Detonate Dead, Ember Fusillade, ...; Comet (14.6% of the ladder) ranks 4th. All 23
+ascendancies is ~19 h on the server's 3 spare cores, a few hours on the PC: run it there
+(`python tools/blind_test.py run --workers 6`). Detonate Dead winning again is the known suspect (needs corpses a
+boss doesn't leave; next candidate for a usage limit) and will skew the test until it has one.
+**poe.ninja changed its API (seen 2026-11-18):** `data/index-state` no longer lists snapshot versions, so
+`tools/fetch_meta.py` fails, and the builds page now shows a Cloudflare check to the server. The test uses
+data/meta_usage.json (Nov 17, overall shares only). Per-ascendancy truth (data/meta_pairs.json, {ascendancy: {skill:
+share}}) needs the new endpoint, found from the PC's browser.

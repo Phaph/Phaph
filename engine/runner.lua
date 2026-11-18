@@ -181,6 +181,53 @@ end
 
 local handlers = {}
 
+-- Armour Break amounts. PoB turns "Break Armour equal to X% of Physical damage dealt" into a flag only (the enemy can
+-- be Armour Broken), never into an amount, so it can't tell how long breaking a boss takes. The combo finder needs that
+-- time: each such stat also adds its value to a stat of our own, read back by handlers.armour_break.
+local AB_PCT_STATS = {
+	["armour_break_physical_damage_%_dealt_as_armour_break"] = "WsArmourBreakPhysPct",
+	["armour_break_damage_%_dealt_as_armour_break"] = "WsArmourBreakAllPct",
+	["chaos_damage_%_dealt_as_armour_break"] = "WsArmourBreakChaosPct",
+	["armour_break_fire_damage_%_dealt_as_armour_break"] = "WsArmourBreakFirePct",
+	["crushed_target_%_physical_damage_taken_as_armour_break"] = "WsArmourBreakCrushedPct",
+	["armour_break_for_%_of_poison_damage_over_poison_duration"] = "WsArmourBreakPoisonPct",
+}
+for stat, name in pairs(AB_PCT_STATS) do
+	local map = data.skillStatMap[stat]
+	if map then table.insert(map, { name = name, type = "BASE", value = nil, flags = 0, keywordFlags = 0 }) end
+end
+
+-- How the main skill breaks armour: flat break per hit, the "% of damage dealt as Armour Break" stats, the hit damage
+-- they apply to, hits per second, and the enemy's armour before any break (what has to be broken to reach Fully Broken).
+function handlers.armour_break(cmd)
+	build.buildFlag = true
+	frame()
+	local env = build.calcsTab.mainEnv
+	local out = build.calcsTab.mainOutput
+	local skill = env and env.player and env.player.mainSkill
+	if not skill then return { can = false } end
+	local ml, cfg = skill.skillModList, skill.skillCfg
+	local res = { can = ml:Flag(cfg, "Condition:CanArmourBreak") or env.modDB:Flag(nil, "Condition:CanArmourBreak") or false,
+		cannot = ml:Flag(cfg, "CannotArmourBreak") or false,
+		flat = out.ArmourBreakPerHit or 0, inc = ml:Sum("INC", cfg, "ArmourBreakPerHit"), pct = {} }
+	for _, name in pairs(AB_PCT_STATS) do
+		local v = ml:Sum("BASE", cfg, name)
+		if v ~= 0 then res.pct[name] = v end
+	end
+	-- Attacks keep per-type hit damage on the hand that hits (main hand first); spells on the output itself.
+	local hand = (out.MainHand and out.MainHand.PhysicalHitAverage) and out.MainHand or out
+	for _, t in ipairs({ "Physical", "Fire", "Cold", "Lightning", "Chaos" }) do
+		res[t .. "HitAverage"] = hand[t .. "HitAverage"] or out[t .. "HitAverage"] or 0
+	end
+	res.more = ml:More(cfg, "ArmourBreakEffect")   -- Armour Demolisher's "more Armour Break"
+	res.speed = out.Speed or 0
+	res.hit_speed = out.HitSpeed or 0
+	res.hits_per_use = (out.HitSpeed and out.Speed and out.Speed > 0) and out.HitSpeed / out.Speed or 1
+	res.enemy_armour = env.enemyDB:Sum("BASE", nil, "Armour") * calcLib.mod(env.enemyDB, nil, "Armour")
+	res.enemy_armour_config = env.enemyDB:Sum("BASE", { source = "Config" }, "Armour")
+	return res
+end
+
 function handlers.new(cmd)
 	newBuild()
 	return {}
