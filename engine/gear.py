@@ -20,7 +20,8 @@ ARMOUR_SLOTS = {"Helmet": "Helmet", "Body Armour": "Body Armour", "Gloves": "Glo
 JEWELLERY_SLOTS = {"Amulet": "Amulet", "Ring 1": "Ring", "Ring 2": "Ring", "Belt": "Belt"}
 RES_CAP = 75
 SCORE_FIELDS = [*DPS_FIELDS, "TotalEHP", "Life", "FireResist", "ColdResist", "LightningResist",
-                "ChaosResist", *CLEAR_FIELDS, *GOAL_FIELDS, "Str", "Dex", "Int", "ReqStr", "ReqDex", "ReqInt"]
+                "ChaosResist", *CLEAR_FIELDS, *GOAL_FIELDS, "Str", "Dex", "Int", "ReqStr", "ReqDex", "ReqInt",
+                "SpiritUnreserved"]
 # Affix groups that never matter for a build score.
 SKIP_GROUPS = {"ItemFoundRarityIncrease", "LocalAttributeRequirements", "LightRadius", "LocalLightRadius"}
 
@@ -122,6 +123,17 @@ def _res_deficit(out: dict) -> float:
         + 0.5 * max(0, -out.get("ChaosResist", 0))
 
 
+def _spirit_deficit(out: dict) -> float:
+    """Spirit reserved beyond what the character has. An item that grants spirit skills (The Coming Calamity's three
+    heralds) or takes spirit away can leave the build reserving more than it has: PoB still counts those skills'
+    damage, but in game they can't all run."""
+    return max(0.0, -(out.get("SpiritUnreserved") or 0))
+
+
+# Per spirit point overdrawn: 110 points short costs like -220% damage, more than any item gains.
+SPIRIT_WEIGHT = 0.02
+
+
 class Scorer:
     def __init__(self, def_weight: float = 0.4, res_weight: float = 0.006, mode: str = "bossing",
                  metric: str | None = None, goals=None, attr_weight: float | None = None):
@@ -147,6 +159,7 @@ class Scorer:
                 + self.def_weight * ((out.get("TotalEHP") or 0) - e0) / e0
                 + self.res_weight * (_res_deficit(base) - _res_deficit(out))
                 + self.attr_weight * (_attr_deficit(base) - _attr_deficit(out))
+                + SPIRIT_WEIGHT * (_spirit_deficit(base) - _spirit_deficit(out))
                 + goal_terms(out, base, self.goal_w))
 
 

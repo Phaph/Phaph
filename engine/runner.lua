@@ -611,6 +611,46 @@ function handlers.try_skill(cmd)
 	return { output = result, supported = supported, main_skill = mainSkillName(), warnings = warnings() }
 end
 
+-- Spirit safety net for skills the optimisers didn't add: an item can grant spirit skills (The Coming Calamity grants
+-- three heralds) and PoB turns them on, so a build can end up reserving more spirit than it has. Turn such groups off,
+-- item-granted ones first, then the latest added, until the spirit fits. The main group is never touched.
+-- Returns the names turned off.
+function handlers.fit_spirit(cmd)
+	local list = build.skillsTab.socketGroupList
+	local function left()
+		build.buildFlag = true
+		frame()
+		return build.calcsTab.mainOutput.SpiritUnreserved or 0
+	end
+	local off = {}
+	if left() >= 0 then return { off = off } end
+	local order = {}
+	for i = #list, 1, -1 do
+		local g = list[i]
+		if i ~= build.mainSocketGroup and g.enabled ~= false and g.source then table.insert(order, i) end
+	end
+	for i = #list, 1, -1 do
+		local g = list[i]
+		if i ~= build.mainSocketGroup and g.enabled ~= false and not g.source then table.insert(order, i) end
+	end
+	local before = left()
+	for _, i in ipairs(order) do
+		local g = list[i]
+		g.enabled = false
+		local now = left()
+		if now > before then
+			local gem = g.gemList[1]
+			table.insert(off, (gem and (gem.nameSpec ~= "" and gem.nameSpec or gem.skillId)) or g.label or "?")
+			before = now
+			if now >= 0 then break end
+		else
+			g.enabled = true   -- reserved no spirit: leave it on
+		end
+	end
+	left()
+	return { off = off, left = before }
+end
+
 function handlers.remove_skill(cmd)
 	table.remove(build.skillsTab.socketGroupList, cmd.group)
 	build.mainSocketGroup = math.min(build.mainSocketGroup, math.max(1, #build.skillsTab.socketGroupList))

@@ -22,8 +22,12 @@ steer from the Claude app (Remote Control).
 
 ## Tasks
 ### Whetstone (from the 2026-11-18 A-to-Z sweep, PC_TODO.md)
-1. [ ] Spirit overdrawn at Uber Endgame on 17 of 22 sweep builds (-80 to -120): find why the safety net misses the
+1. [x] Spirit overdrawn at Uber Endgame on 17 of 22 sweep builds (-80 to -120): find why the safety net misses the
    "end" stage and fix. Test on 3 ascendancies.
+   Done 2026-11-19: Uber uniques that grant spirit skills (The Coming Calamity: 3 heralds) overdrew spirit; the safety
+   net only knew optimiser-picked buffs. Gear scoring now punishes overdrawn spirit, kit_out trims supports on spirit
+   skills instead of overdrawing, and a new runner `fit_spirit` turns off what still doesn't fit (after gear and at the
+   end). Deadeye/Amazon/Lich/Stormweaver end + Titan act2: all fit now (+10 to +100 left).
 2. [ ] Attribute shortfalls (Int 43 of 45 for Loreweave + Ornate Ringmail at Interludes; Int 31 of 40 for support gems
    in Act 1): the gear/support picks must meet requirements at each stage.
 3. [ ] Usage limit for Detonate Dead (needs a corpse each cast; bosses leave none) in runner.lua USAGE_LIMITS, like

@@ -313,6 +313,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 if name in spare:
                     spare.remove(name)
                 dropped_spirit.append(name)
+        # Skills the gear grants (a unique's heralds) aren't in that list: turn them off too if still short.
+        dropped_spirit += pob.send("fit_spirit").get("off") or []
         # Each socket's jewel for real, now the tree, gems and gear are settled.
         jewels = [] if light else craft_jewels(pob, stage, jewel_score, log=quiet)
         add_trade_info(pob, gear + jewels)
@@ -376,6 +378,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # Every gem is in now: balance attributes once more; if that isn't enough, use lower-level extra gems; and say
         # plainly if anything is still short.
         fit = pob.send("fit_gems")
+        # Last spirit check, after every support is in (a support on a spirit skill raises what it reserves).
+        for name in pob.send("fit_spirit").get("off") or []:
+            if name not in dropped_spirit:
+                dropped_spirit.append(name)
         short = fit.get("short") or {}
         lowered = fit.get("lowered") or {}
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
@@ -422,7 +428,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 f"{', '.join(weapon_sets['set2_only'][:6]) or 'its own passives'} instead of "
                 f"{', '.join(weapon_sets['set1_only'][:6])} (those stay on set 1): {weapon_sets['gain']:+.0%} boss damage.")
         for name in dropped_spirit:
-            guide.notes.append(f"{name} was left out: the gear at this stage doesn't give enough spirit for it.")
+            guide.notes.append(f"{name} is turned off: the gear at this stage doesn't give enough spirit for it.")
         for name in spare:
             guide.notes.append(f"{name} uses spare spirit for defence. Path of Building doesn't count what it does, so "
                                f"it isn't in the numbers.")
@@ -479,6 +485,14 @@ def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], m
             chosen = res[0].supports if res else []
         except (PoBError, ValueError):
             chosen = []
+        # A support on a spirit skill raises what it reserves: drop supports (last chosen first) until spirit fits,
+        # rather than lose the skill itself later.
+        if chosen and (pob.calc(["SpiritUnreserved"]).get("SpiritUnreserved") or 0) < 0:
+            while chosen:
+                chosen = chosen[:-1]
+                res = pob.try_skill(gid, [name, *chosen], ["SpiritUnreserved"], keep_main=True)
+                if (res["output"].get("SpiritUnreserved") or 0) >= 0:
+                    break
         chosen = fit_supports(pob, gid, name, chosen, slots, keep_main=True)
         setups.append({"skill": name, "role": role, "supports": chosen})
     for name in movement:
