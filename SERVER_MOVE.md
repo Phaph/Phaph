@@ -1,5 +1,23 @@
 # Moving Whetstone to the Contabo server (started 2026-11-17)
 
+## Status: DONE on 2026-11-18 (about 1 am)
+- Server: Contabo Cloud VPS 8, Seattle, IP 62.146.170.249, host name vmi3765843. SSH as `ubuntu` with a key only
+  (password and root login off, ufw allows SSH only, fail2ban, unattended-upgrades). From the PC: `ssh whetstone`.
+- Code at `/home/ubuntu/phaph` (this branch). Pushes to GitHub with the repo deploy key `whetstone-server`.
+- Live: engine + tunnel run on the server (`docker compose` in ~/phaph; `.env` there, mode 600). 104 saved builds
+  moved over. The PC's engine and tunnel are STOPPED; never run both tunnels at once.
+- Workers for 8 cores: JOB_WORKERS=2, GENERATE_WORKERS=6, APP_CPUS=7. A full search took ~20 min (slower cores than
+  the PC).
+- Claude Code on the server, signed in to Kyle's Pro plan. Always-on session "Whetstone server" in tmux
+  (`tmux attach -t whetstone`) with Remote Control on: Kyle uses it from the phone and laptop. It does not restart
+  on reboot yet (to do: start it from a systemd unit).
+- Memory notes copied to ~/.claude/projects/-home-ubuntu-phaph/memory. ntfy topic in .env (NTFY_TOPIC).
+
+## Still to do
+- Make the tmux Claude session (with /remote-control) start by itself after a reboot.
+- Nightly routine: Breaker scans overnight, 1-2 Claude check-ins, a morning report to ntfy (only after 30 min of no
+  messages from Kyle). Testing and reports only; nothing goes live without Kyle.
+
 Kyle is ordering a Contabo Cloud VPS 8 (8 cores, 24 GB RAM, NVMe, Ubuntu 24.04, monthly term). It replaces the PC as
 the always-on home of the engine, and replaces the laptop kit plan. The website stays on Cloudflare Pages; code stays
 on GitHub (this branch).
@@ -7,7 +25,7 @@ on GitHub (this branch).
 ## What goes where
 | Thing | Where it lives after the move |
 |---|---|
-| Code | GitHub, cloned on the server at `/opt/phaph` |
+| Code | GitHub, cloned on the server at `/home/ubuntu/phaph` |
 | Website | Cloudflare Pages (push to deploy), unchanged |
 | Engine + PoB + build database (`jobs.sqlite3`) | Docker on the server, volume `phaph_jobs` |
 | Tunnel (api.phaphofbuilding.com) | `phaph-tunnel-1` on the server, same token, so the PC's tunnel must be stopped |
