@@ -1,3 +1,5 @@
+> **Moving to a Contabo server (2026-11-17):** see `SERVER_MOVE.md` for the steps and the open work.
+
 # Go-public plan (current)
 
 Cheapest path: picker form (no Claude API at launch), hosted on Kyle's PC with a free Cloudflare Tunnel, Hetzner later.
