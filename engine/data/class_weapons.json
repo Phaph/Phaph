@@ -1,5 +1,5 @@
 {
-  "about": "The weapons each class is meant to use (Kyle, 2026-11-18). Without Off-meta, a build only uses these (main hand and weapon set 2) unless the player picked a weapon or named a skill that needs another. 'Staff' is a caster staff, 'Quarterstaff' an attack staff (PoB: Staff / Warstaff). 'ascendancies' adds weapons for one ascendancy only. Edit freely.",
+  "about": "The weapons each class is meant to use (Kyle, 2026-11-18). Without Off-meta, the main weapon is one of 'intended' (Kyle: most people want to play spear with Huntress); 'close' weapons are for weapon set 2 and boss skills, or the main hand only when nothing intended makes a build unless the player picked a weapon or named a skill that needs another. 'Staff' is a caster staff, 'Quarterstaff' an attack staff (PoB: Staff / Warstaff). 'ascendancies' adds weapons for one ascendancy only. Edit freely.",
   "classes": {
     "Warrior":   {"intended": ["One Hand Mace", "Two Hand Mace"], "close": ["One Hand Axe", "Two Hand Axe", "One Hand Sword", "Two Hand Sword"]},
     "Ranger":    {"intended": ["Bow"], "close": ["Spear"]},

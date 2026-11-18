@@ -258,14 +258,16 @@ def class_locked(req: dict) -> bool:
     return not (req.get("off_meta") or req.get("weapons") or req.get("_class_unlocked"))
 
 
-def allowed_weapons(cls: str | None, asc: str | None = None) -> set[str] | None:
-    """The weapons a class (and ascendancy) may use, or None when the class has no rule. With no ascendancy given,
-    every ascendancy's extras count, so a Mercenary search keeps maces in play for the Gemling Legionnaire."""
+def allowed_weapons(cls: str | None, asc: str | None = None, close: bool = True) -> set[str] | None:
+    """The weapons a class (and ascendancy) may use, or None when the class has no rule. close=False: the main weapon,
+    which is the class's intended weapon (Kyle, 2026-11-18: "most people want to play spear with Huntress"); close
+    weapons are for weapon set 2 and boss skills, or the main hand only when nothing intended makes a build.
+    With no ascendancy given, every ascendancy's extras count (a Mercenary search keeps maces for the Gemling)."""
     t = class_weapons()
     c = t["classes"].get(cls or "")
     if not c:
         return None
-    ok = set(c.get("intended") or []) | set(c.get("close") or [])
+    ok = set(c.get("intended") or []) | (set(c.get("close") or []) if close else set())
     extras = t.get("ascendancies") or {}
     if asc:
         ok |= set((extras.get(asc) or {}).get("extra") or [])
@@ -275,10 +277,13 @@ def allowed_weapons(cls: str | None, asc: str | None = None) -> set[str] | None:
     return ok
 
 
-def weapon_ok(req: dict, cls: str | None, asc: str | None, wtype: str | None, wsub: str | None) -> bool:
+def weapon_ok(req: dict, cls: str | None, asc: str | None, wtype: str | None, wsub: str | None,
+              second: bool = False) -> bool:
+    """second: weapon set 2 / a boss or clear skill, which may also use the class's close weapons. The main weapon
+    may only when req["_class_close"] is set (nothing on the intended weapons made a build, or a named skill needs it)."""
     if not class_locked(req):
         return True
-    ok = allowed_weapons(cls, asc)
+    ok = allowed_weapons(cls, asc, close=second or bool(req.get("_class_close")))
     return ok is None or weapon_key(wtype, wsub) in ok
 
 
@@ -603,8 +608,12 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     if req.get("skill") and class_locked(req) and base_class:
         # The player named a skill: if none of the class's weapons can use it, it gets its own weapon anyway.
         named = next((s for s in skills if s["name"] == req["skill"]), None)
-        if named and not any(weapon_ok(req, base_class, None, w, ws) for w, ws, _ in weapon_options(named, req)):
-            req = {**req, "_class_unlocked": True}
+        opts = weapon_options(named, req) if named else []
+        if named and not any(weapon_ok(req, base_class, None, w, ws) for w, ws, _ in opts):
+            if any(weapon_ok(req, base_class, None, w, ws, second=True) for w, ws, _ in opts):
+                req = {**req, "_class_close": True}    # the skill needs one of the class's close weapons
+            else:
+                req = {**req, "_class_unlocked": True}
             log(f"{req['skill']} needs a weapon {base_class} doesn't usually use: allowed because it was asked for")
     if req.get("random"):
         return _random_search(req, pool, skills, ascs, stage, log, progress, t0)
@@ -625,6 +634,9 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     off_meta_best = None
     if class_locked(req):
         kept = [c for c in ok1 if any(weapon_ok(req, cl, a, c.weapon_type, c.weapon_subtype) for cl, a in ascs)]
+        if not kept:   # nothing on the intended weapons: allow the close ones as the main weapon
+            req = {**req, "_class_close": True}
+            kept = [c for c in ok1 if any(weapon_ok(req, cl, a, c.weapon_type, c.weapon_subtype) for cl, a in ascs)]
         if kept and ok1 and ok1[0] not in kept and ok1[0].score > kept[0].score * 1.1:
             off_meta_best = {"skill": ok1[0].skill, "weapon": weapon_key(ok1[0].weapon_type, ok1[0].weapon_subtype),
                              "gain": round(ok1[0].score / kept[0].score - 1, 2)}
@@ -771,7 +783,8 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
             pool1 += [c for c in extra if not c.error and c.score > 0]
     pool1 = [c for c in pool1 if c.skill not in have]
     if not second:
-        pool1 = [c for c in pool1 if weapon_ok(req, best.cls, best.ascendancy, c.weapon_type, c.weapon_subtype)]
+        pool1 = [c for c in pool1 if weapon_ok(req, best.cls, best.ascendancy, c.weapon_type, c.weapon_subtype,
+                                               second=True)]
     picks: dict[str, Candidate] = {f"{c.skill}@{c.weapon_type}": c for c in picks_second}
     for c in sorted(pool1, key=lambda c: -(c.boss or c.dps)):   # single target: any weapon (set 2 if it differs)
         if len(picks) >= ROLE_PICKS:
@@ -793,7 +806,7 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
     if main_info:
         for w, sub, off in weapon_options(main_info, open_req):
             if ((w, sub, off) != (best.weapon_type, best.weapon_subtype, best.offhand_type)
-                    and weapon_ok(req, best.cls, best.ascendancy, w, sub)):
+                    and weapon_ok(req, best.cls, best.ascendancy, w, sub, second=True)):
                 same_skill.append(Candidate(best.skill, w, sub, off, best.cls, best.ascendancy, is_minion=best.is_minion,
                                             totem=best.totem))
     if not picks and not same_skill:
