@@ -36,4 +36,7 @@ drive for the laptop. Refresh `jobs.sqlite3` right before the PC goes off if bui
   as +54% mapping damage. Count it at the rare threshold (10%). Not started.
 - Mageblood: judged with hand-picked Legacy rolls (about 1 in 1,600). Judge it by an average random roll; show the
   legacies to hunt for. Not started.
+- A-to-Z sweep: stopped on 2026-11-17 after 4 of ~32 builds. Build #5 ("Deadeye build") hung: two PoB processes
+  spun for 7.5 hours of CPU with no result. Find the loop and add a time limit per build, then re-run the sweep
+  on the server (`SWEEP=1 python tools/az_test.py run`).
 - Then: why Hexblast (32% of open searches) and Blood Mage (24%) win so often (`/learn/winners`).
