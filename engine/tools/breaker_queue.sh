@@ -13,7 +13,7 @@ mkdir -p ~/server_jobs ~/routines
 state() { echo "$(date '+%H:%M') $*" > ~/server_jobs/breaker-queue.status; echo "$(date -u +%FT%TZ) $*"; }
 notify() {
   local h; h=$(TZ=America/Mazatlan date +%-H)
-  local topic; topic=$(grep -E '^NTFY_TOPIC=' .env | cut -d= -f2)
+  local topic; topic=$(grep -hE '^NTFY_TOPIC=' .env ~/phaph/.env 2>/dev/null | head -1 | cut -d= -f2)
   if [ "$h" -ge 8 ] && [ "$h" -lt 22 ] && [ -n "$topic" ]; then
     curl -s -H "Title: Whetstone" -d "$*" "https://ntfy.sh/$topic" > /dev/null
   else
