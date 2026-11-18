@@ -120,3 +120,29 @@ known strong builds)  5. Claude research  6. Discoveries page  7. Launch-day pla
   The full run (about 30 builds, ~8 h) is still going in container `whetstone-pairs`; rerun `report` when it ends.
 - Next: explain Leopold's + Fire Penetration and the Skyfall / Rain of Arrows speed flags; test Rapid Shot + Fresh
   Clip in game; then part 3 (leads to full builds via anchors).
+
+### Pairs run, full results (2026-11-17)
+
+All 31 builds finished (one per skill + ascendancy, scored against a pinnacle boss). `python breaker.py report data/breaker/pairs.json` keeps pairs with synergy >= 1.10 that also gain at least 10% together:
+
+| Synergy | Build | Pair | Alone | Together |
+|---|---|---|---|---|
+| 1.22 | Flicker Strike Acolyte of Chayula | Leopold's Applause + The Pandemonius | +10% / +8% | +45% |
+| 1.17 | Snap Amazon | Considered Casting + Rondel of Fragility | +16% / +13% | +52% |
+| 1.15 | Fireball Blood Mage | Leopold's Applause + Fire Penetration I | +10% / +10% | +38% |
+| 1.14 | Skyfall Stormweaver | Plaguefinger + Atsak's Sight | +16% / +12% | +48% |
+| 1.14 | Skeletal Sniper Lich | Maligaro's Virtuosity + Pinpoint Critical | +22% / +9% | +50% |
+| 1.12 | Rapid Shot Oracle | Leopold's Applause + Avatar of Fire | +28% / -6% | +35% |
+| 1.12 | Snap Amazon | Plaguefinger + Atsak's Sight | +6% / +6% | +26% |
+| 1.11 | Entangle Shaman | Edyrn's Tusks + Crimson Assault | +10% / -3% | +19% |
+| 1.10 | Skeletal Sniper Lich | Fire Penetration I + Leopold's Applause | +10% / +8% | +31% |
+
+What they mean:
+- **Leopold's Applause is the real lead (4 of 9 rows).** The gloves give 10% elemental penetration and let your hits penetrate resistances down to -50%. Normally penetration stops at 0% resistance, so a second source of penetration or resistance loss (Fire Penetration, The Pandemonius, Avatar of Fire turning damage into fire) is wasted once the boss is at 0. With Leopold's it keeps pushing below 0, so every extra point counts. This is a rule-break, not a PoB quirk. Worth checking in game that the -50% floor applies to bosses.
+- **Plaguefinger + Atsak's Sight** shows up on two builds: both work on the same debuff, so each makes the other stronger. Expected stacking, not a rule-break.
+- **Maligaro's + Pinpoint Critical** is crit chance times crit damage. Expected.
+- **Considered Casting + Rondel of Fragility** and **Edyrn's Tusks + Crimson Assault** are not explained yet.
+
+Dropped by the filter: the highest raw synergies (up to 2.22, e.g. Rakiata's Flow + Avatar of Fire on Hexblast Blood Mage) are all pairs that lose damage. Avatar of Fire wrecks a chaos skill like Hexblast (-78%), and a fire or penetration item wins back part of that loss once the damage is fire. The ratio looks big, but the build still loses 38% or more, so these are useless.
+
+Next: check Leopold's Applause in game. Then search for more "removes a floor or cap" items like it (penetration past 0, resistance past the cap) and run them against every build.
