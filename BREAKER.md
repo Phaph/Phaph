@@ -146,3 +146,29 @@ What they mean:
 Dropped by the filter: the highest raw synergies (up to 2.22, e.g. Rakiata's Flow + Avatar of Fire on Hexblast Blood Mage) are all pairs that lose damage. Avatar of Fire wrecks a chaos skill like Hexblast (-78%), and a fire or penetration item wins back part of that loss once the damage is fire. The ratio looks big, but the build still loses 38% or more, so these are useless.
 
 Next: check Leopold's Applause in game. Then search for more "removes a floor or cap" items like it (penetration past 0, resistance past the cap) and run them against every build.
+
+### Text scanner and the Hexblast fix (2026-11-18)
+
+**Text scanner built** (`engine/text_scan.py scan | diff | report`, step 1 of research/broken_builds.md). It reads
+every gem stat line (with PoB's "not supported" flag), every unique mod and every notable, keystone and ascendancy
+node, and flags wording that has broken the game before, by the research's groups: A "more" per unit, B a stat feeding
+damage, D triggers / no cost / "not consumed", E counts and repeats, F explosions and on-kill, G caps and immunity,
+H conditions, J "instead / converted / counts as" (add-vs-replace bugs). First run: 1,562 flagged lines, 256 of them
+lines PoB can't calculate. Output data/breaker/text_scan.json. On patch day `diff` lists only new or changed lines.
+
+First leads from it:
+- **"Chance to not remove Charges but still count as consuming them"** on several pieces: Perpetual Charge (support)
+  25%, The Fabled Stag (unique) 10%, Everlasting Infusions 10% (infusions). The research's group D: a "not consumed"
+  chance that reaches 100% made past broken builds (Flicker no-consume). Next: list every source, see whether they add
+  up to 100% for one skill (Flicker Strike, Falling Thunder, Charged Staff, Barrage), then an in-game test for Kyle.
+  PoB can't calculate it.
+- PoB-blind "more per unit" with no cap: Echoing Cry (100% more area per Echo), Electromagnetism (20% more per pulse),
+  Cirel's Cultivation (10% more per allied totem). Need our own estimates.
+
+**Hexblast fix (engine, found through the sweep and /learn/winners):** Hexblast won every search on every class
+because PoB counts it as cast back to back (2.09 casts/s on a saved build), but it can only detonate a curse that is
+half expired (Despair: 0.7 s cast + 1.5 s delay + 3.7 s = once per ~5.9 s per target, 0.17/s). New `USAGE_LIMITS` in
+runner.lua caps the main skill's uses per second for skills like this, everywhere (search, supports, tree, gear).
+Saved Stormweaver Hexblast: 4.34M -> 352K. Deadeye now picks Rain of Arrows with a bow. Next candidates for a usage
+limit: Detonate Dead (needs a corpse each cast; bosses leave none; it became the Deadeye's boss skill) and Ember
+Fusillade. Each limit is an estimate: in-game test requests to Kyle.

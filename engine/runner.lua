@@ -11,8 +11,11 @@ local function reply(t)
 	io.stdout:flush()
 end
 
+local afterFrame = nil   -- set below (usage limits), once mainSkillName exists
+
 local function frame()
 	runCallback("OnFrame")
+	if afterFrame then afterFrame() end
 end
 
 local DEFAULT_FIELDS = {
@@ -22,7 +25,7 @@ local DEFAULT_FIELDS = {
 	"Life", "EnergyShield", "Mana", "Armour", "Evasion", "TotalEHP",
 	"PhysicalMaximumHitTaken", "FireResist", "ColdResist", "LightningResist", "ChaosResist",
 	"Str", "Dex", "Int", "Spirit", "SpiritUnreserved", "EffectiveMovementSpeedMod", "EffectiveLootRarityMod",
-	"BlockChance", "SpellBlockChance", "LifeLeechRate", "LifeRegen",
+	"BlockChance", "SpellBlockChance", "LifeLeechRate", "LifeRegen", "UsageLimit", "UncappedSpeed",
 }
 
 -- Supports that put a usage condition on the skill (move first, build Glory, etc.).
@@ -143,6 +146,36 @@ local function mainSkillName()
 	if sg and sg.displaySkillList then
 		local s = sg.displaySkillList[sg.mainActiveSkill or 1]
 		if s then return s.activeEffect.grantedEffect.name end
+	end
+end
+
+-- Usage limits Path of Building doesn't model. PoB counts every skill as cast back to back at its cast speed. A few
+-- skills can only be used when something else has happened first, so PoB's DPS for them is several times too high
+-- and they won every search on every class (Hexblast, 2026-11-18). Each rule gives the most uses per second the
+-- skill really gets against one target; the main skill's DPS is scaled down to it. Estimates: confirm in game.
+local USAGE_LIMITS = {
+	-- Detonates a Curse that is at least half expired, and removes it. One target: cast the curse (0.7 s), wait
+	-- for it to land (1.5 s curse delay), then half its duration (Despair 7.4 s at level 20) before Hexblast can go.
+	Hexblast = function(out) return 1 / (0.7 + 1.5 + 7.4 / 2) end,
+}
+
+afterFrame = function()
+	local out = build.calcsTab and build.calcsTab.mainOutput
+	if type(out) ~= "table" or out._usageLimited then return end
+	local rule = USAGE_LIMITS[mainSkillName() or ""]
+	if not rule then return end
+	local cap, speed = rule(out), out.Speed or 0
+	out._usageLimited = true
+	if not cap or speed <= cap then return end
+	local f = cap / speed
+	local before = out.TotalDPS or 0
+	out.UsageLimit, out.UncappedSpeed = cap, speed
+	out.Speed = cap
+	for _, k in ipairs({ "TotalDPS", "CombinedDPS", "WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS" }) do
+		if type(out[k]) == "number" then out[k] = out[k] * f end
+	end
+	if type(out.FullDPS) == "number" and out.FullDPS > 0 then
+		out.FullDPS = math.max(out.FullDPS - before * (1 - f), 0)
 	end
 end
 

@@ -1,0 +1,17 @@
+{
+  "about": "The weapons each class is meant to use (Kyle, 2026-11-18). Without Off-meta, a build only uses these (main hand and weapon set 2) unless the player picked a weapon or named a skill that needs another. 'Staff' is a caster staff, 'Quarterstaff' an attack staff (PoB: Staff / Warstaff). 'ascendancies' adds weapons for one ascendancy only. Edit freely.",
+  "classes": {
+    "Warrior":   {"intended": ["One Hand Mace", "Two Hand Mace"], "close": ["One Hand Axe", "Two Hand Axe", "One Hand Sword", "Two Hand Sword"]},
+    "Ranger":    {"intended": ["Bow"], "close": ["Spear"]},
+    "Huntress":  {"intended": ["Spear"], "close": ["Bow"]},
+    "Mercenary": {"intended": ["Crossbow"], "close": ["Bow"]},
+    "Monk":      {"intended": ["Quarterstaff"], "close": ["Claw", "Dagger"]},
+    "Witch":     {"intended": ["Wand", "Sceptre", "Staff"], "close": []},
+    "Sorceress": {"intended": ["Staff", "Wand"], "close": ["Sceptre"]},
+    "Druid":     {"intended": ["Talisman"], "close": ["Staff"]},
+    "Shadow":    {"intended": ["Dagger", "Claw"], "close": ["One Hand Sword"]}
+  },
+  "ascendancies": {
+    "Gemling Legionnaire": {"extra": ["One Hand Mace", "Two Hand Mace"], "why": "Attribute stacker: a mace in the main hand or on weapon set 2 works as well as a crossbow (Kyle)."}
+  }
+}

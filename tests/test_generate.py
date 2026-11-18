@@ -220,6 +220,7 @@ def test_deep_search_scouts_each_skills_own_ascendancies(monkeypatch):
     monkeypatch.setattr(g, "scout_ascendancies", fake_scout)
     monkeypatch.setattr(g, "main_skills", lambda cat, req: skills)
     monkeypatch.setattr(g, "weapon_options", lambda s, req: [("Wand", None, None)])
+    monkeypatch.setattr(g, "weapon_ok", lambda *a: True)   # this test is about deep search, not class weapons
 
     normal = g.generate({}, workers=2, log=lambda *a: None)
     assert not scouted

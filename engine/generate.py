@@ -35,6 +35,7 @@ import threading
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
+from pathlib import Path
 
 from anchors import find_unique, resolve as resolve_anchors, unique_slot
 from gear import Scorer, Stage, _unique_allowed, craft_gear, make_stage
@@ -229,6 +230,56 @@ def weapon_options(skill: dict, req: dict) -> list[tuple[str, str | None, str | 
             # An anchor weapon unique (a quarterstaff is a Staff with a subtype): its exact kind.
             opts = [(w, req["_weapon_subtype"], off) for w, _, off in opts]
     return opts[:3]
+
+
+CLASS_WEAPONS = Path(__file__).with_name("data") / "class_weapons.json"
+_class_weapons: dict | None = None
+_ALL_ASCS: list[tuple[str, str]] = []   # (class, ascendancy) pairs, filled by _search from PoB's class list
+
+
+def class_weapons() -> dict:
+    global _class_weapons
+    if _class_weapons is None:
+        try:
+            _class_weapons = json.loads(CLASS_WEAPONS.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _class_weapons = {"classes": {}, "ascendancies": {}}
+    return _class_weapons
+
+
+def weapon_key(wtype: str | None, wsub: str | None) -> str | None:
+    """The name class_weapons.json uses: an attack staff is a Quarterstaff, a caster staff a Staff."""
+    return "Quarterstaff" if wtype == "Staff" and wsub == "Warstaff" else wtype
+
+
+def class_locked(req: dict) -> bool:
+    """Builds keep to their class's weapons unless the player ticked Off-meta or picked the weapon themselves
+    (Kyle, 2026-11-18). _class_unlocked: the player named a skill that none of the class's weapons can use."""
+    return not (req.get("off_meta") or req.get("weapons") or req.get("_class_unlocked"))
+
+
+def allowed_weapons(cls: str | None, asc: str | None = None) -> set[str] | None:
+    """The weapons a class (and ascendancy) may use, or None when the class has no rule. With no ascendancy given,
+    every ascendancy's extras count, so a Mercenary search keeps maces in play for the Gemling Legionnaire."""
+    t = class_weapons()
+    c = t["classes"].get(cls or "")
+    if not c:
+        return None
+    ok = set(c.get("intended") or []) | set(c.get("close") or [])
+    extras = t.get("ascendancies") or {}
+    if asc:
+        ok |= set((extras.get(asc) or {}).get("extra") or [])
+    else:
+        mine = {a for cl, a in _ALL_ASCS if cl == cls}
+        ok |= {w for a, e in extras.items() if a in mine for w in e.get("extra") or []}
+    return ok
+
+
+def weapon_ok(req: dict, cls: str | None, asc: str | None, wtype: str | None, wsub: str | None) -> bool:
+    if not class_locked(req):
+        return True
+    ok = allowed_weapons(cls, asc)
+    return ok is None or weapon_key(wtype, wsub) in ok
 
 
 def _score(out: dict, req: dict) -> float:
@@ -493,6 +544,10 @@ def generate(req: dict, workers: int = 4, top_skills: int = 4, log=print, progre
             notes.append(note)
             continue
         result["request"] = req
+        if result.get("off_meta_best"):
+            o = result["off_meta_best"]
+            about.append(f"Kept to the class's usual weapons. Off-meta would pick {o['skill']} with a {o['weapon']} "
+                         f"(about {o['gain']:.0%} more damage before passives): tick Off-meta to allow any weapon.")
         result["searched"] = {k: v for k, v in tried.items() if not k.startswith("_")}
         result["relaxed"] = notes
         result["about"] = about
@@ -544,6 +599,13 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         raise ValueError("Unknown class or ascendancy.")
     base_class = ascs[0][0] if len({c for c, _ in ascs}) == 1 else None
     allowed_ascs = set(ascs)
+    _ALL_ASCS[:] = [(c["name"], a) for c in classes for a in c["ascendancies"]]
+    if req.get("skill") and class_locked(req) and base_class:
+        # The player named a skill: if none of the class's weapons can use it, it gets its own weapon anyway.
+        named = next((s for s in skills if s["name"] == req["skill"]), None)
+        if named and not any(weapon_ok(req, base_class, None, w, ws) for w, ws, _ in weapon_options(named, req)):
+            req = {**req, "_class_unlocked": True}
+            log(f"{req['skill']} needs a weapon {base_class} doesn't usually use: allowed because it was asked for")
     if req.get("random"):
         return _random_search(req, pool, skills, ascs, stage, log, progress, t0)
 
@@ -557,6 +619,16 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     round_start(1, f"Round 1: {len(round1)} skill and weapon options", len(round1))
     round1 = list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=False), 1), round1))
     ok1 = sorted((c for c in round1 if not c.error and c.score > 0), key=lambda c: -c.score)
+    # Class weapons (data/class_weapons.json): without Off-meta each class keeps to its own weapons. Round 1 keeps
+    # skills whose weapon suits at least one allowed ascendancy; the pairs below then match each skill with only the
+    # ascendancies that can hold its weapon. The best build the rule kept out is reported so the player can choose it.
+    off_meta_best = None
+    if class_locked(req):
+        kept = [c for c in ok1 if any(weapon_ok(req, cl, a, c.weapon_type, c.weapon_subtype) for cl, a in ascs)]
+        if kept and ok1 and ok1[0] not in kept and ok1[0].score > kept[0].score * 1.1:
+            off_meta_best = {"skill": ok1[0].skill, "weapon": weapon_key(ok1[0].weapon_type, ok1[0].weapon_subtype),
+                             "gain": round(ok1[0].score / kept[0].score - 1, 2)}
+        ok1 = kept or ok1
     for c in ok1[:8]:
         log(f"  {c.skill:<26} {c.weapon_type:<14} {c.score:>12,.0f}")
     # One finalist per skill (its best weapon), so one skill can't crowd out the others.
@@ -588,6 +660,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         finalists = one_per_skill(ok1b, DEEP_SKILLS) or finalists[:DEEP_SKILLS]
 
     def build_round(pairs):
+        pairs = [(f, (cl, a)) for f, (cl, a) in pairs if weapon_ok(req, cl, a, f.weapon_type, f.weapon_subtype)]
         cands = [Candidate(f.skill, f.weapon_type, f.weapon_subtype, f.offhand_type, cls, asc, is_minion=f.is_minion,
                            totem=f.totem)
                  for f, (cls, asc) in pairs]
@@ -600,7 +673,9 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
                     len(finalists) * len(ascs),
                     f"Deep search: each of {len(finalists)} skills tried on all {len(ascs)} ascendancies to find "
                     f"the {DEEP_ASCS} that suit it best.")
-        picks = list(pool.map(lambda f: scout_ascendancies(f, ascs, stage, req), finalists))
+        picks = list(pool.map(lambda f: scout_ascendancies(
+            f, [(cl, a) for cl, a in ascs if weapon_ok(req, cl, a, f.weapon_type, f.weapon_subtype)] or ascs,
+            stage, req), finalists))
         pairs = [(f, a) for f, best in zip(finalists, picks) for a in best]
         round_start(2, f"Round 2: {len(pairs)} skill and ascendancy options", len(pairs),
                     f"Deep search: each skill on its own best ascendancies, with full passive trees. {len(pairs)} builds.")
@@ -629,6 +704,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         s = by_name.get(h.get("skill"))
         weapon = (h.get("weapon_type"), h.get("weapon_subtype"), h.get("offhand_type"))
         if (not s or (h.get("cls"), h.get("ascendancy")) not in allowed_ascs or weapon not in weapon_options(s, req)
+                or not weapon_ok(req, h.get("cls"), h.get("ascendancy"), weapon[0], weapon[1])
                 or (h["skill"], h.get("ascendancy"), h.get("weapon_type")) in tried):
             continue
         heads.append(Candidate(h["skill"], *weapon, h["cls"], h["ascendancy"], is_minion="Minion" in s["types"],
@@ -651,6 +727,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         "ranked": [asdict(c) | {"relative": c.score / best.score} for c in ranked],
         "skills_considered": [c.skill for c in ok1],
         "failed": [asdict(c) for c in round1 + round2 if c.error],
+        **({"off_meta_best": off_meta_best} if off_meta_best else {}),
     }
 
 
@@ -693,6 +770,8 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
             extra = list(pool.map(lambda c: scored(evaluate(c, stage, open_req, tree=False), 2.5), extra))
             pool1 += [c for c in extra if not c.error and c.score > 0]
     pool1 = [c for c in pool1 if c.skill not in have]
+    if not second:
+        pool1 = [c for c in pool1 if weapon_ok(req, best.cls, best.ascendancy, c.weapon_type, c.weapon_subtype)]
     picks: dict[str, Candidate] = {f"{c.skill}@{c.weapon_type}": c for c in picks_second}
     for c in sorted(pool1, key=lambda c: -(c.boss or c.dps)):   # single target: any weapon (set 2 if it differs)
         if len(picks) >= ROLE_PICKS:
@@ -713,7 +792,8 @@ def _role_round(req, pool, ranked, ok1, skills, catalog, stage, round_start, sco
     same_skill = []
     if main_info:
         for w, sub, off in weapon_options(main_info, open_req):
-            if (w, sub, off) != (best.weapon_type, best.weapon_subtype, best.offhand_type):
+            if ((w, sub, off) != (best.weapon_type, best.weapon_subtype, best.offhand_type)
+                    and weapon_ok(req, best.cls, best.ascendancy, w, sub)):
                 same_skill.append(Candidate(best.skill, w, sub, off, best.cls, best.ascendancy, is_minion=best.is_minion,
                                             totem=best.totem))
     if not picks and not same_skill:
@@ -757,9 +837,14 @@ def _random_search(req: dict, pool: ThreadPoolExecutor, skills: list[dict], ascs
     rng.shuffle(order)
     tries = []
     with PoB() as p:
-        for s in order[:RANDOM_TRIES]:
-            w = rng.choice(weapon_options(s, req))
+        for s in order:
+            if len(tries) >= RANDOM_TRIES:
+                break
             cls, asc = rng.choice(ascs)
+            opts = [o for o in weapon_options(s, req) if weapon_ok(req, cls, asc, o[0], o[1])]
+            if not opts:
+                continue   # this skill's weapons don't suit the rolled class (Off-meta allows it)
+            w = rng.choice(opts)
             u = None if (req.get("_anchors") or {}).get("unique") else random_unique(p, rng, stage)
             c = Candidate(s["name"], w[0], w[1], w[2], cls, asc, is_minion="Minion" in s["types"], totem=s.get("totem"),
                           anchor_unique=u["name"] if u else None)

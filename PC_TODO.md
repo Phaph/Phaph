@@ -56,6 +56,16 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 2. Run the Shadow dual wield dagger bleed build through guides and comparisons, at each budget.
 3. Check the results in game and tune.
 
+## Mapping vs bossing (Kyle, 2026-11-18)
+Every build must answer two questions: what clears maps fast (area), and what kills bosses (single target). Often the
+same skill does both; often it is a mapping skill (or combo) plus a boss skill (or combo), sometimes on weapon set 2
+(Kyle's Mercenary: Galvanic Shards for mapping; Lightning Rod from a bow on set 2 plus the skill it sets up, for
+bosses). To do:
+1. Combo finder: pair a skill that creates or applies something (rods, marks, curses, freeze, corpses, grenades) with
+   one that consumes or detonates it (text_scan wording), and score the pair together as a mapping or boss combo.
+2. A "How you play" card at the top of every build: Mapping: skill(s) | Bosses: skill(s) (+ "swap to weapon set 2"),
+   or "one skill does both" with the reason.
+
 ## Learning from saved builds (built 2026-11-18, `api/learn.py`)
 No model training: the saved builds (`jobs.sqlite3`) and the prompt log feed the search and Claude directly.
 How to use (owner tools answer only on the PC, not through the tunnel):

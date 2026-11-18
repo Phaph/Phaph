@@ -111,7 +111,8 @@ def check(game: dict) -> tuple[list[str], list[str]]:
 
     # Output stats: each must still appear in PoB's calculation code.
     src = "\n".join(f.read_text(encoding="utf-8", errors="ignore") for f in (POB_SRC / "Modules").glob("Calc*.lua"))
-    dynamic = {"WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS"}   # built as "With"..ailment.."DPS"
+    dynamic = {"WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS",   # built as "With"..ailment.."DPS"
+               "UsageLimit", "UncappedSpeed"}   # our own (runner.lua USAGE_LIMITS), not PoB's
     for f in output_fields():
         # Minion stats are PoB's output.Minion.<stat> (runner.lua exposes MinionDPS as Minion.TotalDPS).
         bare = {"MinionDPS": "TotalDPS", "MinionDotDPS": "TotalDotDPS"}.get(f, f.removeprefix("Minion"))
