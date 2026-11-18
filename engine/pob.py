@@ -48,7 +48,9 @@ class PoB:
             env=env,
             bufsize=1,
         )
-        self.version = self._read()["version"]
+        ready = self._read()
+        self.version = ready["version"]
+        self.patch = ready.get("patch") or "unknown"   # game patch PoB's data is for, e.g. "0_5"
 
     on_event = None   # called with live events (e.g. tree steps) that arrive before a command's reply
     # Skills placed by a totem gem in this build: {"Fireball": "Spell Totem"}. Every group whose first gem is one of

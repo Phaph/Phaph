@@ -34,12 +34,12 @@ sys.path.insert(0, str(ROOT / "engine"))
 from gear import STAGE_DEFS  # noqa: E402
 from pob import PoB  # noqa: E402
 
-from . import prompt_ai, writeup  # noqa: E402
+from . import learn, prompt_ai, writeup  # noqa: E402
 from .jobs import JobStore  # noqa: E402
 
 StageKey = Literal["act1", "act2", "act34", "interludes", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-18.2"
+ENGINE_VERSION = "2026-11-18.3"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -139,6 +139,7 @@ def load_catalog() -> dict:
         helper_skills = sorted({s["name"] for s in pob.send("skill_catalog")["skills"] if set(s["types"]) & NOT_MAIN})
         bases = pob.send("bases")["bases"]
         version = pob.version
+        patch = pob.patch
         from anchors import unique_slot
         # What a build can be made around: wearable uniques, keystones, support gems.
         uniques = sorted({u["name"].split(",")[0] for u in pob.list_uniques() if unique_slot(u)})
@@ -154,6 +155,7 @@ def load_catalog() -> dict:
             weapon_types[b["type"]].add(b["subType"])
     return {
         "pob_version": version,
+        "game_patch": patch,
         "classes": sorted(classes, key=lambda c: c["name"]),
         "skills": skills,
         "helper_skills": helper_skills,
@@ -212,7 +214,13 @@ def run_guide(req: dict, progress=None) -> dict:
 def run_generate(req: dict, progress=None) -> dict:
     from generate import generate, options, plan_build
 
-    result = generate(req, workers=GENERATE_WORKERS, log=lambda *a: None, progress=progress)
+    # Head starts from earlier searches like this one (after the cache key is made, so it doesn't change the key).
+    try:
+        heads = learn.head_starts(req)
+    except Exception:  # noqa: BLE001 - learning must never cost the player their build
+        heads = []
+    result = generate({**req, "_head_starts": heads} if heads else req, workers=GENERATE_WORKERS,
+                      log=lambda *a: None, progress=progress)
     return {"result": result, "plan": plan_build(result), "options": options(result)}
 
 
@@ -270,7 +278,10 @@ async def lifespan(app: FastAPI):
         # Cached results are reused only for the same PoB and engine version, so engine changes show up at once.
         version=f'{app.state.catalog["pob_version"]}+{ENGINE_VERSION}',
         runners={"guide": run_guide, "compare": run_compare, "generate": run_generate},
+        labels={"game_patch": app.state.catalog["game_patch"], "pob_version": app.state.catalog["pob_version"],
+                "engine_version": ENGINE_VERSION},
     )
+    learn.bind(app.state.jobs.db_path, app.state.catalog["game_patch"])
     yield
     app.state.jobs.shutdown()
 
@@ -365,6 +376,7 @@ def icons():
 def health(request: Request):
     commit = ROOT / "engine" / "vendor" / "POB_COMMIT"   # written by engine/setup.sh
     return {"ok": True, "pob_version": request.app.state.catalog["pob_version"], "engine": ENGINE_VERSION,
+            "game_patch": request.app.state.catalog["game_patch"],
             "pob_commit": commit.read_text().strip() if commit.exists() else None, "notice": site_notice()}
 
 
@@ -425,6 +437,26 @@ def gem_tooltip(name: str, request: Request):
 @app.get("/catalog")
 def catalog(request: Request):
     return {**request.app.state.catalog, "ai_reader": prompt_ai.available()}
+
+
+def _local_only(request: Request) -> None:
+    """Owner tools: only from the PC itself (requests through the Cloudflare tunnel carry cf-connecting-ip)."""
+    if request.headers.get("cf-connecting-ip"):
+        raise HTTPException(404, "Not found")
+
+
+@app.get("/learn/winners")
+def learn_winners(request: Request, patch: str | None = None):
+    """Bug spotting: how often each skill, ascendancy and unique wins on this patch, with flags (api/learn.py)."""
+    _local_only(request)
+    return learn.winners(patch)
+
+
+@app.get("/learn/misreads")
+def learn_misreads(request: Request):
+    """Prompts the Claude reader may have misread, to review (fixes go in api/prompt_examples.json)."""
+    _local_only(request)
+    return {"misreads": learn.misreads(prompt_ai.LOG, request.app.state.catalog)}
 
 
 @app.post("/guides")

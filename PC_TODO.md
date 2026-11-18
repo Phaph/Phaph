@@ -54,8 +54,13 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 2. Run the Shadow dual wield dagger bleed build through guides and comparisons, at each budget.
 3. Check the results in game and tune.
 
-## Learning from saved builds (Kyle approved 2026-11-18)
+## Learning from saved builds (built 2026-11-18, `api/learn.py`)
 No model training: the saved builds (`jobs.sqlite3`) and the prompt log feed the search and Claude directly.
+How to use (owner tools answer only on the PC, not through the tunnel):
+- `curl localhost:8000/learn/winners`: win counts and flags for this patch.
+- `curl localhost:8000/learn/misreads`: prompts to review; confirmed fixes go in `api/prompt_examples.json`.
+- After a patch update: `docker exec phaph-app-1 python -m api.retest` (re-tests the top 200 old winners,
+  writes `/data/retest_<old>_to_<new>.json` with buffed / nerfed lists, and seeds the new patch's head starts).
 1. **Bug spotting (first).** Count how often each skill, ascendancy and unique wins. Flag anything that wins far too
    often (Hexblast, Detonate Dead now): either a modelling bug to fix or a real over-powered build for the Breaker.
 2. **Head starts.** Start new searches from the strongest past results for similar requests (same theme, damage,

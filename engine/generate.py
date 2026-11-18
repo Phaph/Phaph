@@ -543,6 +543,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
     if not ascs:
         raise ValueError("Unknown class or ascendancy.")
     base_class = ascs[0][0] if len({c for c, _ in ascs}) == 1 else None
+    allowed_ascs = set(ascs)
     if req.get("random"):
         return _random_search(req, pool, skills, ascs, stage, log, progress, t0)
 
@@ -619,6 +620,23 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         pairs = [(f, a) for f in finalists_rest for a in ascs]
         round_start(2, f"Round 2: {len(pairs)} skill and ascendancy options", len(pairs))
         round2 += build_round(pairs)
+    # Head starts: strong builds from earlier searches like this one (api/learn.py, this patch only). Any the
+    # rounds above didn't already try are re-tested here, so a strong build found before isn't missed this time.
+    by_name = {s["name"]: s for s in skills}
+    tried = {(c.skill, c.ascendancy, c.weapon_type) for c in round2}
+    heads = []
+    for h in req.get("_head_starts") or []:
+        s = by_name.get(h.get("skill"))
+        weapon = (h.get("weapon_type"), h.get("weapon_subtype"), h.get("offhand_type"))
+        if (not s or (h.get("cls"), h.get("ascendancy")) not in allowed_ascs or weapon not in weapon_options(s, req)
+                or (h["skill"], h.get("ascendancy"), h.get("weapon_type")) in tried):
+            continue
+        heads.append(Candidate(h["skill"], *weapon, h["cls"], h["ascendancy"], is_minion="Minion" in s["types"],
+                               totem=s.get("totem")))
+    if heads:
+        round_start(2.5, f"Head starts: {len(heads)} strong builds from earlier searches", len(heads),
+                    f"{len(heads)} strong builds from earlier searches like this one, re-tested so none is missed.")
+        round2 += list(pool.map(lambda c: scored(evaluate(c, stage, req, tree=True), 2), heads))   # on the round 2 board
     ranked = sorted((c for c in round2 if not c.error and c.score > 0), key=lambda c: -c.score)
     if not ranked:
         raise ValueError("Every candidate failed to build.")
@@ -628,7 +646,7 @@ def _search(req: dict, pool: ThreadPoolExecutor, top_skills: int, log, progress)
         log(f"  {c.ascendancy:<22} {c.skill:<24} {c.weapon_type:<10} {c.score:>12,.0f}  {c.score / best.score:6.0%}")
     log(f"Done in {time.time() - t0:.0f}s")
     return {
-        "request": req,
+        "request": {k: v for k, v in req.items() if k != "_head_starts"},
         "best": asdict(best),
         "ranked": [asdict(c) | {"relative": c.score / best.score} for c in ranked],
         "skills_considered": [c.skill for c in ok1],

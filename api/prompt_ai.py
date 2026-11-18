@@ -119,7 +119,25 @@ def _system(catalog: dict) -> str:
         "Support gems": catalog.get("supports") or [],
         "Classes and ascendancies": [f"{c['name']}: {', '.join(c['ascendancies'])}" for c in catalog["classes"]],
     }
-    return INSTRUCTIONS + "\n" + "\n".join(f"\n{k}:\n" + "; ".join(v) for k, v in lists.items())
+    return INSTRUCTIONS + examples_text(catalog) + "\n" + "\n".join(f"\n{k}:\n" + "; ".join(v) for k, v in lists.items())
+
+
+EXAMPLES = Path(__file__).with_name("prompt_examples.json")
+
+
+def examples_text(catalog: dict) -> str:
+    """Prompts that were misread before (api/prompt_examples.json) and what they mean. An example whose "names"
+    the current patch no longer has is left out, so an old patch can't teach a dead name."""
+    try:
+        examples = json.loads(EXAMPLES.read_text(encoding="utf-8"))["examples"]
+    except (OSError, ValueError, KeyError):
+        return ""
+    known = {n.lower() for key in ("skills", "helper_skills", "uniques", "keystones", "supports")
+             for n in catalog.get(key) or []}
+    known |= {n.lower() for c in catalog["classes"] for n in [c["name"], *c["ascendancies"]]}
+    keep = [f'- "{e["prompt"]}" -> {e["means"]}' for e in examples
+            if all(n.lower() in known for n in e.get("names") or [])]
+    return ("\nPrompts that were misread before, and what they mean:\n" + "\n".join(keep) + "\n") if keep else ""
 
 
 def _clean(out: dict, catalog: dict, tables: dict) -> dict:

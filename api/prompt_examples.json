@@ -1,0 +1,11 @@
+{
+  "about": "Worked examples for the Claude prompt reader, made from prompts that were read wrong. Find candidates with GET /learn/misreads; add one here once a misread is confirmed. Kept across patches: an example is skipped if any of its names no longer exists.",
+  "examples": [
+    {"prompt": "Abyssal Lich build", "means": "ascendancy Abyssal Lich (Witch). It is its own ascendancy, not Lich.",
+     "names": ["Abyssal Lich", "Lich"]},
+    {"prompt": "bleed build with bleed", "means": "ailment bleed. Here 'bleed' is the ailment, not a support gem, so no anchor_support.",
+     "names": []},
+    {"prompt": "shaman bear druid furious slam", "means": "ascendancy Shaman (Druid), kinds bear, skill Furious Slam.",
+     "names": ["Shaman", "Furious Slam"]}
+  ]
+}

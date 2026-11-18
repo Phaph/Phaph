@@ -1771,7 +1771,8 @@ function handlers.trade_query(cmd)
 	return { query = { query = q, sort = { price = "asc" } } }
 end
 
-reply({ ok = true, ready = true, version = launch.versionNumber })
+-- patch: the game version PoB's data is for (its newest passive tree, "0_5"); saved builds are labelled with it.
+reply({ ok = true, ready = true, version = launch.versionNumber, patch = latestTreeVersion })
 for line in io.stdin:lines() do
 	local okDecode, cmd = pcall(json.decode, line)
 	if not okDecode or type(cmd) ~= "table" then

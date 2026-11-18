@@ -270,15 +270,17 @@ def parse_prompt(text: str, catalog: dict) -> dict:
             found.append((text, f"With: {skill}"))
     if helpers:
         req["with_skills"] = helpers[:3]
-    for c in catalog.get("classes", []):
-        for asc in c.get("ascendancies", []):
-            if not req.get("ascendancy") and (m := _find(re.escape(asc.lower()) + "s?", t)):
-                req["ascendancy"], req["class"] = asc, c["name"]
-                found.append((m.group(0), f"Ascendancy: {asc} ({c['name']})"))
-                t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
-                if (cm := _find(re.escape(c["name"].lower()) + "e?s?", t)):   # "shaman druid": the class said too
-                    found.append((cm.group(0), f"Class: {c['name']}"))
-                    t = t[:cm.start()] + " " * (cm.end() - cm.start()) + t[cm.end():]
+    # Longest names first, so "Abyssal Lich" is read before "Lich".
+    asc_pairs = sorted(((asc, c) for c in catalog.get("classes", []) for asc in c.get("ascendancies", [])),
+                       key=lambda ac: -len(ac[0]))
+    for asc, c in asc_pairs:
+        if not req.get("ascendancy") and (m := _find(re.escape(asc.lower()) + "s?", t)):
+            req["ascendancy"], req["class"] = asc, c["name"]
+            found.append((m.group(0), f"Ascendancy: {asc} ({c['name']})"))
+            t = t[:m.start()] + " " * (m.end() - m.start()) + t[m.end():]
+            if (cm := _find(re.escape(c["name"].lower()) + "e?s?", t)):   # "shaman druid": the class said too
+                found.append((cm.group(0), f"Class: {c['name']}"))
+                t = t[:cm.start()] + " " * (cm.end() - cm.start()) + t[cm.end():]
     if not req.get("class"):
         for c in catalog.get("classes", []):
             if (m := _find(re.escape(c["name"].lower()) + "e?s?", t)):

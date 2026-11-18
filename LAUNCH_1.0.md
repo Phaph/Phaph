@@ -91,7 +91,8 @@ PoB usually gets a 1.0 update within a few days of the patch, tree first and ful
 | 10 | `tools/accuracy_check.py` against your 1.0 PoB codes. | Our numbers match the PoB app |
 | 11 | Re-calibrate the rating from the new sweep. | `rating_calibration.json` updated |
 | 12 | **Switch live.** Tag the old image, bump `ENGINE_VERSION`, deploy 1.0 to the live container when no builds are running, then turn the notice off. | Site shows the 1.0 PoB version |
-| 13 | Watch the first day of real prompts. Unread words and builds that changed what was asked show which prompt words to add. | Fixes go through staging first |
+| 13 | Re-test the old patch's winners: `docker exec phaph-app-1 python -m api.retest`. Saved builds are labelled by patch, so nothing old is deleted or mixed in; this seeds the new patch's head starts and writes the buffed / nerfed report for the Breaker. | `/data/retest_<old>_to_<new>.json` written |
+| 14 | Watch the first day of real prompts. Unread words and builds that changed what was asked show which prompt words to add; `localhost:8000/learn/misreads` lists Claude's likely misreads. | Fixes go through staging first |
 
 ## What can't be fully automated
 

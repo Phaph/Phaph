@@ -578,7 +578,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-18.4";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-18.5";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -2037,6 +2037,12 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       const plan = { spec: job.result.spec, note: null };
       renderGuide(plan, job.result);
       setStatus("");
+      // A build made on an older game patch still opens, with a note and a Rebuild button for the current patch.
+      const now = await fetch(API + "/health").then(r => r.json()).then(h => h.game_patch).catch(() => null);
+      if (job.game_patch && now && job.game_patch !== now) {
+        setStatus(`This build was made on an older patch (${esc(job.game_patch.replace("_", "."))}), so some numbers may be out of date. <button class="link" id="rebuildOld" type="button">Rebuild it on the current patch</button>`);
+        $("rebuildOld").onclick = () => buildGuide(plan).catch(err => setStatus(`<span class="error">${esc(err.message)}</span>`));
+      }
     } catch (err) { setStatus(`<span class="error">${esc(err.message)}</span>`); }
   })();
 })();

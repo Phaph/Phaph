@@ -10,7 +10,7 @@ from __future__ import annotations
 import json
 import os
 
-from . import prompt_ai
+from . import learn, prompt_ai
 
 INSTRUCTIONS = """You write the short overview at the top of a Path of Exile 2 build guide, for players.
 
@@ -24,6 +24,8 @@ mechanic or number that isn't in the data. Plain, friendly English; short senten
 - "stat_priority": 4-7 stats to look for on gear, most important first, based on what the build scales.
 - "playstyle": one sentence on how to play it (what to press when mapping and when bossing).
 Wrap every gem, item and passive name in [[double brackets]], e.g. [[Hexblast]], so the page can show its icon.
+"other_builds" (if given) are other builds made this patch with the same skill or ascendancy. You may use them for
+one short comparison in "overview" (e.g. hits harder than other Hexblast builds), only with their real numbers.
 """
 
 SCHEMA = {
@@ -82,6 +84,14 @@ def facts(spec: dict, stages: list[dict]) -> dict:
     }
 
 
+def _with_others(spec: dict, f: dict) -> dict:
+    try:
+        others = learn.similar_builds(spec)
+    except Exception:  # noqa: BLE001 - context only
+        others = []
+    return {**f, "other_builds": others} if others else f
+
+
 def write_up(spec: dict, stages: list[dict]) -> dict | None:
     """Claude's overview for a finished guide, or None (no key, refusal, error)."""
     client = prompt_ai._client_or_none()
@@ -96,7 +106,7 @@ def write_up(spec: dict, stages: list[dict]) -> dict | None:
             fallbacks="default",
             output_config={"effort": "low", "format": {"type": "json_schema", "schema": SCHEMA}},
             system=INSTRUCTIONS,
-            messages=[{"role": "user", "content": json.dumps(facts(spec, stages), ensure_ascii=False)}],
+            messages=[{"role": "user", "content": json.dumps(_with_others(spec, facts(spec, stages)), ensure_ascii=False)}],
         )
     except (anthropic.APIConnectionError, anthropic.RateLimitError, anthropic.APIStatusError):
         return None
