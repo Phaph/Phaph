@@ -54,6 +54,27 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 2. Run the Shadow dual wield dagger bleed build through guides and comparisons, at each budget.
 3. Check the results in game and tune.
 
+## Learning from saved builds (Kyle approved 2026-11-18)
+No model training: the saved builds (`jobs.sqlite3`) and the prompt log feed the search and Claude directly.
+1. **Bug spotting (first).** Count how often each skill, ascendancy and unique wins. Flag anything that wins far too
+   often (Hexblast, Detonate Dead now): either a modelling bug to fix or a real over-powered build for the Breaker.
+2. **Head starts.** Start new searches from the strongest past results for similar requests (same theme, damage,
+   weapon), so searches are faster and less likely to miss a strong build.
+3. **Better prompt reading.** Find prompts Claude misread in `prompt_log.jsonl` ("Abyssal Lich build" read as Lich)
+   and add them as worked examples to the reader's instructions.
+4. **Memory for write-ups and the Breaker.** Give Claude the most similar past builds and Breaker findings as
+   context.
+
+### Patches: archive, re-test, never mix
+Every saved result is tagged with game patch, PoB version and engine version. On a new patch nothing is deleted;
+old results are archived and each use treats them differently:
+- **Bug spotting and write-up memory:** current patch only, counts start from zero.
+- **Head starts:** current patch only. Right after the update, the top ~200 old winners are re-tested on the new
+  patch. That gives head starts on day one, plus a "who got buffed, who got nerfed" list for the Breaker.
+- **Prompt examples:** kept (how people phrase requests doesn't change). Names the patch removed or renamed are
+  checked against the new catalog.
+- **Old share links:** still open, with a note "made on patch X, may be out of date" and a Rebuild button.
+
 ---
 
 # 1.0 update
