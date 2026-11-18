@@ -35,7 +35,8 @@ steer from the Claude app (Remote Control).
 5. [ ] Matrix within-family report: compare each unique's gain with skills of the same family (same skill types /
    weapon), not all skills, so "best-in-slot for crossbows" isn't flagged and true one-skill interactions are. Apply
    to data/breaker/matrix.json and matrix_asc/ (being filled by the queue).
-6. [ ] Breaker page on the website: an unlisted page (phaphofbuilding.com/breaker.html, no link from the home page,
+6. [ ] Breaker page on the website, called **Lodestone** in public (Kyle 2026-11-18: "Breaker" stays the internal
+   code name): an unlisted page (phaphofbuilding.com/lodestone.html, no link from the home page,
    noindex) showing the latest Breaker results in plain English: leads with status (to test / confirmed / dead),
    condition payoffs, unique and keystone interactions, the combo finder's top combos, and what's queued on the
    server. Data from a new API endpoint reading the committed Breaker files. Same look as the main site. Kyle checks
