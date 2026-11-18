@@ -1,7 +1,7 @@
 #!/bin/bash
 # What is running where: the server's own work plus the latest check-in from each job on Kyle's PC.
 # Run on the server (ssh whetstone ~/phaph/engine/tools/status.sh, or ask the "Whetstone server" session for "status").
-# PC jobs check in with engine/tools/pc_report.sh; a PC job with no news for 30+ minutes probably stopped
+# PC jobs check in with engine/tools/pc_report.sh; a PC job with no news for 60+ minutes probably stopped
 # (PC off or power cut). Results of PC jobs land in the repo (pushed) when they finish.
 now=$(date +%s)
 echo "== Server ($(hostname), $(TZ=America/Mazatlan date '+%a %H:%M') Mazatlan)"
@@ -24,6 +24,6 @@ for f in "${files[@]}"; do
   age=$(( (now - $(stat -c %Y "$f")) / 60 ))
   state=$(cat "$f")
   flag=""
-  case "$state" in *finished*|*stopped*) ;; *) [ "$age" -ge 30 ] && flag="  <- no news for ${age} min: PC off or job stuck?";; esac
+  case "$state" in *finished*|*stopped*) ;; *) [ "$age" -ge 60 ] && flag="  <- no news for ${age} min: PC off or job stuck?";; esac
   echo "  $(basename "$f" .status): $state (${age} min ago)$flag"
 done
