@@ -1,0 +1,35 @@
+59 skills scanned; 318 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +   24% (+24% above usual)  Oil Grenade                  when enemy is Moving
+  +   23% (+23% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
+  +   23% (+23% above usual)  High Velocity Rounds         when enemy is ArmourBroken
+  +   23% (+23% above usual)  Flash Grenade                when enemy is Moving
+  +   22% (+22% above usual)  Snipe                        when enemy is ArmourBroken
+  +   21% (+21% above usual)  Cluster Grenade              when enemy is Moving
+  +   20% (+20% above usual)  Supercharged Slam            when enemy is ArmourBroken
+  +   19% (+19% above usual)  High Velocity Rounds         when enemy is Moving
+  +   18% (+18% above usual)  Sunder                       when enemy is ArmourBroken
+  +   18% (+18% above usual)  Oil Grenade                  when enemy is ArmourBroken
+  +   16% (+16% above usual)  Supercharged Slam            when enemy is Moving
+  +   16% (+16% above usual)  Flash Grenade                when enemy is ArmourBroken
+  +   15% (+15% above usual)  Snipe                        when enemy is Moving
+Conditions that matter to the most skills:
+  OnShockedGround             57 skills, best: Plasma Blast +30%, Boneshatter +20%, Detonating Arrow +20%
+  Shocked                     57 skills, best: Plasma Blast +30%, Boneshatter +20%, Detonating Arrow +20%
+  CriticalWeakness            57 skills, best: Supercharged Slam +18%, Snipe +16%, Oil Grenade +16%
+  Intimidated                 57 skills, best: Boneshatter +10%, Detonating Arrow +10%, Artillery Ballista +10%
+  CoveredInAsh                49 skills, best: Detonating Arrow +17%, Perfect Strike +14%, Volcanic Fissure +13%
+  OnProfaneGround             11 skills, best: Forge Hammer +11%, Molten Blast +11%, Rolling Slam +11%
+  ArmourBroken                10 skills, best: Poisonburst Arrow +23%, High Velocity Rounds +23%, Snipe +22%
+  Crushed                      9 skills, best: Supercharged Slam +12%, High Velocity Rounds +12%, Sunder +10%
+  Moving                       6 skills, best: Oil Grenade +24%, Flash Grenade +23%, Cluster Grenade +21%
+  Electrocuted                 1 skills, best: Siege Cascade +101%
+  Frozen                       1 skills, best: Siege Cascade +101%
+  HeavyStunned                 1 skills, best: Siege Cascade +101%
+  Immobilised                  1 skills, best: Siege Cascade +101%
+  Pinned                       1 skills, best: Siege Cascade +101%

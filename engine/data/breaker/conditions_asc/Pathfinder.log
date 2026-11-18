@@ -1,0 +1,67 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Elemental Sundering               2,619  OnShockedGround +20%, Shocked +20%, CriticalWeakness +10%
+  Detonating Arrow                 17,868  OnShockedGround +20%, Shocked +20%, CoveredInAsh +17%
+  Electrocuting Arrow              23,311  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Blood Hunt                       11,225  ArmourBroken +29%, OnShockedGround +20%, Shocked +20%
+  Cull The Weak                     9,208  ArmourBroken +32%, OnShockedGround +20%, Shocked +20%
+  Disengage                         7,241  ArmourBroken +23%, CriticalWeakness +20%, OnShockedGround +20%
+  Escape Shot                      11,519  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Explosive Spear                  12,572  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Freezing Salvo                   13,167  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Fangs of Frost                   31,299  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Gas Arrow                         7,394  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Fragments Of The Past            10,020  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Ice Shot                         27,204  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Lightning Arrow                  19,073  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Glacial Lance                    25,352  OnShockedGround +20%, Shocked +20%, CoveredInFrost +14%
+  Lightning Rod                    12,622  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Magnetic Salvo                    6,647  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Lightning Spear                  23,742  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Poisonburst Arrow                 9,572  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Rain of Arrows                   85,842  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Primal Strikes                   17,385  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Rake                              7,319  Moving +34%, CriticalWeakness +24%, ArmourBroken +23%
+  Rapid Assault                     3,040  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Shield Wall                      13,892  OnShockedGround +20%, Shocked +20%, ArmourBroken +15%
+  Shockchain Arrow                 13,048  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Shockwave Totem                   2,115  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Snipe                             3,241  ArmourBroken +22%, OnShockedGround +20%, Shocked +20%
+  Spearfield                        5,459  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Spear of Solaris                 20,788  OnShockedGround +20%, Shocked +20%, CoveredInAsh +18%
+  Spiral Volley                     9,043  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Storm Lance                      10,645  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Stormcaller Arrow                 4,275  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Thunderous Leap                  17,170  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Tornado Shot                     14,836  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Toxic Growth                      4,834  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Twister                           7,616  ArmourBroken +31%, OnShockedGround +20%, Shocked +20%
+  Vine Arrow                       15,749  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Voltaic Barrier                   4,445  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Whirlwind Lance                   7,829  ArmourBroken +28%, OnShockedGround +20%, Shocked +20%
+  Whirling Slash                    6,367  ArmourBroken +36%, OnShockedGround +20%, Shocked +20%
+  Wind Serpent's Fury              12,151  OnShockedGround +20%, Shocked +20%, ArmourBroken +19%
+41 skills scanned; 231 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   36% (+36% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   34% (+34% above usual)  Rake                         when enemy is Moving
+  +   32% (+32% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   31% (+31% above usual)  Twister                      when enemy is ArmourBroken
+  +   29% (+29% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   28% (+28% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   23% (+23% above usual)  Disengage                    when enemy is ArmourBroken
+  +   23% (+23% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
+  +   23% (+23% above usual)  Rake                         when enemy is ArmourBroken
+  +   22% (+22% above usual)  Snipe                        when enemy is ArmourBroken
+  +   19% (+19% above usual)  Wind Serpent's Fury          when enemy is ArmourBroken
+  +   15% (+15% above usual)  Snipe                        when enemy is Moving
+Conditions that matter to the most skills:
+  CriticalWeakness            41 skills, best: Rake +24%, Disengage +20%, Cull The Weak +18%
+  OnShockedGround             41 skills, best: Elemental Sundering +20%, Detonating Arrow +20%, Electrocuting Arrow +20%
+  Shocked                     41 skills, best: Elemental Sundering +20%, Detonating Arrow +20%, Electrocuting Arrow +20%
+  Intimidated                 41 skills, best: Elemental Sundering +10%, Detonating Arrow +10%, Electrocuting Arrow +10%
+  CoveredInAsh                28 skills, best: Spear of Solaris +18%, Detonating Arrow +17%, Explosive Spear +12%
+  OnProfaneGround             13 skills, best: Rake +10%, Disengage +8%, Snipe +8%
+  ArmourBroken                11 skills, best: Whirling Slash +36%, Cull The Weak +32%, Twister +31%
+  Crushed                     11 skills, best: Blood Hunt +14%, Cull The Weak +14%, Whirling Slash +14%
+  Moving                       3 skills, best: Rake +34%, Snipe +15%, Disengage +15%
+  CoveredInFrost               1 skills, best: Glacial Lance +14%

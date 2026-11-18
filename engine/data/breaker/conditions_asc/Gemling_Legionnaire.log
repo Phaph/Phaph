@@ -1,0 +1,95 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Boneshatter                      21,196  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Armour Breaker                   22,265  
+  Detonating Arrow                 17,868  OnShockedGround +20%, Shocked +20%, CoveredInAsh +17%
+  Artillery Ballista                1,433  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Cluster Grenade                   4,036  Moving +21%, OnShockedGround +20%, Shocked +20%
+  Armour Piercing Rounds           84,035  
+  Earthquake                       10,576  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Earthshatter                     12,720  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Electrocuting Arrow              23,311  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Escape Shot                      11,519  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Explosive Grenade                29,532  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Explosive Shot                   24,030  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Forge Hammer                      7,549  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Flash Grenade                     4,699  Moving +23%, OnShockedGround +20%, Shocked +20%
+  Fragmentation Rounds              6,457  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Fragments Of The Past            10,020  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Freezing Salvo                   13,167  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Galvanic Shards                   5,222  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Gas Arrow                         7,394  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Gas Grenade                       7,974  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Hammer of the Gods               39,629  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Hailstorm Rounds                 24,608  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Glacial Bolt                     13,841  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  High Velocity Rounds             12,025  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Ice Shot                         27,204  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Ice Shards                       29,232  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Leap Slam                        23,177  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Incendiary Shot                   3,605  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Lightning Arrow                  19,073  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Lightning Rod                    12,622  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Molten Blast                     23,411  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Magnetic Salvo                    6,647  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Perfect Strike                   35,032  OnShockedGround +20%, Shocked +20%, CoveredInAsh +14%
+  Oil Grenade                       5,997  Moving +24%, OnShockedGround +20%, Shocked +20%
+  Permafrost Bolts                  4,186  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Plasma Blast                    104,442  OnShockedGround +30%, Shocked +30%, CoveredInAsh +10%
+  Poisonburst Arrow                 9,572  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Rain of Arrows                   85,842  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Rolling Slam                      3,100  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Rapid Shot                      149,481  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Shield Wall                      13,892  OnShockedGround +20%, Shocked +20%, ArmourBroken +15%
+  Shockchain Arrow                 13,048  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Shockburst Rounds                26,032  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Shockwave Totem                   2,115  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Siege Ballista                    2,407  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Siege Cascade                    10,176  Electrocuted +101%, Frozen +101%, HeavyStunned +101%
+  Snipe                             3,241  ArmourBroken +22%, OnShockedGround +20%, Shocked +20%
+  Spiral Volley                     9,043  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Stampede                         14,102  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Stormblast Bolts                 11,163  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Stormcaller Arrow                 4,275  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Sunder                           15,285  OnShockedGround +20%, Shocked +20%, ArmourBroken +18%
+  Supercharged Slam                37,616  ArmourBroken +20%, OnShockedGround +20%, Shocked +20%
+  Tornado Shot                     14,836  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Toxic Growth                      4,834  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Vine Arrow                       15,749  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Volcanic Fissure                 15,213  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Voltaic Barrier                   4,376  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Voltaic Grenade                  13,571  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+59 skills scanned; 318 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +   24% (+24% above usual)  Oil Grenade                  when enemy is Moving
+  +   23% (+23% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
+  +   23% (+23% above usual)  High Velocity Rounds         when enemy is ArmourBroken
+  +   23% (+23% above usual)  Flash Grenade                when enemy is Moving
+  +   22% (+22% above usual)  Snipe                        when enemy is ArmourBroken
+  +   21% (+21% above usual)  Cluster Grenade              when enemy is Moving
+  +   20% (+20% above usual)  Supercharged Slam            when enemy is ArmourBroken
+  +   19% (+19% above usual)  High Velocity Rounds         when enemy is Moving
+  +   18% (+18% above usual)  Sunder                       when enemy is ArmourBroken
+  +   18% (+18% above usual)  Oil Grenade                  when enemy is ArmourBroken
+  +   16% (+16% above usual)  Supercharged Slam            when enemy is Moving
+  +   16% (+16% above usual)  Flash Grenade                when enemy is ArmourBroken
+  +   15% (+15% above usual)  Snipe                        when enemy is Moving
+Conditions that matter to the most skills:
+  OnShockedGround             57 skills, best: Plasma Blast +30%, Boneshatter +20%, Detonating Arrow +20%
+  Shocked                     57 skills, best: Plasma Blast +30%, Boneshatter +20%, Detonating Arrow +20%
+  CriticalWeakness            57 skills, best: Supercharged Slam +18%, Snipe +16%, Oil Grenade +16%
+  Intimidated                 57 skills, best: Boneshatter +10%, Detonating Arrow +10%, Artillery Ballista +10%
+  CoveredInAsh                49 skills, best: Detonating Arrow +17%, Perfect Strike +14%, Volcanic Fissure +13%
+  OnProfaneGround             11 skills, best: Forge Hammer +11%, Molten Blast +11%, Rolling Slam +11%
+  ArmourBroken                10 skills, best: Poisonburst Arrow +23%, High Velocity Rounds +23%, Snipe +22%
+  Crushed                      9 skills, best: Supercharged Slam +12%, High Velocity Rounds +12%, Sunder +10%
+  Moving                       6 skills, best: Oil Grenade +24%, Flash Grenade +23%, Cluster Grenade +21%
+  Electrocuted                 1 skills, best: Siege Cascade +101%
+  Frozen                       1 skills, best: Siege Cascade +101%
+  HeavyStunned                 1 skills, best: Siege Cascade +101%
+  Immobilised                  1 skills, best: Siege Cascade +101%
+  Pinned                       1 skills, best: Siege Cascade +101%

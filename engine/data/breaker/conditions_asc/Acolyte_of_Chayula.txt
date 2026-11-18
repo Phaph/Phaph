@@ -1,0 +1,16 @@
+19 skills scanned; 92 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   26% (+26% above usual)  Flicker Strike               when enemy is ArmourBroken
+  +   22% (+22% above usual)  Vaulting Impact              when enemy is Moving
+  +   21% (+21% above usual)  Vaulting Impact              when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  CriticalWeakness            16 skills, best: Tempest Bell +21%, Killing Palm +15%, Vaulting Impact +15%
+  OnShockedGround             16 skills, best: Frozen Locus +20%, Ice Strike +20%, Flicker Strike +20%
+  Shocked                     16 skills, best: Frozen Locus +20%, Ice Strike +20%, Flicker Strike +20%
+  Intimidated                 16 skills, best: Frozen Locus +10%, Ice Strike +10%, Flicker Strike +10%
+  CoveredInAsh                13 skills, best: Whirling Assault +11%, Siphoning Strike +11%, Killing Palm +11%
+  OnProfaneGround              5 skills, best: Tempest Bell +13%, Siphoning Strike +12%, Whirling Assault +12%
+  ArmourBroken                 3 skills, best: Flicker Strike +26%, Vaulting Impact +21%, Gathering Storm +12%
+  Crushed                      3 skills, best: Flicker Strike +14%, Vaulting Impact +11%, Gathering Storm +7%
+  CoveredInFrost               3 skills, best: Ice Strike +12%, Glacial Cascade +12%, Wave of Frost +12%
+  Moving                       1 skills, best: Vaulting Impact +22%

@@ -1,0 +1,25 @@
+41 skills scanned; 231 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   36% (+36% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   34% (+34% above usual)  Rake                         when enemy is Moving
+  +   32% (+32% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   31% (+31% above usual)  Twister                      when enemy is ArmourBroken
+  +   29% (+29% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   28% (+28% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   23% (+23% above usual)  Disengage                    when enemy is ArmourBroken
+  +   23% (+23% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
+  +   23% (+23% above usual)  Rake                         when enemy is ArmourBroken
+  +   22% (+22% above usual)  Snipe                        when enemy is ArmourBroken
+  +   19% (+19% above usual)  Wind Serpent's Fury          when enemy is ArmourBroken
+  +   15% (+15% above usual)  Snipe                        when enemy is Moving
+Conditions that matter to the most skills:
+  CriticalWeakness            41 skills, best: Rake +24%, Disengage +20%, Cull The Weak +18%
+  OnShockedGround             41 skills, best: Elemental Sundering +20%, Detonating Arrow +20%, Electrocuting Arrow +20%
+  Shocked                     41 skills, best: Elemental Sundering +20%, Detonating Arrow +20%, Electrocuting Arrow +20%
+  Intimidated                 41 skills, best: Elemental Sundering +10%, Detonating Arrow +10%, Electrocuting Arrow +10%
+  CoveredInAsh                28 skills, best: Spear of Solaris +18%, Detonating Arrow +17%, Explosive Spear +12%
+  OnProfaneGround             13 skills, best: Rake +10%, Disengage +8%, Snipe +8%
+  ArmourBroken                11 skills, best: Whirling Slash +36%, Cull The Weak +32%, Twister +31%
+  Crushed                     11 skills, best: Blood Hunt +14%, Cull The Weak +14%, Whirling Slash +14%
+  Moving                       3 skills, best: Rake +34%, Snipe +15%, Disengage +15%
+  CoveredInFrost               1 skills, best: Glacial Lance +14%

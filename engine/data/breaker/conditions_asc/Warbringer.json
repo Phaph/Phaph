@@ -1,0 +1,207 @@
+{
+ "skills": {
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 22265
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 7549
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 12720
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.112,
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.098,
+    "Crushed": 0.066,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 39629
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 21196
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10576
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 23177
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3100
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 35032
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 23411
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14102
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.15,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.069,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13669
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.205,
+    "CriticalWeakness": 0.159,
+    "Crushed": 0.123,
+    "Intimidated": 0.1,
+    "Moving": 0.158,
+    "OnProfaneGround": 0.113,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 36394
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.185,
+    "CoveredInAsh": 0.064,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.102,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 15285
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 15213
+  }
+ },
+ "updated": "2026-11-18 18:13"
+}
