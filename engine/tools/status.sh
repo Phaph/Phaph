@@ -12,6 +12,9 @@ echo "  player builds running or queued: ${active:-?}"
 pgrep -f "claude -p" >/dev/null && echo "  a scheduled Claude routine is running (morning report / research)"
 tmux has-session -t whetstone 2>/dev/null && echo "  Claude session 'Whetstone server' (Remote Control) is up"
 echo "  scheduled: $(crontab -l 2>/dev/null | grep -c routines/) routine(s): $(crontab -l 2>/dev/null | grep -o 'routines/[a-z_]*' | tr '\n' ' ')"
+shopt -s nullglob
+for f in ~/server_jobs/*.status; do echo "  $(basename "$f" .status): $(cat "$f")"; done
+[ -s ~/routines/pending.txt ] && echo "  waiting for the 8 am report: $(wc -l < ~/routines/pending.txt) message(s) held back in quiet hours"
 echo
 echo "== Kyle's PC (last check-in per job)"
 shopt -s nullglob

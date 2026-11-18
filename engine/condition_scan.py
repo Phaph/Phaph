@@ -10,6 +10,7 @@ Conditions the build already assumes (auto_config: things it keeps up itself) re
 something the skill needs from elsewhere.
 
   python condition_scan.py run [--workers 6] [--out data/breaker/conditions.json]   (resumable)
+  python condition_scan.py run --class Ranger --ascendancy Deadeye --out ...   (that class's weapons and ascendancy)
   python condition_scan.py report data/breaker/conditions.json
 """
 from __future__ import annotations
@@ -32,7 +33,7 @@ def conditions(pob_src: Path) -> list[str]:
     return sorted(set(re.findall(r'var = "(conditionEnemy[A-Za-z]+)"', text)) - {"conditionEnemyRareOrUnique"})
 
 
-def run(workers: int, out: Path) -> None:
+def run(workers: int, out: Path, cls: str | None = None, asc: str | None = None) -> None:
     import generate as g
     from gear import make_stage
     from optimize import total_dps
@@ -41,6 +42,8 @@ def run(workers: int, out: Path) -> None:
     conds = conditions(POB_SRC)
     with PoB() as p:
         catalog = p.send("skill_catalog")["skills"]
+        classes = p.list_classes()
+    g._ALL_ASCS[:] = [(c["name"], a) for c in classes for a in c["ascendancies"]]
     skills = g.main_skills(catalog, {})
     done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"skills": {}}
     todo = [s for s in skills if s["name"] not in done["skills"]]
@@ -49,9 +52,14 @@ def run(workers: int, out: Path) -> None:
     lock = threading.Lock()
 
     def one(s):
-        w, sub, off = (g.weapon_options(s, {}) or [(None, None, None)])[0]
-        c = g.Candidate(s["name"], w, sub, off, g.DEFAULT_CLASS.get("Minion" if "Minion" in s["types"] else
-                        "Spell" if "Spell" in s["types"] else "", "Mercenary"), is_minion="Minion" in s["types"],
+        opts = g.weapon_options(s, {})
+        if cls:   # per class: only the class's own weapons (data/class_weapons.json); skills it can't use are skipped
+            opts = [o for o in opts if g.weapon_ok({}, cls, asc, o[0], o[1])]
+            if not opts:
+                return
+        w, sub, off = (opts or [(None, None, None)])[0]
+        c = g.Candidate(s["name"], w, sub, off, cls or g.DEFAULT_CLASS.get("Minion" if "Minion" in s["types"] else
+                        "Spell" if "Spell" in s["types"] else "", "Mercenary"), asc, is_minion="Minion" in s["types"],
                         totem=s.get("totem"))
         c = g.evaluate(c, stage, {}, tree=False)
         rec = {"weapon": g.weapon_key(w, sub), "class": c.cls, "error": c.error, "gains": {}}
@@ -122,9 +130,10 @@ def report(d: dict, top: int = 30) -> str:
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "run":
-        workers = int(sys.argv[sys.argv.index("--workers") + 1]) if "--workers" in sys.argv else 6
-        out = Path(sys.argv[sys.argv.index("--out") + 1]) if "--out" in sys.argv else OUT
-        run(workers, out)
+        arg = lambda k: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else None
+        workers = int(arg("--workers") or 6)
+        out = Path(arg("--out")) if arg("--out") else OUT
+        run(workers, out, arg("--class"), arg("--ascendancy"))
     elif cmd == "report":
         print(report(json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))))
     else:
