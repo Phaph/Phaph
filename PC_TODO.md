@@ -97,3 +97,9 @@ old results are archived and each use treats them differently:
 # 1.0 update
 
 The plan and checklist for moving to PoE 2 1.0 (new tree, gems, items) without breaking the live site: `LAUNCH_1.0.md`.
+
+## Mageblood (with the planned average-roll fix)
+Kyle 2026-11-18: a "More loot" build with Mageblood got Jade + Stibnite (evasion, ~2x toughness) instead of Legacy of
+Gold (+45% rarity): rarity is weighted low (goals.weights: +15% rarity ~ +6% damage). When fixing Mageblood (judge by
+an average random roll, list legacies to hunt for), a ticked goal guarantees its legacy: More loot -> Gold, Faster
+mapping -> Quicksilver; the other slots by score.
