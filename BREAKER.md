@@ -172,3 +172,19 @@ runner.lua caps the main skill's uses per second for skills like this, everywher
 Saved Stormweaver Hexblast: 4.34M -> 352K. Deadeye now picks Rain of Arrows with a bow. Next candidates for a usage
 limit: Detonate Dead (needs a corpse each cast; bosses leave none; it became the Deadeye's boss skill) and Ember
 Fusillade. Each limit is an estimate: in-game test requests to Kyle.
+
+### Condition scan, first run (2026-11-18, server)
+`engine/condition_scan.py run` built 166 main-capable skills the round-1 way and switched on each of PoB's 56 enemy
+conditions alone (data/breaker/conditions.json; `report` separates general boosts, e.g. Shocked +20% for everything,
+from payoffs that gain far more than usual).
+- **It rediscovered a historical broken build blind: Lightning Conduit +68% vs Shocked** (usual +20%). The research
+  lists Lightning Conduit per 5% Shock as a 0.1 broken build (group A). The detector shape works.
+- **Armour Broken is the biggest combo family:** 39 physical skills gain +23% to +49% (Detonate Living, Unearth, Wolf
+  Pack, Whirling Slash, Skeletal Reaver, Cull the Weak, Twister, Seismic Cry, Entangle, Blood Hunt, Flicker Strike...).
+  Setup = an armour-breaking skill; payoff = these. First target for the combo finder's scoring.
+- **Siege Cascade +101% vs any immobilised enemy** (frozen, pinned, electrocuted, heavy stunned): doubles damage.
+- **Dark Effigy +100% vs Poisoned.**
+- Gaps: Frozen moves only Siege Cascade, so PoB doesn't model "consume the Freeze" payoffs (Fragmentation Rounds etc.)
+  through this condition; those need text-based pairing and our own estimate.
+Next: combo finder step 2 (pair each payoff with skills that apply its condition, score setup time + uptime), then
+plug into Whetstone (combo mode, boss/mapping picks) and run it on patch day.
