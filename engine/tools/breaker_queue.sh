@@ -1,6 +1,8 @@
 #!/bin/bash
 # Breaker job queue on the server: long unattended scans, one after another, no Claude usage.
 # Progress shows in status.sh (~/server_jobs/breaker-queue.status). Results are committed and pushed at the end.
+# Run it from its own clone (~/breaker), never from ~/phaph, where the interactive "Whetstone server" session works:
+#   git clone -b <branch> git@github.com:Phaph/Phaph.git ~/breaker   (once), then  cd ~/breaker && git pull
 # Phone (ntfy): only when the queue finishes or a step fails, and never 10 pm - 8 am Mazatlan (then the message waits in
 # ~/routines/pending.txt for the 8 am report).
 #   nohup ~/phaph/engine/tools/breaker_queue.sh > ~/breaker_queue.log 2>&1 &
@@ -47,9 +49,22 @@ done
 for f in "$OUT"/*.json; do
   run "python condition_scan.py report /app/engine_src/${f#engine/}" > "${f%.json}.txt" 2>&1
 done
+save() {   # commit only this job's files, then push (rebasing on whatever else was pushed meanwhile)
+  git add "$@" && git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q -m "$MSG
 
-git add "$OUT" && git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q -m "Breaker: condition scan per ascendancy ($n ascendancies)
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -- "$@" && git pull -q --rebase && git push -q
+}
+MSG="Breaker: condition scan per ascendancy ($n ascendancies)" save "$OUT"
 
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && git push -q
-state "finished: condition scan per ascendancy, $n ascendancies, $failed failed"
-notify "Breaker queue finished: condition scan for all $n ascendancies ($failed failed). Results pushed; details in the 8 am report."
+# Job 2: unique x skill and keystone x skill matrix (engine/matrix_scan.py).
+state "unique and keystone x skill matrix: running"
+M=engine/data/breaker/matrix.json
+if run "python matrix_scan.py run --workers $CPUS --out /app/engine_src/data/breaker/matrix.json" > engine/data/breaker/matrix.log 2>&1; then
+  run "python matrix_scan.py report /app/engine_src/data/breaker/matrix.json" > engine/data/breaker/matrix.txt 2>&1
+  MSG="Breaker: unique and keystone x skill matrix" save "$M" engine/data/breaker/matrix.txt
+else
+  failed=$((failed + 1)); notify "Breaker queue: the unique x skill matrix failed (engine/data/breaker/matrix.log)."
+fi
+
+state "finished: condition scan per ascendancy ($n) and unique/keystone x skill matrix, $failed failed"
+notify "Breaker queue finished: condition scans for $n ascendancies and the unique/keystone x skill matrix ($failed failed). Results pushed; details in the 8 am report."

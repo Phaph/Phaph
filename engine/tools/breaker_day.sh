@@ -63,5 +63,5 @@ fi
 git add "$DAY" $B/text_scan.json 2>/dev/null
 git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q -m "Breaker day run $(date +%F)
 
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" && git push -q
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -- "$DAY" $B/text_scan.json && git pull -q --rebase && git push -q
 echo "$(date -u +%FT%TZ) Breaker day run finished: $DAY/SUMMARY.md"
