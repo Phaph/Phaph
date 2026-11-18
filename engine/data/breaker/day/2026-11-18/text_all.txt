@@ -1,0 +1,56 @@
+1562 flagged lines (PoB 0.23.1, patch 0_5)
+by group: A 80, B 227, D 574, E 95, F 314, G 166, H 72, J 178
+  [6] DE    gem        Fragments Of The Past            Initial eruption Triggers Ice Fragments with
+2 additional Projectiles  (PoB can't calculate)
+  [6] EJ    gem        Freezing Salvo                   Modifiers to number of Projectiles instead apply to the number of times this skill Repeats  (PoB can't calculate)
+  [6] AD    gem        Repulsion                        10% more Stun buildup on Hit
+per Fragility on the target  (PoB can't calculate)
+  [6] AD    gem        Shred                            Triggers Ice Fragments on Hit against
+Frozen enemies, no more than once per use  (PoB can't calculate)
+  [6] AD    gem        Shred                            Triggers Ice Fragments on Hit against
+Frozen enemies, no more than once per use  (PoB can't calculate)
+  [6] AD    gem        Shred                            Triggers Ice Fragments on Hit against
+Frozen enemies, no more than once per use  (PoB can't calculate)
+  [6] AB    gem        Spell Totem                      Socketed Skills deal 10% more
+damage per Power Charge Consumed  (PoB can't calculate)
+  [6] EJ    support    Echoing Cry                      Supported Skills become usable after you have moved 10 metres
+Supported Skills become unusable again after use  (PoB can't calculate)
+  [6] EJ    support    Hit and Run                      Supported Skills become usable after you have moved 10 metres
+Supported Skills become unusable again after use  (PoB can't calculate)
+  [6] EG    support    Kalisa's Crescendo               Enemies Pacified this way cannot be Pacified again for 8 seconds  (PoB can't calculate)
+  [5] A     gem        Align Fate                       25% more Visage frequency per Spell Visages could cast  (PoB can't calculate)
+  [5] A     gem        Blood Boil                       20% more Corrupted Blood infliction Area of Effect
+per Blood Boil on slain Enemy  (PoB can't calculate)
+  [5] E     gem        Comet                            (0-10)% chance to Echo  (PoB can't calculate)
+  [5] A     gem        Crushing Fear                    5% more Area of Effect per Power of killed target  (PoB can't calculate)
+  [5] A     gem        Crushing Fear                    10% more Damage per Power of killed target  (PoB can't calculate)
+  [5] A     gem        Frostflame Nova                  10% more Freeze Buildup for each 1% of enemy's Ailment Threshold dealt by the affected Ignite per second  (PoB can't calculate)
+  [5] A     gem        Gemini Surge                     No more than once per Skill use  (PoB can't calculate)
+  [5] A     gem        Gemini Surge                     No more than once per Skill use  (PoB can't calculate)
+  [5] A     gem        Hexblast                         (0-10)% more Damage per 1 second of remaining duration on removed Curse  (PoB can't calculate)
+  [5] A     gem        Infernal Cry                     Deals 10% more Fire Damage per 1 Power of exploding Corpse  (PoB can't calculate)
+  [5] E     gem        Lightning Conduit                2 additional bolts if a Shocked enemy is in the target area  (PoB can't calculate)
+  [5] E     gem        Moment of Vulnerability          10 second delay before enemy can be affected again  (PoB can't calculate)
+  [5] EFG   gem        Plasma Blast                     Channel to charge an unstable bolt. The bolt deals devastating damage and explodes on hitting terrain, but can
+  [5] E     gem        Primal Bounty                    Empowered Skills fire 2 additional Projectiles
+Empowered Skills have 68% increased Projectile speed  (PoB can't calculate)
+  [5] A     gem        Refutation                       5% more Stun Threshold while Buff is active per 10 Runic Ward spent  (PoB can't calculate)
+  [5] A     gem        Rite of Restoration              Buff grants 14% more Armour, Evasion and Energy Shield per Stage  (PoB can't calculate)
+  [5] A     gem        Savage Fury                      Gain 1 Fury on Attack Hit, no
+more than once per Skill use  (PoB can't calculate)
+  [5] A     gem        Shattering Spite                 Explosions deal 20% more Damage per Bloodstone Lance  (PoB can't calculate)
+  [5] E     gem        Skyfall                          (0-10)% chance to Echo  (PoB can't calculate)
+  [5] A     gem        Spell Totem                      20% more Totem life per Endurance Charge Consumed  (PoB can't calculate)
+  [5] A     gem        Spell Totem                      20% more Totem duration per Endurance Charge Consumed  (PoB can't calculate)
+  [5] A     gem        Spirit Vessel                    Spirit Vessel deals 20% more Damage per different socketed Skill  (PoB can't calculate)
+  [5] A     gem        Tempest Bell                     30% more Area of Effect per 0.1 metres of
+Knockback the triggering Hit would have caused  (PoB can't calculate)
+  [5] A     gem        Tempest Bell                     Shockwave deals (0-3)% more Damage per Hit taken by Bell  (PoB can't calculate)
+  [5] A     gem        Thrashing Vines                  Vines grow facing nearby targets, no more than once per
+0.5 seconds for each target  (PoB can't calculate)
+  [5] A     gem        Volcano                          150% more Eruption damage per additional Stage  (PoB can't calculate)
+  [5] E     gem        Volcano                          Initial eruption fires 4 additional
+Projectiles per additional Stage  (PoB can't calculate)
+  [5] E     gem        Wardbound Minions                Summon one Wardbound Minion on Skill use and an additional Minion for each additional 59 Runic Ward spent  (PoB can't calculate)
+  [5] A     gem        Whirling Slash                   10% more Knockback distance per stage  (PoB can't calculate)
+  [5] A     gem        Whirlwind Lance                  10% more Knockback distance per stage  (PoB can't calculate)
