@@ -317,7 +317,11 @@ footer { position: relative; z-index: 1; font-size: 15px; color: var(--faint); p
 .cand.best .name, .cand.best .score { color: var(--brass-hi); }
 .cand.best .bar i { background: linear-gradient(90deg, var(--ember), var(--brass-hi)); box-shadow: 0 0 10px rgba(232,115,58,.45); }
 .lanes { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
-@media (max-width: 760px) { .lanes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+/* A build's seven stages: Campaign (4) over Endgame (3), same card width, so no card is left alone on a row. */
+.lanegroups { display: grid; gap: 14px; }
+.lanegroup { display: grid; gap: 6px; }
+.lanes.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 760px) { .lanes, .lanes.four { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 /* Each stage is an anvil: it heats while worked, and cools to brass when done. */
 .lane { position: relative; border: 1px solid var(--edge); border-radius: 3px; padding: 14px; display: grid; gap: 8px; align-content: start; min-width: 0;
   background: linear-gradient(180deg, var(--iron2), var(--iron)); box-shadow: inset 0 1px 0 rgba(255,236,200,.06), 0 3px 0 var(--seam);
@@ -578,7 +582,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-18.5";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-18.6";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -1010,6 +1014,25 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   const loadTree = () => treeData ? Promise.resolve(treeData)
     : fetch(API + "/tree/data").then(r => r.json()).then(d => (treeData = d)).catch(() => null);
   let brain = null, fire = null;
+  // The live stage cards. A full guide's seven stages sit in two labelled rows, Campaign over Endgame; anything else
+  // (comparing builds) is one row.
+  const CAMPAIGN = ["act1", "act2", "act34", "interludes"], ENDGAME = ["early", "mid", "end"];
+  function laneCard(k, names) {
+    return `<div class="lane" data-stage="${k}">
+          <span class="lname">${esc(names[k] || k)}</span>
+          <span class="ldps" data-v="0">–</span>
+          <span class="pips">${STEP_ORDER.slice(1).map(() => "<i></i>").join("")}</span>
+          <span class="lstep">Waiting for a free anvil…</span>
+          <div class="notables"></div></div>`;
+  }
+  function laneGroups(stages, names) {
+    const camp = stages.filter(k => CAMPAIGN.includes(k)), end = stages.filter(k => ENDGAME.includes(k));
+    if (!camp.length || !end.length || camp.length + end.length !== stages.length)
+      return `<div class="lanes">${stages.map(k => laneCard(k, names)).join("")}</div>`;
+    const row = (label, keys) => `<div class="lanegroup"><span class="eyebrow">${label}</span>
+          <div class="lanes four">${keys.map(k => laneCard(k, names)).join("")}</div></div>`;
+    return `<div class="lanegroups">${row("Campaign", camp)}${row("Endgame", end)}</div>`;
+  }
 
   const work = {
     el: () => $("work"),
@@ -1118,12 +1141,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
           <pre class="brain-feed" id="brainFeed" aria-live="off"></pre>
           <span class="brain-hint">Click a stage below to watch it</span>
         </div>`}
-        <div class="lanes">${stages.map(k => `<div class="lane" data-stage="${k}">
-          <span class="lname">${esc(names[k] || k)}</span>
-          <span class="ldps" data-v="0">–</span>
-          <span class="pips">${STEP_ORDER.slice(1).map(() => "<i></i>").join("")}</span>
-          <span class="lstep">Waiting for a free anvil…</span>
-          <div class="notables"></div></div>`).join("")}</div>`;
+        ${laneGroups(stages, names)}`;
       workSigil?.stop(); workSigil = opt.cls ? sigil(w.querySelector(".sigil-cv"), opt.cls) : null;
       this.mountAnvil("guide");
       this.startFire();
@@ -1201,7 +1219,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
       if (e.step === "done") fire?.bump(0.5);
       if (e.step === "passive") {
         const box = lane.querySelector(".notables");
-        if (box.children.length < 14) {
+        if (box.children.length < 6) {   // the first few, then "+N more", so the cards stay short
           const n = document.createElement("span");
           n.className = "notable" + (e.ascendancy ? " asc" : ""); n.textContent = e.label; n.title = e.label;
           // Passives arrive a poll at a time; stagger them so each one lands on its own.
