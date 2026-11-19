@@ -4,6 +4,15 @@ The "Whetstone server" session works through this list on its own, top to bottom
 Friday ~5 am Mazatlan). Kyle wants to use the remaining usage fully: keep going task after task. Kyle can watch and
 steer from the Claude app (Remote Control).
 
+## Credit plan until the Friday ~5 am reset (Kyle, 2026-11-19)
+Usage is nearly out. Automated jobs carry the work; Claude check-ins stay tiny:
+- Running unattended (no Claude): `combo_scan.py ailments` (container whetstone-ailments, ~2 h, writes
+  engine/data/breaker/combos_ailments.json in ~/phaph, not committed yet), then ~/lodestone_chain.sh after the
+  current queue: blind test (task 7), conditions_asc + matrix_asc fresh (task 12), each committed by the queue.
+- On a keepalive: run status.sh once. If jobs are still running, stop there (no new work). When the ailment scan
+  has finished: commit its json + `ailments-report` text, add the top payoffs to leads.json, then stop.
+- Bigger tasks (14 rest, 15, 16) wait for the reset.
+
 ## Rules
 - Read CLAUDE.md, BREAKER_ROADMAP.md, BREAKER.md, PC_TODO.md first, and your memory notes (pc-server-split,
   phone-notifications, in-game-tests).
@@ -72,7 +81,7 @@ steer from the Claude app (Remote Control).
    away), top combos, condition payoffs, one-skill interactions (+ best-in-slot list), multiplying pairs, and the
    server queue. API GET /lodestone/data (api/lodestone.py) reads the Breaker files mounted read-only from the
    server repo, so a pull updates it without a redeploy. Engine 2026-11-19.4.
-7. [ ] Blind test against poe.ninja's top builds (tool built by this session earlier): run it, write the result into
+7. [ ] (queued in ~/lodestone_chain.sh) Blind test against poe.ninja's top builds (tool built by this session earlier): run it, write the result into
    BREAKER.md (which of today's top builds the Breaker would have flagged, which it misses and why).
 8. [x] In-game test requests: write TESTS.md entries for the strongest leads (Leopold's Applause penetration below 0;
    "not consumed" charge sources adding to 100% for Flicker Strike; Hexblast's real cast rate), each with the PoB
@@ -91,7 +100,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 11. [ ] Mageblood: judge by an average random roll; list legacies to hunt for; swap line for ticked goals ("Hunting
     for loot? Legacy of Gold (+45% rarity) can replace Stibnite: -X% toughness").
 
-12. [ ] Re-run the per-ascendancy condition and matrix scans with ascendancy passives (fixed in task 5) once the
+12. [ ] (queued in ~/lodestone_chain.sh) Re-run the per-ascendancy condition and matrix scans with ascendancy passives (fixed in task 5) once the
     Breaker queue is free: `JOBS="conditions_asc matrix_asc"` from ~/breaker after a pull.
 
 ### Lodestone build-out (added 2026-11-19, after Kyle's note)
