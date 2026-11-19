@@ -10,7 +10,7 @@ Weapon uniques are not in it yet: their local mods ("Adds X to Y") would apply g
 
   python matrix_scan.py run [--workers 6] [--out data/breaker/matrix.json]   (resumable)
   python matrix_scan.py run --class Ranger --ascendancy Deadeye --out ...   (that class's weapons and ascendancy)
-  python matrix_scan.py report data/breaker/matrix.json
+  python matrix_scan.py report data/breaker/matrix.json [more.json ...]   (within-family outliers)
 """
 from __future__ import annotations
 
@@ -57,7 +57,13 @@ def run(workers: int, out: Path, cls: str | None = None, asc: str | None = None)
                         "Spell" if "Spell" in s["types"] else "", "Mercenary"), asc, is_minion="Minion" in s["types"],
                         totem=s.get("totem"))
         c = g.evaluate(c, stage, {}, tree=False)
-        rec = {"weapon": g.weapon_key(w, sub), "error": c.error, "gains": {}}
+        asc_nodes = []
+        if asc and not c.error:
+            from breaker import ascendancy_passives
+            asc_nodes = ascendancy_passives(g._pob(), stage)
+        rec = {"weapon": g.weapon_key(w, sub), "types": sorted(s["types"]), "error": c.error, "gains": {}}
+        if asc_nodes:
+            rec["ascendancy_nodes"] = asc_nodes
         if not c.error:
             try:
                 bench = Bench(g._pob())
@@ -106,13 +112,86 @@ def outliers(d: dict, margin: float = 0.25, floor: float = 0.30) -> list[tuple[s
     return sorted(rows, key=lambda x: -x[3])
 
 
-def report(d: dict, top: int = 40) -> str:
-    rows = outliers(d)
-    out = [f"{len(d['skills'])} skills scanned. Interactions: a unique or keystone worth far more on one skill than "
-           f"usual ({len(rows)} found):"]
-    out += [f"  +{v:>6.0%} (usual +{v - x:.0%})  {k.split(':', 1)[1]:<28} on {n}  [{k.split(':')[0]}]"
-            for n, k, v, x in rows[:top]]
+KINDS = ("Minion", "Spell", "Attack")
+ELEMENTS = ("Fire", "Cold", "Lightning", "Physical", "Chaos")
+MIN_PEERS = 4
+
+
+def _family(types: set[str], weapon: str | None) -> tuple[str, str | None, frozenset]:
+    kind = next((k for k in KINDS if k in types), "Other")
+    return kind, weapon if kind == "Attack" else None, frozenset(types & set(ELEMENTS))
+
+
+def peers_of(name: str, skills: dict, types: dict[str, set[str]]) -> list[str]:
+    """Skills of the same family: same kind (minion / spell / attack), the same weapon for attacks, and at least one
+    damage type in common. Fireflower on a fire spell is compared with other fire spells, not with every skill."""
+    kind, weapon, elems = _family(types.get(name, set()), skills[name].get("weapon"))
+    out = []
+    for n, r in skills.items():
+        if n == name or r.get("error"):
+            continue
+        k2, w2, e2 = _family(types.get(n, set()), r.get("weapon"))
+        if k2 == kind and w2 == weapon and (elems & e2 or not elems and not e2):
+            out.append(n)
+    return out
+
+
+def family_outliers(d: dict, types: dict[str, set[str]] | None = None, margin: float = 0.25,
+                    floor: float = 0.30) -> list[tuple[str, str, float, float, int]]:
+    """(skill, piece, gain, gain above its family's usual, family size): a piece far better on one skill than on that
+    skill's own family. Best-in-slot for a whole family (a fire unique on fire spells, a crossbow unique on crossbow
+    skills) is not flagged; a true one-skill interaction is. Families under MIN_PEERS skills use every skill instead."""
+    skills = {n: r for n, r in d["skills"].items() if not r.get("error")}
+    types = types or {n: set(r.get("types") or []) for n, r in skills.items()}
+    rows = []
+    cache: dict[tuple, list[str]] = {}
+    for n, r in skills.items():
+        key = _family(types.get(n, set()), r.get("weapon"))
+        if key not in cache:
+            cache[key] = peers_of(n, skills, types) + [n]
+        fam = [x for x in cache[key] if x != n]
+        pool = fam if len(fam) >= MIN_PEERS else [x for x in skills if x != n]
+        for k, v in (r.get("gains") or {}).items():
+            if v < floor:
+                continue
+            vals = sorted((skills[x].get("gains") or {}).get(k, 0.0) for x in pool)
+            usual = vals[len(vals) // 2] if vals else 0.0
+            if v - usual >= margin:
+                rows.append((n, k, v, v - usual, len(fam)))
+    return sorted(rows, key=lambda x: -x[3])
+
+
+BROAD_SKILLS = 5   # strong (+30%+) on more skills than this: best-in-slot for a kind of build, not an interaction
+
+
+def strong_counts(d: dict, floor: float = 0.30) -> dict[str, int]:
+    counts: dict[str, int] = {}
+    for r in d["skills"].values():
+        for k, v in (r.get("gains") or {}).items():
+            if v >= floor:
+                counts[k] = counts.get(k, 0) + 1
+    return counts
+
+
+def report(d: dict, top: int = 40, types: dict[str, set[str]] | None = None) -> str:
+    rows = family_outliers(d, types)
+    counts = strong_counts(d)
+    one = [r for r in rows if counts.get(r[1], 0) <= BROAD_SKILLS]
+    broad = sorted({k for k, n in counts.items() if n > BROAD_SKILLS}, key=lambda k: -counts[k])
+    out = [f"{len(d['skills'])} skills scanned; {len(outliers(d))} flags against all skills, {len(rows)} against "
+           f"the skill's own family, {len(one)} on {BROAD_SKILLS} skills or fewer (true one-skill interactions).",
+           "One-skill interactions (gain vs the family's median; family size):"]
+    out += [f"  +{v:>6.0%} (family usual +{v - x:.0%}, {nf} peers)  {k.split(':', 1)[1]:<28} on {n}  [{k.split(':')[0]}]"
+            for n, k, v, x, nf in one[:top]]
+    out.append(f"Broad (+30%+ on more than {BROAD_SKILLS} skills: best-in-slot for a kind of build, not an interaction):")
+    out += [f"  {k.split(':', 1)[1]:<28} strong on {counts[k]} skills  [{k.split(':')[0]}]" for k in broad[:15]]
     return "\n".join(out)
+
+
+def load_types() -> dict[str, set[str]]:
+    from pob import PoB
+    with PoB() as p:
+        return {s["name"]: set(s["types"]) for s in p.send("skill_catalog")["skills"]}
 
 
 if __name__ == "__main__":
@@ -121,6 +200,10 @@ if __name__ == "__main__":
         arg = lambda k: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else None
         run(int(arg("--workers") or 6), Path(arg("--out")) if arg("--out") else OUT, arg("--class"), arg("--ascendancy"))
     elif cmd == "report":
-        print(report(json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))))
+        types = load_types()
+        for f in sys.argv[2:]:
+            if len(sys.argv) > 3:
+                print(f"== {Path(f).stem}")
+            print(report(json.loads(Path(f).read_text(encoding="utf-8")), types=types))
     else:
         print(__doc__)

@@ -192,6 +192,18 @@ def pieces(pob: PoB) -> list[dict]:
     return out
 
 
+def ascendancy_passives(pob: PoB, stage) -> list[str]:
+    """Round-1 builds (generate.evaluate, tree=False) take no passives at all, so an ascendancy's own passives were
+    missing and every ascendancy of a class read the same (per-ascendancy scans, found 2026-11-19). Spend just the
+    ascendancy points (greedy, on boss damage). Returns the nodes taken."""
+    from optimize import metric_for
+    if not stage.ascendancy_points:
+        return []
+    r = pob.optimise_tree(points=0, ascendancy_points=stage.ascendancy_points, def_weight=0.0,
+                          metric=metric_for("bossing"), refine=False)
+    return [x["node"] for x in r.get("steps") or []]
+
+
 class Bench:
     """One build with its biggest damage source as the main skill; applies any set of pieces and returns the gain."""
 

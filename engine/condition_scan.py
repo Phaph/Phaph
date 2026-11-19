@@ -62,7 +62,13 @@ def run(workers: int, out: Path, cls: str | None = None, asc: str | None = None)
                         "Spell" if "Spell" in s["types"] else "", "Mercenary"), asc, is_minion="Minion" in s["types"],
                         totem=s.get("totem"))
         c = g.evaluate(c, stage, {}, tree=False)
+        asc_nodes = []
+        if asc and not c.error:
+            from breaker import ascendancy_passives
+            asc_nodes = ascendancy_passives(g._pob(), stage)
         rec = {"weapon": g.weapon_key(w, sub), "class": c.cls, "error": c.error, "gains": {}}
+        if asc_nodes:
+            rec["ascendancy_nodes"] = asc_nodes
         if not c.error:
             p = g._pob()
             try:

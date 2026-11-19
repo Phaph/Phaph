@@ -1,0 +1,353 @@
+== matrix
+166 skills scanned; 141 flags against all skills, 81 against the skill's own family, 17 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   38% (family usual +0%, 2 peers)  Apron of Emiran              on Rake  [unique]
+  +   33% (family usual +0%, 0 peers)  Temporalis                   on Voltaic Grenade  [unique]
+  +   33% (family usual +0%, 7 peers)  Beacon of Azis               on Rolling Slam  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   34% (family usual +5%, 16 peers)  Loreweave                    on Flash Grenade  [unique]
+  +   50% (family usual +25%, 4 peers)  Temporalis                   on Gas Grenade  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 127 skills  [unique]
+  Irongrasp                    strong on 63 skills  [unique]
+  Ming's Heart                 strong on 29 skills  [unique]
+  Fireflower                   strong on 14 skills  [unique]
+  The Coming Calamity          strong on 13 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Abyssal_Lich
+61 skills scanned; 64 flags against all skills, 24 against the skill's own family, 13 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   31% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   33% (family usual +7%, 0 peers)  Yoke of Suffering            on Wardbound Minions  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 29 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Irongrasp                    strong on 12 skills  [unique]
+  Fireflower                   strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Acolyte_of_Chayula
+19 skills scanned; 2 flags against all skills, 2 against the skill's own family, 1 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   33% (family usual +0%, 1 peers)  Maligaro's Virtuosity        on Killing Palm  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 15 skills  [unique]
+== Amazon
+41 skills scanned; 26 flags against all skills, 18 against the skill's own family, 5 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   96% (family usual +0%, 3 peers)  The Coming Calamity          on Rapid Assault  [unique]
+  +   89% (family usual +0%, 2 peers)  The Coming Calamity          on Shockwave Totem  [unique]
+  +   38% (family usual +0%, 3 peers)  Apron of Emiran              on Rake  [unique]
+  +   35% (family usual +0%, 2 peers)  Fireflower                   on Spear of Solaris  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 40 skills  [unique]
+  Irongrasp                    strong on 26 skills  [unique]
+  Ming's Heart                 strong on 10 skills  [unique]
+== Blood_Mage
+61 skills scanned; 64 flags against all skills, 24 against the skill's own family, 13 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   31% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   33% (family usual +7%, 0 peers)  Yoke of Suffering            on Wardbound Minions  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 29 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Irongrasp                    strong on 12 skills  [unique]
+  Fireflower                   strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Chronomancer
+61 skills scanned; 64 flags against all skills, 24 against the skill's own family, 13 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   31% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   33% (family usual +7%, 0 peers)  Yoke of Suffering            on Wardbound Minions  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 29 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Irongrasp                    strong on 12 skills  [unique]
+  Fireflower                   strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Deadeye
+41 skills scanned; 26 flags against all skills, 18 against the skill's own family, 5 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   96% (family usual +0%, 3 peers)  The Coming Calamity          on Rapid Assault  [unique]
+  +   89% (family usual +0%, 2 peers)  The Coming Calamity          on Shockwave Totem  [unique]
+  +   38% (family usual +0%, 3 peers)  Apron of Emiran              on Rake  [unique]
+  +   35% (family usual +0%, 2 peers)  Fireflower                   on Spear of Solaris  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 40 skills  [unique]
+  Irongrasp                    strong on 26 skills  [unique]
+  Ming's Heart                 strong on 10 skills  [unique]
+== Disciple_of_Varashta
+61 skills scanned; 64 flags against all skills, 24 against the skill's own family, 13 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   31% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   33% (family usual +7%, 0 peers)  Yoke of Suffering            on Wardbound Minions  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 29 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Irongrasp                    strong on 12 skills  [unique]
+  Fireflower                   strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Gemling_Legionnaire
+59 skills scanned; 39 flags against all skills, 39 against the skill's own family, 6 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   35% (family usual +0%, 3 peers)  Fireflower                   on Molten Blast  [unique]
+  +   33% (family usual +0%, 0 peers)  Temporalis                   on Voltaic Grenade  [unique]
+  +   33% (family usual +0%, 7 peers)  Beacon of Azis               on Rolling Slam  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+  +   34% (family usual +5%, 16 peers)  Loreweave                    on Flash Grenade  [unique]
+  +   50% (family usual +25%, 4 peers)  Temporalis                   on Gas Grenade  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 53 skills  [unique]
+  Irongrasp                    strong on 43 skills  [unique]
+  Ming's Heart                 strong on 16 skills  [unique]
+  The Coming Calamity          strong on 8 skills  [unique]
+== Infernalist
+61 skills scanned; 64 flags against all skills, 24 against the skill's own family, 13 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   31% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   33% (family usual +7%, 0 peers)  Yoke of Suffering            on Wardbound Minions  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 29 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Irongrasp                    strong on 12 skills  [unique]
+  Fireflower                   strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Invoker
+19 skills scanned; 2 flags against all skills, 2 against the skill's own family, 1 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   33% (family usual +0%, 1 peers)  Maligaro's Virtuosity        on Killing Palm  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 15 skills  [unique]
+== Lich
+61 skills scanned; 64 flags against all skills, 24 against the skill's own family, 13 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   31% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   33% (family usual +7%, 0 peers)  Yoke of Suffering            on Wardbound Minions  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 29 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Irongrasp                    strong on 12 skills  [unique]
+  Fireflower                   strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Martial_Artist
+19 skills scanned; 2 flags against all skills, 2 against the skill's own family, 1 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   33% (family usual +0%, 1 peers)  Maligaro's Virtuosity        on Killing Palm  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 15 skills  [unique]
+== Oracle
+24 skills scanned; 10 flags against all skills, 10 against the skill's own family, 10 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   77% (family usual +0%, 3 peers)  Fireflower                   on Firestorm  [unique]
+  +   50% (family usual +0%, 3 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   42% (family usual +0%, 4 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   60% (family usual +25%, 1 peers)  Rondel of Fragility          on Cross Slash  [unique]
+  +   32% (family usual +0%, 0 peers)  Yoke of Suffering            on Flame Breath  [unique]
+  +   56% (family usual +25%, 0 peers)  Rondel of Fragility          on Conductive Runes  [unique]
+  +   30% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   53% (family usual +25%, 0 peers)  Rondel of Fragility          on Flame Breath  [unique]
+  +   51% (family usual +25%, 1 peers)  Rondel of Fragility          on Devour  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+== Pathfinder
+41 skills scanned; 26 flags against all skills, 18 against the skill's own family, 5 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   96% (family usual +0%, 3 peers)  The Coming Calamity          on Rapid Assault  [unique]
+  +   89% (family usual +0%, 2 peers)  The Coming Calamity          on Shockwave Totem  [unique]
+  +   38% (family usual +0%, 3 peers)  Apron of Emiran              on Rake  [unique]
+  +   35% (family usual +0%, 2 peers)  Fireflower                   on Spear of Solaris  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 40 skills  [unique]
+  Irongrasp                    strong on 26 skills  [unique]
+  Ming's Heart                 strong on 10 skills  [unique]
+== Ritualist
+41 skills scanned; 26 flags against all skills, 18 against the skill's own family, 5 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   96% (family usual +0%, 3 peers)  The Coming Calamity          on Rapid Assault  [unique]
+  +   89% (family usual +0%, 2 peers)  The Coming Calamity          on Shockwave Totem  [unique]
+  +   38% (family usual +0%, 3 peers)  Apron of Emiran              on Rake  [unique]
+  +   35% (family usual +0%, 2 peers)  Fireflower                   on Spear of Solaris  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 40 skills  [unique]
+  Irongrasp                    strong on 26 skills  [unique]
+  Ming's Heart                 strong on 10 skills  [unique]
+== Smith_of_Kitava
+15 skills scanned; 8 flags against all skills, 8 against the skill's own family, 6 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   98% (family usual +0%, 7 peers)  The Coming Calamity          on Rolling Slam  [unique]
+  +   36% (family usual +0%, 3 peers)  Irongrasp                    on Molten Blast  [unique]
+  +   35% (family usual +0%, 3 peers)  Fireflower                   on Molten Blast  [unique]
+  +   33% (family usual +0%, 7 peers)  Beacon of Azis               on Rolling Slam  [unique]
+  +   37% (family usual +8%, 7 peers)  Ming's Heart                 on Rolling Slam  [unique]
+  +   35% (family usual +8%, 7 peers)  Ming's Heart                 on Hammer of the Gods  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 14 skills  [unique]
+== Spirit_Walker
+41 skills scanned; 26 flags against all skills, 18 against the skill's own family, 5 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   96% (family usual +0%, 3 peers)  The Coming Calamity          on Rapid Assault  [unique]
+  +   89% (family usual +0%, 2 peers)  The Coming Calamity          on Shockwave Totem  [unique]
+  +   38% (family usual +0%, 3 peers)  Apron of Emiran              on Rake  [unique]
+  +   35% (family usual +0%, 2 peers)  Fireflower                   on Spear of Solaris  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 40 skills  [unique]
+  Irongrasp                    strong on 26 skills  [unique]
+  Ming's Heart                 strong on 10 skills  [unique]
+== Stormweaver
+61 skills scanned; 64 flags against all skills, 24 against the skill's own family, 13 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   38% (family usual +0%, 5 peers)  Snakebite                    on Hexblast  [unique]
+  +   31% (family usual +0%, 0 peers)  Bursting Decay               on Detonate Minion  [unique]
+  +   30% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   73% (family usual +43%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   72% (family usual +43%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   33% (family usual +7%, 0 peers)  Yoke of Suffering            on Wardbound Minions  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 29 skills  [unique]
+  Scold's Bridle               strong on 12 skills  [unique]
+  Irongrasp                    strong on 12 skills  [unique]
+  Fireflower                   strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Doedre's Tenure              strong on 8 skills  [unique]
+== Tactician
+44 skills scanned; 37 flags against all skills, 32 against the skill's own family, 4 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   33% (family usual +0%, 0 peers)  Temporalis                   on Voltaic Grenade  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+  +   34% (family usual +5%, 16 peers)  Loreweave                    on Flash Grenade  [unique]
+  +   50% (family usual +25%, 4 peers)  Temporalis                   on Gas Grenade  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 42 skills  [unique]
+  Rondel of Fragility          strong on 39 skills  [unique]
+  Ming's Heart                 strong on 13 skills  [unique]
+  The Coming Calamity          strong on 7 skills  [unique]
+== Titan
+15 skills scanned; 8 flags against all skills, 8 against the skill's own family, 6 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   98% (family usual +0%, 7 peers)  The Coming Calamity          on Rolling Slam  [unique]
+  +   36% (family usual +0%, 3 peers)  Irongrasp                    on Molten Blast  [unique]
+  +   35% (family usual +0%, 3 peers)  Fireflower                   on Molten Blast  [unique]
+  +   33% (family usual +0%, 7 peers)  Beacon of Azis               on Rolling Slam  [unique]
+  +   37% (family usual +8%, 7 peers)  Ming's Heart                 on Rolling Slam  [unique]
+  +   35% (family usual +8%, 7 peers)  Ming's Heart                 on Hammer of the Gods  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 14 skills  [unique]
+== Warbringer
+15 skills scanned; 8 flags against all skills, 8 against the skill's own family, 6 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   98% (family usual +0%, 7 peers)  The Coming Calamity          on Rolling Slam  [unique]
+  +   36% (family usual +0%, 3 peers)  Irongrasp                    on Molten Blast  [unique]
+  +   35% (family usual +0%, 3 peers)  Fireflower                   on Molten Blast  [unique]
+  +   33% (family usual +0%, 7 peers)  Beacon of Azis               on Rolling Slam  [unique]
+  +   37% (family usual +8%, 7 peers)  Ming's Heart                 on Rolling Slam  [unique]
+  +   35% (family usual +8%, 7 peers)  Ming's Heart                 on Hammer of the Gods  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Rondel of Fragility          strong on 14 skills  [unique]
+== Witchhunter
+44 skills scanned; 37 flags against all skills, 32 against the skill's own family, 4 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   33% (family usual +0%, 0 peers)  Temporalis                   on Voltaic Grenade  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+  +   34% (family usual +5%, 16 peers)  Loreweave                    on Flash Grenade  [unique]
+  +   50% (family usual +25%, 4 peers)  Temporalis                   on Gas Grenade  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 42 skills  [unique]
+  Rondel of Fragility          strong on 39 skills  [unique]
+  Ming's Heart                 strong on 13 skills  [unique]
+  The Coming Calamity          strong on 7 skills  [unique]

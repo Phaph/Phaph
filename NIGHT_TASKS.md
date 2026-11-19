@@ -44,9 +44,16 @@ steer from the Claude app (Remote Control).
    one build, cut the slowest steps without losing quality (compare DPS before/after on 3 builds).
 
 ### Breaker (the game plan, BREAKER_ROADMAP.md)
-5. [ ] Matrix within-family report: compare each unique's gain with skills of the same family (same skill types /
+5. [x] Matrix within-family report: compare each unique's gain with skills of the same family (same skill types /
    weapon), not all skills, so "best-in-slot for crossbows" isn't flagged and true one-skill interactions are. Apply
    to data/breaker/matrix.json and matrix_asc/ (being filled by the queue).
+   Done 2026-11-19: `matrix_scan.py report` compares each gain with the skill's family (same kind, same weapon for
+   attacks, a shared damage type) and lists pieces strong on 6+ skills separately as best-in-slot. matrix.json:
+   141 flags -> 17 true one-skill interactions (Wildsurge on storm/plant skills, Temporalis on Detonate Minion,
+   Blueflame Bracers on Skyfall, Snakebite on Hexblast...); all files in data/breaker/matrix_family.txt.
+   **Found on the way: the per-ascendancy scans never had ascendancy passives** (round-1 builds take no tree), so
+   every ascendancy of a class read the same (matrix_asc and conditions_asc). Fixed (breaker.ascendancy_passives);
+   both need a re-run once the queue is free (queued below as task 12).
 6. [ ] Breaker page on the website, called **Lodestone** in public (Kyle 2026-11-18: "Breaker" stays the internal
    code name): an unlisted page (phaphofbuilding.com/lodestone.html, no link from the home page,
    noindex) showing the latest Breaker results in plain English: leads with status (to test / confirmed / dead),
@@ -65,6 +72,9 @@ steer from the Claude app (Remote Control).
     or "one skill does both" and why.
 11. [ ] Mageblood: judge by an average random roll; list legacies to hunt for; swap line for ticked goals ("Hunting
     for loot? Legacy of Gold (+45% rarity) can replace Stibnite: -X% toughness").
+
+12. [ ] Re-run the per-ascendancy condition and matrix scans with ascendancy passives (fixed in task 5) once the
+    Breaker queue is free: `JOBS="conditions_asc matrix_asc"` from ~/breaker after a pull.
 
 ## Waiting for Kyle
 - (nothing yet)
