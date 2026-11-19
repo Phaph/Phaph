@@ -1,0 +1,100 @@
+diff --git a/api/static/index.html b/api/static/index.html
+index c01c36a..731399b 100644
+--- a/api/static/index.html
++++ b/api/static/index.html
+@@ -247,6 +247,12 @@ body.viewing .mast .mark, body.viewing .mast .wordmark { cursor: pointer; }
+ .overview .gem img { width: 20px; height: 20px; }
+ .overview .ov-name { color: var(--brass-hi); font-weight: 600; }
+ .overview .ov-by { color: var(--faint); font-size: 12px; margin-top: 6px; }
++.howplay { display: grid; gap: 6px; padding: 12px 16px; border: 1px solid var(--brass-lo); border-radius: 6px; background: var(--iron2); }
++.howplay h3 { font-size: 22px; }
++.howplay dl { display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; margin: 0; }
++.howplay dt { color: var(--muted); font-weight: 500; }
++.howplay dd { margin: 0; }
++.howplay p { font-size: 15px; }
+ .skillcards { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; }
+ .skillcard { background: var(--iron); border: 1px solid var(--edge); border-radius: 4px; overflow: hidden; }
+ .skillcard header { display: flex; gap: 10px; align-items: center; padding: 9px 12px; border-bottom: 1px solid var(--iron3); background: var(--iron2); }
+@@ -551,6 +557,8 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
+       <div class="field"><label for="asc">Ascendancy</label><select id="asc"><option value="">Best for the build</option></select></div>
+       <div class="field"><label for="mode">Focus</label>
+         <select id="mode"><option value="balanced">Balanced: maps and bosses</option><option value="mapping">Mapping first</option><option value="bossing">Bossing first</option></select></div>
++      <div class="field"><label for="style">Play style</label>
++        <select id="style"><option value="best">Best: a second skill when it earns its place</option><option value="one">One button: one skill does everything</option><option value="combo">Combo setup: one skill sets the boss up, another cashes in</option></select></div>
+     </div>
+     <div class="row">
+       <div class="field"><span class="label">Weapon</span><div class="chips" id="weapons" role="group" aria-label="Weapon"></div></div>
+@@ -582,7 +590,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
+   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
+   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
+   // the engine share one host.
+-  const PAGE_VERSION = "2026-11-18.6";   // shown in the console, so a report can say which page a tab was running
++  const PAGE_VERSION = "2026-11-19.2";   // shown in the console, so a report can say which page a tab was running
+   console.info("Whetstone page", PAGE_VERSION);
+   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
+     ? "https://api.phaphofbuilding.com" : "";
+@@ -694,6 +702,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
+     if (r.mode) $("mode").value = r.mode;
+     if (r.deep) $("deep").checked = true;
+     if (r.off_meta) $("offmeta").checked = true;
++    if (r.style) $("style").value = r.style;
+     const af = ["anchor_unique", "anchor_keystone", "anchor_support"].find(f => r[f]);
+     setAnchor(af ? { field: af, name: r[af] } : null);
+     state.random = !!r.random;
+@@ -1312,6 +1321,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
+     if ((state.avoid || []).length) req.avoid = state.avoid;   // "no minions"
+     if ($("deep").checked) req.deep = true;
+     if ($("offmeta").checked) req.off_meta = true;
++    if ($("style").value !== "best") req.style = $("style").value;
+     if (state.anchor) req[state.anchor.field] = state.anchor.name;
+     if (state.random || randomClick) { req.random = true; req.seed = Math.floor(Math.random() * 2 ** 31); delete req.deep; }
+     randomClick = false;
+@@ -1870,8 +1880,28 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
+     };
+   }
+ 
++  // "How you play": the buttons this stage uses, maps first, then bosses, or why one skill does both.
++  function howPlayHtml(plan, s) {
++    const g = n => `<b>${esc(n)}</b>`, main = plan.spec.skill, c = s.combo && s.combo.boss_dps ? s.combo : null;
++    const maps = s.clear_skill ? `${g(s.clear_skill)} <span class="muted">(${esc(main)} for rares)</span>` : g(main);
++    let boss, why = "";
++    if (c) boss = c.setup ? `${g(c.setup)}${c.weapon_type ? ' <span class="muted">(swap to weapon set 2)</span>' : ""} to break its armour, then ${g(main)}`
++      : `${g(main)}, which breaks the boss's armour itself`;
++    else if (s.boss_skill) boss = `${g(s.boss_skill)}${s.boss_weapon_set === 2 ? ' <span class="muted">(swap to weapon set 2)</span>' : ""}`;
++    else if ((s.boss_supports || []).length && s.boss_supports.join() !== (s.supports || []).join()) boss = `${g(main)} <span class="muted">with its boss supports</span>`;
++    else boss = g(main);
++    if (!s.clear_skill && !s.boss_skill && !c) {
++      why = plan.spec.style === "one" ? "You picked one button: one skill does everything."
++        : ["act1", "act2", "act34", "interludes"].includes(s.stage) ? "One skill does both in the campaign: fewer gems to level and buy."
++        : "One skill does both: no other skill hit bosses at least 25% harder or cleared at least 25% better.";
++    }
++    if (c) why = `Combo: about ${(+c.time_to_break).toFixed(1)} s to break the armour, then it stays broken for 12 s (up ${Math.round(c.uptime * 100)}% of the fight). Our estimate.`;
++    return `<div class="howplay"><h3>How you play</h3><dl><dt>Mapping</dt><dd>${maps}</dd><dt>Bosses</dt><dd>${boss}</dd></dl>${why ? `<p class="muted">${esc(why)}</p>` : ""}</div>`;
++  }
++
+   function stageHtml(plan, s, prevGear, forward, kv, res, st, printing = false) {
+     return `
++      ${howPlayHtml(plan, s)}
+       ${haveHtml(s)}
+       <div class="stats">
+         <p class="stagefor">${esc(s.name)} numbers · level ${s.level}</p>
+@@ -1929,6 +1959,11 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
+     if (s.clear_skill) add("Clearing", s.clear_skill, s.clear_supports);
+     if (s.boss_skill) add("Bossing", s.boss_skill, s.boss_supports, s.boss_weapon_set === 2 ? "weapon set 2" : "");
+     else if ((s.boss_supports || []).length) add("Bossing swap", plan.spec.skill, s.boss_supports, "same skill, these supports for bosses");
++    if (s.combo && s.combo.boss_dps) {
++      const c = s.combo, gems = c.setup_gems || [];
++      if (c.setup) add("Combo: break armour first", c.setup, gems.slice(1), `${c.weapon_type ? "weapon set 2 · " : ""}~${(+c.time_to_break).toFixed(1)} s to break`);
++      else add("Combo: breaks armour itself", plan.spec.skill, (c.boss_gems || []).slice(1), "these supports for bosses");
++    }
+     // Cast on X: the meta gem heads the card, then the spells it triggers, then their supports.
+     (s.triggers && s.triggers.length ? s.triggers : s.trigger ? [s.trigger] : []).forEach(t => {
+       const spells = t.spells || [t.spell];
+@@ -1990,6 +2025,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
+     if (s.clear_skill) kv.push(["Clearing", totemRow(plan, s.clear_skill, s.clear_supports || [])]);
+     if (s.boss_skill) kv.push(["Bossing", totemRow(plan, s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
+     else if (s.boss_supports.length) kv.push(["Bossing swap", totemRow(plan, plan.spec.skill, s.boss_supports)]);
++    if (s.combo && s.combo.boss_dps) kv.push(["Combo", `${esc(s.combo.setup || plan.spec.skill)} breaks the boss's armour${s.combo.weapon_type ? ' <span class="muted">(weapon set 2)</span>' : ""}, then ${esc(plan.spec.skill)}: up ${Math.round(s.combo.uptime * 100)}% of the fight`]);
+     triggerRow(s).forEach(r => kv.push(r));
+     extraRows(s).forEach(r => kv.push(r));
+     kv.push(...priorityRow(s));

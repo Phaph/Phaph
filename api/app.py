@@ -61,6 +61,9 @@ class BuildSpec(BaseModel):
     boss_weapon_type: str | None = None    # set when the boss skill uses weapon set 2
     boss_weapon_subtype: str | None = None
     clear_skill: str | None = None         # a second skill for clearing packs, same weapon
+    style: Literal["best", "one", "combo"] | None = None   # how the build plays (GenerateRequest.style)
+    combo: dict | None = None              # setup + payoff (style "combo"): generate.combo_for
+    combo_note: str | None = Field(None, max_length=300)
     totems: dict[str, str] = Field(default_factory=dict, max_length=3)   # skill -> totem gem that places it
     ailment: Literal["bleed", "poison", "ignite"] | None = None   # optimise for this ailment
     goals: list[str] = Field(default_factory=list, max_length=8)  # beyond damage: goals.GOAL_LABELS
@@ -103,6 +106,9 @@ class GenerateRequest(BaseModel):
     anchor_keystone: str | None = Field(None, max_length=80)
     anchor_support: str | None = Field(None, max_length=80)
     off_meta: bool = False   # skills, ascendancies and uniques many players use score lower (engine/meta.py)
+    # How the build plays: "best" (default: a boss or clear skill when one earns its place), "one" (one skill does
+    # everything), "combo" (a setup skill + a payoff, from the combo finder: engine/combo_scan.py).
+    style: Literal["best", "one", "combo"] = "best"
     random: bool = False     # a random build within the filters, not the strongest
     seed: int | None = Field(None, ge=0, le=2**31)   # random builds: a new seed is a new roll (and a new cache key)
 

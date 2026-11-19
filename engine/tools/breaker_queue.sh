@@ -7,6 +7,7 @@
 #   conditions_asc  condition scan per ascendancy        (~6 h)  engine/data/breaker/conditions_asc/
 #   matrix          unique/keystone x skill matrix       (~1 h)  engine/data/breaker/matrix.json
 #   matrix_asc      the matrix per ascendancy, own weapons and ascendancy passives (~10-15 h)
+#   blind           blind test: the search per ascendancy vs poe.ninja's ladder (tools/blind_test.py, ~12 h)
 #                                                               engine/data/breaker/matrix_asc/
 #   sweep           A-to-Z sweep, one build per ascendancy (~17 h on the server) engine/data/baseline/az_sweep_server.json
 # Progress shows in status.sh (~/server_jobs/breaker-queue.status); each job's results are committed and pushed as it
@@ -84,6 +85,14 @@ for job in $JOBS; do
       rm -f engine/data/baseline/az_sweep_server.json
       SWEEP_CPUS=$CPUS OUT_NAME=az_sweep_server.json engine/tools/night_sweep.sh > engine/data/baseline/az_sweep_server.log 2>&1
       save "A-to-Z sweep on the server" engine/data/baseline/az_sweep_server.json engine/data/baseline/az_sweep_server.log ;;
+    blind)
+      state "blind test vs poe.ninja (search per ascendancy): running"
+      if run "python tools/blind_test.py run --workers $CPUS --out /app/engine_src/data/breaker/blind.json" > engine/data/breaker/blind.log 2>&1; then
+        run "python tools/blind_test.py report /app/engine_src/data/breaker/blind.json" > engine/data/breaker/blind.txt 2>&1
+        save "Lodestone: blind test vs poe.ninja" engine/data/breaker/blind.json engine/data/breaker/blind.txt
+      else
+        failed=$((failed + 1)); notify "Breaker queue: the blind test failed (engine/data/breaker/blind.log)."
+      fi ;;
     *) state "unknown job $job, skipped" ;;
   esac
 done

@@ -22,6 +22,8 @@ before Fully Broken, no hits per use beyond 1).
 
   python combo_scan.py run [--workers 2] [--out data/breaker/combos.json] [--only Skill,Skill]   (resumable)
   python combo_scan.py report data/breaker/combos.json
+  python combo_scan.py ailments [--workers 2] [--out data/breaker/combos_ailments.json] [--only ...]   (resumable)
+  python combo_scan.py ailments-report data/breaker/combos_ailments.json
 """
 from __future__ import annotations
 
@@ -225,6 +227,177 @@ def report(d: dict, top: int = 40) -> str:
     return "\n".join(out)
 
 
+# ---------- Ailment families (Shocked, Poisoned, Ignited, Chilled, Bleeding) ----------
+# Setup: a skill that applies the ailment. Expected time to apply it once T = 1 / (chance per hit x hits per second);
+# it then lasts its duration D. The same cycle as Armour Broken: T s of the setup, then D s of the payoff.
+# A payoff that applies the ailment itself keeps it up min(1, applications per second x D) of the time.
+# Against a pinnacle boss ailment chances are low (bosses have high ailment thresholds), so most uptimes are small:
+# that's the real game, and what makes a dedicated applier a combo.
+AILMENTS = {"Shock": ["conditionEnemyShocked"], "Poison": ["conditionEnemyPoisoned"],
+            "Ignite": ["conditionEnemyIgnited", "conditionEnemyBurning"], "Chill": ["conditionEnemyChilled"],
+            "Bleed": ["conditionEnemyBleeding"]}
+AILMENT_OUT = ENGINE / "data" / "breaker" / "combos_ailments.json"
+# Supports that raise the chance to apply each ailment: an applier gets them in place of its weakest supports.
+AILMENT_SUPPORTS = {"Shock": ["Shock", "Overcharge"], "Poison": ["Poison III", "Deadly Poison II"],
+                    "Ignite": ["Ignite III"], "Bleed": ["Bleed IV"], "Chill": []}
+
+
+def _apply_rate(p, a: str) -> tuple[float, float]:
+    r = p.send("ailment_rates")
+    x = (r.get("ailments") or {}).get(a) or {}
+    per_s = (x.get("chance") or 0) / 100 * (r.get("speed") or 0) * min(r.get("hit_chance") or 100, 100) / 100
+    return per_s, x.get("duration") or 0
+
+
+def best_applier(p, group: int, gems: list[str], a: str) -> dict:
+    """The fastest way this skill applies ailment a: its own supports, or with the ailment's supports swapped in for
+    the weakest ones (one at a time, kept when they raise applications per second)."""
+    from generate import FIELDS
+    from optimize import total_dps
+    best_gems = list(gems)
+    best_rate, dur = _apply_rate(p, a)
+    for extra in AILMENT_SUPPORTS.get(a, []):
+        cur = list(best_gems)
+        trials = [cur[:i] + cur[i + 1:] + [extra] for i in range(1, len(cur))] + ([cur + [extra]] if len(cur) < 6 else [])
+        for g2 in trials:
+            try:
+                p.try_skill(group, g2, ["TotalDPS"])
+            except Exception:  # noqa: BLE001 - a support that doesn't fit this skill
+                continue
+            rate, d = _apply_rate(p, a)
+            if rate > best_rate:
+                best_gems, best_rate, dur = g2, rate, d
+    p.try_skill(group, best_gems, ["TotalDPS"])
+    dps = total_dps(p.calc(FIELDS))
+    p.try_skill(group, gems, ["TotalDPS"])
+    return {"gems": best_gems, "per_s": round(best_rate, 4), "duration": round(dur, 2), "dps": round(dps)}
+
+
+def measure_ailments(p) -> dict:
+    from generate import FIELDS
+    from optimize import total_dps
+    off = {v: False for vs in AILMENTS.values() for v in vs}
+    p.set_config(**off)
+    base = total_dps(p.calc(FIELDS))
+    rates = p.send("ailment_rates")
+    rec = {"dps": round(base), "ailments": {}}
+    for a, vars_ in AILMENTS.items():
+        p.set_config(**{v: True for v in vars_})
+        on = total_dps(p.calc(FIELDS))
+        p.set_config(**off)
+        r = (rates.get("ailments") or {}).get(a) or {}
+        per_s = (r.get("chance") or 0) / 100 * (rates.get("speed") or 0) * min(rates.get("hit_chance") or 100, 100) / 100
+        rec["ailments"][a] = {"dps_on": round(on), "gain": round(on / base - 1, 3) if base else 0.0,
+                              "per_s": round(per_s, 4), "duration": round(r.get("duration") or 0, 2)}
+    # As a setup: the fastest applier variant of this skill for each ailment.
+    g = next((x for x in p.send("groups")["groups"] if x["main"]), None)
+    if g:
+        gems = [n for n in g["gems"] if n]
+        for a in AILMENTS:
+            if AILMENT_SUPPORTS.get(a):
+                rec["ailments"][a]["applier"] = best_applier(p, g["group"], gems, a)
+    return rec
+
+
+def run_ailments(workers: int, out: Path, only: set[str] | None = None) -> None:
+    import generate as g
+    from gear import make_stage
+    from pob import PoB
+
+    with PoB() as p:
+        catalog = p.send("skill_catalog")["skills"]
+    skills = [s for s in g.main_skills(catalog, {}) if not only or s["name"] in only]
+    done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"skills": {}}
+    todo = [s for s in skills if s["name"] not in done["skills"]]
+    print(f"{len(skills)} skills, {len(todo)} to measure (ailments), {workers} workers", flush=True)
+    stage = make_stage("mid")
+    lock = threading.Lock()
+
+    def one(s):
+        is_minion = "Minion" in s["types"]
+        w, sub, off = (g.weapon_options(s, {}) or [(None, None, None)])[0]
+        c = g.Candidate(s["name"], w, sub, off, g.DEFAULT_CLASS.get("Minion" if is_minion else
+                        "Spell" if "Spell" in s["types"] else "", "Mercenary"), is_minion=is_minion, totem=s.get("totem"))
+        c = g.evaluate(c, stage, {}, tree=False)
+        rec = {"weapon": g.weapon_key(w, sub), "minion": is_minion, "error": c.error}
+        if not c.error:
+            try:
+                rec.update(measure_ailments(g._pob()))
+            except Exception as e:  # noqa: BLE001
+                rec["error"] = f"{type(e).__name__}: {e}"
+        with lock:
+            done["skills"][s["name"]] = rec
+            done["updated"] = time.strftime("%Y-%m-%d %H:%M")
+            out.write_text(json.dumps(done, indent=1, ensure_ascii=False), encoding="utf-8")
+        best = max((rec.get("ailments") or {}).items(), key=lambda kv: kv[1]["gain"], default=(None, {}))
+        print(f"  {s['name']:<28} {rec.get('dps', 0):>10,}  best payoff {best[0]} {best[1].get('gain', 0):+.0%}  "
+              f"{rec.get('error') or ''}", flush=True)
+
+    mine: list = []
+    out.parent.mkdir(parents=True, exist_ok=True)
+    try:
+        with ThreadPoolExecutor(workers, initializer=g._bind, initargs=(mine,)) as pool:
+            list(pool.map(one, todo))
+    finally:
+        g._close_all(mine)
+    print(report_ailments(done), flush=True)
+
+
+def ailment_combos(d: dict, min_gain: float = 0.30) -> list[dict]:
+    """Payoffs that gain far more than usual from one ailment, with their best applier (or themselves)."""
+    sk = {n: r for n, r in d["skills"].items() if not r.get("error") and r.get("ailments") and r.get("dps")}
+    usual = {}
+    for a in AILMENTS:
+        vals = sorted(r["ailments"][a]["gain"] for r in sk.values())
+        usual[a] = vals[len(vals) // 2] if vals else 0.0
+    rows = []
+    for n, r in sk.items():
+        for a, x in r["ailments"].items():
+            if x["gain"] < min_gain or x["gain"] - usual[a] < 0.15:
+                continue
+            options = []
+            for own in (x, x.get("applier")):   # its own supports, or with the ailment's supports swapped in
+                if not own or own["per_s"] <= 0:
+                    continue
+                up = min(1.0, own["per_s"] * own["duration"])
+                base = own.get("dps", r["dps"])
+                options.append({"setup": "(itself)", "gems": own.get("gems"), "uptime": round(up, 3),
+                                "time_to_apply": round(1 / own["per_s"], 2),
+                                "dps": round(base * (1 + x["gain"] * up)), "setup_alone": 0})
+            for sn, sr in sk.items():
+                y = sr["ailments"][a].get("applier") or sr["ailments"][a]
+                if sn == n or sr.get("minion") or y["per_s"] <= 0:
+                    continue
+                t = 1 / y["per_s"] + (SWAP_S if sr["weapon"] != r["weapon"] else 0.0)
+                dur = y["duration"]
+                dps = (t * y.get("dps", sr["dps"]) + dur * x["dps_on"]) / (t + dur)
+                options.append({"setup": sn, "gems": y.get("gems"), "swap": sr["weapon"] != r["weapon"],
+                                "uptime": round(dur / (t + dur), 3), "time_to_apply": round(t, 2), "dps": round(dps),
+                                "setup_alone": sr["dps"]})
+            for o in options:
+                o["edge"] = round(o["dps"] / max(r["dps"], o["setup_alone"]) - 1, 3)
+            options = [o for o in options if o["edge"] >= 0.01]
+            best = max(options, key=lambda o: o["edge"], default=None)
+            rows.append({"payoff": n, "ailment": a, "gain_if_always": x["gain"], "usual": round(usual[a], 3),
+                         "alone": r["dps"], **(best or {"setup": None, "edge": 0.0})})
+    return sorted(rows, key=lambda r: -r["edge"])
+
+
+def report_ailments(d: dict, top: int = 30) -> str:
+    rows = ailment_combos(d)
+    out = [f"{len(d['skills'])} skills measured for ailments vs a pinnacle boss. Payoffs (gain if always on, well above "
+           f"the usual) and their best applier (our cycle estimate):"]
+    for r in rows[:top]:
+        if r.get("setup"):
+            swap = " [weapon set 2]" if r.get("swap") else ""
+            out.append(f"  edge {r['edge']:+5.0%}  {r['payoff']:<22} vs {r['ailment']:<6} (always {r['gain_if_always']:+.0%}, "
+                       f"usual {r['usual']:+.0%}) <- {r['setup']}{swap}: apply every {r['time_to_apply']} s, up {r['uptime']:.0%}")
+        else:
+            out.append(f"  no combo  {r['payoff']:<22} vs {r['ailment']:<6} (always {r['gain_if_always']:+.0%}): nothing applies it "
+                       f"often enough on a pinnacle boss")
+    return "\n".join(out)
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "run":
@@ -234,5 +407,12 @@ if __name__ == "__main__":
         run(workers, out, only)
     elif cmd == "report":
         print(report(json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))))
+    elif cmd == "ailments":
+        workers = int(sys.argv[sys.argv.index("--workers") + 1]) if "--workers" in sys.argv else 2
+        out = Path(sys.argv[sys.argv.index("--out") + 1]) if "--out" in sys.argv else AILMENT_OUT
+        only = set(sys.argv[sys.argv.index("--only") + 1].split(",")) if "--only" in sys.argv else None
+        run_ailments(workers, out, only)
+    elif cmd == "ailments-report":
+        print(report_ailments(json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))))
     else:
         print(__doc__)

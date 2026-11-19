@@ -940,6 +940,26 @@ local function buildText()
 	return table.concat(parts, "\n"):lower()
 end
 
+-- Ailment application for the combo finder: per ailment, the main skill's chance per hit (%) and duration (s), plus
+-- uses per second and hit chance. Attacks keep these on the hand that hits. Same fields auto_config reads.
+function handlers.ailment_rates(cmd)
+	build.buildFlag = true
+	frame()
+	local out = build.calcsTab.mainOutput
+	local hand = (out.MainHand and out.MainHand.Speed) and out.MainHand or out
+	local res = { speed = out.Speed or 0, hit_chance = out.HitChance or hand.HitChance or 100, ailments = {} }
+	for _, a in ipairs({ "Shock", "Poison", "Ignite", "Chill", "Bleed" }) do
+		local chance = hand[a .. "ChancePerHit"] or hand[a .. "ChanceOnHit"] or hand[a .. "Chance"]
+			or out[a .. "ChancePerHit"] or out[a .. "ChanceOnHit"] or out[a .. "Chance"] or 0
+		res.ailments[a] = { chance = chance, duration = hand[a .. "Duration"] or out[a .. "Duration"] or AILMENT_DEFAULT_DURATION[a] }
+	end
+	if cmd.debug then
+		res.keys = {}
+		for k, v in pairs(hand) do if type(v) == "number" and (k:find("Poison") or k:find("Shock")) then res.keys[k] = v end end
+	end
+	return res
+end
+
 function handlers.auto_config(cmd)
 	local mode = cmd.mode or "bossing"
 	local input = build.configTab.input

@@ -949,6 +949,30 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
         # The player asked for a second weapon: weapon set 2 uses it, even if that costs damage (their call).
         forced = max((r for r in same_asc if r["weapon_type"].lower() in second), key=key, default=None)
         boss = forced or boss
+    style = req.get("style") or "best"
+    if style == "combo" and not (ascendancy or skill):
+        # Combo setup: prefer the build whose main skill has the best setup + payoff combo (combo_scan.py), scored as
+        # its search score times the combo's edge. Locks (ascendancy / skill) keep the player's choice.
+        pick = best_combo_row(ranked, req)
+        if pick:
+            main = pick[0]
+            spec.update({"name": f"{main['skill']} {main['ascendancy']}", "class": main["cls"],
+                         "ascendancy": main["ascendancy"], "skill": main["skill"], "weapon_type": main["weapon_type"],
+                         "weapon_subtype": main["weapon_subtype"], "offhand_type": main["offhand_type"]})
+            same_asc = [r for r in ranked if r["ascendancy"] == main["ascendancy"]
+                        and (r["skill"] != main["skill"] or r["weapon_type"] != main["weapon_type"])]
+            boss = max(same_asc, key=key, default=None)
+    if style == "combo":
+        combo = combo_for(main, req)
+        if combo:
+            spec["combo"] = combo
+        else:
+            spec["combo_note"] = (f"No setup + payoff combo found for {main['skill']} yet (the combo finder covers "
+                                  f"Armour Broken so far): built the usual way.")
+    if style != "best":
+        spec["style"] = style
+    if style == "one" or spec.get("combo"):
+        boss = None   # one button: the main skill does bosses too; a combo is the boss plan
     if boss and (forced or key(boss) >= BOSS_SKILL_MIN_GAIN * key(main)):
         spec["boss_skill"] = boss["skill"]
         spec["boss_weapon_type"] = boss["weapon_type"]
@@ -958,6 +982,8 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
     clearers = [r for r in same_asc if r["weapon_type"] == main["weapon_type"] and r["skill"] != main["skill"]
                 and r.get("offhand_type") == main.get("offhand_type") and r["skill"] != spec.get("boss_skill")]
     clear = max(clearers, key=lambda r: r.get("clear") or 0, default=None)
+    if style == "one":
+        clear = None
     if clear and (clear.get("clear") or 0) >= CLEAR_SKILL_MIN_GAIN * max(main.get("clear") or 0, 1):
         spec["clear_skill"] = clear["skill"]
     # Skills placed by a totem gem (Spell Totem + Fireball): the guide puts the gem in front of each.
@@ -977,6 +1003,62 @@ def plan_build(result: dict, ascendancy: str | None = None, skill: str | None = 
             f"{main['ascendancy']} {main['skill']} does about {cost:.0%} less damage than the recommended "
             f"{best['ascendancy']} {best['skill']}."),
     }
+
+
+_COMBOS: dict | None = None
+
+
+def _combo_data() -> dict:
+    """The combo finder's scored pairs (data/breaker/combos.json via combo_scan.combos) and each skill's weapon,
+    loaded once."""
+    global _COMBOS
+    if _COMBOS is None:
+        import json
+        from pathlib import Path
+        from combo_scan import combos
+        try:
+            d = json.loads((Path(__file__).parent / "data" / "breaker" / "combos.json").read_text(encoding="utf-8"))
+            _COMBOS = {"rows": combos(d), "weapons": {n: r.get("weapon") for n, r in d["skills"].items()}}
+        except (OSError, ValueError, KeyError):
+            _COMBOS = {"rows": [], "weapons": {}}
+    return _COMBOS
+
+
+def _unkey(weapon: str | None) -> tuple[str | None, str | None]:
+    return ("Staff", "Warstaff") if weapon == "Quarterstaff" else (weapon, None)
+
+
+def combo_for(main: dict, req: dict) -> dict | None:
+    """The best setup for this main skill as a payoff, on a weapon its class may use (weapon set 2 if it differs).
+    Times and uptime are the combo finder's estimates (round-1 builds); the guide re-measures the payoff."""
+    data = _combo_data()
+    row = next((r for r in data["rows"] if r["payoff"] == main["skill"]), None)
+    if not row:
+        return None
+    for o in sorted([row] + list(row.get("runners_up") or []), key=lambda o: -o["edge"]):
+        base = {"setup_gems": o["gems"], "condition": "Armour Broken", "edge": o["edge"],
+                "time_to_break": o["time_to_break"], "uptime": o["uptime"]}
+        if o["setup"] == "(itself)":
+            return {"setup": None, **base}
+        wtype, wsub = _unkey(data["weapons"].get(o["setup"]))
+        same = (wtype, wsub) == (main["weapon_type"], main["weapon_subtype"])
+        if same or weapon_ok(req, main["cls"], main["ascendancy"], wtype, wsub, second=True):
+            return {"setup": o["setup"], **base, "weapon_type": None if same else wtype,
+                    "weapon_subtype": None if same else wsub}
+    return None
+
+
+def best_combo_row(ranked: list[dict], req: dict) -> tuple[dict, dict] | None:
+    """(ranked row, combo) with the highest search score x (1 + combo edge), among the top builds that have a combo."""
+    best, best_sc = None, 0.0
+    top = ranked[0]["score"] if ranked else 0
+    for r in ranked[:30]:
+        if r["score"] < 0.5 * top:
+            continue   # a combo shouldn't turn a much weaker build into the pick
+        c = combo_for(r, req)
+        if c and r["score"] * (1 + c["edge"]) > best_sc:
+            best, best_sc = (r, c), r["score"] * (1 + c["edge"])
+    return best
 
 
 def options(result: dict) -> dict:

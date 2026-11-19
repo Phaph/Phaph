@@ -97,6 +97,7 @@ class StageGuide:
     mobility: list[str] = field(default_factory=list)       # recommended movement skills
     theme_issues: list[str] = field(default_factory=list)   # empty when the build matches the request
     clear: float = 0.0                                      # mapping clear score
+    combo: dict | None = None   # setup + payoff (style "combo"): setup skill, time to break, uptime, boss damage
     rating: dict | None = None                              # 1-10, endgame stage only
     utility: list[dict] = field(default_factory=list)       # curses, marks, banners, warcries kept
     # Cast on Critical setup when it pays: {"gem", "spell", "supports", "mapping": estimate, "bossing": estimate}.
@@ -199,6 +200,14 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             pob.use_full_dps()
             if boss_swap:
                 pob.send("set_weapon_set", group=boss_group, set=2)
+        # Combo setup (generate.plan_build style "combo"): a skill that breaks the boss's armour, then the main skill.
+        combo = dict(spec["combo"]) if spec.get("combo") and not light else None
+        setup_group, combo_swap = None, False
+        if combo and combo.get("setup"):
+            setup_group = pob.add_skill(list(combo["setup_gems"]), main=False)["group"]
+            combo_swap = bool(combo.get("weapon_type")) and not boss_swap
+            if combo_swap:
+                pob.send("set_weapon_set", group=setup_group, set=2)
         shortlist: dict = {}
 
         def report(step: str, label: str = "", **extra):
@@ -216,11 +225,21 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             pob.send("set_main", group=group)
             return plan
 
+        def combo_weapon():
+            # The armour breaker's weapon on set 2, scored with it as the main skill.
+            pob.send("set_main", group=setup_group)
+            plan = craft_weapon(pob, stage, "Weapon 1 Swap", combo["weapon_type"], combo.get("weapon_subtype"),
+                                mode="bossing", metric=boss_metric, log=quiet)
+            pob.send("set_main", group=group)
+            return plan
+
         pob.set_config(**MODE_CONFIG[focus])
         pob.auto_config(focus)
         craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode=focus, metric=focus_metric, goals=goals, log=quiet)
         if boss_swap:
             boss_weapon()
+        if combo_swap:
+            combo_weapon()
         report("gear", "First gear pass")
         # The best jewel this build could socket: the tree weighs every socket as its path plus this jewel.
         # (No jewels in the acts: few sockets are in reach and a player has no jewels to put in them yet.)
@@ -301,6 +320,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             pob.auto_config("mapping")
         if boss_swap:
             gear.append(boss_weapon())
+        if combo_swap:
+            gear.append(combo_weapon())
         # Safety net: a build must never reserve more spirit than it has. If the gear still came up short, take buffs
         # out (spare-spirit ones first, then the rest from the last chosen) until it fits.
         for name in [*reversed(spare), *reversed([n for n in spirit if n not in spare])]:
@@ -343,6 +364,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 boss_dps = total_dps(pob.calc(STAT_FIELDS))
             for t in triggers:
                 t["bossing"] = cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="bossing", gem=t["gem"])
+            if combo:
+                combo, boss_dps = score_combo(pob, group, setup_group, combo, combo_swap)
+                if combo.get("boss_gems") and boss:
+                    boss.supports = list(combo["boss_gems"][1:])   # the boss setup carries the break supports
 
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
@@ -366,7 +391,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             conditions = pob.auto_config("mapping")
         alloc = pob.send("allocated")
         used = set(best.supports) | set(boss.supports if boss else []) | set(clear.supports if clear else [])
-        skip = {skill, boss_skill, clear_skill, *(spec.get("totems") or {}).values()}
+        skip = {skill, boss_skill, clear_skill, *(spec.get("totems") or {}).values(),
+                (combo or {}).get("setup")}   # the combo's setup keeps the supports that break armour fastest
         for t in triggers:
             skip |= {t["gem"], *t.get("spells", [t.get("spell")])}
         setups = kit_out(pob, group, spirit, utility + [{"skill": h} for h in helpers], mobility[:1], map_metric, slots,
@@ -405,7 +431,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             boss_skill=boss_skill, boss_weapon_set=2 if boss_swap else 1,
             clear_skill=clear_skill, clear_supports=clear.supports if clear else [], clear_dps=clear_dps,
             spirit=spirit, conditions=conditions, goals=goals, utility=utility, trigger=triggers[0] if triggers else None,
-            triggers=triggers, weapon_sets=weapon_sets,
+            triggers=triggers, weapon_sets=weapon_sets, combo=combo,
             mobility=mobility, setups=setups,
             tree_nodes=[int(n) for n in alloc.get("nodes") or []], tree_version=alloc.get("version"),
             tree_order=[{"id": s.get("id"), "name": s["node"], "type": s["type"], "path": s.get("path") or [],
@@ -440,6 +466,18 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 f"Weapon set passives: {weapon_sets['points']} points per set. Set 2 ({boss_skill}) takes "
                 f"{', '.join(weapon_sets['set2_only'][:6]) or 'its own passives'} instead of "
                 f"{', '.join(weapon_sets['set1_only'][:6])} (those stay on set 1): {weapon_sets['gain']:+.0%} boss damage.")
+        if spec.get("combo_note") and stage_key == "end":
+            guide.notes.append(spec["combo_note"])
+        if combo and combo.get("boss_dps"):
+            extra = [x for x in combo.get("boss_gems") or [] if x.startswith("Armour")]
+            who = combo.get("setup") or (f"{skill} itself (with {', '.join(extra)} for bosses)" if extra
+                                         else f"{skill} itself (it breaks armour on hit)")
+            where = " on weapon set 2" if combo_swap else ""
+            guide.notes.append(
+                f"Combo: break the boss's armour with {who}{where} (about {combo['time_to_break']:.1f} s), then "
+                f"{skill} while it stays broken (12 s): up {combo['uptime']:.0%} of the fight. Boss damage "
+                f"{combo['boss_dps']:,.0f} vs {combo['alone']:,.0f} with {skill} alone. Break time and uptime are "
+                f"our estimate (Path of Building only knows broken or not).")
         for name in dropped_spirit:
             guide.notes.append(f"{name} is turned off: the gear at this stage doesn't give enough spirit for it.")
         for name in spare:
@@ -471,6 +509,52 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         return guide
 
 
+# Support search for extra skills (marks, heralds, movement...). This step is ~37% of an Uber Endgame stage (profile
+# 2026-11-19, tools/profile_stage.py), but a lighter beam (1 / top 5) saved only ~3%: the screening dominates.
+KIT_BEAM = 3
+KIT_TOP_K = 15
+
+
+FULLY_BROKEN_S = 12.0
+
+
+def score_combo(pob: PoB, group: int, setup_group: int | None, combo: dict, swap: bool) -> tuple[dict, float]:
+    """Boss damage of a setup + payoff combo (Armour Broken), with the combo finder's cycle model on this build:
+    T s of the setup (its own damage, armour intact), then 12 s of the main skill on a broken boss."""
+    from combo_scan import break_rate, cycle, self_score, with_break_supports
+    if setup_group is None:
+        # The main skill breaks armour itself: Armour Break / Armour Demolisher in place of its weakest supports.
+        g = next(x for x in pob.send("groups")["groups"] if x["group"] == group)
+        gems = [n for n in g["gems"] if n]
+        pob.set_config(conditionEnemyArmourBroken=False)
+        alone = total_dps(pob.calc(STAT_FIELDS))
+        m = with_break_supports(pob, group, gems[0], gems[1:], key=self_score)
+        c = cycle(m["dps"], m["break_s"], m["dps_broken"], m["armour"], False)
+        pob.set_config(conditionEnemyArmourBroken=False)
+        if not c or c["dps"] <= alone:
+            pob.try_skill(group, gems, ["TotalDPS"])
+            return {**combo, "boss_dps": 0, "alone": round(alone), "note": "breaking armour itself doesn't pay here"}, alone
+        return {**combo, "time_to_break": c["time_to_break"], "uptime": c["uptime"], "boss_dps": c["dps"],
+                "alone": round(alone), "broken": m["dps_broken"], "boss_gems": m["gems"]}, c["dps"]
+    pob.set_config(conditionEnemyArmourBroken=False)
+    alone = total_dps(pob.calc(STAT_FIELDS))
+    pob.set_config(conditionEnemyArmourBroken=True)
+    broken = total_dps(pob.calc(STAT_FIELDS))
+    pob.set_config(conditionEnemyArmourBroken=False)
+    sg = setup_group or group
+    pob.send("set_main", group=sg)
+    out = pob.calc(STAT_FIELDS + ["HitChance"])
+    setup_dps = total_dps(out)
+    per_hit, rate = break_rate(pob.send("armour_break"), out.get("HitChance") or 100)
+    armour = pob.send("armour_break").get("enemy_armour") or 0
+    pob.send("set_main", group=group)
+    c = cycle(setup_dps, rate, broken, armour, swap)
+    if not c or c["dps"] <= alone:
+        return {**combo, "boss_dps": 0, "alone": round(alone), "note": "the setup doesn't break armour fast enough here"}, alone
+    return {**combo, **{"time_to_break": c["time_to_break"], "uptime": c["uptime"]}, "boss_dps": c["dps"],
+            "alone": round(alone), "broken": round(broken), "setup_dps": round(setup_dps)}, c["dps"]
+
+
 def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], movement: list[str], metric: str,
             slots: int, used: set[str], log=lambda *a: None, skip: set[str] = frozenset()) -> list[dict]:
     """Supports for every skill besides the main one, so the build is complete, not just its main attack.
@@ -494,7 +578,8 @@ def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], m
         if not gid:
             continue
         try:
-            res = optimise_supports(pob, gid, name, slots=slots, metric=metric, keep_main=True, log=log)
+            res = optimise_supports(pob, gid, name, slots=slots, metric=metric, keep_main=True, log=log,
+                                    beam=KIT_BEAM, top_k=KIT_TOP_K)
             chosen = res[0].supports if res else []
         except (PoBError, ValueError):
             chosen = []
