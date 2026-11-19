@@ -157,6 +157,17 @@ local USAGE_LIMITS = {
 	-- Detonates a Curse that is at least half expired, and removes it. One target: cast the curse (0.7 s), wait
 	-- for it to land (1.5 s curse delay), then half its duration (Despair 7.4 s at level 20) before Hexblast can go.
 	Hexblast = function(out) return 1 / (0.7 + 1.5 + 7.4 / 2) end,
+	-- Explodes a corpse each cast. Maps are full of corpses (no limit); a boss leaves none, so against a boss only
+	-- the adds it summons feed it. Our estimate: one usable corpse every 4 seconds in a pinnacle fight (to check in
+	-- game). Without this, Detonate Dead won Blood Mage, Lich, Oracle and Shaman as a boss skill (A-to-Z sweep).
+	["Detonate Dead"] = function(out)
+		local boss = build.configTab.input.enemyIsBoss
+		if boss == "None" then return nil end
+		return 0.25
+	end,
+	-- Ember Fusillade: checked, no limit. PoB casts it like a plain spell, which ignores both the 10-ember cap with its
+	-- 1.3 s launch delay (about x0.7 on embers per second at ~3 casts a second) and the "5% more damage per Ember fired"
+	-- (up to x1.5 with 10 embers): the two roughly cancel. In-game check in TESTS.md.
 }
 
 afterFrame = function()

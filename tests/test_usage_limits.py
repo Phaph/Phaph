@@ -20,3 +20,16 @@ def test_other_skills_are_untouched(pob):
     pob.add_skill(["Spark"])
     out = pob.calc(["Speed", "UsageLimit"])
     assert "UsageLimit" not in out and out["Speed"] > 0
+
+
+def test_detonate_dead_needs_corpses_against_bosses(pob):
+    pob.new()
+    pob.set_class("Witch", "Lich")
+    pob.set_level(90)
+    pob.add_skill(["Detonate Dead"])
+    pob.set_config(enemyIsBoss="Pinnacle")
+    boss = pob.calc(["TotalDPS", "Speed", "UsageLimit"])
+    assert boss["UsageLimit"] == 0.25 and boss["Speed"] <= 0.25 + 1e-9
+    pob.set_config(enemyIsBoss="None")   # maps: corpses everywhere
+    maps = pob.calc(["TotalDPS", "Speed", "UsageLimit"])
+    assert "UsageLimit" not in maps and maps["Speed"] > 0.25
