@@ -12,6 +12,9 @@ Usage is nearly out. Automated jobs carry the work; Claude check-ins stay tiny:
 - On a keepalive: run status.sh once. If jobs are still running, stop there (no new work). When the ailment scan
   has finished: commit its json + `ailments-report` text, add the top payoffs to leads.json, then stop.
 - Bigger tasks (14 rest, 15, 16) wait for the reset.
+- Combo play style (engine only, not deployed) tested 2026-11-19: Rend Titan end + Armour Breaker on weapon set 2:
+  boss 59,214 -> 72,621 (+23%), break 1.4 s, up 90%. To check after the reset: score_combo's setup DPS equals the
+  main skill's (set_main on a weapon set 2 group may not switch the calc), so the break rate may be Rend's.
 
 ## Rules
 - Read CLAUDE.md, BREAKER_ROADMAP.md, BREAKER.md, PC_TODO.md first, and your memory notes (pc-server-split,
