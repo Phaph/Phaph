@@ -67,9 +67,13 @@ steer from the Claude app (Remote Control).
    server repo, so a pull updates it without a redeploy. Engine 2026-11-19.4.
 7. [ ] Blind test against poe.ninja's top builds (tool built by this session earlier): run it, write the result into
    BREAKER.md (which of today's top builds the Breaker would have flagged, which it misses and why).
-8. [ ] In-game test requests: write TESTS.md entries for the strongest leads (Leopold's Applause penetration below 0;
+8. [x] In-game test requests: write TESTS.md entries for the strongest leads (Leopold's Applause penetration below 0;
    "not consumed" charge sources adding to 100% for Flicker Strike; Hexblast's real cast rate), each with the PoB
    code, what to buy, what to do, what result confirms or kills it. Ping Kyle once when TESTS.md is ready.
+   Done 2026-11-19: TESTS.md with 5 requests (Rapid Shot + Fresh Clip II; Rapid Shot + Rampart Raptor, new lead;
+   Leopold's below-0 penetration; Hexblast detonation rate; Ember Fusillade), codes in ingame/. "Not consumed"
+   charges: dead (all sources ~45%). Correction: the pairs scan stacks uniques on top of the slot's own item, so
+   Leopold's is worth +4% worn for real, not +38%.
 
 ### Whetstone features Kyle asked for
 9. [ ] Build style choice on the forge: One button / Combo setup / Best (default), using the combo finder.
