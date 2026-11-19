@@ -1,0 +1,148 @@
+2026-11-19T01:17:03Z sweep lane 0 of 1: 23 builds in all, 2700s limit each, 6 cpus, -> engine/data/baseline/az_sweep_server.json
+#1 Infernalist build ...
+   Ember Fusillade Infernalist Staff  4,355,828 dps  2330s  1 issues
+     - slow: 39 minutes
+
+0 of 1 prompts pass every check (PoB 0.23.1)
+    1  slow
+#2 Blood Mage build ...
+   Ember Fusillade Blood Mage Staff  5,450,317 dps  2305s  1 issues
+     - slow: 38 minutes
+
+0 of 2 prompts pass every check (PoB 0.23.1)
+    2  slow
+#3 Lich build ...
+   Bone Cage Lich Staff  6,369,968 dps  2306s  1 issues
+     - slow: 38 minutes
+
+0 of 3 prompts pass every check (PoB 0.23.1)
+    3  slow
+#4 Abyssal Lich build ...
+   Bone Cage Abyssal Lich Staff  3,535,159 dps  2328s  1 issues
+     - slow: 39 minutes
+
+0 of 4 prompts pass every check (PoB 0.23.1)
+    4  slow
+#5 Deadeye build ...
+   Rain of Arrows Deadeye Bow  2,876,898 dps  2379s  1 issues
+     - slow: 40 minutes
+
+0 of 5 prompts pass every check (PoB 0.23.1)
+    5  slow
+#6 Pathfinder build ...
+   Rain of Arrows Pathfinder Bow  2,281,854 dps  2419s  1 issues
+     - slow: 40 minutes
+
+0 of 6 prompts pass every check (PoB 0.23.1)
+    6  slow
+#7 Titan build ...
+   Hammer of the Gods Titan Two Hand Mace  2,321,016 dps  2378s  1 issues
+     - slow: 40 minutes
+
+0 of 7 prompts pass every check (PoB 0.23.1)
+    7  slow
+#8 Warbringer build ...
+   Hammer of the Gods Warbringer Two Hand Mace  2,472,569 dps  2421s  1 issues
+     - slow: 40 minutes
+
+0 of 8 prompts pass every check (PoB 0.23.1)
+    8  slow
+#9 Smith of Kitava build ...
+Killed
+#9 TIMEOUT after 2700s
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+PermissionError: [Errno 13] Permission denied: 'engine/data/baseline/az_sweep_server.json'
+#10 Stormweaver build ...
+Killed
+#10 TIMEOUT after 2700s
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+PermissionError: [Errno 13] Permission denied: 'engine/data/baseline/az_sweep_server.json'
+#11 Chronomancer build ...
+   Ember Fusillade Chronomancer Staff  1,529,924 dps  2182s  1 issues
+     - slow: 36 minutes
+
+0 of 9 prompts pass every check (PoB 0.23.1)
+    9  slow
+#12 Disciple of Varashta build ...
+   Ember Fusillade Disciple of Varashta Staff  1,019,910 dps  2092s  1 issues
+     - slow: 35 minutes
+
+0 of 10 prompts pass every check (PoB 0.23.1)
+   10  slow
+#13 Amazon build ...
+   Wind Serpent's Fury Amazon Spear  1,663,479 dps  2566s  1 issues
+     - slow: 43 minutes
+
+0 of 11 prompts pass every check (PoB 0.23.1)
+   11  slow
+#14 Spirit Walker build ...
+Killed
+#14 TIMEOUT after 2700s
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+PermissionError: [Errno 13] Permission denied: 'engine/data/baseline/az_sweep_server.json'
+#15 Ritualist build ...
+Killed
+#15 TIMEOUT after 2700s
+Traceback (most recent call last):
+  File "<stdin>", line 5, in <module>
+PermissionError: [Errno 13] Permission denied: 'engine/data/baseline/az_sweep_server.json'
+#16 Tactician build ...
+   Rapid Shot Tactician Crossbow  6,470,105 dps  2573s  1 issues
+     - slow: 43 minutes
+
+0 of 12 prompts pass every check (PoB 0.23.1)
+   12  slow
+#17 Witchhunter build ...
+   Rapid Shot Witchhunter Crossbow  5,033,674 dps  2605s  2 issues
+     - mid attributes: Str 79 < 89 needed (Weapon 1 Mid Endgame Weapon 1, Elegant Crossbow)
+     - slow: 43 minutes
+
+0 of 13 prompts pass every check (PoB 0.23.1)
+   13  slow
+    1  attributes
+#18 Gemling Legionnaire build ...
+   Rapid Shot Gemling Legionnaire Crossbow  5,394,141 dps  2388s  1 issues
+     - slow: 40 minutes
+
+0 of 14 prompts pass every check (PoB 0.23.1)
+   14  slow
+    1  attributes
+#19 Martial Artist build ...
+   Flicker Strike Martial Artist Staff  2,378,386 dps  2352s  1 issues
+     - slow: 39 minutes
+
+0 of 15 prompts pass every check (PoB 0.23.1)
+   15  slow
+    1  attributes
+#20 Invoker build ...
+   Flicker Strike Invoker Staff  3,088,849 dps  2348s  1 issues
+     - slow: 39 minutes
+
+0 of 16 prompts pass every check (PoB 0.23.1)
+   16  slow
+    1  attributes
+#21 Acolyte of Chayula build ...
+   Flicker Strike Acolyte of Chayula Staff  5,556,514 dps  2418s  1 issues
+     - slow: 40 minutes
+
+0 of 17 prompts pass every check (PoB 0.23.1)
+   17  slow
+    1  attributes
+#22 Oracle build ...
+   Oil Barrage Oracle Talisman  4,014,702 dps  2145s  1 issues
+     - slow: 36 minutes
+
+0 of 18 prompts pass every check (PoB 0.23.1)
+   18  slow
+    1  attributes
+#23 Shaman build ...
+   Oil Barrage Shaman Talisman  2,891,051 dps  2163s  1 issues
+     - slow: 36 minutes
+
+0 of 19 prompts pass every check (PoB 0.23.1)
+   19  slow
+    1  attributes
+2026-11-19T16:45:17Z sweep lane 0 finished
