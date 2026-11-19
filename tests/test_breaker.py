@@ -25,3 +25,13 @@ def test_report_keeps_only_strong_useful_pairs(tmp_path):
     ]}}))
     rows = report(p)
     assert [r["a"] for r in rows] == ["A"]
+
+
+def test_bench_slots_round_trip(pob, monk):
+    """A unique tried on the bench replaces the build's item in its slot (clear_slots), then the item comes back."""
+    pob.add_item("Rarity: Rare\nTest Gloves\nStocky Mitts\n+80 to maximum Life")
+    worn = pob.calc(["Life"])["Life"]
+    prev = pob.send("clear_slots", slots=["Gloves"])["prev"]
+    assert pob.calc(["Life"])["Life"] < worn
+    pob.send("restore_slots", prev=prev)
+    assert pob.calc(["Life"])["Life"] == worn

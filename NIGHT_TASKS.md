@@ -95,8 +95,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Breaker queue is free: `JOBS="conditions_asc matrix_asc"` from ~/breaker after a pull.
 
 ### Lodestone build-out (added 2026-11-19, after Kyle's note)
-13. [ ] Pairs scan fix: a unique tried as a pair must replace the slot's current item, not stack on top of it
+13. [x] Pairs scan fix: a unique tried as a pair must replace the slot's current item, not stack on top of it
     (Leopold's looked +38%, is +4% worn). Rescore the existing pairs.json report with the slot's item removed.
+    Done 2026-11-19: the bench empties a unique's slot first (runner clear_slots / restore_slots); `breaker.py
+    rescore` redid the report worn (pairs_worn.json). Leopold's + Fire Penetration still +31% (Leopold's alone +4%):
+    the below-0 lead holds. Maligaro's + Pinpoint +42%. Most other pairs were the stacking artefact (Rondel + Considered
+    Casting +52% -> -16%). The Lodestone page shows the worn numbers.
 14. [ ] Combo finder, more condition families: Shocked / Electrocuted / Frozen / Poisoned / immobilised (Siege
     Cascade, Dark Effigy, Lightning Conduit), each with its own setup rate and uptime model.
 15. [ ] Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose

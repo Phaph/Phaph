@@ -204,11 +204,15 @@ def ascendancy_passives(pob: PoB, stage) -> list[str]:
     return [x["node"] for x in r.get("steps") or []]
 
 
+WORN_SLOTS = {"Gloves", "Helmet", "Body Armour", "Boots", "Belt", "Amulet", "Ring"}   # jewels go in free sockets
+
+
 class Bench:
     """One build with its biggest damage source as the main skill; applies any set of pieces and returns the gain."""
 
-    def __init__(self, pob: PoB):
+    def __init__(self, pob: PoB, replace: bool = True):
         self.pob = pob
+        self.replace = replace   # a unique replaces the build's item in its slot (False: the old stacked way)
         boss(pob)
         self.group = dominant_group(pob)
         g = next(x for x in pob.send("groups")["groups"] if x["group"] == self.group)
@@ -219,12 +223,25 @@ class Bench:
 
     def _dmg(self, ps: list[dict]) -> float:
         text = "\n".join(p["mods"] for p in ps if p["kind"] == "unique")
+        # A unique goes in its slot: take out what the build wears there (two rings: both ring slots), so its gain is
+        # over the real item, not on top of it (Leopold's Applause read +38% stacked, +4% worn, 2026-11-19).
+        slots, rings = [], 0
+        for p in ps:
+            if p["kind"] == "unique" and p.get("slot") in WORN_SLOTS:
+                if p["slot"] == "Ring":
+                    rings += 1
+                    slots.append(f"Ring {rings}")
+                else:
+                    slots.append(p["slot"])
+        prev = self.pob.send("clear_slots", slots=slots)["prev"] if slots and self.replace else {}
         self.pob.send("set_custom_mods", text=text, nodes=[p["name"] for p in ps if p["kind"] == "keystone"])
         gems = self.gems + [p["name"] for p in ps if p["kind"] == "support"]
         try:
             o = self.pob.try_skill(self.group, gems, DMG)["output"]
         finally:
             self.pob.send("set_custom_mods", text="")
+            if prev:
+                self.pob.send("restore_slots", prev=prev)
         return total_dps(o)
 
     def gain(self, ps: list[dict]) -> float:
@@ -323,6 +340,35 @@ def report(path: Path, n: int = 25) -> list[dict]:
     return rows[:n]
 
 
+def rescore(db: str, path: Path, n: int = 25) -> list[dict]:
+    """The report's pairs measured again with each unique replacing the item the build wears in its slot (the pair
+    scan before 2026-11-19 stacked them on top). Returns the rows with gain_a / gain_b / gain_ab / synergy redone."""
+    done = json.loads(path.read_text(encoding="utf-8"))
+    rows = report(path, n)
+    codes = {}
+    con = sqlite3.connect(db)
+    for job_id in {j for j, v in done.items() for r in rows if f"{v['skill']} {v['ascendancy']}" == r["build"]}:
+        res = json.loads(con.execute("select result from jobs where id=?", (job_id,)).fetchone()[0])
+        end = next(s for s in res["stages"] if s.get("stage") == "end")
+        codes[f"{done[job_id]['skill']} {done[job_id]['ascendancy']}"] = end["code"]
+    out = []
+    with PoB() as pob:
+        pob.send("new")
+        cat = {(c["kind"], c["name"]): c for c in pieces(pob)}
+        for r in rows:
+            pob.load_code(codes[r["build"]])
+            bench = Bench(pob)
+            piece = lambda k, nm: {"kind": "support", "name": nm, "mods": ""} if k == "support" else cat.get((k, nm))
+            a, b = piece(r["ka"], r["a"]), piece(r["kb"], r["b"])
+            if not a or not b or bench.base <= 0:
+                continue
+            ga, gb, gab = bench.gain([a]), bench.gain([b]), bench.gain([a, b])
+            syn = (1 + gab) / ((1 + ga) * (1 + gb)) if (1 + ga) * (1 + gb) > 0 else 0
+            out.append({**r, "stacked": {k: r[k] for k in ("gain_a", "gain_b", "gain_ab", "synergy")},
+                        "gain_a": round(ga, 4), "gain_b": round(gb, 4), "gain_ab": round(gab, 4), "synergy": round(syn, 4)})
+    return out
+
+
 if __name__ == "__main__":
     if len(sys.argv) >= 3 and sys.argv[1] == "scan" and sys.argv[2] == "--jobs":
         scan_jobs(sys.argv[3], Path(sys.argv[sys.argv.index("--out") + 1]))
@@ -333,6 +379,14 @@ if __name__ == "__main__":
         for r in report(Path(sys.argv[2])):
             print(f"{r['synergy']:.2f}  {r['build']}: {r['a']} ({r['ka']}, {r['gain_a']:+.0%}) + {r['b']} ({r['kb']}, "
                   f"{r['gain_b']:+.0%}) = {r['gain_ab']:+.0%}")
+    elif len(sys.argv) >= 3 and sys.argv[1] == "rescore":
+        rows = rescore(sys.argv[sys.argv.index("--jobs") + 1], Path(sys.argv[2]))
+        for r in rows:
+            st = r["stacked"]
+            print(f"{r['build']}: {r['a']} + {r['b']}: worn {r['gain_a']:+.0%} / {r['gain_b']:+.0%} -> {r['gain_ab']:+.0%} "
+                  f"(synergy {r['synergy']:.2f}); stacked was {st['gain_a']:+.0%} / {st['gain_b']:+.0%} -> {st['gain_ab']:+.0%}")
+        if "--out" in sys.argv:
+            Path(sys.argv[sys.argv.index("--out") + 1]).write_text(json.dumps(rows, indent=1), encoding="utf-8")
     elif len(sys.argv) == 3 and sys.argv[1] == "scan":
         with PoB() as p:
             p.load_code(Path(sys.argv[2]).read_text().strip())

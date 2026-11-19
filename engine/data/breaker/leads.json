@@ -23,7 +23,7 @@
    "status": "to_test",
    "found": "2026-11-17",
    "detector": "interaction finder",
-   "what": "The gloves let hits penetrate resistance down to -50%. Normally a second penetration source is wasted once a boss is at 0%; with Leopold's every extra point keeps counting. Showed up on 4 of the top 9 pairs (+31% to +45% together vs +8-10% alone). Correction 2026-11-19: the pair scan stacked the gloves on top of the build's own gloves; worn for real (replacing Deathblow) Fireball Blood Mage gains only +4%. A mechanics check, not a broken build yet.",
+   "what": "The gloves let hits penetrate resistance down to -50%. Normally a second penetration source is wasted once a boss is at 0%; with Leopold's every extra point keeps counting. Measured with the gloves really worn (replacing the build's own): Fireball Blood Mage +4% alone, Fire Penetration I +10% alone, +31% together.",
    "check": "Does the -50% floor apply to pinnacle bosses in game? (TESTS.md #3)"
   },
   {

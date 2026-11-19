@@ -439,6 +439,29 @@ function handlers.unequip(cmd)
 end
 
 -- What is equipped where, as raw item text.
+-- Empty some slots for a what-if and put the same items back after (the Breaker's bench: a unique tried in a slot
+-- replaces what the build wears there). Returns the item ids to restore.
+function handlers.clear_slots(cmd)
+	local prev = {}
+	for _, name in ipairs(cmd.slots or {}) do
+		local slot = build.itemsTab.slots[name]
+		if slot then prev[name] = slot.selItemId or 0; slot:SetSelItemId(0) end
+	end
+	build.buildFlag = true
+	frame()
+	return { prev = prev }
+end
+
+function handlers.restore_slots(cmd)
+	for name, id in pairs(cmd.prev or {}) do
+		local slot = build.itemsTab.slots[name]
+		if slot then slot:SetSelItemId(id) end
+	end
+	build.buildFlag = true
+	frame()
+	return {}
+end
+
 function handlers.equipped(cmd)
 	local slots = {}
 	for name, slot in pairs(build.itemsTab.slots) do

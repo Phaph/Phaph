@@ -1,0 +1,155 @@
+[
+ {
+  "build": "Flicker Strike Acolyte of Chayula",
+  "a": "Leopold's Applause",
+  "ka": "unique",
+  "b": "The Pandemonius",
+  "kb": "unique",
+  "gain_a": 0.0046,
+  "gain_b": -0.178,
+  "gain_ab": 0.0057,
+  "synergy": 1.2178,
+  "stacked": {
+   "gain_a": 0.1013,
+   "gain_b": 0.0811,
+   "gain_ab": 0.4528,
+   "synergy": 1.2202
+  }
+ },
+ {
+  "build": "Snap Amazon",
+  "a": "Considered Casting",
+  "ka": "support",
+  "b": "Rondel of Fragility",
+  "kb": "unique",
+  "gain_a": 0.1571,
+  "gain_b": -0.3784,
+  "gain_ab": -0.1608,
+  "synergy": 1.1666,
+  "stacked": {
+   "gain_a": 0.1571,
+   "gain_b": 0.1256,
+   "gain_ab": 0.5195,
+   "synergy": 1.1666
+  }
+ },
+ {
+  "build": "Fireball Blood Mage",
+  "a": "Leopold's Applause",
+  "ka": "unique",
+  "b": "Fire Penetration I",
+  "kb": "support",
+  "gain_a": 0.0409,
+  "gain_b": 0.0957,
+  "gain_ab": 0.3135,
+  "synergy": 1.1517,
+  "stacked": {
+   "gain_a": 0.0957,
+   "gain_b": 0.0957,
+   "gain_ab": 0.3826,
+   "synergy": 1.1517
+  }
+ },
+ {
+  "build": "Skyfall Stormweaver",
+  "a": "Plaguefinger",
+  "ka": "unique",
+  "b": "Atsak's Sight",
+  "kb": "unique",
+  "gain_a": 0.1029,
+  "gain_b": -0.1145,
+  "gain_ab": 0.0948,
+  "synergy": 1.121,
+  "stacked": {
+   "gain_a": 0.161,
+   "gain_b": 0.1198,
+   "gain_ab": 0.4793,
+   "synergy": 1.1379
+  }
+ },
+ {
+  "build": "Skeletal Sniper Lich",
+  "a": "Maligaro's Virtuosity",
+  "ka": "unique",
+  "b": "Pinpoint Critical",
+  "kb": "support",
+  "gain_a": 0.1542,
+  "gain_b": 0.0865,
+  "gain_ab": 0.4239,
+  "synergy": 1.1354,
+  "stacked": {
+   "gain_a": 0.215,
+   "gain_b": 0.0865,
+   "gain_ab": 0.4988,
+   "synergy": 1.1354
+  }
+ },
+ {
+  "build": "Rapid Shot Oracle",
+  "a": "Leopold's Applause",
+  "ka": "unique",
+  "b": "Avatar of Fire",
+  "kb": "keystone",
+  "gain_a": 0.0074,
+  "gain_b": -0.0845,
+  "gain_ab": 0.0362,
+  "synergy": 1.1236,
+  "stacked": {
+   "gain_a": 0.2777,
+   "gain_b": -0.0604,
+   "gain_ab": 0.3503,
+   "synergy": 1.1247
+  }
+ },
+ {
+  "build": "Snap Amazon",
+  "a": "Plaguefinger",
+  "ka": "unique",
+  "b": "Atsak's Sight",
+  "kb": "unique",
+  "gain_a": 0.0104,
+  "gain_b": 0.0095,
+  "gain_ab": 0.1418,
+  "synergy": 1.1194,
+  "stacked": {
+   "gain_a": 0.0636,
+   "gain_b": 0.0633,
+   "gain_ab": 0.2611,
+   "synergy": 1.1151
+  }
+ },
+ {
+  "build": "Entangle Shaman",
+  "a": "Edyrn's Tusks",
+  "ka": "unique",
+  "b": "Crimson Assault",
+  "kb": "keystone",
+  "gain_a": 0.0013,
+  "gain_b": -0.0312,
+  "gain_ab": 0.0774,
+  "synergy": 1.1107,
+  "stacked": {
+   "gain_a": 0.1014,
+   "gain_b": -0.0312,
+   "gain_ab": 0.1851,
+   "synergy": 1.1107
+  }
+ },
+ {
+  "build": "Skeletal Sniper Lich",
+  "a": "Fire Penetration I",
+  "ka": "support",
+  "b": "Leopold's Applause",
+  "kb": "unique",
+  "gain_a": 0.0998,
+  "gain_b": 0.0277,
+  "gain_ab": 0.2453,
+  "synergy": 1.1018,
+  "stacked": {
+   "gain_a": 0.0998,
+   "gain_b": 0.0818,
+   "gain_ab": 0.3109,
+   "synergy": 1.1018
+  }
+ }
+]

@@ -49,16 +49,15 @@ also changes how Fresh Clip (test 1) behaves.
 ## 3. Leopold's Applause: does penetration go below 0% resistance on a pinnacle boss?
 
 **Why:** the gloves let hits penetrate resistances down to -50%. Normally a second penetration source does nothing
-once a boss is at 0%; with Leopold's it keeps counting. PoB applies the -50% floor to bosses. **Correction
-(2026-11-19):** the interaction finder had stacked the gloves on top of the build's existing gloves; worn for real
-(replacing Deathblow) the build gains only +4% (Fireball Blood Mage, 872K -> 907K). So this is a mechanics check, not
-a broken build yet: if the floor holds, builds with lots of penetration can be made around it.
+once a boss is at 0%; with Leopold's it keeps counting. PoB applies the -50% floor to bosses. Measured with the gloves
+really worn (replacing Deathblow), Fireball Blood Mage: Leopold's alone +4%, Fire Penetration I alone +10%, **both
++31%**: the pair multiplies. If the floor holds in game, penetration-stacking builds around Leopold's are a real lead.
 
 - **Build:** `ingame/leopolds_fireball_blood_mage.txt` (Fireball, Blood Mage, Leopold's Applause on).
 - **Buy:** Leopold's Applause; Fire Penetration I support.
 - **Do:** on the same map boss (or a pinnacle boss if you have the fragments), kill it 3 times with Fire Penetration I
   in the Fireball group and 3 times without, same gear otherwise. Time each kill.
-- **Confirms:** clearly faster kills with Fire Penetration (PoB: about +10% damage). **Kills:** no difference: the
+- **Confirms:** clearly faster kills with Fire Penetration (PoB: +26% damage on top of Leopold's, vs +10% without it). **Kills:** no difference: the
   game stops penetration at 0% on bosses, or the -50% doesn't apply to them.
 
 **Result:** _(to fill)_

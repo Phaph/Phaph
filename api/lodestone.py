@@ -24,7 +24,8 @@ def _load(name: str) -> dict | None:
 
 
 def _key() -> tuple:
-    files = [BREAKER_DIR / n for n in ("leads.json", "conditions.json", "combos.json", "pairs.json", "matrix.json")]
+    files = [BREAKER_DIR / n for n in ("leads.json", "conditions.json", "combos.json", "pairs.json", "pairs_worn.json",
+                                       "matrix.json")]
     files += sorted(JOBS_DIR.glob("*.status")) if JOBS_DIR.exists() else []
     return tuple((str(f), f.stat().st_mtime) for f in files if f.exists())
 
@@ -54,10 +55,16 @@ def _combos(d: dict | None, n: int = 12) -> list[dict]:
 
 
 def _pairs(n: int = 10) -> list[dict]:
+    """The multiplying pairs, measured with each unique really worn (pairs_worn.json, breaker.py rescore) when that
+    file exists; pairs that stop paying off worn are left out."""
+    keep = ("build", "a", "b", "gain_a", "gain_b", "gain_ab", "synergy")
+    worn = _load("pairs_worn.json")
+    if isinstance(worn, list):
+        rows = [r for r in worn if r.get("gain_ab", 0) >= 0.10 and r.get("synergy", 0) >= 1.10]
+        return [{k: r.get(k) for k in keep} for r in sorted(rows, key=lambda r: -r["gain_ab"])[:n]]
     if not (BREAKER_DIR / "pairs.json").exists():
         return []
     from breaker import report
-    keep = ("build", "a", "b", "gain_a", "gain_b", "gain_ab", "synergy")
     return [{k: r.get(k) for k in keep} for r in report(BREAKER_DIR / "pairs.json", n)]
 
 

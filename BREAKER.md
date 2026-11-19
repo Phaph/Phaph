@@ -234,8 +234,19 @@ share}}) needs the new endpoint, found from the PC's browser.
 TESTS.md: five requests for Kyle (Rapid Shot + Fresh Clip II speed scaling; Rapid Shot + Rampart Raptor, a new text
 scan lead: 100% chance to not expend ammunition after a reload; Leopold's Applause below-0 penetration on bosses;
 Hexblast's real detonation rate; Ember Fusillade PoB vs real), PoB codes in `ingame/`.
-**Correction to the pairs table above:** `breaker.py pairs` applies uniques as extra mods on top of the build, so a
-unique also keeps the item it would replace. Worn for real, Leopold's Applause replaces the build's Deathblow gloves:
-Fireball Blood Mage +4% (not +10% alone / +38% with Fire Penetration), Flicker Strike with The Pandemonius too +0.6%.
-The below-0 mechanic still needs the in-game check; the pairs scan should subtract the slot's current item (to do).
+**Correction to the pairs table above:** `breaker.py pairs` applied uniques as extra mods on top of the build, so a
+unique also kept the item it would replace. Fixed (the bench now empties the unique's slot first) and the report
+rescored with the items really worn (`breaker.py rescore`, data/breaker/pairs_worn.json):
+| Build | Pair | Worn: alone / alone -> together | Stacked (old) |
+|---|---|---|---|
+| Fireball Blood Mage | Leopold's Applause + Fire Penetration I | +4% / +10% -> **+31%** | +38% |
+| Skeletal Sniper Lich | Maligaro's Virtuosity + Pinpoint Critical | +15% / +9% -> **+42%** | +50% |
+| Skeletal Sniper Lich | Fire Penetration I + Leopold's Applause | +10% / +3% -> **+25%** | +31% |
+| Snap Amazon | Plaguefinger + Atsak's Sight | +1% / +1% -> +14% | +26% |
+| Skyfall Stormweaver | Plaguefinger + Atsak's Sight | +10% / -11% -> +9% | +48% |
+| Entangle Shaman | Edyrn's Tusks + Crimson Assault | +0% / -3% -> +8% | +19% |
+| Rapid Shot Oracle | Leopold's Applause + Avatar of Fire | +1% / -8% -> +4% | +35% |
+| Flicker Strike Acolyte | Leopold's Applause + The Pandemonius | +0% / -18% -> +1% | +45% |
+| Snap Amazon | Considered Casting + Rondel of Fragility | +16% / -38% -> -16% | +52% |
+Leopold's + penetration survives (the below-0 mechanic multiplies); most other pairs were the stacking artefact.
 "Not consumed" charges: all sources add to ~45% (Perpetual Charge 25%, The Fabled Stag 10%, Hollow Form 10%): dead.
