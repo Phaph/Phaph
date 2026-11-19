@@ -1,0 +1,9 @@
+15 skills scanned. Interactions: a unique or keystone worth far more on one skill than usual (8 found):
+  +   98% (usual +0%)  The Coming Calamity          on Rolling Slam  [unique]
+  +   89% (usual +53%)  Rondel of Fragility          on Hammer of the Gods  [unique]
+  +   36% (usual +0%)  Irongrasp                    on Molten Blast  [unique]
+  +   35% (usual +0%)  Fireflower                   on Molten Blast  [unique]
+  +   87% (usual +53%)  Rondel of Fragility          on Sunder  [unique]
+  +   33% (usual +0%)  Beacon of Azis               on Rolling Slam  [unique]
+  +   37% (usual +8%)  Ming's Heart                 on Rolling Slam  [unique]
+  +   35% (usual +8%)  Ming's Heart                 on Hammer of the Gods  [unique]
