@@ -1,0 +1,4 @@
+166 skills measured for ailments vs a pinnacle boss. Payoffs (gain if always on, well above the usual) and their best applier (our cycle estimate):
+  edge  +69%  Dark Effigy            vs Poison (always +100%, usual +0%) <- Frost Darts: apply every 0.63 s, up 76%
+  edge   +6%  Flame Breath           vs Ignite (always +31%, usual +0%) <- Ember Fusillade [weapon set 2]: apply every 3.29 s, up 51%
+  no combo  Lightning Conduit      vs Shock  (always +68%): nothing applies it often enough on a pinnacle boss

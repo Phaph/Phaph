@@ -113,7 +113,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     rescore` redid the report worn (pairs_worn.json). Leopold's + Fire Penetration still +31% (Leopold's alone +4%):
     the below-0 lead holds. Maligaro's + Pinpoint +42%. Most other pairs were the stacking artefact (Rondel + Considered
     Casting +52% -> -16%). The Lodestone page shows the worn numbers.
-14. [ ] Combo finder, more condition families: Shocked / Electrocuted / Frozen / Poisoned / immobilised (Siege
+14. [ ] (ailments done 2026-11-19: Dark Effigy + poison +69%, the only strong one vs a pinnacle boss; Lightning
+    Conduit's shock can't be kept up on bosses. Left: immobilised family for Siege Cascade, mapping combos.) Combo finder, more condition families: Shocked / Electrocuted / Frozen / Poisoned / immobilised (Siege
     Cascade, Dark Effigy, Lightning Conduit), each with its own setup rate and uptime model.
 15. [ ] Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose
     triggers can feed each other; estimate the rate; leads + test requests.

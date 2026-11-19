@@ -43,18 +43,17 @@
   },
   {
    "name": "Dark Effigy vs Poisoned",
-   "status": "to_test",
+   "status": "confirmed",
    "found": "2026-11-18",
    "detector": "condition scan",
-   "what": "+100% damage against poisoned enemies. Pair with any poison applier.",
-   "check": "Poison uptime on a boss with a cheap applier."
+   "what": "+100% damage against poisoned enemies. Combo finder (ailments, our cycle estimate): Frost Darts with Poison supports poisons a pinnacle boss every 0.6 s, up 76% of the fight: +69% over the better skill alone. Dark Effigy poisoning for itself with Poison supports gets about the same."
   },
   {
    "name": "Lightning Conduit vs Shocked",
    "status": "known",
    "found": "2026-11-18",
    "detector": "condition scan",
-   "what": "+68% vs shocked enemies (most skills get +20%). Lightning Conduit per 5% Shock was a broken build in patch 0.1: Lodestone found it again without being told, which shows the detector works."
+   "what": "+68% vs shocked enemies (most skills get +20%). Lightning Conduit per 5% Shock was a broken build in patch 0.1: Lodestone found it again without being told, which shows the detector works. Against a pinnacle boss nothing in the game shocks often enough to use it (bosses' ailment threshold): a mapping combo, not a boss one."
   },
   {
    "name": "Armour Broken combos",
