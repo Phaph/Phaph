@@ -40,8 +40,15 @@ steer from the Claude app (Remote Control).
    Done 2026-11-19: Detonate Dead capped at 0.25 casts/s against bosses (a corpse from adds every ~4 s, estimate),
    uncapped on maps. Lich round-1 boss DPS 145k -> 31k: behind Bone Cage and Ember Fusillade now. Ember Fusillade
    checked, no limit: PoB ignores both its 10-ember cap + 1.3 s delay (~x0.7) and +5% more per ember fired (~x1.5).
-4. [ ] Build speed: every build takes 24-36 min on the PC, ~45+ on the server; Gemling Legionnaire timed out. Profile
+4. [x] Build speed: every build takes 24-36 min on the PC, ~45+ on the server; Gemling Legionnaire timed out. Profile
    one build, cut the slowest steps without losing quality (compare DPS before/after on 3 builds).
+   Done 2026-11-19 (profile only, nothing shipped): Uber Endgame stage, Deadeye, 827 s on 2 cores: kit_out 303 s
+   (1,725 PoB calls: supports for marks, heralds, movement), passive tree 110 s, gear 103 s, main supports 97 s,
+   triggers 72 s, jewels 46 s. A lighter beam for kit_out (1 / top 5 vs 3 / top 15) gave the same DPS on Deadeye,
+   Lich, Titan but saved only ~3%: the cost is screening every fitting support per extra skill, not the beam.
+   Next idea (Whetstone, when it's a priority again): screen extra skills only on supports made for their kind
+   (fit_supports' lists), or reuse one screen per skill across stages. Stages already run in parallel, so wall time
+   is the slowest stage on enough cores.
 
 ### Breaker (the game plan, BREAKER_ROADMAP.md)
 5. [x] Matrix within-family report: compare each unique's gain with skills of the same family (same skill types /
@@ -76,6 +83,8 @@ steer from the Claude app (Remote Control).
    Leopold's is worth +4% worn for real, not +38%.
 
 ### Whetstone features Kyle asked for
+**Deferred 2026-11-19 (Kyle: no more website front-end work for now; focus on Lodestone).** Engine parts that
+Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_ui_style_howplay.patch.
 9. [ ] Build style choice on the forge: One button / Combo setup / Best (default), using the combo finder.
 10. [ ] "How you play" card at the top of every build: Mapping: skill(s) | Bosses: skill(s) (+ "swap to weapon set 2"),
     or "one skill does both" and why.
@@ -84,6 +93,16 @@ steer from the Claude app (Remote Control).
 
 12. [ ] Re-run the per-ascendancy condition and matrix scans with ascendancy passives (fixed in task 5) once the
     Breaker queue is free: `JOBS="conditions_asc matrix_asc"` from ~/breaker after a pull.
+
+### Lodestone build-out (added 2026-11-19, after Kyle's note)
+13. [ ] Pairs scan fix: a unique tried as a pair must replace the slot's current item, not stack on top of it
+    (Leopold's looked +38%, is +4% worn). Rescore the existing pairs.json report with the slot's item removed.
+14. [ ] Combo finder, more condition families: Shocked / Electrocuted / Frozen / Poisoned / immobilised (Siege
+    Cascade, Dark Effigy, Lightning Conduit), each with its own setup rate and uptime model.
+15. [ ] Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose
+    triggers can feed each other; estimate the rate; leads + test requests.
+16. [ ] Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
+    saved with their codes, so test requests come with a complete build.
 
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
