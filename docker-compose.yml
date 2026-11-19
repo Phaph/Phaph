@@ -19,8 +19,12 @@ services:
       ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
       AI_DAILY_LIMIT: ${AI_DAILY_LIMIT:-1000}
       PROMPT_LOG: /data/prompt_log.jsonl
+      BREAKER_DIR: /breaker
     volumes:
       - jobs:/data
+      # Lodestone page: the Breaker files as committed on the server, and the server queue's status lines.
+      - ./engine/data/breaker:/breaker:ro
+      - ${HOME}/server_jobs:/server_jobs:ro
     # Leave CPU for games and everything else on the PC.
     cpus: ${APP_CPUS:-16}
 

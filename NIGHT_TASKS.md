@@ -54,12 +54,17 @@ steer from the Claude app (Remote Control).
    **Found on the way: the per-ascendancy scans never had ascendancy passives** (round-1 builds take no tree), so
    every ascendancy of a class read the same (matrix_asc and conditions_asc). Fixed (breaker.ascendancy_passives);
    both need a re-run once the queue is free (queued below as task 12).
-6. [ ] Breaker page on the website, called **Lodestone** in public (Kyle 2026-11-18: "Breaker" stays the internal
+6. [x] Breaker page on the website, called **Lodestone** in public (Kyle 2026-11-18: "Breaker" stays the internal
    code name): an unlisted page (phaphofbuilding.com/lodestone.html, no link from the home page,
    noindex) showing the latest Breaker results in plain English: leads with status (to test / confirmed / dead),
    condition payoffs, unique and keystone interactions, the combo finder's top combos, and what's queued on the
    server. Data from a new API endpoint reading the committed Breaker files. Same look as the main site. Kyle checks
    it from his phone; making it public waits for Kyle (put it under Waiting).
+   Done 2026-11-19: phaphofbuilding.com/lodestone.html (noindex, no link from the home page). Leads with status
+   (curated in engine/data/breaker/leads.json: 6 to test, 1 confirmed, 1 rediscovered, 2 bugs fixed, 1 explained
+   away), top combos, condition payoffs, one-skill interactions (+ best-in-slot list), multiplying pairs, and the
+   server queue. API GET /lodestone/data (api/lodestone.py) reads the Breaker files mounted read-only from the
+   server repo, so a pull updates it without a redeploy. Engine 2026-11-19.4.
 7. [ ] Blind test against poe.ninja's top builds (tool built by this session earlier): run it, write the result into
    BREAKER.md (which of today's top builds the Breaker would have flagged, which it misses and why).
 8. [ ] In-game test requests: write TESTS.md entries for the strongest leads (Leopold's Applause penetration below 0;
@@ -77,6 +82,7 @@ steer from the Claude app (Remote Control).
     Breaker queue is free: `JOBS="conditions_asc matrix_asc"` from ~/breaker after a pull.
 
 ## Waiting for Kyle
-- (nothing yet)
+- Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
+  sharing it is your call.
 
 ## Done

@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 
 StageKey = Literal["act1", "act2", "act34", "interludes", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-19.3"
+ENGINE_VERSION = "2026-11-19.4"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))
@@ -347,6 +347,19 @@ def lavabug_js():
 @app.get("/treeview.js")
 def treeview_js():
     return FileResponse(STATIC / "treeview.js", media_type="text/javascript", headers={"Cache-Control": "public, max-age=3600"})
+
+
+@app.get("/lodestone.html")
+def lodestone_page():
+    return FileResponse(STATIC / "lodestone.html", headers={"X-Robots-Tag": "noindex, nofollow"})
+
+
+@app.get("/lodestone/data")
+def lodestone_data():
+    """Lodestone (the Breaker) results in one summary for the unlisted page: leads, payoffs, combos, interactions,
+    and what the server queue is doing. Read from the committed Breaker files (api/lodestone.py)."""
+    from api.lodestone import summary
+    return summary()
 
 
 @app.get("/tree.html")

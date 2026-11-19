@@ -218,3 +218,12 @@ def test_full_gem_tooltip(client):
     assert any(t.startswith("Cost:") for t in text) and any("Chains" in t for t in text)
     assert not any("Not supported in PoB" in t for t in text)
     assert client.get("/gems/No Such Gem").status_code == 404
+
+
+def test_lodestone_page_and_data(client):
+    page = client.get("/lodestone.html")
+    assert page.status_code == 200 and "noindex" in page.text and "noindex" in page.headers.get("x-robots-tag", "")
+    d = client.get("/lodestone/data").json()
+    assert set(d) >= {"leads", "payoffs", "combos", "pairs", "interactions", "queue"}
+    assert d["leads"] and all(l["status"] in {"to_test", "confirmed", "known", "dead", "fixed"} for l in d["leads"])
+    assert d["combos"] and all(c["edge"] > 0 for c in d["combos"])

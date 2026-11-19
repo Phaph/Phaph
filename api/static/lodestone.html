@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Lodestone · Whetstone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@500;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+/* Same smithy as the main page: forged iron, ember light, brass. Lodestone adds one colour: the magnet's blue-grey. */
+:root {
+  --ground: #0e0d0c; --iron: #171513; --iron2: #1f1c19; --iron3: #2a2622; --seam: #070606; --edge: #3a342d;
+  --ink: #ece4d6; --muted: #a39a8b; --faint: #6f675c;
+  --brass: #d0a45a; --brass-hi: #f0c97f; --ember: #e0703a;
+  --good: #9cc183; --bad: #d4805f; --lode: #8fa6b8;
+  --display: "Grenze Gotisch", "Iowan Old Style", Georgia, serif;
+  --body: "Alegreya Sans", "Gill Sans", "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--ground); color: var(--ink); font: 17px/1.55 var(--body); min-height: 100vh; overflow-x: hidden; }
+body::after { content: ""; position: fixed; left: -10%; right: -10%; bottom: -30vh; height: 70vh; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse at 50% 100%, rgba(143,166,184,.16), rgba(208,164,90,.06) 45%, transparent 70%); }
+.wrap { position: relative; z-index: 1; max-width: 1040px; margin: 0 auto; padding: 28px max(16px, env(safe-area-inset-right)) 80px max(16px, env(safe-area-inset-left));
+  display: grid; gap: 40px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 600; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(52px, 11vw, 104px); line-height: .85; font-weight: 700;
+  background: linear-gradient(180deg, #e8eef2 0%, #b7c4cf 46%, #6f8190 54%, #c9d4dc 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+h2 { font-size: clamp(28px, 4.4vw, 38px); line-height: 1; }
+p { margin: 0; }
+a { color: var(--brass); }
+.eyebrow { font: italic 500 17px/1.2 var(--body); color: var(--brass); }
+.muted { color: var(--muted); }
+.mono, .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+header { display: grid; gap: 12px; }
+header .lede { max-width: 62ch; color: var(--muted); }
+section { display: grid; gap: 14px; }
+section > .intro { max-width: 70ch; color: var(--muted); font-size: 16px; }
+.panel { background: var(--iron); border: 1px solid var(--edge); border-radius: 6px; box-shadow: 0 1px 0 var(--seam) inset; }
+/* Leads */
+.leads { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+.lead { padding: 14px 16px; display: grid; gap: 8px; align-content: start; }
+.lead h3 { font-size: 22px; line-height: 1.05; }
+.lead .what { font-size: 15.5px; }
+.lead .check { font-size: 15px; color: var(--muted); }
+.lead .check b { color: var(--ink); font-weight: 500; }
+.lead .meta { font-size: 13px; color: var(--faint); }
+.chip { display: inline-block; font: 600 12px/1 var(--mono); letter-spacing: .04em; text-transform: uppercase; padding: 5px 8px; border-radius: 4px;
+  border: 1px solid currentColor; justify-self: start; }
+.s-to_test { color: var(--brass-hi); } .s-confirmed { color: var(--good); } .s-known { color: var(--lode); }
+.s-dead { color: var(--faint); } .s-fixed { color: var(--bad); }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.filters button { background: var(--iron2); border: 1px solid var(--edge); color: var(--muted); border-radius: 4px; padding: 6px 10px; font: 500 14px var(--body); cursor: pointer; }
+.filters button[aria-pressed="true"] { color: var(--ink); border-color: var(--brass); }
+/* Tables */
+.scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--iron3); vertical-align: top; }
+th { font: 600 13px/1.2 var(--body); color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+td.num, th.num { text-align: right; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+.up { color: var(--good); }
+.small { font-size: 13px; color: var(--faint); }
+.bar { height: 6px; background: var(--iron3); border-radius: 3px; overflow: hidden; min-width: 60px; }
+.bar i { display: block; height: 100%; background: var(--lode); }
+.queue { padding: 12px 16px; display: grid; gap: 6px; font-size: 15px; }
+.err { color: var(--bad); }
+footer { color: var(--faint); font-size: 14px; }
+@media (max-width: 560px) { th, td { padding: 8px 8px; } table { font-size: 14px; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Whetstone sharpens a build. Lodestone finds the ones nobody has found.</p>
+    <h1>Lodestone</h1>
+    <p class="lede">What the hunt has turned up so far, in plain words. Numbers are from Path of Building against a pinnacle boss;
+      anything marked <span class="chip s-to_test">to test</span> needs checking in the real game before anyone builds on it.</p>
+    <p class="small" id="stamp">Loading…</p>
+  </header>
+
+  <section id="leads-sec">
+    <h2>Leads</h2>
+    <p class="intro">Each find and where it stands: waiting for an in-game test, confirmed, rediscovered (a known strong build found again without being told: proof the hunt works), explained away, or a bug in our maths that is now fixed.</p>
+    <div class="filters" id="filters"></div>
+    <div class="leads" id="leads"></div>
+  </section>
+
+  <section>
+    <h2>Combos</h2>
+    <p class="intro">One skill sets the boss up, another cashes it in (so far: breaking its armour). <b>Edge</b> is how much more damage the pair does than the better of the two skills used alone, after the time spent setting up.</p>
+    <div class="panel scroll"><table id="combos"><thead><tr><th>Payoff skill</th><th>Set up by</th><th class="num">Edge</th><th class="num">Break time</th><th class="num">Uptime</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Skills that cash in a condition</h2>
+    <p class="intro">Skills that gain far more than usual when the enemy is in one state. Most skills get +20% against a shocked enemy; these get much more, so they want a partner skill that keeps that state up.</p>
+    <div class="panel scroll"><table id="payoffs"><thead><tr><th>Skill</th><th>When the enemy is</th><th class="num">Gain</th><th class="num">Usual</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Items and keystones that click with one skill</h2>
+    <p class="intro">A unique or keystone that is ordinary for most builds but far stronger with one skill than with the rest of that skill's family (same weapon or kind, same damage type). These are the shape broken builds take.</p>
+    <div class="panel scroll"><table id="inter"><thead><tr><th>Piece</th><th>With</th><th class="num">Gain</th><th class="num">Family usual</th></tr></thead><tbody></tbody></table></div>
+    <p class="small" id="broad"></p>
+  </section>
+
+  <section>
+    <h2>Pairs that multiply</h2>
+    <p class="intro">Two pieces that do more together than apart, tried on saved builds. <b>Together</b> beats what the two would add up to on their own.</p>
+    <div class="panel scroll"><table id="pairs"><thead><tr><th>Build</th><th>Pair</th><th class="num">Alone</th><th class="num">Together</th></tr></thead><tbody></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>Running now</h2>
+    <div class="panel queue" id="queue"></div>
+  </section>
+
+  <footer>Unlisted page for testing. Lodestone is part of Whetstone. Not affiliated with or endorsed by Grinding Gear Games.</footer>
+</div>
+<script>
+(() => {
+  const PAGE_VERSION = "2026-11-19.1";
+  const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
+    ? "https://api.phaphofbuilding.com" : "";
+  const STATUS = { to_test: "to test", confirmed: "confirmed", known: "rediscovered", dead: "explained away", fixed: "bug fixed" };
+  const ORDER = ["to_test", "confirmed", "known", "fixed", "dead"];
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const pct = v => (v >= 0 ? "+" : "") + Math.round(v * 100) + "%";
+  const row = (cells) => { const tr = el("tr"); cells.forEach(([t, cls]) => tr.appendChild(el("td", cls || "", t))); return tr; };
+  const fill = (id, rows, empty) => {
+    const tb = document.querySelector(`#${id} tbody`); tb.textContent = "";
+    if (!rows.length) { const tr = el("tr"); const td = el("td", "muted", empty || "Nothing yet."); td.colSpan = 5; tr.appendChild(td); tb.appendChild(tr); return; }
+    rows.forEach(r => tb.appendChild(row(r)));
+  };
+  let leads = [], filter = "all";
+  function drawLeads() {
+    const box = document.getElementById("leads"); box.textContent = "";
+    leads.filter(l => filter === "all" || l.status === filter)
+      .sort((a, b) => ORDER.indexOf(a.status) - ORDER.indexOf(b.status))
+      .forEach(l => {
+        const c = el("article", "panel lead");
+        c.appendChild(el("span", `chip s-${l.status}`, STATUS[l.status] || l.status));
+        c.appendChild(el("h3", "", l.name));
+        c.appendChild(el("p", "what", l.what));
+        if (l.check) { const p = el("p", "check"); p.appendChild(el("b", "", "To check: ")); p.appendChild(document.createTextNode(l.check)); c.appendChild(p); }
+        c.appendChild(el("p", "meta", `Found ${l.found} by the ${l.detector}`));
+        box.appendChild(c);
+      });
+  }
+  function drawFilters() {
+    const f = document.getElementById("filters"); f.textContent = "";
+    const counts = {}; leads.forEach(l => counts[l.status] = (counts[l.status] || 0) + 1);
+    [["all", `All ${leads.length}`], ...ORDER.filter(s => counts[s]).map(s => [s, `${STATUS[s]} ${counts[s]}`])].forEach(([k, label]) => {
+      const b = el("button", "", label); b.setAttribute("aria-pressed", String(filter === k));
+      b.onclick = () => { filter = k; drawFilters(); drawLeads(); }; f.appendChild(b);
+    });
+  }
+  fetch(`${API}/lodestone/data`).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).then(d => {
+    document.getElementById("stamp").textContent = `Leads updated ${d.leads_updated || "?"} · page ${PAGE_VERSION}`;
+    leads = d.leads || []; drawFilters(); drawLeads();
+    fill("combos", (d.combos || []).map(c => [
+      [c.payoff], [c.setup === "(itself)" ? "itself" : c.setup + (c.swap ? " (weapon set 2)" : "")],
+      [pct(c.edge), "num up"], [`${c.time_to_break} s`, "num"], [`${Math.round(c.uptime * 100)}%`, "num"]]));
+    fill("payoffs", (d.payoffs || []).map(p => [[p.skill], [p.condition], [pct(p.gain), "num up"], [pct(p.usual), "num"]]));
+    const it = d.interactions || {};
+    fill("inter", (it.one_skill || []).map(x => [[`${x.piece} (${x.kind})`], [x.skill], [pct(x.gain), "num up"], [pct(x.usual), "num"]]));
+    document.getElementById("broad").textContent = (it.broad || []).length
+      ? "Strong for whole kinds of builds rather than one skill (best-in-slot, not a hidden interaction): " + it.broad.map(b => `${b.piece} (${b.skills} skills)`).join(", ") + "."
+      : "";
+    fill("pairs", (d.pairs || []).map(p => [[p.build], [`${p.a} + ${p.b}`], [`${pct(p.gain_a)} / ${pct(p.gain_b)}`, "num"], [pct(p.gain_ab), "num up"]]));
+    const q = document.getElementById("queue"); q.textContent = "";
+    (d.queue || []).length ? d.queue.forEach(j => q.appendChild(el("p", "", `${j.job}: ${j.status}`)))
+      : q.appendChild(el("p", "muted", "Nothing queued on the server."));
+  }).catch(e => {
+    document.getElementById("stamp").textContent = "";
+    document.getElementById("stamp").appendChild(el("span", "err", `Couldn't load the results (${e.message}). The server may be restarting: try again in a minute.`));
+  });
+})();
+</script>
+</body>
+</html>
