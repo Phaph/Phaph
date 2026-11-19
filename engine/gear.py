@@ -633,7 +633,12 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
         for u, out in zip(allowed, outs):
             if out is None:
                 continue
-            sc = score(out, current) - score.attr_weight * own_deficit(out, w.slot)
+            short = own_deficit(out, w.slot)
+            # Final pass (attributes counted): a unique the character can't put on is useless, however strong. A rare
+            # can carry the attribute it needs; a unique can't (Loreweave at 43 of 45 Int, A-to-Z sweep 2026-11-18).
+            if score.attr_weight and short > 0:
+                continue
+            sc = score(out, current) - score.attr_weight * short
             if getattr(pob, "off_meta", False):
                 sc *= meta_factor(unique=u["name"])   # off-meta: a unique half the ladder wears counts for less
             if sc > best_score:
@@ -798,6 +803,21 @@ def craft_gear(
             _cap_resistances(pob, works, stage)
             for w in works:
                 _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
+            # Re-balancing the rares can take away the attribute a unique needed: then it goes back to its rare.
+            if score.attr_weight:
+                undo = False
+                for w in works:
+                    if w.unique and w is not anchor:
+                        out = pob.calc(SCORE_FIELDS + _req_fields(w.slot))
+                        if own_deficit(out, w.slot) > 0:
+                            log(f"  {w.slot:<12} {w.unique} needs more attributes than the build has: back to a rare")
+                            w.unique = w.unique_raw = None
+                            pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
+                            undo = True
+                if undo:
+                    _cap_resistances(pob, works, stage)
+                    for w in works:
+                        _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
 
     plans = []
     for w in works:

@@ -384,6 +384,15 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 dropped_spirit.append(name)
         short = fit.get("short") or {}
         lowered = fit.get("lowered") or {}
+        removed = fit.get("removed") or []
+        for r in removed:   # supports taken out because the total of their colour is more than the attribute
+            for x in setups:
+                if x["skill"] == r["skill"] and r["support"] in x["supports"]:
+                    x["supports"].remove(r["support"])
+                    break
+            else:
+                if r["skill"] == skill and r["support"] in best.supports:
+                    best.supports.remove(r["support"])
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
                          + MINION_AILMENT_FIELDS)
         guide = StageGuide(
@@ -411,6 +420,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         if isinstance(lowered, dict) and lowered:
             guide.notes.append("Lower-level gems so the attributes work out: "
                                + ", ".join(f"{n} level {lv}" for n, lv in sorted(lowered.items())))
+        if removed:
+            guide.notes.append("Fewer supports so the attributes work out (each support needs 5 of its colour's "
+                               "attribute): " + ", ".join(f"{r['support']} off {r['skill']}" for r in removed)
+                               + ". Add the attribute on gear to put them back.")
         for attr, gap in (short.items() if isinstance(short, dict) else []):
             guide.notes.append(f"Needs {gap:.0f} more {attr} than this setup has: add {attr} on gear or swap a gem.")
         for h in sorted(metas):

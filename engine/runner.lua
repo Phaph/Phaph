@@ -1100,13 +1100,44 @@ end
 -- lower-level gem. Returns the gems lowered and anything still short.
 function handlers.fit_gems(cmd)
 	local short = handlers.balance_attributes({}).short or {}
-	local lowered, itemBound = {}, {}
+	local lowered, itemBound, removed = {}, {}, {}
 	local ATTR = { Str = { field = "reqStr", out = "ReqStr" }, Dex = { field = "reqDex", out = "ReqDex" }, Int = { field = "reqInt", out = "ReqInt" } }
 	for _ = 1, 300 do
 		local attr
 		for k in pairs(short) do if not itemBound[k] then attr = k break end end
 		if not attr then break end
 		local need = build.calcsTab.mainOutput[ATTR[attr].out] or 0
+		-- PoE 2: every support gem needs 5 of its colour's attribute, summed over all skills (8 blue supports = 40 Int).
+		-- Support gems have no levels to lower: take one of that colour out, from the extra skills first (last group,
+		-- last support), the main skill last.
+		local src = requirementSource(attr)
+		if src and src.source == "Support Gems" then
+			local colour = ({ Str = 1, Dex = 2, Int = 3 })[attr]
+			local pick
+			local mainG = build.mainSocketGroup
+			local order = {}
+			for gi = #build.skillsTab.socketGroupList, 1, -1 do if gi ~= mainG then table.insert(order, gi) end end
+			table.insert(order, mainG)
+			for _, gi in ipairs(order) do
+				local g = build.skillsTab.socketGroupList[gi]
+				for k = #(g and g.gemList or {}), 1, -1 do
+					local gem = g.gemList[k]
+					local ge = gem.gemData and gem.gemData.grantedEffect
+					if ge and ge.support and ge.color == colour and g.enabled ~= false then pick = { g = g, k = k } break end
+				end
+				if pick then break end
+			end
+			if pick then
+				local gem = table.remove(pick.g.gemList, pick.k)
+				local first = pick.g.gemList[1]
+				removed[#removed + 1] = { support = gem.nameSpec, skill = first and first.nameSpec or "?" }
+				for _, g in ipairs(build.skillsTab.socketGroupList) do build.skillsTab:ProcessSocketGroup(g) end
+				build.skillsTab:UpdateGlobalGemCountAssignments()
+				short = handlers.balance_attributes({}).short or {}
+				goto continue
+			end
+		end
+		do
 		-- The gems that set this requirement (their own requirement is the highest); extra skills before the main one.
 		local best, bestKey
 		for gi, g in ipairs(build.skillsTab.socketGroupList) do
@@ -1127,8 +1158,10 @@ function handlers.fit_gems(cmd)
 			build.skillsTab:UpdateGlobalGemCountAssignments()
 			short = handlers.balance_attributes({}).short or {}
 		end
+		end
+		::continue::
 	end
-	return { lowered = lowered, short = short }
+	return { lowered = lowered, short = short, removed = removed }
 end
 
 function handlers.points(cmd)

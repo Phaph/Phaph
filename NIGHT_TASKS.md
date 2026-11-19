@@ -28,8 +28,13 @@ steer from the Claude app (Remote Control).
    net only knew optimiser-picked buffs. Gear scoring now punishes overdrawn spirit, kit_out trims supports on spirit
    skills instead of overdrawing, and a new runner `fit_spirit` turns off what still doesn't fit (after gear and at the
    end). Deadeye/Amazon/Lich/Stormweaver end + Titan act2: all fit now (+10 to +100 left).
-2. [ ] Attribute shortfalls (Int 43 of 45 for Loreweave + Ornate Ringmail at Interludes; Int 31 of 40 for support gems
+2. [x] Attribute shortfalls (Int 43 of 45 for Loreweave + Ornate Ringmail at Interludes; Int 31 of 40 for support gems
    in Act 1): the gear/support picks must meet requirements at each stage.
+   Done 2026-11-19: each support needs 5 of its colour's attribute summed over all skills, and fit_gems could only
+   lower gem levels: it now takes supports of the short colour off extra skills first (noted on the build). A unique
+   the character can't equip is skipped in the final gear pass, and goes back to a rare if re-balancing the rares
+   takes its attribute away. Oracle/Blood Mage/Titan/Witchhunter campaign stages: no shortfalls (Titan interludes
+   86k -> 62k DPS without the Loreweave it couldn't wear).
 3. [ ] Usage limit for Detonate Dead (needs a corpse each cast; bosses leave none) in runner.lua USAGE_LIMITS, like
    Hexblast; check Ember Fusillade too. Detonate Dead won Blood Mage, Lich, Oracle, Shaman.
 4. [ ] Build speed: every build takes 24-36 min on the PC, ~45+ on the server; Gemling Legionnaire timed out. Profile
