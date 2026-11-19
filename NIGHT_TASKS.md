@@ -124,6 +124,11 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 16. [ ] Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
     saved with their codes, so test requests come with a complete build.
 
+17. [ ] (after the reset, when no queue job is running) Rename the working branch to `main` (Kyle agreed
+    2026-11-19): merge claude/poe2-shadow-build-mobalytics-85ym0e into main, push, switch ~/phaph and ~/breaker to
+    main, update scripts that name the branch (grep the repo + ~/routines), set the old branch's README to point at
+    main. Kyle then sets Cloudflare Pages' production branch to main; keep pushing the old branch too until he has.
+
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
   sharing it is your call.
