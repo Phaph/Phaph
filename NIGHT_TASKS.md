@@ -9,6 +9,7 @@ Usage is nearly out. Automated jobs carry the work; Claude check-ins stay tiny:
 - Running unattended (no Claude): `combo_scan.py ailments` (container whetstone-ailments, ~2 h, writes
   engine/data/breaker/combos_ailments.json in ~/phaph, not committed yet), then ~/lodestone_chain.sh after the
   current queue: blind test (task 7), conditions_asc + matrix_asc fresh (task 12), each committed by the queue.
+- keepalive.sh (2026-11-19 night): no nudge while any queue/chain/engine job runs, and at most one nudge per 4 h.
 - On a keepalive: run status.sh once. If jobs are still running, stop there (no new work). When the ailment scan
   has finished: commit its json + `ailments-report` text, add the top payoffs to leads.json, then stop.
 - Bigger tasks (14 rest, 15, 16) wait for the reset.
