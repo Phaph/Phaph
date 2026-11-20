@@ -129,6 +129,11 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     main, update scripts that name the branch (grep the repo + ~/routines), set the old branch's README to point at
     main. Kyle then sets Cloudflare Pages' production branch to main; keep pushing the old branch too until he has.
 
+18. [ ] FIRST after the reset: the blind test (engine/data/breaker/blind.txt) picked Ember Fusillade on all 23
+    ascendancies, so it found only 2 of the ladder's top 20 skills (Spearman +0.16). Ember Fusillade is a modelling
+    bug, not a lead: give it a usage limit (10 embers per cast cycle, 1.3 s launch delay) like Hexblast, then re-run
+    the blind test (queue job `blind`, delete blind.json first).
+
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
   sharing it is your call.
