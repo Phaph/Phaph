@@ -1,12 +1,14 @@
 # START HERE (handoff, 2026-11-20 morning)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude):** ~/after_ef.sh = full test suite -> deploy engine 2026-11-20.1 if green (Ember Fusillade
-  usage limit) -> blind test re-run in the Breaker queue (~12 h, commits engine/data/breaker/blind.txt, pings Kyle).
-  Check: `bash ~/phaph/engine/tools/status.sh`, ~/after_ef_tests.log, ~/after_ef_deploy.log.
-- **Next tasks, in order:** read the new blind.txt (Ember Fusillade no longer everywhere? which ladder skills are
-  found/missed and why) and write it into BREAKER.md (task 7); 15 trigger/loop detector; 16 leads -> full builds;
-  14 rest (immobilised family for Siege Cascade); 17 branch rename to main (needs Kyle's Cloudflare step).
+- **Running (no Claude):** blind test re-run in the Breaker queue (started 08:12 Mazatlan, ~12 h; commits
+  engine/data/breaker/blind.txt). It runs the OLD runner (before the Maligaro fix): if Oracle's best build wears
+  Maligaro's Virtuosity, discount it. ~/after_mal.sh = full suite -> deploy engine 2026-11-20.2 if green (logs
+  ~/after_mal_tests.log, ~/after_mal_deploy.log). Check: `bash ~/phaph/engine/tools/status.sh`.
+- **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
+  x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
+- **Next tasks, in order:** read the new blind.txt and write it into BREAKER.md (task 7); 15 trigger/loop detector;
+  unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
