@@ -1,3 +1,17 @@
+# START HERE (handoff, 2026-11-20 morning)
+Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
+2026-11-20): one task or working block per session, write state back here before stopping.
+- **Running (no Claude):** ~/after_ef.sh = full test suite -> deploy engine 2026-11-20.1 if green (Ember Fusillade
+  usage limit) -> blind test re-run in the Breaker queue (~12 h, commits engine/data/breaker/blind.txt, pings Kyle).
+  Check: `bash ~/phaph/engine/tools/status.sh`, ~/after_ef_tests.log, ~/after_ef_deploy.log.
+- **Next tasks, in order:** read the new blind.txt (Ember Fusillade no longer everywhere? which ladder skills are
+  found/missed and why) and write it into BREAKER.md (task 7); 15 trigger/loop detector; 16 leads -> full builds;
+  14 rest (immobilised family for Siege Cascade); 17 branch rename to main (needs Kyle's Cloudflare step).
+- **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
+- **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
+  `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
+- **Waiting for Kyle:** in-game tests (TESTS.md), Lodestone page public?, Cloudflare branch switch (task 17).
+
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
 The "Whetstone server" session works through this list on its own, top to bottom, until the usage limit (resets
