@@ -165,9 +165,16 @@ local USAGE_LIMITS = {
 		if boss == "None" then return nil end
 		return 0.25
 	end,
-	-- Ember Fusillade: checked, no limit. PoB casts it like a plain spell, which ignores both the 10-ember cap with its
-	-- 1.3 s launch delay (about x0.7 on embers per second at ~3 casts a second) and the "5% more damage per Ember fired"
-	-- (up to x1.5 with 10 embers): the two roughly cancel. In-game check in TESTS.md.
+	-- Ember Fusillade: each cast conjures one Ember (up to 10 at gem level 20); recasting resets the launch timer of all
+	-- of them, so a player casts 10 then waits the duration (~1.3-1.5 s) for the volley. Embers per second
+	-- = 10 / (10 / cast rate + duration). PoB counts every cast as a hit straight away: without this it won the
+	-- blind test's search on all 23 ascendancies (2026-11-20). Its "5% more damage per Ember fired" is not counted
+	-- (unclear in game; leaving it out errs low). In-game check in TESTS.md #5.
+	["Ember Fusillade"] = function(out)
+		local speed, dur = out.Speed or 0, out.Duration or 1.3
+		if speed <= 0 then return nil end
+		return 10 / (10 / speed + dur)
+	end,
 }
 
 afterFrame = function()

@@ -33,3 +33,13 @@ def test_detonate_dead_needs_corpses_against_bosses(pob):
     pob.set_config(enemyIsBoss="None")   # maps: corpses everywhere
     maps = pob.calc(["TotalDPS", "Speed", "UsageLimit"])
     assert "UsageLimit" not in maps and maps["Speed"] > 0.25
+
+
+def test_ember_fusillade_waits_for_its_volley(pob):
+    pob.new()
+    pob.set_class("Sorceress", "Stormweaver")
+    pob.set_level(90)
+    pob.add_skill(["Ember Fusillade"])
+    out = pob.calc(["Speed", "UsageLimit", "UncappedSpeed", "Duration"])
+    assert out["UncappedSpeed"] > out["Speed"] and out["Speed"] <= out["UsageLimit"] + 1e-9
+    assert abs(out["UsageLimit"] - 10 / (10 / out["UncappedSpeed"] + out["Duration"])) < 1e-6

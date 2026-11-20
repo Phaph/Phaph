@@ -129,7 +129,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     main, update scripts that name the branch (grep the repo + ~/routines), set the old branch's README to point at
     main. Kyle then sets Cloudflare Pages' production branch to main; keep pushing the old branch too until he has.
 
-18. [ ] FIRST after the reset: the blind test (engine/data/breaker/blind.txt) picked Ember Fusillade on all 23
+18. [x] (2026-11-20: Ember Fusillade limited to 10 embers per cast-then-wait volley; suite, deploy and blind
+    re-run chained in ~/after_ef.sh) FIRST after the reset: the blind test (engine/data/breaker/blind.txt) picked Ember Fusillade on all 23
     ascendancies, so it found only 2 of the ladder's top 20 skills (Spearman +0.16). Ember Fusillade is a modelling
     bug, not a lead: give it a usage limit (10 embers per cast cycle, 1.3 s launch delay) like Hexblast, then re-run
     the blind test (queue job `blind`, delete blind.json first).
