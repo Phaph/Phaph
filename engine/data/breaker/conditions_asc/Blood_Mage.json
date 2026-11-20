@@ -1,0 +1,1112 @@
+{
+ "skills": {
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.25,
+    "CriticalWeakness": 0.281,
+    "Crushed": 0.134,
+    "Intimidated": 0.1,
+    "Moving": 0.071,
+    "OnProfaneGround": 0.165,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.093
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life"
+   ],
+   "dps": 36621
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.215,
+    "CriticalWeakness": 0.229,
+    "Crushed": 0.14,
+    "Intimidated": 0.1,
+    "Moving": 0.051,
+    "OnProfaneGround": 0.218,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.095
+   },
+   "ascendancy_nodes": [
+    "Sanguimancy",
+    "Bleed on Critical Chance",
+    "Gore Spike",
+    "Life",
+    "Life"
+   ],
+   "dps": 62785
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 38680
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.202,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 39427
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.186,
+    "CriticalWeakness": 0.164,
+    "Cursed": 0.07,
+    "Intimidated": 0.1,
+    "Moving": 0.07,
+    "OnProfaneGround": 0.199,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 2204
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.224,
+    "CriticalWeakness": 0.23,
+    "Crushed": 0.139,
+    "Intimidated": 0.1,
+    "Moving": 0.051,
+    "OnProfaneGround": 0.22,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.095
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life",
+    "Life"
+   ],
+   "dps": 38502
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 5853
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.193,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 70211
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.226,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.119,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 2683
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.21,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.2,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 17182
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.064,
+    "CriticalWeakness": 0.144,
+    "Intimidated": 0.1,
+    "Moving": 0.356,
+    "OnProfaneGround": 0.139,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Sanguimancy",
+    "Sunder the Flesh",
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 49920
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.42,
+    "CoveredInAsh": 0.087,
+    "CriticalWeakness": 0.256,
+    "Crushed": 0.097,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.245,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.095
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 3297
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 7112
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.267,
+    "CriticalWeakness": 0.238,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "Moving": 0.053,
+    "OnProfaneGround": 0.227,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.095
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life",
+    "Life"
+   ],
+   "dps": 18353
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.193,
+    "CriticalWeakness": 0.202,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.193,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 127683
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.21,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.2,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 39830
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.176,
+    "CriticalWeakness": 0.215,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.206,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 979
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.176,
+    "CriticalWeakness": 0.213,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.203,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 42813
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.224,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 87776
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.173,
+    "CriticalWeakness": 0.246,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.235,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.093
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 10367
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.194,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.218,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.096
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 39421
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.238,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.188,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 14556
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.193,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 12763
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.238,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.188,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 11652
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.193,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 48753
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.193,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 29668
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.228,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.219,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 37769
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.193,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 25133
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.242,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.191,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 7529
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.195,
+    "CriticalWeakness": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.198,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 71691
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 26298
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 46876
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.25,
+    "CoveredInAsh": 0.064,
+    "CriticalWeakness": 0.117,
+    "Cursed": 0.369,
+    "Intimidated": 0.1,
+    "Moving": 0.369,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Blood Barbs"
+   ],
+   "dps": 288
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.094,
+    "CoveredInAsh": 0.156,
+    "CriticalWeakness": 0.147,
+    "Cursed": 0.119,
+    "Intimidated": 0.1,
+    "Moving": 0.119,
+    "OnProfaneGround": 0.167,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.077
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 8268
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.161,
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.175,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.083
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 15090
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.121,
+    "CoveredInAsh": 0.139,
+    "CriticalWeakness": 0.142,
+    "Cursed": 0.105,
+    "Intimidated": 0.1,
+    "Moving": 0.105,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.068
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 9405
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.15,
+    "CriticalWeakness": 0.152,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.173,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 10581
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.236,
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.151,
+    "Cursed": 0.252,
+    "Intimidated": 0.1,
+    "Moving": 0.252,
+    "OnProfaneGround": 0.159,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.054
+   },
+   "ascendancy_nodes": [
+    "Blood Barbs",
+    "Gore Spike",
+    "Life"
+   ],
+   "dps": 3904
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.101,
+    "CoveredInAsh": 0.15,
+    "CriticalWeakness": 0.145,
+    "Cursed": 0.114,
+    "Intimidated": 0.1,
+    "Moving": 0.114,
+    "OnProfaneGround": 0.162,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.073
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 8654
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.163,
+    "CriticalWeakness": 0.235,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.186,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 65978
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.224,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 21567
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.125,
+    "CriticalWeakness": 0.208,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 40389
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.139,
+    "CriticalWeakness": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.163,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 11409
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 26878
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.186,
+    "CriticalWeakness": 0.164,
+    "Cursed": 0.07,
+    "Intimidated": 0.1,
+    "Moving": 0.07,
+    "OnProfaneGround": 0.199,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 2204
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.186,
+    "CriticalWeakness": 0.164,
+    "Cursed": 0.07,
+    "Intimidated": 0.1,
+    "Moving": 0.07,
+    "OnProfaneGround": 0.199,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 2204
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8835
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.251,
+    "CriticalWeakness": 0.235,
+    "Crushed": 0.137,
+    "Intimidated": 0.1,
+    "Moving": 0.052,
+    "OnProfaneGround": 0.225,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.095
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life",
+    "Life"
+   ],
+   "dps": 21128
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.24,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.189,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 24797
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.193,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.205,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.097
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 44868
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.091,
+    "CoveredInFrost": 0.106,
+    "CriticalWeakness": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.125,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 22527
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.389,
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.196,
+    "Crushed": 0.086,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.222,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.076
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 8635
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.361,
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.165,
+    "Crushed": 0.074,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.159,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.052
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 4059
+  }
+ },
+ "updated": "2026-11-20 03:38"
+}

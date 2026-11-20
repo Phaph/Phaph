@@ -1,0 +1,108 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Animus Exchange                       0  
+  Bitter Dead                           0  
+  Bonestorm                        36,621  CriticalWeakness +28%, ArmourBroken +25%, OnShockedGround +20%
+  Bone Cage                        62,785  CriticalWeakness +23%, OnProfaneGround +22%, ArmourBroken +22%
+  Arc                              38,680  OnShockedGround +30%, Shocked +30%, CriticalWeakness +21%
+  Ball Lightning                   39,427  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Cackling Companions               2,204  OnShockedGround +20%, Shocked +20%, OnProfaneGround +20%
+  Coiling Bolts                    38,502  CriticalWeakness +23%, ArmourBroken +22%, OnProfaneGround +22%
+  Contagion                         5,853  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Comet                            70,211  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Conductive Runes                  2,683  CriticalWeakness +23%, OnShockedGround +20%, Shocked +20%
+  Dark Effigy                      17,182  Poisoned +100%, CriticalWeakness +21%, OnProfaneGround +20%
+  Detonate Dead                    49,920  Moving +36%, OnShockedGround +20%, Shocked +20%
+  Detonate Living                   3,297  ArmourBroken +42%, CriticalWeakness +26%, OnProfaneGround +24%
+  Detonate Minion                   7,112  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Eternal March                         0  
+  Entangle                         18,353  ArmourBroken +27%, CriticalWeakness +24%, OnProfaneGround +23%
+  Ember Fusillade                 127,683  CriticalWeakness +20%, OnShockedGround +20%, Shocked +20%
+  Essence Drain                    39,830  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Eye of Winter                       979  CriticalWeakness +22%, OnProfaneGround +21%, OnShockedGround +20%
+  Fireball                         42,813  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Firestorm                        87,776  CriticalWeakness +23%, OnProfaneGround +22%, CoveredInAsh +20%
+  Fortifying Cry                        0  
+  Flameblast                       10,367  CriticalWeakness +25%, OnProfaneGround +24%, OnShockedGround +20%
+  Flame Wall                       39,421  OnProfaneGround +22%, OnShockedGround +20%, Shocked +20%
+  Frost Bomb                       14,556  CriticalWeakness +24%, OnShockedGround +20%, Shocked +20%
+  Frostflame Nova                       0  
+  Frost Darts                      12,763  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Frost Wall                       11,652  CriticalWeakness +24%, OnShockedGround +20%, Shocked +20%
+  Frostbolt                        48,753  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Grim Pillars                     29,668  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Hexblast                         37,769  CriticalWeakness +23%, OnProfaneGround +22%, OnShockedGround +20%
+  Ice Nova                         25,133  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Powered by Verisium                   0  
+  Lightning Conduit                 7,529  OnShockedGround +68%, Shocked +68%, CriticalWeakness +24%
+  Incinerate                       71,691  OnShockedGround +20%, Shocked +20%, OnProfaneGround +20%
+  Orb of Storms                    26,298  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Profane Ritual                   46,876  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Skeletal Cleric                       0  
+  Seismic Cry                         288  Cursed +37%, Moving +37%, ArmourBroken +25%
+  Raise Zombie                      8,268  OnShockedGround +20%, Shocked +20%, OnProfaneGround +17%
+  Skeletal Arsonist                15,090  OnShockedGround +20%, Shocked +20%, OnProfaneGround +18%
+  Skeletal Brute                    9,405  OnShockedGround +20%, Shocked +20%, OnProfaneGround +15%
+  Skeletal Frost Mage              10,581  OnShockedGround +20%, Shocked +20%, OnProfaneGround +17%
+  Skeletal Reaver                   3,904  Cursed +25%, Moving +25%, ArmourBroken +24%
+  Skeletal Sniper                   8,654  OnShockedGround +20%, Shocked +20%, OnProfaneGround +16%
+  Snap                             65,978  CriticalWeakness +24%, OnShockedGround +20%, Shocked +20%
+  Solar Orb                        21,567  CriticalWeakness +23%, OnProfaneGround +22%, CoveredInAsh +20%
+  Tame Beast                            0  
+  Skyfall                          40,389  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Skeletal Storm Mage              11,409  OnShockedGround +20%, Shocked +20%, OnProfaneGround +16%
+  Spark                            26,878  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Summon Spectre                    2,204  OnShockedGround +20%, Shocked +20%, OnProfaneGround +20%
+  Tamed Companion                   2,204  OnShockedGround +20%, Shocked +20%, OnProfaneGround +20%
+  Tornado                           8,835  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Thrashing Vines                  21,128  ArmourBroken +25%, CriticalWeakness +24%, OnProfaneGround +22%
+  Thunderstorm                     24,797  CriticalWeakness +24%, OnShockedGround +20%, Shocked +20%
+  Volcano                          44,868  CriticalWeakness +21%, OnProfaneGround +20%, OnShockedGround +20%
+  Wardbound Minions                22,527  OnShockedGround +20%, Shocked +20%, CriticalWeakness +14%
+  Unearth                           8,635  ArmourBroken +39%, OnProfaneGround +22%, OnShockedGround +20%
+  Wolf Pack                         4,059  ArmourBroken +36%, OnShockedGround +20%, Shocked +20%
+61 skills scanned; 384 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  100% (+100% above usual)  Dark Effigy                  when enemy is Poisoned
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is OnShockedGround
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is Shocked
+  +   42% (+42% above usual)  Detonate Living              when enemy is ArmourBroken
+  +   39% (+39% above usual)  Unearth                      when enemy is ArmourBroken
+  +   37% (+37% above usual)  Seismic Cry                  when enemy is Cursed
+  +   37% (+37% above usual)  Seismic Cry                  when enemy is Moving
+  +   36% (+36% above usual)  Wolf Pack                    when enemy is ArmourBroken
+  +   36% (+36% above usual)  Detonate Dead                when enemy is Moving
+  +   27% (+27% above usual)  Entangle                     when enemy is ArmourBroken
+  +   25% (+25% above usual)  Skeletal Reaver              when enemy is Cursed
+  +   25% (+25% above usual)  Skeletal Reaver              when enemy is Moving
+  +   25% (+25% above usual)  Thrashing Vines              when enemy is ArmourBroken
+  +   25% (+25% above usual)  Bonestorm                    when enemy is ArmourBroken
+  +   25% (+25% above usual)  Seismic Cry                  when enemy is ArmourBroken
+  +   24% (+24% above usual)  Skeletal Reaver              when enemy is ArmourBroken
+  +   22% (+22% above usual)  Coiling Bolts                when enemy is ArmourBroken
+  +   22% (+22% above usual)  Bone Cage                    when enemy is ArmourBroken
+  +   20% (+20% above usual)  Firestorm                    when enemy is CoveredInAsh
+  +   20% (+20% above usual)  Solar Orb                    when enemy is CoveredInAsh
+  +   20% (+20% above usual)  Frost Bomb                   when enemy is CoveredInFrost
+  +   20% (+20% above usual)  Frost Wall                   when enemy is CoveredInFrost
+  +   20% (+20% above usual)  Incinerate                   when enemy is CoveredInAsh
+  +   19% (+19% above usual)  Flame Wall                   when enemy is CoveredInAsh
+  +   19% (+19% above usual)  Comet                        when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Ember Fusillade              when enemy is CoveredInAsh
+  +   19% (+19% above usual)  Frost Darts                  when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Frostbolt                    when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Grim Pillars                 when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Ice Nova                     when enemy is CoveredInFrost
+Conditions that matter to the most skills:
+  OnShockedGround             53 skills, best: Lightning Conduit +68%, Arc +30%, Bonestorm +20%
+  Shocked                     53 skills, best: Lightning Conduit +68%, Arc +30%, Bonestorm +20%
+  Intimidated                 53 skills, best: Bonestorm +10%, Bone Cage +10%, Arc +10%
+  CriticalWeakness            50 skills, best: Bonestorm +28%, Detonate Living +26%, Flameblast +25%
+  OnProfaneGround             48 skills, best: Detonate Living +24%, Flameblast +24%, Entangle +23%
+  Unnerved                    46 skills, best: Ball Lightning +10%, Dark Effigy +10%, Detonate Minion +10%
+  CoveredInAsh                25 skills, best: Firestorm +20%, Solar Orb +20%, Incinerate +20%
+  ArmourBroken                14 skills, best: Detonate Living +42%, Unearth +39%, Wolf Pack +36%
+  Moving                      14 skills, best: Seismic Cry +37%, Detonate Dead +36%, Skeletal Reaver +25%
+  CoveredInFrost              11 skills, best: Frost Bomb +20%, Frost Wall +20%, Comet +19%
+  Cursed                       8 skills, best: Seismic Cry +37%, Skeletal Reaver +25%, Raise Zombie +12%
+  Crushed                      8 skills, best: Bone Cage +14%, Coiling Bolts +14%, Thrashing Vines +14%
+  Poisoned                     1 skills, best: Dark Effigy +100%

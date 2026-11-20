@@ -1,0 +1,44 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Elemental Sundering               3,071  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Blood Hunt                       13,095  HasOpenWeakness +53%, ArmourBroken +28%, OnShockedGround +20%
+  Cull The Weak                    10,536  HasOpenWeakness +54%, ArmourBroken +31%, OnShockedGround +20%
+  Disengage                         8,633  ArmourBroken +22%, OnShockedGround +20%, Shocked +20%
+  Fangs of Frost                   36,973  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Explosive Spear                  14,792  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Glacial Lance                    29,734  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Lightning Spear                  28,000  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Rake                              8,409  HasOpenWeakness +53%, Moving +34%, ArmourBroken +22%
+  Primal Strikes                   20,518  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Rapid Assault                     3,609  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Shield Wall                      15,916  HasOpenWeakness +53%, OnShockedGround +20%, Shocked +20%
+  Spear of Solaris                 23,193  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Spearfield                        6,455  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Storm Lance                      12,568  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Thunderous Leap                  19,608  HasOpenWeakness +50%, OnShockedGround +20%, Shocked +20%
+  Twister                           9,190  ArmourBroken +28%, OnShockedGround +20%, Shocked +20%
+  Whirling Slash                    7,425  HasOpenWeakness +55%, ArmourBroken +34%, OnShockedGround +20%
+  Wind Serpent's Fury              14,247  OnShockedGround +20%, Shocked +20%, ArmourBroken +18%
+  Whirlwind Lance                   9,345  ArmourBroken +26%, OnShockedGround +20%, Shocked +20%
+20 skills scanned; 146 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   34% (+34% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   34% (+34% above usual)  Rake                         when enemy is Moving
+  +   31% (+31% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   28% (+28% above usual)  Twister                      when enemy is ArmourBroken
+  +   28% (+28% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   26% (+26% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   22% (+22% above usual)  Rake                         when enemy is ArmourBroken
+  +   22% (+22% above usual)  Disengage                    when enemy is ArmourBroken
+  +   18% (+18% above usual)  Wind Serpent's Fury          when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  CriticalWeakness            20 skills, best: Rake +22%, Disengage +19%, Cull The Weak +18%
+  OnShockedGround             20 skills, best: Elemental Sundering +20%, Blood Hunt +20%, Cull The Weak +20%
+  Shocked                     20 skills, best: Elemental Sundering +20%, Blood Hunt +20%, Cull The Weak +20%
+  Intimidated                 20 skills, best: Elemental Sundering +10%, Blood Hunt +10%, Cull The Weak +10%
+  OnProfaneGround             18 skills, best: Rake +12%, Disengage +10%, Twister +9%
+  HasOpenWeakness             16 skills, best: Whirling Slash +55%, Cull The Weak +54%, Rake +53%
+  CoveredInAsh                11 skills, best: Spear of Solaris +18%, Explosive Spear +12%, Shield Wall +12%
+  ArmourBroken                 9 skills, best: Whirling Slash +34%, Cull The Weak +31%, Twister +28%
+  Crushed                      9 skills, best: Blood Hunt +14%, Cull The Weak +14%, Whirling Slash +14%
+  Moving                       2 skills, best: Rake +34%, Disengage +14%
+  CoveredInFrost               1 skills, best: Glacial Lance +14%

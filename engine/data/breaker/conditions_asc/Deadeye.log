@@ -1,0 +1,36 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Gas Arrow                         8,092  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Freezing Salvo                   14,309  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Electrocuting Arrow              25,270  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Detonating Arrow                 19,302  OnShockedGround +20%, Shocked +20%, CoveredInAsh +17%
+  Escape Shot                      12,400  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Fragments Of The Past            10,306  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Lightning Arrow                  20,676  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Ice Shot                         29,560  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Lightning Rod                    13,719  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Magnetic Salvo                    7,205  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Poisonburst Arrow                11,140  ArmourBroken +22%, OnShockedGround +20%, Shocked +20%
+  Rain of Arrows                   91,047  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Shockwave Totem                   2,175  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Snipe                             3,759  ArmourBroken +21%, OnShockedGround +20%, Shocked +20%
+  Shockchain Arrow                 14,142  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Spiral Volley                     9,770  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Stormcaller Arrow                 4,634  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Tornado Shot                     16,276  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Toxic Growth                      5,266  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Vine Arrow                       17,185  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Voltaic Barrier                   4,572  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+21 skills scanned; 109 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   22% (+22% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
+  +   21% (+21% above usual)  Snipe                        when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround             21 skills, best: Gas Arrow +20%, Freezing Salvo +20%, Electrocuting Arrow +20%
+  Shocked                     21 skills, best: Gas Arrow +20%, Freezing Salvo +20%, Electrocuting Arrow +20%
+  CriticalWeakness            21 skills, best: Snipe +16%, Poisonburst Arrow +14%, Voltaic Barrier +12%
+  Intimidated                 21 skills, best: Gas Arrow +10%, Freezing Salvo +10%, Electrocuting Arrow +10%
+  CoveredInAsh                17 skills, best: Detonating Arrow +17%, Fragments Of The Past +11%, Shockwave Totem +11%
+  OnProfaneGround              3 skills, best: Snipe +8%, Poisonburst Arrow +7%, Voltaic Barrier +6%
+  ArmourBroken                 2 skills, best: Poisonburst Arrow +22%, Snipe +21%
+  Crushed                      2 skills, best: Poisonburst Arrow +8%, Snipe +8%
+  Moving                       1 skills, best: Snipe +15%

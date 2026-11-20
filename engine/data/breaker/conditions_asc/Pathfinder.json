@@ -1,0 +1,363 @@
+{
+ "skills": {
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 24643
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.168,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 18889
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.091,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 7909
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 13919
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 11928
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 10593
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 13500
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 20163
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 28758
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 7027
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 85842
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.233,
+    "CriticalWeakness": 0.138,
+    "Crushed": 0.081,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 10119
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 13793
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 2236
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.223,
+    "CriticalWeakness": 0.162,
+    "Crushed": 0.076,
+    "Intimidated": 0.1,
+    "Moving": 0.143,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Poison Effect",
+    "Skill Speed"
+   ],
+   "dps": 3460
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.089,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 9432
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 4520
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 15868
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 16648
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 5110
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 4699
+  }
+ },
+ "updated": "2026-11-20 03:57"
+}

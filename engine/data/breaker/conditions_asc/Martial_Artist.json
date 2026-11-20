@@ -1,0 +1,281 @@
+{
+ "skills": {
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3099
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 64072
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 19037
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 53308
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.124,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.067,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 19500
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 57038
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.151,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 42949
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13633
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 45914
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 54238
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 15853
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 38616
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.208,
+    "CriticalWeakness": 0.147,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.216,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 9566
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 39037
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 11614
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 29936
+  }
+ },
+ "updated": "2026-11-20 04:46"
+}

@@ -1,0 +1,23 @@
+20 skills scanned; 146 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   34% (+34% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   34% (+34% above usual)  Rake                         when enemy is Moving
+  +   31% (+31% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   28% (+28% above usual)  Twister                      when enemy is ArmourBroken
+  +   28% (+28% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   26% (+26% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   22% (+22% above usual)  Rake                         when enemy is ArmourBroken
+  +   22% (+22% above usual)  Disengage                    when enemy is ArmourBroken
+  +   18% (+18% above usual)  Wind Serpent's Fury          when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  CriticalWeakness            20 skills, best: Rake +22%, Disengage +19%, Cull The Weak +18%
+  OnShockedGround             20 skills, best: Elemental Sundering +20%, Blood Hunt +20%, Cull The Weak +20%
+  Shocked                     20 skills, best: Elemental Sundering +20%, Blood Hunt +20%, Cull The Weak +20%
+  Intimidated                 20 skills, best: Elemental Sundering +10%, Blood Hunt +10%, Cull The Weak +10%
+  OnProfaneGround             18 skills, best: Rake +12%, Disengage +10%, Twister +9%
+  HasOpenWeakness             16 skills, best: Whirling Slash +55%, Cull The Weak +54%, Rake +53%
+  CoveredInAsh                11 skills, best: Spear of Solaris +18%, Explosive Spear +12%, Shield Wall +12%
+  ArmourBroken                 9 skills, best: Whirling Slash +34%, Cull The Weak +31%, Twister +28%
+  Crushed                      9 skills, best: Blood Hunt +14%, Cull The Weak +14%, Whirling Slash +14%
+  Moving                       2 skills, best: Rake +34%, Disengage +14%
+  CoveredInFrost               1 skills, best: Glacial Lance +14%

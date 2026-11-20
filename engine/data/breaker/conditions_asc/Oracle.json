@@ -1,0 +1,194 @@
+{
+ "skills": {
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.185,
+    "CriticalWeakness": 0.266
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 155367
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.232,
+    "CriticalWeakness": 0.237,
+    "Crushed": 0.121,
+    "Intimidated": 0.1,
+    "Moving": 0.157,
+    "OnProfaneGround": 0.15,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 10985
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.218,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 18117
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 36941
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 83127
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.218,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 27805
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.26,
+    "CriticalWeakness": 0.187,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.084,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 18861
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.185,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 123629
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.186,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.084,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 16064
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.193,
+    "CriticalWeakness": 0.203,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.171,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 32673
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.232,
+    "CriticalWeakness": 0.244,
+    "Crushed": 0.121,
+    "Intimidated": 0.1,
+    "Moving": 0.156,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 11253
+  }
+ },
+ "updated": "2026-11-20 04:52"
+}

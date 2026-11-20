@@ -1,0 +1,363 @@
+{
+ "skills": {
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 2619
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.117,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 12715
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.287,
+    "CriticalWeakness": 0.163,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 11405
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.32,
+    "CriticalWeakness": 0.207,
+    "Crushed": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 9356
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.117,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 31657
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.23,
+    "CriticalWeakness": 0.228,
+    "Crushed": 0.102,
+    "Intimidated": 0.1,
+    "Moving": 0.152,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 7388
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.117,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 24013
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.117,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 17585
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.145,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 25644
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.223,
+    "CriticalWeakness": 0.261,
+    "Crushed": 0.091,
+    "Intimidated": 0.1,
+    "Moving": 0.345,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 7507
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.117,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 3074
+  },
+  "Shield Wall": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.149,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.161,
+    "Crushed": 0.069,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 14111
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 21027
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.152,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 5541
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.117,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 10767
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 17368
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.311,
+    "CriticalWeakness": 0.174,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 7747
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.356,
+    "CriticalWeakness": 0.171,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 6474
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.28,
+    "CriticalWeakness": 0.17,
+    "Crushed": 0.117,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.068,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 7960
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.186,
+    "CriticalWeakness": 0.125,
+    "Crushed": 0.096,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.051,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 12300
+  }
+ },
+ "updated": "2026-11-20 04:29"
+}

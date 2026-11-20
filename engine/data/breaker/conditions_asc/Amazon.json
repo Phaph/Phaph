@@ -1,0 +1,437 @@
+{
+ "skills": {
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.1,
+    "HasOpenWeakness": 0.499,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 3071
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.281,
+    "CriticalWeakness": 0.131,
+    "Crushed": 0.143,
+    "HasOpenWeakness": 0.532,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Penetrate",
+    "Skill Speed"
+   ],
+   "dps": 13095
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.313,
+    "CriticalWeakness": 0.177,
+    "Crushed": 0.141,
+    "HasOpenWeakness": 0.543,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Penetrate",
+    "Skill Speed"
+   ],
+   "dps": 10536
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.215,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.098,
+    "Intimidated": 0.1,
+    "Moving": 0.143,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Penetrate",
+    "Elemental Damage"
+   ],
+   "dps": 8633
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.5,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.054,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 36973
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.5,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.054,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 14792
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.144,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.503,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.055,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 29734
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.5,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.054,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 28000
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.219,
+    "CriticalWeakness": 0.219,
+    "Crushed": 0.092,
+    "HasOpenWeakness": 0.533,
+    "Intimidated": 0.1,
+    "Moving": 0.337,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Penetrate",
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 8409
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.502,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.055,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 20518
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.5,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.054,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 3609
+  },
+  "Shield Wall": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.139,
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.13,
+    "Crushed": 0.065,
+    "HasOpenWeakness": 0.526,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.075,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 15916
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.096,
+    "HasOpenWeakness": 0.503,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 23193
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.124,
+    "HasOpenWeakness": 0.501,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 6455
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.5,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.054,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 12568
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.095,
+    "HasOpenWeakness": 0.503,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.055,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "Skill Speed",
+    "Skill Speed",
+    "Critical Strike"
+   ],
+   "dps": 19608
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.283,
+    "CriticalWeakness": 0.138,
+    "Crushed": 0.107,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Penetrate"
+   ],
+   "dps": 9190
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.345,
+    "CriticalWeakness": 0.137,
+    "Crushed": 0.138,
+    "HasOpenWeakness": 0.554,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.085,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Penetrate",
+    "Skill Speed"
+   ],
+   "dps": 7425
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.175,
+    "CriticalWeakness": 0.101,
+    "Crushed": 0.092,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Penetrate",
+    "Elemental Damage"
+   ],
+   "dps": 14247
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.135,
+    "Crushed": 0.111,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.084,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Skill Speed",
+    "Elemental Damage",
+    "Penetrate"
+   ],
+   "dps": 9345
+  }
+ },
+ "updated": "2026-11-20 04:26"
+}

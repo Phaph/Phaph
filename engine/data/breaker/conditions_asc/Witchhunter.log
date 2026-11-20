@@ -1,0 +1,56 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Flash Grenade                     5,035  Moving +22%, OnShockedGround +20%, Shocked +20%
+  Artillery Ballista                1,433  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Explosive Grenade                32,189  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Cluster Grenade                   4,331  OnShockedGround +20%, Shocked +20%, Moving +20%
+  Armour Piercing Rounds           84,035  
+  Explosive Shot                   24,030  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Gas Grenade                       8,692  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Fragmentation Rounds              6,457  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Fragments Of The Past            20,874  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Galvanic Shards                   5,222  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Hailstorm Rounds                 24,608  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Glacial Bolt                     13,841  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  High Velocity Rounds             12,025  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Oil Grenade                       6,446  Moving +23%, OnShockedGround +20%, Shocked +20%
+  Ice Shards                       29,232  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Incendiary Shot                   3,605  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Permafrost Bolts                  4,186  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Plasma Blast                    104,442  OnShockedGround +30%, Shocked +30%, CoveredInAsh +10%
+  Shockwave Totem                   4,184  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Rapid Shot                      149,481  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Siege Ballista                    2,407  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Shockburst Rounds                26,032  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Siege Cascade                    10,176  Electrocuted +101%, Frozen +101%, HeavyStunned +101%
+  Stormblast Bolts                 11,163  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Voltaic Barrier                   7,640  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Voltaic Grenade                  14,792  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+26 skills scanned; 142 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +   23% (+23% above usual)  High Velocity Rounds         when enemy is ArmourBroken
+  +   23% (+23% above usual)  Oil Grenade                  when enemy is Moving
+  +   22% (+22% above usual)  Flash Grenade                when enemy is Moving
+  +   20% (+20% above usual)  Cluster Grenade              when enemy is Moving
+  +   19% (+19% above usual)  High Velocity Rounds         when enemy is Moving
+  +   18% (+18% above usual)  Oil Grenade                  when enemy is ArmourBroken
+  +   16% (+16% above usual)  Flash Grenade                when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround             25 skills, best: Plasma Blast +30%, Flash Grenade +20%, Artillery Ballista +20%
+  Shocked                     25 skills, best: Plasma Blast +30%, Flash Grenade +20%, Artillery Ballista +20%
+  CriticalWeakness            25 skills, best: Oil Grenade +16%, Flash Grenade +15%, High Velocity Rounds +14%
+  Intimidated                 25 skills, best: Flash Grenade +10%, Artillery Ballista +10%, Explosive Grenade +10%
+  CoveredInAsh                22 skills, best: Explosive Grenade +13%, Incendiary Shot +13%, Rapid Shot +13%
+  ArmourBroken                 4 skills, best: High Velocity Rounds +23%, Oil Grenade +18%, Flash Grenade +16%
+  Moving                       4 skills, best: Oil Grenade +23%, Flash Grenade +22%, Cluster Grenade +20%
+  OnProfaneGround              4 skills, best: Oil Grenade +8%, Flash Grenade +8%, High Velocity Rounds +7%
+  Crushed                      3 skills, best: High Velocity Rounds +12%, Oil Grenade +9%, Flash Grenade +8%
+  Electrocuted                 1 skills, best: Siege Cascade +101%
+  Frozen                       1 skills, best: Siege Cascade +101%
+  HeavyStunned                 1 skills, best: Siege Cascade +101%
+  Immobilised                  1 skills, best: Siege Cascade +101%
+  Pinned                       1 skills, best: Siege Cascade +101%

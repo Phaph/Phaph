@@ -1,0 +1,1027 @@
+{
+ "skills": {
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.281,
+    "CriticalWeakness": 0.225,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.145,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 28749
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.233,
+    "CriticalWeakness": 0.144,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.162,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 50157
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 31963
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 31220
+  },
+  "Cackling Companions": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.094,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.075,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 1974
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.246,
+    "CriticalWeakness": 0.163,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 29889
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 5853
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.141,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 59888
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 2631
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.083,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 13860
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.072,
+    "CriticalWeakness": 0.184,
+    "Intimidated": 0.1,
+    "Moving": 0.349,
+    "OnProfaneGround": 0.124,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 31393
+  },
+  "Eternal March": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.493,
+    "CoveredInAsh": 0.095,
+    "CriticalWeakness": 0.177,
+    "Crushed": 0.106,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.159,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 2726
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 7608
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.3,
+    "CriticalWeakness": 0.162,
+    "Crushed": 0.142,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.122,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 14711
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.083,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 102289
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.083,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 32217
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.181,
+    "CriticalWeakness": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 855
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.083,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 34312
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.191,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.101,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 65736
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.123,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 32071
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.178,
+    "CriticalWeakness": 0.195,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.117,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 8235
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.172,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.134,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 12756
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.141,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 11190
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed"
+   ],
+   "dps": 9942
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 42015
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 25478
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.127,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 25844
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.073,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 59219
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 21641
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.181,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 6210
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.113,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 21925
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 46876
+  },
+  "Skeletal Cleric": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.316,
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.117,
+    "Crushed": 0.052,
+    "Intimidated": 0.1,
+    "Moving": 0.201,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 241
+  },
+  "Raise Zombie": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.088,
+    "CoveredInAsh": 0.188,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 2793
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.165,
+    "CriticalWeakness": 0.094,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.074,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.095
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 12211
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.186,
+    "CriticalWeakness": 0.092,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 9342
+  },
+  "Skeletal Brute": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.143,
+    "CoveredInAsh": 0.164,
+    "CriticalWeakness": 0.105,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.079
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 3095
+  },
+  "Skeletal Reaver": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.083,
+    "CoveredInAsh": 0.191,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.094
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 2751
+  },
+  "Skeletal Sniper": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.121,
+    "CoveredInAsh": 0.178,
+    "CriticalWeakness": 0.103,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.086
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 2831
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.166,
+    "CriticalWeakness": 0.172,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.134,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 57770
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.191,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.101,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16152
+  },
+  "Skyfall": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.1,
+    "CoveredInFrost": 0.065,
+    "CriticalWeakness": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 139749
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.093,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.075,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 9552
+  },
+  "Tame Beast": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 22210
+  },
+  "Summon Spectre": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.094,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.075,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 1974
+  },
+  "Tamed Companion": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.094,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.075,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 1974
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8835
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.28,
+    "CriticalWeakness": 0.16,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.12,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 16993
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.184,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 19036
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.093,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 36410
+  },
+  "Unearth": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.344,
+    "CoveredInAsh": 0.065,
+    "CriticalWeakness": 0.148,
+    "Crushed": 0.109,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.144,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 40460
+  },
+  "Wardbound Minions": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CoveredInFrost": 0.07,
+    "CriticalWeakness": 0.093,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 14658
+  },
+  "Wolf Pack": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.127,
+    "CoveredInAsh": 0.187,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "ascendancy_nodes": [
+    "Cast Speed",
+    "Skill Speed and Area of Effect"
+   ],
+   "dps": 2832
+  }
+ },
+ "updated": "2026-11-20 04:17"
+}

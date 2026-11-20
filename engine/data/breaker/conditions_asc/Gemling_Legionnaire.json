@@ -1,0 +1,705 @@
+{
+ "skills": {
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 26545
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 28266
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 12728
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 1709
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.085,
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "Moving": 0.214,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 5580
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 124631
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 15324
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.16,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.105,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 9058
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.143,
+    "CriticalWeakness": 0.176,
+    "Crushed": 0.071,
+    "Intimidated": 0.1,
+    "Moving": 0.216,
+    "OnProfaneGround": 0.074,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 6063
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 33342
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.114,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 29493
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 8446
+  },
+  "Fragments Of The Past": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.115,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 25693
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 9151
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 6411
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 16996
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality"
+   ],
+   "dps": 29351
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.109,
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.117,
+    "Crushed": 0.066,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 53423
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.206,
+    "CriticalWeakness": 0.131,
+    "Crushed": 0.12,
+    "Intimidated": 0.1,
+    "Moving": 0.174,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 22236
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 28698
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 4417
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 38488
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.159,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 28841
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.16,
+    "CriticalWeakness": 0.185,
+    "Crushed": 0.088,
+    "Intimidated": 0.1,
+    "Moving": 0.233,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 8886
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.135,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 45463
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.196,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 3638
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 5478
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 196927
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 118410
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.139,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.155,
+    "Crushed": 0.069,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 19261
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 34185
+  },
+  "Shockwave Totem": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 4989
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 2950
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 16971
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.132,
+    "Electrocuted": 1.008,
+    "Frozen": 1.008,
+    "HeavyStunned": 1.008,
+    "Immobilised": 1.008,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.008,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 12139
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 13307
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.178,
+    "CoveredInAsh": 0.062,
+    "CriticalWeakness": 0.118,
+    "Crushed": 0.102,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 21638
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.187,
+    "CriticalWeakness": 0.186,
+    "Crushed": 0.124,
+    "Intimidated": 0.1,
+    "Moving": 0.16,
+    "OnProfaneGround": 0.099,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 70076
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.135,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 18780
+  },
+  "Voltaic Barrier": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.113,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 9374
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 15535
+  }
+ },
+ "updated": "2026-11-20 04:44"
+}

@@ -1,0 +1,315 @@
+{
+ "skills": {
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CoveredInFrost": 0.101,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 22991
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.06,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Chaos Damage",
+    "Damage as Chaos"
+   ],
+   "dps": 3929
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CoveredInFrost": 0.101,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 64378
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.081,
+    "CriticalWeakness": 0.102,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Damage as Chaos",
+    "Skill Speed",
+    "Skill Speed",
+    "Chaos Damage"
+   ],
+   "dps": 29911
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 64072
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 70193
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 55701
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.054,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 65306
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.151,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 52095
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Damage as Chaos",
+    "Chaos Damage",
+    "Chaos Damage"
+   ],
+   "dps": 13756
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 19158
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.068,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 46553
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CoveredInFrost": 0.101,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 36144
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.208,
+    "CriticalWeakness": 0.147,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.216,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 9566
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed",
+    "Damage as Chaos",
+    "Chaos Damage"
+   ],
+   "dps": 47353
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.091,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Damage as Chaos",
+    "Skill Speed",
+    "Chaos Damage"
+   ],
+   "dps": 14084
+  }
+ },
+ "updated": "2026-11-20 04:51"
+}

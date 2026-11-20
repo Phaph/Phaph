@@ -1,0 +1,22 @@
+20 skills scanned; 122 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   34% (+34% above usual)  Rake                         when enemy is Moving
+  +   34% (+34% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   30% (+30% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   29% (+29% above usual)  Twister                      when enemy is ArmourBroken
+  +   28% (+28% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   26% (+26% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   22% (+22% above usual)  Disengage                    when enemy is ArmourBroken
+  +   21% (+21% above usual)  Rake                         when enemy is ArmourBroken
+  +   18% (+18% above usual)  Wind Serpent's Fury          when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  CriticalWeakness            20 skills, best: Rake +25%, Disengage +21%, Cull The Weak +18%
+  OnShockedGround             20 skills, best: Elemental Sundering +20%, Fangs of Frost +20%, Cull The Weak +20%
+  Shocked                     20 skills, best: Elemental Sundering +20%, Fangs of Frost +20%, Cull The Weak +20%
+  Intimidated                 20 skills, best: Elemental Sundering +10%, Fangs of Frost +10%, Cull The Weak +10%
+  CoveredInAsh                11 skills, best: Spear of Solaris +18%, Explosive Spear +13%, Spearfield +12%
+  OnProfaneGround             10 skills, best: Rake +11%, Disengage +9%, Twister +7%
+  ArmourBroken                 9 skills, best: Whirling Slash +34%, Cull The Weak +30%, Twister +29%
+  Crushed                      9 skills, best: Blood Hunt +14%, Cull The Weak +14%, Whirling Slash +14%
+  Moving                       2 skills, best: Rake +34%, Disengage +15%
+  CoveredInFrost               1 skills, best: Glacial Lance +14%

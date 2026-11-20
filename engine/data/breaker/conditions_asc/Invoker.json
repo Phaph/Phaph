@@ -1,0 +1,309 @@
+{
+ "skills": {
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 60581
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CoveredInFrost": 0.119,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 23957
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CoveredInFrost": 0.058,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 4077
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.098,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.053,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Blizzard..."
+   ],
+   "dps": 23853
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 73036
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CoveredInFrost": 0.119,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 67083
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.162,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 54070
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.054,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 67965
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CriticalWeakness": 0.223,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.129,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 18499
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.13,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 57850
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 19636
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.068,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 48494
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.207,
+    "CriticalWeakness": 0.146,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.219,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9376
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CoveredInFrost": 0.119,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 37656
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.091,
+    "CriticalWeakness": 0.13,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 15073
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.13,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 49176
+  }
+ },
+ "updated": "2026-11-20 04:49"
+}

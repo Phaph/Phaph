@@ -1,0 +1,29 @@
+26 skills scanned; 142 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +   24% (+24% above usual)  Oil Grenade                  when enemy is Moving
+  +   23% (+23% above usual)  High Velocity Rounds         when enemy is ArmourBroken
+  +   23% (+23% above usual)  Flash Grenade                when enemy is Moving
+  +   21% (+21% above usual)  Cluster Grenade              when enemy is Moving
+  +   19% (+19% above usual)  High Velocity Rounds         when enemy is Moving
+  +   18% (+18% above usual)  Oil Grenade                  when enemy is ArmourBroken
+  +   16% (+16% above usual)  Flash Grenade                when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround             25 skills, best: Plasma Blast +30%, Flash Grenade +20%, Explosive Grenade +20%
+  Shocked                     25 skills, best: Plasma Blast +30%, Flash Grenade +20%, Explosive Grenade +20%
+  CriticalWeakness            25 skills, best: Oil Grenade +16%, Flash Grenade +15%, High Velocity Rounds +14%
+  Intimidated                 25 skills, best: Flash Grenade +10%, Explosive Grenade +10%, Cluster Grenade +10%
+  CoveredInAsh                22 skills, best: Explosive Grenade +13%, Incendiary Shot +13%, Rapid Shot +13%
+  Moving                       4 skills, best: Oil Grenade +24%, Flash Grenade +23%, Cluster Grenade +21%
+  ArmourBroken                 4 skills, best: High Velocity Rounds +23%, Oil Grenade +18%, Flash Grenade +16%
+  OnProfaneGround              4 skills, best: Oil Grenade +8%, Flash Grenade +8%, High Velocity Rounds +7%
+  Crushed                      3 skills, best: High Velocity Rounds +12%, Oil Grenade +9%, Flash Grenade +8%
+  Electrocuted                 1 skills, best: Siege Cascade +101%
+  Frozen                       1 skills, best: Siege Cascade +101%
+  HeavyStunned                 1 skills, best: Siege Cascade +101%
+  Immobilised                  1 skills, best: Siege Cascade +101%
+  Pinned                       1 skills, best: Siege Cascade +101%

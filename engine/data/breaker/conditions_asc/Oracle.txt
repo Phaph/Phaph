@@ -1,0 +1,18 @@
+11 skills scanned; 68 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   26% (+26% above usual)  Rend                         when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rampage                      when enemy is ArmourBroken
+  +   23% (+23% above usual)  Cross Slash                  when enemy is ArmourBroken
+  +   23% (+23% above usual)  Wing Blast                   when enemy is ArmourBroken
+  +   16% (+16% above usual)  Cross Slash                  when enemy is Moving
+  +   16% (+16% above usual)  Wing Blast                   when enemy is Moving
+Conditions that matter to the most skills:
+  CriticalWeakness            11 skills, best: Flame Breath +27%, Wing Blast +24%, Cross Slash +24%
+  OnShockedGround             10 skills, best: Fury of the Mountain +25%, Furious Slam +25%, Devour +25%
+  Shocked                     10 skills, best: Fury of the Mountain +25%, Furious Slam +25%, Devour +25%
+  OnProfaneGround             10 skills, best: Oil Barrage +18%, Rolling Magma +17%, Furious Slam +15%
+  Intimidated                 10 skills, best: Cross Slash +10%, Fury of the Mountain +10%, Furious Slam +10%
+  CoveredInAsh                 7 skills, best: Rolling Magma +19%, Flame Breath +18%, Fury of the Mountain +13%
+  ArmourBroken                 4 skills, best: Rend +26%, Rampage +26%, Cross Slash +23%
+  Crushed                      4 skills, best: Rend +14%, Rampage +14%, Cross Slash +12%
+  Moving                       2 skills, best: Cross Slash +16%, Wing Blast +16%

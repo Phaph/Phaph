@@ -1,0 +1,384 @@
+{
+ "skills": {
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.162,
+    "CriticalWeakness": 0.153,
+    "Crushed": 0.076,
+    "Intimidated": 0.1,
+    "Moving": 0.217,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 5035
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1433
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 32189
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.091,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "Moving": 0.197,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 4331
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {},
+   "dps": 84035
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 24030
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 8692
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 6457
+  },
+  "Fragments Of The Past": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.116,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 20874
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 5222
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 24608
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13841
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.229,
+    "CriticalWeakness": 0.135,
+    "Crushed": 0.116,
+    "Intimidated": 0.1,
+    "Moving": 0.189,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 12025
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.182,
+    "CriticalWeakness": 0.162,
+    "Crushed": 0.09,
+    "Intimidated": 0.1,
+    "Moving": 0.227,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 6446
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 29232
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3605
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 4186
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "dps": 104442
+  },
+  "Shockwave Totem": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 4184
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 149481
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 2407
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 26032
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.096,
+    "Electrocuted": 1.006,
+    "Frozen": 1.006,
+    "HeavyStunned": 1.006,
+    "Immobilised": 1.006,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.006,
+    "Shocked": 0.2
+   },
+   "dps": 10176
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 11163
+  },
+  "Voltaic Barrier": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.076,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 7640
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate",
+    "Cooldown Recovery Rate"
+   ],
+   "dps": 14792
+  }
+ },
+ "updated": "2026-11-20 04:39"
+}

@@ -1,0 +1,31 @@
+41 skills scanned; 225 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +   23% (+23% above usual)  Oil Grenade                  when enemy is Moving
+  +   22% (+22% above usual)  Flash Grenade                when enemy is Moving
+  +   21% (+21% above usual)  Cluster Grenade              when enemy is Moving
+  +   21% (+21% above usual)  High Velocity Rounds         when enemy is ArmourBroken
+  +   19% (+19% above usual)  Supercharged Slam            when enemy is ArmourBroken
+  +   18% (+18% above usual)  Sunder                       when enemy is ArmourBroken
+  +   17% (+17% above usual)  High Velocity Rounds         when enemy is Moving
+  +   16% (+16% above usual)  Oil Grenade                  when enemy is ArmourBroken
+  +   16% (+16% above usual)  Supercharged Slam            when enemy is Moving
+Conditions that matter to the most skills:
+  OnShockedGround             39 skills, best: Plasma Blast +30%, Boneshatter +20%, Earthquake +20%
+  Shocked                     39 skills, best: Plasma Blast +30%, Boneshatter +20%, Earthquake +20%
+  CriticalWeakness            39 skills, best: Rolling Slam +20%, Supercharged Slam +19%, Oil Grenade +18%
+  Intimidated                 39 skills, best: Boneshatter +10%, Earthquake +10%, Artillery Ballista +10%
+  CoveredInAsh                35 skills, best: Perfect Strike +14%, Volcanic Fissure +14%, Boneshatter +13%
+  OnProfaneGround              9 skills, best: Forge Hammer +10%, Molten Blast +10%, Rolling Slam +10%
+  ArmourBroken                 8 skills, best: High Velocity Rounds +21%, Supercharged Slam +19%, Sunder +18%
+  Crushed                      7 skills, best: Supercharged Slam +12%, High Velocity Rounds +12%, Sunder +10%
+  Moving                       5 skills, best: Oil Grenade +23%, Flash Grenade +22%, Cluster Grenade +21%
+  Electrocuted                 1 skills, best: Siege Cascade +101%
+  Frozen                       1 skills, best: Siege Cascade +101%
+  HeavyStunned                 1 skills, best: Siege Cascade +101%
+  Immobilised                  1 skills, best: Siege Cascade +101%
+  Pinned                       1 skills, best: Siege Cascade +101%

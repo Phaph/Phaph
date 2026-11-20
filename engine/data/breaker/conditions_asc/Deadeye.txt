@@ -1,0 +1,14 @@
+21 skills scanned; 109 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   22% (+22% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
+  +   21% (+21% above usual)  Snipe                        when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround             21 skills, best: Gas Arrow +20%, Freezing Salvo +20%, Electrocuting Arrow +20%
+  Shocked                     21 skills, best: Gas Arrow +20%, Freezing Salvo +20%, Electrocuting Arrow +20%
+  CriticalWeakness            21 skills, best: Snipe +16%, Poisonburst Arrow +14%, Voltaic Barrier +12%
+  Intimidated                 21 skills, best: Gas Arrow +10%, Freezing Salvo +10%, Electrocuting Arrow +10%
+  CoveredInAsh                17 skills, best: Detonating Arrow +17%, Fragments Of The Past +11%, Shockwave Totem +11%
+  OnProfaneGround              3 skills, best: Snipe +8%, Poisonburst Arrow +7%, Voltaic Barrier +6%
+  ArmourBroken                 2 skills, best: Poisonburst Arrow +22%, Snipe +21%
+  Crushed                      2 skills, best: Poisonburst Arrow +8%, Snipe +8%
+  Moving                       1 skills, best: Snipe +15%

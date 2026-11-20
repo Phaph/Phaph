@@ -1,0 +1,1133 @@
+{
+ "skills": {
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.23,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 51000
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.196,
+    "CriticalWeakness": 0.21,
+    "Crushed": 0.131,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.217,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.089
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 95996
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.23,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 46819
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.235,
+    "CriticalWeakness": 0.305,
+    "Crushed": 0.137,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.187,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.094
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Bringer of Flame",
+    "Spell Damage"
+   ],
+   "dps": 51349
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 3818
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.21,
+    "CriticalWeakness": 0.283,
+    "Crushed": 0.134,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.137,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Grinning Immolation",
+    "Bringer of Flame",
+    "Spell Damage"
+   ],
+   "dps": 53511
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 8021
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.189,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 94872
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.248,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.12,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 2734
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.241,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 21751
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.052,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "Moving": 0.313,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Bringer of Flame",
+    "Spell Damage"
+   ],
+   "dps": 62759
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.377,
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.254,
+    "Crushed": 0.097,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.21,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage",
+    "Bringer of Flame"
+   ],
+   "dps": 4955
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 7658
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.241,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 160610
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.253,
+    "CriticalWeakness": 0.251,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.173,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.095
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Bringer of Flame",
+    "Spell Damage"
+   ],
+   "dps": 25712
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.256,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.124,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.096
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Bringer of Flame",
+    "Spell Damage"
+   ],
+   "dps": 52599
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.181,
+    "CriticalWeakness": 0.215,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.178,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 1237
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.241,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 54040
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.288,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.139,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 98286
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.199,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Grinning Immolation",
+    "Spell Damage"
+   ],
+   "dps": 48863
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.178,
+    "CriticalWeakness": 0.305,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.168,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.094
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage",
+    "Flammability Magnitude"
+   ],
+   "dps": 12167
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.189,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 18378
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.248,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.181,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage",
+    "Bringer of Flame"
+   ],
+   "dps": 19224
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.215,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.178,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 68496
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.198,
+    "CriticalWeakness": 0.258,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.16,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage",
+    "Bringer of Flame"
+   ],
+   "dps": 15476
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.215,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.178,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 41513
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CriticalWeakness": 0.337,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.178,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage",
+    "Flammability Magnitude"
+   ],
+   "dps": 43944
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.215,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.178,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 35244
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.196,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.105,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Grinning Immolation",
+    "Spell Damage"
+   ],
+   "dps": 91004
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.275,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.155,
+    "OnShockedGround": 0.706,
+    "Shocked": 0.706,
+    "Unnerved": 0.096
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage",
+    "Bringer of Flame"
+   ],
+   "dps": 9388
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.225,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.155,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 35220
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 64241
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.312,
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.116,
+    "Crushed": 0.051,
+    "Intimidated": 0.1,
+    "Moving": 0.21,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Bringer of Flame"
+   ],
+   "dps": 230
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.063,
+    "CoveredInAsh": 0.183,
+    "CriticalWeakness": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.09
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 12405
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.165,
+    "CriticalWeakness": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.09
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 24628
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.082,
+    "CoveredInAsh": 0.165,
+    "CriticalWeakness": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.081
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 13875
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.171,
+    "CriticalWeakness": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation"
+   ],
+   "dps": 16424
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.193,
+    "CoveredInAsh": 0.161,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.106,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.078
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 4783
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.068,
+    "CoveredInAsh": 0.177,
+    "CriticalWeakness": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.087
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 12891
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.166,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.178,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 87633
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.288,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.139,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 24150
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.052,
+    "CoveredInFrost": 0.121,
+    "CriticalWeakness": 0.223,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.187,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.096
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Grinning Immolation",
+    "Spell Damage",
+    "Bringer of Flame"
+   ],
+   "dps": 63735
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.23,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 35441
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.162,
+    "CriticalWeakness": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.101,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation"
+   ],
+   "dps": 17252
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 3818
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 3818
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.238,
+    "CriticalWeakness": 0.252,
+    "Crushed": 0.137,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.174,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.094
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Bringer of Flame",
+    "Spell Damage"
+   ],
+   "dps": 29898
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 12202
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.136,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 28893
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.235,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.13,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Spell Damage",
+    "Spell Damage"
+   ],
+   "dps": 57615
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CoveredInFrost": 0.079,
+    "CriticalWeakness": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation"
+   ],
+   "dps": 30173
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.349,
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.191,
+    "Crushed": 0.085,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.177,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.086
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Grinning Immolation",
+    "Spell Damage",
+    "Flammability Magnitude"
+   ],
+   "dps": 13057
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.264,
+    "CoveredInAsh": 0.139,
+    "CriticalWeakness": 0.146,
+    "Crushed": 0.054,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.067
+   },
+   "ascendancy_nodes": [
+    "Spell Damage",
+    "Spell Damage",
+    "Grinning Immolation",
+    "Flammability Magnitude"
+   ],
+   "dps": 5557
+  }
+ },
+ "updated": "2026-11-20 03:31"
+}

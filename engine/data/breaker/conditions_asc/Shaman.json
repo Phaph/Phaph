@@ -1,0 +1,188 @@
+{
+ "skills": {
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.227,
+    "CriticalWeakness": 0.173,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.207,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10069
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.177,
+    "CriticalWeakness": 0.183
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 141398
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 18054
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.098,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 27866
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 37320
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 83984
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.115,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.141,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 128073
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.263,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17628
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.229,
+    "CriticalWeakness": 0.17,
+    "Crushed": 0.117,
+    "Intimidated": 0.1,
+    "Moving": 0.185,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10654
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.258,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 15018
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.189,
+    "CriticalWeakness": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 30849
+  }
+ },
+ "updated": "2026-11-20 04:53"
+}

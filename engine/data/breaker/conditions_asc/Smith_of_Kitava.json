@@ -1,0 +1,265 @@
+{
+ "skills": {
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 14512
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 24182
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 25423
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 12055
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 8600
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.101,
+    "CoveredInAsh": 0.118,
+    "CriticalWeakness": 0.098,
+    "Crushed": 0.062,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 50513
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 26507
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.135,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 24633
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 3529
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.138,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 39962
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 16073
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.14,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.131,
+    "Crushed": 0.069,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 16528
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.199,
+    "CriticalWeakness": 0.158,
+    "Crushed": 0.124,
+    "Intimidated": 0.1,
+    "Moving": 0.158,
+    "OnProfaneGround": 0.113,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 43885
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.171,
+    "CoveredInAsh": 0.068,
+    "CriticalWeakness": 0.099,
+    "Crushed": 0.098,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 19075
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 17337
+  }
+ },
+ "updated": "2026-11-20 04:03"
+}

@@ -1,0 +1,30 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Cross Slash                      10,069  ArmourBroken +23%, Moving +21%, OnShockedGround +20%
+  Flame Breath                    141,398  CriticalWeakness +18%, CoveredInAsh +18%
+  Fury of the Mountain             18,054  OnShockedGround +25%, Shocked +25%, CoveredInAsh +12%
+  Lunar Assault                    27,866  OnShockedGround +25%, Shocked +25%, CriticalWeakness +12%
+  Furious Slam                     37,320  OnShockedGround +25%, Shocked +25%, CriticalWeakness +12%
+  Devour                           83,984  OnShockedGround +25%, Shocked +25%, CriticalWeakness +12%
+  Oil Barrage                     128,073  OnShockedGround +25%, Shocked +25%, OnProfaneGround +14%
+  Rend                             17,628  ArmourBroken +26%, OnShockedGround +20%, Shocked +20%
+  Wing Blast                       10,654  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Rampage                          15,018  ArmourBroken +26%, OnShockedGround +20%, Shocked +20%
+  Rolling Magma                    30,849  OnShockedGround +20%, Shocked +20%, CoveredInAsh +19%
+11 skills scanned; 67 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   26% (+26% above usual)  Rend                         when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rampage                      when enemy is ArmourBroken
+  +   23% (+23% above usual)  Wing Blast                   when enemy is ArmourBroken
+  +   23% (+23% above usual)  Cross Slash                  when enemy is ArmourBroken
+  +   21% (+21% above usual)  Cross Slash                  when enemy is Moving
+  +   18% (+18% above usual)  Wing Blast                   when enemy is Moving
+Conditions that matter to the most skills:
+  CriticalWeakness            11 skills, best: Flame Breath +18%, Cross Slash +17%, Wing Blast +17%
+  OnShockedGround             10 skills, best: Fury of the Mountain +25%, Lunar Assault +25%, Furious Slam +25%
+  Shocked                     10 skills, best: Fury of the Mountain +25%, Lunar Assault +25%, Furious Slam +25%
+  Intimidated                 10 skills, best: Cross Slash +10%, Fury of the Mountain +10%, Lunar Assault +10%
+  OnProfaneGround              9 skills, best: Oil Barrage +14%, Cross Slash +12%, Rolling Magma +12%
+  CoveredInAsh                 7 skills, best: Rolling Magma +19%, Flame Breath +18%, Fury of the Mountain +12%
+  ArmourBroken                 4 skills, best: Rend +26%, Rampage +26%, Wing Blast +23%
+  Crushed                      4 skills, best: Rend +14%, Rampage +14%, Wing Blast +12%
+  Moving                       2 skills, best: Cross Slash +21%, Wing Blast +18%

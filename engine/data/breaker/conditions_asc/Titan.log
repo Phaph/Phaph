@@ -1,0 +1,32 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Earthshatter                     12,720  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Armour Breaker                   22,265  
+  Boneshatter                      21,196  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Forge Hammer                      7,549  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Earthquake                       10,576  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Hammer of the Gods               39,629  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Molten Blast                     23,411  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Leap Slam                        23,177  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Rolling Slam                      3,100  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Perfect Strike                   35,032  OnShockedGround +20%, Shocked +20%, CoveredInAsh +14%
+  Stampede                         14,102  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Shield Wall                      13,669  OnShockedGround +20%, Shocked +20%, ArmourBroken +15%
+  Supercharged Slam                36,394  ArmourBroken +20%, OnShockedGround +20%, Shocked +20%
+  Sunder                           15,285  OnShockedGround +20%, Shocked +20%, ArmourBroken +18%
+  Volcanic Fissure                 15,213  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+15 skills scanned; 83 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   20% (+20% above usual)  Supercharged Slam            when enemy is ArmourBroken
+  +   18% (+18% above usual)  Sunder                       when enemy is ArmourBroken
+  +   16% (+16% above usual)  Supercharged Slam            when enemy is Moving
+  +   15% (+15% above usual)  Shield Wall                  when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround             14 skills, best: Earthshatter +20%, Boneshatter +20%, Forge Hammer +20%
+  Shocked                     14 skills, best: Earthshatter +20%, Boneshatter +20%, Forge Hammer +20%
+  CriticalWeakness            14 skills, best: Supercharged Slam +16%, Rolling Slam +16%, Shield Wall +13%
+  Intimidated                 14 skills, best: Earthshatter +10%, Boneshatter +10%, Forge Hammer +10%
+  CoveredInAsh                13 skills, best: Perfect Strike +14%, Volcanic Fissure +13%, Boneshatter +13%
+  OnProfaneGround              5 skills, best: Supercharged Slam +11%, Forge Hammer +11%, Molten Blast +11%
+  ArmourBroken                 4 skills, best: Supercharged Slam +20%, Sunder +18%, Shield Wall +15%
+  Crushed                      4 skills, best: Supercharged Slam +12%, Sunder +10%, Shield Wall +7%
+  Moving                       1 skills, best: Supercharged Slam +16%

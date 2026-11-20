@@ -1,0 +1,33 @@
+166 skills, 166 to scan, 56 conditions, 6 workers
+  Flicker Strike                   60,581  ArmourBroken +26%, OnShockedGround +20%, Shocked +20%
+  Glacial Cascade                  23,957  OnShockedGround +23%, Shocked +23%, CoveredInFrost +12%
+  Frozen Locus                      4,077  OnShockedGround +23%, Shocked +23%, CriticalWeakness +10%
+  Gathering Storm                  23,853  OnShockedGround +23%, Shocked +23%, CriticalWeakness +10%
+  Falling Thunder                  73,036  OnShockedGround +23%, Shocked +23%, CriticalWeakness +10%
+  Ice Strike                       67,083  OnShockedGround +23%, Shocked +23%, CoveredInFrost +12%
+  Killing Palm                     54,070  OnShockedGround +23%, Shocked +23%, CriticalWeakness +16%
+  Storm Wave                       67,965  OnShockedGround +23%, Shocked +23%, CriticalWeakness +10%
+  Tempest Bell                     18,499  OnShockedGround +23%, Shocked +23%, CriticalWeakness +22%
+  Siphoning Strike                 57,850  OnShockedGround +23%, Shocked +23%, CriticalWeakness +13%
+  Shattering Palm                  19,636  OnShockedGround +23%, Shocked +23%, CriticalWeakness +10%
+  Tempest Flurry                   48,494  OnShockedGround +23%, Shocked +23%, CriticalWeakness +10%
+  Vaulting Impact                   9,376  Moving +22%, ArmourBroken +21%, OnShockedGround +20%
+  Wave of Frost                    37,656  OnShockedGround +23%, Shocked +23%, CoveredInFrost +12%
+  Whirling Assault                 15,073  OnShockedGround +23%, Shocked +23%, CriticalWeakness +13%
+  Wind Blast                       49,176  OnShockedGround +23%, Shocked +23%, CriticalWeakness +13%
+16 skills scanned; 93 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   26% (+26% above usual)  Flicker Strike               when enemy is ArmourBroken
+  +   22% (+22% above usual)  Vaulting Impact              when enemy is Moving
+  +   21% (+21% above usual)  Vaulting Impact              when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround             16 skills, best: Glacial Cascade +23%, Frozen Locus +23%, Gathering Storm +23%
+  Shocked                     16 skills, best: Glacial Cascade +23%, Frozen Locus +23%, Gathering Storm +23%
+  CriticalWeakness            16 skills, best: Tempest Bell +22%, Killing Palm +16%, Vaulting Impact +15%
+  Intimidated                 16 skills, best: Flicker Strike +10%, Glacial Cascade +10%, Frozen Locus +10%
+  CoveredInAsh                13 skills, best: Whirling Assault +9%, Killing Palm +9%, Siphoning Strike +9%
+  OnProfaneGround              5 skills, best: Tempest Bell +13%, Siphoning Strike +12%, Whirling Assault +12%
+  CoveredInFrost               4 skills, best: Glacial Cascade +12%, Ice Strike +12%, Wave of Frost +12%
+  ArmourBroken                 3 skills, best: Flicker Strike +26%, Vaulting Impact +21%, Gathering Storm +10%
+  Crushed                      3 skills, best: Flicker Strike +14%, Vaulting Impact +11%, Gathering Storm +5%
+  Moving                       1 skills, best: Vaulting Impact +22%

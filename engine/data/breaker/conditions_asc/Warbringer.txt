@@ -1,0 +1,16 @@
+15 skills scanned; 83 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +   20% (+20% above usual)  Supercharged Slam            when enemy is ArmourBroken
+  +   18% (+18% above usual)  Sunder                       when enemy is ArmourBroken
+  +   16% (+16% above usual)  Supercharged Slam            when enemy is Moving
+  +   15% (+15% above usual)  Shield Wall                  when enemy is ArmourBroken
+Conditions that matter to the most skills:
+  OnShockedGround             14 skills, best: Hammer of the Gods +20%, Boneshatter +20%, Earthquake +20%
+  Shocked                     14 skills, best: Hammer of the Gods +20%, Boneshatter +20%, Earthquake +20%
+  CriticalWeakness            14 skills, best: Supercharged Slam +16%, Rolling Slam +16%, Shield Wall +13%
+  Intimidated                 14 skills, best: Hammer of the Gods +10%, Boneshatter +10%, Earthquake +10%
+  CoveredInAsh                13 skills, best: Perfect Strike +14%, Volcanic Fissure +13%, Boneshatter +13%
+  OnProfaneGround              5 skills, best: Supercharged Slam +11%, Forge Hammer +11%, Molten Blast +11%
+  ArmourBroken                 4 skills, best: Supercharged Slam +20%, Sunder +18%, Shield Wall +15%
+  Crushed                      4 skills, best: Supercharged Slam +12%, Sunder +10%, Shield Wall +7%
+  Moving                       1 skills, best: Supercharged Slam +16%

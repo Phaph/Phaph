@@ -1,0 +1,46 @@
+61 skills scanned; 384 skill x condition gains of 5%+
+Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  100% (+100% above usual)  Dark Effigy                  when enemy is Poisoned
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is OnShockedGround
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is Shocked
+  +   42% (+42% above usual)  Detonate Living              when enemy is ArmourBroken
+  +   39% (+39% above usual)  Unearth                      when enemy is ArmourBroken
+  +   37% (+37% above usual)  Seismic Cry                  when enemy is Cursed
+  +   37% (+37% above usual)  Seismic Cry                  when enemy is Moving
+  +   36% (+36% above usual)  Wolf Pack                    when enemy is ArmourBroken
+  +   36% (+36% above usual)  Detonate Dead                when enemy is Moving
+  +   27% (+27% above usual)  Entangle                     when enemy is ArmourBroken
+  +   25% (+25% above usual)  Skeletal Reaver              when enemy is Cursed
+  +   25% (+25% above usual)  Skeletal Reaver              when enemy is Moving
+  +   25% (+25% above usual)  Thrashing Vines              when enemy is ArmourBroken
+  +   25% (+25% above usual)  Bonestorm                    when enemy is ArmourBroken
+  +   25% (+25% above usual)  Seismic Cry                  when enemy is ArmourBroken
+  +   24% (+24% above usual)  Skeletal Reaver              when enemy is ArmourBroken
+  +   22% (+22% above usual)  Coiling Bolts                when enemy is ArmourBroken
+  +   22% (+22% above usual)  Bone Cage                    when enemy is ArmourBroken
+  +   20% (+20% above usual)  Firestorm                    when enemy is CoveredInAsh
+  +   20% (+20% above usual)  Solar Orb                    when enemy is CoveredInAsh
+  +   20% (+20% above usual)  Frost Bomb                   when enemy is CoveredInFrost
+  +   20% (+20% above usual)  Frost Wall                   when enemy is CoveredInFrost
+  +   20% (+20% above usual)  Incinerate                   when enemy is CoveredInAsh
+  +   19% (+19% above usual)  Flame Wall                   when enemy is CoveredInAsh
+  +   19% (+19% above usual)  Comet                        when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Ember Fusillade              when enemy is CoveredInAsh
+  +   19% (+19% above usual)  Frost Darts                  when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Frostbolt                    when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Grim Pillars                 when enemy is CoveredInFrost
+  +   19% (+19% above usual)  Ice Nova                     when enemy is CoveredInFrost
+Conditions that matter to the most skills:
+  OnShockedGround             53 skills, best: Lightning Conduit +68%, Arc +30%, Bonestorm +20%
+  Shocked                     53 skills, best: Lightning Conduit +68%, Arc +30%, Bonestorm +20%
+  Intimidated                 53 skills, best: Bonestorm +10%, Bone Cage +10%, Arc +10%
+  CriticalWeakness            50 skills, best: Bonestorm +28%, Detonate Living +26%, Flameblast +25%
+  OnProfaneGround             48 skills, best: Detonate Living +24%, Flameblast +24%, Entangle +23%
+  Unnerved                    46 skills, best: Ball Lightning +10%, Dark Effigy +10%, Detonate Minion +10%
+  CoveredInAsh                25 skills, best: Firestorm +20%, Solar Orb +20%, Incinerate +20%
+  ArmourBroken                14 skills, best: Detonate Living +42%, Unearth +39%, Wolf Pack +36%
+  Moving                      14 skills, best: Seismic Cry +37%, Detonate Dead +36%, Skeletal Reaver +25%
+  CoveredInFrost              11 skills, best: Frost Bomb +20%, Frost Wall +20%, Comet +19%
+  Cursed                       8 skills, best: Seismic Cry +37%, Skeletal Reaver +25%, Raise Zombie +12%
+  Crushed                      8 skills, best: Bone Cage +14%, Coiling Bolts +14%, Thrashing Vines +14%
+  Poisoned                     1 skills, best: Dark Effigy +100%
