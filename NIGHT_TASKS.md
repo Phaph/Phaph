@@ -137,6 +137,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Cascade, Dark Effigy, Lightning Conduit), each with its own setup rate and uptime model.
 15. [ ] Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose
     triggers can feed each other; estimate the rate; leads + test requests.
+    Plan (2026-11-20): build on engine/triggers.py (energy maths for Cast on Critical / Elemental Ailment, numbers in
+    data/trigger_rules.json). (a) add the other meta gems from PoB data (Cast on Dodge, Minion Death, Block, Melee
+    Kill, Melee Stun, Charm Use) to METAS + rules; (b) new trigger_scan.py: for each meta gem, the cheapest feeder
+    skill (energy per second per point of investment) and casts/s of a big spell, flag > 1 cast/s from a level-1
+    feeder (the Cast on Freeze Comet shape); (c) loop graph from text_scan group D lines: a triggered skill whose output
+    is its own trigger's event (crit, kill, ailment, minion death) = self-feeding, check against the 0.4/0.5 rule
+    "triggered skills generate no energy"; (d) leads.json + TESTS.md for anything over the bar.
 16. [ ] Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
     saved with their codes, so test requests come with a complete build.
 
