@@ -250,3 +250,23 @@ rescored with the items really worn (`breaker.py rescore`, data/breaker/pairs_wo
 | Snap Amazon | Considered Casting + Rondel of Fragility | +16% / -38% -> -16% | +52% |
 Leopold's + penetration survives (the below-0 mechanic multiplies); most other pairs were the stacking artefact.
 "Not consumed" charges: all sources add to ~45% (Perpetual Charge 25%, The Fabled Stag 10%, Hollow Form 10%): dead.
+
+### Per-ascendancy scans with ascendancy passives (2026-11-20, tasks 7 prep and 12)
+The queue re-ran the condition scan and the unique/keystone matrix for all 23 ascendancies, this time with each
+ascendancy's own passives (`breaker.ascendancy_passives`). Compared ascendancy by ascendancy within each class:
+- **Oracle + Maligaro's Virtuosity read +173% to +190% on every spell** (Shaman: +10-18%). Cause: Forced Outcome
+  (Inevitable Critical Hits: 100% crit, less bonus per reroll) plus the gloves' fixed "Critical Damage Bonus is 250%",
+  whose override also wiped the reroll penalty. In game the gloves also say "Your Critical Hit Chance cannot be
+  Rerolled", which turns Forced Outcome off (GGG closed this combo in 0.3/0.4; poe2wiki). PoB doesn't read that line.
+  **Fixed in runner.lua** (the line now switches off Inevitable Critical Hits; tests/test_pob_fixes.py): Oracle + the
+  gloves is +2%. A PoB modelling gap, not a lead (leads.json: fixed).
+- **Lesson for the detectors:** a unique line PoB marks as unsupported can make a fake lead. Next cheap tool: list
+  every unique's unsupported lines (ModCache entries with no mods) and tag scan flags that involve those uniques.
+- Expected ascendancy effects, no lead: Amazon +50-55% vs Open Weakness on all its attacks (its own notables);
+  Blood Mage +12-37% vs Cursed / Moving on minion and cry skills; Infernalist + Blackflame Covenant on minions.
+- Not checked yet, probably spirit (The Coming Calamity grants three heralds): Witchhunter Shockwave Totem + The
+  Coming Calamity +89% (Tactician +0%), Acolyte of Chayula Whirling Assault + The Coming Calamity +50%.
+- Warrior, Ranger, Sorceress, Monk, Mercenary and Druid conditions: the ascendancies of a class read the same; the
+  ascendancy passives the greedy pick takes are mostly plain damage nodes at round 1 (no tree).
+- 11 caster skills error out in the matrix (Animus Exchange, Bitter Dead, Frostflame Nova, Fortifying Cry, Powered by
+  Verisium...): no damage of their own (StopIteration on the bench), harmless.

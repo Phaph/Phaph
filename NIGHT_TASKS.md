@@ -120,7 +120,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 11. [ ] Mageblood: judge by an average random roll; list legacies to hunt for; swap line for ticked goals ("Hunting
     for loot? Legacy of Gold (+45% rarity) can replace Stibnite: -X% toughness").
 
-12. [ ] (queued in ~/lodestone_chain.sh) Re-run the per-ascendancy condition and matrix scans with ascendancy passives (fixed in task 5) once the
+12. [x] (done 2026-11-20: written into BREAKER.md; found and fixed a PoB gap, Oracle Forced Outcome + Maligaro's x2.73 -> +2%) Re-run the per-ascendancy condition and matrix scans with ascendancy passives (fixed in task 5) once the
     Breaker queue is free: `JOBS="conditions_asc matrix_asc"` from ~/breaker after a pull.
 
 ### Lodestone build-out (added 2026-11-19, after Kyle's note)

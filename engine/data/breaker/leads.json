@@ -1,6 +1,6 @@
 {
  "about": "Lodestone leads, curated by Claude from BREAKER.md. status: to_test (needs Kyle in game), confirmed, dead (explained, not real), fixed (a modelling bug found and fixed in the engine), known (rediscovered a known strong build). Update this file when a lead changes; the Lodestone page reads it.",
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "leads": [
   {
    "name": "Rapid Shot + Fresh Clip II speed stacking",
@@ -90,6 +90,14 @@
    "detector": "A-to-Z sweep",
    "what": "Wins several searches. Path of Building ignores both its 10-ember cap with a 1.3 s delay (about x0.7) and its 5% more damage per ember fired (up to x1.5); they roughly cancel.",
    "check": "Real damage over 30 s on a target dummy vs the build's PoB number. (TESTS.md #5)"
+  },
+  {
+   "name": "Oracle Forced Outcome + Maligaro's Virtuosity",
+   "status": "fixed",
+   "found": "2026-11-20",
+   "detector": "unique/keystone matrix, per ascendancy",
+   "what": "Path of Building read Fireball Oracle at x2.73 with Maligaro's Virtuosity: Forced Outcome's 100% crit chance plus the gloves' fixed 250% crit bonus, which also wiped the reroll penalty. In game the gloves say your crit chance cannot be rerolled, which turns Forced Outcome off (GGG closed this combo in 0.3/0.4). PoB doesn't read that line.",
+   "check": "Fixed in the engine (runner.lua): the line now turns off Inevitable Critical Hits. Oracle + Maligaro's is +2% now."
   }
  ]
 }

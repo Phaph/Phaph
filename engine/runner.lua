@@ -6,6 +6,26 @@
 dofile("HeadlessWrapper.lua")
 local json = require("dkjson")
 
+-- PoB fix: Maligaro's Virtuosity's "Your Critical Hit Chance cannot be Rerolled" (since 0.3/0.4) is unsupported in
+-- PoB, so with the Oracle's Forced Outcome (Inevitable Critical Hits) PoB gave 100% crit AND the gloves' 250% bonus
+-- (its override also wipes the reroll penalty): Fireball Oracle x2.73. In game the gloves stop the rerolls, so
+-- Inevitable Critical Hits does nothing. Found by the per-ascendancy matrix scan, 2026-11-20.
+do
+	modLib.parseModCache["Your Critical Hit Chance cannot be Rerolled"] =
+		{ { modLib.createMod("CritChanceCannotBeRerolled", "FLAG", true) }, nil }
+	local flag = common.classes["ModStore"].Flag
+	local function patched(self, cfg, ...)
+		if select("#", ...) == 1 and ... == "InevitableCriticalHits"
+				and flag(self, cfg, "CritChanceCannotBeRerolled") then
+			return false
+		end
+		return flag(self, cfg, ...)
+	end
+	for _, class in pairs(common.classes) do   -- subclasses (ModList, ModDB) hold their own copy of Flag
+		if class.Flag == flag then class.Flag = patched end
+	end
+end
+
 local function reply(t)
 	io.stdout:write("@@", json.encode(t), "\n")
 	io.stdout:flush()
