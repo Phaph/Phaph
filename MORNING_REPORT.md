@@ -1,38 +1,26 @@
-# Morning report: Thursday 2026-11-19, 7 am Mazatlan
+# Morning report, 2026-11-20
 
-## Night tasks (server session)
-- Finished: 1 (spirit overdrawn at Uber), 2 (attribute shortfalls), 3 (Detonate Dead limit), 4 (build speed, measured
-  only), 5 (matrix report by skill family), 6 (Lodestone page, unlisted), 8 (in-game test list), 13 (pairs fix).
-  14 half done: ailment combos (Dark Effigy + poison +69% on pinnacle bosses; shock can't be kept up on bosses).
-- Now: running on its own with no Claude, to save usage until the Friday ~5 am reset. Blind test (7) and the
-  per-ascendancy re-runs (12) are queued to start after the current jobs.
-- Waiting for Kyle: should the Lodestone page go public (link from the home page)? It is live but hidden.
+## Overnight
+- The Lodestone queue finished at about 3:20 am Mazatlan with nothing failed. It ran three jobs: the blind test against the ladder's top builds, the condition scan for all 23 ascendancies, and the unique and keystone scan for all 23. These were the first scans to include ascendancy passives. All three were saved to the repo.
+- There was no nightly A-to-Z sweep on either night (19th and 20th), because the queue was busy both times. The newest sweep results are still the ones from the 19th.
+- Messages held back during quiet hours: only the "queue finished" note above.
 
-## Held-back message from last night
-- 9:16 pm: Breaker queue finished the condition scans for 23 ascendancies and the unique x skill matrix, 0 failed.
+## Task list
+- Done: tasks 1-6, 8, 13 and 18. Task 18 was the Ember Fusillade fix. It now gets 10 embers per cast and then waits, and the fix is committed.
+- Next: after the fix, a follow-up script runs the test suite, deploys the engine and re-runs the blind test. Its logs are still empty, so it hasn't reported anything yet.
+- Tasks 7 and 12 have their scans finished. They still need their write-up in BREAKER.md and their boxes ticked.
+- Waiting for Kyle: should the Lodestone page go public? It is live but unlisted.
 
-## Nightly A-to-Z sweep (still running: 18 of 23 done)
-- Builds finished: 14. Passed every check: 0.
-- Most common failure: "slow". Every finished build took 35-43 minutes (limit for a pass is lower).
-- One real gap: Witchhunter at Mid Endgame is 10 Strength short for its crossbow (79 of 89).
-- Timed out (hung past 45 min): 4 of 18: Smith of Kitava, Stormweaver, Spirit Walker, Ritualist.
-- The 4 o'clock sweep was skipped because this one was still running (expected).
-- Top damage: Tactician Rapid Shot 6.5M, Lich Bone Cage 6.4M, Blood Mage Ember Fusillade 5.5M.
+## Last A-to-Z sweep (19th, 23 builds)
+- 19 builds finished. **None passed every check.**
+- The most common failure was speed: all 19 took 35-43 minutes each. One Witchhunter build was also short on Strength for its Mid Endgame crossbow (79 of 89 needed).
+- 4 builds hung and were stopped: Smith of Kitava, Stormweaver, Spirit Walker and Ritualist. Their timeouts weren't recorded in the results file because of a file permission problem. This is already on the list as a known bug.
 
-## Looks like a bug
-1. When a sweep build times out, the sweep can't write it into its results file (permission denied). So those 4
-   timeouts are missing from the results file, only in the log.
-2. The Breaker queue's per-ascendancy matrix results ran fine (23 of 23) but hit a git clash on one file
-   (Oracle) when saving. They may not have been pushed; the server repo may be stuck mid-merge.
-3. Note: last night's matrix run was before the ascendancy fix (task 5 found the scans skipped ascendancy passives),
-   so it gets redone anyway in task 12.
+## Leads and possible bugs
+- The blind test from before the fix picked Ember Fusillade for every ascendancy, so it matched only 2 of the ladder's top 20 skills (Spark and Comet). This was a modelling bug, not a lead. The re-run will show whether the fix helped.
+- Ember Fusillade and Bone Cage also won most caster builds in the sweep. That points the same way: Ember Fusillade was rated too high before the fix.
 
 ## 3 most useful next steps
-1. Fix the git clash in the Breaker folder on the server and push the matrix results, so the queued re-runs
-   (tasks 7 and 12) start from a clean state.
-2. Fix the file permission on the sweep results so timeouts get recorded.
-3. Build speed: all builds are near the 45-minute limit on the server; 4 of 18 hung. Try the idea from task 4
-   (check fewer supports for extra skills) after the reset.
-
-(This check-in could not pull the latest changes or read some server logs without permission; numbers above are from
-the files it could read.)
+1. Check that the follow-up script ran: tests green, engine deployed and the blind test re-run. Then compare the new blind test with the old 2 out of 20.
+2. Fix the sweep's file permission problem so hung builds get recorded. Then run a fresh A-to-Z sweep now that the queue is free.
+3. Work on build speed, since every build fails the time check. The best idea so far is to test extra skills only with the supports made for them.
