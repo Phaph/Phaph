@@ -1,0 +1,48 @@
+Blind test: 23 of 23 ascendancies searched (no poe.ninja input). Ladder: Forbidden Rites (124,102 characters, fetched 2026-11-17).
+1. Ladder's top 20 main skills found in some ascendancy's top 5: 2/20 (10%)
+         Frost Bomb                 16.8% of ladder   not in any top 15
+   FOUND Spark                      15.8% of ladder   our rank 5 on Spirit Walker
+   FOUND Comet                      14.6% of ladder   our rank 2 on Infernalist
+         Whirling Slash             12.8% of ladder   not in any top 15
+         Arc                        11.0% of ladder   not in any top 15
+         Wolf Pack                  11.0% of ladder   not in any top 15
+         Twister                    10.9% of ladder   not in any top 15
+         Frost Wall                 10.4% of ladder   not in any top 15
+         Oil Grenade                 8.2% of ladder   not in any top 15
+         Powered by Verisium         7.8% of ladder   not in any top 15
+         Flameblast                  7.8% of ladder   not in any top 15
+         Entangle                    7.2% of ladder   not in any top 15
+         Ice Shot                    7.1% of ladder   not in any top 15
+         Tornado Shot                6.7% of ladder   not in any top 15
+         Ice Nova                    6.6% of ladder   not in any top 15
+         Tornado                     6.1% of ladder   not in any top 15
+         Grim Pillars                5.6% of ladder   not in any top 15
+         Rend                        5.4% of ladder   not in any top 15
+         Orb of Storms               4.9% of ladder   not in any top 15
+         Snipe                       4.7% of ladder   not in any top 15
+2. Ascendancies, our best score vs share of players: Spearman +0.16 (1 = same order, 0 = unrelated)
+   Spirit Walker            score    2,465,000  ladder  6.8%   picks Ember Fusillade (Staff)
+   Infernalist              score    1,815,572  ladder  5.7%   picks Ember Fusillade (Staff)
+   Blood Mage               score    1,815,572  ladder  2.7%   picks Ember Fusillade (Staff)
+   Lich                     score    1,815,572  ladder  1.6%   picks Ember Fusillade (Staff)
+   Abyssal Lich             score    1,815,572  ladder  0.9%   picks Ember Fusillade (Staff)
+   Deadeye                  score    1,815,572  ladder  6.0%   picks Ember Fusillade (Staff)
+   Pathfinder               score    1,815,572  ladder  1.4%   picks Ember Fusillade (Staff)
+   Titan                    score    1,815,572  ladder  2.8%   picks Ember Fusillade (Staff)
+   Warbringer               score    1,815,572  ladder  0.7%   picks Ember Fusillade (Staff)
+   Smith of Kitava          score    1,815,572  ladder  1.0%   picks Ember Fusillade (Staff)
+   Stormweaver              score    1,815,572  ladder  3.4%   picks Ember Fusillade (Staff)
+   Chronomancer             score    1,815,572  ladder  1.2%   picks Ember Fusillade (Staff)
+   Disciple of Varashta     score    1,815,572  ladder  7.2%   picks Ember Fusillade (Staff)
+   Amazon                   score    1,815,572  ladder  0.6%   picks Ember Fusillade (Staff)
+   Ritualist                score    1,815,572  ladder  1.7%   picks Ember Fusillade (Staff)
+   Tactician                score    1,815,572  ladder  1.2%   picks Ember Fusillade (Staff)
+   Witchhunter              score    1,815,572  ladder  1.5%   picks Ember Fusillade (Staff)
+   Gemling Legionnaire      score    1,815,572  ladder 32.2%   picks Ember Fusillade (Staff)
+   Martial Artist           score    1,815,572  ladder 10.6%   picks Ember Fusillade (Staff)
+   Invoker                  score    1,815,572  ladder  0.3%   picks Ember Fusillade (Staff)
+   Acolyte of Chayula       score    1,815,572  ladder  1.7%   picks Ember Fusillade (Staff)
+   Oracle                   score    1,815,572  ladder  7.3%   picks Ember Fusillade (Staff)
+   Shaman                   score    1,815,572  ladder  1.5%   picks Ember Fusillade (Staff)
+3. Ranked top 3 by us, played by under 1% of the ladder (lead or modelling bug):
+   Bone Cage                  rank 3 on Infernalist            ladder 0.84%
