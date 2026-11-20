@@ -1,0 +1,23 @@
+61 skills scanned; 67 flags against all skills, 31 against the skill's own family, 15 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   92% (family usual +31%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   54% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   51% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   82% (family usual +31%, 6 peers)  Original Sin                 on Raise Zombie  [unique]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   95% (family usual +50%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   85% (family usual +50%, 6 peers)  Blackflame Covenant          on Raise Zombie  [keystone]
+  +   33% (family usual +0%, 5 peers)  The Coming Calamity          on Hexblast  [unique]
+  +   33% (family usual +0%, 23 peers)  Temporalis                   on Snap  [unique]
+  +   32% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   30% (family usual +0%, 1 peers)  Painter's Servant            on Skeletal Frost Mage  [unique]
+  +   59% (family usual +31%, 6 peers)  Original Sin                 on Wolf Pack  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 12 skills  [unique]
+  Rondel of Fragility          strong on 10 skills  [unique]
+  Doedre's Tenure              strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Scold's Bridle               strong on 7 skills  [unique]

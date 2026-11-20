@@ -1,0 +1,52 @@
+166 skills x 318 uniques/keystones, 166 skills to go, 6 workers
+  Detonating Arrow             Irongrasp +38%, Rondel of Fragility +14%, Ingenuity +13%
+  Electrocuting Arrow          Irongrasp +40%, Rondel of Fragility +21%, Hyrri's Ire +15%
+  Elemental Sundering          Ingenuity +26%, Dance with Death +25%, Rondel of Fragility +21%
+  Cull The Weak                Rondel of Fragility +42%, Dance with Death +25%, Hyrri's Ire +23%
+  Blood Hunt                   Hyrri's Ire +21%, Rondel of Fragility +20%, Loreweave +19%
+  Disengage                    Rondel of Fragility +31%, Apron of Emiran +17%, Dance with Death +17%
+  Freezing Salvo               Irongrasp +42%, Rondel of Fragility +22%, Hyrri's Ire +19%
+  Fangs of Frost               Dance with Death +25%, Hyrri's Ire +25%, Rondel of Fragility +20%
+  Escape Shot                  Irongrasp +43%, Hyrri's Ire +16%, Ingenuity +10%
+  Fragments Of The Past        Avatar of Fire +22%, Hyrri's Ire +21%, Rondel of Fragility +13%
+  Explosive Spear              Irongrasp +41%, Dance with Death +25%, Rondel of Fragility +21%
+  Gas Arrow                    Irongrasp +42%, Rondel of Fragility +22%, Hyrri's Ire +20%
+  Lightning Rod                Irongrasp +38%, Rondel of Fragility +18%, Doryani's Prototype +14%
+  Lightning Arrow              Irongrasp +40%, Rondel of Fragility +21%, Hyrri's Ire +15%
+  Ice Shot                     Irongrasp +42%, Hyrri's Ire +19%, Rondel of Fragility +16%
+  Glacial Lance                Irongrasp +42%, Dance with Death +25%, Rondel of Fragility +22%
+  Lightning Spear              Irongrasp +37%, Dance with Death +25%, Rondel of Fragility +19%
+  Magnetic Salvo               Irongrasp +40%, Rondel of Fragility +21%, Hyrri's Ire +15%
+  Poisonburst Arrow            Irongrasp +96%, Rondel of Fragility +48%, Hyrri's Ire +24%
+  Rain of Arrows               Irongrasp +43%, Hyrri's Ire +20%, Avatar of Fire +18%
+  Primal Strikes               Dance with Death +25%, Doryani's Prototype +23%, Rondel of Fragility +21%
+  Rake                         Apron of Emiran +38%, Ryslatha's Coil +22%, Crimson Assault +20%
+  Rapid Assault                The Coming Calamity +95%, Rondel of Fragility +27%, Dance with Death +25%
+  Shield Wall                  Rondel of Fragility +24%, Hyrri's Ire +15%, Loreweave +13%
+  Shockchain Arrow             Irongrasp +40%, Rondel of Fragility +21%, Hyrri's Ire +15%
+  Shockwave Totem              The Coming Calamity +89%, Irongrasp +53%, Rondel of Fragility +47%
+  Snipe                        Irongrasp +100%, Rondel of Fragility +54%, Loreweave +33%
+  Spear of Solaris             Irongrasp +38%, Ingenuity +12%, Perfidy +10%
+  Spearfield                   Rondel of Fragility +36%, Dance with Death +25%, Hyrri's Ire +20%
+  Spiral Volley                Irongrasp +44%, Hyrri's Ire +17%, Rondel of Fragility +15%
+  Storm Lance                  Irongrasp +41%, Dance with Death +25%, Rondel of Fragility +21%
+  Stormcaller Arrow            Irongrasp +40%, Rondel of Fragility +21%, Hyrri's Ire +15%
+  Thunderous Leap              Doryani's Prototype +15%, Ingenuity +12%, Perfidy +10%
+  Tornado Shot                 Irongrasp +43%, Rondel of Fragility +22%, Hyrri's Ire +20%
+  Toxic Growth                 Irongrasp +42%, Rondel of Fragility +22%, Hyrri's Ire +20%
+  Vine Arrow                   Irongrasp +44%, Rondel of Fragility +22%, Hyrri's Ire +17%
+  Twister                      Irongrasp +97%, Rondel of Fragility +52%, Hyrri's Ire +27%
+  Voltaic Barrier              Rondel of Fragility +34%, Hyrri's Ire +16%, Doryani's Prototype +13%
+  Whirling Slash               Rondel of Fragility +48%, Dance with Death +25%, Hyrri's Ire +24%
+  Whirlwind Lance              Irongrasp +94%, Rondel of Fragility +47%, Dance with Death +25%
+  Wind Serpent's Fury          Rondel of Fragility +35%, Dance with Death +22%, Hyrri's Ire +21%
+41 skills scanned; 15 flags against all skills, 14 against the skill's own family, 5 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   95% (family usual +0%, 3 peers)  The Coming Calamity          on Rapid Assault  [unique]
+  +   89% (family usual +0%, 2 peers)  The Coming Calamity          on Shockwave Totem  [unique]
+  +   38% (family usual +0%, 3 peers)  Apron of Emiran              on Rake  [unique]
+  +   32% (family usual +0%, 4 peers)  Ming's Heart                 on Snipe  [unique]
+  +   33% (family usual +6%, 4 peers)  Loreweave                    on Snipe  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 26 skills  [unique]
+  Rondel of Fragility          strong on 11 skills  [unique]

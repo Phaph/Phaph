@@ -1,0 +1,2230 @@
+{
+ "skills": {
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "types": [
+    "Cooldown",
+    "Spell",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlace",
+    "Companion",
+    "CreatesCompanion",
+    "CreatesMinion",
+    "HasReservation",
+    "Minion",
+    "Persistent",
+    "Physical"
+   ],
+   "error": "StopIteration: ",
+   "gains": {},
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ]
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Channel",
+    "ConsumesCharges",
+    "Damage",
+    "Necrotic",
+    "Physical",
+    "Projectile",
+    "SkillConsumesPowerChargesOnUse",
+    "Spell",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.087,
+    "unique:Mageblood": 0.101,
+    "unique:Scold's Bridle": 0.169,
+    "unique:The Bringer of Rain": 0.093,
+    "unique:Doedre's Tenure": 0.136,
+    "unique:Kaom's Heart": 0.067,
+    "unique:Irongrasp": 0.196,
+    "unique:Apron of Emiran": 0.057,
+    "unique:Maligaro's Virtuosity": 0.095,
+    "unique:Seed of Cataclysm": 0.068,
+    "unique:Snakepit": 0.063,
+    "unique:Crown of the Victor": 0.054
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life",
+    "Life"
+   ],
+   "dps": 62254
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.062,
+    "unique:Mageblood": 0.123,
+    "unique:Scold's Bridle": 0.147,
+    "unique:The Bringer of Rain": 0.11,
+    "unique:Doedre's Tenure": 0.144,
+    "unique:Irongrasp": 0.15,
+    "unique:Hyrri's Ire": 0.053,
+    "unique:Maligaro's Virtuosity": 0.153,
+    "unique:Doryani's Prototype": 0.128
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 61604
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Necrotic",
+    "Nova",
+    "Physical",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.087,
+    "unique:Mageblood": 0.057,
+    "unique:Scold's Bridle": 0.078,
+    "unique:The Bringer of Rain": 0.106,
+    "unique:Kaom's Heart": 0.065,
+    "unique:Irongrasp": 0.143,
+    "unique:Apron of Emiran": 0.056,
+    "unique:Maligaro's Virtuosity": 0.209,
+    "unique:Snakepit": 0.069,
+    "unique:Crown of the Victor": 0.073
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life"
+   ],
+   "dps": 107885
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "types": [
+    "Chains",
+    "Damage",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.084,
+    "unique:Scold's Bridle": 0.059,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Irongrasp": 0.142,
+    "unique:Edyrn's Tusks": 0.106,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Crown of the Victor": 0.052,
+    "unique:Doryani's Prototype": 0.155
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 69909
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "types": [
+    "Chaos",
+    "Damage",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.09,
+    "unique:Mageblood": 0.083,
+    "unique:Atsak's Sight": 0.115,
+    "unique:Scold's Bridle": 0.136,
+    "unique:The Bringer of Rain": 0.131,
+    "unique:Loreweave": 0.097,
+    "unique:Doedre's Tenure": 0.095,
+    "unique:Irongrasp": 0.202,
+    "unique:Hyrri's Ire": 0.057,
+    "unique:Edyrn's Tusks": 0.061,
+    "unique:Maligaro's Virtuosity": 0.192,
+    "unique:Snakepit": 0.054,
+    "unique:Crown of the Victor": 0.052
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 72806
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.123,
+    "unique:Scold's Bridle": 0.109,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Doedre's Tenure": 0.106,
+    "unique:Irongrasp": 0.137,
+    "unique:Hyrri's Ire": 0.122,
+    "unique:Edyrn's Tusks": 0.153,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Crown of the Victor": 0.064
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 110008
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chaos",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.058,
+    "unique:Scold's Bridle": 0.195,
+    "unique:Doedre's Tenure": 0.195,
+    "unique:Irongrasp": 0.212,
+    "unique:Crown of the Victor": 0.168
+   },
+   "dps": 9235
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Attack",
+    "Damage",
+    "Duration",
+    "Hazard",
+    "Lightning",
+    "Limit",
+    "NonWeaponAttack",
+    "Totemable",
+    "UsableWhileShapeshifted",
+    "UseGlobalStats"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Rondel of Fragility": 0.675,
+    "unique:Perfidy": 0.095,
+    "unique:Yoke of Suffering": 0.167,
+    "unique:Ingenuity": 0.152,
+    "unique:Heart of the Well": 0.08,
+    "unique:The Bringer of Rain": 0.074,
+    "unique:Loreweave": 0.068,
+    "unique:Wake of Destruction": 0.086,
+    "unique:Hyrri's Ire": 0.093,
+    "unique:Edyrn's Tusks": 0.112,
+    "unique:Doryani's Prototype": 0.07
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 3158
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "AttackInPlace",
+    "Chaos",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesNumberModifiersNotApplied",
+    "Spell",
+    "SummonsTotem",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsedByProxy",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.067,
+    "unique:Ingenuity": 0.063,
+    "unique:Mageblood": 0.08,
+    "unique:The Bringer of Rain": 0.124,
+    "unique:Loreweave": 0.126,
+    "unique:Irongrasp": 0.064,
+    "unique:Maligaro's Virtuosity": 0.151,
+    "unique:Crown of the Victor": 0.056
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 30760
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Detonator",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Physical",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.073,
+    "keystone:Crimson Assault": 0.306,
+    "unique:Perfidy": 0.052,
+    "unique:Mageblood": 0.104,
+    "unique:Atsak's Sight": 0.061,
+    "unique:Scold's Bridle": 0.142,
+    "unique:Icefang Orbit": 0.102,
+    "unique:Snakebite": 0.189,
+    "unique:The Bringer of Rain": 0.098,
+    "unique:Loreweave": 0.058,
+    "unique:Doedre's Tenure": 0.128,
+    "unique:Irongrasp": 0.079,
+    "unique:Apron of Emiran": 0.25,
+    "unique:Ming's Heart": 0.097,
+    "unique:Maligaro's Virtuosity": 0.074,
+    "unique:Seed of Cataclysm": 0.053,
+    "unique:Snakepit": 0.059
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 53406
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlace",
+    "Cooldown",
+    "Instant",
+    "Minion",
+    "Spell",
+    "Triggerable"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Damage",
+    "Fire"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.067,
+    "unique:Rondel of Fragility": 0.061,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.161,
+    "unique:Sands of Silk": 0.15,
+    "unique:Scold's Bridle": 0.303,
+    "unique:Loreweave": 0.107,
+    "unique:Wake of Destruction": 0.068,
+    "unique:Irongrasp": 0.325,
+    "unique:Temporalis": 0.484,
+    "unique:Hyrri's Ire": 0.116,
+    "unique:Mind of the Council": 0.079
+   },
+   "dps": 8233
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Physical",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.086,
+    "unique:Mageblood": 0.088,
+    "unique:Atsak's Sight": 0.117,
+    "unique:Scold's Bridle": 0.151,
+    "unique:The Bringer of Rain": 0.128,
+    "unique:Loreweave": 0.117,
+    "unique:Doedre's Tenure": 0.088,
+    "unique:Kaom's Heart": 0.071,
+    "unique:Irongrasp": 0.212,
+    "unique:Apron of Emiran": 0.055,
+    "unique:Hyrri's Ire": 0.143,
+    "unique:Maligaro's Virtuosity": 0.129,
+    "unique:Snakepit": 0.075
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 6200
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.078,
+    "unique:Scold's Bridle": 0.059,
+    "unique:The Bringer of Rain": 0.121,
+    "unique:Irongrasp": 0.142,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Crown of the Victor": 0.052
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 230705
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "CreatesFissure",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Nature",
+    "Physical",
+    "Plant",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.522,
+    "unique:Perfidy": 0.09,
+    "unique:Mageblood": 0.093,
+    "unique:Scold's Bridle": 0.07,
+    "unique:The Bringer of Rain": 0.138,
+    "unique:Kaom's Heart": 0.05,
+    "unique:Irongrasp": 0.155,
+    "unique:Edyrn's Tusks": 0.074,
+    "unique:Maligaro's Virtuosity": 0.195,
+    "unique:Snakepit": 0.073
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life"
+   ],
+   "dps": 31753
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "types": [
+    "Chaos",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.067,
+    "unique:Ingenuity": 0.065,
+    "unique:Mageblood": 0.081,
+    "unique:Atsak's Sight": 0.18,
+    "unique:Snakebite": 0.052,
+    "unique:The Bringer of Rain": 0.124,
+    "unique:Loreweave": 0.127,
+    "unique:Irongrasp": 0.064,
+    "unique:Maligaro's Virtuosity": 0.151,
+    "unique:Crown of the Victor": 0.055
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 71309
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "types": [
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "InteractsWithElementalGround",
+    "Mineable",
+    "Projectile",
+    "ProjectileSpiral",
+    "SingleMainProjectile",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.089,
+    "unique:Sands of Silk": 0.14,
+    "unique:Mageblood": 0.124,
+    "unique:Scold's Bridle": 0.159,
+    "unique:The Bringer of Rain": 0.111,
+    "unique:Doedre's Tenure": 0.152,
+    "unique:Kaom's Heart": 0.058,
+    "unique:Irongrasp": 0.194,
+    "unique:Temporalis": 0.098,
+    "unique:Hyrri's Ire": 0.132,
+    "unique:Edyrn's Tusks": 0.207,
+    "unique:Maligaro's Virtuosity": 0.195
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 1539
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Fire",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.082,
+    "unique:Scold's Bridle": 0.072,
+    "unique:The Bringer of Rain": 0.126,
+    "unique:Irongrasp": 0.15,
+    "unique:Edyrn's Tusks": 0.053,
+    "unique:Maligaro's Virtuosity": 0.186
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 74531
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "EmpowersOtherSkill",
+    "Nova",
+    "Physical",
+    "SkillConsumesEnduranceChargesOnUse",
+    "UsableWhileMoving",
+    "Warcry"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Storm",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Perfidy": 0.064,
+    "unique:Mageblood": 0.139,
+    "unique:Scold's Bridle": 0.139,
+    "unique:The Bringer of Rain": 0.123,
+    "unique:Doedre's Tenure": 0.15,
+    "unique:Irongrasp": 0.154,
+    "unique:Hyrri's Ire": 0.056,
+    "unique:Maligaro's Virtuosity": 0.072,
+    "unique:Crown of the Victor": 0.058
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 143865
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "CausesBurning",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.082,
+    "unique:Scold's Bridle": 0.06,
+    "unique:The Bringer of Rain": 0.126,
+    "unique:Irongrasp": 0.136,
+    "unique:Maligaro's Virtuosity": 0.185,
+    "unique:Crown of the Victor": 0.065
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 76194
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "Cooldown",
+    "Damage",
+    "Fire",
+    "GainsStages",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.089,
+    "unique:Sands of Silk": 0.14,
+    "unique:Mageblood": 0.145,
+    "unique:Scold's Bridle": 0.166,
+    "unique:The Bringer of Rain": 0.129,
+    "unique:Loreweave": 0.062,
+    "unique:Doedre's Tenure": 0.17,
+    "unique:Kaom's Heart": 0.059,
+    "unique:Irongrasp": 0.212,
+    "unique:Temporalis": 0.098,
+    "unique:Hyrri's Ire": 0.066,
+    "unique:Edyrn's Tusks": 0.19,
+    "unique:Candlemaker": 0.056,
+    "unique:Maligaro's Virtuosity": 0.112,
+    "unique:Crown of the Victor": 0.068
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 17539
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Fire",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cold",
+    "Damage",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.084,
+    "unique:Scold's Bridle": 0.059,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Irongrasp": 0.142,
+    "unique:Hyrri's Ire": 0.122,
+    "unique:Maligaro's Virtuosity": 0.187
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 22402
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "IceCrystal",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "ToggleSpawnedObjectTargetable_DefaultOff",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.09,
+    "unique:Mageblood": 0.138,
+    "unique:The Bringer of Rain": 0.122,
+    "unique:Loreweave": 0.083,
+    "unique:Kaom's Heart": 0.053,
+    "unique:Irongrasp": 0.184,
+    "unique:Hyrri's Ire": 0.147,
+    "unique:Edyrn's Tusks": 0.112,
+    "unique:Maligaro's Virtuosity": 0.104,
+    "unique:Heatshiver": 0.113,
+    "unique:Snakepit": 0.055
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 18167
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "DetonatesAfterTime",
+    "Duration",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Invokable",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Orb",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.09,
+    "unique:Sands of Silk": 0.116,
+    "unique:Mageblood": 0.138,
+    "unique:Scold's Bridle": 0.092,
+    "unique:The Bringer of Rain": 0.122,
+    "unique:Loreweave": 0.07,
+    "unique:Kaom's Heart": 0.053,
+    "unique:Irongrasp": 0.184,
+    "unique:Temporalis": 0.117,
+    "unique:Hyrri's Ire": 0.147,
+    "unique:Edyrn's Tusks": 0.12,
+    "unique:Maligaro's Virtuosity": 0.104,
+    "unique:Crown of the Victor": 0.058
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 23584
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cold",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.083,
+    "unique:Scold's Bridle": 0.06,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Irongrasp": 0.142,
+    "unique:Hyrri's Ire": 0.122,
+    "unique:Maligaro's Virtuosity": 0.187
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 86486
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Cold",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "IceCrystal",
+    "Limit",
+    "Nova",
+    "Spell",
+    "ToggleSpawnedObjectTargetable_DefaultOn",
+    "Totemable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.084,
+    "unique:Scold's Bridle": 0.059,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Irongrasp": 0.137,
+    "unique:Hyrri's Ire": 0.122,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Crown of the Victor": 0.057
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 52975
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "types": [
+    "Cooldown",
+    "GeneratesInfusion",
+    "Multicastable",
+    "Spell",
+    "Triggerable",
+    "Unleashable"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Chaos",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Ingenuity": 0.06,
+    "unique:Heart of the Well": 0.05,
+    "unique:Mageblood": 0.137,
+    "unique:Atsak's Sight": 0.101,
+    "unique:Scold's Bridle": 0.07,
+    "unique:Snakebite": 0.227,
+    "unique:The Bringer of Rain": 0.137,
+    "unique:Loreweave": 0.151,
+    "unique:Doedre's Tenure": 0.065,
+    "unique:Irongrasp": 0.054,
+    "unique:Ming's Heart": 0.097,
+    "unique:Maligaro's Virtuosity": 0.094,
+    "unique:The Coming Calamity": 0.238,
+    "unique:Crown of the Victor": 0.054
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 70878
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "CreatesGroundEffect",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Fire",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.071,
+    "unique:Scold's Bridle": 0.069,
+    "unique:The Bringer of Rain": 0.115,
+    "unique:Irongrasp": 0.137,
+    "unique:Maligaro's Virtuosity": 0.178,
+    "unique:Crown of the Victor": 0.071
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 137746
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.083,
+    "unique:Scold's Bridle": 0.06,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Loreweave": 0.119,
+    "unique:Irongrasp": 0.137,
+    "unique:Hyrri's Ire": 0.122,
+    "unique:Maligaro's Virtuosity": 0.187
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 43636
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chains",
+    "Damage",
+    "Duration",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Lightning",
+    "Limit",
+    "Mineable",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.084,
+    "unique:Scold's Bridle": 0.059,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Irongrasp": 0.137,
+    "unique:Edyrn's Tusks": 0.079,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Crown of the Victor": 0.056,
+    "unique:Doryani's Prototype": 0.155
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 46942
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cooldown",
+    "Damage",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.09,
+    "unique:Sands of Silk": 0.14,
+    "unique:Mageblood": 0.14,
+    "unique:Scold's Bridle": 0.166,
+    "unique:The Bringer of Rain": 0.124,
+    "unique:Loreweave": 0.107,
+    "unique:Doedre's Tenure": 0.174,
+    "unique:Kaom's Heart": 0.053,
+    "unique:Irongrasp": 0.21,
+    "unique:Temporalis": 0.129,
+    "unique:Hyrri's Ire": 0.065,
+    "unique:Edyrn's Tusks": 0.185,
+    "unique:Maligaro's Virtuosity": 0.105,
+    "unique:Crown of the Victor": 0.064,
+    "unique:Doryani's Prototype": 0.124
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 12272
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "types": [
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Chaos",
+    "CreatesGroundRune",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "GeneratesCharges",
+    "Limit",
+    "Multicastable",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.058,
+    "unique:Scold's Bridle": 0.195,
+    "unique:Doedre's Tenure": 0.195,
+    "unique:Irongrasp": 0.212,
+    "unique:Crown of the Victor": 0.168
+   },
+   "dps": 73963
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "EmpowersOtherSkill",
+    "Nova",
+    "Physical",
+    "SkillConsumesEnduranceChargesOnUse",
+    "UsableWhileMoving",
+    "Warcry"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.4,
+    "unique:Rondel of Fragility": 0.287,
+    "unique:Perfidy": 0.1,
+    "unique:Yoke of Suffering": 0.095,
+    "unique:Ingenuity": 0.056,
+    "unique:Plaguefinger": 0.071,
+    "unique:Sands of Silk": 0.101,
+    "unique:Loreweave": 0.053,
+    "unique:Apron of Emiran": 0.366,
+    "unique:Temporalis": 0.094,
+    "unique:Hyrri's Ire": 0.072,
+    "unique:Candlemaker": 0.086,
+    "unique:Crown of the Victor": 0.156
+   },
+   "ascendancy_nodes": [
+    "Blood Barbs"
+   ],
+   "dps": 421
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "types": [
+    "ConsumesCharges",
+    "CreatesMinion",
+    "Duration",
+    "Limit",
+    "Minion",
+    "MinionsCanExplode",
+    "Physical",
+    "SkillConsumesPowerChargesOnUse",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.451,
+    "keystone:Crimson Assault": 0.2,
+    "unique:Rondel of Fragility": 0.547,
+    "unique:Xoph's Blood": 0.151,
+    "unique:Lochtonial Caress": 0.075,
+    "unique:Perfidy": 0.092,
+    "unique:Yoke of Suffering": 0.098,
+    "unique:Plaguefinger": 0.125,
+    "unique:Mageblood": 0.086,
+    "unique:Leopold's Applause": 0.086,
+    "unique:Scold's Bridle": 0.458,
+    "unique:Cracklecreep": 0.201,
+    "unique:Sine Aequo": 0.072,
+    "unique:Evergrasping Ring": 0.127,
+    "unique:Loreweave": 0.233,
+    "unique:Demon Stitcher": 0.061,
+    "unique:Doedre's Tenure": 0.417,
+    "unique:Irongrasp": 0.727,
+    "unique:Apron of Emiran": 0.21,
+    "unique:Original Sin": 0.432,
+    "unique:Hyrri's Ire": 0.129,
+    "unique:Ming's Heart": 0.345,
+    "unique:Vis Mortis": 0.09,
+    "unique:Nightscale": 0.06,
+    "unique:Candlemaker": 0.281,
+    "unique:Maligaro's Virtuosity": 0.186,
+    "unique:Seed of Cataclysm": 0.06,
+    "unique:Snakepit": 0.372,
+    "unique:Painter's Servant": 0.193,
+    "unique:Beacon of Azis": 0.064,
+    "unique:The Coming Calamity": 0.481
+   },
+   "ascendancy_nodes": [
+    "Blood Barbs",
+    "Gore Spike",
+    "Life"
+   ],
+   "dps": 4595
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "Detonator",
+    "Fire",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Whisper of the Brotherhood": 0.076,
+    "unique:Rondel of Fragility": 0.83,
+    "unique:Lochtonial Caress": 0.12,
+    "unique:Perfidy": 0.093,
+    "unique:Yoke of Suffering": 0.151,
+    "unique:Plaguefinger": 0.057,
+    "unique:Mageblood": 0.115,
+    "unique:Atsak's Sight": 0.055,
+    "unique:Scold's Bridle": 0.549,
+    "unique:Cracklecreep": 0.2,
+    "unique:Sine Aequo": 0.118,
+    "unique:The Bringer of Rain": 0.126,
+    "unique:Evergrasping Ring": 0.1,
+    "unique:Loreweave": 0.093,
+    "unique:Heartbound Loop": 0.076,
+    "unique:Demon Stitcher": 0.098,
+    "unique:Doedre's Tenure": 0.417,
+    "unique:Irongrasp": 1.003,
+    "unique:Thrillsteel": 0.126,
+    "unique:Ming's Heart": 0.123,
+    "unique:Edyrn's Tusks": 0.065,
+    "unique:Nightscale": 0.078,
+    "unique:Candlemaker": 0.282,
+    "unique:Maligaro's Virtuosity": 0.185,
+    "unique:Seed of Cataclysm": 0.076,
+    "unique:Snakepit": 0.51,
+    "unique:Stone of Lazhwar": 0.153,
+    "unique:Venopuncture": 0.073
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 15879
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.09,
+    "unique:Whisper of the Brotherhood": 0.06,
+    "unique:Rondel of Fragility": 0.654,
+    "unique:Lochtonial Caress": 0.095,
+    "unique:Perfidy": 0.093,
+    "unique:Yoke of Suffering": 0.136,
+    "unique:Mageblood": 0.092,
+    "unique:Scold's Bridle": 0.475,
+    "unique:Cracklecreep": 0.213,
+    "unique:Sine Aequo": 0.092,
+    "unique:The Bringer of Rain": 0.075,
+    "unique:Evergrasping Ring": 0.136,
+    "unique:Loreweave": 0.106,
+    "unique:Heartbound Loop": 0.06,
+    "unique:Demon Stitcher": 0.077,
+    "unique:Doedre's Tenure": 0.394,
+    "unique:Irongrasp": 0.77,
+    "unique:Apron of Emiran": 0.092,
+    "unique:Thrillsteel": 0.072,
+    "unique:Hyrri's Ire": 0.139,
+    "unique:Ming's Heart": 0.147,
+    "unique:Vis Mortis": 0.085,
+    "unique:Nightscale": 0.062,
+    "unique:Candlemaker": 0.291,
+    "unique:Maligaro's Virtuosity": 0.173,
+    "unique:Seed of Cataclysm": 0.062,
+    "unique:Snakepit": 0.426,
+    "unique:Painter's Servant": 0.209,
+    "unique:Stone of Lazhwar": 0.081
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 10189
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "types": [
+    "Cold",
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Whisper of the Brotherhood": 0.067,
+    "unique:Rondel of Fragility": 0.693,
+    "unique:Blueflame Bracers": 0.145,
+    "unique:Lochtonial Caress": 0.106,
+    "unique:Perfidy": 0.094,
+    "unique:Yoke of Suffering": 0.14,
+    "unique:Plaguefinger": 0.051,
+    "unique:Mageblood": 0.1,
+    "unique:Scold's Bridle": 0.452,
+    "unique:Cracklecreep": 0.212,
+    "unique:Sine Aequo": 0.103,
+    "unique:The Bringer of Rain": 0.09,
+    "unique:Evergrasping Ring": 0.097,
+    "unique:Loreweave": 0.154,
+    "unique:Heartbound Loop": 0.067,
+    "unique:Demon Stitcher": 0.085,
+    "unique:Doedre's Tenure": 0.357,
+    "unique:Irongrasp": 0.763,
+    "unique:Thrillsteel": 0.09,
+    "unique:Hyrri's Ire": 0.139,
+    "unique:Ming's Heart": 0.132,
+    "unique:Edyrn's Tusks": 0.071,
+    "unique:Nightscale": 0.067,
+    "unique:Candlemaker": 0.284,
+    "unique:Maligaro's Virtuosity": 0.162,
+    "unique:Seed of Cataclysm": 0.067,
+    "unique:Snakepit": 0.447,
+    "unique:Painter's Servant": 0.261,
+    "unique:Stone of Lazhwar": 0.103,
+    "unique:Venopuncture": 0.078
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 11349
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.488,
+    "keystone:Crimson Assault": 0.217,
+    "unique:Rondel of Fragility": 0.614,
+    "unique:Xoph's Blood": 0.185,
+    "unique:Lochtonial Caress": 0.081,
+    "unique:Perfidy": 0.092,
+    "unique:Yoke of Suffering": 0.129,
+    "unique:Plaguefinger": 0.163,
+    "unique:Mageblood": 0.093,
+    "unique:Leopold's Applause": 0.093,
+    "unique:Scold's Bridle": 0.51,
+    "unique:Cracklecreep": 0.217,
+    "unique:Sine Aequo": 0.078,
+    "unique:The Bringer of Rain": 0.069,
+    "unique:Evergrasping Ring": 0.126,
+    "unique:Loreweave": 0.252,
+    "unique:Demon Stitcher": 0.066,
+    "unique:Doedre's Tenure": 0.451,
+    "unique:Irongrasp": 0.786,
+    "unique:Apron of Emiran": 0.227,
+    "unique:Original Sin": 0.467,
+    "unique:Hyrri's Ire": 0.14,
+    "unique:Ming's Heart": 0.4,
+    "unique:Vis Mortis": 0.085,
+    "unique:Nightscale": 0.065,
+    "unique:Candlemaker": 0.304,
+    "unique:Maligaro's Virtuosity": 0.201,
+    "unique:Seed of Cataclysm": 0.065,
+    "unique:Snakepit": 0.402,
+    "unique:Painter's Servant": 0.209,
+    "unique:Beacon of Azis": 0.092,
+    "unique:The Coming Calamity": 0.519,
+    "unique:Venopuncture": 0.053
+   },
+   "ascendancy_nodes": [
+    "Blood Barbs",
+    "Gore Spike",
+    "Life"
+   ],
+   "dps": 4249
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "types": [
+    "Chaos",
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "Fire",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.101,
+    "unique:Whisper of the Brotherhood": 0.066,
+    "unique:Rondel of Fragility": 0.759,
+    "unique:Lochtonial Caress": 0.106,
+    "unique:Perfidy": 0.092,
+    "unique:Yoke of Suffering": 0.182,
+    "unique:Plaguefinger": 0.056,
+    "unique:Mageblood": 0.102,
+    "unique:Scold's Bridle": 0.55,
+    "unique:Cracklecreep": 0.237,
+    "unique:Sine Aequo": 0.103,
+    "unique:The Bringer of Rain": 0.104,
+    "unique:Evergrasping Ring": 0.123,
+    "unique:Loreweave": 0.133,
+    "unique:Heartbound Loop": 0.066,
+    "unique:Demon Stitcher": 0.086,
+    "unique:Doedre's Tenure": 0.439,
+    "unique:Irongrasp": 0.858,
+    "unique:Apron of Emiran": 0.102,
+    "unique:Thrillsteel": 0.102,
+    "unique:Hyrri's Ire": 0.155,
+    "unique:Ming's Heart": 0.163,
+    "unique:Vis Mortis": 0.062,
+    "unique:Nightscale": 0.07,
+    "unique:Candlemaker": 0.325,
+    "unique:Maligaro's Virtuosity": 0.193,
+    "unique:Seed of Cataclysm": 0.07,
+    "unique:Snakepit": 0.475,
+    "unique:Painter's Servant": 0.233,
+    "unique:Stone of Lazhwar": 0.12
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 9143
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlace",
+    "CreatesMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Mineable",
+    "Minion",
+    "MinionsCanExplode",
+    "Multicastable",
+    "MultipleReservation",
+    "Persistent",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": "StopIteration: ",
+   "gains": {},
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ]
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Fire",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Lightning",
+    "ManualCooldownConsumption",
+    "Mineable",
+    "Multicastable",
+    "SkillConsumesFreeze",
+    "SkillConsumesIgnite",
+    "SkillConsumesShock",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.09,
+    "unique:Ingenuity": 0.05,
+    "unique:Sands of Silk": 0.14,
+    "unique:Mageblood": 0.138,
+    "unique:Scold's Bridle": 0.222,
+    "unique:The Bringer of Rain": 0.122,
+    "unique:Loreweave": 0.073,
+    "unique:Doedre's Tenure": 0.117,
+    "unique:Kaom's Heart": 0.053,
+    "unique:Irongrasp": 0.262,
+    "unique:Temporalis": 0.199,
+    "unique:Hyrri's Ire": 0.117,
+    "unique:Edyrn's Tusks": 0.089,
+    "unique:Maligaro's Virtuosity": 0.104,
+    "unique:Heatshiver": 0.099,
+    "unique:Painter's Servant": 0.056,
+    "unique:Crown of the Victor": 0.065
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 107095
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.064,
+    "unique:Mageblood": 0.139,
+    "unique:Scold's Bridle": 0.139,
+    "unique:The Bringer of Rain": 0.123,
+    "unique:Doedre's Tenure": 0.15,
+    "unique:Irongrasp": 0.154,
+    "unique:Hyrri's Ire": 0.056,
+    "unique:Maligaro's Virtuosity": 0.072,
+    "unique:Crown of the Victor": 0.065
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 35828
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "types": [
+    "Companion",
+    "Duration",
+    "Minion"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlace",
+    "Companion",
+    "CreatesCompanion",
+    "CreatesMinion",
+    "HasReservation",
+    "Mineable",
+    "Minion",
+    "MinionsCanExplode",
+    "Multicastable",
+    "Persistent",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": "StopIteration: ",
+   "gains": {},
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ]
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "types": [
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.084,
+    "unique:Scold's Bridle": 0.059,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Irongrasp": 0.142,
+    "unique:Edyrn's Tusks": 0.068,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Doryani's Prototype": 0.155
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 46519
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "CreatesMinion",
+    "Damage",
+    "HasUsageCondition",
+    "Invokable",
+    "Mineable",
+    "Minion",
+    "Multicastable",
+    "Physical",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.078,
+    "unique:Blueflame Bracers": 0.324,
+    "unique:Perfidy": 0.091,
+    "unique:Ingenuity": 0.063,
+    "unique:Mageblood": 0.097,
+    "unique:Scold's Bridle": 0.196,
+    "unique:Loreweave": 0.137,
+    "unique:Doedre's Tenure": 0.385,
+    "unique:Irongrasp": 0.505,
+    "unique:Hyrri's Ire": 0.245,
+    "unique:Edyrn's Tusks": 0.111,
+    "unique:Maligaro's Virtuosity": 0.182,
+    "unique:Snakepit": 0.081,
+    "unique:Painter's Servant": 0.08
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 53057
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Lightning",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Whisper of the Brotherhood": 0.061,
+    "unique:Rondel of Fragility": 0.605,
+    "unique:Valako's Vice": 0.135,
+    "unique:Lochtonial Caress": 0.096,
+    "unique:Perfidy": 0.095,
+    "unique:Yoke of Suffering": 0.1,
+    "unique:Mageblood": 0.091,
+    "unique:Scold's Bridle": 0.392,
+    "unique:Cracklecreep": 0.193,
+    "unique:Sine Aequo": 0.094,
+    "unique:The Bringer of Rain": 0.062,
+    "unique:Evergrasping Ring": 0.098,
+    "unique:Loreweave": 0.133,
+    "unique:Heartbound Loop": 0.061,
+    "unique:Demon Stitcher": 0.078,
+    "unique:Doedre's Tenure": 0.325,
+    "unique:Irongrasp": 0.697,
+    "unique:Thrillsteel": 0.062,
+    "unique:Hyrri's Ire": 0.127,
+    "unique:Ming's Heart": 0.12,
+    "unique:Edyrn's Tusks": 0.065,
+    "unique:Nightscale": 0.061,
+    "unique:Candlemaker": 0.259,
+    "unique:Maligaro's Virtuosity": 0.148,
+    "unique:Seed of Cataclysm": 0.061,
+    "unique:Snakepit": 0.408,
+    "unique:Painter's Servant": 0.238,
+    "unique:Stone of Lazhwar": 0.066,
+    "unique:Venopuncture": 0.071
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 12431
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "GamepadDeflectable",
+    "Limit",
+    "Nature",
+    "Physical",
+    "Plant",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.516,
+    "unique:Perfidy": 0.09,
+    "unique:Mageblood": 0.092,
+    "unique:Scold's Bridle": 0.067,
+    "unique:The Bringer of Rain": 0.137,
+    "unique:Irongrasp": 0.153,
+    "unique:Edyrn's Tusks": 0.102,
+    "unique:Maligaro's Virtuosity": 0.193,
+    "unique:Snakepit": 0.074
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Bleed on Critical Chance",
+    "Life"
+   ],
+   "dps": 34511
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "InteractsWithElementalGround",
+    "Limit",
+    "Physical",
+    "Spell",
+    "Storm",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.244,
+    "unique:Doedre's Tenure": 0.244,
+    "unique:Irongrasp": 0.266,
+    "unique:Snakepit": 0.073,
+    "unique:Crown of the Victor": 0.167
+   },
+   "dps": 12767
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Limit",
+    "Spell",
+    "Storm",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Perfidy": 0.064,
+    "unique:Mageblood": 0.139,
+    "unique:Scold's Bridle": 0.139,
+    "unique:The Bringer of Rain": 0.123,
+    "unique:Doedre's Tenure": 0.15,
+    "unique:Irongrasp": 0.154,
+    "unique:Hyrri's Ire": 0.056,
+    "unique:Maligaro's Virtuosity": 0.072,
+    "unique:Crown of the Victor": 0.065,
+    "unique:Doryani's Prototype": 0.131
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Crimson Power"
+   ],
+   "dps": 40700
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "Damage",
+    "Duration",
+    "Fire",
+    "GamepadDeflectable",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.083,
+    "unique:Scold's Bridle": 0.06,
+    "unique:The Bringer of Rain": 0.127,
+    "unique:Irongrasp": 0.142,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Crown of the Victor": 0.052
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 80901
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "types": [
+    "CreatesMinion",
+    "Duration",
+    "Mineable",
+    "Minion",
+    "MinionsCanExplode",
+    "Multicastable",
+    "Spell",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Rondel of Fragility": 0.142,
+    "unique:Lochtonial Caress": 0.06,
+    "unique:Perfidy": 0.097,
+    "unique:Mageblood": 0.057,
+    "unique:Scold's Bridle": 0.165,
+    "unique:Cracklecreep": 0.12,
+    "unique:Sine Aequo": 0.059,
+    "unique:Evergrasping Ring": 0.116,
+    "unique:Loreweave": 0.133,
+    "unique:Doedre's Tenure": 0.202,
+    "unique:Irongrasp": 0.365,
+    "unique:Hyrri's Ire": 0.079,
+    "unique:Ming's Heart": 0.075,
+    "unique:Vis Mortis": 0.091,
+    "unique:Deathblow": 0.05,
+    "unique:Candlemaker": 0.161,
+    "unique:Maligaro's Virtuosity": 0.093,
+    "unique:Snakepit": 0.252,
+    "unique:The Taming": 0.079,
+    "unique:Painter's Servant": 0.12
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 26070
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlace",
+    "Companion",
+    "CreatesCompanion",
+    "CreatesMinion",
+    "HasReservation",
+    "Minion",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.313,
+    "keystone:Crimson Assault": 0.18,
+    "unique:Rondel of Fragility": 0.457,
+    "unique:Xoph's Blood": 0.103,
+    "unique:Lochtonial Caress": 0.068,
+    "unique:Perfidy": 0.093,
+    "unique:Yoke of Suffering": 0.053,
+    "unique:Plaguefinger": 0.089,
+    "unique:Prism of Belief": 0.176,
+    "unique:Mageblood": 0.078,
+    "unique:Leopold's Applause": 0.077,
+    "unique:Scold's Bridle": 0.387,
+    "unique:Cracklecreep": 0.181,
+    "unique:Sine Aequo": 0.065,
+    "unique:Evergrasping Ring": 0.145,
+    "unique:Loreweave": 0.21,
+    "unique:Demon Stitcher": 0.055,
+    "unique:Doedre's Tenure": 0.376,
+    "unique:Irongrasp": 0.655,
+    "unique:Apron of Emiran": 0.189,
+    "unique:Original Sin": 0.297,
+    "unique:Hyrri's Ire": 0.116,
+    "unique:Ming's Heart": 0.311,
+    "unique:Vis Mortis": 0.117,
+    "unique:Nightscale": 0.054,
+    "unique:Candlemaker": 0.253,
+    "unique:Maligaro's Virtuosity": 0.168,
+    "unique:Seed of Cataclysm": 0.054,
+    "unique:Snakepit": 0.335,
+    "unique:Painter's Servant": 0.174,
+    "unique:The Coming Calamity": 0.442
+   },
+   "ascendancy_nodes": [
+    "Blood Barbs",
+    "Gore Spike",
+    "Life"
+   ],
+   "dps": 5103
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "types": [
+    "Area",
+    "CreatesMinion",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Minion",
+    "Necrotic",
+    "Physical",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.449,
+    "unique:Perfidy": 0.091,
+    "unique:Mageblood": 0.075,
+    "unique:Scold's Bridle": 0.295,
+    "unique:Loreweave": 0.325,
+    "unique:Doedre's Tenure": 0.403,
+    "unique:Irongrasp": 0.459,
+    "unique:Original Sin": 0.262,
+    "unique:Hyrri's Ire": 0.133,
+    "unique:Ming's Heart": 0.325,
+    "unique:Vis Mortis": 0.069,
+    "unique:Edyrn's Tusks": 0.07,
+    "unique:Candlemaker": 0.106,
+    "unique:Maligaro's Virtuosity": 0.176,
+    "unique:Snakepit": 0.205,
+    "unique:Painter's Servant": 0.079,
+    "unique:The Coming Calamity": 0.501
+   },
+   "ascendancy_nodes": [
+    "Gore Spike",
+    "Blood Barbs",
+    "Life"
+   ],
+   "dps": 12411
+  }
+ },
+ "updated": "2026-11-20 05:37"
+}

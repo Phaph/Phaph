@@ -1,0 +1,22 @@
+166 skills x 318 uniques/keystones, 166 skills to go, 6 workers
+  Armour Breaker               Dance with Death +25%, Hyrri's Ire +18%, Rondel of Fragility +17%
+  Hammer of the Gods           Rondel of Fragility +46%, Hyrri's Ire +25%, Dance with Death +25%
+  Earthquake                   Dance with Death +25%, Hyrri's Ire +18%, Rondel of Fragility +18%
+  Forge Hammer                 Hyrri's Ire +18%, Sands of Silk +15%, Temporalis +14%
+  Boneshatter                  Dance with Death +25%, Hyrri's Ire +18%, Rondel of Fragility +18%
+  Earthshatter                 Dance with Death +25%, Hyrri's Ire +18%, Rondel of Fragility +18%
+  Rolling Slam                 The Coming Calamity +97%, Rondel of Fragility +43%, Loreweave +26%
+  Perfect Strike               Dance with Death +25%, Rondel of Fragility +18%, Hyrri's Ire +18%
+  Molten Blast                 Irongrasp +34%, Dance with Death +25%, Hyrri's Ire +17%
+  Leap Slam                    Hyrri's Ire +18%, Ingenuity +12%, Dance with Death +10%
+  Stampede                     Dance with Death +25%, Hyrri's Ire +18%, Rondel of Fragility +18%
+  Shield Wall                  Rondel of Fragility +24%, Hyrri's Ire +15%, Loreweave +15%
+  Volcanic Fissure             Dance with Death +25%, Rondel of Fragility +23%, Hyrri's Ire +17%
+  Sunder                       Dance with Death +23%, Rondel of Fragility +21%, Loreweave +20%
+  Supercharged Slam            Ryslatha's Coil +20%, Rondel of Fragility +19%, Apron of Emiran +17%
+15 skills scanned; 3 flags against all skills, 3 against the skill's own family, 3 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   97% (family usual +0%, 7 peers)  The Coming Calamity          on Rolling Slam  [unique]
+  +   34% (family usual +0%, 3 peers)  Irongrasp                    on Molten Blast  [unique]
+  +   46% (family usual +18%, 7 peers)  Rondel of Fragility          on Hammer of the Gods  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):

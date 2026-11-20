@@ -1,0 +1,10 @@
+44 skills scanned; 23 flags against all skills, 22 against the skill's own family, 4 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   39% (family usual +0%, 4 peers)  Ming's Heart                 on Snipe  [unique]
+  +   33% (family usual +0%, 0 peers)  Temporalis                   on Voltaic Grenade  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+  +   50% (family usual +25%, 4 peers)  Temporalis                   on Gas Grenade  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 42 skills  [unique]
+  The Coming Calamity          strong on 7 skills  [unique]
+  Rondel of Fragility          strong on 7 skills  [unique]

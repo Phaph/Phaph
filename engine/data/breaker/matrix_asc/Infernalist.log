@@ -1,0 +1,85 @@
+166 skills x 318 uniques/keystones, 166 skills to go, 6 workers
+  Animus Exchange              
+  Bitter Dead                  
+  Cackling Companions          
+  Bonestorm                    Irongrasp +22%, Scold's Bridle +17%, Mageblood +13%
+  Bone Cage                    Maligaro's Virtuosity +18%, Irongrasp +17%, Edyrn's Tusks +11%
+  Arc                          Doryani's Prototype +17%, Irongrasp +15%, Maligaro's Virtuosity +10%
+  Ball Lightning               Irongrasp +20%, Doryani's Prototype +17%, Scold's Bridle +17%
+  Comet                        Irongrasp +15%, Maligaro's Virtuosity +14%, Hyrri's Ire +13%
+  Coiling Bolts                Irongrasp +21%, Scold's Bridle +18%, Loreweave +13%
+  Conductive Runes             Rondel of Fragility +66%, Ingenuity +16%, Yoke of Suffering +16%
+  Contagion                    Irongrasp +20%, Doedre's Tenure +19%, Scold's Bridle +19%
+  Dark Effigy                  Loreweave +18%, Crown of the Victor +10%, Perfidy +10%
+  Detonate Living              Irongrasp +22%, Scold's Bridle +16%, Hyrri's Ire +16%
+  Detonate Dead                Apron of Emiran +27%, Blackflame Covenant +23%, The Coming Calamity +22%
+  Detonate Minion              Temporalis +48%, Irongrasp +30%, Scold's Bridle +28%
+  Eternal March                
+  Ember Fusillade              Irongrasp +15%, Crown of the Victor +10%, Perfidy +10%
+  Entangle                     Wildsurge Incantation +32%, Irongrasp +18%, Maligaro's Virtuosity +13%
+  Essence Drain                Loreweave +18%, Atsak's Sight +11%, Crown of the Victor +10%
+  Firestorm                    Wildsurge Incantation +50%, Irongrasp +20%, Scold's Bridle +17%
+  Eye of Winter                Irongrasp +21%, Scold's Bridle +17%, Sands of Silk +15%
+  Fortifying Cry               
+  Fireball                     Irongrasp +16%, Scold's Bridle +11%, Perfidy +10%
+  Flame Wall                   Irongrasp +14%, Crown of the Victor +12%, Scold's Bridle +11%
+  Frostflame Nova              
+  Flameblast                   Irongrasp +24%, Scold's Bridle +20%, Doedre's Tenure +18%
+  Frost Bomb                   Irongrasp +20%, Temporalis +20%, Hyrri's Ire +16%
+  Frost Darts                  Irongrasp +15%, Maligaro's Virtuosity +14%, Hyrri's Ire +13%
+  Frost Wall                   Irongrasp +20%, Temporalis +17%, Hyrri's Ire +16%
+  Frostbolt                    Irongrasp +15%, Hyrri's Ire +13%, Maligaro's Virtuosity +13%
+  Grim Pillars                 Irongrasp +15%, Hyrri's Ire +13%, Maligaro's Virtuosity +13%
+  Powered by Verisium          
+  Hexblast                     The Coming Calamity +33%, Snakebite +24%, Loreweave +20%
+  Ice Nova                     Irongrasp +15%, Loreweave +15%, Hyrri's Ire +13%
+  Incinerate                   Irongrasp +15%, Crown of the Victor +12%, Scold's Bridle +11%
+  Lightning Conduit            Irongrasp +24%, Scold's Bridle +19%, Doedre's Tenure +17%
+  Orb of Storms                Doryani's Prototype +17%, Irongrasp +15%, Maligaro's Virtuosity +11%
+  Skeletal Cleric              
+  Profane Ritual               Irongrasp +20%, Doedre's Tenure +19%, Scold's Bridle +19%
+  Seismic Cry                  Avatar of Fire +51%, Rondel of Fragility +32%, Apron of Emiran +17%
+  Raise Zombie                 Blackflame Covenant +85%, Original Sin +82%, The Coming Calamity +70%
+  Skeletal Brute               Irongrasp +68%, Rondel of Fragility +55%, Scold's Bridle +42%
+  Skeletal Arsonist            Irongrasp +92%, Rondel of Fragility +69%, Scold's Bridle +52%
+  Skeletal Frost Mage          Irongrasp +72%, Rondel of Fragility +61%, Scold's Bridle +45%
+  Skeletal Reaver              Blackflame Covenant +95%, Original Sin +92%, The Coming Calamity +76%
+  Skeletal Sniper              Irongrasp +75%, Rondel of Fragility +63%, Scold's Bridle +47%
+  Summon Spectre               
+  Tame Beast                   
+  Snap                         Temporalis +33%, Irongrasp +27%, Scold's Bridle +21%
+  Tamed Companion              
+  Solar Orb                    Irongrasp +20%, Scold's Bridle +17%, Doedre's Tenure +16%
+  Spark                        Doryani's Prototype +17%, Irongrasp +15%, Maligaro's Virtuosity +10%
+  Skyfall                      Irongrasp +50%, Doedre's Tenure +36%, Blueflame Bracers +28%
+  Skeletal Storm Mage          Irongrasp +68%, Rondel of Fragility +55%, Scold's Bridle +41%
+  Thrashing Vines              Wildsurge Incantation +54%, Irongrasp +18%, Maligaro's Virtuosity +14%
+  Thunderstorm                 Wildsurge Incantation +50%, Irongrasp +20%, Doryani's Prototype +17%
+  Tornado                      Wildsurge Incantation +50%, Irongrasp +25%, Doedre's Tenure +23%
+  Volcano                      Irongrasp +15%, Perfidy +10%, Scold's Bridle +10%
+  Wardbound Minions            Irongrasp +40%, Snakepit +27%, Doedre's Tenure +24%
+  Wolf Pack                    The Coming Calamity +64%, Blackflame Covenant +62%, Original Sin +59%
+  Unearth                      The Coming Calamity +52%, Blackflame Covenant +50%, Irongrasp +43%
+61 skills scanned; 67 flags against all skills, 31 against the skill's own family, 15 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   92% (family usual +31%, 6 peers)  Original Sin                 on Skeletal Reaver  [unique]
+  +   54% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   51% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   82% (family usual +31%, 6 peers)  Original Sin                 on Raise Zombie  [unique]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   95% (family usual +50%, 6 peers)  Blackflame Covenant          on Skeletal Reaver  [keystone]
+  +   85% (family usual +50%, 6 peers)  Blackflame Covenant          on Raise Zombie  [keystone]
+  +   33% (family usual +0%, 5 peers)  The Coming Calamity          on Hexblast  [unique]
+  +   33% (family usual +0%, 23 peers)  Temporalis                   on Snap  [unique]
+  +   32% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   30% (family usual +0%, 1 peers)  Painter's Servant            on Skeletal Frost Mage  [unique]
+  +   59% (family usual +31%, 6 peers)  Original Sin                 on Wolf Pack  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 12 skills  [unique]
+  Rondel of Fragility          strong on 10 skills  [unique]
+  Doedre's Tenure              strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]
+  Scold's Bridle               strong on 7 skills  [unique]

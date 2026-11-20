@@ -1,0 +1,18 @@
+61 skills scanned; 70 flags against all skills, 25 against the skill's own family, 10 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   52% (family usual +0%, 6 peers)  Wildsurge Incantation        on Entangle  [keystone]
+  +   52% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thrashing Vines  [keystone]
+  +   50% (family usual +0%, 9 peers)  Wildsurge Incantation        on Firestorm  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Tornado  [keystone]
+  +   50% (family usual +0%, 6 peers)  Wildsurge Incantation        on Thunderstorm  [keystone]
+  +   48% (family usual +0%, 0 peers)  Temporalis                   on Detonate Minion  [unique]
+  +   40% (family usual +0%, 0 peers)  Avatar of Fire               on Seismic Cry  [keystone]
+  +   37% (family usual +0%, 0 peers)  Apron of Emiran              on Seismic Cry  [unique]
+  +   32% (family usual +0%, 7 peers)  Blueflame Bracers            on Skyfall  [unique]
+  +   31% (family usual +0%, 15 peers)  Crimson Assault              on Detonate Dead  [keystone]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 12 skills  [unique]
+  Doedre's Tenure              strong on 10 skills  [unique]
+  Rondel of Fragility          strong on 9 skills  [unique]
+  Scold's Bridle               strong on 9 skills  [unique]
+  Snakepit                     strong on 8 skills  [unique]

@@ -1,0 +1,530 @@
+{
+ "skills": {
+  "Fragments Of The Past": {
+   "weapon": "Claw",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Damage",
+    "Duration",
+    "GamepadDeflectable",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsableWhileShapeshifted"
+   ],
+   "error": "No Claw bases up to item level 82",
+   "gains": {}
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "SkillConsumesPowerChargesOnUse"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Rondel of Fragility": 0.455,
+    "unique:Ryslatha's Coil": 0.087,
+    "unique:Bursting Decay": 0.055,
+    "unique:The Covenant": 0.199,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1,
+    "unique:Thrillsteel": 0.101
+   },
+   "dps": 82164
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CanCancelActions",
+    "Cold",
+    "CreatesGroundEffect",
+    "Duration",
+    "IceCrystal",
+    "Limit",
+    "Melee",
+    "ToggleSpawnedObjectTargetable_DefaultOn"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.072,
+    "unique:Rondel of Fragility": 0.203,
+    "unique:Ingenuity": 0.296,
+    "unique:Mind of the Council": 0.097,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.099,
+    "unique:Hyrri's Ire": 0.156,
+    "unique:Thrillsteel": 0.114
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 4565
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerformsFinalStrike"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Rondel of Fragility": 0.223,
+    "unique:Ingenuity": 0.091,
+    "unique:Loreweave": 0.099,
+    "unique:Heart of the Well": 0.057,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.199
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 96113
+  },
+  "Shockwave Totem": {
+   "weapon": "Claw",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CannotCreateJaggedGround",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Mineable",
+    "Nova",
+    "Slam",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Trappable",
+    "UsableWhileShapeshifted",
+    "UsedByProxy",
+    "UsedByTotem"
+   ],
+   "error": "No Claw bases up to item level 82",
+   "gains": {}
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "CreatesFissure",
+    "Melee",
+    "SkillConsumesFreeze",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Rondel of Fragility": 0.22,
+    "unique:Ingenuity": 0.091,
+    "unique:Loreweave": 0.054,
+    "unique:Heart of the Well": 0.057,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.2
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 33384
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "ConsumesCharges",
+    "Lightning",
+    "Melee",
+    "Projectile",
+    "ProjectilesNotFromUser",
+    "RangedAttack",
+    "SkillConsumesPowerChargesOnUse",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.145,
+    "unique:Rondel of Fragility": 0.099,
+    "unique:Ingenuity": 0.103,
+    "unique:Heart of the Well": 0.069,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.078
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 95523
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotSpiritStrike",
+    "Channel",
+    "CreatesGroundEffect",
+    "Duration",
+    "Lightning",
+    "Melee",
+    "PerfectTiming",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.106,
+    "unique:Rondel of Fragility": 0.217,
+    "unique:Ingenuity": 0.111,
+    "unique:Loreweave": 0.103,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.068,
+    "unique:Edyrn's Tusks": 0.063
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Blizzard..."
+   ],
+   "dps": 30740
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "GeneratesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "Palm",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Rondel of Fragility": 0.128,
+    "unique:Ingenuity": 0.096,
+    "unique:Mageblood": 0.11,
+    "unique:Heart of the Well": 0.095,
+    "unique:The Bringer of Rain": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.161,
+    "unique:Thrillsteel": 0.085
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 82667
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotSpiritStrike",
+    "GeneratesCharges",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "SkillConsumesShock"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Rondel of Fragility": 0.151,
+    "unique:Ingenuity": 0.096,
+    "unique:Mageblood": 0.083,
+    "unique:Heart of the Well": 0.086,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.161
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 86729
+  },
+  "Voltaic Barrier": {
+   "weapon": "Claw",
+   "types": [
+    "Area",
+    "Attack",
+    "Lightning",
+    "Totemable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": "No Claw bases up to item level 82",
+   "gains": {}
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Rondel of Fragility": 0.2,
+    "unique:Ingenuity": 0.086,
+    "unique:Loreweave": 0.055,
+    "unique:Heart of the Well": 0.071,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.181,
+    "unique:Thrillsteel": 0.121
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 27653
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesFissure",
+    "Lightning",
+    "Melee",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.15,
+    "unique:Rondel of Fragility": 0.265,
+    "unique:Ingenuity": 0.099,
+    "unique:Heart of the Well": 0.069,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.07
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Blizzard..."
+   ],
+   "dps": 90797
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "ComboStacking",
+    "Cooldown",
+    "Duration",
+    "HasUsageCondition",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "ObjectDurability",
+    "RangedAttack",
+    "SpecialAncestralBoost",
+    "Sustained",
+    "ToggleSpawnedObjectTargetable_DefaultOn"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Rondel of Fragility": 0.078,
+    "unique:Ingenuity": 0.095,
+    "unique:Sands of Silk": 0.109,
+    "unique:Mageblood": 0.128,
+    "unique:The Bringer of Rain": 0.112,
+    "unique:Temporalis": 0.109,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.162
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 23947
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerformsFinalStrike"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Rondel of Fragility": 0.228,
+    "unique:Ingenuity": 0.094,
+    "unique:Heart of the Well": 0.057,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.175
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 63662
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "Jumping",
+    "Melee",
+    "Physical",
+    "Slam",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.165,
+    "unique:Rondel of Fragility": 0.454,
+    "unique:Empire's Grasp": 0.052,
+    "unique:Ryslatha's Coil": 0.121,
+    "unique:Bursting Decay": 0.069,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.208
+   },
+   "dps": 11055
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CanCancelActions",
+    "Cold",
+    "Jumping",
+    "Melee",
+    "Movement"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Rondel of Fragility": 0.169,
+    "unique:Ingenuity": 0.091,
+    "unique:Heart of the Well": 0.057,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.199
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 55686
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Rondel of Fragility": 0.151,
+    "unique:Ingenuity": 0.096,
+    "unique:Mageblood": 0.083,
+    "unique:Loreweave": 0.094,
+    "unique:Heart of the Well": 0.086,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.161
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 71785
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Ingenuity": 0.096,
+    "unique:Mageblood": 0.083,
+    "unique:Loreweave": 0.06,
+    "unique:Heart of the Well": 0.052,
+    "unique:Perfidy": 0.1,
+    "unique:Hyrri's Ire": 0.161
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 23650
+  }
+ },
+ "updated": "2026-11-20 09:44"
+}

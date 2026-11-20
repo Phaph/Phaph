@@ -1,0 +1,500 @@
+{
+ "skills": {
+  "Fragments Of The Past": {
+   "weapon": "Claw",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Damage",
+    "Duration",
+    "GamepadDeflectable",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsableWhileShapeshifted"
+   ],
+   "error": "No Claw bases up to item level 82",
+   "gains": {}
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CanCancelActions",
+    "Cold",
+    "CreatesGroundEffect",
+    "Duration",
+    "IceCrystal",
+    "Limit",
+    "Melee",
+    "ToggleSpawnedObjectTargetable_DefaultOn"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.051,
+    "unique:Thrillsteel": 0.114,
+    "unique:Hyrri's Ire": 0.186,
+    "unique:Mind of the Council": 0.099,
+    "unique:Rondel of Fragility": 0.222,
+    "unique:Ingenuity": 0.297,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.101
+   },
+   "dps": 3485
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "SkillConsumesPowerChargesOnUse"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Bursting Decay": 0.055,
+    "unique:The Covenant": 0.199,
+    "unique:Thrillsteel": 0.093,
+    "unique:Rondel of Fragility": 0.437,
+    "unique:Heart of the Well": 0.065,
+    "unique:Ryslatha's Coil": 0.087,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 87669
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerformsFinalStrike"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.107,
+    "unique:Hyrri's Ire": 0.244,
+    "unique:Rondel of Fragility": 0.225,
+    "unique:Ingenuity": 0.097,
+    "unique:Heart of the Well": 0.054,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 76757
+  },
+  "Shockwave Totem": {
+   "weapon": "Claw",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CannotCreateJaggedGround",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Mineable",
+    "Nova",
+    "Slam",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Trappable",
+    "UsableWhileShapeshifted",
+    "UsedByProxy",
+    "UsedByTotem"
+   ],
+   "error": "No Claw bases up to item level 82",
+   "gains": {}
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotSpiritStrike",
+    "Channel",
+    "CreatesGroundEffect",
+    "Duration",
+    "Lightning",
+    "Melee",
+    "PerfectTiming",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.127,
+    "unique:Hyrri's Ire": 0.069,
+    "unique:Rondel of Fragility": 0.243,
+    "unique:Ingenuity": 0.115,
+    "unique:Doryani's Prototype": 0.098,
+    "unique:Edyrn's Tusks": 0.077,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 25163
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "ConsumesCharges",
+    "Lightning",
+    "Melee",
+    "Projectile",
+    "ProjectilesNotFromUser",
+    "RangedAttack",
+    "SkillConsumesPowerChargesOnUse",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.054,
+    "unique:Hyrri's Ire": 0.089,
+    "unique:Rondel of Fragility": 0.097,
+    "unique:Ingenuity": 0.109,
+    "unique:Doryani's Prototype": 0.149,
+    "unique:Heart of the Well": 0.065,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 81824
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "CreatesFissure",
+    "Melee",
+    "SkillConsumesFreeze",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.067,
+    "unique:Hyrri's Ire": 0.244,
+    "unique:Rondel of Fragility": 0.222,
+    "unique:Ingenuity": 0.097,
+    "unique:Heart of the Well": 0.054,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 26647
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "GeneratesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "Palm",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "unique:The Bringer of Rain": 0.098,
+    "unique:Thrillsteel": 0.077,
+    "unique:Hyrri's Ire": 0.195,
+    "unique:Rondel of Fragility": 0.137,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Heart of the Well": 0.091,
+    "unique:Mageblood": 0.112,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 64639
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotSpiritStrike",
+    "GeneratesCharges",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "SkillConsumesShock"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.195,
+    "unique:Rondel of Fragility": 0.159,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Heart of the Well": 0.082,
+    "unique:Mageblood": 0.085,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 68081
+  },
+  "Voltaic Barrier": {
+   "weapon": "Claw",
+   "types": [
+    "Area",
+    "Attack",
+    "Lightning",
+    "Totemable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": "No Claw bases up to item level 82",
+   "gains": {}
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.151,
+    "unique:Loreweave": 0.066,
+    "unique:Thrillsteel": 0.113,
+    "unique:Hyrri's Ire": 0.218,
+    "unique:Rondel of Fragility": 0.205,
+    "unique:Ingenuity": 0.096,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 21828
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesFissure",
+    "Lightning",
+    "Melee",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.078,
+    "unique:Rondel of Fragility": 0.262,
+    "unique:Ingenuity": 0.105,
+    "unique:Doryani's Prototype": 0.155,
+    "unique:Heart of the Well": 0.065,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 78939
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "ComboStacking",
+    "Cooldown",
+    "Duration",
+    "HasUsageCondition",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "ObjectDurability",
+    "RangedAttack",
+    "SpecialAncestralBoost",
+    "Sustained",
+    "ToggleSpawnedObjectTargetable_DefaultOn"
+   ],
+   "error": null,
+   "gains": {
+    "unique:The Bringer of Rain": 0.114,
+    "unique:Temporalis": 0.109,
+    "unique:Hyrri's Ire": 0.195,
+    "unique:Rondel of Fragility": 0.096,
+    "unique:Ingenuity": 0.099,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Sands of Silk": 0.109,
+    "unique:Mageblood": 0.13,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 17656
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerformsFinalStrike"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.061,
+    "unique:Hyrri's Ire": 0.215,
+    "unique:Rondel of Fragility": 0.234,
+    "unique:Ingenuity": 0.099,
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Heart of the Well": 0.054,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 49741
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "Jumping",
+    "Melee",
+    "Physical",
+    "Slam",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.171,
+    "unique:Bursting Decay": 0.069,
+    "unique:Empire's Grasp": 0.054,
+    "unique:Rondel of Fragility": 0.446,
+    "unique:Apron of Emiran": 0.204,
+    "unique:Ryslatha's Coil": 0.12,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 11276
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CanCancelActions",
+    "Cold",
+    "Jumping",
+    "Melee",
+    "Movement"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.058,
+    "unique:Hyrri's Ire": 0.243,
+    "unique:Rondel of Fragility": 0.171,
+    "unique:Ingenuity": 0.096,
+    "unique:Heart of the Well": 0.054,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 44500
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.066,
+    "unique:Hyrri's Ire": 0.195,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Mageblood": 0.085,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 17997
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.103,
+    "unique:Hyrri's Ire": 0.195,
+    "unique:Rondel of Fragility": 0.16,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Heart of the Well": 0.082,
+    "unique:Mageblood": 0.085,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 56360
+  }
+ },
+ "updated": "2026-11-20 09:38"
+}

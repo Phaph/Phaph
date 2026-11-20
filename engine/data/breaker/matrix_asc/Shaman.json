@@ -1,0 +1,1821 @@
+{
+ "skills": {
+  "Animus Exchange": {
+   "weapon": "Staff",
+   "types": [
+    "Cooldown",
+    "Spell",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Bitter Dead": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Ball Lightning": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.164,
+    "unique:Doedre's Tenure": 0.092,
+    "unique:Crown of the Victor": 0.084,
+    "unique:Doryani's Prototype": 0.167,
+    "unique:Hyrri's Ire": 0.072,
+    "unique:Irongrasp": 0.129,
+    "unique:Scold's Bridle": 0.104,
+    "unique:The Bringer of Rain": 0.076,
+    "unique:Mageblood": 0.087,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 152087
+  },
+  "Arc": {
+   "weapon": "Staff",
+   "types": [
+    "Chains",
+    "Damage",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.179,
+    "unique:Crown of the Victor": 0.105,
+    "unique:Doryani's Prototype": 0.167,
+    "unique:Irongrasp": 0.102,
+    "unique:The Bringer of Rain": 0.069,
+    "unique:Perfidy": 0.077
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 238322
+  },
+  "Bonestorm": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Channel",
+    "ConsumesCharges",
+    "Damage",
+    "Necrotic",
+    "Physical",
+    "Projectile",
+    "SkillConsumesPowerChargesOnUse",
+    "Spell",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.27,
+    "unique:Loreweave": 0.082,
+    "unique:Doedre's Tenure": 0.096,
+    "unique:Ming's Heart": 0.109,
+    "unique:Crown of the Victor": 0.075,
+    "unique:Atsak's Sight": 0.073,
+    "unique:Hyrri's Ire": 0.098,
+    "unique:Irongrasp": 0.177,
+    "unique:Scold's Bridle": 0.147,
+    "unique:The Bringer of Rain": 0.095,
+    "unique:Mageblood": 0.108,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 147537
+  },
+  "Bone Cage": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Necrotic",
+    "Nova",
+    "Physical",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.244,
+    "unique:Loreweave": 0.078,
+    "unique:Crown of the Victor": 0.098,
+    "unique:Atsak's Sight": 0.112,
+    "unique:Hyrri's Ire": 0.088,
+    "unique:Irongrasp": 0.13,
+    "unique:Scold's Bridle": 0.053,
+    "unique:The Bringer of Rain": 0.108,
+    "unique:Mageblood": 0.066,
+    "unique:Edyrn's Tusks": 0.079,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 303162
+  },
+  "Coiling Bolts": {
+   "weapon": "Staff",
+   "types": [
+    "Chaos",
+    "Damage",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.15,
+    "unique:Loreweave": 0.109,
+    "unique:Thrillsteel": 0.052,
+    "unique:Doedre's Tenure": 0.056,
+    "unique:Atsak's Sight": 0.051,
+    "unique:Hyrri's Ire": 0.123,
+    "unique:Irongrasp": 0.145,
+    "unique:Scold's Bridle": 0.102,
+    "unique:The Bringer of Rain": 0.056,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 187340
+  },
+  "Comet": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.217,
+    "unique:Crown of the Victor": 0.102,
+    "unique:Heatshiver": 0.053,
+    "unique:Hyrri's Ire": 0.13,
+    "unique:Irongrasp": 0.102,
+    "unique:Scold's Bridle": 0.068,
+    "unique:The Bringer of Rain": 0.097,
+    "unique:Mageblood": 0.09,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 326187
+  },
+  "Contagion": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chaos",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doedre's Tenure": 0.126,
+    "unique:Crown of the Victor": 0.174,
+    "unique:Irongrasp": 0.14,
+    "unique:Scold's Bridle": 0.126,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 26674
+  },
+  "Conductive Runes": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Attack",
+    "Damage",
+    "Duration",
+    "Hazard",
+    "Lightning",
+    "Limit",
+    "NonWeaponAttack",
+    "Totemable",
+    "UsableWhileShapeshifted",
+    "UseGlobalStats"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.053,
+    "unique:Wake of Destruction": 0.063,
+    "unique:Yoke of Suffering": 0.057,
+    "unique:Rondel of Fragility": 0.417,
+    "unique:Heart of the Well": 0.078,
+    "unique:Ingenuity": 0.15,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 7690
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCancelActions",
+    "Cooldown",
+    "Melee",
+    "Shapeshift",
+    "Triggerable",
+    "Wolf"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.099,
+    "unique:Loreweave": 0.182,
+    "unique:Ming's Heart": 0.188,
+    "unique:Temporalis": 0.091,
+    "unique:Apron of Emiran": 0.182,
+    "unique:The Coming Calamity": 0.072,
+    "unique:Hyrri's Ire": 0.082,
+    "unique:Rondel of Fragility": 0.135,
+    "unique:The Bringer of Rain": 0.082,
+    "unique:Ryslatha's Coil": 0.128,
+    "unique:Mageblood": 0.122,
+    "unique:Sands of Silk": 0.091,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 15240
+  },
+  "Dark Effigy": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "AttackInPlace",
+    "Chaos",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesNumberModifiersNotApplied",
+    "Spell",
+    "SummonsTotem",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsedByProxy",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.136,
+    "unique:Thrillsteel": 0.085,
+    "unique:Demon Stitcher": 0.051,
+    "unique:Sine Aequo": 0.064,
+    "unique:Hyrri's Ire": 0.081,
+    "unique:Irongrasp": 0.064,
+    "unique:Lochtonial Caress": 0.064,
+    "unique:Scold's Bridle": 0.094,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 68103
+  },
+  "Detonate Living": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Physical",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.337,
+    "unique:Loreweave": 0.091,
+    "unique:Crown of the Victor": 0.076,
+    "unique:Atsak's Sight": 0.092,
+    "unique:Hyrri's Ire": 0.109,
+    "unique:Irongrasp": 0.15,
+    "unique:Scold's Bridle": 0.092,
+    "unique:The Bringer of Rain": 0.085,
+    "unique:Edyrn's Tusks": 0.055,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 15155
+  },
+  "Detonate Dead": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Detonator",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Physical",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.056,
+    "keystone:Crimson Assault": 0.276,
+    "unique:Maligaro's Virtuosity": 0.239,
+    "unique:Loreweave": 0.066,
+    "unique:Snakebite": 0.155,
+    "unique:Icefang Orbit": 0.057,
+    "unique:Doedre's Tenure": 0.077,
+    "unique:Ming's Heart": 0.061,
+    "unique:Apron of Emiran": 0.324,
+    "unique:The Coming Calamity": 0.086,
+    "unique:Atsak's Sight": 0.055,
+    "unique:Irongrasp": 0.098,
+    "unique:Scold's Bridle": 0.089,
+    "unique:The Bringer of Rain": 0.102,
+    "unique:Mageblood": 0.106,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 79393
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "GamepadDoNotForceSkillAtLocation",
+    "GeneratesCharges",
+    "Jumping",
+    "Melee",
+    "Movement",
+    "Shapeshift",
+    "Slam",
+    "TargetsDestructibleCorpses",
+    "Triggerable",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Powertread": 0.065,
+    "unique:Doryani's Prototype": 0.132,
+    "unique:Hyrri's Ire": 0.182,
+    "unique:Rondel of Fragility": 0.092,
+    "unique:Heart of the Well": 0.09,
+    "unique:Mageblood": 0.1,
+    "unique:Ingenuity": 0.096,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 138019
+  },
+  "Detonate Minion": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Damage",
+    "Fire"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.088,
+    "unique:Temporalis": 0.484,
+    "unique:Mind of the Council": 0.08,
+    "unique:Wake of Destruction": 0.07,
+    "unique:Hyrri's Ire": 0.083,
+    "unique:Irongrasp": 0.197,
+    "unique:Scold's Bridle": 0.181,
+    "unique:Ingenuity": 0.153,
+    "unique:Sands of Silk": 0.15,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 16849
+  },
+  "Ember Fusillade": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.143,
+    "unique:Thrillsteel": 0.054,
+    "unique:Crown of the Victor": 0.113,
+    "unique:Irongrasp": 0.102,
+    "unique:The Bringer of Rain": 0.055,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 586243
+  },
+  "Entangle": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "CreatesFissure",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Nature",
+    "Physical",
+    "Plant",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.424,
+    "unique:Maligaro's Virtuosity": 0.201,
+    "unique:Loreweave": 0.075,
+    "unique:Crown of the Victor": 0.1,
+    "unique:Atsak's Sight": 0.084,
+    "unique:Hyrri's Ire": 0.09,
+    "unique:Irongrasp": 0.13,
+    "unique:Scold's Bridle": 0.07,
+    "unique:The Bringer of Rain": 0.077,
+    "unique:Edyrn's Tusks": 0.078,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 73466
+  },
+  "Essence Drain": {
+   "weapon": "Staff",
+   "types": [
+    "Chaos",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.145,
+    "unique:Loreweave": 0.13,
+    "unique:Snakebite": 0.053,
+    "unique:Thrillsteel": 0.054,
+    "unique:Atsak's Sight": 0.062,
+    "unique:Hyrri's Ire": 0.08,
+    "unique:Irongrasp": 0.064,
+    "unique:Scold's Bridle": 0.062,
+    "unique:The Bringer of Rain": 0.055,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 162802
+  },
+  "Eye of Winter": {
+   "weapon": "Staff",
+   "types": [
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "InteractsWithElementalGround",
+    "Mineable",
+    "Projectile",
+    "ProjectileSpiral",
+    "SingleMainProjectile",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.202,
+    "unique:Doedre's Tenure": 0.078,
+    "unique:Temporalis": 0.109,
+    "unique:Crown of the Victor": 0.08,
+    "unique:Hyrri's Ire": 0.13,
+    "unique:Irongrasp": 0.129,
+    "unique:Scold's Bridle": 0.094,
+    "unique:The Bringer of Rain": 0.094,
+    "unique:Mageblood": 0.107,
+    "unique:Sands of Silk": 0.152,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 4573
+  },
+  "Fortifying Cry": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "EmpowersOtherSkill",
+    "Nova",
+    "Physical",
+    "SkillConsumesEnduranceChargesOnUse",
+    "UsableWhileMoving",
+    "Warcry"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Fireball": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Fire",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.143,
+    "unique:Thrillsteel": 0.054,
+    "unique:Crown of the Victor": 0.103,
+    "unique:Irongrasp": 0.102,
+    "unique:The Bringer of Rain": 0.055,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 194422
+  },
+  "Firestorm": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Storm",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.501,
+    "unique:Maligaro's Virtuosity": 0.136,
+    "unique:Loreweave": 0.059,
+    "unique:Doedre's Tenure": 0.101,
+    "unique:Crown of the Victor": 0.113,
+    "unique:Hyrri's Ire": 0.073,
+    "unique:Irongrasp": 0.136,
+    "unique:Scold's Bridle": 0.112,
+    "unique:The Bringer of Rain": 0.063,
+    "unique:Mageblood": 0.072,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 325420
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "ConsumesCharges",
+    "ConsumesRage",
+    "Cooldown",
+    "CreatesGroundEffect",
+    "Damage",
+    "Detonator",
+    "Duration",
+    "Fire",
+    "ManualCooldownConsumption",
+    "Shapeshift",
+    "SkillConsumesPowerChargesOnUse",
+    "Sustained",
+    "UsableWhileMoving",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Fireflower": 0.183,
+    "unique:Hyrri's Ire": 0.12,
+    "unique:Yoke of Suffering": 0.204,
+    "unique:Rondel of Fragility": 0.378,
+    "unique:Heart of the Well": 0.096,
+    "unique:Mageblood": 0.092,
+    "unique:Ingenuity": 0.095,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 204130
+  },
+  "Flame Wall": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "CausesBurning",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.105,
+    "unique:Thrillsteel": 0.061,
+    "unique:Crown of the Victor": 0.136,
+    "unique:Hyrri's Ire": 0.067,
+    "unique:Irongrasp": 0.106,
+    "unique:Scold's Bridle": 0.061,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 182807
+  },
+  "Flameblast": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "Cooldown",
+    "Damage",
+    "Fire",
+    "GainsStages",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.194,
+    "unique:Loreweave": 0.069,
+    "unique:Doedre's Tenure": 0.113,
+    "unique:Ming's Heart": 0.065,
+    "unique:Temporalis": 0.109,
+    "unique:Crown of the Victor": 0.135,
+    "unique:Hyrri's Ire": 0.055,
+    "unique:Irongrasp": 0.171,
+    "unique:Candlemaker": 0.081,
+    "unique:Scold's Bridle": 0.136,
+    "unique:The Bringer of Rain": 0.083,
+    "unique:Mageblood": 0.094,
+    "unique:Sands of Silk": 0.152,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 46491
+  },
+  "Frostflame Nova": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Fire",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Frost Bomb": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "DetonatesAfterTime",
+    "Duration",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Invokable",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Orb",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.226,
+    "unique:Loreweave": 0.059,
+    "unique:Ming's Heart": 0.051,
+    "unique:Temporalis": 0.126,
+    "unique:Crown of the Victor": 0.096,
+    "unique:Heatshiver": 0.053,
+    "unique:Hyrri's Ire": 0.124,
+    "unique:Irongrasp": 0.129,
+    "unique:The Bringer of Rain": 0.094,
+    "unique:Mageblood": 0.106,
+    "unique:Sands of Silk": 0.126,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 73548
+  },
+  "Frost Darts": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Cold",
+    "Damage",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.243,
+    "unique:Crown of the Victor": 0.075,
+    "unique:Hyrri's Ire": 0.112,
+    "unique:Irongrasp": 0.102,
+    "unique:The Bringer of Rain": 0.093,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 58922
+  },
+  "Frost Wall": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "IceCrystal",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "ToggleSpawnedObjectTargetable_DefaultOff",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.19,
+    "unique:Loreweave": 0.076,
+    "unique:Crown of the Victor": 0.075,
+    "unique:Snakepit": 0.067,
+    "unique:Heatshiver": 0.111,
+    "unique:Hyrri's Ire": 0.13,
+    "unique:Irongrasp": 0.135,
+    "unique:The Bringer of Rain": 0.088,
+    "unique:Mageblood": 0.1,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 44231
+  },
+  "Frostbolt": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Cold",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.228,
+    "unique:Crown of the Victor": 0.084,
+    "unique:Hyrri's Ire": 0.112,
+    "unique:Irongrasp": 0.102,
+    "unique:The Bringer of Rain": 0.087,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 228682
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Bear",
+    "ConsumesRage",
+    "Melee",
+    "Shapeshift",
+    "Slam",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.129,
+    "unique:Bursting Decay": 0.054,
+    "unique:Apron of Emiran": 0.2,
+    "unique:Rondel of Fragility": 0.366,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Ryslatha's Coil": 0.14,
+    "unique:Heart of the Well": 0.081,
+    "unique:Mageblood": 0.102,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 19016
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Bear",
+    "Channel",
+    "ConsumesRage",
+    "CreatesFissure",
+    "Duration",
+    "Melee",
+    "Shapeshift",
+    "Slam",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.051,
+    "unique:Doryani's Prototype": 0.098,
+    "unique:Hyrri's Ire": 0.167,
+    "unique:Rondel of Fragility": 0.191,
+    "unique:Heart of the Well": 0.09,
+    "unique:Mageblood": 0.099,
+    "unique:Ingenuity": 0.091,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 27517
+  },
+  "Grim Pillars": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Cold",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "IceCrystal",
+    "Limit",
+    "Nova",
+    "Spell",
+    "ToggleSpawnedObjectTargetable_DefaultOn",
+    "Totemable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.228,
+    "unique:Crown of the Victor": 0.1,
+    "unique:Hyrri's Ire": 0.112,
+    "unique:Irongrasp": 0.101,
+    "unique:The Bringer of Rain": 0.087,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 148808
+  },
+  "Hexblast": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Chaos",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.218,
+    "unique:Loreweave": 0.167,
+    "unique:Snakebite": 0.221,
+    "unique:Doedre's Tenure": 0.057,
+    "unique:Ming's Heart": 0.139,
+    "unique:Radiant Grief": 0.112,
+    "unique:Crown of the Victor": 0.087,
+    "unique:The Coming Calamity": 0.288,
+    "unique:Atsak's Sight": 0.065,
+    "unique:Irongrasp": 0.06,
+    "unique:Scold's Bridle": 0.062,
+    "unique:The Bringer of Rain": 0.112,
+    "unique:Mageblood": 0.109,
+    "unique:Blackflame": 0.242,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 147404
+  },
+  "Ice Nova": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.228,
+    "unique:Loreweave": 0.122,
+    "unique:Crown of the Victor": 0.082,
+    "unique:Heatshiver": 0.129,
+    "unique:Hyrri's Ire": 0.13,
+    "unique:Irongrasp": 0.101,
+    "unique:The Bringer of Rain": 0.087,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 117892
+  },
+  "Incinerate": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "CreatesGroundEffect",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Fire",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.124,
+    "unique:Loreweave": 0.051,
+    "unique:Thrillsteel": 0.058,
+    "unique:Crown of the Victor": 0.133,
+    "unique:Hyrri's Ire": 0.072,
+    "unique:Irongrasp": 0.101,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 366288
+  },
+  "Powered by Verisium": {
+   "weapon": "Staff",
+   "types": [
+    "Cooldown",
+    "GeneratesInfusion",
+    "Multicastable",
+    "Spell",
+    "Triggerable",
+    "Unleashable"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Lightning Conduit": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cooldown",
+    "Damage",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.179,
+    "unique:Loreweave": 0.109,
+    "unique:Doedre's Tenure": 0.105,
+    "unique:Temporalis": 0.14,
+    "unique:Crown of the Victor": 0.111,
+    "unique:Doryani's Prototype": 0.141,
+    "unique:Hyrri's Ire": 0.062,
+    "unique:Irongrasp": 0.154,
+    "unique:Scold's Bridle": 0.12,
+    "unique:The Bringer of Rain": 0.083,
+    "unique:Mageblood": 0.094,
+    "unique:Sands of Silk": 0.151,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 30854
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "Shapeshift",
+    "Triggerable",
+    "Wolf"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.05,
+    "unique:Doryani's Prototype": 0.123,
+    "unique:Hyrri's Ire": 0.169,
+    "unique:Rondel of Fragility": 0.138,
+    "unique:Heart of the Well": 0.09,
+    "unique:Mageblood": 0.099,
+    "unique:Ingenuity": 0.089,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 42490
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "ConsumesCharges",
+    "CreatesGroundEffect",
+    "Damage",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Shapeshift",
+    "SkillConsumesPowerChargesOnUse",
+    "Sustained",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.177,
+    "unique:Ming's Heart": 0.14,
+    "unique:Doryani's Prototype": 0.109,
+    "unique:Hyrri's Ire": 0.114,
+    "unique:Irongrasp": 0.773,
+    "unique:Rondel of Fragility": 0.432,
+    "unique:The Bringer of Rain": 0.073,
+    "unique:Heart of the Well": 0.091,
+    "unique:Mageblood": 0.116,
+    "unique:Ingenuity": 0.059,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 68379
+  },
+  "Orb of Storms": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chains",
+    "Damage",
+    "Duration",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Lightning",
+    "Limit",
+    "Mineable",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.195,
+    "unique:Crown of the Victor": 0.107,
+    "unique:Doryani's Prototype": 0.167,
+    "unique:Irongrasp": 0.101,
+    "unique:The Bringer of Rain": 0.075,
+    "unique:Perfidy": 0.083
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 153925
+  },
+  "Profane Ritual": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Chaos",
+    "CreatesGroundRune",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "GeneratesCharges",
+    "Limit",
+    "Multicastable",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doedre's Tenure": 0.126,
+    "unique:Crown of the Victor": 0.174,
+    "unique:Irongrasp": 0.14,
+    "unique:Scold's Bridle": 0.126,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 213632
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Bear",
+    "Channel",
+    "ConsumesRage",
+    "CreatesGroundEffect",
+    "Melee",
+    "Shapeshift",
+    "Slam",
+    "Sustained",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.132,
+    "unique:The Covenant": 0.113,
+    "unique:Apron of Emiran": 0.208,
+    "unique:Rondel of Fragility": 0.289,
+    "unique:The Bringer of Rain": 0.066,
+    "unique:Ryslatha's Coil": 0.145,
+    "unique:Heart of the Well": 0.093,
+    "unique:Mageblood": 0.102,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 27822
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Duration",
+    "Melee",
+    "MeleeSingleTarget",
+    "Shapeshift",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.113,
+    "unique:Bursting Decay": 0.052,
+    "unique:Apron of Emiran": 0.204,
+    "unique:Rondel of Fragility": 0.479,
+    "unique:The Bringer of Rain": 0.064,
+    "unique:Ryslatha's Coil": 0.184,
+    "unique:Heart of the Well": 0.101,
+    "unique:Mageblood": 0.1,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 27922
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Damage",
+    "Detonator",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Shapeshift",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.061,
+    "unique:Irongrasp": 0.279,
+    "unique:Rondel of Fragility": 0.131,
+    "unique:Heart of the Well": 0.088,
+    "unique:Mageblood": 0.104,
+    "unique:Ingenuity": 0.1,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 47934
+  },
+  "Snap": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Fire",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Lightning",
+    "ManualCooldownConsumption",
+    "Mineable",
+    "Multicastable",
+    "SkillConsumesFreeze",
+    "SkillConsumesIgnite",
+    "SkillConsumesShock",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.213,
+    "unique:Loreweave": 0.065,
+    "unique:Temporalis": 0.208,
+    "unique:Crown of the Victor": 0.101,
+    "unique:Heatshiver": 0.076,
+    "unique:Doryani's Prototype": 0.064,
+    "unique:Hyrri's Ire": 0.089,
+    "unique:Irongrasp": 0.203,
+    "unique:Painter's Servant": 0.06,
+    "unique:Scold's Bridle": 0.16,
+    "unique:The Bringer of Rain": 0.099,
+    "unique:Mageblood": 0.113,
+    "unique:Sands of Silk": 0.151,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 312305
+  },
+  "Seismic Cry": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "EmpowersOtherSkill",
+    "Nova",
+    "Physical",
+    "SkillConsumesEnduranceChargesOnUse",
+    "UsableWhileMoving",
+    "Warcry"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.32,
+    "unique:Temporalis": 0.13,
+    "unique:Apron of Emiran": 0.08,
+    "unique:Crown of the Victor": 0.153,
+    "unique:Hyrri's Ire": 0.084,
+    "unique:Leopold's Applause": 0.063,
+    "unique:Yoke of Suffering": 0.089,
+    "unique:Rondel of Fragility": 0.226,
+    "unique:Plaguefinger": 0.091,
+    "unique:Ingenuity": 0.052,
+    "unique:Sands of Silk": 0.14,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 692
+  },
+  "Solar Orb": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.139,
+    "unique:Loreweave": 0.058,
+    "unique:Doedre's Tenure": 0.101,
+    "unique:Fireflower": 0.055,
+    "unique:Crown of the Victor": 0.123,
+    "unique:Hyrri's Ire": 0.072,
+    "unique:Irongrasp": 0.137,
+    "unique:Scold's Bridle": 0.113,
+    "unique:The Bringer of Rain": 0.064,
+    "unique:Mageblood": 0.073,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 84223
+  },
+  "Spark": {
+   "weapon": "Staff",
+   "types": [
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.179,
+    "unique:Crown of the Victor": 0.078,
+    "unique:Doryani's Prototype": 0.167,
+    "unique:Irongrasp": 0.102,
+    "unique:The Bringer of Rain": 0.069,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 111211
+  },
+  "Thrashing Vines": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "GamepadDeflectable",
+    "Limit",
+    "Nature",
+    "Physical",
+    "Plant",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.512,
+    "unique:Maligaro's Virtuosity": 0.201,
+    "unique:Loreweave": 0.075,
+    "unique:Crown of the Victor": 0.091,
+    "unique:Atsak's Sight": 0.084,
+    "unique:Hyrri's Ire": 0.09,
+    "unique:Irongrasp": 0.129,
+    "unique:Scold's Bridle": 0.069,
+    "unique:Plaguefinger": 0.05,
+    "unique:The Bringer of Rain": 0.077,
+    "unique:Edyrn's Tusks": 0.084,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 75392
+  },
+  "Thunderstorm": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Limit",
+    "Spell",
+    "Storm",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Maligaro's Virtuosity": 0.164,
+    "unique:Doedre's Tenure": 0.091,
+    "unique:Crown of the Victor": 0.114,
+    "unique:Doryani's Prototype": 0.167,
+    "unique:Hyrri's Ire": 0.073,
+    "unique:Irongrasp": 0.135,
+    "unique:Scold's Bridle": 0.104,
+    "unique:The Bringer of Rain": 0.076,
+    "unique:Mageblood": 0.087,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 104422
+  },
+  "Tornado": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "InteractsWithElementalGround",
+    "Limit",
+    "Physical",
+    "Spell",
+    "Storm",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Doedre's Tenure": 0.146,
+    "unique:Crown of the Victor": 0.173,
+    "unique:Irongrasp": 0.162,
+    "unique:Scold's Bridle": 0.146,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 39946
+  },
+  "Volcano": {
+   "weapon": "Staff",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "Damage",
+    "Duration",
+    "Fire",
+    "GamepadDeflectable",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Maligaro's Virtuosity": 0.161,
+    "unique:Thrillsteel": 0.05,
+    "unique:Crown of the Victor": 0.109,
+    "unique:Irongrasp": 0.102,
+    "unique:The Bringer of Rain": 0.062,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 208440
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCancelActions",
+    "GeneratesCharges",
+    "Melee",
+    "Shapeshift",
+    "Triggerable",
+    "Wind",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.145,
+    "unique:Bursting Decay": 0.054,
+    "unique:Apron of Emiran": 0.221,
+    "unique:Rondel of Fragility": 0.384,
+    "unique:The Bringer of Rain": 0.068,
+    "unique:Ryslatha's Coil": 0.142,
+    "unique:Heart of the Well": 0.079,
+    "unique:Mageblood": 0.105,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 16850
+  }
+ },
+ "updated": "2026-11-20 10:19"
+}

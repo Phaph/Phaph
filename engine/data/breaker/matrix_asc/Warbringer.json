@@ -1,0 +1,423 @@
+{
+ "skills": {
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.071,
+    "keystone:Dance with Death": 0.248,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Rondel of Fragility": 0.204,
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Loreweave": 0.107,
+    "unique:Ingenuity": 0.122,
+    "unique:Mageblood": 0.08,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.083
+   },
+   "dps": 33768
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Cooldown",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "Slam",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.059,
+    "unique:Hyrri's Ire": 0.183,
+    "unique:Loreweave": 0.076,
+    "unique:Ingenuity": 0.119,
+    "unique:Mageblood": 0.08,
+    "unique:Perfidy": 0.1,
+    "unique:Sands of Silk": 0.151,
+    "unique:Temporalis": 0.14
+   },
+   "dps": 10782
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CreatesGroundEffect",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.073,
+    "keystone:Dance with Death": 0.248,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Rondel of Fragility": 0.204,
+    "unique:Hyrri's Ire": 0.19,
+    "unique:Loreweave": 0.053,
+    "unique:Ingenuity": 0.122,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.083
+   },
+   "dps": 16818
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "CreatesFissure",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.073,
+    "keystone:Dance with Death": 0.248,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Rondel of Fragility": 0.205,
+    "unique:Hyrri's Ire": 0.19,
+    "unique:Loreweave": 0.053,
+    "unique:Ingenuity": 0.122,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.083
+   },
+   "dps": 20181
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Melee",
+    "MeleeSingleTarget",
+    "Physical",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Rondel of Fragility": 0.198,
+    "unique:Hyrri's Ire": 0.185,
+    "unique:Loreweave": 0.056,
+    "unique:Ingenuity": 0.119,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.083,
+    "unique:Heart of the Well": 0.095
+   },
+   "ascendancy_nodes": [
+    "Imploding Impacts"
+   ],
+   "dps": 43612
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "HasUsageCondition",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.066,
+    "keystone:Dance with Death": 0.248,
+    "unique:Rondel of Fragility": 0.562,
+    "unique:Hyrri's Ire": 0.26,
+    "unique:Loreweave": 0.234,
+    "unique:Ingenuity": 0.091,
+    "unique:Mageblood": 0.081,
+    "unique:Ryslatha's Coil": 0.058,
+    "unique:Atsak's Sight": 0.08,
+    "unique:The Bringer of Rain": 0.071,
+    "unique:Edyrn's Tusks": 0.097,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.084,
+    "unique:Thrillsteel": 0.1,
+    "unique:Ming's Heart": 0.147
+   },
+   "dps": 50873
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.066,
+    "keystone:Dance with Death": 0.101,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Loreweave": 0.055,
+    "unique:Ingenuity": 0.121,
+    "unique:Mageblood": 0.08,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.061
+   },
+   "dps": 40465
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Fire",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerfectTiming"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Doryani's Prototype": 0.059,
+    "unique:Rondel of Fragility": 0.202,
+    "unique:Hyrri's Ire": 0.182,
+    "unique:Loreweave": 0.06,
+    "unique:Ingenuity": 0.12,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.083
+   },
+   "dps": 55344
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Damage",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Doryani's Prototype": 0.057,
+    "unique:Rondel of Fragility": 0.11,
+    "unique:Hyrri's Ire": 0.178,
+    "unique:Loreweave": 0.062,
+    "unique:Ingenuity": 0.118,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Irongrasp": 0.359,
+    "unique:Heart of the Well": 0.083
+   },
+   "dps": 32619
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.061,
+    "keystone:Dance with Death": 0.25,
+    "unique:Rondel of Fragility": 0.455,
+    "unique:Hyrri's Ire": 0.185,
+    "unique:Xoph's Blood": 0.173,
+    "unique:Loreweave": 0.244,
+    "unique:Ingenuity": 0.12,
+    "unique:Mageblood": 0.094,
+    "unique:The Coming Calamity": 0.975,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.097,
+    "unique:Ming's Heart": 0.137,
+    "unique:Beacon of Azis": 0.131
+   },
+   "dps": 5517
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesGroundEffect",
+    "Duration",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.073,
+    "keystone:Dance with Death": 0.248,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Rondel of Fragility": 0.204,
+    "unique:Hyrri's Ire": 0.19,
+    "unique:Loreweave": 0.053,
+    "unique:Ingenuity": 0.122,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.083
+   },
+   "dps": 22423
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Duration",
+    "Limit",
+    "Melee",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Doryani's Prototype": 0.091,
+    "unique:Rondel of Fragility": 0.281,
+    "unique:Hyrri's Ire": 0.158,
+    "unique:Loreweave": 0.143,
+    "unique:Ingenuity": 0.07,
+    "unique:Edyrn's Tusks": 0.071,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.071,
+    "unique:Ming's Heart": 0.074
+   },
+   "dps": 17489
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CreatesFissure",
+    "Duration",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.227,
+    "unique:Rondel of Fragility": 0.292,
+    "unique:Hyrri's Ire": 0.188,
+    "unique:Loreweave": 0.207,
+    "unique:Ingenuity": 0.084,
+    "unique:Mageblood": 0.083,
+    "unique:Ryslatha's Coil": 0.084,
+    "unique:The Covenant": 0.091,
+    "unique:Edyrn's Tusks": 0.118,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.08,
+    "unique:Ming's Heart": 0.12
+   },
+   "dps": 24997
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "GainsStages",
+    "Melee",
+    "NoDualWield",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.098,
+    "unique:Whisper of the Brotherhood": 0.061,
+    "unique:Rondel of Fragility": 0.264,
+    "unique:Mageblood": 0.094,
+    "unique:Ryslatha's Coil": 0.2,
+    "unique:Maligaro's Virtuosity": 0.061,
+    "unique:The Bringer of Rain": 0.059,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.101,
+    "unique:Apron of Emiran": 0.174
+   },
+   "dps": 51370
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Sustained",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Doryani's Prototype": 0.056,
+    "unique:Rondel of Fragility": 0.259,
+    "unique:Hyrri's Ire": 0.174,
+    "unique:Loreweave": 0.065,
+    "unique:Ingenuity": 0.117,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.083
+   },
+   "dps": 21610
+  }
+ },
+ "updated": "2026-11-20 06:55"
+}

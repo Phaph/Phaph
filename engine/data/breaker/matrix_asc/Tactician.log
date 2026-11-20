@@ -1,0 +1,57 @@
+166 skills x 318 uniques/keystones, 166 skills to go, 6 workers
+  Detonating Arrow             Irongrasp +36%, Rondel of Fragility +16%, Ingenuity +14%
+  Electrocuting Arrow          Irongrasp +37%, Rondel of Fragility +23%, Hyrri's Ire +15%
+  Escape Shot                  Irongrasp +40%, Hyrri's Ire +16%, Ingenuity +11%
+  Cluster Grenade              Irongrasp +92%, Rondel of Fragility +52%, Ming's Heart +35%
+  Armour Piercing Rounds       Irongrasp +34%, Rondel of Fragility +30%, Hyrri's Ire +20%
+  Artillery Ballista           The Coming Calamity +95%, Irongrasp +38%, Loreweave +22%
+  Explosive Grenade            Irongrasp +32%, Temporalis +25%, Hyrri's Ire +18%
+  Explosive Shot               Irongrasp +33%, Rondel of Fragility +24%, Hyrri's Ire +19%
+  Flash Grenade                Irongrasp +95%, Rondel of Fragility +54%, Ming's Heart +37%
+  Fragmentation Rounds         The Coming Calamity +96%, Irongrasp +37%, Rondel of Fragility +25%
+  Fragments Of The Past        Hyrri's Ire +22%, Avatar of Fire +20%, Rondel of Fragility +15%
+  Freezing Salvo               Irongrasp +39%, Rondel of Fragility +24%, Hyrri's Ire +19%
+  Galvanic Shards              The Coming Calamity +96%, Irongrasp +38%, Rondel of Fragility +25%
+  Gas Arrow                    Irongrasp +39%, Rondel of Fragility +24%, Hyrri's Ire +21%
+  Gas Grenade                  Temporalis +50%, Irongrasp +34%, Hyrri's Ire +20%
+  Glacial Bolt                 Irongrasp +33%, Hyrri's Ire +19%, Rondel of Fragility +18%
+  Hailstorm Rounds             Irongrasp +33%, Hyrri's Ire +18%, Rondel of Fragility +15%
+  High Velocity Rounds         Irongrasp +91%, Rondel of Fragility +57%, Hyrri's Ire +25%
+  Ice Shot                     Irongrasp +39%, Hyrri's Ire +19%, Rondel of Fragility +19%
+  Lightning Arrow              Irongrasp +37%, Rondel of Fragility +23%, Hyrri's Ire +15%
+  Ice Shards                   Irongrasp +33%, Rondel of Fragility +25%, Hyrri's Ire +19%
+  Incendiary Shot              The Coming Calamity +96%, Irongrasp +37%, Rondel of Fragility +25%
+  Lightning Rod                Irongrasp +35%, Rondel of Fragility +21%, Doryani's Prototype +14%
+  Magnetic Salvo               Irongrasp +37%, Rondel of Fragility +24%, Hyrri's Ire +15%
+  Oil Grenade                  Irongrasp +89%, Temporalis +29%, Loreweave +25%
+  Permafrost Bolts             The Coming Calamity +96%, Irongrasp +37%, Rondel of Fragility +25%
+  Poisonburst Arrow            Irongrasp +95%, Rondel of Fragility +55%, Hyrri's Ire +26%
+  Rain of Arrows               Irongrasp +40%, Hyrri's Ire +21%, Avatar of Fire +16%
+  Plasma Blast                 Irongrasp +31%, Doryani's Prototype +15%, Ingenuity +11%
+  Rapid Shot                   Irongrasp +32%, Rondel of Fragility +27%, Hyrri's Ire +19%
+  Shockchain Arrow             Irongrasp +37%, Rondel of Fragility +23%, Hyrri's Ire +15%
+  Shockwave Totem              Rondel of Fragility +24%, Hyrri's Ire +23%, Ingenuity +11%
+  Shockburst Rounds            Irongrasp +32%, Rondel of Fragility +22%, Hyrri's Ire +19%
+  Siege Ballista               The Coming Calamity +95%, Irongrasp +38%, Loreweave +22%
+  Siege Cascade                Irongrasp +33%, Hyrri's Ire +20%, Rondel of Fragility +19%
+  Snipe                        Irongrasp +102%, Rondel of Fragility +63%, Ming's Heart +39%
+  Spiral Volley                Irongrasp +40%, Hyrri's Ire +18%, Rondel of Fragility +17%
+  Stormcaller Arrow            Irongrasp +37%, Rondel of Fragility +23%, Hyrri's Ire +15%
+  Stormblast Bolts             Irongrasp +32%, Hyrri's Ire +19%, Rondel of Fragility +15%
+  Tornado Shot                 Irongrasp +40%, Rondel of Fragility +25%, Hyrri's Ire +21%
+  Toxic Growth                 Irongrasp +39%, Rondel of Fragility +24%, Hyrri's Ire +21%
+  Vine Arrow                   Irongrasp +40%, Rondel of Fragility +25%, Hyrri's Ire +18%
+  Voltaic Barrier              Rondel of Fragility +38%, Hyrri's Ire +17%, Doryani's Prototype +14%
+  Voltaic Grenade              Temporalis +33%, Irongrasp +32%, Hyrri's Ire +18%
+44 skills scanned; 24 flags against all skills, 23 against the skill's own family, 6 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   39% (family usual +0%, 4 peers)  Ming's Heart                 on Snipe  [unique]
+  +   37% (family usual +0%, 16 peers)  Ming's Heart                 on Flash Grenade  [unique]
+  +   33% (family usual +0%, 0 peers)  Temporalis                   on Voltaic Grenade  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+  +   34% (family usual +5%, 16 peers)  Loreweave                    on Flash Grenade  [unique]
+  +   50% (family usual +25%, 4 peers)  Temporalis                   on Gas Grenade  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 41 skills  [unique]
+  Rondel of Fragility          strong on 7 skills  [unique]
+  The Coming Calamity          strong on 6 skills  [unique]

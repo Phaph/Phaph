@@ -1,0 +1,23 @@
+166 skills x 318 uniques/keystones, 166 skills to go, 6 workers
+  Boneshatter                  Dance with Death +25%, Rondel of Fragility +20%, Hyrri's Ire +19%
+  Forge Hammer                 Hyrri's Ire +18%, Sands of Silk +15%, Temporalis +14%
+  Earthquake                   Dance with Death +25%, Rondel of Fragility +20%, Hyrri's Ire +19%
+  Earthshatter                 Dance with Death +25%, Rondel of Fragility +20%, Hyrri's Ire +19%
+  Armour Breaker               Dance with Death +25%, Rondel of Fragility +20%, Hyrri's Ire +18%
+  Hammer of the Gods           Rondel of Fragility +56%, Hyrri's Ire +26%, Dance with Death +25%
+  Leap Slam                    Hyrri's Ire +19%, Ingenuity +12%, Dance with Death +10%
+  Perfect Strike               Dance with Death +25%, Rondel of Fragility +20%, Hyrri's Ire +18%
+  Molten Blast                 Irongrasp +36%, Dance with Death +25%, Hyrri's Ire +18%
+  Rolling Slam                 The Coming Calamity +98%, Rondel of Fragility +46%, Dance with Death +25%
+  Stampede                     Dance with Death +25%, Rondel of Fragility +20%, Hyrri's Ire +19%
+  Shield Wall                  Rondel of Fragility +28%, Hyrri's Ire +16%, Loreweave +14%
+  Sunder                       Rondel of Fragility +29%, Dance with Death +23%, Loreweave +21%
+  Supercharged Slam            Rondel of Fragility +26%, Ryslatha's Coil +20%, Apron of Emiran +17%
+  Volcanic Fissure             Rondel of Fragility +26%, Dance with Death +25%, Hyrri's Ire +17%
+15 skills scanned; 4 flags against all skills, 4 against the skill's own family, 4 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   98% (family usual +0%, 7 peers)  The Coming Calamity          on Rolling Slam  [unique]
+  +   36% (family usual +0%, 3 peers)  Irongrasp                    on Molten Blast  [unique]
+  +   56% (family usual +20%, 7 peers)  Rondel of Fragility          on Hammer of the Gods  [unique]
+  +   46% (family usual +20%, 7 peers)  Rondel of Fragility          on Rolling Slam  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):

@@ -1,0 +1,6 @@
+15 skills scanned; 3 flags against all skills, 3 against the skill's own family, 3 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   97% (family usual +0%, 7 peers)  The Coming Calamity          on Rolling Slam  [unique]
+  +   34% (family usual +0%, 3 peers)  Irongrasp                    on Molten Blast  [unique]
+  +   46% (family usual +18%, 7 peers)  Rondel of Fragility          on Hammer of the Gods  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):

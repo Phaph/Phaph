@@ -1,0 +1,1925 @@
+{
+ "skills": {
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Channel",
+    "Detonator",
+    "Fire",
+    "GainsStages",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.058,
+    "unique:Ingenuity": 0.132,
+    "unique:Hyrri's Ire": 0.081,
+    "unique:Rondel of Fragility": 0.12,
+    "unique:Irongrasp": 0.33,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 31391
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Melee",
+    "MeleeSingleTarget",
+    "Physical",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.254,
+    "unique:Loreweave": 0.069,
+    "unique:Ingenuity": 0.113,
+    "unique:Hyrri's Ire": 0.19,
+    "unique:Rondel of Fragility": 0.14,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Heart of the Well": 0.095,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 46623
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.06,
+    "keystone:Dance with Death": 0.252,
+    "unique:Loreweave": 0.107,
+    "unique:Ingenuity": 0.118,
+    "unique:Hyrri's Ire": 0.192,
+    "unique:Rondel of Fragility": 0.152,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Heart of the Well": 0.079,
+    "unique:Mageblood": 0.077,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 43213
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "AttackInPlaceIsDefault",
+    "Bow",
+    "Duration",
+    "GroundTargetedProjectile",
+    "Limit",
+    "Mineable",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "ProjectilesFromUser",
+    "Rain",
+    "RangedAttack",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Sustained",
+    "TotemsAreBallistae",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsedByProxy",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.071,
+    "unique:Thrillsteel": 0.072,
+    "unique:Loreweave": 0.217,
+    "unique:Ming's Heart": 0.137,
+    "unique:Ingenuity": 0.099,
+    "unique:Hyrri's Ire": 0.194,
+    "unique:Rondel of Fragility": 0.212,
+    "unique:The Coming Calamity": 0.95,
+    "unique:Irongrasp": 0.384,
+    "unique:Heart of the Well": 0.086,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 10542
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Fire",
+    "Grenade",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.157,
+    "unique:Temporalis": 0.099,
+    "unique:The Bringer of Rain": 0.07,
+    "unique:Ingenuity": 0.094,
+    "unique:Hyrri's Ire": 0.064,
+    "unique:Irongrasp": 0.536,
+    "unique:Apron of Emiran": 0.212,
+    "unique:Sands of Silk": 0.129,
+    "unique:Mageblood": 0.095,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.086
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 8894
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Thrillsteel": 0.135,
+    "unique:Loreweave": 0.166,
+    "unique:Ingenuity": 0.093,
+    "unique:Hyrri's Ire": 0.203,
+    "unique:Rondel of Fragility": 0.243,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Irongrasp": 0.274,
+    "unique:Heart of the Well": 0.113,
+    "unique:Perfidy": 0.099
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 163538
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "CreatesFissure",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.062,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.059,
+    "unique:Ingenuity": 0.119,
+    "unique:Hyrri's Ire": 0.192,
+    "unique:Rondel of Fragility": 0.16,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Heart of the Well": 0.081,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 24827
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CreatesGroundEffect",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.063,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.059,
+    "unique:Ingenuity": 0.119,
+    "unique:Hyrri's Ire": 0.192,
+    "unique:Rondel of Fragility": 0.159,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Heart of the Well": 0.081,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 20685
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "CannotChain",
+    "Duration",
+    "GroundTargetedProjectile",
+    "Lightning",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNoCollision",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.166,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.15,
+    "unique:Rondel of Fragility": 0.185,
+    "unique:Doryani's Prototype": 0.111,
+    "unique:Irongrasp": 0.341,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.096
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 42433
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Bow",
+    "CanCancelActions",
+    "Cold",
+    "GroundTargetedProjectile",
+    "Jumping",
+    "MirageArcherCanUse",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "ProjectilesNumberModifiersNotApplied",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.064,
+    "unique:Ingenuity": 0.103,
+    "unique:Hyrri's Ire": 0.163,
+    "unique:Doryani's Prototype": 0.078,
+    "unique:Irongrasp": 0.364,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 20518
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Detonator",
+    "Fire",
+    "Grenade",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.097,
+    "unique:Temporalis": 0.25,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Ingenuity": 0.095,
+    "unique:Hyrri's Ire": 0.182,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Irongrasp": 0.299,
+    "unique:Sands of Silk": 0.146,
+    "unique:Mageblood": 0.09,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 54971
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.056,
+    "unique:Ingenuity": 0.098,
+    "unique:Hyrri's Ire": 0.194,
+    "unique:Rondel of Fragility": 0.205,
+    "unique:Doryani's Prototype": 0.067,
+    "unique:Irongrasp": 0.306,
+    "unique:Heart of the Well": 0.065,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 47847
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Grenade",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.298,
+    "unique:Ming's Heart": 0.164,
+    "unique:Temporalis": 0.217,
+    "unique:The Bringer of Rain": 0.076,
+    "unique:Maligaro's Virtuosity": 0.067,
+    "unique:Ingenuity": 0.057,
+    "unique:Hyrri's Ire": 0.177,
+    "unique:Rondel of Fragility": 0.056,
+    "unique:Irongrasp": 0.738,
+    "unique:Apron of Emiran": 0.23,
+    "unique:Sands of Silk": 0.134,
+    "unique:Mageblood": 0.102,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.157
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 9930
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Cooldown",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "Slam",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.162,
+    "unique:Temporalis": 0.142,
+    "unique:Ingenuity": 0.117,
+    "unique:Hyrri's Ire": 0.177,
+    "unique:Doryani's Prototype": 0.057,
+    "unique:Sands of Silk": 0.152,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 12911
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Damage",
+    "Duration",
+    "GamepadDeflectable",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsableWhileShapeshifted"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.177,
+    "unique:Loreweave": 0.069,
+    "unique:Ingenuity": 0.093,
+    "unique:Hyrri's Ire": 0.22,
+    "unique:Rondel of Fragility": 0.109,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 19002
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CannotChain",
+    "Cold",
+    "Damage",
+    "GroundTargetedProjectile",
+    "HasSeals",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.051,
+    "unique:Loreweave": 0.073,
+    "unique:Ingenuity": 0.11,
+    "unique:Hyrri's Ire": 0.195,
+    "unique:Rondel of Fragility": 0.197,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Irongrasp": 0.358,
+    "unique:Heart of the Well": 0.069,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 21753
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.07,
+    "unique:Loreweave": 0.137,
+    "unique:Ingenuity": 0.1,
+    "unique:Hyrri's Ire": 0.203,
+    "unique:Rondel of Fragility": 0.153,
+    "unique:Doryani's Prototype": 0.07,
+    "unique:Irongrasp": 0.304,
+    "unique:Heart of the Well": 0.065,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 13407
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.216,
+    "unique:Ming's Heart": 0.135,
+    "unique:Ingenuity": 0.099,
+    "unique:Hyrri's Ire": 0.194,
+    "unique:Rondel of Fragility": 0.25,
+    "unique:The Coming Calamity": 0.96,
+    "unique:Irongrasp": 0.375,
+    "unique:Heart of the Well": 0.083,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 10386
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chaos",
+    "CreatesGroundEffect",
+    "Duration",
+    "Fire",
+    "GroundTargetedProjectile",
+    "Limit",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.176,
+    "unique:Loreweave": 0.1,
+    "unique:Ingenuity": 0.122,
+    "unique:Hyrri's Ire": 0.21,
+    "unique:Rondel of Fragility": 0.198,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.358,
+    "unique:Heart of the Well": 0.07,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 12650
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Chaos",
+    "Cooldown",
+    "CreatesGroundEffect",
+    "DetonatesAfterTime",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "Limit",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.102,
+    "unique:Loreweave": 0.127,
+    "unique:Temporalis": 0.5,
+    "unique:The Bringer of Rain": 0.066,
+    "unique:Ingenuity": 0.1,
+    "unique:Hyrri's Ire": 0.201,
+    "unique:Doryani's Prototype": 0.068,
+    "unique:Irongrasp": 0.311,
+    "unique:Sands of Silk": 0.147,
+    "unique:Mageblood": 0.091,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 15274
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "ToggleSpawnedObjectTargetable_DefaultOn",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.058,
+    "unique:Ingenuity": 0.094,
+    "unique:Hyrri's Ire": 0.19,
+    "unique:Rondel of Fragility": 0.149,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.304,
+    "unique:Heart of the Well": 0.065,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 26975
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "HasUsageCondition",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.066,
+    "keystone:Dance with Death": 0.248,
+    "unique:Thrillsteel": 0.081,
+    "unique:Loreweave": 0.233,
+    "unique:Ming's Heart": 0.146,
+    "unique:Atsak's Sight": 0.086,
+    "unique:The Bringer of Rain": 0.07,
+    "unique:Ingenuity": 0.091,
+    "unique:Hyrri's Ire": 0.26,
+    "unique:Rondel of Fragility": 0.515,
+    "unique:Edyrn's Tusks": 0.089,
+    "unique:Heart of the Well": 0.076,
+    "unique:Mageblood": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.058
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 60819
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.059,
+    "unique:Ingenuity": 0.091,
+    "unique:Hyrri's Ire": 0.187,
+    "unique:Rondel of Fragility": 0.115,
+    "unique:Doryani's Prototype": 0.063,
+    "unique:Irongrasp": 0.305,
+    "unique:Heart of the Well": 0.07,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality"
+   ],
+   "dps": 41628
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.267,
+    "unique:Ming's Heart": 0.169,
+    "unique:Ingenuity": 0.068,
+    "unique:Hyrri's Ire": 0.24,
+    "unique:Rondel of Fragility": 0.442,
+    "unique:Edyrn's Tusks": 0.101,
+    "unique:Irongrasp": 0.753,
+    "unique:Heart of the Well": 0.065,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.163
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 30344
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Thrillsteel": 0.101,
+    "unique:Loreweave": 0.062,
+    "unique:Ingenuity": 0.091,
+    "unique:Hyrri's Ire": 0.193,
+    "unique:Rondel of Fragility": 0.196,
+    "unique:Doryani's Prototype": 0.065,
+    "unique:Irongrasp": 0.284,
+    "unique:Heart of the Well": 0.097,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 54986
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Cold",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.051,
+    "unique:Loreweave": 0.073,
+    "unique:Ingenuity": 0.11,
+    "unique:Hyrri's Ire": 0.195,
+    "unique:Rondel of Fragility": 0.141,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Irongrasp": 0.359,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 47471
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.055,
+    "keystone:Dance with Death": 0.094,
+    "unique:Loreweave": 0.061,
+    "unique:Ingenuity": 0.117,
+    "unique:Hyrri's Ire": 0.191,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Heart of the Well": 0.058,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 48323
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.063,
+    "unique:Loreweave": 0.215,
+    "unique:Ming's Heart": 0.131,
+    "unique:Ingenuity": 0.101,
+    "unique:Hyrri's Ire": 0.193,
+    "unique:Rondel of Fragility": 0.249,
+    "unique:The Coming Calamity": 0.96,
+    "unique:Irongrasp": 0.374,
+    "unique:Heart of the Well": 0.083,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 10439
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chains",
+    "Lightning",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.079,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.152,
+    "unique:Rondel of Fragility": 0.185,
+    "unique:Doryani's Prototype": 0.11,
+    "unique:Irongrasp": 0.342,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 33036
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Duration",
+    "GroundTargetedProjectile",
+    "Lightning",
+    "MirageArcherCanUse",
+    "ObjectDurability",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "Sustained",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Thrillsteel": 0.059,
+    "unique:Loreweave": 0.133,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.143,
+    "unique:Rondel of Fragility": 0.161,
+    "unique:Doryani's Prototype": 0.14,
+    "unique:Irongrasp": 0.325,
+    "unique:Heart of the Well": 0.077,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 23816
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Damage",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.068,
+    "unique:Ingenuity": 0.115,
+    "unique:Hyrri's Ire": 0.18,
+    "unique:Rondel of Fragility": 0.069,
+    "unique:Doryani's Prototype": 0.058,
+    "unique:Irongrasp": 0.323,
+    "unique:Heart of the Well": 0.081,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 40084
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Bow",
+    "Damage",
+    "GroundTargetedProjectile",
+    "Lightning",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.109,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.149,
+    "unique:Rondel of Fragility": 0.19,
+    "unique:Doryani's Prototype": 0.111,
+    "unique:Irongrasp": 0.341,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 11648
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Fire",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerfectTiming"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.255,
+    "unique:Loreweave": 0.207,
+    "unique:Ingenuity": 0.117,
+    "unique:Hyrri's Ire": 0.184,
+    "unique:Rondel of Fragility": 0.162,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Heart of the Well": 0.084,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 73383
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "CreatesGroundEffect",
+    "DetonatesAfterTime",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.25,
+    "unique:Ming's Heart": 0.188,
+    "unique:Temporalis": 0.291,
+    "unique:The Bringer of Rain": 0.077,
+    "unique:Maligaro's Virtuosity": 0.073,
+    "unique:Ingenuity": 0.056,
+    "unique:Hyrri's Ire": 0.179,
+    "unique:Rondel of Fragility": 0.054,
+    "unique:Irongrasp": 0.739,
+    "unique:Apron of Emiran": 0.219,
+    "unique:Sands of Silk": 0.128,
+    "unique:Mageblood": 0.102,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.167
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Skill Gem Quality",
+    "Skill Gem Quality",
+    "Skill Gem Quality"
+   ],
+   "dps": 11681
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.063,
+    "unique:Loreweave": 0.216,
+    "unique:Ming's Heart": 0.132,
+    "unique:Ingenuity": 0.101,
+    "unique:Hyrri's Ire": 0.193,
+    "unique:Rondel of Fragility": 0.249,
+    "unique:The Coming Calamity": 0.962,
+    "unique:Irongrasp": 0.373,
+    "unique:Heart of the Well": 0.083,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 9929
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chaos",
+    "Duration",
+    "MirageArcherCanUse",
+    "Projectile",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.235,
+    "unique:Ming's Heart": 0.161,
+    "unique:Ingenuity": 0.085,
+    "unique:Hyrri's Ire": 0.261,
+    "unique:Rondel of Fragility": 0.419,
+    "unique:Edyrn's Tusks": 0.081,
+    "unique:Irongrasp": 0.781,
+    "unique:Heart of the Well": 0.065,
+    "unique:Mageblood": 0.051,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.103
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 16067
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.056,
+    "unique:Ingenuity": 0.106,
+    "unique:Hyrri's Ire": 0.079,
+    "unique:Doryani's Prototype": 0.151,
+    "unique:Irongrasp": 0.286,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 176539
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Bow",
+    "ConsumesCharges",
+    "GroundTargetedProjectile",
+    "MirageArcherCanUse",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Sustained",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.147,
+    "unique:Loreweave": 0.14,
+    "unique:The Bringer of Rain": 0.064,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.213,
+    "unique:Doryani's Prototype": 0.067,
+    "unique:Irongrasp": 0.366,
+    "unique:Mageblood": 0.089,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 170327
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.061,
+    "keystone:Dance with Death": 0.25,
+    "unique:Loreweave": 0.244,
+    "unique:Beacon of Azis": 0.131,
+    "unique:Ming's Heart": 0.137,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.185,
+    "unique:Rondel of Fragility": 0.455,
+    "unique:The Coming Calamity": 0.975,
+    "unique:Xoph's Blood": 0.173,
+    "unique:Heart of the Well": 0.097,
+    "unique:Mageblood": 0.094,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 5517
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Thrillsteel": 0.111,
+    "unique:Loreweave": 0.063,
+    "unique:Ingenuity": 0.094,
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Rondel of Fragility": 0.22,
+    "unique:Doryani's Prototype": 0.064,
+    "unique:Irongrasp": 0.28,
+    "unique:Heart of the Well": 0.103,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 281988
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Duration",
+    "Limit",
+    "Melee",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.184,
+    "unique:Ming's Heart": 0.071,
+    "unique:Ingenuity": 0.068,
+    "unique:Hyrri's Ire": 0.154,
+    "unique:Rondel of Fragility": 0.241,
+    "unique:Edyrn's Tusks": 0.063,
+    "unique:Doryani's Prototype": 0.089,
+    "unique:Heart of the Well": 0.064,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 21270
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CannotCreateJaggedGround",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Mineable",
+    "Nova",
+    "Slam",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Trappable",
+    "UsableWhileShapeshifted",
+    "UsedByProxy",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Thrillsteel": 0.051,
+    "unique:Loreweave": 0.269,
+    "unique:Beacon of Azis": 0.098,
+    "unique:Ming's Heart": 0.174,
+    "unique:The Bringer of Rain": 0.059,
+    "unique:Ingenuity": 0.105,
+    "unique:Hyrri's Ire": 0.205,
+    "unique:Rondel of Fragility": 0.511,
+    "unique:The Coming Calamity": 0.891,
+    "unique:Xoph's Blood": 0.115,
+    "unique:Irongrasp": 0.482,
+    "unique:Heart of the Well": 0.097,
+    "unique:Mageblood": 0.082,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 3988
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chains",
+    "Lightning",
+    "Mineable",
+    "MirageArcherCanUse",
+    "ObjectDurability",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesShock",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.183,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.149,
+    "unique:Rondel of Fragility": 0.19,
+    "unique:Doryani's Prototype": 0.111,
+    "unique:Irongrasp": 0.341,
+    "unique:Heart of the Well": 0.071,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 23722
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Thrillsteel": 0.089,
+    "unique:Loreweave": 0.071,
+    "unique:Ingenuity": 0.095,
+    "unique:Hyrri's Ire": 0.196,
+    "unique:Rondel of Fragility": 0.171,
+    "unique:Doryani's Prototype": 0.091,
+    "unique:Irongrasp": 0.282,
+    "unique:Heart of the Well": 0.087,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 50773
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "AttackInPlaceIsDefault",
+    "Barrageable",
+    "CannotChain",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Sustained",
+    "TotemsAreBallistae",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsedByProxy",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.071,
+    "unique:Thrillsteel": 0.072,
+    "unique:Loreweave": 0.217,
+    "unique:Ming's Heart": 0.137,
+    "unique:Ingenuity": 0.099,
+    "unique:Hyrri's Ire": 0.194,
+    "unique:Rondel of Fragility": 0.212,
+    "unique:The Coming Calamity": 0.95,
+    "unique:Irongrasp": 0.384,
+    "unique:Heart of the Well": 0.086,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 10542
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.068,
+    "unique:Loreweave": 0.053,
+    "unique:Ingenuity": 0.1,
+    "unique:Hyrri's Ire": 0.202,
+    "unique:Rondel of Fragility": 0.157,
+    "unique:Doryani's Prototype": 0.07,
+    "unique:Irongrasp": 0.309,
+    "unique:Heart of the Well": 0.068,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 19494
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Channel",
+    "Cold",
+    "MirageArcherCanUse",
+    "PerfectTiming",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFreeze"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.088,
+    "unique:Loreweave": 0.27,
+    "unique:Ming's Heart": 0.125,
+    "unique:Ingenuity": 0.074,
+    "unique:Hyrri's Ire": 0.215,
+    "unique:Rondel of Fragility": 0.323,
+    "unique:Irongrasp": 0.656,
+    "unique:Apron of Emiran": 0.171,
+    "unique:Heart of the Well": 0.069,
+    "unique:Mageblood": 0.06,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.139
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 7292
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "types": [
+    "Attack",
+    "Bow",
+    "ConsumesCharges",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.058,
+    "unique:Ingenuity": 0.112,
+    "unique:Hyrri's Ire": 0.176,
+    "unique:Rondel of Fragility": 0.125,
+    "unique:Doryani's Prototype": 0.084,
+    "unique:Irongrasp": 0.369,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 14898
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesGroundEffect",
+    "Duration",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.063,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.059,
+    "unique:Ingenuity": 0.119,
+    "unique:Hyrri's Ire": 0.192,
+    "unique:Rondel of Fragility": 0.159,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Heart of the Well": 0.081,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 27581
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "MirageArcherCanUse",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.059,
+    "unique:Ingenuity": 0.096,
+    "unique:Hyrri's Ire": 0.188,
+    "unique:Rondel of Fragility": 0.115,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Irongrasp": 0.3,
+    "unique:Heart of the Well": 0.069,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 19007
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Duration",
+    "Lightning",
+    "MirageArcherCanUse",
+    "Projectile",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.064,
+    "unique:Ingenuity": 0.12,
+    "unique:Hyrri's Ire": 0.153,
+    "unique:Rondel of Fragility": 0.186,
+    "unique:Doryani's Prototype": 0.109,
+    "unique:Irongrasp": 0.342,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 7297
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CreatesFissure",
+    "Duration",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.236,
+    "unique:Loreweave": 0.279,
+    "unique:The Covenant": 0.09,
+    "unique:Ming's Heart": 0.117,
+    "unique:Ingenuity": 0.084,
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Rondel of Fragility": 0.196,
+    "unique:Edyrn's Tusks": 0.109,
+    "unique:Heart of the Well": 0.08,
+    "unique:Mageblood": 0.081,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.086
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 35628
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CannotChain",
+    "DamageOverTime",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "MirageArcherCanUse",
+    "ObjectDurability",
+    "Physical",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.153,
+    "unique:Loreweave": 0.066,
+    "unique:Ingenuity": 0.121,
+    "unique:Hyrri's Ire": 0.214,
+    "unique:Rondel of Fragility": 0.205,
+    "unique:Doryani's Prototype": 0.067,
+    "unique:Irongrasp": 0.364,
+    "unique:Heart of the Well": 0.07,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 24688
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "GainsStages",
+    "Melee",
+    "NoDualWield",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.099,
+    "unique:The Bringer of Rain": 0.054,
+    "unique:Maligaro's Virtuosity": 0.066,
+    "unique:Whisper of the Brotherhood": 0.061,
+    "unique:Rondel of Fragility": 0.069,
+    "unique:Apron of Emiran": 0.172,
+    "unique:Bursting Decay": 0.052,
+    "unique:Heart of the Well": 0.101,
+    "unique:Mageblood": 0.089,
+    "unique:Perfidy": 0.1,
+    "unique:Ryslatha's Coil": 0.198
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 95763
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Barrageable",
+    "Bow",
+    "Chaos",
+    "DetonatesAfterTime",
+    "GroundTargetedProjectile",
+    "Limit",
+    "MirageArcherCanUse",
+    "Plant",
+    "Projectile",
+    "Rain",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.154,
+    "unique:Loreweave": 0.065,
+    "unique:Ingenuity": 0.121,
+    "unique:Hyrri's Ire": 0.214,
+    "unique:Rondel of Fragility": 0.198,
+    "unique:Doryani's Prototype": 0.067,
+    "unique:Irongrasp": 0.358,
+    "unique:Heart of the Well": 0.069,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 8258
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Chaos",
+    "DamageOverTime",
+    "Duration",
+    "Limit",
+    "MirageArcherCanUse",
+    "Plant",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "ToggleSpawnedObjectTargetable_DefaultOff",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.058,
+    "unique:Ingenuity": 0.112,
+    "unique:Hyrri's Ire": 0.176,
+    "unique:Rondel of Fragility": 0.199,
+    "unique:Doryani's Prototype": 0.084,
+    "unique:Irongrasp": 0.369,
+    "unique:Heart of the Well": 0.067,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 27660
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Sustained",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.112,
+    "unique:Ingenuity": 0.114,
+    "unique:Hyrri's Ire": 0.173,
+    "unique:Rondel of Fragility": 0.212,
+    "unique:Doryani's Prototype": 0.055,
+    "unique:Heart of the Well": 0.081,
+    "unique:Mageblood": 0.076,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 27198
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Lightning",
+    "Totemable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.071,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Ingenuity": 0.117,
+    "unique:Hyrri's Ire": 0.174,
+    "unique:Rondel of Fragility": 0.329,
+    "unique:Doryani's Prototype": 0.134,
+    "unique:Heart of the Well": 0.078,
+    "unique:Mageblood": 0.09,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency"
+   ],
+   "dps": 8754
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Duration",
+    "Grenade",
+    "Lightning",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.138,
+    "unique:Temporalis": 0.333,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Ingenuity": 0.096,
+    "unique:Hyrri's Ire": 0.179,
+    "unique:Doryani's Prototype": 0.098,
+    "unique:Irongrasp": 0.298,
+    "unique:Sands of Silk": 0.147,
+    "unique:Mageblood": 0.09,
+    "unique:Perfidy": 0.1
+   },
+   "ascendancy_nodes": [
+    "Integrated Efficiency",
+    "Advanced Thaumaturgy"
+   ],
+   "dps": 25860
+  }
+ },
+ "updated": "2026-11-20 09:33"
+}

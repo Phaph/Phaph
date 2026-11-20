@@ -1,0 +1,479 @@
+{
+ "skills": {
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Melee",
+    "MeleeSingleTarget",
+    "Physical",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.073,
+    "keystone:Dance with Death": 0.25,
+    "unique:Loreweave": 0.059,
+    "unique:Doryani's Prototype": 0.059,
+    "unique:Rondel of Fragility": 0.171,
+    "unique:Hyrri's Ire": 0.181,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.115,
+    "unique:Heart of the Well": 0.096,
+    "unique:Mageblood": 0.079
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 40859
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "HasUsageCondition",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.199,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.223,
+    "unique:Edyrn's Tusks": 0.093,
+    "unique:Atsak's Sight": 0.077,
+    "unique:The Bringer of Rain": 0.071,
+    "unique:Thrillsteel": 0.1,
+    "unique:Rondel of Fragility": 0.455,
+    "unique:Hyrri's Ire": 0.249,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.093,
+    "unique:Heart of the Well": 0.084,
+    "unique:Mageblood": 0.081,
+    "unique:Ryslatha's Coil": 0.056,
+    "unique:Ming's Heart": 0.129
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 63939
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CreatesGroundEffect",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.093,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.056,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Rondel of Fragility": 0.179,
+    "unique:Hyrri's Ire": 0.185,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.117,
+    "unique:Heart of the Well": 0.083,
+    "unique:Mageblood": 0.079
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 19049
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Cooldown",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "Slam",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.08,
+    "unique:Temporalis": 0.14,
+    "unique:Doryani's Prototype": 0.057,
+    "unique:Hyrri's Ire": 0.178,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.114,
+    "unique:Mageblood": 0.08,
+    "unique:Sands of Silk": 0.151
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 12224
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.091,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.11,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Rondel of Fragility": 0.179,
+    "unique:Hyrri's Ire": 0.184,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.117,
+    "unique:Heart of the Well": 0.083,
+    "unique:Mageblood": 0.08
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 38280
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "CreatesFissure",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.093,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.057,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Rondel of Fragility": 0.18,
+    "unique:Hyrri's Ire": 0.184,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.117,
+    "unique:Heart of the Well": 0.083,
+    "unique:Mageblood": 0.079
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 22862
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.08,
+    "keystone:Dance with Death": 0.25,
+    "unique:Loreweave": 0.258,
+    "unique:Beacon of Azis": 0.129,
+    "unique:The Coming Calamity": 0.972,
+    "unique:Rondel of Fragility": 0.426,
+    "unique:Hyrri's Ire": 0.179,
+    "unique:Xoph's Blood": 0.177,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.114,
+    "unique:Heart of the Well": 0.097,
+    "unique:Mageblood": 0.095,
+    "unique:Ming's Heart": 0.163
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 6268
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Fire",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerfectTiming"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.063,
+    "unique:Doryani's Prototype": 0.057,
+    "unique:Rondel of Fragility": 0.177,
+    "unique:Hyrri's Ire": 0.176,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.115,
+    "unique:Heart of the Well": 0.083,
+    "unique:Mageblood": 0.08
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 62742
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "Damage",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.061,
+    "unique:Doryani's Prototype": 0.055,
+    "unique:Rondel of Fragility": 0.101,
+    "unique:Hyrri's Ire": 0.17,
+    "unique:Irongrasp": 0.343,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.116,
+    "unique:Heart of the Well": 0.083,
+    "unique:Mageblood": 0.079
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 34156
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.086,
+    "keystone:Dance with Death": 0.101,
+    "unique:Loreweave": 0.058,
+    "unique:Doryani's Prototype": 0.059,
+    "unique:Hyrri's Ire": 0.183,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.115,
+    "unique:Heart of the Well": 0.061,
+    "unique:Mageblood": 0.08
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 45875
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesGroundEffect",
+    "Duration",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.093,
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.056,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Rondel of Fragility": 0.179,
+    "unique:Hyrri's Ire": 0.185,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.117,
+    "unique:Heart of the Well": 0.083,
+    "unique:Mageblood": 0.079
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 25398
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Duration",
+    "Limit",
+    "Melee",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Loreweave": 0.148,
+    "unique:Edyrn's Tusks": 0.074,
+    "unique:Doryani's Prototype": 0.087,
+    "unique:Rondel of Fragility": 0.236,
+    "unique:Hyrri's Ire": 0.15,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.068,
+    "unique:Heart of the Well": 0.071,
+    "unique:Ming's Heart": 0.084
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 20184
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlace",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Sustained",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Loreweave": 0.068,
+    "unique:Doryani's Prototype": 0.054,
+    "unique:Rondel of Fragility": 0.233,
+    "unique:Hyrri's Ire": 0.169,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.112,
+    "unique:Heart of the Well": 0.083,
+    "unique:Mageblood": 0.079
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 24505
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CreatesFissure",
+    "Duration",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.228,
+    "unique:Loreweave": 0.2,
+    "unique:The Covenant": 0.087,
+    "unique:Edyrn's Tusks": 0.114,
+    "unique:Rondel of Fragility": 0.209,
+    "unique:Hyrri's Ire": 0.181,
+    "unique:Perfidy": 0.1,
+    "unique:Ingenuity": 0.085,
+    "unique:Heart of the Well": 0.08,
+    "unique:Mageblood": 0.082,
+    "unique:Ryslatha's Coil": 0.081,
+    "unique:Ming's Heart": 0.108
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 31086
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "GainsStages",
+    "Melee",
+    "NoDualWield",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.098,
+    "unique:Maligaro's Virtuosity": 0.061,
+    "unique:Apron of Emiran": 0.173,
+    "unique:The Bringer of Rain": 0.059,
+    "unique:Whisper of the Brotherhood": 0.061,
+    "unique:Rondel of Fragility": 0.192,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.101,
+    "unique:Mageblood": 0.094,
+    "unique:Ryslatha's Coil": 0.199
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 61861
+  }
+ },
+ "updated": "2026-11-20 07:00"
+}

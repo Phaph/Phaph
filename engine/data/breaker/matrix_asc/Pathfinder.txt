@@ -1,0 +1,10 @@
+41 skills scanned; 16 flags against all skills, 14 against the skill's own family, 5 on 5 skills or fewer (true one-skill interactions).
+One-skill interactions (gain vs the family's median; family size):
+  +   96% (family usual +0%, 3 peers)  The Coming Calamity          on Rapid Assault  [unique]
+  +   89% (family usual +0%, 2 peers)  The Coming Calamity          on Shockwave Totem  [unique]
+  +   39% (family usual +0%, 4 peers)  Ming's Heart                 on Snipe  [unique]
+  +   37% (family usual +0%, 3 peers)  Apron of Emiran              on Rake  [unique]
+  +   37% (family usual +7%, 4 peers)  Loreweave                    on Snipe  [unique]
+Broad (+30%+ on more than 5 skills: best-in-slot for a kind of build, not an interaction):
+  Irongrasp                    strong on 26 skills  [unique]
+  Rondel of Fragility          strong on 11 skills  [unique]
