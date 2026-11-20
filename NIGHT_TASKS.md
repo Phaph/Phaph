@@ -27,7 +27,7 @@ Usage is nearly out. Automated jobs carry the work; Claude check-ins stay tiny:
 - On a keepalive: run status.sh once. If jobs are still running, stop there (no new work). When the ailment scan
   has finished: commit its json + `ailments-report` text, add the top payoffs to leads.json, then stop.
 - Bigger tasks (14 rest, 15, 16) wait for the reset.
-- After the reset: the sweep's results file is written by Docker as root, so the host-side timeout handler can't record
+- Done 2026-11-20 (night_sweep.sh chowns the results file back after each build). Was: the sweep's results file is written by Docker as root, so the host-side timeout handler can't record
   hung builds (chmod'd by hand 2026-11-19; make night_sweep.sh run the container as the host user).
 - Combo play style (engine only, not deployed) tested 2026-11-19: Rend Titan end + Armour Breaker on weapon set 2:
   boss 59,214 -> 72,621 (+23%), break 1.4 s, up 90%. To check after the reset: score_combo's setup DPS equals the

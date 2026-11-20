@@ -19,6 +19,8 @@ CPUS=${SWEEP_CPUS:-4}           # on the server, leave the rest for the live sit
 SHARD=${SHARD:-0}
 SHARDS=${SHARDS:-1}
 PY=$(command -v python3 || command -v python)
+HOST_IDS="$(id -u):$(id -g)"                  # the container writes as root: hand the results file back,
+                                                # so the timeout handler below can record a hung build
 N=$(docker run --rm -v "$HOST_DIR/engine:/app/engine_src" poe2-optimizer sh -c \
     "cp /app/engine_src/*.py /app/engine/ && cp -r /app/engine_src/tools /app/engine/ && cd /app/engine && python -c 'import sys; sys.path.insert(0,\"tools\"); from az_test import sweep_prompts; print(len(sweep_prompts()))'" 2>/dev/null | tail -1)
 echo "$(date -u +%FT%TZ) sweep lane $SHARD of $SHARDS: $N builds in all, ${LIMIT}s limit each, $CPUS cpus, -> $OUT"
@@ -33,7 +35,7 @@ for i in $(seq 1 "$N"); do
   report "A-to-Z sweep lane $SHARD: build $k of $mine (#$i) running"
   docker run --rm --cpus "$CPUS" --name "sweep-$SHARD-$i" -e SWEEP=1 -e WORKERS="$CPUS" \
     -v "$HOST_DIR/engine:/app/engine_src" poe2-optimizer sh -c \
-    "cp /app/engine_src/*.py /app/engine_src/runner.lua /app/engine/ && cp -r /app/engine_src/tools /app/engine/ && cp /app/engine_src/data/*.json /app/engine/data/ && cd /app/engine && timeout -s KILL $LIMIT python tools/az_test.py run --only $i --out /app/engine_src/data/baseline/$OUT_NAME"
+    "cp /app/engine_src/*.py /app/engine_src/runner.lua /app/engine/ && cp -r /app/engine_src/tools /app/engine/ && cp /app/engine_src/data/*.json /app/engine/data/ && cd /app/engine && timeout -s KILL $LIMIT python tools/az_test.py run --only $i --out /app/engine_src/data/baseline/$OUT_NAME; c=\$?; chown $HOST_IDS /app/engine_src/data/baseline/$OUT_NAME 2>/dev/null; exit \$c"
   code=$?
   if [ "$code" = 137 ]; then
     echo "#$i TIMEOUT after ${LIMIT}s"
