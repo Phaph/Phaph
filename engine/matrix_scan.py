@@ -181,10 +181,14 @@ def report(d: dict, top: int = 40, types: dict[str, set[str]] | None = None) -> 
     out = [f"{len(d['skills'])} skills scanned; {len(outliers(d))} flags against all skills, {len(rows)} against "
            f"the skill's own family, {len(one)} on {BROAD_SKILLS} skills or fewer (true one-skill interactions).",
            "One-skill interactions (gain vs the family's median; family size):"]
+    sys.path.insert(0, str(Path(__file__).parent / "tools"))
+    from unsupported_lines import flagged
+    shaky = flagged({k.split(":", 1)[1] for k in counts} | {r[1].split(":", 1)[1] for r in rows})
+    tag = lambda k: "  (PoB can't read a line: check data/breaker/unsupported.txt)" if k.split(":", 1)[1] in shaky else ""
     out += [f"  +{v:>6.0%} (family usual +{v - x:.0%}, {nf} peers)  {k.split(':', 1)[1]:<28} on {n}  [{k.split(':')[0]}]"
-            for n, k, v, x, nf in one[:top]]
+            f"{tag(k)}" for n, k, v, x, nf in one[:top]]
     out.append(f"Broad (+30%+ on more than {BROAD_SKILLS} skills: best-in-slot for a kind of build, not an interaction):")
-    out += [f"  {k.split(':', 1)[1]:<28} strong on {counts[k]} skills  [{k.split(':')[0]}]" for k in broad[:15]]
+    out += [f"  {k.split(':', 1)[1]:<28} strong on {counts[k]} skills  [{k.split(':')[0]}]{tag(k)}" for k in broad[:15]]
     return "\n".join(out)
 
 

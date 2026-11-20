@@ -1,0 +1,694 @@
+{
+ "pob_version": "0.23.1",
+ "patch": "0_5",
+ "updated": "2026-11-20 18:14",
+ "uniques": {
+  "Guiding Palm of the Heart": [
+   "50% of your Base Life Regeneration is granted to Allies in your Presence",
+   "Grants effect of Guided Meteoric Shrine"
+  ],
+  "Berek's Respite": [
+   "Wind Skills which can be boosted by Elemental Ground Surfaces count",
+   "as being boosted by Ignited Ground"
+  ],
+  "Queen of the Forest": [
+   "Increases Movement Speed by 25%, plus 1% per 600 Evasion Rating, up to a maximum of 75%",
+   "Other Modifiers to Movement Speed except for Sprinting do not apply"
+  ],
+  "Surge of the Tide": [
+   "Every second Slam Skill you use while Shapeshifted is Ancestrally Boosted",
+   "Every second Strike Skill you use while Shapeshifted is Ancestrally Boosted"
+  ],
+  "Dusk Vigil": [
+   "Trigger Ember Fusillade Skill on casting a Spell"
+  ],
+  "Guiding Palm of the Mind": [
+   "50% of your Base Life Regeneration is granted to Allies in your Presence",
+   "Grants effect of Guided Tempest Shrine"
+  ],
+  "Blackflame": [
+   "Withered you inflict also increases Fire Damage taken",
+   "Withered does not expire on Enemies Ignited by you"
+  ],
+  "Killjoy": [
+   "Flasks do not recover Life",
+   "On-Kill Effects happen twice"
+  ],
+  "Keeper of the Arc": [
+   "Every 5 seconds, gain a Verisium Infusion",
+   "Alternating every 5 seconds:",
+   "Take 40% less Damage from Hits"
+  ],
+  "Cadiro's Gambit": [
+   "Each Arrow fired is a Crescendo, Splinter, Reversing, Diamond, Covetous, or Blunt Arrow"
+  ],
+  "Redemption": [
+   "Gain 1 Explosive Rhythm every (2-3) times you use a Grenade Skill",
+   "Remove all Explosive Rhythm on reaching 10 to gain Explosive Fervour for 10 Seconds"
+  ],
+  "The Raven's Flock": [
+   "Minions have (10-20)% chance to inflict Gruelling Madness on Hit"
+  ],
+  "Apep's Supremacy": [
+   "+25% chance to be Poisoned"
+  ],
+  "Yriel's Fostering": [
+   "You can have two Companions of different types"
+  ],
+  "Vestige of Darkness": [
+   "The Bodach haunts your Presence"
+  ],
+  "Drillneck": [
+   "Attack Projectiles Return if they Pierced at least (2-4) times",
+   "Projectiles deal (42-64)% increased Damage with Hits for each time they have Pierced",
+   "Projectiles have (42-64)% increased Critical Hit chance for each time they have Pierced"
+  ],
+  "Sacred Flame": [
+   "Allies in your Presence Regenerate (2-3)% of their Maximum Life per second"
+  ],
+  "Blistering Bond": [
+   "You take Fire Damage instead of Physical Damage from Bleeding"
+  ],
+  "Window to Paradise": [
+   "Inflict Elemental Exposure to Enemies 3 metres in front of you",
+   "for 4 seconds, every 0.25 seconds while raised"
+  ],
+  "Soul Tether": [
+   "Excess Life Recovery from Leech is applied to Energy Shield"
+  ],
+  "Reverie": [
+   "Cannot use Life Flasks",
+   "Non-Unique Life Flasks apply their Effects constantly",
+   "Recovery from Life Flasks cannot be Instant",
+   "Recovery from your Life Flasks cannot be applied to anything other than you",
+   "(40-60)% less Life Flask Recovery"
+  ],
+  "The Black Doubt": [
+   "Damage over Time bypasses your Energy Shield"
+  ],
+  "Lifesprig": [
+   "Leeches 1% of maximum Life when you Cast a Spell"
+  ],
+  "Waistgate": [
+   "Life and Mana Flasks can be equipped in either slot"
+  ],
+  "The Burrower": [
+   "Lightning Damage of Enemies Hitting you is Unlucky"
+  ],
+  "Wulfsbane": [
+   "Intimidate Enemies on Block for 8 seconds"
+  ],
+  "Scold's Bridle": [
+   "Take (25-100)% of Mana Costs you pay for Skills as Physical Damage"
+  ],
+  "Sylvan's Effigy": [
+   "You can have any number of Companions of different types"
+  ],
+  "Murkshaft": [
+   "Blind Targets when you Poison them"
+  ],
+  "Cracklecreep": [
+   "Ignites you inflict spread to other Enemies that stay within 1.5 metres for 1 second"
+  ],
+  "Amor Mandragora": [
+   "Gain 1 Druidic Prowess for every 20 total Rage spent"
+  ],
+  "Zerphi's Genesis": [
+   "(25-50)% increased Corrupted Charms effect duration",
+   "50% of Charges consumed by used Charms are granted to your Life Flasks",
+   "50% of Charges consumed by used Life Flasks are granted to your Charms",
+   "Skills from Corrupted Gems have (15-25)% increased Cost Efficiency during any Flask Effect"
+  ],
+  "Calgyra's Arc": [
+   "Infinite Parry Range"
+  ],
+  "Hoghunt": [
+   "Maim on Critical Hit"
+  ],
+  "Collapsing Horizon": [
+   "Trigger skills refund half of Energy spent"
+  ],
+  "Hrimnor's Hymn": [
+   "Slam Skills you use yourself cause an additional Aftershock"
+  ],
+  "Blood of the Warrior": [
+   "Effect is not removed when Unreserved Life is Filled",
+   "(15-30)% of Damage taken during effect Recouped as Life",
+   "Gain (3-5) Rage when Hit by an Enemy during effect",
+   "No Inherent loss of Rage during effect"
+  ],
+  "Eshtera's Path": [
+   "+(5-10)% to Fire and Cold Resistances per Equipped Item with a Lightning Resistance Modifier"
+  ],
+  "The Bringer of Rain": [
+   "Has 4 Augment Sockets"
+  ],
+  "Duality": [
+   "Gain Finality for 0.5 seconds per Combo expended when using Skills",
+   "Gain (500-1000) Guard for 0.5 seconds per Combo expended when using Skills"
+  ],
+  "The Hollow Mask": [
+   "Remnants you create affect Allies in your Presence as well as you when collected",
+   "(80-100)% increased Reservation Efficiency of Remnant Skills"
+  ],
+  "The Unleashed": [
+   "(15-25)% of Damage taken from Hits bypasses Energy Shield if Energy Shield is below half",
+   "Gain 1 Runic Binding on Hit with Spells, no more than once every 0.5 seconds",
+   "Lose all Runic Bindings when you Shapeshift to gain that much Unbound Potential"
+  ],
+  "Gifts from Above": [
+   "(20-30)% increased Rarity of Items Dropped by Enemies killed with a Critical Hit"
+  ],
+  "Olroth's Resolve": [
+   "Gain Guard equal to Current Runic Ward for 10 seconds when Effect ends",
+   "Excess Life Recovery added as Guard for 10 seconds",
+   "Excess Life Recovery added as Guard for 20 seconds"
+  ],
+  "Voll's Protector": [
+   "25% chance to gain a Power Charge on Critical Hit"
+  ],
+  "Glowswarm": [
+   "Using a Mana Flask grants Guard equal to 100% of Flask's recovery amount for 4 seconds"
+  ],
+  "Serle's Grit": [
+   "Skills which Empower an Attack have (10-20)% chance to not count that Attack",
+   "(40-50) to (80-100) added Physical Thorns damage per Runic Plate"
+  ],
+  "Choir of the Storm": [
+   "Trigger Lightning Bolt Skill on Critical Hit"
+  ],
+  "Corona of the Red Sun": [
+   "Leeching Life from your Hits causes Allies in your Presence to also Leech the same amount of Life"
+  ],
+  "Silverthorne": [
+   "Parrying applies 10 Stacks of Critical Weakness"
+  ],
+  "Opportunity": [
+   "Cannot be Used manually",
+   "Used when you release a skill with Perfect Timing",
+   "Skills have (80-120)% longer Perfect Timing window during effect"
+  ],
+  "The Road Warrior": [
+   "Moving while Bleeding doesn't cause you to take extra damage"
+  ],
+  "Tidebreaker": [
+   "Strikes deal Splash Damage"
+  ],
+  "Sire of Shards": [
+   "Spells fire Projectiles in a circle"
+  ],
+  "The Searing Touch": [
+   "Ignites you inflict spread to other Enemies that stay within 1.5 metres for 1 second"
+  ],
+  "Icefang Orbit": [
+   "All Damage taken from Hits while Poisoned Contributes to Magnitude of Chill on you"
+  ],
+  "Earthbound": [
+   "Trigger Spark Skill on killing a Shocked Enemy"
+  ],
+  "Defiance of Destiny": [
+   "Recover (20-30)% of Missing Life before being Hit by an Enemy"
+  ],
+  "The Auspex": [
+   "Enemies in your Presence gain 1 Gruelling Madness each second"
+  ],
+  "Demon Stitcher": [
+   "Sacrifice (5-15)% of maximum Life to gain that much Energy Shield when you Cast a Spell"
+  ],
+  "Decree of Flight": [
+   "(20-30)% faster Dodge Roll",
+   "Gain Guard equal to (10-20)% of missing Energy Shield for 4 seconds when you Dodge Roll",
+   "Maximum amount of Guard is based on maximum Energy Shield instead",
+   "Divine Flight"
+  ],
+  "Saitha's Spear": [
+   "Aggravating any Bleeding with this Weapon also Aggravates all Ignites on the target",
+   "(25-40)% chance to Aggravate Bleeding on Hit"
+  ],
+  "Kingsguard": [
+   "Recover 5% of maximum Life for each Endurance Charge consumed"
+  ],
+  "Levinstone": [
+   "Lightning Skills Chain +1 times"
+  ],
+  "Chainsting": [
+   "(15-25)% chance to Maim on Hit"
+  ],
+  "Sculpted Suffering": [
+   "Breaks Armour equal to 40% of damage from Hits with this weapon",
+   "Fully Armour Broken enemies you kill with Hits Shatter"
+  ],
+  "Twisted Empyrean": [
+   "Convert 100% of Fire Damage with Mace Skills to Cold Damage"
+  ],
+  "Tetzlapokal's Desire": [
+   "Life Recharges"
+  ],
+  "The Hammer of Faith": [
+   "Every 10 seconds, gain a random non-damaging Shrine buff for 20 seconds"
+  ],
+  "Wake of Destruction": [
+   "Drop Shocked Ground while moving, lasting 8 seconds"
+  ],
+  "The Empty Roar": [
+   "Strikes deal Splash Damage"
+  ],
+  "Perandus Seal": [
+   "(10-15)% increased Quantity of Gold Dropped by Slain Enemies"
+  ],
+  "Fairgraves' Curse": [
+   "50% reduced Projectile Range",
+   "Attack Hits inflict Spectral Fire for 8 seconds"
+  ],
+  "Eventide Petals": [
+   "Ice Crystals have (-3-3)% reduced maximum Life per 5% Cold Resistance you have"
+  ],
+  "Polcirkeln": [
+   "Enemies Chilled by your Hits can be Shattered as though Frozen"
+  ],
+  "Wylund's Stake": [
+   "Hits Break (30-50) Armour",
+   "Inflicts Elemental Exposure when this Weapon Fully Breaks Armour"
+  ],
+  "Seeing Stars": [
+   "Energy Generation is doubled"
+  ],
+  "Wandering Reliquary": [
+   "50% of Physical Damage prevented Recouped as Life"
+  ],
+  "Ironbound": [
+   "Arrows Return if they have Pierced a target which had Fully Broken Armour"
+  ],
+  "Blackgleam": [
+   "Projectiles Pierce all Ignited enemies"
+  ],
+  "Nebuloch": [
+   "Attacks consume an Endurance Charge to Critically Hit"
+  ],
+  "Prized Pain": [
+   "(15-25)% chance to deal your Thorns Damage to Enemies you Hit with Melee Attacks"
+  ],
+  "Ghostmarch": [
+   "Dodge Roll passes through Enemies"
+  ],
+  "Forgotten Warden": [
+   "+(70-100) to Deflection Rating per 50 missing Energy Shield"
+  ],
+  "Brutus' Lead Sprinkler": [
+   "Hits with this Weapon have 5% chance to Trigger Molten Shower per 25 Strength"
+  ],
+  "Effigy of Cruelty": [
+   "Critical Hits with Spells apply (1-3) Stack of Critical Weakness"
+  ],
+  "The Wicked Quill": [
+   "Spells have a 25% chance to inflict Withered for 4 seconds on Hit"
+  ],
+  "Deathrattle": [
+   "20% chance for Energy Shield Recharge to start when you Kill an Enemy"
+  ],
+  "Safrin's Resolve": [
+   "+(5-10)% to Cold and Lightning Resistances per Equipped Item with a Fire Resistance Modifier"
+  ],
+  "Belly of the Beast": [
+   "Life Recovery from Flasks is instant"
+  ],
+  "Merit of Service": [
+   "Allies in your Presence have Block Chance equal to yours"
+  ],
+  "Gloomform": [
+   "You have a Smoke Cloud around you while stationary"
+  ],
+  "Uhtred's Chalice": [
+   "Mana Recovery from Flasks can Overflow maximum Mana during Effect"
+  ],
+  "Double Vision": [
+   "When you reload, triggers Gemini Surge to alternately",
+   "gain (2-6) Cold Surges or (2-6) Fire Surges"
+  ],
+  "Valako's Roar": [
+   "Used when you take Lightning damage from a Hit",
+   "Grants a Frenzy Charge on use"
+  ],
+  "Seed of Cataclysm": [
+   "5% reduced Critical Spell Damage Bonus per Critical Hit you've dealt with Spells Recently",
+   "(15-30)% chance for Spell Damage with Critical Hits to be Lucky"
+  ],
+  "Atziri's Contempt": [
+   "Spear Skills inflict a Bloodstone Lance on Hit, up to a maximum of 30 on each target"
+  ],
+  "Arakaali's Gift": [
+   "Used when you become Poisoned",
+   "Recover Life equal to (15-20)% of Mana Flask's Recovery Amount when used",
+   "Recover Mana equal to (15-20)% of Life Flask's Recovery Amount when used"
+  ],
+  "Redflare Conduit": [
+   "20% chance to gain a Power Charge on Hit",
+   "Lose all Power Charges on reaching maximum Power Charges",
+   "Shocks you when you reach maximum Power Charges"
+  ],
+  "Quill Rain": [
+   "Projectiles have 50% chance for an additional Projectile when Forking"
+  ],
+  "Lioneye's Glare": [
+   "+2 metres to Dodge Roll distance if you haven't Dodge Rolled Recently",
+   "-1 metre to Dodge Roll distance if you've Dodge Rolled Recently",
+   "Repeatable Attacks with this Bow Repeat +2 times if no enemies are in your Presence"
+  ],
+  "Atziri's Acuity": [
+   "10% of Physical damage dealt by your Hits causes Blood Loss"
+  ],
+  "Loreweave": [
+   "Ignites you inflict spread to other Enemies that stay within 1.5 metres for 1 second"
+  ],
+  "The Taming": [
+   "Wind Skills which can be boosted by Elemental Ground Surfaces can be boosted by multiple Elemental Ground Surfaces",
+   "Wind Skills which can be boosted by Elemental Ground Surfaces count",
+   "as being boosted by Ignited, Shocked, and Chilled Ground"
+  ],
+  "Beira's Anguish": [
+   "Used when you become Ignited",
+   "(20-25)% Chance to gain a Charge when you kill an enemy",
+   "Creates Ignited Ground for 4 seconds when used, Igniting enemies as though dealing Fire damage equal to 500% of your maximum Life"
+  ],
+  "Eyes of the Runefather": [
+   "Off-hand Hits inflict Runefather's Challenge",
+   "Inflicts Runefather's Challenge on enemies 6 metres in front of you when raised, no more than once every 2 seconds",
+   "Gain 1 Runefather's Boast per Power of targets affected by Runefather's Challenge you kill"
+  ],
+  "Atziri's Step": [
+   "Cannot be Light Stunned by Deflected Hits"
+  ],
+  "The Black Cat": [
+   "Used when you become Shocked",
+   "Lightning Damage of Enemies Hitting you is Unlucky during effect"
+  ],
+  "Thief's Torment": [
+   "50% reduced Duration of Curses on you"
+  ],
+  "Heart of the Well": [
+   "(5-10)% chance to Aggravate Bleeding on targets you Hit with Attacks"
+  ],
+  "Igniferis": [
+   "Every 4 seconds, Recover 1 Life for every 0.2 Life Recovery per second from Regeneration"
+  ],
+  "Grip of Kulemak": [
+   "Targets affected by Abyssal Wasting in your Presence have double Power",
+   "Abyssal Wasting you inflict has Infinite Duration"
+  ],
+  "Breath of the Mountains": [
+   "Used when you take Cold damage from a Hit",
+   "Grants a Power Charge on use"
+  ],
+  "The Fall of the Axe": [
+   "Used when you are affected by a Slow",
+   "Grants Onslaught during effect"
+  ],
+  "The Dark Defiler": [
+   "Gain 5% of Damage as Chaos Damage per Undead Minion"
+  ],
+  "For Utopia": [
+   "Used when you become Stunned"
+  ],
+  "Olrovasara": [
+   "On Hitting an enemy, gains maximum added Lightning damage equal to",
+   "the enemy's Power for 20 seconds, up to a total of 500"
+  ],
+  "Veilpiercer": [
+   "Curses you inflict spread to enemies within 3 metres when Cursed enemy dies",
+   "Gain 1 Dark Whisper every second there is a Cursed Enemy in your Presence",
+   "(20-40)% increased Damage with Hits against targets in your Presence"
+  ],
+  "Aerisvane's Wings": [
+   "Decimating Strike"
+  ],
+  "Forsaken Bangle": [
+   "Used when you take Chaos damage from a Hit",
+   "50% of Chaos damage you prevent when Hit Recouped as Life and Mana during effect"
+  ],
+  "Dustbloom": [
+   "Maximum 10 Fragile Regrowth",
+   "Lose all Fragile Regrowth when Hit",
+   "Gain 1 Fragile Regrowth each second"
+  ],
+  "Sierran Inheritance": [
+   "All Damage taken from Hits Contributes to Magnitude of Chill inflicted on you"
+  ],
+  "Immaculate Adherence": [
+   "Convert 100% of maximum Energy Shield to maximum Divinity",
+   "(0-100)% increased maximum Divinity",
+   "20% reduced maximum Divinity per Corrupted Item Equipped",
+   "Skills Cost Divinity instead of Mana or Life"
+  ],
+  "Venopuncture": [
+   "All Damage taken from Hits while Bleeding Contributes to Magnitude of Chill on you"
+  ],
+  "Cospri's Will": [
+   "Withered you inflict has infinite Duration"
+  ],
+  "Nascent Hope": [
+   "Used when you become Frozen",
+   "(20-25)% Chance to gain a Charge when you kill an enemy",
+   "Energy Shield Recharge starts on use"
+  ],
+  "The Ordained": [
+   "Create a Fragment of Divinity in your Presence every 4 seconds"
+  ],
+  "Ngamahu's Chosen": [
+   "Used when you take Fire damage from a Hit",
+   "Grants up to your maximum Rage on use"
+  ],
+  "Birth of Fury": [
+   "Drop Ignited Ground while moving, which lasts 8 seconds and Ignites as though dealing Fire Damage equal to 10% of your maximum Life"
+  ],
+  "Greymake": [
+   "Has 4 Augment Sockets"
+  ],
+  "Soul Mantle": [
+   "Inflicts a random Curse on you when your Totems die, ignoring Curse limit"
+  ],
+  "Sadist's Mercy": [
+   "Hits with this Weapon inflict (2-5) Gruelling Madness",
+   "Enemies in your Presence have additional Power equal to their Gruelling Madness"
+  ],
+  "Decree of Loyalty": [
+   "Damage over Time cannot bypass your Energy Shield"
+  ],
+  "Couture of Crimson": [
+   "Life Leech can Overflow Maximum Life"
+  ],
+  "The Sunken Vessel": [
+   "Physical Damage of Enemies Hitting you is Unlucky"
+  ],
+  "Font of Power": [
+   "When a Party Member in your Presence Casts a Spell, you",
+   "Sacrifice 20% of Mana and they Leech that Mana"
+  ],
+  "Corpsewade": [
+   "Trigger Decompose every 1.2 metres travelled"
+  ],
+  "The Fallen Formation": [
+   "Banners always have maximum Valour"
+  ],
+  "Coat of Red": [
+   "25% chance to be inflicted with Bleeding when Hit"
+  ],
+  "Dionadair": [
+   "Double Stun Threshold while Shield is Raised"
+  ],
+  "The Barrow Dweller": [
+   "Damage of Enemies Hitting you is Unlucky while you are on Low Life",
+   "50% chance to Avoid Death from Hits"
+  ],
+  "Serpent's Egg": [
+   "Gain an additional Charge when you gain a Charge"
+  ],
+  "Zaida's Longevity": [
+   "+(5-10)% to Fire and Lightning Resistances per Equipped Item with a Cold Resistance Modifier"
+  ],
+  "Prayers for Rain": [
+   "Energy Shield Recharge is not interrupted by Damage if Recharge began Recently"
+  ],
+  "Radiant Grief": [
+   "Enemies in your Presence are Ignited as though dealt 200 Base Fire Damage"
+  ],
+  "The Smiling Knight": [
+   "Aggravate Bleeding on targets you Critically Hit with Attacks"
+  ],
+  "Bitterbloom": [
+   "Energy Shield Recharge starts when you use a Mana Flask"
+  ],
+  "Bristleboar": [
+   "Gain 10 Rage when Critically Hit by an Enemy"
+  ],
+  "Surefooted Sigil": [
+   "+1 metre to Dodge Roll distance"
+  ],
+  "The Infinite Pursuit": [
+   "(80-100)% increased Chance to be afflicted by Ailments when Hit"
+  ],
+  "Skysliver": [
+   "Rolls only the minimum or maximum Damage value for each Damage Type"
+  ],
+  "Doomgate": [
+   "Enemies are Culled on Block"
+  ],
+  "Edyrn's Tusks": [
+   "50% reduced Slowing Potency of Debuffs on You"
+  ],
+  "Bramblejack": [
+   "250% of Melee Physical Damage taken reflected to Attacker"
+  ],
+  "The Flesh Poppet": [
+   "Copy a random Modifier from each enemy in your Presence when",
+   "you Shapeshift to an Animal form",
+   "Modifiers gained this way are lost after 30 seconds or when you next Shapeshift"
+  ],
+  "Sanguis Heroum": [
+   "Used when you start Bleeding"
+  ],
+  "Melting Maelstrom": [
+   "Every 3 seconds during Effect, deal 100% of Mana spent in those seconds as Chaos Damage to Enemies within 3 metres",
+   "Deals 25% of current Mana as Chaos Damage to you when Effect ends"
+  ],
+  "Umbilicus Immortalis": [
+   "Your Life Flask also applies to your Minions",
+   "Minions cannot Die while affected by a Life Flask"
+  ],
+  "Cat O' Nine Tails": [
+   "Life Recovery other than Flasks cannot Recover Life to above Low Life",
+   "Gain Physical Thorns damage equal to 8% - 12% of maximum Life"
+  ],
+  "Rite of Passage": [
+   "Used when you kill a Rare or Unique enemy",
+   "Possessed by Spirit Of The Cat for (10-20) seconds on use"
+  ],
+  "The Black Insignia": [
+   "Gain Tailwind on Critical Hit, no more than once per second",
+   "Lose all Tailwind when Hit"
+  ],
+  "Lycosidae": [
+   "Blocking Damage Poisons the Enemy as though dealing 200 Base Chaos Damage"
+  ],
+  "Horror's Flight": [
+   "Gain 1 Fear Incarnate when you Cull a target"
+  ],
+  "Gravebind": [
+   "Your other Modifiers to Rarity of Items found do not apply",
+   "Enemies in your Presence killed by anyone count as being killed by you instead"
+  ],
+  "The Pandemonius": [
+   "Blind Chilled enemies on Hit"
+  ],
+  "Crown of Thorns": [
+   "Lose 5 Life when you use a Skill"
+  ],
+  "Trampletoe": [
+   "Deal 30% of Overkill damage to enemies within 2 metres of the enemy killed"
+  ],
+  "Hateforge": [
+   "Gain a random Charge on reaching Maximum Rage, no more than once every (3-6) seconds",
+   "Lose all Rage on reaching Maximum Rage"
+  ],
+  "Spire of Ire": [
+   "When you Consume a Charge Trigger Chaotic Surge to gain 2 Chaos Surges"
+  ],
+  "Palm of the Dreamer": [
+   "Grants effect of Dreaming Gloom Shrine"
+  ],
+  "The Gnashing Sash": [
+   "Life Recovery from Flasks can Overflow Maximum Life"
+  ],
+  "Alkem Eira": [
+   "Damage Blocked is Recouped as Mana"
+  ],
+  "Enezun's Charge": [
+   "25% chance to not destroy Corpses when Consuming Corpses"
+  ],
+  "Redblade Banner": [
+   "Enemies in your Presence count as having double Power"
+  ],
+  "Crown of the Pale King": [
+   "Thorns can Retaliate against all Hits"
+  ],
+  "The Prisoner's Manacles": [
+   "Debuffs you inflict have (20-30)% increased Slow Magnitude"
+  ],
+  "Dreadfist": [
+   "Critical Hits inflict Impale",
+   "Critical Hits cannot Extract Impale"
+  ],
+  "Cornathaum": [
+   "5% increased Experience gain"
+  ],
+  "Lochtonial Caress": [
+   "Share Charges with Allies in your Presence"
+  ],
+  "Headhunter": [
+   "When you kill a Rare monster, you gain its Modifiers for 60 seconds"
+  ],
+  "Beetlebite": [
+   "Aggravate Bleeding on Enemies when they Enter your Presence"
+  ],
+  "Indigon": [
+   "Mana Recovery other than Regeneration cannot Recover Mana"
+  ],
+  "Fury of the King": [
+   "Skills which require Glory generate (2-5) Glory every 2 seconds"
+  ],
+  "Nocturne": [
+   "Parried enemies take more Spell Damage instead of more Attack Damage"
+  ],
+  "Guiding Palm": [
+   "50% of your Base Life Regeneration is granted to Allies in your Presence"
+  ],
+  "The Last Lament": [
+   "(10-20)% chance to load a bolt into all Crossbow skills on Kill",
+   "Sacrifice 300 Life to not consume the last bolt when firing"
+  ],
+  "Tyranny's Grip": [
+   "Strikes deal Splash Damage",
+   "Knocks Back Enemies on Hit"
+  ],
+  "Berek's Grip": [
+   "Wind Skills which can be boosted by Elemental Ground Surfaces count",
+   "as being boosted by Shocked Ground"
+  ],
+  "The Deepest Tower": [
+   "Every 5 seconds, gain a Verisium Infusion"
+  ],
+  "Shackles of the Wretched": [
+   "You cannot be Chilled for 6 seconds after being Chilled",
+   "You cannot be Frozen for 6 seconds after being Frozen",
+   "You cannot be Ignited for 6 seconds after being Ignited",
+   "You cannot be Shocked for 6 seconds after being Shocked",
+   "Curses you inflict are reflected back to you"
+  ],
+  "Guiding Palm of the Eye": [
+   "50% of your Base Life Regeneration is granted to Allies in your Presence",
+   "Grants effect of Guided Freezing Shrine"
+  ],
+  "The Devouring Diadem": [
+   "Every 3 seconds, Consume a nearby Corpse to Recover 20% of maximum Life"
+  ],
+  "Widow's Reign": [
+   "until you take no Damage to Life for 3 seconds"
+  ],
+  "Berek's Pass": [
+   "Wind Skills which can be boosted by Elemental Ground Surfaces count",
+   "as being boosted by Chilled Ground"
+  ],
+  "Blessed Bonds": [
+   "Inflict Cold Exposure on Igniting an Enemy",
+   "Inflict Fire Exposure on Shocking an Enemy",
+   "Inflict Lightning Exposure on Critical Hit"
+  ],
+  "Ab Aeterno": [
+   "Dodge Roll avoids all Hits",
+   "Gain Overencumbrance for 4 seconds when you Dodge Roll",
+   "Your speed is Unaffected by Slows while Sprinting"
+  ],
+  "Blackheart": [
+   "25% chance to Intimidate Enemies for 4 seconds on Hit"
+  ]
+ }
+}

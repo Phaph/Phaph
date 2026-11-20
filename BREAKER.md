@@ -270,3 +270,10 @@ ascendancy's own passives (`breaker.ascendancy_passives`). Compared ascendancy b
   ascendancy passives the greedy pick takes are mostly plain damage nodes at round 1 (no tree).
 - 11 caster skills error out in the matrix (Animus Exchange, Bitter Dead, Frostflame Nova, Fortifying Cry, Powered by
   Verisium...): no damage of their own (StopIteration on the bench), harmless.
+
+### Unique lines PoB can't read (2026-11-20)
+`engine/tools/unsupported_lines.py run` (runner `item_lines` now returns `unsupported`): 197 uniques have at least
+one line PoB can't read (data/breaker/unsupported.txt). Matrix reports tag them; the patch-day run lists the new ones.
+Of the 26 uniques our scans flagged, 5 have such lines, none a fake lead: Scold's Bridle (its downside, mana costs
+taken as physical damage, is ignored: its "strong on 9 skills" overstates it), Blackflame (Wither's extra fire damage
+taken is missing: likely UNDER-rated), Edyrn's Tusks / The Pandemonius / Loreweave (defence or mapping lines only).

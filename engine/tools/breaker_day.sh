@@ -47,6 +47,18 @@ if [ "${SCALER:-0}" = 1 ]; then
   run "python breaker.py scan --jobs /data/jobs.sqlite3 --out /app/engine_src/${DAY#engine/}/scaler.json" > "$DAY/scaler.log" 2>&1
 fi
 
+# 3b. Unique lines PoB can't read, and which are new since the last run (results on those uniques may be wrong).
+[ -f $B/unsupported.json ] && cp $B/unsupported.json "$DAY/unsupported_before.json"
+run "python tools/unsupported_lines.py run >/dev/null && cp data/breaker/unsupported.* /app/engine_src/data/breaker/" > /dev/null 2>&1
+python3 - "$DAY/unsupported_before.json" $B/unsupported.json > "$DAY/unsupported_new.txt" <<'PY'
+import json, os, sys
+old = json.load(open(sys.argv[1]))["uniques"] if os.path.exists(sys.argv[1]) else {}
+new = json.load(open(sys.argv[2]))["uniques"]
+rows = [(n, l) for n, ls in new.items() for l in ls if l not in old.get(n, [])]
+print(f"{len(rows)} unreadable unique lines new since the last run ({len(new)} uniques have some):")
+for n, l in rows: print(f"  {n}: {l}")
+PY
+
 # 4. Summary.
 {
   echo "# Breaker day run $(date +%F)"
@@ -58,10 +70,13 @@ fi
   echo
   echo "## Payoffs (skills that jump under one enemy condition)"
   echo '```'; head -25 "$DAY/conditions.txt"; echo '```'
+  echo
+  echo "## Unique lines PoB can't read yet (new since last run; results on these uniques may be wrong)"
+  echo '```'; head -30 "$DAY/unsupported_new.txt"; echo '```'
 } > "$DAY/SUMMARY.md"
 
-git add "$DAY" $B/text_scan.json 2>/dev/null
+git add "$DAY" $B/text_scan.json $B/unsupported.json $B/unsupported.txt 2>/dev/null
 git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q -m "Breaker day run $(date +%F)
 
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -- "$DAY" $B/text_scan.json && git pull -q --rebase && git push -q
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -- "$DAY" $B/text_scan.json $B/unsupported.json $B/unsupported.txt && git pull -q --rebase && git push -q
 echo "$(date -u +%FT%TZ) Breaker day run finished: $DAY/SUMMARY.md"

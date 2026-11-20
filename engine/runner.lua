@@ -405,7 +405,18 @@ function handlers.item_lines(cmd)
 	if item.variantList and #item.variantList > 1 then
 		for _, v in ipairs(slots) do if v and item.variantList[v] then table.insert(variants, item.variantList[v]) end end
 	end
-	return { implicits = collect(item.implicitModLines), explicits = collect(item.explicitModLines), variants = variants }
+	-- Lines PoB can't read (shown red in the PoB app): they do nothing in its maths, so a scan result on this item
+	-- may be wrong (Maligaro's "cannot be Rerolled", 2026-11-20).
+	local unsupported = {}
+	for _, list in ipairs({ item.implicitModLines, item.explicitModLines }) do
+		for _, ml in ipairs(list or {}) do
+			if active(ml) and ml.extra and ml.line and ml.line ~= "" then
+				table.insert(unsupported, (ml.line:gsub("{[^}]*}", "")))
+			end
+		end
+	end
+	return { implicits = collect(item.implicitModLines), explicits = collect(item.explicitModLines), variants = variants,
+		unsupported = unsupported }
 end
 
 -- Equip an item from raw text into a named slot, replacing (and deleting) what was there.

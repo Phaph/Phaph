@@ -13,3 +13,12 @@ def test_maligaros_stops_inevitable_crits(pob):
     pob.send("set_custom_mods", text="Inevitable Critical Hits\nYour Critical Hit Chance cannot be Rerolled")
     assert pob.calc(["CritChance"])["CritChance"] < 50
     pob.send("set_custom_mods", text="")
+
+
+def test_item_lines_lists_unreadable_lines(pob):
+    """item_lines names the lines PoB can't read (Lodestone tags scan results on those uniques)."""
+    raw = ("Rarity: UNIQUE\nScold's Bridle\nMagus Tiara\n+30 to Intelligence\n"
+           "Take 100% of Mana Costs you pay for Skills as Physical Damage")
+    lines = pob.send("item_lines", raw=raw)
+    assert any("Mana Costs you pay" in l for l in lines["unsupported"])
+    assert not any("Intelligence" in l for l in lines["unsupported"])
