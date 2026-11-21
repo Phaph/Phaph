@@ -98,6 +98,23 @@ think they roughly cancel; if not, it is over- or under-rated everywhere.
 
 ---
 
+## 6. Rain of Arrows: how many arrows of one rain hit a boss?
+
+**Why:** PoB scored it a hit every 0.12 s on the boss, as if every arrow landed on it, and it won the all-class
+search at 2x the next skill. We now assume only the share of the rain circle the boss covers gets hit: about 37% of
+the arrows on a big boss with the base area (4.7 hits a second instead of 8.3). Only 0.08% of the ladder plays it.
+
+- **Build:** any bow character with Rain of Arrows (no code needed; a plain gem at a decent level is enough).
+- **Do:** on a big single boss (or a large training target), fire one rain centred on it with no frenzy charges, and
+  count the damage numbers / hits (or record and count in slow motion), versus the arrows the rain drops (PoB's
+  Projectile Count on the gem).
+- **Confirms the new limit:** about a third of the arrows hit. **Changes it:** most arrows hit (limit too harsh, the
+  skill is strong for real: a lead) or very few (cut it further).
+
+**Result:** _(to fill)_
+
+---
+
 ## Not worth a test
 
 - **"Not consumed" charges reaching 100% (Flicker Strike):** every source together is about 45% (Perpetual Charge 25%,

@@ -103,7 +103,7 @@ Usage is nearly out. Automated jobs carry the work; Claude check-ins stay tiny:
    away), top combos, condition payoffs, one-skill interactions (+ best-in-slot list), multiplying pairs, and the
    server queue. API GET /lodestone/data (api/lodestone.py) reads the Breaker files mounted read-only from the
    server repo, so a pull updates it without a redeploy. Engine 2026-11-19.4.
-7. [ ] (queued in ~/lodestone_chain.sh) Blind test against poe.ninja's top builds (tool built by this session earlier): run it, write the result into
+7. [ ] (2026-11-21: re-run read: it never locked the ascendancy, fixed; Rain of Arrows usage limit added; a fresh re-run is needed, then write it up) Blind test against poe.ninja's top builds (tool built by this session earlier): run it, write the result into
    BREAKER.md (which of today's top builds the Breaker would have flagged, which it misses and why).
 8. [x] In-game test requests: write TESTS.md entries for the strongest leads (Leopold's Applause penetration below 0;
    "not consumed" charge sources adding to 100% for Flicker Strike; Hexblast's real cast rate), each with the PoB

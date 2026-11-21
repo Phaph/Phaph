@@ -43,7 +43,11 @@ def run(workers: int, out: Path, only: set[str] | None) -> None:
     with PoB() as p:
         classes = p.list_classes()
         catalog_list = p.send("skill_catalog")["skills"]
-    catalog = {s["name"]: s for s in catalog_list}
+    # parse_prompt's catalog shape (same as tools/check_prompt.py). It was a {name: skill} map until 2026-11-21,
+    # so no ascendancy was ever read and all 23 searches were the same all-class search (Deadeye Rain of Arrows).
+    catalog = {"skills": [s["name"] for s in catalog_list], "classes": classes, "weapon_types": {},
+               "helper_skills": [s["name"] for s in catalog_list
+                                 if set(s["types"]) & {"Buff", "Aura", "Herald", "Meta"}]}
     done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"ascendancies": {}}
     done["main_skills"] = sorted(s["name"] for s in main_skills(catalog_list, {}))   # damage skills the search can pick
     pairs = [(c["name"], a) for c in classes for a in c["ascendancies"]]
@@ -56,11 +60,17 @@ def run(workers: int, out: Path, only: set[str] | None) -> None:
         try:
             req = dict(parse_prompt(f"{asc} build", catalog)["request"])
             req.pop("off_meta", None)
+            if req.get("ascendancy") != asc:
+                raise ValueError(f"prompt read {req.get('ascendancy')!r}, not {asc!r}")
+            rec["request"] = req
             result = generate(req, workers=workers, log=lambda *a: None)
             rec["ranked"] = [{k: c.get(k) for k in ("skill", "weapon_type", "weapon_subtype", "ascendancy", "score",
                                                      "dps", "boss", "clear", "supports", "relative")}
                              for c in result["ranked"][:TOP_KEEP]]
             rec["relaxed"] = result.get("relaxed") or []
+            wrong = {c["ascendancy"] for c in rec["ranked"]} - {asc}
+            if wrong:
+                raise ValueError(f"search for {asc} ranked other ascendancies: {sorted(wrong)}")
         except Exception as e:  # noqa: BLE001 - one ascendancy must not stop the run
             rec["error"] = f"{type(e).__name__}: {e}"
             rec["trace"] = traceback.format_exc()[-1500:]

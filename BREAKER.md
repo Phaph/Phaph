@@ -277,3 +277,19 @@ one line PoB can't read (data/breaker/unsupported.txt). Matrix reports tag them;
 Of the 26 uniques our scans flagged, 5 have such lines, none a fake lead: Scold's Bridle (its downside, mana costs
 taken as physical damage, is ignored: its "strong on 9 skills" overstates it), Blackflame (Wither's extra fire damage
 taken is missing: likely UNDER-rated), Edyrn's Tusks / The Pandemonius / Loreweave (defence or mapping lines only).
+
+### Blind test re-run: it never searched per ascendancy (2026-11-21, task 7)
+The re-run (after the Ember Fusillade fix) picked **Deadeye Rain of Arrows on all 23 ascendancies** with the same
+score on 22 of them, and the same top 15 everywhere: 1 of the ladder's top 20 skills found (Ice Shot), Spearman
++0.16. Cause: `blind_test.py` passed `parse_prompt` a {name: skill} map instead of its catalog shape ({skills,
+classes, helper_skills}), so "Titan build" read no ascendancy and every search was the same all-class search. The
+first run (Ember Fusillade everywhere) had the same bug. **Fixed:** the tool builds the catalog like check_prompt.py,
+stops if the prompt doesn't read the ascendancy, and rejects a result ranking other ascendancies; all 23 prompts
+checked. So far the blind test has only ever measured the all-class search: per-ascendancy numbers need the re-run.
+**Rain of Arrows was the all-class winner at 2x the next skill (554k boss DPS vs Glacial Lance 257k); 0.08% of the
+ladder plays it.** Modelling gap: PoB scores it as a full hit on the target every 0.12 s (its per-enemy cap), however
+many arrows land on it. In game one rain drops its arrows 80 ms apart (at most 12.5 a second, one rain at a time)
+across a 3.6 m circle, each hitting within 0.7 m. New USAGE_LIMITS rule: hits/s = min(arrows/s x
+((target radius + impact radius) / rain radius)^2, 8.33), target 1.5 m for a boss, 0.5 m on maps. Base gem: boss
+8.33 -> 4.67 hits/s (x0.56); Concentrated Area raises the share. The usage-limit hook now also limits HitSpeed, not
+only Speed. Estimates: an in-game check (TESTS.md) would pin down the boss share.

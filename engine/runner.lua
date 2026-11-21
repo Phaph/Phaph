@@ -195,6 +195,22 @@ local USAGE_LIMITS = {
 		if speed <= 0 then return nil end
 		return 10 / (10 / speed + dur)
 	end,
+	-- Rain of Arrows: PoB scores it as one full hit on the target every 0.12 s (its per-enemy hit cap), however many
+	-- arrows land on it. In game the arrows (80 ms apart, one rain at a time, so at most 12.5 a second) fall spread
+	-- over the whole rain circle (3.6 m base radius) and each hits only within its small impact circle (0.7 m), so one
+	-- target is hit by the share of the circle it covers: ((target radius + impact radius) / rain radius)^2. Target
+	-- radius: 1.5 m for a boss, 0.5 m for a map monster (estimates). Without this it won every ascendancy in the
+	-- blind test at 2x the next skill (2026-11-21) while 0.08% of the ladder plays it. Returns hits/s (HitSpeed basis).
+	["Rain of Arrows"] = function(out)
+		local count, speed = out.ProjectileCount or 1, out.Speed or 0
+		local R = (out.AreaOfEffectRadius or 36) / 10
+		local r = (out.AreaOfEffectRadiusSecondary or 7) / 10
+		if speed <= 0 or R <= 0 then return nil end
+		local target = (build.configTab.input.enemyIsBoss or "None") == "None" and 0.5 or 1.5
+		local share = math.min(1, ((target + r) / R) ^ 2)
+		local arrows = math.min(count * speed, 1 / 0.08)
+		return math.min(arrows * share, 1 / 0.12), "HitSpeed"
+	end,
 }
 
 afterFrame = function()
@@ -202,13 +218,17 @@ afterFrame = function()
 	if type(out) ~= "table" or out._usageLimited then return end
 	local rule = USAGE_LIMITS[mainSkillName() or ""]
 	if not rule then return end
-	local cap, speed = rule(out), out.Speed or 0
+	-- A rule returns uses per second and which rate it limits: Speed (casts/attacks, default) or HitSpeed (skills
+	-- whose DPS PoB counts per hit, not per use).
+	local cap, basis = rule(out)
+	basis = basis or "Speed"
+	local speed = out[basis] or 0
 	out._usageLimited = true
 	if not cap or speed <= cap then return end
 	local f = cap / speed
 	local before = out.TotalDPS or 0
-	out.UsageLimit, out.UncappedSpeed = cap, speed
-	out.Speed = cap
+	out.UsageLimit, out.UncappedSpeed, out.UsageLimitBasis = cap, speed, basis
+	out[basis] = cap
 	for _, k in ipairs({ "TotalDPS", "CombinedDPS", "WithBleedDPS", "WithPoisonDPS", "WithIgniteDPS" }) do
 		if type(out[k]) == "number" then out[k] = out[k] * f end
 	end
