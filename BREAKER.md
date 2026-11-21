@@ -433,3 +433,16 @@ leaving Rakiata's out to make room for Exposure is still worse. So in our number
 without a strong penetration support. Its 16.8% of the ladder is then mostly not boss damage: map clear (an area
 spell with a big detonation), the Cold Infusion for Ice Nova/Spark (task 21), and players without Rakiata's Flow
 (a rare lineage gem). Not counted: Exposure compounding (+2% per pulse up to 50 in game), Frost Bomb's own damage.
+
+### Trigger detector, step (a): hit-based meta gems (2026-11-21, task 15)
+PoB's meta gems listed (Cast on Dodge / Minion Death / Block / Melee Kill / Melee Stun / Charm Use, the Invocations,
+Thundergod's Wrath, Fire Spell on Melee Hit). New in engine/triggers.py + trigger_rules.json: **Thundergod's Wrath**
+(granted by the unique mace Mjölner) and **Fire Spell on Melee Hit** (an ascendancy gem): 3 energy per monster power
+on EVERY melee hit (Cast on Critical: 1 per power, crits only), Lightning / Fire spells only, full energy = 100 per
+second of the socketed spells' cast time. PoB's data has no ailment-threshold part, but the game text does
+("modified by the percentage of the enemy's Ailment Threshold the Hit will deal", poe2db), so the energy uses the
+same threshold ratio as Cast on Critical. Mid-game Boneshatter Titan vs a pinnacle boss: a hit is 3% of the boss's
+threshold, so ~2 energy per hit and ~55 hits per Arc (0.02 casts/s): only huge single hits feed it on bosses, which
+is how the public "Thor" builds play Mjölner (a known build: the detector should find it as known, not new).
+Next (b-d): scan feeders per meta (energy per second for the strongest single hits: slams, Supercharged Slam,
+Boneshatter's shockwave), the loop graph from text_scan group D, leads.

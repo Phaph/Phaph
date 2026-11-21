@@ -25,7 +25,10 @@ RULES_FILE = Path(__file__).parent / "data" / "trigger_rules.json"
 ATTACK_FIELDS = ["Speed", "HitChance", "CritChance", "CritMultiplier", "AverageDamage", "EnemyAilmentThreshold",
                  "TotalDPS", "FullDPS", "IgniteChance", "ShockChance"]
 # Meta gems that trigger socketed spells from energy, and what fills their energy.
-METAS = {"Cast on Critical": "cast_on_crit", "Cast on Elemental Ailment": "cast_on_elemental_ailment"}
+METAS = {"Cast on Critical": "cast_on_crit", "Cast on Elemental Ailment": "cast_on_elemental_ailment",
+         "Thundergod's Wrath": "thundergods_wrath", "Fire Spell on Melee Hit": "fire_spell_on_melee_hit"}
+# Metas that gain energy on every melee hit (scaled by the hit's share of the ailment threshold), not only on crits.
+HIT_METAS = {"Thundergod's Wrath", "Fire Spell on Melee Hit"}
 SPELL_FIELDS = ["TotalDPS", "Speed", "AverageDamage", "TotalDotDPS"]
 
 
@@ -60,6 +63,8 @@ def cast_on_crit(pob: PoB, attack_group: int, coc_group: int, mode: str = "bossi
     # PoB orders a group's active skills by gem order with supports left out; the meta gem is the first.
     actives = [n for n in names if n in info and not info[n]["support"]]
     spells = [n for n in actives if n != coc["gem"] and "Spell" in info[n]["types"]]
+    if coc.get("element"):   # Thundergod's Wrath triggers Lightning spells only, Fire Spell on Melee Hit Fire spells
+        spells = [n for n in spells if coc["element"] in info[n]["types"]]
 
     pob.send("set_main", group=attack_group)
     a = pob.calc(ATTACK_FIELDS)
@@ -91,10 +96,14 @@ def cast_on_crit(pob: PoB, attack_group: int, coc_group: int, mode: str = "bossi
     elif mode == "bossing":
         power = r["monster_power"]["unique_boss"]
         threshold = a.get("EnemyAilmentThreshold") or 0
+        if gem in HIT_METAS:   # every hit counts, with its average damage (not a crit's)
+            crits_per_sec, crit_hit = uses * hit, avg_hit
         ratio = min(ts["cap"], crit_hit / threshold) if threshold else ts["cap"]
     else:
         # Mapping: one normal monster per crit (conservative: area hits on a pack would gain more).
         power, threshold, ratio = r["monster_power"]["normal"], None, ts["mapping_ratio"]
+        if gem in HIT_METAS:
+            crits_per_sec = uses * hit
     if gem != "Cast on Elemental Ailment":
         energy_per_crit = coc["energy_per_power"] * power * (1 + coc["energy_increased_per_level"] * (gem_level - 1) / 100) * ratio
     energy_to_fire = sum(info[s]["cast_time"] * coc["max_energy_per_second_of_cast_time"] for s in spells)

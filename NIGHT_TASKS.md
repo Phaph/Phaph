@@ -140,7 +140,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 14. [ ] (ailments done 2026-11-19: Dark Effigy + poison +69%, the only strong one vs a pinnacle boss; Lightning
     Conduit's shock can't be kept up on bosses. Left: immobilised family for Siege Cascade, mapping combos.) Combo finder, more condition families: Shocked / Electrocuted / Frozen / Poisoned / immobilised (Siege
     Cascade, Dark Effigy, Lightning Conduit), each with its own setup rate and uptime model.
-15. [ ] Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose
+15. [ ] ((a) done 2026-11-21: Thundergod's Wrath + Fire Spell on Melee Hit in triggers.py, energy on every hit with
+    the threshold ratio; next (b) feeder scan, (c) loop graph, (d) leads) Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose
     triggers can feed each other; estimate the rate; leads + test requests.
     Plan (2026-11-20): build on engine/triggers.py (energy maths for Cast on Critical / Elemental Ailment, numbers in
     data/trigger_rules.json). (a) add the other meta gems from PoB data (Cast on Dodge, Minion Death, Block, Melee

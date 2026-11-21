@@ -38,5 +38,31 @@
     "_note": "Energy from Ignite and Shock only: PoE 2 Freeze builds up over hits and PoB gives no per-hit freeze chance, so freeze energy is left out (a conservative estimate). No ailment-threshold scaling (the gem text doesn't mention it).",
     "_source": "Path of Building gem data (MetaCastOnElementalAilmentPlayer: 100 / 100 / 1000 centienergy per monster power on ignite / shock / freeze, energy_generated_+% 3 per level)",
     "verified": false
+  },
+  "thundergods_wrath": {
+    "gem": "Thundergod's Wrath",
+    "element": "Lightning",
+    "granted_by": "Mjölner (unique Torment Club)",
+    "energy_per_power": 3.0,
+    "energy_increased_per_level": 0,
+    "max_energy_per_second_of_cast_time": 100,
+    "triggered_damage_more": 0,
+    "on": "melee_hit",
+    "_note": "Energy on every melee hit (not only crits), modified by the percentage of the enemy's Ailment Threshold the hit deals (game text, poe2db; PoB's data leaves the threshold part out). No damage penalty in the support data. Level bonus: quality only (energy_generated_+% 0.75 per quality), so 0 here.",
+    "_source": "Path of Building gem data (MetaCastLightningSpellOnHitPlayer / MetaCastFireSpellOnHitPlayer: 300 centienergy per monster power on hit; 1 max energy per 10 ms of socketed cast time) and poe2db text",
+    "verified": false
+  },
+  "fire_spell_on_melee_hit": {
+    "gem": "Fire Spell on Melee Hit",
+    "element": "Fire",
+    "granted_by": "an ascendancy (SkillGemAscendancyFireSpellOnHit)",
+    "energy_per_power": 3.0,
+    "energy_increased_per_level": 0,
+    "max_energy_per_second_of_cast_time": 100,
+    "triggered_damage_more": 0,
+    "on": "melee_hit",
+    "_note": "Energy on every melee hit (not only crits), modified by the percentage of the enemy's Ailment Threshold the hit deals (game text, poe2db; PoB's data leaves the threshold part out). No damage penalty in the support data. Level bonus: quality only (energy_generated_+% 0.75 per quality), so 0 here.",
+    "_source": "Path of Building gem data (MetaCastLightningSpellOnHitPlayer / MetaCastFireSpellOnHitPlayer: 300 centienergy per monster power on hit; 1 max energy per 10 ms of socketed cast time) and poe2db text",
+    "verified": false
   }
 }

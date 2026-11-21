@@ -126,3 +126,22 @@ def test_trigger_spell_candidates():
            {"name": "Untriggerable Nova", "types": ["Spell", "Damage"], "weapons": []}]
     # "Totemable" is no bar (it once excluded almost every spell); teleports and buffs are; Triggerable is required.
     assert spell_candidates(cat) == ["Comet"]
+
+
+def test_hit_metas_gain_energy_on_every_hit(pob):
+    """Thundergod's Wrath (Mjölner) gains energy on every melee hit, not only crits, and triggers Lightning spells
+    only (a Fire spell in it is ignored)."""
+    from triggers import cast_on_crit
+    from optimize import MODE_CONFIG
+    pob.new()
+    pob.set_class("Warrior", None)
+    pob.set_level(60)
+    pob.add_item("Rarity: NORMAL\nWooden Club\nWooden Club")
+    a = pob.add_skill(["Boneshatter"])["group"]
+    t = pob.add_skill(["Thundergod's Wrath", "Arc", "Fireball"], main=False)["group"]
+    pob.send("set_main", group=a)
+    pob.set_config(**MODE_CONFIG["mapping"])
+    r = cast_on_crit(pob, a, t, mode="mapping", gem="Thundergod's Wrath")
+    assert abs(r["attack"]["crits_per_sec"] - r["attack"]["hits_per_sec"]) < 1e-9     # every hit counts
+    assert [s["spell"] for s in r["spells"]] == ["Arc"]
+    assert r["energy"]["per_crit"] == 3.0                                             # 3 per power, normal monster
