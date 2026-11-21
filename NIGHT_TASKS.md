@@ -1,10 +1,9 @@
 # START HERE (handoff, 2026-11-20 morning)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude):** blind test re-run in the Breaker queue (started 08:12 Mazatlan, ~12 h; commits
-  engine/data/breaker/blind.txt). It runs the OLD runner (before the Maligaro fix): if Oracle's best build wears
-  Maligaro's Virtuosity, discount it. ~/after_mal.sh = full suite -> deploy engine 2026-11-20.2 if green (logs
-  ~/after_mal_tests.log, ~/after_mal_deploy.log). Check: `bash ~/phaph/engine/tools/status.sh`.
+- **Running (no Claude, started 2026-11-21 ~18:30 Mazatlan):** ~/after_roa.sh = deploy engine 2026-11-21.1
+  (Rain of Arrows limit), then the blind test re-run, now truly per ascendancy (~12 h, commits blind.txt).
+  Next session: read blind.txt, finish task 7 in BREAKER.md. Check: `bash ~/phaph/engine/tools/status.sh`.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Next tasks, in order:** read the new blind.txt and write it into BREAKER.md (task 7); 15 trigger/loop detector;
