@@ -30,6 +30,7 @@ from jewels import craft_jewels, proxy_jewel
 from weaponsets import specialise_set2
 from triggers import best_triggers, cast_on_crit, find_groups
 from generate import add_helpers, best_helper
+from partners import apply_all, notes_for
 from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_score, metric_for, optimise_supports,
                       seed_ailment,
                       score_of, total_dps)
@@ -347,6 +348,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # Bossing setup: a separate boss skill if the build has one, else a support swap.
         pob.set_config(**MODE_CONFIG["bossing"])
         boss, boss_dps = None, 0.0
+        partner = None
         weapon_sets = None
         if not light:
             # boss_dps is real single-target damage (not the theme score used to pick supports).
@@ -363,7 +365,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             else:
                 pob.auto_config("bossing")
                 boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
-                boss_dps = total_dps(pob.calc(STAT_FIELDS))
+                # Setups and extra damage stat sets, as the search ranked it (partners.py)
+                boss_out, partner = apply_all(pob, skill, group, pob.calc(STAT_FIELDS), STAT_FIELDS, boss.supports)
+                boss_dps = total_dps(boss_out)
             for t in triggers:
                 t["bossing"] = cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="bossing", gem=t["gem"])
             if combo:
@@ -423,6 +427,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                     best.supports.remove(r["support"])
         stats = pob.calc(STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + SPLIT_FIELDS + ["BleedDPS", "PoisonDPS", "IgniteDPS"]
                          + MINION_AILMENT_FIELDS)
+        stats, extra_note = apply_all(pob, skill, group, stats, list(stats), setups=False)   # extra stat sets
         guide = StageGuide(
             stage=stage.key, name=stage.name, level=stage.level, sockets=slots,
             supports=best.supports,
@@ -443,6 +448,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             clear=clear_score(stats),
             damage_split=damage_split(stats),
         )
+        guide.notes.extend(notes_for(skill, partner) if partner else notes_for(skill, extra_note))
         if stage_key == "end":
             guide.rating = rate(boss_dps or total_dps(stats), guide.clear, stats.get("TotalEHP") or 0)
         if isinstance(lowered, dict) and lowered:

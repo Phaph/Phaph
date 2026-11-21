@@ -243,3 +243,39 @@ def apply_exposure(p, skill: str, group: int, out: dict, fields: list[str],
            + (f", with {dropped} left out: penetration and Exposure don't stack" if dropped else "")
            + f"); casting it every {EXPOSURE_SETUPS[setup]['cooldown']:.0f} s costs time: x{f:.2f} DPS overall")
     return scaled, {"setup": setup, "factor": round(f, 3), "drop_support": dropped, "why": why}
+
+
+def apply_all(p, skill: str, group: int, out: dict, fields: list[str], supports: list[str] | None = None,
+              setups: bool = True) -> tuple[dict, dict | None]:
+    """Every rule above in one place (search rounds and the finished guide): a partner setup or an infusion, the
+    extra stat sets, Exposure. setups=False: extra stat sets only (mapping numbers: setups are a bossing routine)."""
+    note: dict = {}
+    if setups:
+        out, n = apply_partner(p, skill, group, out, fields, supports)
+        if not n:
+            out, n = apply_infusion(p, skill, group, out, fields)
+        if n:
+            note.update(n)
+    out, extra = apply_extra_sets(p, skill, group, out, fields)
+    if extra:
+        note["extra"] = extra
+    if setups:
+        out, expo = apply_exposure(p, skill, group, out, fields, supports)
+        if expo:
+            note["exposure"] = expo
+    return out, (note or None)
+
+
+def notes_for(skill: str, note: dict | None) -> list[str]:
+    """Plain-English lines for the build page."""
+    if not note:
+        return []
+    lines = []
+    if note.get("why"):
+        lines.append(f"Boss routine: {note['why']}. Use {note['setup']} before {skill}.")
+    if note.get("extra"):
+        lines.append(f"Damage counts {note['extra']['why']} (Path of Building shows each part on its own: pick the "
+                     f"part in its skill dropdown).")
+    if note.get("exposure"):
+        lines.append(f"Boss routine: {note['exposure']['why']}.")
+    return lines
