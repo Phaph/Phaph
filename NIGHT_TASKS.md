@@ -2,11 +2,10 @@
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
 - **Running (no Claude, 2026-11-21 ~06:00 Mazatlan):** ~/after_revert.sh = full suite, then deploy engine
-  2026-11-21.3 (Druid weapon trial reverted) if green. Next: task 22 (why Whirling Slash, Twister, Tornado, Entangle,
-  Wolf Pack score low in round 1).
+  2026-11-21.3 (Druid weapon trial reverted) if green. Next: task 23 (whirlwind combo + stage rules), then 21 (infusions).
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 20 Druid weapons (small); 22 Huntress spear skills; 21 infusions; 15 trigger/loop detector;
+- **Next tasks, in order:** 23 whirlwind combo + stages; 21 infusions; 15 trigger/loop detector;
   unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -170,9 +169,16 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 21. [ ] Infusion family in the combo finder: Frost Bomb, Orb of Storms, Powered by Verisium (GeneratesInfusion) feed
     Comet / Spark / Arc. Model the infusion rate and the payoff skill's gain; the blind test should then find Arc,
     Ice Nova and the setup skills as part of a combo.
-22. [ ] Huntress spear skills (+ Druid's Tornado, Entangle, Wolf Pack, task 20): Whirling Slash (12.8% of the ladder) and Twister (10.9%) don't make Huntress' top 10.
+22. [x] (2026-11-21: Twister x4.2 when it consumes a 3-stage whirlwind from Whirling Slash, a combo we never set
+    up; stages never set either (Flameblast x5.45 at max); BREAKER.md; follow-up task 23) Huntress spear skills (+ Druid's Tornado, Entangle, Wolf Pack, task 20): Whirling Slash (12.8% of the ladder) and Twister (10.9%) don't make Huntress' top 10.
     Find why (stages, elemental ground, round-1 setup) in PoB, fix what is a modelling gap, re-run `--only Amazon,
     Ritualist,Spirit Walker`.
+
+23. [ ] Whirlwind combo + stage rules (from task 22): (a) combo finder family "whirlwind": Whirling Slash sets up,
+    Twister pays off (PoB config whirlwindStages / twisterCold|Fire|Lightning), setup rate = slashes per stage;
+    (b) per-skill stage rules with runner `set_stages` (Flameblast, Bonestorm, Supercharged Slam: stages held per use,
+    channel time counted); (c) re-run the blind test for the Huntress ascendancies. Check Oil Barrage's 6.8 uses/s and
+    Wolf Pack's companion DPS on the way.
 
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or

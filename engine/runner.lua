@@ -902,6 +902,24 @@ function handlers.fitting_supports(cmd)
 	return { supports = out }
 end
 
+-- Stages of the main skill (PoB's "Stages" box on the skill, default 1). count = nil reads only. Returns whether the
+-- skill has stages (multiStage) and its maximum, so a caller can pick a stage count it can justify.
+function handlers.set_stages(cmd)
+	local g = build.skillsTab.socketGroupList[cmd.group or build.mainSocketGroup]
+	if not g then error("no socket group " .. tostring(cmd.group)) end
+	local gem = g.gemList[cmd.gem or 1]
+	if cmd.count then gem.skillStageCount = cmd.count; gem.skillStageCountCalcs = cmd.count end
+	build.buildFlag = true
+	frame()
+	local skill = build.calcsTab.mainEnv and build.calcsTab.mainEnv.player.mainSkill
+	local max = 0
+	if skill then
+		local name = skill.activeEffect.grantedEffect.name:gsub("%s+", "")
+		max = skill.skillModList:Sum("BASE", skill.skillCfg, "Multiplier:" .. name .. "MaxStages")
+	end
+	return { multi_stage = max > 0, max = max, count = gem.skillStageCount or 1, skill = skill and skill.activeEffect.grantedEffect.name }
+end
+
 function handlers.set_main(cmd)
 	build.mainSocketGroup = cmd.group
 	-- Optional: which active skill of the group is the main one (e.g. a spell socketed in a Cast on X gem).

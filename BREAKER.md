@@ -332,3 +332,29 @@ and Rend dropped out (found 2/20, Spearman +0.22), and Tornado, Entangle, Wolf P
 So the weapon rule wasn't what hid them: they score low in round 1 (Tornado is DoT-only, Entangle a plant limit,
 Wolf Pack a companion), the same gap as the Huntress spear skills. Reverted (engine 2026-11-21.3); blind.json/txt
 restored to the Talisman run.
+
+### Why the Huntress and Druid ladder skills rank low (2026-11-21, task 22)
+Round 1 (no tree, crafted mid-game gear, Amazon / Shaman, bossing):
+| Skill | Round-1 score | Note |
+|---|---|---|
+| Oil Barrage (Talisman) | 116,860 | 6.8 uses/s at round 1: suspiciously fast, check |
+| Entangle | 33,377 | |
+| Lightning Spear | 23,742 | |
+| Tornado | 16,417 | DoT only |
+| Wind Serpent's Fury | 9,867 | |
+| Twister | 6,404 | alone; see below |
+| Whirling Slash | 5,354 | its own hit doesn't scale with stages in PoB |
+| Wolf Pack | 3,445 | companion, 1.4k minion DPS: likely under-modelled |
+- **Whirling Slash + Twister is a combo PoB can score but we never set up.** PoB's config has "# of Whirlwind Stages"
+  and "Twister gained Cold/Fire/Lightning"; we leave all of them at 0. Twister on the same build: x2.04 with a
+  1-stage whirlwind, **x4.21 with a 3-stage whirlwind consumed**, x1.40 with one ground element, x2.20 with all three.
+  So Twister's 6.4k is ~27k used the way the ladder plays it (Whirling Slash to build the storm, Twister through it),
+  which puts it beside Lightning Spear, before the tree. This is the ladder's top Huntress pair (12.8% + 10.9%).
+  Next: a "whirlwind" family in the combo finder (setup = Whirling Slash stages per second, payoff = Twister's
+  WhirlwindStages multiplier; elements from ground the build makes) (task 23).
+- **Stages are never set either.** New runner command `set_stages` (reads/sets the main skill's Stages box). At max
+  stages vs our default of 1: Flameblast x5.45 (10 stages), Bonestorm x2.40 (20), Supercharged Slam x1.09 (3),
+  Detonating Arrow x0.72 (4, lower: check), Incinerate x1.00. Each skill needs its own rule for how many stages it
+  really holds per use (channel time vs damage), so no blanket max: part of task 23.
+- Tornado / Entangle / Wolf Pack: no PoB setting is missing; they score low on their own. Wolf Pack's companion
+  damage and Oil Barrage's use rate are the two numbers to check against the game next.
