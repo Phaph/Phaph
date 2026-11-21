@@ -1,9 +1,11 @@
-# In-game test requests (Lodestone leads)
+# Lead checks (Lodestone leads)
 
-For Kyle's Standard character. Each request: the build (PoB code in `ingame/`, open it in Path of Building with
-Import > from text), what to buy, what to do, and what result confirms or kills the lead. PoE 2 has no damage meter,
-so the tests use things you can count or time. Write the result under each entry (and Claude updates
-`engine/data/breaker/leads.json`, which the Lodestone page shows).
+**2026-11-21: Kyle can't run in-game tests.** These are now checked by Claude without the game, in this order:
+1. Game data: PoB's own data files (stat text, caps, hidden limits on gems and uniques).
+2. Web evidence: poe2wiki, patch notes, GGG forum and Reddit posts, build guides and videos that show the mechanic.
+3. Ladder data: whether top players run the combo, and what their builds show.
+If none settles it, the engine keeps the cautious number and the lead is marked "PoB says, not confirmed in game".
+The "Do / Confirms / Kills" lines below say what evidence would settle each one. The PoB codes in `ingame/` stay.
 
 Order = how much the answer is worth.
 

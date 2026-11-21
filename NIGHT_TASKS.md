@@ -5,12 +5,12 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   2026-11-21.3 (Druid weapon trial reverted) if green. Next: task 23 (whirlwind combo + stage rules), then 21 (infusions).
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 23 whirlwind combo + stages; 21 infusions; 15 trigger/loop detector;
+- **Next tasks, in order:** 24 lead checks without the game (Kyle can't test in game); 23 whirlwind combo + stages; 21 infusions; 15 trigger/loop detector;
   unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
-- **Waiting for Kyle:** in-game tests (TESTS.md), Lodestone page public?, Cloudflare branch switch (task 17).
+- **Waiting for Kyle:** Lodestone page public?, Cloudflare branch switch (task 17).
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
@@ -179,6 +179,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     (b) per-skill stage rules with runner `set_stages` (Flameblast, Bonestorm, Supercharged Slam: stages held per use,
     channel time counted); (c) re-run the blind test for the Huntress ascendancies. Check Oil Barrage's 6.8 uses/s and
     Wolf Pack's companion DPS on the way.
+
+24. [ ] (Kyle 2026-11-21: no in-game tests possible) Check the six TESTS.md leads without the game: game data in
+    vendor/PathOfBuilding-PoE2 (Fresh Clip II cap, Rampart Raptor's "Reloaded Recently", Hexblast's half-expired rule,
+    Ember Fusillade's cap), then web evidence (WebSearch / api/research.py: wiki, patch notes, Reddit, guides), then
+    ladder data. Write the verdict and source under each TESTS.md entry; update leads.json (confirmed / dead /
+    unconfirmed); unconfirmed leads keep the cautious number.
 
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
