@@ -18,7 +18,11 @@ The "Whetstone server" session works through this list on its own, top to bottom
 Friday ~5 am Mazatlan). Kyle wants to use the remaining usage fully: keep going task after task. Kyle can watch and
 steer from the Claude app (Remote Control).
 
-## Credit plan until the Friday ~5 am reset (Kyle, 2026-11-19)
+## Credit plan until the Friday ~5 am reset (Kyle, 2026-11-19) -- OVER
+**2026-11-21, Kyle: "We should have something going constantly."** keepalive.sh now nudges an idle session every
+30 min (skips only if the session was active in the last 20 min), also while server jobs run. Keep the server busy:
+when a task needs a long run, start it through the Breaker queue and work on a light task meanwhile. The old notes
+below are history.
 Usage is nearly out. Automated jobs carry the work; Claude check-ins stay tiny:
 - Running unattended (no Claude): `combo_scan.py ailments` (container whetstone-ailments, ~2 h, writes
   engine/data/breaker/combos_ailments.json in ~/phaph, not committed yet), then ~/lodestone_chain.sh after the
