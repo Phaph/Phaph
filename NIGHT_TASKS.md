@@ -7,7 +7,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   exposure, minions, Oil Barrage): ~12 h, commits blind.txt. Next session: compare 3/20 (morning) -> 21.5 -> final.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 15 trigger/loop detector;
+- **Next tasks, in order:**
   unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -140,7 +140,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 14. [ ] (ailments done 2026-11-19: Dark Effigy + poison +69%, the only strong one vs a pinnacle boss; Lightning
     Conduit's shock can't be kept up on bosses. Left: immobilised family for Siege Cascade, mapping combos.) Combo finder, more condition families: Shocked / Electrocuted / Frozen / Poisoned / immobilised (Siege
     Cascade, Dark Effigy, Lightning Conduit), each with its own setup rate and uptime model.
-15. [ ] ((a) done 2026-11-21: Thundergod's Wrath + Fire Spell on Melee Hit in triggers.py, energy on every hit with
+15. [x] (2026-11-22: (a) Thundergod's Wrath + Fire Spell on Melee Hit; (b) trigger_scan.py, 51 feeders, best 0.13
+    casts/s vs a boss at mid gear, no lead; endgame Supercharged Slam ~1/s = the known Mjölner build; (c) 2 mapping kill
+    chains in leads.json; BREAKER.md) ((a) done 2026-11-21: Thundergod's Wrath + Fire Spell on Melee Hit in triggers.py, energy on every hit with
     the threshold ratio; (b) tools/trigger_scan.py built, full run going (~/trigger_scan.sh,
     writes data/breaker/triggers.json/.txt, not committed yet); (c) loop graph done: 2 mapping chains in
     leads.json (Bursting Fen Toad, Earthbound); next: read triggers.txt, (d) leads from feeders) Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose

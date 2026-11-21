@@ -1,0 +1,3218 @@
+{
+ "rows": {
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 0.12,
+      "threshold_ratio": 0.0464,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2877,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 5420,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 2.42,
+      "threshold_ratio": 0.0244,
+      "casts_per_sec": 0.022,
+      "attack_dps": 2877,
+      "trigger_dps": 6
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 4.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.045,
+      "attack_dps": 5420,
+      "trigger_dps": 25
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 2.42,
+      "threshold_ratio": 0.0244,
+      "casts_per_sec": 0.02,
+      "attack_dps": 2877,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 4.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.041,
+      "attack_dps": 5420,
+      "trigger_dps": 17
+     }
+    }
+   },
+   "seconds": 3.5
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.242,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 0.0652,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3033,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.242,
+      "energy_per_sec": 0.1,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 5991,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.242,
+      "energy_per_sec": 2.55,
+      "threshold_ratio": 0.0342,
+      "casts_per_sec": 0.023,
+      "attack_dps": 3033,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 1.242,
+      "energy_per_sec": 3.73,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.034,
+      "attack_dps": 5991,
+      "trigger_dps": 19
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.242,
+      "energy_per_sec": 2.55,
+      "threshold_ratio": 0.0342,
+      "casts_per_sec": 0.021,
+      "attack_dps": 3033,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 1.242,
+      "energy_per_sec": 3.73,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.031,
+      "attack_dps": 5991,
+      "trigger_dps": 13
+     }
+    }
+   },
+   "seconds": 2.1
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.552,
+      "energy_per_sec": 0.06,
+      "threshold_ratio": 0.0261,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1517,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.552,
+      "energy_per_sec": 0.12,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2994,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.552,
+      "energy_per_sec": 1.28,
+      "threshold_ratio": 0.0137,
+      "casts_per_sec": 0.012,
+      "attack_dps": 1517,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 1.552,
+      "energy_per_sec": 4.66,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.042,
+      "attack_dps": 2994,
+      "trigger_dps": 24
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.552,
+      "energy_per_sec": 1.28,
+      "threshold_ratio": 0.0137,
+      "casts_per_sec": 0.011,
+      "attack_dps": 1517,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 1.552,
+      "energy_per_sec": 4.66,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.039,
+      "attack_dps": 2994,
+      "trigger_dps": 16
+     }
+    }
+   },
+   "seconds": 2.2
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 0.08,
+      "threshold_ratio": 0.0292,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1812,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3576,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 1.52,
+      "threshold_ratio": 0.0153,
+      "casts_per_sec": 0.014,
+      "attack_dps": 1812,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 4.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.045,
+      "attack_dps": 3576,
+      "trigger_dps": 25
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 1.52,
+      "threshold_ratio": 0.0153,
+      "casts_per_sec": 0.013,
+      "attack_dps": 1812,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 4.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.041,
+      "attack_dps": 3576,
+      "trigger_dps": 17
+     }
+    }
+   },
+   "seconds": 3.5
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.125,
+      "energy_per_sec": 0.02,
+      "threshold_ratio": 0.1248,
+      "casts_per_sec": 0.0,
+      "attack_dps": 583,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.125,
+      "energy_per_sec": 0.01,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 1155,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.125,
+      "energy_per_sec": 0.49,
+      "threshold_ratio": 0.0655,
+      "casts_per_sec": 0.004,
+      "attack_dps": 583,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 0.125,
+      "energy_per_sec": 0.37,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.003,
+      "attack_dps": 1155,
+      "trigger_dps": 2
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.125,
+      "energy_per_sec": 0.49,
+      "threshold_ratio": 0.0655,
+      "casts_per_sec": 0.004,
+      "attack_dps": 583,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 0.125,
+      "energy_per_sec": 0.37,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.003,
+      "attack_dps": 1155,
+      "trigger_dps": 1
+     }
+    }
+   },
+   "seconds": 2.5
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.035,
+      "energy_per_sec": 0.48,
+      "threshold_ratio": 0.2955,
+      "casts_per_sec": 0.004,
+      "attack_dps": 11449,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.035,
+      "energy_per_sec": 0.08,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 22270,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.035,
+      "energy_per_sec": 9.63,
+      "threshold_ratio": 0.1551,
+      "casts_per_sec": 0.088,
+      "attack_dps": 11449,
+      "trigger_dps": 25
+     },
+     "mapping": {
+      "hits_per_sec": 1.035,
+      "energy_per_sec": 3.11,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.028,
+      "attack_dps": 22270,
+      "trigger_dps": 16
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.035,
+      "energy_per_sec": 9.63,
+      "threshold_ratio": 0.1551,
+      "casts_per_sec": 0.08,
+      "attack_dps": 11449,
+      "trigger_dps": 16
+     },
+     "mapping": {
+      "hits_per_sec": 1.035,
+      "energy_per_sec": 3.11,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.026,
+      "attack_dps": 22270,
+      "trigger_dps": 11
+     }
+    }
+   },
+   "seconds": 2.3
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.883,
+      "energy_per_sec": 0.16,
+      "threshold_ratio": 0.1135,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3750,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.883,
+      "energy_per_sec": 0.07,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 7379,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.883,
+      "energy_per_sec": 3.16,
+      "threshold_ratio": 0.0596,
+      "casts_per_sec": 0.029,
+      "attack_dps": 3750,
+      "trigger_dps": 8
+     },
+     "mapping": {
+      "hits_per_sec": 0.883,
+      "energy_per_sec": 2.65,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.024,
+      "attack_dps": 7379,
+      "trigger_dps": 14
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.883,
+      "energy_per_sec": 3.16,
+      "threshold_ratio": 0.0596,
+      "casts_per_sec": 0.026,
+      "attack_dps": 3750,
+      "trigger_dps": 5
+     },
+     "mapping": {
+      "hits_per_sec": 0.883,
+      "energy_per_sec": 2.65,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.022,
+      "attack_dps": 7379,
+      "trigger_dps": 9
+     }
+    }
+   },
+   "seconds": 3.2
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.774,
+      "energy_per_sec": 0.21,
+      "threshold_ratio": 0.0747,
+      "casts_per_sec": 0.002,
+      "attack_dps": 4964,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.774,
+      "energy_per_sec": 0.14,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 9851,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.774,
+      "energy_per_sec": 4.18,
+      "threshold_ratio": 0.0392,
+      "casts_per_sec": 0.038,
+      "attack_dps": 4964,
+      "trigger_dps": 11
+     },
+     "mapping": {
+      "hits_per_sec": 1.774,
+      "energy_per_sec": 5.32,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.048,
+      "attack_dps": 9851,
+      "trigger_dps": 27
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.774,
+      "energy_per_sec": 4.18,
+      "threshold_ratio": 0.0392,
+      "casts_per_sec": 0.035,
+      "attack_dps": 4964,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 1.774,
+      "energy_per_sec": 5.32,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.044,
+      "attack_dps": 9851,
+      "trigger_dps": 18
+     }
+    }
+   },
+   "seconds": 4.0
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.674,
+      "energy_per_sec": 0.02,
+      "threshold_ratio": 0.0148,
+      "casts_per_sec": 0.0,
+      "attack_dps": 374,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.674,
+      "energy_per_sec": 0.05,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 739,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.674,
+      "energy_per_sec": 0.32,
+      "threshold_ratio": 0.0078,
+      "casts_per_sec": 0.003,
+      "attack_dps": 374,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 0.674,
+      "energy_per_sec": 2.02,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.018,
+      "attack_dps": 739,
+      "trigger_dps": 10
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.674,
+      "energy_per_sec": 0.32,
+      "threshold_ratio": 0.0078,
+      "casts_per_sec": 0.003,
+      "attack_dps": 374,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 0.674,
+      "energy_per_sec": 2.02,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.017,
+      "attack_dps": 739,
+      "trigger_dps": 7
+     }
+    }
+   },
+   "seconds": 2.5
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.07,
+      "energy_per_sec": 0.08,
+      "threshold_ratio": 0.0261,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2023,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 2.07,
+      "energy_per_sec": 0.16,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3992,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.07,
+      "energy_per_sec": 1.7,
+      "threshold_ratio": 0.0137,
+      "casts_per_sec": 0.015,
+      "attack_dps": 2023,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 2.07,
+      "energy_per_sec": 6.21,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.056,
+      "attack_dps": 3992,
+      "trigger_dps": 32
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 2.07,
+      "energy_per_sec": 1.7,
+      "threshold_ratio": 0.0137,
+      "casts_per_sec": 0.014,
+      "attack_dps": 2023,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 2.07,
+      "energy_per_sec": 6.21,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.052,
+      "attack_dps": 3992,
+      "trigger_dps": 21
+     }
+    }
+   },
+   "seconds": 2.8
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.828,
+      "energy_per_sec": 0.22,
+      "threshold_ratio": 0.1667,
+      "casts_per_sec": 0.002,
+      "attack_dps": 5168,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.828,
+      "energy_per_sec": 0.06,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 10124,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.828,
+      "energy_per_sec": 4.35,
+      "threshold_ratio": 0.0875,
+      "casts_per_sec": 0.04,
+      "attack_dps": 5168,
+      "trigger_dps": 11
+     },
+     "mapping": {
+      "hits_per_sec": 0.828,
+      "energy_per_sec": 2.48,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.023,
+      "attack_dps": 10124,
+      "trigger_dps": 13
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.828,
+      "energy_per_sec": 4.35,
+      "threshold_ratio": 0.0875,
+      "casts_per_sec": 0.036,
+      "attack_dps": 5168,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 0.828,
+      "energy_per_sec": 2.48,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.021,
+      "attack_dps": 10124,
+      "trigger_dps": 8
+     }
+    }
+   },
+   "seconds": 2.8
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 0.09,
+      "threshold_ratio": 0.0337,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2086,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 4162,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 1.76,
+      "threshold_ratio": 0.0177,
+      "casts_per_sec": 0.016,
+      "attack_dps": 2086,
+      "trigger_dps": 5
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 4.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.045,
+      "attack_dps": 4162,
+      "trigger_dps": 25
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 1.76,
+      "threshold_ratio": 0.0177,
+      "casts_per_sec": 0.015,
+      "attack_dps": 2086,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 1.656,
+      "energy_per_sec": 4.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.041,
+      "attack_dps": 4162,
+      "trigger_dps": 17
+     }
+    }
+   },
+   "seconds": 4.7
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.539,
+      "energy_per_sec": 0.18,
+      "threshold_ratio": 0.0753,
+      "casts_per_sec": 0.002,
+      "attack_dps": 3782,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.539,
+      "energy_per_sec": 0.12,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 4552,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.539,
+      "energy_per_sec": 3.18,
+      "threshold_ratio": 0.0345,
+      "casts_per_sec": 0.029,
+      "attack_dps": 3782,
+      "trigger_dps": 8
+     },
+     "mapping": {
+      "hits_per_sec": 1.539,
+      "energy_per_sec": 4.62,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.042,
+      "attack_dps": 4552,
+      "trigger_dps": 24
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.539,
+      "energy_per_sec": 3.18,
+      "threshold_ratio": 0.0345,
+      "casts_per_sec": 0.027,
+      "attack_dps": 3782,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 1.539,
+      "energy_per_sec": 4.62,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.038,
+      "attack_dps": 4552,
+      "trigger_dps": 10
+     }
+    }
+   },
+   "seconds": 2.9
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.501,
+      "energy_per_sec": 0.14,
+      "threshold_ratio": 0.0605,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2961,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.501,
+      "energy_per_sec": 0.12,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3600,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.501,
+      "energy_per_sec": 2.49,
+      "threshold_ratio": 0.0277,
+      "casts_per_sec": 0.023,
+      "attack_dps": 2961,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 1.501,
+      "energy_per_sec": 4.5,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.041,
+      "attack_dps": 3600,
+      "trigger_dps": 24
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.501,
+      "energy_per_sec": 2.49,
+      "threshold_ratio": 0.0277,
+      "casts_per_sec": 0.021,
+      "attack_dps": 2961,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 1.501,
+      "energy_per_sec": 4.5,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.038,
+      "attack_dps": 3600,
+      "trigger_dps": 10
+     }
+    }
+   },
+   "seconds": 4.0
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.659,
+      "energy_per_sec": 0.08,
+      "threshold_ratio": 0.0772,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1659,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.659,
+      "energy_per_sec": 0.05,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 1995,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.659,
+      "energy_per_sec": 1.4,
+      "threshold_ratio": 0.0353,
+      "casts_per_sec": 0.013,
+      "attack_dps": 1659,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 0.659,
+      "energy_per_sec": 1.98,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.018,
+      "attack_dps": 1995,
+      "trigger_dps": 10
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.659,
+      "energy_per_sec": 1.4,
+      "threshold_ratio": 0.0353,
+      "casts_per_sec": 0.012,
+      "attack_dps": 1659,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 0.659,
+      "energy_per_sec": 1.98,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.016,
+      "attack_dps": 1995,
+      "trigger_dps": 4
+     }
+    }
+   },
+   "seconds": 3.1
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0031,
+      "casts_per_sec": 0.0,
+      "attack_dps": 94,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 172,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.08,
+      "threshold_ratio": 0.0013,
+      "casts_per_sec": 0.001,
+      "attack_dps": 94,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 3.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.027,
+      "attack_dps": 172,
+      "trigger_dps": 16
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.08,
+      "threshold_ratio": 0.0013,
+      "casts_per_sec": 0.001,
+      "attack_dps": 94,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 3.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.025,
+      "attack_dps": 172,
+      "trigger_dps": 7
+     }
+    }
+   },
+   "seconds": 2.8
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.701,
+      "energy_per_sec": 0.12,
+      "threshold_ratio": 0.045,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2495,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.701,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 4734,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.701,
+      "energy_per_sec": 2.1,
+      "threshold_ratio": 0.0206,
+      "casts_per_sec": 0.019,
+      "attack_dps": 2495,
+      "trigger_dps": 6
+     },
+     "mapping": {
+      "hits_per_sec": 1.701,
+      "energy_per_sec": 5.1,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.046,
+      "attack_dps": 4734,
+      "trigger_dps": 27
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.701,
+      "energy_per_sec": 2.1,
+      "threshold_ratio": 0.0206,
+      "casts_per_sec": 0.017,
+      "attack_dps": 2495,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 1.701,
+      "energy_per_sec": 5.1,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.043,
+      "attack_dps": 4734,
+      "trigger_dps": 12
+     }
+    }
+   },
+   "seconds": 3.3
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.601,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 0.0536,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2798,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.601,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 4558,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.601,
+      "energy_per_sec": 2.35,
+      "threshold_ratio": 0.0245,
+      "casts_per_sec": 0.021,
+      "attack_dps": 2798,
+      "trigger_dps": 9
+     },
+     "mapping": {
+      "hits_per_sec": 1.601,
+      "energy_per_sec": 4.8,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.044,
+      "attack_dps": 4558,
+      "trigger_dps": 38
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.601,
+      "energy_per_sec": 2.35,
+      "threshold_ratio": 0.0245,
+      "casts_per_sec": 0.02,
+      "attack_dps": 2798,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 1.601,
+      "energy_per_sec": 4.8,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.04,
+      "attack_dps": 4558,
+      "trigger_dps": 16
+     }
+    }
+   },
+   "seconds": 4.2
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.111,
+      "energy_per_sec": 0.07,
+      "threshold_ratio": 0.0401,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1455,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.111,
+      "energy_per_sec": 0.09,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1807,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.111,
+      "energy_per_sec": 1.22,
+      "threshold_ratio": 0.0184,
+      "casts_per_sec": 0.011,
+      "attack_dps": 1455,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 1.111,
+      "energy_per_sec": 3.33,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.03,
+      "attack_dps": 1807,
+      "trigger_dps": 18
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.111,
+      "energy_per_sec": 1.22,
+      "threshold_ratio": 0.0184,
+      "casts_per_sec": 0.01,
+      "attack_dps": 1455,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 1.111,
+      "energy_per_sec": 3.33,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.028,
+      "attack_dps": 1807,
+      "trigger_dps": 8
+     }
+    }
+   },
+   "seconds": 3.1
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 0.01,
+      "threshold_ratio": 0.0112,
+      "casts_per_sec": 0.0,
+      "attack_dps": 293,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 0.06,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 396,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 0.25,
+      "threshold_ratio": 0.0051,
+      "casts_per_sec": 0.002,
+      "attack_dps": 293,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 2.4,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.022,
+      "attack_dps": 396,
+      "trigger_dps": 13
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 0.25,
+      "threshold_ratio": 0.0051,
+      "casts_per_sec": 0.002,
+      "attack_dps": 293,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 2.4,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.02,
+      "attack_dps": 396,
+      "trigger_dps": 5
+     }
+    }
+   },
+   "seconds": 2.7
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 0.02,
+      "threshold_ratio": 0.0098,
+      "casts_per_sec": 0.0,
+      "attack_dps": 448,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 0.11,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 611,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 0.38,
+      "threshold_ratio": 0.0045,
+      "casts_per_sec": 0.003,
+      "attack_dps": 448,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 4.2,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.038,
+      "attack_dps": 611,
+      "trigger_dps": 22
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 0.38,
+      "threshold_ratio": 0.0045,
+      "casts_per_sec": 0.003,
+      "attack_dps": 448,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 4.2,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.035,
+      "attack_dps": 611,
+      "trigger_dps": 9
+     }
+    }
+   },
+   "seconds": 4.7
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.625,
+      "energy_per_sec": 0.09,
+      "threshold_ratio": 0.0894,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1823,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.625,
+      "energy_per_sec": 0.05,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 3194,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.625,
+      "energy_per_sec": 1.53,
+      "threshold_ratio": 0.0409,
+      "casts_per_sec": 0.014,
+      "attack_dps": 1823,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 0.625,
+      "energy_per_sec": 1.88,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.017,
+      "attack_dps": 3194,
+      "trigger_dps": 10
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.625,
+      "energy_per_sec": 1.53,
+      "threshold_ratio": 0.0409,
+      "casts_per_sec": 0.013,
+      "attack_dps": 1823,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 0.625,
+      "energy_per_sec": 1.88,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.016,
+      "attack_dps": 3194,
+      "trigger_dps": 4
+     }
+    }
+   },
+   "seconds": 2.9
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 0.1,
+      "threshold_ratio": 0.0443,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2024,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 0.11,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 2501,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 1.7,
+      "threshold_ratio": 0.0203,
+      "casts_per_sec": 0.015,
+      "attack_dps": 2024,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 4.2,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.038,
+      "attack_dps": 2501,
+      "trigger_dps": 22
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 1.7,
+      "threshold_ratio": 0.0203,
+      "casts_per_sec": 0.014,
+      "attack_dps": 2024,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 1.401,
+      "energy_per_sec": 4.2,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.035,
+      "attack_dps": 2501,
+      "trigger_dps": 9
+     }
+    }
+   },
+   "seconds": 2.6
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 0.21,
+      "threshold_ratio": 0.1652,
+      "casts_per_sec": 0.002,
+      "attack_dps": 4314,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 0.06,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 5047,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 3.63,
+      "threshold_ratio": 0.0756,
+      "casts_per_sec": 0.033,
+      "attack_dps": 4314,
+      "trigger_dps": 10
+     },
+     "mapping": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 2.4,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.022,
+      "attack_dps": 5047,
+      "trigger_dps": 13
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 3.63,
+      "threshold_ratio": 0.0756,
+      "casts_per_sec": 0.03,
+      "attack_dps": 4314,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 0.8,
+      "energy_per_sec": 2.4,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.02,
+      "attack_dps": 5047,
+      "trigger_dps": 5
+     }
+    }
+   },
+   "seconds": 4.5
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.497,
+      "energy_per_sec": 0.19,
+      "threshold_ratio": 0.0975,
+      "casts_per_sec": 0.002,
+      "attack_dps": 1752,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.497,
+      "energy_per_sec": 0.1,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1988,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.497,
+      "energy_per_sec": 1.47,
+      "threshold_ratio": 0.0495,
+      "casts_per_sec": 0.013,
+      "attack_dps": 1752,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 0.497,
+      "energy_per_sec": 1.49,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.014,
+      "attack_dps": 1988,
+      "trigger_dps": 8
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.497,
+      "energy_per_sec": 1.47,
+      "threshold_ratio": 0.0495,
+      "casts_per_sec": 0.012,
+      "attack_dps": 1752,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 0.497,
+      "energy_per_sec": 1.49,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.012,
+      "attack_dps": 1988,
+      "trigger_dps": 3
+     }
+    }
+   },
+   "seconds": 4.2
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.87,
+      "energy_per_sec": 0.7,
+      "threshold_ratio": 0.0975,
+      "casts_per_sec": 0.006,
+      "attack_dps": 6594,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 1.87,
+      "energy_per_sec": 0.36,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.003,
+      "attack_dps": 7485,
+      "trigger_dps": 1
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.87,
+      "energy_per_sec": 5.55,
+      "threshold_ratio": 0.0495,
+      "casts_per_sec": 0.05,
+      "attack_dps": 6594,
+      "trigger_dps": 15
+     },
+     "mapping": {
+      "hits_per_sec": 1.87,
+      "energy_per_sec": 5.61,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.051,
+      "attack_dps": 7485,
+      "trigger_dps": 30
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.87,
+      "energy_per_sec": 5.55,
+      "threshold_ratio": 0.0495,
+      "casts_per_sec": 0.046,
+      "attack_dps": 6594,
+      "trigger_dps": 6
+     },
+     "mapping": {
+      "hits_per_sec": 1.87,
+      "energy_per_sec": 5.61,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.047,
+      "attack_dps": 7485,
+      "trigger_dps": 13
+     }
+    }
+   },
+   "seconds": 2.3
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.31,
+      "threshold_ratio": 0.1063,
+      "casts_per_sec": 0.003,
+      "attack_dps": 2961,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.15,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3352,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.49,
+      "threshold_ratio": 0.0539,
+      "casts_per_sec": 0.023,
+      "attack_dps": 2961,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.31,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.021,
+      "attack_dps": 3352,
+      "trigger_dps": 13
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.49,
+      "threshold_ratio": 0.0539,
+      "casts_per_sec": 0.021,
+      "attack_dps": 2961,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.31,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.019,
+      "attack_dps": 3352,
+      "trigger_dps": 5
+     }
+    }
+   },
+   "seconds": 2.2
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.08,
+      "threshold_ratio": 0.0282,
+      "casts_per_sec": 0.001,
+      "attack_dps": 786,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.15,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1494,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.66,
+      "threshold_ratio": 0.0143,
+      "casts_per_sec": 0.006,
+      "attack_dps": 786,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.31,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.021,
+      "attack_dps": 1494,
+      "trigger_dps": 13
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.66,
+      "threshold_ratio": 0.0143,
+      "casts_per_sec": 0.006,
+      "attack_dps": 786,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.31,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.019,
+      "attack_dps": 1494,
+      "trigger_dps": 5
+     }
+    }
+   },
+   "seconds": 3.5
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.21,
+      "energy_per_sec": 0.13,
+      "threshold_ratio": 0.0276,
+      "casts_per_sec": 0.001,
+      "attack_dps": 1207,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.21,
+      "energy_per_sec": 0.23,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.002,
+      "attack_dps": 2297,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.21,
+      "energy_per_sec": 1.02,
+      "threshold_ratio": 0.014,
+      "casts_per_sec": 0.009,
+      "attack_dps": 1207,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 1.21,
+      "energy_per_sec": 3.63,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.033,
+      "attack_dps": 2297,
+      "trigger_dps": 20
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.21,
+      "energy_per_sec": 1.02,
+      "threshold_ratio": 0.014,
+      "casts_per_sec": 0.008,
+      "attack_dps": 1207,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 1.21,
+      "energy_per_sec": 3.63,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.03,
+      "attack_dps": 2297,
+      "trigger_dps": 8
+     }
+    }
+   },
+   "seconds": 3.0
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.43,
+      "threshold_ratio": 0.144,
+      "casts_per_sec": 0.004,
+      "attack_dps": 4011,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 0.15,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 4500,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 3.37,
+      "threshold_ratio": 0.073,
+      "casts_per_sec": 0.031,
+      "attack_dps": 4011,
+      "trigger_dps": 9
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.31,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.021,
+      "attack_dps": 4500,
+      "trigger_dps": 13
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 3.37,
+      "threshold_ratio": 0.073,
+      "casts_per_sec": 0.028,
+      "attack_dps": 4011,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 0.77,
+      "energy_per_sec": 2.31,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.019,
+      "attack_dps": 4500,
+      "trigger_dps": 5
+     }
+    }
+   },
+   "seconds": 2.4
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.99,
+      "energy_per_sec": 0.49,
+      "threshold_ratio": 0.1299,
+      "casts_per_sec": 0.004,
+      "attack_dps": 4650,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.99,
+      "energy_per_sec": 0.19,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.002,
+      "attack_dps": 5232,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.99,
+      "energy_per_sec": 3.91,
+      "threshold_ratio": 0.0659,
+      "casts_per_sec": 0.036,
+      "attack_dps": 4650,
+      "trigger_dps": 11
+     },
+     "mapping": {
+      "hits_per_sec": 0.99,
+      "energy_per_sec": 2.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.027,
+      "attack_dps": 5232,
+      "trigger_dps": 16
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.99,
+      "energy_per_sec": 3.91,
+      "threshold_ratio": 0.0659,
+      "casts_per_sec": 0.033,
+      "attack_dps": 4650,
+      "trigger_dps": 5
+     },
+     "mapping": {
+      "hits_per_sec": 0.99,
+      "energy_per_sec": 2.97,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.025,
+      "attack_dps": 5232,
+      "trigger_dps": 7
+     }
+    }
+   },
+   "seconds": 2.5
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.827,
+      "energy_per_sec": 0.31,
+      "threshold_ratio": 0.0969,
+      "casts_per_sec": 0.003,
+      "attack_dps": 2899,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.827,
+      "energy_per_sec": 0.16,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3291,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.827,
+      "energy_per_sec": 2.44,
+      "threshold_ratio": 0.0492,
+      "casts_per_sec": 0.022,
+      "attack_dps": 2899,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 0.827,
+      "energy_per_sec": 2.48,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.023,
+      "attack_dps": 3291,
+      "trigger_dps": 13
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.827,
+      "energy_per_sec": 2.44,
+      "threshold_ratio": 0.0492,
+      "casts_per_sec": 0.02,
+      "attack_dps": 2899,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 0.827,
+      "energy_per_sec": 2.48,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.021,
+      "attack_dps": 3291,
+      "trigger_dps": 6
+     }
+    }
+   },
+   "seconds": 4.1
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.283,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.1728,
+      "casts_per_sec": 0.0,
+      "attack_dps": 7905,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.283,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 15077,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.283,
+      "energy_per_sec": 6.65,
+      "threshold_ratio": 0.0864,
+      "casts_per_sec": 0.06,
+      "attack_dps": 7905,
+      "trigger_dps": 30
+     },
+     "mapping": {
+      "hits_per_sec": 1.283,
+      "energy_per_sec": 3.85,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.035,
+      "attack_dps": 15077,
+      "trigger_dps": 34
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.283,
+      "energy_per_sec": 6.65,
+      "threshold_ratio": 0.0864,
+      "casts_per_sec": 0.055,
+      "attack_dps": 7905,
+      "trigger_dps": 11
+     },
+     "mapping": {
+      "hits_per_sec": 1.283,
+      "energy_per_sec": 3.85,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.032,
+      "attack_dps": 15077,
+      "trigger_dps": 12
+     }
+    }
+   },
+   "seconds": 2.6
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 4.12,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.1152,
+      "casts_per_sec": 0.0,
+      "attack_dps": 16924,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 4.12,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 27692,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 4.12,
+      "energy_per_sec": 14.24,
+      "threshold_ratio": 0.0576,
+      "casts_per_sec": 0.129,
+      "attack_dps": 16924,
+      "trigger_dps": 64
+     },
+     "mapping": {
+      "hits_per_sec": 4.12,
+      "energy_per_sec": 12.36,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.112,
+      "attack_dps": 27692,
+      "trigger_dps": 111
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 4.12,
+      "energy_per_sec": 14.24,
+      "threshold_ratio": 0.0576,
+      "casts_per_sec": 0.119,
+      "attack_dps": 16924,
+      "trigger_dps": 23
+     },
+     "mapping": {
+      "hits_per_sec": 4.12,
+      "energy_per_sec": 12.36,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.103,
+      "attack_dps": 27692,
+      "trigger_dps": 39
+     }
+    }
+   },
+   "seconds": 2.7
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.007,
+      "casts_per_sec": 0.0,
+      "attack_dps": 249,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 498,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.21,
+      "threshold_ratio": 0.0035,
+      "casts_per_sec": 0.002,
+      "attack_dps": 249,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 3.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.027,
+      "attack_dps": 498,
+      "trigger_dps": 27
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 0.21,
+      "threshold_ratio": 0.0035,
+      "casts_per_sec": 0.002,
+      "attack_dps": 249,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.0,
+      "energy_per_sec": 3.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.025,
+      "attack_dps": 498,
+      "trigger_dps": 10
+     }
+    }
+   },
+   "seconds": 3.5
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.928,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.1517,
+      "casts_per_sec": 0.0,
+      "attack_dps": 5021,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.928,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 8689,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.928,
+      "energy_per_sec": 4.23,
+      "threshold_ratio": 0.0759,
+      "casts_per_sec": 0.038,
+      "attack_dps": 5021,
+      "trigger_dps": 19
+     },
+     "mapping": {
+      "hits_per_sec": 0.928,
+      "energy_per_sec": 2.78,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.025,
+      "attack_dps": 8689,
+      "trigger_dps": 25
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.928,
+      "energy_per_sec": 4.23,
+      "threshold_ratio": 0.0759,
+      "casts_per_sec": 0.035,
+      "attack_dps": 5021,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 0.928,
+      "energy_per_sec": 2.78,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.023,
+      "attack_dps": 8689,
+      "trigger_dps": 9
+     }
+    }
+   },
+   "seconds": 2.6
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0405,
+      "casts_per_sec": 0.0,
+      "attack_dps": 2314,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 4574,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 1.95,
+      "threshold_ratio": 0.0202,
+      "casts_per_sec": 0.018,
+      "attack_dps": 2314,
+      "trigger_dps": 9
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.044,
+      "attack_dps": 4574,
+      "trigger_dps": 43
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 1.95,
+      "threshold_ratio": 0.0202,
+      "casts_per_sec": 0.016,
+      "attack_dps": 2314,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.04,
+      "attack_dps": 4574,
+      "trigger_dps": 15
+     }
+    }
+   },
+   "seconds": 2.4
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0607,
+      "casts_per_sec": 0.0,
+      "attack_dps": 6478,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 12805,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 5.45,
+      "threshold_ratio": 0.0303,
+      "casts_per_sec": 0.05,
+      "attack_dps": 6478,
+      "trigger_dps": 24
+     },
+     "mapping": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 8.98,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.082,
+      "attack_dps": 12805,
+      "trigger_dps": 80
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 5.45,
+      "threshold_ratio": 0.0303,
+      "casts_per_sec": 0.045,
+      "attack_dps": 6478,
+      "trigger_dps": 9
+     },
+     "mapping": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 8.98,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.075,
+      "attack_dps": 12805,
+      "trigger_dps": 29
+     }
+    }
+   },
+   "seconds": 4.1
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0774,
+      "casts_per_sec": 0.0,
+      "attack_dps": 4426,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 7379,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 3.72,
+      "threshold_ratio": 0.0387,
+      "casts_per_sec": 0.034,
+      "attack_dps": 4426,
+      "trigger_dps": 17
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.044,
+      "attack_dps": 7379,
+      "trigger_dps": 43
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 3.72,
+      "threshold_ratio": 0.0387,
+      "casts_per_sec": 0.031,
+      "attack_dps": 4426,
+      "trigger_dps": 6
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.04,
+      "attack_dps": 7379,
+      "trigger_dps": 15
+     }
+    }
+   },
+   "seconds": 3.2
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0324,
+      "casts_per_sec": 0.0,
+      "attack_dps": 1852,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 3618,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 1.56,
+      "threshold_ratio": 0.0162,
+      "casts_per_sec": 0.014,
+      "attack_dps": 1852,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.044,
+      "attack_dps": 3618,
+      "trigger_dps": 43
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 1.56,
+      "threshold_ratio": 0.0162,
+      "casts_per_sec": 0.013,
+      "attack_dps": 1852,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.04,
+      "attack_dps": 3618,
+      "trigger_dps": 15
+     }
+    }
+   },
+   "seconds": 2.8
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.139,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.063,
+      "casts_per_sec": 0.0,
+      "attack_dps": 4805,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 2.139,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 8096,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.139,
+      "energy_per_sec": 4.04,
+      "threshold_ratio": 0.0315,
+      "casts_per_sec": 0.037,
+      "attack_dps": 4805,
+      "trigger_dps": 18
+     },
+     "mapping": {
+      "hits_per_sec": 2.139,
+      "energy_per_sec": 6.42,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.058,
+      "attack_dps": 8096,
+      "trigger_dps": 57
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 2.139,
+      "energy_per_sec": 4.04,
+      "threshold_ratio": 0.0315,
+      "casts_per_sec": 0.034,
+      "attack_dps": 4805,
+      "trigger_dps": 6
+     },
+     "mapping": {
+      "hits_per_sec": 2.139,
+      "energy_per_sec": 6.42,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.053,
+      "attack_dps": 8096,
+      "trigger_dps": 20
+     }
+    }
+   },
+   "seconds": 2.3
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.1235,
+      "casts_per_sec": 0.0,
+      "attack_dps": 7061,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 13964,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 5.94,
+      "threshold_ratio": 0.0617,
+      "casts_per_sec": 0.054,
+      "attack_dps": 7061,
+      "trigger_dps": 27
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.044,
+      "attack_dps": 13964,
+      "trigger_dps": 43
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 5.94,
+      "threshold_ratio": 0.0617,
+      "casts_per_sec": 0.05,
+      "attack_dps": 7061,
+      "trigger_dps": 9
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.04,
+      "attack_dps": 13964,
+      "trigger_dps": 15
+     }
+    }
+   },
+   "seconds": 3.0
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.894,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0151,
+      "casts_per_sec": 0.0,
+      "attack_dps": 1022,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.894,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 1863,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.894,
+      "energy_per_sec": 0.86,
+      "threshold_ratio": 0.0076,
+      "casts_per_sec": 0.008,
+      "attack_dps": 1022,
+      "trigger_dps": 4
+     },
+     "mapping": {
+      "hits_per_sec": 1.894,
+      "energy_per_sec": 5.68,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.052,
+      "attack_dps": 1863,
+      "trigger_dps": 51
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.894,
+      "energy_per_sec": 0.86,
+      "threshold_ratio": 0.0076,
+      "casts_per_sec": 0.007,
+      "attack_dps": 1022,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 1.894,
+      "energy_per_sec": 5.68,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.047,
+      "attack_dps": 1863,
+      "trigger_dps": 18
+     }
+    }
+   },
+   "seconds": 5.7
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0453,
+      "casts_per_sec": 0.0,
+      "attack_dps": 4836,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 9468,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 4.07,
+      "threshold_ratio": 0.0226,
+      "casts_per_sec": 0.037,
+      "attack_dps": 4836,
+      "trigger_dps": 18
+     },
+     "mapping": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 8.98,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.082,
+      "attack_dps": 9468,
+      "trigger_dps": 80
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 4.07,
+      "threshold_ratio": 0.0226,
+      "casts_per_sec": 0.034,
+      "attack_dps": 4836,
+      "trigger_dps": 6
+     },
+     "mapping": {
+      "hits_per_sec": 2.995,
+      "energy_per_sec": 8.98,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.075,
+      "attack_dps": 9468,
+      "trigger_dps": 29
+     }
+    }
+   },
+   "seconds": 2.6
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.681,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.1056,
+      "casts_per_sec": 0.0,
+      "attack_dps": 2565,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.681,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 4213,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.681,
+      "energy_per_sec": 2.16,
+      "threshold_ratio": 0.0528,
+      "casts_per_sec": 0.02,
+      "attack_dps": 2565,
+      "trigger_dps": 10
+     },
+     "mapping": {
+      "hits_per_sec": 0.681,
+      "energy_per_sec": 2.04,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.019,
+      "attack_dps": 4213,
+      "trigger_dps": 18
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.681,
+      "energy_per_sec": 2.16,
+      "threshold_ratio": 0.0528,
+      "casts_per_sec": 0.018,
+      "attack_dps": 2565,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 0.681,
+      "energy_per_sec": 2.04,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.017,
+      "attack_dps": 4213,
+      "trigger_dps": 7
+     }
+    }
+   },
+   "seconds": 2.7
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.176,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0867,
+      "casts_per_sec": 0.0,
+      "attack_dps": 3638,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.176,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 7204,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.176,
+      "energy_per_sec": 3.06,
+      "threshold_ratio": 0.0434,
+      "casts_per_sec": 0.028,
+      "attack_dps": 3638,
+      "trigger_dps": 14
+     },
+     "mapping": {
+      "hits_per_sec": 1.176,
+      "energy_per_sec": 3.53,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.032,
+      "attack_dps": 7204,
+      "trigger_dps": 32
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.176,
+      "energy_per_sec": 3.06,
+      "threshold_ratio": 0.0434,
+      "casts_per_sec": 0.026,
+      "attack_dps": 3638,
+      "trigger_dps": 5
+     },
+     "mapping": {
+      "hits_per_sec": 1.176,
+      "energy_per_sec": 3.53,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.029,
+      "attack_dps": 7204,
+      "trigger_dps": 11
+     }
+    }
+   },
+   "seconds": 4.0
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.645,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0528,
+      "casts_per_sec": 0.0,
+      "attack_dps": 1214,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.645,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 2064,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.645,
+      "energy_per_sec": 1.02,
+      "threshold_ratio": 0.0264,
+      "casts_per_sec": 0.009,
+      "attack_dps": 1214,
+      "trigger_dps": 5
+     },
+     "mapping": {
+      "hits_per_sec": 0.645,
+      "energy_per_sec": 1.94,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.018,
+      "attack_dps": 2064,
+      "trigger_dps": 17
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.645,
+      "energy_per_sec": 1.02,
+      "threshold_ratio": 0.0264,
+      "casts_per_sec": 0.009,
+      "attack_dps": 1214,
+      "trigger_dps": 2
+     },
+     "mapping": {
+      "hits_per_sec": 0.645,
+      "energy_per_sec": 1.94,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.016,
+      "attack_dps": 2064,
+      "trigger_dps": 6
+     }
+    }
+   },
+   "seconds": 2.1
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 0.0726,
+      "casts_per_sec": 0.0,
+      "attack_dps": 4151,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 0.0,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.0,
+      "attack_dps": 6942,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 3.49,
+      "threshold_ratio": 0.0363,
+      "casts_per_sec": 0.032,
+      "attack_dps": 4151,
+      "trigger_dps": 16
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.044,
+      "attack_dps": 6942,
+      "trigger_dps": 43
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 3.49,
+      "threshold_ratio": 0.0363,
+      "casts_per_sec": 0.029,
+      "attack_dps": 4151,
+      "trigger_dps": 6
+     },
+     "mapping": {
+      "hits_per_sec": 1.604,
+      "energy_per_sec": 4.81,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.04,
+      "attack_dps": 6942,
+      "trigger_dps": 15
+     }
+    }
+   },
+   "seconds": 2.3
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.92,
+      "energy_per_sec": 0.16,
+      "threshold_ratio": 0.1122,
+      "casts_per_sec": 0.001,
+      "attack_dps": 3370,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.92,
+      "energy_per_sec": 0.07,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 4066,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.92,
+      "energy_per_sec": 2.84,
+      "threshold_ratio": 0.0514,
+      "casts_per_sec": 0.026,
+      "attack_dps": 3370,
+      "trigger_dps": 7
+     },
+     "mapping": {
+      "hits_per_sec": 0.92,
+      "energy_per_sec": 2.76,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.025,
+      "attack_dps": 4066,
+      "trigger_dps": 15
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.92,
+      "energy_per_sec": 2.84,
+      "threshold_ratio": 0.0514,
+      "casts_per_sec": 0.024,
+      "attack_dps": 3370,
+      "trigger_dps": 3
+     },
+     "mapping": {
+      "hits_per_sec": 0.92,
+      "energy_per_sec": 2.76,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.023,
+      "attack_dps": 4066,
+      "trigger_dps": 6
+     }
+    }
+   },
+   "seconds": 2.6
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.793,
+      "energy_per_sec": 0.01,
+      "threshold_ratio": 0.0106,
+      "casts_per_sec": 0.0,
+      "attack_dps": 316,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.794,
+      "energy_per_sec": 0.06,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 593,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 0.793,
+      "energy_per_sec": 0.27,
+      "threshold_ratio": 0.0056,
+      "casts_per_sec": 0.002,
+      "attack_dps": 316,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 0.794,
+      "energy_per_sec": 2.38,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.022,
+      "attack_dps": 593,
+      "trigger_dps": 12
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 0.793,
+      "energy_per_sec": 0.27,
+      "threshold_ratio": 0.0056,
+      "casts_per_sec": 0.002,
+      "attack_dps": 316,
+      "trigger_dps": 0
+     },
+     "mapping": {
+      "hits_per_sec": 0.794,
+      "energy_per_sec": 2.38,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.02,
+      "attack_dps": 593,
+      "trigger_dps": 8
+     }
+    }
+   },
+   "seconds": 4.6
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "metas": {
+    "Cast on Critical": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.901,
+      "energy_per_sec": 0.72,
+      "threshold_ratio": 0.2418,
+      "casts_per_sec": 0.007,
+      "attack_dps": 17208,
+      "trigger_dps": 1
+     },
+     "mapping": {
+      "hits_per_sec": 1.901,
+      "energy_per_sec": 0.15,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.001,
+      "attack_dps": 18677,
+      "trigger_dps": 0
+     }
+    },
+    "Thundergod's Wrath": {
+     "spell": "Arc",
+     "bossing": {
+      "hits_per_sec": 1.901,
+      "energy_per_sec": 14.48,
+      "threshold_ratio": 0.1269,
+      "casts_per_sec": 0.132,
+      "attack_dps": 17208,
+      "trigger_dps": 37
+     },
+     "mapping": {
+      "hits_per_sec": 1.901,
+      "energy_per_sec": 5.7,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.052,
+      "attack_dps": 18677,
+      "trigger_dps": 29
+     }
+    },
+    "Fire Spell on Melee Hit": {
+     "spell": "Fireball",
+     "bossing": {
+      "hits_per_sec": 1.901,
+      "energy_per_sec": 14.48,
+      "threshold_ratio": 0.1269,
+      "casts_per_sec": 0.121,
+      "attack_dps": 17208,
+      "trigger_dps": 16
+     },
+     "mapping": {
+      "hits_per_sec": 1.901,
+      "energy_per_sec": 5.7,
+      "threshold_ratio": 1.0,
+      "casts_per_sec": 0.048,
+      "attack_dps": 18677,
+      "trigger_dps": 13
+     }
+    }
+   },
+   "seconds": 3.1
+  }
+ },
+ "updated": "2026-11-21 22:35"
+}

@@ -1,0 +1,85 @@
+Trigger feeders: 51 melee attacks, mid-game gear, no supports (updated 2026-11-21 22:35).
+
+Cast on Critical -> Arc, bossing: best feeders (energy/s, casts/s, threshold ratio, trigger vs attack)
+  Supercharged Slam               0.7   0.01/s ratio 0.242  trigger +0% of the attack
+  Devour                          0.7   0.01/s ratio 0.098  trigger +0% of the attack
+  Rend                            0.5   0.00/s ratio 0.130  trigger +0% of the attack
+  Hammer of the Gods              0.5   0.00/s ratio 0.295  trigger +0% of the attack
+  Rampage                         0.4   0.00/s ratio 0.144  trigger +0% of the attack
+  Furious Slam                    0.3   0.00/s ratio 0.106  trigger +0% of the attack
+  Wing Blast                      0.3   0.00/s ratio 0.097  trigger +0% of the attack
+  Sunder                          0.2   0.00/s ratio 0.167  trigger +0% of the attack
+  Perfect Strike                  0.2   0.00/s ratio 0.075  trigger +0% of the attack
+  Wind Serpent's Fury             0.2   0.00/s ratio 0.165  trigger +0% of the attack
+  Cross Slash                     0.2   0.00/s ratio 0.098  trigger +0% of the attack
+  Blood Hunt                      0.2   0.00/s ratio 0.075  trigger +0% of the attack
+
+Cast on Critical -> Arc, mapping: best feeders (energy/s, casts/s, threshold ratio, trigger vs attack)
+  Devour                          0.4   0.00/s ratio 1.000  trigger +0% of the attack
+  Lunar Assault                   0.2   0.00/s ratio 1.000  trigger +0% of the attack
+  Rend                            0.2   0.00/s ratio 1.000  trigger +0% of the attack
+  Wing Blast                      0.2   0.00/s ratio 1.000  trigger +0% of the attack
+  Stampede                        0.2   0.00/s ratio 1.000  trigger +0% of the attack
+  Supercharged Slam               0.1   0.00/s ratio 1.000  trigger +0% of the attack
+  Rampage                         0.1   0.00/s ratio 1.000  trigger +0% of the attack
+  Furious Slam                    0.1   0.00/s ratio 1.000  trigger +0% of the attack
+  Fury of the Mountain            0.1   0.00/s ratio 1.000  trigger +0% of the attack
+  Perfect Strike                  0.1   0.00/s ratio 1.000  trigger +0% of the attack
+  Primal Strikes                  0.1   0.00/s ratio 1.000  trigger +0% of the attack
+  Armour Breaker                  0.1   0.00/s ratio 1.000  trigger +0% of the attack
+
+Thundergod's Wrath -> Arc, bossing: best feeders (energy/s, casts/s, threshold ratio, trigger vs attack)
+  Supercharged Slam              14.5   0.13/s ratio 0.127  trigger +0% of the attack
+  Flicker Strike                 14.2   0.13/s ratio 0.058  trigger +0% of the attack
+  Hammer of the Gods              9.6   0.09/s ratio 0.155  trigger +0% of the attack
+  Falling Thunder                 6.7   0.06/s ratio 0.086  trigger +0% of the attack
+  Storm Wave                      5.9   0.05/s ratio 0.062  trigger +0% of the attack
+  Devour                          5.5   0.05/s ratio 0.050  trigger +0% of the attack
+  Ice Strike                      5.5   0.05/s ratio 0.030  trigger +0% of the attack
+  Sunder                          4.3   0.04/s ratio 0.087  trigger +0% of the attack
+  Gathering Storm                 4.2   0.04/s ratio 0.076  trigger +0% of the attack
+  Perfect Strike                  4.2   0.04/s ratio 0.039  trigger +0% of the attack
+  Tempest Flurry                  4.1   0.04/s ratio 0.023  trigger +0% of the attack
+  Siphoning Strike                4.0   0.04/s ratio 0.032  trigger +0% of the attack
+
+Thundergod's Wrath -> Arc, mapping: best feeders (energy/s, casts/s, threshold ratio, trigger vs attack)
+  Flicker Strike                 12.4   0.11/s ratio 1.000  trigger +0% of the attack
+  Ice Strike                      9.0   0.08/s ratio 1.000  trigger +1% of the attack
+  Tempest Flurry                  9.0   0.08/s ratio 1.000  trigger +1% of the attack
+  Siphoning Strike                6.4   0.06/s ratio 1.000  trigger +1% of the attack
+  Stampede                        6.2   0.06/s ratio 1.000  trigger +1% of the attack
+  Supercharged Slam               5.7   0.05/s ratio 1.000  trigger +0% of the attack
+  Tempest Bell                    5.7   0.05/s ratio 1.000  trigger +3% of the attack
+  Devour                          5.6   0.05/s ratio 1.000  trigger +0% of the attack
+  Perfect Strike                  5.3   0.05/s ratio 1.000  trigger +0% of the attack
+  Fangs of Frost                  5.1   0.05/s ratio 1.000  trigger +1% of the attack
+  Armour Breaker                  5.0   0.04/s ratio 1.000  trigger +0% of the attack
+  Volcanic Fissure                5.0   0.04/s ratio 1.000  trigger +1% of the attack
+
+Fire Spell on Melee Hit -> Fireball, bossing: best feeders (energy/s, casts/s, threshold ratio, trigger vs attack)
+  Supercharged Slam              14.5   0.12/s ratio 0.127  trigger +0% of the attack
+  Flicker Strike                 14.2   0.12/s ratio 0.058  trigger +0% of the attack
+  Hammer of the Gods              9.6   0.08/s ratio 0.155  trigger +0% of the attack
+  Falling Thunder                 6.7   0.06/s ratio 0.086  trigger +0% of the attack
+  Storm Wave                      5.9   0.05/s ratio 0.062  trigger +0% of the attack
+  Devour                          5.5   0.05/s ratio 0.050  trigger +0% of the attack
+  Ice Strike                      5.5   0.04/s ratio 0.030  trigger +0% of the attack
+  Sunder                          4.3   0.04/s ratio 0.087  trigger +0% of the attack
+  Gathering Storm                 4.2   0.04/s ratio 0.076  trigger +0% of the attack
+  Perfect Strike                  4.2   0.04/s ratio 0.039  trigger +0% of the attack
+  Tempest Flurry                  4.1   0.03/s ratio 0.023  trigger +0% of the attack
+  Siphoning Strike                4.0   0.03/s ratio 0.032  trigger +0% of the attack
+
+Fire Spell on Melee Hit -> Fireball, mapping: best feeders (energy/s, casts/s, threshold ratio, trigger vs attack)
+  Flicker Strike                 12.4   0.10/s ratio 1.000  trigger +0% of the attack
+  Ice Strike                      9.0   0.07/s ratio 1.000  trigger +0% of the attack
+  Tempest Flurry                  9.0   0.07/s ratio 1.000  trigger +0% of the attack
+  Siphoning Strike                6.4   0.05/s ratio 1.000  trigger +0% of the attack
+  Stampede                        6.2   0.05/s ratio 1.000  trigger +1% of the attack
+  Supercharged Slam               5.7   0.05/s ratio 1.000  trigger +0% of the attack
+  Tempest Bell                    5.7   0.05/s ratio 1.000  trigger +1% of the attack
+  Devour                          5.6   0.05/s ratio 1.000  trigger +0% of the attack
+  Perfect Strike                  5.3   0.04/s ratio 1.000  trigger +0% of the attack
+  Fangs of Frost                  5.1   0.04/s ratio 1.000  trigger +0% of the attack
+  Armour Breaker                  5.0   0.04/s ratio 1.000  trigger +0% of the attack
+  Volcanic Fissure                5.0   0.04/s ratio 1.000  trigger +0% of the attack

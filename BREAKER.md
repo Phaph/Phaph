@@ -452,3 +452,11 @@ skill can't set off its own trigger, or, for meta gems, triggered skills generat
 both mapping only, added to leads.json as unconfirmed: **Bursting Fen Toad** ("25% chance to Trigger this Skill on
 Kill": runs away at 4+ kills per explosion) and **Earthbound** (Spark on killing a Shocked enemy; Spark shocks).
 Bosses don't die repeatedly, so neither is a boss lead. Feeder scan (b) still running (~/trigger_scan.sh).
+**Steps (b) and (d), feeder scan (2026-11-22):** `tools/trigger_scan.py`, 51 melee attacks on crafted mid-game gear
+with no supports, data/breaker/triggers.txt. Best feeders vs a pinnacle boss: Supercharged Slam and Flicker Strike
+(14 energy/s into Thundergod's Wrath or Fire Spell on Melee Hit: 0.13 Arcs a second), Hammer of the Gods, Falling
+Thunder. Cast on Critical gets about 1/20 of that from the same attacks (crits only, 1 energy per power). **No lead
+over the bar (1 cast/s vs a boss):** one hit is 6-30% of a boss's ailment threshold at this gear. With endgame hits
+near the whole threshold, Supercharged Slam would fire about one Arc a second: that is the known Mjölner build, so
+the detector agrees with what players found, and finds nothing new. Mapping counts one monster per hit
+(conservative: area hits on a pack give energy per monster).
