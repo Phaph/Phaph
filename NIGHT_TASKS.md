@@ -7,8 +7,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   exposure, minions, Oil Barrage): ~12 h, commits blind.txt. Next session: compare 3/20 (morning) -> 21.5 -> final.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:**
-  unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
+- **Next tasks, in order:** 16 leads -> full builds; 14 rest (immobilised, mapping combos);
+  17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
@@ -168,7 +168,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     bug, not a lead: give it a usage limit (10 embers per cast cycle, 1.3 s launch delay) like Hexblast, then re-run
     the blind test (queue job `blind`, delete blind.json first).
 
-19. [ ] (before Kyle's in-game tests, ~11-27) Fairer pairs numbers: `breaker.Bench` adds a support as an extra gem
+19. [x] (2026-11-22: Bench replaces the weakest support; Leopold's + Fire Pen +31% -> +16%, Maligaro's + Pinpoint
+    +42% holds; pairs_weakest.json, leads.json, TESTS.md) Fairer pairs numbers: `breaker.Bench` adds a support as an extra gem
     (a socket the build doesn't have); make it replace the skill's weakest support instead, then `breaker.py rescore`
     the leads (Leopold's + Fire Penetration +31%, Maligaro's + Pinpoint +42%) and update leads.json / TESTS.md.
     Optional: also compare a damage-only rare in the unique's slot (our rare balances damage and defence).

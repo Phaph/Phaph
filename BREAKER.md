@@ -460,3 +460,11 @@ over the bar (1 cast/s vs a boss):** one hit is 6-30% of a boss's ailment thresh
 near the whole threshold, Supercharged Slam would fire about one Arc a second: that is the known Mjölner build, so
 the detector agrees with what players found, and finds nothing new. Mapping counts one monster per hit
 (conservative: area hits on a pack give energy per monster).
+
+### Fairer pairs: a tried support replaces the weakest one (2026-11-22, task 19)
+`breaker.Bench` now ranks the skill's own supports by the damage each adds, and a tried support takes the place of
+the weakest (before, it was an extra socket the build doesn't have). `breaker.py rescore` -> data/breaker/
+pairs_weakest.json. **Leopold's Applause + Fire Penetration I (Fireball Blood Mage): +16% together (was +31%)**,
+Fire Penetration alone -3% (was +10%), synergy 1.15: the pair still multiplies, half as big. **Maligaro's
+Virtuosity + Pinpoint Critical (Skeletal Sniper Lich): +42%, unchanged** (Pinpoint +8% alone): the strongest pair.
+Skeletal Sniper + Fire Penetration + Leopold's +24% (was +25%). Unique-only pairs are unchanged (no support swapped).

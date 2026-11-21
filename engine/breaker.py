@@ -219,7 +219,16 @@ class Bench:
         self.gems = [n for n in g["gems"] if n]
         self.supports = [s["name"] for s in pob.send("fitting_supports", group=self.group)["supports"]
                          if s["name"] not in self.gems]
+        self.weakest = []   # the skill's own supports, least damage first: a tried support replaces one (task 19)
         self.base = self._dmg([])
+        if replace and len(self.gems) > 1:
+            own = self.gems[1:]
+            loss = {}
+            for s in own:
+                o = self.pob.try_skill(self.group, [g for g in self.gems if g != s], DMG)["output"]
+                loss[s] = self.base - total_dps(o)
+            self.pob.try_skill(self.group, self.gems, DMG)
+            self.weakest = sorted(own, key=lambda s: loss[s])
 
     def _dmg(self, ps: list[dict]) -> float:
         text = "\n".join(p["mods"] for p in ps if p["kind"] == "unique")
@@ -235,7 +244,11 @@ class Bench:
                     slots.append(p["slot"])
         prev = self.pob.send("clear_slots", slots=slots)["prev"] if slots and self.replace else {}
         self.pob.send("set_custom_mods", text=text, nodes=[p["name"] for p in ps if p["kind"] == "keystone"])
-        gems = self.gems + [p["name"] for p in ps if p["kind"] == "support"]
+        new = [p["name"] for p in ps if p["kind"] == "support"]
+        # A support takes a socket the build already uses: it replaces the build's weakest support (2026-11-21;
+        # before, it was an extra socket the build doesn't have, which flattered every support).
+        out = set(self.weakest[:len(new)]) if self.replace else set()
+        gems = [g for g in self.gems if g not in out] + new
         try:
             o = self.pob.try_skill(self.group, gems, DMG)["output"]
         finally:

@@ -1,6 +1,6 @@
 {
  "about": "Lodestone leads, curated by Claude from BREAKER.md. status: unconfirmed (PoB says so; no game data, web or ladder evidence settles it; the engine keeps the cautious number; Kyle can't test in game, 2026-11-21), to_test (old name for unconfirmed), confirmed, dead (explained, not real), fixed (a modelling bug found and fixed in the engine), known (rediscovered a known strong build). Update this file when a lead changes; the Lodestone page reads it.",
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "leads": [
   {
    "name": "Rapid Shot + Fresh Clip II speed stacking",
@@ -25,7 +25,7 @@
    "status": "confirmed",
    "found": "2026-11-17",
    "detector": "interaction finder",
-   "what": "The gloves let hits penetrate resistance down to -50%. Normally a second penetration source is wasted once a boss is at 0%; with Leopold's every extra point keeps counting. Measured with the gloves really worn (replacing the build's own): Fireball Blood Mage +4% alone, Fire Penetration I +10% alone, +31% together.",
+   "what": "The gloves let hits penetrate resistance down to -50%. Normally a second penetration source is wasted once a boss is at 0%; with Leopold's every extra point keeps counting. Measured with the gloves really worn (replacing the build's own): Fireball Blood Mage +4% alone, Fire Penetration I -3% alone (replacing the build's weakest support), +16% together (synergy 1.15; +31% when the support was an extra socket).",
    "check": "Does the -50% floor apply to pinnacle bosses in game? (TESTS.md #3)",
    "evidence": "Evidence 2026-11-21: poe2db and the Mobalytics penetration guide: 'Your Hits can Penetrate Elemental Resistances down to a minimum of -50%', the only way to penetrate below 0%; a second penetration source keeps counting. Caveat (Mobalytics): penetration and negative resistance from curses/exposure don't stack, so the gain is smaller on builds that already push the boss below 0."
   },
