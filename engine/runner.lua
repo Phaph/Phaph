@@ -541,6 +541,21 @@ end
 
 -- A gem can't be above the level its level requirement allows at this character level (a level 55 character has no
 -- level 20 gems). Applied to every group the engine creates or changes.
+-- Stages a channelled skill is used at (PoB's Stages box, default 1). PoB already stretches the use time with the
+-- stage count (channelTimeMultiplier / hitTimeMultiplier in each skill's preDamageFunc), so its DPS at a stage count
+-- is a fair per-second number; these are the counts with the best DPS (measured 2026-11-21 with set_stages, mid-game
+-- crafted gear): Flameblast x5.45 at 10 stages (it has a 10 s cooldown, so you always channel it full), Bonestorm
+-- x2.40 at 20, Supercharged Slam x1.09 at 3. Detonating Arrow is best at 1 stage in PoB (x0.72 at 4: its max-stage
+-- explosion isn't modelled), so it stays at the default. 99 = the skill's maximum (PoB caps the count at it).
+local STAGE_RULES = { Flameblast = 99, Bonestorm = 99, ["Supercharged Slam"] = 99 }
+local function applyStageRules(group)
+	for _, gem in ipairs(group.gemList or {}) do
+		local ge = gem.gemData and gem.gemData.grantedEffect
+		local n = ge and STAGE_RULES[ge.name]
+		if n and not gem.skillStageCount then gem.skillStageCount = n; gem.skillStageCountCalcs = n end
+	end
+end
+
 local function capGemLevels(group)
 	local charLevel = build.characterLevel or 100
 	for _, gem in ipairs(group.gemList or {}) do
@@ -576,6 +591,7 @@ function handlers.add_skill(cmd)
 	local index = #build.skillsTab.socketGroupList
 	if index == before then error("no gems recognised in: " .. cmd.text) end
 	capGemLevels(build.skillsTab.socketGroupList[index])
+	applyStageRules(build.skillsTab.socketGroupList[index])
 	build.skillsTab:ProcessSocketGroup(build.skillsTab.socketGroupList[index])
 	scoreTotemSkill(build.skillsTab.socketGroupList[index])
 	-- Full DPS costs a second calculation pass, so it is only switched on for builds that
@@ -675,6 +691,7 @@ function handlers.try_skill(cmd)
 	end
 	list[cmd.group] = new
 	capGemLevels(new)
+	applyStageRules(new)
 	if not cmd.keep_main then build.mainSocketGroup = cmd.group end
 	-- Resolve gems and global gem counts before recalculating, otherwise the
 	-- calculation sees the previous gem list and results lag one step behind.

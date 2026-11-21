@@ -22,3 +22,24 @@ def test_item_lines_lists_unreadable_lines(pob):
     lines = pob.send("item_lines", raw=raw)
     assert any("Mana Costs you pay" in l for l in lines["unsupported"])
     assert not any("Intelligence" in l for l in lines["unsupported"])
+
+
+def test_stage_rules_channel_flameblast_full(pob):
+    """Flameblast is used at its full stages (runner STAGE_RULES), also after try_skill swaps its supports; PoB's
+    default of 1 stage read it at a fifth of its damage. Detonating Arrow keeps PoB's default."""
+    pob.new()
+    pob.set_class("Sorceress", None)
+    pob.set_level(70)
+    g = pob.add_skill(["Flameblast"])["group"]
+    r = pob.send("set_stages", group=g)
+    assert r["max"] >= 5 and r["count"] == 99
+    full = pob.calc(["TotalDPS"])["TotalDPS"]
+    pob.send("set_stages", group=g, count=1)
+    assert pob.calc(["TotalDPS"])["TotalDPS"] < full / 2
+    pob.try_skill(g, ["Flameblast"], ["TotalDPS"])          # rebuilt gems get the rule again
+    assert pob.send("set_stages", group=g)["count"] == 99
+    pob.new()
+    pob.set_class("Ranger", None)
+    pob.set_level(70)
+    g = pob.add_skill(["Detonating Arrow"])["group"]
+    assert pob.send("set_stages", group=g)["count"] == 1

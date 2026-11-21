@@ -371,3 +371,11 @@ ladder is mostly not boss damage: the guides sell it as a full-screen mapping sk
 whirlwind; projectiles everywhere), which our clear score (area^0.5 x projectiles^0.5) only partly sees. Not counted
 yet: Twister's ground elements (x2.20 with all three, needs ground the build makes) and the extra Twister a consumed
 whirlwind spawns. Next blind re-run waits for the stage rules (23b), since this alone doesn't move Twister into a top 5.
+
+### Stage rules (2026-11-21, task 23b)
+runner.lua STAGE_RULES: Flameblast, Bonestorm and Supercharged Slam are used at their full stages (PoB's default was
+1). PoB already stretches each use's time with the stage count (channelTimeMultiplier / hitTimeMultiplier), so the
+DPS at a stage count is per second: Flameblast x5.45 (10 stages, 10 s cooldown), Bonestorm x2.40 (20), Supercharged
+Slam x1.09 (3). Detonating Arrow stays at 1 (x0.72 at 4 in PoB; its max-stage explosion isn't modelled). Applied
+whenever a group's gems are set (add_skill, try_skill), so saved builds and exports carry the stage count.
+Full blind re-run queued after the deploy (engine 2026-11-21.5): partners + stage rules together.
