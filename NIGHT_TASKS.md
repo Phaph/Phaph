@@ -157,6 +157,11 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     bug, not a lead: give it a usage limit (10 embers per cast cycle, 1.3 s launch delay) like Hexblast, then re-run
     the blind test (queue job `blind`, delete blind.json first).
 
+19. [ ] (before Kyle's in-game tests, ~11-27) Fairer pairs numbers: `breaker.Bench` adds a support as an extra gem
+    (a socket the build doesn't have); make it replace the skill's weakest support instead, then `breaker.py rescore`
+    the leads (Leopold's + Fire Penetration +31%, Maligaro's + Pinpoint +42%) and update leads.json / TESTS.md.
+    Optional: also compare a damage-only rare in the unique's slot (our rare balances damage and defence).
+
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
   sharing it is your call.
