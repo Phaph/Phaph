@@ -410,3 +410,15 @@ second stat set that happens on every use, and we only score set 1: Frost Darts 
 Fireball Firebolts (x1.05), Ball Lightning Ignited Ground (x3.63), Incinerate Ignited Ground (x11: check), Firestorm
 Ice/Lightning Bolts, Ember Fusillade Beam. Whether each adds to set 1 (both happen) or replaces it needs a per-skill
 rule, then such skills rank higher in every search.
+
+### Extra damage stat sets counted (2026-11-21, task 26)
+`partners.apply_extra_sets` (every search round): for skills whose second stat set lands on the same single target
+on every use (from each gem's own text), the search adds it to set 1. Mid-game round-1 numbers, set 1 -> set 2:
+Earthquake impact 1.5k + Aftershock 17.8k (x13); Glacial Cascade bursts 2.5k + Final Burst 8.2k; Essence Drain hit
+12.2k + its DoT 12.3k; Stampede footsteps 1.9k + Slam 5.9k; Gas Grenade 0.7k + cloud 2.8k; Coiling Bolts physical
+10.8k + chaos 12.3k; Bonestorm spikes 37.6k + explosion 27.1k; Fireball, Supercharged Slam and Poisonburst Arrow
+x2 (the second set equals the first in PoB's data); Entangle +vines 0.6k; Cluster Grenade +mini grenades.
+Left out as conditional (infusion, charge, detonator, parry, other enemies, terrain): Frost Darts, Frostbolt,
+Lightning Spear, Explosive Spear, Glacial Lance, Volcano, Sunder, Ice Shot shards, Lightning Arrow beams and more;
+Incinerate's x11 Ignited Ground is infused-only, so it is not counted. Not done yet: the finished guide still
+reports set 1 only (the search ranks with the sum); a mirrored Full DPS group would fix both (follow-up).

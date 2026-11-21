@@ -35,3 +35,25 @@ def test_infusion_cycle():
     c = infusion_cycle(3.75 * plain, plain, speed, 6.0)
     assert 1.10 < c / plain < 1.25
     assert infusion_cycle(3 * plain, plain, speed, 0) == plain
+
+
+def test_extra_sets_only_always_landing_parts():
+    from partners import EXTRA_SETS
+    assert EXTRA_SETS["Earthquake"] == [2] and EXTRA_SETS["Fireball"] == [2]
+    for conditional in ("Frost Darts", "Lightning Spear", "Explosive Spear", "Glacial Lance", "Incinerate"):
+        assert conditional not in EXTRA_SETS
+
+
+def test_extra_sets_add_up(pob):
+    """Earthquake's Aftershock (stat set 2) is added to the impact (set 1)."""
+    from partners import apply_extra_sets
+    pob.new()
+    pob.set_class("Warrior", None)
+    pob.set_level(60)
+    pob.add_item("Rarity: NORMAL\nWooden Club\nWooden Club")
+    g = pob.add_skill(["Earthquake"])["group"]
+    fields = ["TotalDPS", "TotalDotDPS", "Speed"]
+    out = pob.calc(fields)
+    scaled, note = apply_extra_sets(pob, "Earthquake", g, out, fields)
+    assert note and scaled["TotalDPS"] > 2 * out["TotalDPS"]
+    assert pob.send("set_part", group=g)["part"] == 1     # left on set 1

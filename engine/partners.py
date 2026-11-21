@@ -151,3 +151,42 @@ def apply_infusion(p, skill: str, group: int, out: dict, fields: list[str]) -> t
     return scaled, {"setup": best_gen, "factor": round(f, 3), "infused": round(infused / alone, 2),
                     "why": f"{best_gen} leaves a {rule['element'].title()} Infusion every {best_T:.1f} s; one "
                            f"{skill} cast in each cycle is infused (x{infused / alone:.2f}), x{f:.2f} DPS overall"}
+
+
+# Extra damage stat sets (task 26, 2026-11-21). In PoE 2's PoB a skill's damage parts are separate stat sets and the
+# engine scored only set 1, so skills whose second part lands on every use were under-rated in every search
+# (Earthquake: impact 1.5k, Aftershock 17.8k). Only parts that hit the same single target on every use, from each
+# gem's own text: "explodes on impact" (Fireball), "followed by Aftershocks" (Supercharged Slam), "erupts in a
+# powerful Aftershock" (Earthquake), "simultaneously fires a Physical and a Chaos Projectile" (Coiling Bolts), the
+# DoT debuff of Essence Drain, Glacial Cascade's final spike, Stampede's end Slam, Bonestorm's explosion, Entangle's
+# vines, Gas Grenade's cloud, Cluster Grenade's mini grenades, Poisonburst Arrow's burst. Left out (need an
+# infusion, a charge, a detonator, a parry, other enemies, or terrain): Frost Darts' explosion, Frostbolt, Lightning
+# Spear's bolts, Explosive Spear, Glacial Lance, Volcano's spray, Sunder's shockwaves and others.
+EXTRA_SETS = {
+    "Fireball": [2], "Bonestorm": [2], "Earthquake": [2], "Supercharged Slam": [2], "Stampede": [2],
+    "Coiling Bolts": [2], "Entangle": [2], "Cluster Grenade": [2], "Gas Grenade": [2], "Glacial Cascade": [2],
+    "Essence Drain": [2], "Poisonburst Arrow": [2],
+}
+
+
+def apply_extra_sets(p, skill: str, group: int, out: dict, fields: list[str]) -> tuple[dict, dict | None]:
+    sets = EXTRA_SETS.get(skill)
+    if not sets:
+        return out, None
+    base = _dps(out)
+    if base <= 0:
+        return out, None
+    extra, labels = 0.0, []
+    try:
+        for k in sets:
+            r = p.send("set_part", group=group, part=k)
+            extra += _dps(p.calc(fields))
+            labels.append(r["parts"][k - 1] if k - 1 < len(r["parts"]) else str(k))
+    finally:
+        p.send("set_part", group=group, part=1)
+    if extra <= 0:
+        return out, None
+    f = (base + extra) / base
+    scaled = {k: (v * f if k in DPS_FIELDS and isinstance(v, (int, float)) else v) for k, v in out.items()}
+    return scaled, {"extra_sets": labels, "factor": round(f, 3),
+                    "why": f"{skill}'s {', '.join(labels)} also lands on every use: x{f:.2f} DPS"}

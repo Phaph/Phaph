@@ -44,7 +44,7 @@ from meta import meta_factor, popularity
 from optimize import (MODE_CONFIG, ailment_dps, broken_numbers, ailment_score, clear_score, damage_types, hit_dps, metric_for, seed_ailment, optimise_supports,
                       score_of, total_dps)
 from pob import PoB, PoBError
-from partners import apply_infusion, apply_partner
+from partners import apply_extra_sets, apply_infusion, apply_partner
 
 # Types that make a skill a support act rather than a main damage skill.
 # Shapeshift is not one of them: bear, wolf and wyvern attacks (Furious Slam, Rampage, Rend) are a druid's main skills;
@@ -349,6 +349,9 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         out, c.partner = apply_partner(p, c.skill, group, out, FIELDS, best.supports)   # e.g. Twister through Whirling Slash's whirlwind
         if not c.partner:
             out, c.partner = apply_infusion(p, c.skill, group, out, FIELDS)   # Ice Nova after Frost Bomb, Arc after Orb of Storms
+        out, extra = apply_extra_sets(p, c.skill, group, out, FIELDS)   # Earthquake's Aftershock, Fireball's explosion
+        if extra:
+            c.partner = {**(c.partner or {}), "extra": extra}
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
         c.clear, c.ehp = clear_score(out), out.get("TotalEHP") or 0
         c.boss = score_of(out, metric_for("bossing", req.get("ailment")))
