@@ -358,3 +358,16 @@ Round 1 (no tree, crafted mid-game gear, Amazon / Shaman, bossing):
   really holds per use (channel time vs damage), so no blanket max: part of task 23.
 - Tornado / Entangle / Wolf Pack: no PoB setting is missing; they score low on their own. Wolf Pack's companion
   damage and Oil Barrage's use rate are the two numbers to check against the game next.
+
+### Partner combos: Twister through Whirling Slash (2026-11-21, task 23a)
+New `engine/partners.py`, used by every search round (`generate.evaluate`): a payoff skill whose damage needs a setup
+skill used first is scored over the real cycle, n setup uses then one payoff use:
+`(n x setup damage per use + payoff damage per use at n stages) / (n / setup speed + 1 / payoff speed)`, best n.
+First rule: Twister after Whirling Slash (PoB config whirlwindStages, up to 3; guides play 3 slashes then Twister).
+The setup gets the payoff's supports. Amazon round 1: Twister alone 7.6k at 1.95/s; x1.91 / x2.84 / x3.76 per use at
+1 / 2 / 3 stages; Whirling Slash 3.8k at 1.71/s (1.3k with no supports, which made the combo lose). Best: 3 slashes,
+**x1.23 over the cycle** (score 6.4k -> 7.9k). Real but small: Lightning Spear is 23.7k. So Twister's 10.9% of the
+ladder is mostly not boss damage: the guides sell it as a full-screen mapping skill (more Twisters when one consumes a
+whirlwind; projectiles everywhere), which our clear score (area^0.5 x projectiles^0.5) only partly sees. Not counted
+yet: Twister's ground elements (x2.20 with all three, needs ground the build makes) and the extra Twister a consumed
+whirlwind spawns. Next blind re-run waits for the stage rules (23b), since this alone doesn't move Twister into a top 5.

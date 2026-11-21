@@ -44,6 +44,7 @@ from meta import meta_factor, popularity
 from optimize import (MODE_CONFIG, ailment_dps, broken_numbers, ailment_score, clear_score, damage_types, hit_dps, metric_for, seed_ailment, optimise_supports,
                       score_of, total_dps)
 from pob import PoB, PoBError
+from partners import apply_partner
 
 # Types that make a skill a support act rather than a main damage skill.
 # Shapeshift is not one of them: bear, wolf and wyvern attacks (Furious Slam, Rampage, Rend) are a druid's main skills;
@@ -97,6 +98,7 @@ class Candidate:
     totem: str | None = None   # the totem gem that places the skill (Spell Totem), if any
     meta: float = 1.0          # off-meta toggle: the popularity factor the score was multiplied by
     anchor_unique: str | None = None   # random builds: the unique this one was built around
+    partner: dict | None = None        # partners.py: a setup skill used before this one (Whirling Slash -> Twister)
 
     def spec(self) -> dict:
         return {"class": self.cls, "ascendancy": self.ascendancy, "skill": self.skill,
@@ -306,7 +308,7 @@ def _score_plain(out: dict, req: dict) -> float:
 
 FIELDS = ["TotalDPS", "TotalDotDPS", "MinionDPS", "MinionDotDPS", "FullDPS", "FullDotDPS", "BleedDPS",
           "PoisonDPS", "IgniteDPS", "MinionBleedDPS", "MinionPoisonDPS", "MinionIgniteDPS",
-          "AreaOfEffectMod", "ProjectileCount", "TotalEHP", *FOCUS_FIELDS]
+          "AreaOfEffectMod", "ProjectileCount", "TotalEHP", "Speed", *FOCUS_FIELDS]
 
 
 def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
@@ -340,6 +342,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         out = p.calc(FIELDS)
         if (bad := broken_numbers(out)):
             raise ValueError(f"impossible damage from Path of Building ({', '.join(bad)}), a calculation bug: skipped")
+        out, c.partner = apply_partner(p, c.skill, group, out, FIELDS, best.supports)   # e.g. Twister through Whirling Slash's whirlwind
         c.supports, c.score, c.dps = best.supports, _score(out, req), total_dps(out)
         c.clear, c.ehp = clear_score(out), out.get("TotalEHP") or 0
         c.boss = score_of(out, metric_for("bossing", req.get("ailment")))

@@ -1,8 +1,9 @@
 # START HERE (handoff, 2026-11-20 morning)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude, 2026-11-21 ~06:00 Mazatlan):** ~/after_revert.sh = full suite, then deploy engine
-  2026-11-21.3 (Druid weapon trial reverted) if green. Next: task 23 (whirlwind combo + stage rules), then 21 (infusions).
+- **Running (no Claude, 2026-11-21 ~11:30 Mazatlan):** ~/after_partners.sh = full suite, then deploy engine
+  2026-11-21.4 (partners.py: Twister after Whirling Slash) if green. Next: task 23b (stage rules: Flameblast x5.45,
+  Bonestorm x2.40 at max stages), then 21 (infusions).
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Next tasks, in order:** 23 whirlwind combo + stages; 21 infusions; 15 trigger/loop detector;
@@ -178,7 +179,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Find why (stages, elemental ground, round-1 setup) in PoB, fix what is a modelling gap, re-run `--only Amazon,
     Ritualist,Spirit Walker`.
 
-23. [ ] Whirlwind combo + stage rules (from task 22): (a) combo finder family "whirlwind": Whirling Slash sets up,
+23. [ ] (23a done 2026-11-21: engine/partners.py scores Twister through Whirling Slash's whirlwind in every search
+    round: x1.23, real but small; BREAKER.md. Left: (b), (c), Oil Barrage, Wolf Pack) Whirlwind combo + stage rules (from task 22): (a) combo finder family "whirlwind": Whirling Slash sets up,
     Twister pays off (PoB config whirlwindStages / twisterCold|Fire|Lightning), setup rate = slashes per stage;
     (b) per-skill stage rules with runner `set_stages` (Flameblast, Bonestorm, Supercharged Slam: stages held per use,
     channel time counted); (c) re-run the blind test for the Huntress ascendancies. Check Oil Barrage's 6.8 uses/s and
