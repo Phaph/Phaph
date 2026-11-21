@@ -8,7 +8,7 @@
     "Monk":      {"intended": ["Quarterstaff"], "close": ["Claw", "Dagger"]},
     "Witch":     {"intended": ["Wand", "Sceptre", "Staff"], "close": []},
     "Sorceress": {"intended": ["Staff", "Wand"], "close": ["Sceptre"]},
-    "Druid":     {"intended": ["Talisman"], "close": ["Staff"]},
+    "Druid":     {"intended": ["Talisman", "Staff", "Sceptre"], "close": ["Wand"]},
     "Shadow":    {"intended": ["Dagger", "Claw"], "close": ["One Hand Sword"]}
   },
   "ascendancies": {

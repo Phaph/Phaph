@@ -1,7 +1,9 @@
 # START HERE (handoff, 2026-11-20 morning)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Nothing running (2026-11-21 03:30 Mazatlan).** Blind test finished and written up (task 7, BREAKER.md).
+- **Running (no Claude, 2026-11-21 ~04:30 Mazatlan):** ~/after_druid.sh = deploy engine 2026-11-21.2 (Druid weapons),
+  then the blind test for Oracle + Shaman only (~1-2 h, commits blind.txt). Next session: compare Druid picks with
+  the ladder (Tornado, Entangle, Wolf Pack?), add one line to BREAKER.md, then task 22.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Next tasks, in order:** 20 Druid weapons (small); 22 Huntress spear skills; 21 infusions; 15 trigger/loop detector;
@@ -161,7 +163,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the leads (Leopold's + Fire Penetration +31%, Maligaro's + Pinpoint +42%) and update leads.json / TESTS.md.
     Optional: also compare a damage-only rare in the unique's slot (our rare balances damage and defence).
 
-20. [ ] Druid weapons (from the blind test): data/class_weapons.json gives Druid only Talisman, so Tornado, Entangle
+20. [x] (2026-11-21: Druid intended = Talisman, Staff, Sceptre; close = Wand; engine 2026-11-21.2; blind re-run for
+    Oracle + Shaman chained in ~/after_druid.sh, write it up when blind.txt is committed) Druid weapons (from the blind test): data/class_weapons.json gives Druid only Talisman, so Tornado, Entangle
     and Wolf Pack (the ladder's Druid skills) never reach a Druid search. Make Druid intended = Talisman + Staff,
     close + Wand, Sceptre; re-run the blind test for Oracle, Shaman only (`--only Oracle,Shaman`).
 21. [ ] Infusion family in the combo finder: Frost Bomb, Orb of Storms, Powered by Verisium (GeneratesInfusion) feed
