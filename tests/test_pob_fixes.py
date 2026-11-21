@@ -43,3 +43,26 @@ def test_stage_rules_channel_flameblast_full(pob):
     pob.set_level(70)
     g = pob.add_skill(["Detonating Arrow"])["group"]
     assert pob.send("set_stages", group=g)["count"] == 1
+
+
+def test_wolf_pack_counts_the_pack(pob):
+    """Wolf Pack's pack size maps to its wolf limit (PoB had no mapping: one wolf counted)."""
+    pob.new()
+    pob.set_class("Druid", None)
+    pob.set_level(90)
+    pob.add_skill(["Wolf Pack"], full_dps=True)
+    assert pob.calc(["ActiveMinionLimit"])["ActiveMinionLimit"] >= 5
+    counts = pob.send("sync_minion_counts")["counts"]
+    assert counts and max(counts.values()) >= 5
+
+
+def test_oil_barrage_without_power_charges_only_spits(pob):
+    """Oil Barrage's fast barrage needs Power Charges; without a source it is limited to the spit's rate (x1/4.5)."""
+    pob.new()
+    pob.set_class("Druid", None)
+    pob.set_level(70)
+    pob.add_item("Rarity: NORMAL\nChangeling Talisman\nChangeling Talisman")
+    pob.add_skill(["Oil Barrage"])
+    pob.set_config(usePowerCharges=False)
+    out = pob.calc(["Speed", "UsageLimit", "UncappedSpeed"])
+    assert out.get("UsageLimit") and abs(out["Speed"] - out["UncappedSpeed"] / 4.5) < 1e-6

@@ -180,6 +180,8 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.no_lineage = stage.campaign   # lineage supports (Uhtred's Exodus...) are rare endgame drops
         pob.anchor_notes = []
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
+        if minion_build:
+            pob.send("sync_minion_counts")   # count every minion (gem count = limit); try_skill keeps the count
         seed_ailment(pob, group, skill, spec.get("ailment"))   # so gear and tree chase the ailment from the start
         helpers = list(spec.get("with_skills") or [])   # skills the player asked for (Charged Staff, Cast on X)
         picked_helpers = []

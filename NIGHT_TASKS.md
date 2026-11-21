@@ -1,12 +1,13 @@
 # START HERE (handoff, 2026-11-20 morning)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude, 2026-11-21 ~12:00 Mazatlan):** ~/after_stages.sh = full suite, deploy engine 2026-11-21.5
-  (stage rules) if green, then the full blind test re-run (~12 h, commits blind.txt). Next session: task 21
-  (infusions) or 25 while it runs; when blind.txt lands, compare with the 3/20 run and write it into BREAKER.md.
+- **Running (no Claude, 2026-11-21 evening Mazatlan):** (1) ~/after_stages.sh: full blind re-run on engine 2026-11-21.5
+  (~12 h, commits blind.txt). (2) ~/after_minions.sh: full suite (2 cores), deploy engine 2026-11-21.6 (Oil Barrage,
+  Wolf Pack, minion counts), then after (1) re-runs the blind test for the 6 Witch + Druid ascendancies.
+  Next session: task 21 (infusions); when blind.txt lands, compare with the 3/20 run, write into BREAKER.md.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 21 infusions; 25 Oil Barrage / Wolf Pack; 15 trigger/loop detector;
+- **Next tasks, in order:** 21 infusions; 15 trigger/loop detector;
   unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -195,7 +196,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     ladder data. Write the verdict and source under each TESTS.md entry; update leads.json (confirmed / dead /
     unconfirmed); unconfirmed leads keep the cautious number.
 
-25. [ ] Two round-1 numbers that look off (task 22): Oil Barrage at 6.8 uses/s (Talisman, Druid's top pick, 0.77% of
+25. [x] (2026-11-21: Oil Barrage limited to the spit's rate without Power Charges (x1/4.5); Wolf Pack pack size
+    mapped (7 wolves) and minion counts now synced in the search (all minion skills were ranked with 1 minion);
+    engine 2026-11-21.6; BREAKER.md) Two round-1 numbers that look off (task 22): Oil Barrage at 6.8 uses/s (Talisman, Druid's top pick, 0.77% of
     the ladder) and Wolf Pack's companion at 1.4k DPS (11% of the ladder). Check PoB's numbers against the gem data
     and web evidence; fix or explain.
 

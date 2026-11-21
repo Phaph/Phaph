@@ -26,6 +26,12 @@ do
 	end
 end
 
+-- PoB fix: Wolf Pack's pack size (skill_wolf_pack_size: 3 wolves at gem level 1, 6 at 20) has no stat mapping, so the
+-- wolves' limit (WolfLimit) read 0 and Full DPS counted one wolf: Wolf Pack scored ~1/6 of its damage while 11% of the
+-- ladder plays it (blind test, 2026-11-21). Map the stat to WolfLimit; sync_minion_counts then counts the whole pack.
+data.skillStatMap["skill_wolf_pack_size"] = data.skillStatMap["skill_wolf_pack_size"]
+	or { modLib.createMod("WolfLimit", "BASE", nil) }
+
 local function reply(t)
 	io.stdout:write("@@", json.encode(t), "\n")
 	io.stdout:flush()
@@ -194,6 +200,18 @@ local USAGE_LIMITS = {
 		local speed, dur = out.Speed or 0, out.Duration or 1.3
 		if speed <= 0 then return nil end
 		return 10 / (10 / speed + dur)
+	end,
+	-- Oil Barrage: PoB scores the fast channelled barrage (3 projectiles at the weapon's attack speed) with or without
+	-- Power Charges. In game the barrage consumes a Power Charge every 1.5 s; without charges the skill only spits
+	-- oil, and its attack time is 4.5x (display_attack_time_+% 350, a stat PoB doesn't read). Guides: "for this to
+	-- actually deal damage, you need power charges" (2026-11-21). So: no Power Charge source in the build (auto_config
+	-- didn't turn charges on) = the spit's rate, attack speed / 4.5. With a source PoB's number stands (how long the
+	-- charges keep the barrage up is not modelled yet). It was Druid's top skill in the blind test at 0.77% of the ladder.
+	["Oil Barrage"] = function(out)
+		if build.configTab.input.usePowerCharges then return nil end
+		local speed = out.Speed or 0
+		if speed <= 0 then return nil end
+		return speed / 4.5
 	end,
 	-- Rain of Arrows: PoB scores it as one full hit on the target every 0.12 s (its per-enemy hit cap), however many
 	-- arrows land on it. In game the arrows (80 ms apart, one rain at a time, so at most 12.5 a second) fall spread

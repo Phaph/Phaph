@@ -379,3 +379,19 @@ DPS at a stage count is per second: Flameblast x5.45 (10 stages, 10 s cooldown),
 Slam x1.09 (3). Detonating Arrow stays at 1 (x0.72 at 4 in PoB; its max-stage explosion isn't modelled). Applied
 whenever a group's gems are set (add_skill, try_skill), so saved builds and exports carry the stage count.
 Full blind re-run queued after the deploy (engine 2026-11-21.5): partners + stage rules together.
+
+### Oil Barrage and Wolf Pack (2026-11-21, task 25)
+- **Oil Barrage was over-rated ~4.5x without Power Charges.** PoB scores its fast channelled barrage (3 projectiles at
+  the weapon's attack speed: 5.55 uses/s) with or without charges. In game the barrage consumes a Power Charge every
+  1.5 s ([poe2db](https://poe2db.tw/us/Oil_Barrage)); guides: "for this to actually deal damage, you need power
+  charges". Without them it only spits oil, with a 4.5x attack time (display_attack_time_+% 350, a stat PoB doesn't
+  read). New USAGE_LIMITS rule: no Power Charge source = attack speed / 4.5 (Shaman round 1: 18.7k -> 4.4k). With a
+  source PoB's number stands; how long the charges keep the barrage up isn't modelled yet.
+- **Wolf Pack was under-rated up to 7x, and every minion skill was ranked with one minion.** (1) PoB has no mapping
+  for skill_wolf_pack_size (3 wolves at gem level 1, 6 at 20), so the wolf limit read 0; runner.lua now maps it to
+  WolfLimit (limit 7 with Feeding Frenzy). (2) The search (`generate.evaluate`) never synced minion counts, so ALL
+  minion skills were scored with one minion while ranking (the guide's later spirit step synced them, so finished
+  builds were right). Now synced in evaluate and right after the guide adds a minion main skill. Wolf Pack Shaman:
+  1.4k -> 10.0k Full DPS. Minion skills will rank higher across Witch/Druid searches.
+The overnight blind run (engine 2026-11-21.5) started before these fixes; ~/after_minions.sh re-runs the 6 Witch and
+Druid ascendancies afterwards.
