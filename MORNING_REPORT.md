@@ -1,26 +1,29 @@
-# Morning report, 2026-11-20
+# Morning report, Saturday 2026-11-21
 
-## Overnight
-- The Lodestone queue finished at about 3:20 am Mazatlan with nothing failed. It ran three jobs: the blind test against the ladder's top builds, the condition scan for all 23 ascendancies, and the unique and keystone scan for all 23. These were the first scans to include ascendancy passives. All three were saved to the repo.
-- There was no nightly A-to-Z sweep on either night (19th and 20th), because the queue was busy both times. The newest sweep results are still the ones from the 19th.
-- Messages held back during quiet hours: only the "queue finished" note above.
+**Note:** this check-in wasn't allowed to pull the latest changes from the server, so it read the copy already on this machine. The server session may have done more than what's listed here.
 
-## Task list
-- Done: tasks 1-6, 8, 13 and 18. Task 18 was the Ember Fusillade fix. It now gets 10 embers per cast and then waits, and the fix is committed.
-- Next: after the fix, a follow-up script runs the test suite, deploys the engine and re-runs the blind test. Its logs are still empty, so it hasn't reported anything yet.
-- Tasks 7 and 12 have their scans finished. They still need their write-up in BREAKER.md and their boxes ticked.
-- Waiting for Kyle: should the Lodestone page go public? It is live but unlisted.
+## Server session
+- **Finished:** the blind test against poe.ninja's top builds (task 7), the Druid weapon trial (task 20, tried and undone because it made results worse), and the Huntress spear skills check (task 22). Task 22 found that Twister gets about 4x more damage when Whirling Slash builds up a whirlwind first, but we never set that combo up. Skills that charge up in stages (like Flameblast) were never charged either.
+- **Working on:** a script running on its own runs the full test suite, then puts out engine 2026-11-21.3 if every test passes. After that comes task 23 (the whirlwind combo and the stage rules), then task 21 (infusions).
+- **Waiting for Kyle:** should the Lodestone page go public? Also your in-game tests (TESTS.md, when you're back around 11-27) and switching the Cloudflare branch (task 17).
 
-## Last A-to-Z sweep (19th, 23 builds)
-- 19 builds finished. **None passed every check.**
-- The most common failure was speed: all 19 took 35-43 minutes each. One Witchhunter build was also short on Strength for its Mid Endgame crossbow (79 of 89 needed).
-- 4 builds hung and were stopped: Smith of Kitava, Stormweaver, Spirit Walker and Ritualist. Their timeouts weren't recorded in the results file because of a file permission problem. This is already on the list as a known bug.
+## Messages held overnight
+- The Breaker queue finished two blind-test runs (11:04 and 13:05 server time), with nothing failing either time.
 
-## Leads and possible bugs
-- The blind test from before the fix picked Ember Fusillade for every ascendancy, so it matched only 2 of the ladder's top 20 skills (Spark and Comet). This was a modelling bug, not a lead. The re-run will show whether the fix helped.
-- Ember Fusillade and Bone Cage also won most caster builds in the sweep. That points the same way: Ember Fusillade was rated too high before the fix.
+## Nightly A-to-Z sweep
+- **The sweep was skipped all three nights (11-19, 11-20, 11-21)** because the Breaker queue was busy each time.
+- The latest results are from 11-19: 19 builds finished, **0 passed every check**.
+- **Most common failure: too slow.** All 19 builds took 35-43 minutes, over the time limit.
+- One other failure: the Witchhunter Mid Endgame crossbow needs 89 Strength and the build has 79.
+- **Hung builds:** none recorded.
+
+## Breaker / Lodestone
+- The queue is idle. Its last job was a blind test with nothing failing.
+- Blind test score: 3 of the ladder's top 20 skills found (Comet, Ice Shot, Rend). Our ascendancy ranking matches how popular each one is only loosely (0.25, where 1 would be the same order).
+- **Lead:** the Whirling Slash into Twister combo. Twister looks strong once it's set up properly, so it should show up in results after task 23.
+- **Possible bug:** the combo checker may score the boss skill on the second weapon set the same as the main skill (open check in NIGHT_TASKS).
 
 ## 3 most useful next steps
-1. Check that the follow-up script ran: tests green, engine deployed and the blind test re-run. Then compare the new blind test with the old 2 out of 20.
-2. Fix the sweep's file permission problem so hung builds get recorded. Then run a fresh A-to-Z sweep now that the queue is free.
-3. Work on build speed, since every build fails the time check. The best idea so far is to test extra skills only with the supports made for them.
+1. Do task 23 (whirlwind combo and charge-up stages), then run the blind test again for the Huntress classes.
+2. Get the nightly sweep running again: start it after the queue finishes instead of skipping when the queue is busy. Then fix build speed, since every build fails only on time.
+3. Fix the Witchhunter Strength shortfall and confirm the boss-skill scoring check.
