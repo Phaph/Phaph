@@ -395,3 +395,18 @@ Full blind re-run queued after the deploy (engine 2026-11-21.5): partners + stag
   1.4k -> 10.0k Full DPS. Minion skills will rank higher across Witch/Druid searches.
 The overnight blind run (engine 2026-11-21.5) started before these fixes; ~/after_minions.sh re-runs the 6 Witch and
 Druid ascendancies afterwards.
+
+### Infusions, and a bigger find: skill stat sets (2026-11-21, task 21)
+In PoE 2's PoB a skill's parts are **stat sets** (gem.statSet[id]); the engine always used set 1. New runner command
+`set_part`. Infused stat sets per cast, Sorceress mid-game round 1: Ice Nova Cold-Infused x3.75, Arc infused (config)
+x3.00, Ball Lightning Fire-Infused x2.24, Comet Fire-Infused x1.75, Frost Wall Lightning-Infused x0.70.
+**Infusion cycle (partners.apply_infusion, every search round):** a generator leaves one Infusion per period (Frost
+Bomb: cold, 6 s cooldown; Orb of Storms: lightning, 12 s); one cast per cycle is infused. Ice Nova + Frost Bomb
+**x1.16**, Arc + Orb of Storms **x1.06**. Small: one infusion per cycle. Generator damage and Frost Bomb's Elemental
+Exposure count as nothing yet. Fire infusions (Comet, Ball Lightning: Living Bomb, Siphon Elements, Verisium) not
+modelled. So Frost Bomb's 16.8% of the ladder is more likely its Exposure than its infusion (task 27).
+**Bigger gap found on the way (task 26): extra damage stat sets are never counted.** Several skills deal damage in a
+second stat set that happens on every use, and we only score set 1: Frost Darts Explosion (set 2 = x1.45 of set 1),
+Fireball Firebolts (x1.05), Ball Lightning Ignited Ground (x3.63), Incinerate Ignited Ground (x11: check), Firestorm
+Ice/Lightning Bolts, Ember Fusillade Beam. Whether each adds to set 1 (both happen) or replaces it needs a per-skill
+rule, then such skills rank higher in every search.

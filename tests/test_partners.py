@@ -26,3 +26,12 @@ def test_cycle_not_worth_it_when_payoff_barely_grows():
 def test_twister_rule():
     r = PARTNERS["Twister"]
     assert r["setup"] == "Whirling Slash" and r["var"] == "whirlwindStages" and r["max"] == 3
+
+
+def test_infusion_cycle():
+    from partners import infusion_cycle
+    # Ice Nova: 1.84 casts/s, x3.75 infused, Frost Bomb every 6 s -> about +16%
+    plain, speed = 8186, 1.84
+    c = infusion_cycle(3.75 * plain, plain, speed, 6.0)
+    assert 1.10 < c / plain < 1.25
+    assert infusion_cycle(3 * plain, plain, speed, 0) == plain

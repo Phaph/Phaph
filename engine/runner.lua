@@ -955,6 +955,25 @@ function handlers.set_stages(cmd)
 	return { multi_stage = max > 0, max = max, count = gem.skillStageCount or 1, skill = skill and skill.activeEffect.grantedEffect.name }
 end
 
+-- Stat set ("part") of a group's main skill (PoB's dropdown, e.g. Comet's "Fire-Infused"). part = nil reads only.
+-- Returns the part labels so callers can find an infused part.
+function handlers.set_part(cmd)
+	local g = build.skillsTab.socketGroupList[cmd.group or build.mainSocketGroup]
+	if not g then error("no socket group " .. tostring(cmd.group)) end
+	local gem = g.gemList[cmd.gem or 1]
+	local ge = gem.gemData and gem.gemData.grantedEffect
+	-- PoE 2 PoB: a skill's parts are stat sets, picked per granted effect (gem.statSet[id] / statSetCalcs[id])
+	if cmd.part and ge then
+		gem.statSet = gem.statSet or {}; gem.statSetCalcs = gem.statSetCalcs or {}
+		gem.statSet[ge.id] = cmd.part; gem.statSetCalcs[ge.id] = cmd.part
+	end
+	build.buildFlag = true
+	frame()
+	local labels = {}
+	for i, set in ipairs(ge and ge.statSets or {}) do labels[i] = set.label end
+	return { part = (ge and gem.statSet and gem.statSet[ge.id]) or 1, parts = labels }
+end
+
 function handlers.set_main(cmd)
 	build.mainSocketGroup = cmd.group
 	-- Optional: which active skill of the group is the main one (e.g. a spell socketed in a Cast on X gem).

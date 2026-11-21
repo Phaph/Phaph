@@ -88,3 +88,66 @@ def apply_partner(p, skill: str, group: int, out: dict, fields: list[str],
             "why": f"{best_n} {rule['setup']} use(s) build the whirlwind, then {skill} consumes it "
                    f"(x{staged[best_n] / alone:.2f} per use; x{f:.2f} DPS over the whole cycle)"}
     return scaled, note
+
+
+# Infusions (task 21, 2026-11-21). Some spells have an infused version (a PoB stat set such as Ice Nova's
+# "Cold-Infused", or Arc's config box) that needs an Infusion of their element, which a generator skill leaves behind:
+# Frost Bomb one Cold Infusion per use (6 s cooldown), Orb of Storms one Lightning Infusion when the orb expires
+# (12 s). One cycle of T seconds (the generator's cooldown or duration): one generator cast, one infused cast, plain
+# casts the rest of the time:
+#     cycle DPS = (infused damage per cast + (T - 2 / cast rate) x cast rate x plain damage per cast) / T
+# Conservative: the generator's own damage and Frost Bomb's Exposure count as nothing here; one infusion per period.
+# Fire infusions (Comet, Ball Lightning) come from Living Bomb / Siphon Elements / Verisium, which need kills,
+# ailments or Ward: not modelled yet.
+INFUSIONS = {
+    "Ice Nova": {"element": "cold", "part": 2},
+    "Arc": {"element": "lightning", "config": "arcLightningInfused"},
+}
+GENERATORS = {"cold": ["Frost Bomb"], "lightning": ["Orb of Storms"]}
+
+
+def infusion_cycle(infused_dps: float, plain_dps: float, speed: float, period: float) -> float:
+    if speed <= 0 or period <= 0:
+        return plain_dps
+    plain_casts = max(period - 2 / speed, 0) * speed
+    return (infused_dps / speed + plain_casts * plain_dps / speed) / period
+
+
+def apply_infusion(p, skill: str, group: int, out: dict, fields: list[str]) -> tuple[dict, dict | None]:
+    rule = INFUSIONS.get(skill)
+    if not rule:
+        return out, None
+    alone, speed = _dps(out), out.get("Speed") or 0
+    if alone <= 0 or speed <= 0:
+        return out, None
+    try:
+        if rule.get("part"):
+            p.send("set_part", group=group, part=rule["part"])
+        else:
+            p.set_config(**{rule["config"]: True})
+        infused = _dps(p.calc(fields))
+    finally:
+        if rule.get("part"):
+            p.send("set_part", group=group, part=1)
+        else:
+            p.set_config(**{rule["config"]: False})
+    best, best_gen, best_T = alone, None, None
+    for gen in GENERATORS.get(rule["element"], []):
+        gg = p.add_skill([gen], main=False)["group"]
+        try:
+            p.send("set_main", group=gg)
+            go = p.calc(["Cooldown", "Duration"])
+        finally:
+            p.send("set_main", group=group)
+            p.remove_skill(gg)
+        period = go.get("Cooldown") or go.get("Duration") or 0
+        c = infusion_cycle(infused, alone, speed, period)
+        if c > best:
+            best, best_gen, best_T = c, gen, period
+    if not best_gen:
+        return out, None
+    f = best / alone
+    scaled = {k: (v * f if k in DPS_FIELDS and isinstance(v, (int, float)) else v) for k, v in out.items()}
+    return scaled, {"setup": best_gen, "factor": round(f, 3), "infused": round(infused / alone, 2),
+                    "why": f"{best_gen} leaves a {rule['element'].title()} Infusion every {best_T:.1f} s; one "
+                           f"{skill} cast in each cycle is infused (x{infused / alone:.2f}), x{f:.2f} DPS overall"}
