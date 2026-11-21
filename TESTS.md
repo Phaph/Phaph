@@ -27,7 +27,11 @@ PoB: 5.68M DPS vs a pinnacle boss at 23 shots/s (Oracle, Uber Endgame).
   per bolt visibly rise. **Kills:** a hidden cap (stacks stop at a fixed number like 50), or Rapid Shot's clip counts
   as one reload, not one per bolt.
 
-**Result:** _(to fill)_
+**Result (2026-11-21, evidence, no game test): real and known.** Game data (PoB's copy): Fresh Clip II has only the
+1%-per-bolt stat, no maximum. [poe2wiki: Fresh Clip](https://poe2wiki.net/wiki/Fresh_Clip): not capped by the skill's
+bolt count, several reloads in the window all count. Public builds already run it
+([Mobalytics: fresh clip gemling](https://mobalytics.gg/poe-2/builds/fearlessdumbo-fresh-clip-gemling)). Lead status:
+rediscovered (known). Open: the exact stacks at very high attack speed.
 
 ---
 
@@ -44,7 +48,10 @@ also changes how Fresh Clip (test 1) behaves.
 - **Confirms:** the counter doesn't drop for ~4 s after each reload. **Kills:** it drops normally, or the
   "Reloaded Recently" window ends the moment you start firing.
 
-**Result:** _(to fill)_
+**Result (2026-11-21, evidence): mechanic confirmed, value unmodelled.** Wording confirmed
+([poe2db](https://poe2db.tw/us/Rampart_Raptor), [poe2wiki](https://poe2wiki.net/wiki/Rampart_Raptor)); recently = 4 s;
+Auto Reload counts as a reload. **Anti-synergy with test 1:** bolts not spent = no reloads = no Fresh Clip stacks
+(PoB itself assumes 0 bolts reloaded when none are consumed). Unconfirmed; ammo uptime needs modelling.
 
 ---
 
@@ -62,7 +69,10 @@ really worn (replacing Deathblow), Fireball Blood Mage: Leopold's alone +4%, Fir
 - **Confirms:** clearly faster kills with Fire Penetration (PoB: +26% damage on top of Leopold's, vs +10% without it). **Kills:** no difference: the
   game stops penetration at 0% on bosses, or the -50% doesn't apply to them.
 
-**Result:** _(to fill)_
+**Result (2026-11-21, evidence): confirmed.** [poe2db](https://poe2db.tw/us/Leopolds_Applause) and the
+[Mobalytics penetration guide](https://mobalytics.gg/poe-2/guides/penetration): "Your Hits can Penetrate Elemental
+Resistances down to a minimum of -50%", the only way below 0%. Caveat from the guide: penetration and negative
+resistance (curses, exposure) don't stack, so the gain shrinks on builds that already push the boss below 0.
 
 ---
 
@@ -80,7 +90,8 @@ than we now say.
 - **Confirms the limit:** about 5 detonations in 30 s. **Changes it:** clearly more (e.g. 10+): tell Claude the
   count and the limit gets the real number.
 
-**Result:** _(to fill)_
+**Result (2026-11-21, evidence): our limit matches.** [poe2wiki: Hexblast](https://www.poe2wiki.net/wiki/Hexblast):
+only curses at least 50% expired can be detonated, one curse per enemy per cast. No source gives a faster cycle.
 
 ---
 
@@ -96,7 +107,9 @@ think they roughly cancel; if not, it is over- or under-rated everywhere.
 - **Confirms "roughly right":** kill times within ~30% of PoB's. **Changes it:** much slower: Claude adds a usage
   limit like Hexblast's.
 
-**Result:** _(to fill)_
+**Result (2026-11-21, evidence): model matches the gem, total unconfirmed.**
+[poe2wiki: Ember Fusillade](https://www.poe2wiki.net/wiki/Ember_Fusillade): up to 6-10 embers by gem level, 5% more
+per previous ember, released after 1.3 s with no new ember (a recast resets it). Same as the engine's limit.
 
 ---
 
@@ -113,7 +126,9 @@ the arrows on a big boss with the base area (4.7 hits a second instead of 8.3). 
 - **Confirms the new limit:** about a third of the arrows hit. **Changes it:** most arrows hit (limit too harsh, the
   skill is strong for real: a lead) or very few (cut it further).
 
-**Result:** _(to fill)_
+**Result (2026-11-21, evidence): limit supported, share unconfirmed.** Rain of Arrows has a 0.12 s per-enemy hit
+cooldown and random arrow spots; a [forum thread on PoB's Rain of Arrows DPS](https://www.pathofexile.com/forum/view-thread/2764602)
+(PoE 1) estimates ~4 arrows per rain on one target, far from "all arrows". Keeps our cut.
 
 ---
 

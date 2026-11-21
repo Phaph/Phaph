@@ -225,5 +225,5 @@ def test_lodestone_page_and_data(client):
     assert page.status_code == 200 and "noindex" in page.text and "noindex" in page.headers.get("x-robots-tag", "")
     d = client.get("/lodestone/data").json()
     assert set(d) >= {"leads", "payoffs", "combos", "pairs", "interactions", "queue"}
-    assert d["leads"] and all(l["status"] in {"to_test", "confirmed", "known", "dead", "fixed"} for l in d["leads"])
+    assert d["leads"] and all(l["status"] in {"unconfirmed", "to_test", "confirmed", "known", "dead", "fixed"} for l in d["leads"])
     assert d["combos"] and all(c["edge"] > 0 for c in d["combos"])
