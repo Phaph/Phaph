@@ -103,6 +103,22 @@
    "detector": "unique/keystone matrix, per ascendancy",
    "what": "Path of Building read Fireball Oracle at x2.73 with Maligaro's Virtuosity: Forced Outcome's 100% crit chance plus the gloves' fixed 250% crit bonus, which also wiped the reroll penalty. In game the gloves say your crit chance cannot be rerolled, which turns Forced Outcome off (GGG closed this combo in 0.3/0.4). PoB doesn't read that line.",
    "check": "Fixed in the engine (runner.lua): the line now turns off Inevitable Critical Hits. Oracle + Maligaro's is +2% now."
+  },
+  {
+   "name": "Bursting Fen Toad: a kill chain on maps",
+   "status": "unconfirmed",
+   "found": "2026-11-21",
+   "detector": "trigger loop graph (text scan group D)",
+   "what": "The gem says '25% chance to Trigger this Skill on Kill': each kill from its explosion can set off another. A chain keeps going on its own when 25% x kills per explosion >= 1, i.e. 4+ kills per explosion: a dense pack. Mapping only (a boss doesn't die repeatedly).",
+   "check": "Web evidence of chain clears; then model the chain length from pack density (expected explosions = 1 / (1 - 0.25 x kills per explosion))."
+  },
+  {
+   "name": "Earthbound: Spark on killing a Shocked enemy",
+   "status": "unconfirmed",
+   "found": "2026-11-21",
+   "detector": "trigger loop graph (text scan group D)",
+   "what": "The unique triggers Spark on killing a Shocked enemy, and Spark shocks: kills feed more Sparks. A mapping chain like the toad's; no boss value.",
+   "check": "Can triggered Spark kills re-trigger Earthbound (some triggers exclude triggered skills)? Web evidence first."
   }
  ]
 }

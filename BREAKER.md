@@ -446,3 +446,9 @@ threshold, so ~2 energy per hit and ~55 hits per Arc (0.02 casts/s): only huge s
 is how the public "Thor" builds play Mjölner (a known build: the detector should find it as known, not new).
 Next (b-d): scan feeders per meta (energy per second for the strongest single hits: slams, Supercharged Slam,
 Boneshatter's shockwave), the loop graph from text_scan group D, leads.
+**Step (c), loop graph (2026-11-21):** the text scan's 467 trigger lines, kept only when uncapped (no "no more than
+once", cooldown or "cannot be triggered") and the trigger deals damage: 28 lines. Most are one-way (the triggered
+skill can't set off its own trigger, or, for meta gems, triggered skills generate no energy). Two self-feeding chains,
+both mapping only, added to leads.json as unconfirmed: **Bursting Fen Toad** ("25% chance to Trigger this Skill on
+Kill": runs away at 4+ kills per explosion) and **Earthbound** (Spark on killing a Shocked enemy; Spark shocks).
+Bosses don't die repeatedly, so neither is a boss lead. Feeder scan (b) still running (~/trigger_scan.sh).

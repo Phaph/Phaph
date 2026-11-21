@@ -142,7 +142,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Cascade, Dark Effigy, Lightning Conduit), each with its own setup rate and uptime model.
 15. [ ] ((a) done 2026-11-21: Thundergod's Wrath + Fire Spell on Melee Hit in triggers.py, energy on every hit with
     the threshold ratio; (b) tools/trigger_scan.py built, full run going (~/trigger_scan.sh,
-    writes data/breaker/triggers.json/.txt, not committed yet); next: read it, (c) loop graph, (d) leads) Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose
+    writes data/breaker/triggers.json/.txt, not committed yet); (c) loop graph done: 2 mapping chains in
+    leads.json (Bursting Fen Toad, Earthbound); next: read triggers.txt, (d) leads from feeders) Trigger and loop detector (roadmap week 2): from the text scan's group D lines, find skills/supports whose
     triggers can feed each other; estimate the rate; leads + test requests.
     Plan (2026-11-20): build on engine/triggers.py (energy maths for Cast on Critical / Elemental Ailment, numbers in
     data/trigger_rules.json). (a) add the other meta gems from PoB data (Cast on Dodge, Minion Death, Block, Melee
