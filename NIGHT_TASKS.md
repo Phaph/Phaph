@@ -1,12 +1,10 @@
 # START HERE (handoff, 2026-11-20 morning)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude, started 2026-11-21 ~18:30 Mazatlan):** ~/after_roa.sh = deploy engine 2026-11-21.1
-  (Rain of Arrows limit), then the blind test re-run, now truly per ascendancy (~12 h, commits blind.txt).
-  Next session: read blind.txt, finish task 7 in BREAKER.md. Check: `bash ~/phaph/engine/tools/status.sh`.
+- **Nothing running (2026-11-21 03:30 Mazatlan).** Blind test finished and written up (task 7, BREAKER.md).
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** read the new blind.txt and write it into BREAKER.md (task 7); 15 trigger/loop detector;
+- **Next tasks, in order:** 20 Druid weapons (small); 22 Huntress spear skills; 21 infusions; 15 trigger/loop detector;
   unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -102,8 +100,9 @@ Usage is nearly out. Automated jobs carry the work; Claude check-ins stay tiny:
    away), top combos, condition payoffs, one-skill interactions (+ best-in-slot list), multiplying pairs, and the
    server queue. API GET /lodestone/data (api/lodestone.py) reads the Breaker files mounted read-only from the
    server repo, so a pull updates it without a redeploy. Engine 2026-11-19.4.
-7. [ ] (2026-11-21: re-run read: it never locked the ascendancy, fixed; Rain of Arrows usage limit added; a fresh re-run is needed, then write it up) Blind test against poe.ninja's top builds (tool built by this session earlier): run it, write the result into
-   BREAKER.md (which of today's top builds the Breaker would have flagged, which it misses and why).
+7. [x] Blind test against poe.ninja's top builds. Done 2026-11-21: first true per-ascendancy run, 3/20 of the
+   ladder's top skills found (Comet, Ice Shot, Rend), Spearman +0.25; misses written up in BREAKER.md (setup skills
+   counted as main, Druid weapon rule, Huntress spear skills, no infusions). Follow-ups: tasks 20-22.
 8. [x] In-game test requests: write TESTS.md entries for the strongest leads (Leopold's Applause penetration below 0;
    "not consumed" charge sources adding to 100% for Flicker Strike; Hexblast's real cast rate), each with the PoB
    code, what to buy, what to do, what result confirms or kills it. Ping Kyle once when TESTS.md is ready.
@@ -161,6 +160,16 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     (a socket the build doesn't have); make it replace the skill's weakest support instead, then `breaker.py rescore`
     the leads (Leopold's + Fire Penetration +31%, Maligaro's + Pinpoint +42%) and update leads.json / TESTS.md.
     Optional: also compare a damage-only rare in the unique's slot (our rare balances damage and defence).
+
+20. [ ] Druid weapons (from the blind test): data/class_weapons.json gives Druid only Talisman, so Tornado, Entangle
+    and Wolf Pack (the ladder's Druid skills) never reach a Druid search. Make Druid intended = Talisman + Staff,
+    close + Wand, Sceptre; re-run the blind test for Oracle, Shaman only (`--only Oracle,Shaman`).
+21. [ ] Infusion family in the combo finder: Frost Bomb, Orb of Storms, Powered by Verisium (GeneratesInfusion) feed
+    Comet / Spark / Arc. Model the infusion rate and the payoff skill's gain; the blind test should then find Arc,
+    Ice Nova and the setup skills as part of a combo.
+22. [ ] Huntress spear skills: Whirling Slash (12.8% of the ladder) and Twister (10.9%) don't make Huntress' top 10.
+    Find why (stages, elemental ground, round-1 setup) in PoB, fix what is a modelling gap, re-run `--only Amazon,
+    Ritualist,Spirit Walker`.
 
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or

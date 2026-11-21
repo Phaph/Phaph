@@ -293,3 +293,36 @@ across a 3.6 m circle, each hitting within 0.7 m. New USAGE_LIMITS rule: hits/s 
 ((target radius + impact radius) / rain radius)^2, 8.33), target 1.5 m for a boss, 0.5 m on maps. Base gem: boss
 8.33 -> 4.67 hits/s (x0.56); Concentrated Area raises the share. The usage-limit hook now also limits HitSpeed, not
 only Speed. Estimates: an in-game check (TESTS.md) would pin down the boss share.
+
+### Blind test, first real per-ascendancy run (2026-11-21, task 7 done)
+All 23 ascendancies searched on their own (engine 2026-11-21.1, Rain of Arrows limited), nothing from poe.ninja in.
+data/breaker/blind.txt. **3 of the ladder's 20 most played main skills land in some ascendancy's top 5** (Comet #1
+Blood Mage, Ice Shot #2 Deadeye, Rend #4 Oracle); Spark #7 (Abyssal Lich) and Tornado Shot #8 (Deadeye) are close.
+Spearman of our best score per ascendancy vs its share of players: **+0.25** (was +0.16 with the all-class bug).
+Why the other 15 are missed, in four groups:
+- **Setup skills the ladder lists as "main" (5 of 20: Frost Bomb, Frost Wall, Orb of Storms, Powered by Verisium,
+  Oil Grenade).** Cooldown pieces that make infusions, exposure, ice crystals or ignited ground for another skill.
+  We score each as a lone damage skill, so they can't rank. Not a miss of the build: its payoff skill (Comet, Spark)
+  is found. Real gap: the combo finder has no **infusion** family yet (Frost Bomb / Orb of Storms / Verisium feed
+  Comet, Spark, Arc). Queued as task 21.
+- **Druid kept to Talismans (4 of 20: Tornado, Entangle, Wolf Pack, Twister-like casters).** class_weapons.json gives
+  Druid only Talisman (close: Staff), but the ladder's Druids (Oracle 7.3%, Shaman 1.5%) mostly cast Tornado and
+  Entangle from a staff/wand and summon Wolf Pack (Sceptre/Wand). Round 1 picks Talisman skills only (Oil Barrage,
+  Flame Breath). Fix: Druid intended = Talisman + Staff, close + Wand, Sceptre (task 20).
+- **Huntress' two big spear skills (Whirling Slash 12.8%, Twister 10.9%) not in Huntress' top 10.** The search
+  tried them (spear skills, Huntress' own weapon) and they scored low. Both build stages / pick up elemental ground
+  (Whirling Slash gains stages, Twister takes ground's element): likely a PoB modelling or round-1 setup gap. Check
+  (task 22).
+- **Plain spells behind Comet/Skyfall/Bone Cage (Arc, Ice Nova, Flameblast, Grim Pillars, Spark lower).** Round 1
+  has no tree and no infusions; Arc and Ice Nova on the ladder are infused or Frost Wall / Frostbolt combos, and
+  Flameblast is channel stages. Same root as the infusion gap.
+- Snipe (4.7%, Bow) not in Ranger's top 10: channel with perfect timing, scored at its base hit.
+**Ascendancy order:** the ascendancies of one class still read nearly the same (Tactician = Witchhunter, Titan =
+Warbringer to the point; same top 10 within each class): round 1 has no tree, and ascendancy passives add mostly
+plain damage. So the Spearman mostly measures class vs class. Gemling (32% of the ladder) is mid; Spirit Walker
+(6.8%) is last.
+**Top 3 by us, under 1% of the ladder (17):** leads or modelling gaps to check one by one. Strongest suspects of a
+modelling gap: Bone Cage #1 on all three Sorceress/Witch casters (0.84%), Hammer of the Gods #1 Warrior (0.48%),
+Oil Barrage #1 Druid (0.77%, partly the weapon rule), Wind Serpent's Fury #1 Amazon (0.20%), Rapid Shot #1 Tactician
+(0.41%, already a test request), Rain of Arrows still #1 Deadeye after its limit (0.08%). Next blind-test run after
+20-22: target 8+/20 found.
