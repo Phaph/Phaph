@@ -154,7 +154,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     feeder (the Cast on Freeze Comet shape); (c) loop graph from text_scan group D lines: a triggered skill whose output
     is its own trigger's event (crit, kill, ailment, minion death) = self-feeding, check against the 0.4/0.5 rule
     "triggered skills generate no energy"; (d) leads.json + TESTS.md for anything over the bar.
-16. [ ] Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
+16. [ ] (2026-11-22: tools/lead_builds.py + a `build` entry on 2 leads (Leopold's + Fire Pen, Maligaro's + Pinpoint);
+    first run going (~/lead_builds.sh -> data/breaker/lead_builds/, not committed); next: read, commit, add more leads)
+    Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
     saved with their codes, so test requests come with a complete build.
 
 17. [ ] (after the reset, when no queue job is running) Rename the working branch to `main` (Kyle agreed

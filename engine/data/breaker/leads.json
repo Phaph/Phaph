@@ -27,7 +27,15 @@
    "detector": "interaction finder",
    "what": "The gloves let hits penetrate resistance down to -50%. Normally a second penetration source is wasted once a boss is at 0%; with Leopold's every extra point keeps counting. Measured with the gloves really worn (replacing the build's own): Fireball Blood Mage +4% alone, Fire Penetration I -3% alone (replacing the build's weakest support), +16% together (synergy 1.15; +31% when the support was an extra socket).",
    "check": "Does the -50% floor apply to pinnacle bosses in game? (TESTS.md #3)",
-   "evidence": "Evidence 2026-11-21: poe2db and the Mobalytics penetration guide: 'Your Hits can Penetrate Elemental Resistances down to a minimum of -50%', the only way to penetrate below 0%; a second penetration source keeps counting. Caveat (Mobalytics): penetration and negative resistance from curses/exposure don't stack, so the gain is smaller on builds that already push the boss below 0."
+   "evidence": "Evidence 2026-11-21: poe2db and the Mobalytics penetration guide: 'Your Hits can Penetrate Elemental Resistances down to a minimum of -50%', the only way to penetrate below 0%; a second penetration source keeps counting. Caveat (Mobalytics): penetration and negative resistance from curses/exposure don't stack, so the gain is smaller on builds that already push the boss below 0.",
+   "build": {
+    "job": "74928ed168834f66b72bfa306594dd93",
+    "anchor_unique": "Leopold's Applause",
+    "anchor_support": "Fire Penetration I",
+    "stages": [
+     "end"
+    ]
+   }
   },
   {
    "name": "\"Not consumed\" charges reaching 100% (Flicker Strike)",
@@ -119,6 +127,22 @@
    "detector": "trigger loop graph (text scan group D)",
    "what": "The unique triggers Spark on killing a Shocked enemy, and Spark shocks: kills feed more Sparks. A mapping chain like the toad's; no boss value.",
    "check": "Can triggered Spark kills re-trigger Earthbound (some triggers exclude triggered skills)? Web evidence first."
+  },
+  {
+   "name": "Maligaro's Virtuosity + Pinpoint Critical (Skeletal Sniper Lich)",
+   "status": "unconfirmed",
+   "found": "2026-11-17",
+   "detector": "interaction finder (pairs)",
+   "what": "Worn for real, with Pinpoint Critical replacing the build's weakest support: Maligaro's Virtuosity +15% alone, Pinpoint Critical +8% alone, +42% together (synergy 1.14): the strongest pair the interaction finder has. Why the two multiply is not written up yet.",
+   "check": "Why the pair multiplies (gem text of Pinpoint Critical vs Maligaro's fixed 250%); web evidence of the pairing.",
+   "build": {
+    "job": "f18689634978400280741d22367afb05",
+    "anchor_unique": "Maligaro's Virtuosity",
+    "anchor_support": "Pinpoint Critical",
+    "stages": [
+     "end"
+    ]
+   }
   }
  ]
 }
