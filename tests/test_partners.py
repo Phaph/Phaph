@@ -57,3 +57,18 @@ def test_extra_sets_add_up(pob):
     scaled, note = apply_extra_sets(pob, "Earthquake", g, out, fields)
     assert note and scaled["TotalDPS"] > 2 * out["TotalDPS"]
     assert pob.send("set_part", group=g)["part"] == 1     # left on set 1
+
+
+def test_frost_bomb_exposure_helps_a_plain_cold_spell(pob):
+    """Frost Bomb's Elemental Exposure (a debuff from any active skill) raises Comet's damage; its cast time is paid."""
+    from partners import apply_exposure
+    pob.new()
+    pob.set_class("Sorceress", None)
+    pob.set_level(90)
+    pob.add_item("Rarity: NORMAL\nAshen Staff\nAshen Staff")
+    g = pob.add_skill(["Comet"])["group"]
+    fields = ["TotalDPS", "TotalDotDPS", "Speed"]
+    out = pob.calc(fields)
+    scaled, note = apply_exposure(pob, "Comet", g, out, fields, [])
+    assert note and note["setup"] == "Frost Bomb" and 1.02 < note["factor"] < 1.2
+    assert pob.calc(fields)["TotalDPS"] == out["TotalDPS"]      # the build is left as it was

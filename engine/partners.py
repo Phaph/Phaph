@@ -190,3 +190,56 @@ def apply_extra_sets(p, skill: str, group: int, out: dict, fields: list[str]) ->
     scaled = {k: (v * f if k in DPS_FIELDS and isinstance(v, (int, float)) else v) for k, v in out.items()}
     return scaled, {"extra_sets": labels, "factor": round(f, 3),
                     "why": f"{skill}'s {', '.join(labels)} also lands on every use: x{f:.2f} DPS"}
+
+
+# Exposure setups (task 27, 2026-11-21). Frost Bomb, the ladder's most played "main skill" (16.8%), inflicts
+# Elemental Exposure (-20% to all elemental resistances; PoB applies it as a debuff from any active skill in the
+# build) with 100% uptime: it pulses for 4 s, the Exposure lasts 8 s after the last pulse, and it has a 6 s
+# cooldown. Its cost is the cast: 0.8 s (base cast time) of every 6 s not spent on the main skill. Conservative:
+# base -20% only (it compounds +2% per pulse up to 50 in game), no cast speed on the 0.8 s, its own damage ignored.
+# Exposure doesn't apply to enemies above a level set by the gem (100 at gem level 20, 52 at 10): fine at endgame.
+EXPOSURE_SETUPS = {"Frost Bomb": {"cast": 0.8, "cooldown": 6.0}}
+
+
+def apply_exposure(p, skill: str, group: int, out: dict, fields: list[str],
+                   supports: list[str] | None = None) -> tuple[dict, dict | None]:
+    """supports: the main skill's supports. Penetration (Rakiata's Flow...) and negative resistance don't stack in
+    PoE 2 (PoB follows it), so with Exposure on, a build drops its penetration support: when the setup doesn't pay
+    as is, each support is also tried left out (a 4-support build: conservative) and the best is kept."""
+    if skill in EXPOSURE_SETUPS:
+        return out, None
+    base = _dps(out)
+    if base <= 0:
+        return out, None
+    best, best_setup = base, None
+    for setup, rule in EXPOSURE_SETUPS.items():
+        sg = p.add_skill([setup], main=False)["group"]
+        dropped = None
+        try:
+            p.send("set_main", group=group)
+            with_it = _dps(p.calc(fields))
+            if with_it < base * 1.15 and supports:
+                for s in supports:
+                    rest = [x for x in supports if x != s]
+                    d = _dps(p.try_skill(group, [skill, *rest], fields)["output"])
+                    if d > with_it:
+                        with_it, dropped = d, s
+                p.try_skill(group, [skill, *supports], fields)
+        finally:
+            p.remove_skill(sg)
+            p.send("set_main", group=group)
+        cycle = with_it * (1 - rule["cast"] / rule["cooldown"])
+        import os
+        if os.environ.get("PARTNER_DEBUG"):
+            print(f"exposure {skill}: base {base:.0f} with {setup} {with_it:.0f} cycle {cycle:.0f}")
+        if cycle > best * 1.02:          # worth a button only if it gains more than 2%
+            best, best_setup = cycle, (setup, with_it / base, dropped)
+    if not best_setup:
+        return out, None
+    f = best / base
+    scaled = {k: (v * f if k in DPS_FIELDS and isinstance(v, (int, float)) else v) for k, v in out.items()}
+    setup, raw, dropped = best_setup
+    why = (f"{setup} keeps Elemental Exposure on the target (x{raw:.2f} damage"
+           + (f", with {dropped} left out: penetration and Exposure don't stack" if dropped else "")
+           + f"); casting it every {EXPOSURE_SETUPS[setup]['cooldown']:.0f} s costs time: x{f:.2f} DPS overall")
+    return scaled, {"setup": setup, "factor": round(f, 3), "drop_support": dropped, "why": why}

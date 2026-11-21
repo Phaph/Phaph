@@ -4,10 +4,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Running (no Claude, 2026-11-21 evening Mazatlan):** (1) ~/after_stages.sh: full blind re-run on engine 2026-11-21.5
   (~12 h, commits blind.txt). (2) ~/after_minions.sh: full suite (2 cores), deploy engine 2026-11-21.6 (Oil Barrage,
   Wolf Pack, minion counts), then after (1) re-runs the blind test for the 6 Witch + Druid ascendancies.
-  Next session: task 27 (Frost Bomb exposure) or 28; when blind.txt lands, compare with the 3/20 run, write into BREAKER.md.
+  Next session: task 28 (guide counts all stat sets + partner setups); when blind.txt lands, compare with the 3/20 run, write into BREAKER.md.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 27 Frost Bomb exposure; 28 guide counts all stat sets; 15 trigger/loop detector;
+- **Next tasks, in order:** 28 guide counts all stat sets (and partner setups); 15 trigger/loop detector;
   unsupported-unique-lines check (BREAKER.md, new idea); 16 leads -> full builds; 14 rest; 17 branch rename.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -210,11 +210,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     engine only counts set 1. Per skill (gem text + PoB data): does the set happen on every use (add it, e.g. as a
     second Full DPS group with that stat set) or instead of set 1? Check Incinerate's x11 ground first. Then a blind
     re-run. Likely the biggest ranking fix left.
-27. [ ] Frost Bomb as an Exposure setup: it inflicts Elemental Exposure each pulse (ladder 16.8%, the #1 "main
+27. [x] (2026-11-21: partners.apply_exposure; bare Comet x1.04 net, but penetration (Rakiata's Flow) and
+    Exposure don't stack, so it loses on our searched builds; BREAKER.md) Frost Bomb as an Exposure setup: it inflicts Elemental Exposure each pulse (ladder 16.8%, the #1 "main
     skill"). auto_config only turns Exposure on when the build's own text says so; model Frost Bomb (and other
     Exposure appliers) as a setup for cold/fire/lightning payoffs (uptime from its duration and 6 s cooldown).
 
-28. [ ] The finished guide counts only stat set 1 (task 26 made the search count the sum): add the extra sets as a
+28. [ ] (also: partners.py setups (Whirling Slash, Frost Bomb, Orb of Storms) are only in the ranking, not in the
+    finished guide's skills: add them as weapon-set or extra skills with their reason) The finished guide counts only stat set 1 (task 26 made the search count the sum): add the extra sets as a
     mirrored Full DPS group (same gems, stat set k) in guide.py so the build page and PoB export show the real total;
     check Earthquake and Coiling Bolts end to end.
 

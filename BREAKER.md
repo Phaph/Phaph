@@ -422,3 +422,14 @@ Left out as conditional (infusion, charge, detonator, parry, other enemies, terr
 Lightning Spear, Explosive Spear, Glacial Lance, Volcano, Sunder, Ice Shot shards, Lightning Arrow beams and more;
 Incinerate's x11 Ignited Ground is infused-only, so it is not counted. Not done yet: the finished guide still
 reports set 1 only (the search ranks with the sum); a mirrored Full DPS group would fix both (follow-up).
+
+### Frost Bomb as an Exposure setup (2026-11-21, task 27)
+`partners.apply_exposure` (every search round): Frost Bomb's Elemental Exposure (-20% all elemental resistances, a
+debuff PoB applies from any active skill in the build) is up 100% of the time (4 s of pulses + 8 s duration, 6 s
+cooldown); its 0.8 s cast every 6 s is paid out of the main skill's time (x0.87). Bare Comet: x1.20 damage, x1.04 net.
+**But penetration and Exposure don't stack** (PoE 2 rule, PoB follows it): with Rakiata's Flow on the main skill
+(our searches pick it for Comet, Spark, Lightning Spear), adding Frost Bomb LOWERS damage (Comet 163k -> 152k), and
+leaving Rakiata's out to make room for Exposure is still worse. So in our numbers Frost Bomb pays only on builds
+without a strong penetration support. Its 16.8% of the ladder is then mostly not boss damage: map clear (an area
+spell with a big detonation), the Cold Infusion for Ice Nova/Spark (task 21), and players without Rakiata's Flow
+(a rare lineage gem). Not counted: Exposure compounding (+2% per pulse up to 50 in game), Frost Bomb's own damage.
