@@ -1,9 +1,9 @@
 # START HERE (handoff, 2026-11-20 morning)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude, 2026-11-21 ~04:30 Mazatlan):** ~/after_druid.sh = deploy engine 2026-11-21.2 (Druid weapons),
-  then the blind test for Oracle + Shaman only (~1-2 h, commits blind.txt). Next session: compare Druid picks with
-  the ladder (Tornado, Entangle, Wolf Pack?), add one line to BREAKER.md, then task 22.
+- **Running (no Claude, 2026-11-21 ~06:00 Mazatlan):** ~/after_revert.sh = full suite, then deploy engine
+  2026-11-21.3 (Druid weapon trial reverted) if green. Next: task 22 (why Whirling Slash, Twister, Tornado, Entangle,
+  Wolf Pack score low in round 1).
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Next tasks, in order:** 20 Druid weapons (small); 22 Huntress spear skills; 21 infusions; 15 trigger/loop detector;
@@ -163,14 +163,14 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the leads (Leopold's + Fire Penetration +31%, Maligaro's + Pinpoint +42%) and update leads.json / TESTS.md.
     Optional: also compare a damage-only rare in the unique's slot (our rare balances damage and defence).
 
-20. [x] (2026-11-21: Druid intended = Talisman, Staff, Sceptre; close = Wand; engine 2026-11-21.2; blind re-run for
-    Oracle + Shaman chained in ~/after_druid.sh, write it up when blind.txt is committed) Druid weapons (from the blind test): data/class_weapons.json gives Druid only Talisman, so Tornado, Entangle
+20. [x] (2026-11-21: tried Staff + Sceptre for Druid, made the blind test worse, reverted; engine 2026-11-21.3;
+    see BREAKER.md: Tornado/Entangle/Wolf Pack score low in round 1, folded into task 22) Druid weapons (from the blind test): data/class_weapons.json gives Druid only Talisman, so Tornado, Entangle
     and Wolf Pack (the ladder's Druid skills) never reach a Druid search. Make Druid intended = Talisman + Staff,
     close + Wand, Sceptre; re-run the blind test for Oracle, Shaman only (`--only Oracle,Shaman`).
 21. [ ] Infusion family in the combo finder: Frost Bomb, Orb of Storms, Powered by Verisium (GeneratesInfusion) feed
     Comet / Spark / Arc. Model the infusion rate and the payoff skill's gain; the blind test should then find Arc,
     Ice Nova and the setup skills as part of a combo.
-22. [ ] Huntress spear skills: Whirling Slash (12.8% of the ladder) and Twister (10.9%) don't make Huntress' top 10.
+22. [ ] Huntress spear skills (+ Druid's Tornado, Entangle, Wolf Pack, task 20): Whirling Slash (12.8% of the ladder) and Twister (10.9%) don't make Huntress' top 10.
     Find why (stages, elemental ground, round-1 setup) in PoB, fix what is a modelling gap, re-run `--only Amazon,
     Ritualist,Spirit Walker`.
 

@@ -326,3 +326,9 @@ modelling gap: Bone Cage #1 on all three Sorceress/Witch casters (0.84%), Hammer
 Oil Barrage #1 Druid (0.77%, partly the weapon rule), Wind Serpent's Fury #1 Amazon (0.20%), Rapid Shot #1 Tactician
 (0.41%, already a test request), Rain of Arrows still #1 Deadeye after its limit (0.08%). Next blind-test run after
 20-22: target 8+/20 found.
+**Druid weapon trial (task 20, reverted):** Druid allowed Staff + Sceptre (engine 2026-11-21.2), Oracle + Shaman
+searched again. Worse: their top 10 filled with Sorceress staff spells (Snap, Firestorm, Bone Cage, Comet), Oil Barrage
+and Rend dropped out (found 2/20, Spearman +0.22), and Tornado, Entangle, Wolf Pack still don't reach the top 15.
+So the weapon rule wasn't what hid them: they score low in round 1 (Tornado is DoT-only, Entangle a plant limit,
+Wolf Pack a companion), the same gap as the Huntress spear skills. Reverted (engine 2026-11-21.3); blind.json/txt
+restored to the Talisman run.
