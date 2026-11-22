@@ -7,7 +7,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   exposure, minions, Oil Barrage): ~12 h, commits blind.txt. Next session: compare 3/20 (morning) -> 21.5 -> final.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 16 leads -> full builds; 14 rest (immobilised, mapping combos);
+- **Next tasks, in order:** 14 rest (immobilised, mapping combos);
   17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -154,9 +154,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     feeder (the Cast on Freeze Comet shape); (c) loop graph from text_scan group D lines: a triggered skill whose output
     is its own trigger's event (crit, kill, ailment, minion death) = self-feeding, check against the 0.4/0.5 rule
     "triggered skills generate no energy"; (d) leads.json + TESTS.md for anything over the bar.
-16. [ ] (2026-11-22: tools/lead_builds.py + a `build` entry on 2 leads (Leopold's + Fire Pen, Maligaro's + Pinpoint);
-    first run going (~/lead_builds.sh -> data/breaker/lead_builds/, not committed); next: read, commit, add more leads)
-    Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
+16. [x] (2026-11-22: tools/lead_builds.py builds a lead around its pieces + the same build without them; Leopold's
+    pair -10%, Maligaro's pair +7% in full builds: both dead. It is now the bar for a lead) Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
     saved with their codes, so test requests come with a complete build.
 
 17. [ ] (after the reset, when no queue job is running) Rename the working branch to `main` (Kyle agreed

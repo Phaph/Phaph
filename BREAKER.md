@@ -468,3 +468,16 @@ pairs_weakest.json. **Leopold's Applause + Fire Penetration I (Fireball Blood Ma
 Fire Penetration alone -3% (was +10%), synergy 1.15: the pair still multiplies, half as big. **Maligaro's
 Virtuosity + Pinpoint Critical (Skeletal Sniper Lich): +42%, unchanged** (Pinpoint +8% alone): the strongest pair.
 Skeletal Sniper + Fire Penetration + Leopold's +24% (was +25%). Unique-only pairs are unchanged (no support swapped).
+
+### Leads to full builds (2026-11-22, task 16)
+`tools/lead_builds.py`: a lead with a `build` entry (its job, the pieces to anchor) is built as a full Whetstone stage
+around them, and the same spec without them on the same engine (the saved jobs ran on a much older engine, so they
+can't be the baseline). Uber Endgame, data/breaker/lead_builds/:
+| Lead | With the pieces | Without (same engine) | Pairs bench said |
+|---|---|---|---|
+| Leopold's Applause + Fire Penetration I, Fireball Blood Mage | 3.76M | 4.17M | **-10%** | +16% |
+| Maligaro's Virtuosity + Pinpoint Critical, Skeletal Sniper Lich | 232k | 217k | **+7%** | +42% |
+**Both pairs fade in a full build**: once gear, tree and supports are optimised around the build, other pieces do as
+well or better. The bench's numbers (a finished build with one slot swapped) overstate pairs. Lesson for the Breaker:
+a lead counts only when its full build beats the plain full build; lead_builds.py is now that bar (both leads ->
+dead in leads.json). Leopold's below-0 penetration is still a real mechanic (confirmed), just not a break here.

@@ -28,7 +28,11 @@
    ],
    "baseline": {
     "dps": 473628,
-    "boss_dps": 170411
+    "boss_dps": 170411,
+    "now": {
+     "dps": 1371660,
+     "boss_dps": 216678
+    }
    },
    "seconds": 1576
   }

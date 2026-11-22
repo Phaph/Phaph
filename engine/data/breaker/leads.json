@@ -1,5 +1,5 @@
 {
- "about": "Lodestone leads, curated by Claude from BREAKER.md. status: unconfirmed (PoB says so; no game data, web or ladder evidence settles it; the engine keeps the cautious number; Kyle can't test in game, 2026-11-21), to_test (old name for unconfirmed), confirmed, dead (explained, not real), fixed (a modelling bug found and fixed in the engine), known (rediscovered a known strong build). Update this file when a lead changes; the Lodestone page reads it.",
+ "about": "Lodestone leads, curated by Claude from BREAKER.md. status: unconfirmed (PoB says so; no game data, web or ladder evidence settles it; the engine keeps the cautious number; Kyle can't test in game, 2026-11-21), to_test (old name for unconfirmed), confirmed, dead (explained, not real, or too small once the full build is optimised), fixed (a modelling bug found and fixed in the engine), known (rediscovered a known strong build). Update this file when a lead changes; the Lodestone page reads it.",
  "updated": "2026-11-22",
  "leads": [
   {
@@ -22,7 +22,7 @@
   },
   {
    "name": "Leopold's Applause: penetration below 0%",
-   "status": "confirmed",
+   "status": "dead",
    "found": "2026-11-17",
    "detector": "interaction finder",
    "what": "The gloves let hits penetrate resistance down to -50%. Normally a second penetration source is wasted once a boss is at 0%; with Leopold's every extra point keeps counting. Measured with the gloves really worn (replacing the build's own): Fireball Blood Mage +4% alone, Fire Penetration I -3% alone (replacing the build's weakest support), +16% together (synergy 1.15; +31% when the support was an extra socket).",
@@ -35,7 +35,8 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22: a full Uber Endgame build around Leopold's + Fire Penetration I (Fireball Blood Mage) reaches 3.76M boss DPS; the same build without them, on the same engine, 4.17M (-10%). The below-0 penetration is real (confirmed), but in a full build other gloves and supports beat it. data/breaker/lead_builds/."
   },
   {
    "name": "\"Not consumed\" charges reaching 100% (Flicker Strike)",
@@ -130,7 +131,7 @@
   },
   {
    "name": "Maligaro's Virtuosity + Pinpoint Critical (Skeletal Sniper Lich)",
-   "status": "unconfirmed",
+   "status": "dead",
    "found": "2026-11-17",
    "detector": "interaction finder (pairs)",
    "what": "Worn for real, with Pinpoint Critical replacing the build's weakest support: Maligaro's Virtuosity +15% alone, Pinpoint Critical +8% alone, +42% together (synergy 1.14): the strongest pair the interaction finder has. Why the two multiply is not written up yet.",
@@ -142,7 +143,8 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22: full Uber Endgame build around the pair 232k boss DPS vs 217k without it (+7%): far below the bench's +42%. Small; not a break."
   }
  ]
 }
