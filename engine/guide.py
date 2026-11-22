@@ -385,6 +385,14 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 if combo.get("boss_gems") and boss:
                     boss.supports = list(combo["boss_gems"][1:])   # the boss setup carries the break supports
 
+        if light and spec.get("_light"):
+            # A forced-light end stage (ranking finalists, task 36) still needs a boss number: plain bossing config,
+            # the build's own conditions, setups and extra stat sets (partners.py); no boss supports search.
+            pob.auto_config("bossing")
+            raw = pob.calc(STAT_FIELDS)
+            boss_out, partner = apply_all(pob, skill, group, raw, STAT_FIELDS, None)
+            boss_dps = total_dps(boss_out)
+
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
         conditions = pob.auto_config("mapping")
