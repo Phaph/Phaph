@@ -503,3 +503,10 @@ passive changes in the file, and the practice run on a past patch (step 3).
 **Unique changes (2026-11-22):** `patch_unique` (a unique's line replaced, removed or added in PoB's unique database;
 undone by patch_reset), used by PATCH_FILE entries {"unique": ..., "replace": [[old, new]], "add": [...]}. Test:
 Leopold's Applause "-50%" -> "-30%" and back. Passive-tree changes are still to do.
+
+### Combo leads in full builds: a pipeline problem first (2026-11-22, task 30 -> 33)
+Armour Piercing Rounds breaking its own armour (Tactician), full Uber Endgame: the combo build's note says 2.39M with
+the combo vs 1.79M for APR alone in that build (+34%: the combo itself works), but the plain build is 3.92M. The
+combo build is ~2x weaker before the combo, so the combo path changes the build somewhere (task 33). A first cause
+fixed on the way: score_combo used PoB's raw numbers, without the setups / extra stat sets the plain boss number gets
+(Bonestorm's explosion), now scaled the same. Combo leads stay unconfirmed until 33 is done.
