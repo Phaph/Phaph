@@ -286,7 +286,7 @@
   },
   {
    "name": "Wind Serpent's Fury (Amazon)",
-   "status": "unconfirmed",
+   "status": "dead",
    "found": "2026-11-22",
    "detector": "blind test (top 3, under 1% of the ladder)",
    "what": "Our #1 on Amazon, 0.20% of the ladder; Lightning Spear is the popular Amazon skill.",
@@ -311,7 +311,8 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22, full Uber Endgame Amazon, same engine: Wind Serpent's Fury 1.50M vs Lightning Spear 1.69M (-11%)."
   }
  ]
 }

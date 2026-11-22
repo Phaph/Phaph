@@ -266,7 +266,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     supports / boss setup) or score_combo's "alone" leaves something out. Diff the two builds (lead_builds/ codes:
     supports, gear, tree, config) and fix; then re-run the combo leads. Until then combo leads stay unconfirmed.
 
-34. [ ] Skill leads through the full-build bar (from tasks 16/30: interaction leads fade, a strong skill survives):
+34. [ ] (2026-11-22 first 3: Bonestorm 2x Comet (holds), Rain of Arrows -43% vs Ice Shot, Wind Serpent's Fury -11% vs
+    Lightning Spear; rest after the full blind re-run) Skill leads through the full-build bar (from tasks 16/30: interaction leads fade, a strong skill survives):
     after the full blind re-run, for each skill it ranks top 3 while under 1% of the ladder plays it (Bonestorm, Wind
     Serpent's Fury, Rain of Arrows, Supercharged Slam...), a full Uber Endgame build (lead_builds.py with a written spec)
     vs a full build of a skill the ladder plays a lot on that class (Comet, Spark, Lightning Spear, Ice Shot...). A

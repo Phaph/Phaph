@@ -610,4 +610,6 @@ Full Uber Endgame builds, same engine, our pick vs the skill the ladder plays on
 |---|---|---|---|
 | Lich | Bonestorm 8.82M | Comet 4.45M | **2.0x: holds** (lead stays) |
 | Deadeye | Rain of Arrows 657k | Ice Shot 1.15M | **-43%: dead** |
-Rain of Arrows shows the search itself can rank skills in a different order than full builds do (task 35).
+| Amazon | Wind Serpent's Fury 1.50M | Lightning Spear 1.69M | **-11%: dead** |
+Rain of Arrows and Wind Serpent's Fury show the search can rank skills in a different order than full builds do
+(task 35: tools/rank_check.py measures how often, on 6 ascendancies).
