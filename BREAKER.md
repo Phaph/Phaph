@@ -577,3 +577,7 @@ may support, unique lines, passive nodes: all apply before PoB updates (PATCH_FI
 two real patches (0.5.1: 8/8 gems; 0.5.2: 2/2 nodes, blind). Not yet: keystones (PoB's keystone table), sockets and
 base item numbers, rule changes ("cooldown no longer recovers while..."), and the ladder side of the practice (did
 our scans call the right builds broken / nerfed: needs poe.ninja history from the PC).
+**Bonestorm lead, evidence (2026-11-22):** all 20 spikes can hit one big boss (Mobalytics: "can all Shotgun and hit
+the same target"; guides: channel to full on bosses, less on small targets); the impact explosion is on every spike
+(PoB data: own base damage; Power Charges only add area). Nothing checkable without the game contradicts PoB:
+Bonestorm Lich, full Uber Endgame, 8.8M boss DPS (9.8M with Coiling Bolts breaking armour), 0.85% of the ladder.
