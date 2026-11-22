@@ -1,0 +1,64 @@
+Blind test: 23 of 23 ascendancies searched (no poe.ninja input). Ladder: Forbidden Rites (124,102 characters, fetched 2026-11-17).
+1. Ladder's top 20 main skills found in some ascendancy's top 5: 3/20 (15%)
+         Frost Bomb                 16.8% of ladder   not in any top 15
+         Spark                      15.8% of ladder   our rank 7 on Abyssal Lich
+   FOUND Comet                      14.6% of ladder   our rank 2 on Infernalist
+         Whirling Slash             12.8% of ladder   not in any top 15
+         Arc                        11.0% of ladder   not in any top 15
+         Wolf Pack                  11.0% of ladder   not in any top 15
+         Twister                    10.9% of ladder   not in any top 15
+         Frost Wall                 10.4% of ladder   not in any top 15
+         Oil Grenade                 8.2% of ladder   not in any top 15
+         Powered by Verisium         7.8% of ladder   not in any top 15
+         Flameblast                  7.8% of ladder   not in any top 15
+         Entangle                    7.2% of ladder   not in any top 15
+   FOUND Ice Shot                    7.1% of ladder   our rank 2 on Deadeye
+         Tornado Shot                6.7% of ladder   our rank 8 on Deadeye
+         Ice Nova                    6.6% of ladder   not in any top 15
+         Tornado                     6.1% of ladder   not in any top 15
+         Grim Pillars                5.6% of ladder   not in any top 15
+   FOUND Rend                        5.4% of ladder   our rank 4 on Oracle
+         Orb of Storms               4.9% of ladder   not in any top 15
+         Snipe                       4.7% of ladder   not in any top 15
+2. Ascendancies, our best score vs share of players: Spearman +0.19 (1 = same order, 0 = unrelated)
+   Infernalist              score   12,553,412  ladder  5.7%   picks Bonestorm (Staff)
+   Lich                     score    6,555,473  ladder  1.6%   picks Bonestorm (Staff)
+   Stormweaver              score    6,221,007  ladder  3.4%   picks Bonestorm (Staff)
+   Blood Mage               score    6,215,267  ladder  2.7%   picks Bonestorm (Staff)
+   Chronomancer             score    5,756,639  ladder  1.2%   picks Bonestorm (Staff)
+   Disciple of Varashta     score    5,654,498  ladder  7.2%   picks Bonestorm (Staff)
+   Abyssal Lich             score    5,390,461  ladder  0.9%   picks Bonestorm (Staff)
+   Oracle                   score    1,600,937  ladder  7.3%   picks Oil Barrage (Talisman)
+   Shaman                   score    1,410,147  ladder  1.5%   picks Oil Barrage (Talisman)
+   Acolyte of Chayula       score    1,389,114  ladder  1.7%   picks Flicker Strike (Staff)
+   Gemling Legionnaire      score    1,218,676  ladder 32.2%   picks Rapid Shot (Crossbow)
+   Tactician                score    1,212,635  ladder  1.2%   picks Rapid Shot (Crossbow)
+   Witchhunter              score    1,212,635  ladder  1.5%   picks Rapid Shot (Crossbow)
+   Deadeye                  score    1,132,223  ladder  6.0%   picks Rain of Arrows (Bow)
+   Pathfinder               score    1,116,481  ladder  1.4%   picks Rain of Arrows (Bow)
+   Invoker                  score      918,517  ladder  0.3%   picks Flicker Strike (Staff)
+   Martial Artist           score      818,918  ladder 10.6%   picks Flicker Strike (Staff)
+   Smith of Kitava          score      673,790  ladder  1.0%   picks Supercharged Slam (Two Hand Mace)
+   Titan                    score      657,232  ladder  2.8%   picks Supercharged Slam (Two Hand Mace)
+   Warbringer               score      657,232  ladder  0.7%   picks Supercharged Slam (Two Hand Mace)
+   Amazon                   score      312,900  ladder  0.6%   picks Wind Serpent's Fury (Spear)
+   Ritualist                score      281,519  ladder  1.7%   picks Wind Serpent's Fury (Spear)
+   Spirit Walker            score      265,804  ladder  6.8%   picks Lightning Spear (Spear)
+3. Ranked top 3 by us, played by under 1% of the ladder (lead or modelling bug):
+   Wind Serpent's Fury        rank 1 on Amazon                 ladder 0.20%
+   Rain of Arrows             rank 1 on Deadeye                ladder 0.08%
+   Oil Barrage                rank 1 on Oracle                 ladder 0.77%
+   Rapid Shot                 rank 1 on Tactician              ladder 0.41%
+   Bonestorm                  rank 1 on Infernalist            ladder 0.85%
+   Supercharged Slam          rank 1 on Titan                  ladder 0.26%
+   Hammer of the Gods         rank 2 on Titan                  ladder 0.48%
+   Glacial Lance              rank 2 on Spirit Walker          ladder 0.47%
+   Flame Breath               rank 2 on Oracle                 ladder 0.17%
+   Armour Piercing Rounds     rank 2 on Tactician              ladder 0.38%
+   Siphoning Strike           rank 2 on Martial Artist         ladder 0.08%
+   Bone Cage                  rank 2 on Lich                   ladder 0.84%
+   Electrocuting Arrow        rank 3 on Deadeye                ladder 0.12%
+   Plasma Blast               rank 3 on Tactician              ladder 0.39%
+   Ice Strike                 rank 3 on Acolyte of Chayula     ladder 0.75%
+   Fangs of Frost             rank 3 on Amazon                 ladder 0.22%
+   Sunder                     rank 3 on Titan                  ladder 0.91%
