@@ -10,7 +10,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
-- **Waiting for Kyle:** Lodestone page public?; decider round for the search (task 35, adds ~15 min per build).
+- **Waiting for Kyle:** decider round for the search (task 35, adds ~15 min per build).
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
@@ -290,9 +290,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     accept the cost on every candidate: more expensive than A. Recommend A, or B if it ranks the same.
 
 ## Waiting for Kyle
+(Kyle 2026-11-22: the Lodestone page stays unlisted; no need to make it public.)
 - Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
   checks). Front-end is paused, so only with your OK.
-- Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
-  sharing it is your call.
 
 ## Done
