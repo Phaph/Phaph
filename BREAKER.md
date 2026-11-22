@@ -529,3 +529,18 @@ all of them is next in the queue.
 level), `require_types` (what a support may support: "no longer restricted to Attacks"), and `id` (PoB's skill id,
 for a triggered part such as a curse's shockwave). For the 0.5.1 practice: Repulsion's wave base crit 6%, the three
 Attunements and Ice Bite I no longer attack-only.
+
+### Patch-notes practice on 0.5.1 (2026-11-22, task 31 step 3)
+PoB v0.18.0 (before 0.5.1) and v0.19.0 ("Update skills with 0.5.1 changes") fetched to ~/pob_versions/ (LuaJIT from
+our image; `POB_VENDOR=...` runs the engine on either; our runner works on both). Changes file written from the notes
+alone (poe2db.tw/Version_0.5.1), before looking at PoB's update: data/patches/0_5_1.json.
+- **Read right: 2 of 2 number changes** match PoB's update exactly (Conductive Runes base crit 7%, Repulsion's
+  triggered wave 6%, at every gem level; v0.18 had none). DPS can't show it here: both are attacks that use the
+  weapon's crit in PoB, in v0.19 as well.
+- **Not expressible yet: 16 of the 18 gem / item lines.** Most balance notes add or reword stats rather than change a
+  number: "no longer limited to Attacks; now Gain 25% of Damage as Extra Cold" (Attunements, Ice Bite, Innervate),
+  "20% more Area of Effect" (Stampede), rules (Refutation's cooldown), ascendancy and unique rewrites.
+**Next for patch day:** (1) an "add stat" change (a gem stat by its PoB name, e.g. gain-as-extra, appended to a stat
+set), (2) unique lines are already text (patch_unique works), (3) ascendancy/keystone text via the tree (passive
+changes), (4) practise on a bigger numeric patch (0.4 -> 0.5 skill reworks) once those exist. Ladder check still
+needs poe.ninja from the PC.

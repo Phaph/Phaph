@@ -1,0 +1,14 @@
+{
+  "patch": "0.5.1 (practice: written from the notes at poe2db.tw/Version_0.5.1, 2026-11-22, before looking at PoB's update)",
+  "changes": [
+    {"gem": "Conductive Runes", "level": {"critChance": 7}, "note": "Conductive Runes now has a base Critical Strike Chance of 7%."},
+    {"id": "CurseOfRepulsionShockwavePlayer", "level": {"critChance": 6}, "note": "Repulsion's Triggered Wave now has a base Critical Strike Chance of 6%."}
+  ],
+  "not_expressible_yet": [
+    "Cold / Lightning / Fire Attunement: no longer limited to Attacks; now Gain 25% of Damage as Extra Cold / Lightning / Fire (a new stat, not a number change)",
+    "Ice Bite I / II, Innervate: no longer limited to Attacks; new gain-as effects for 5 / 6 s",
+    "Refutation's Cooldown no longer recovers while the Buff is active (a rule)",
+    "Stampede now has 20% more Area of Effect as its special effect (a new stat)",
+    "Ascendancy, rune and unique changes (Archon of Chayula, Eternal Life, Virtuous Barrier, Revered Vestments, Emergent Instinct)"
+  ]
+}

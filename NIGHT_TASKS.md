@@ -241,7 +241,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     running (~/lead_builds.sh); Dark Effigy + poison needs ailment combos in the guide first) Full-build bar for the "confirmed" combo leads (from task 16: pairs faded in full builds): Dark Effigy +
     poison (combo finder +69% vs a boss) and the Armour Broken combos. Build each as a full guide with its setup
     (guide combo style) and the plain build on the same engine; keep the lead only if the full build wins.
-31. [ ] (step 3 plan 2026-11-22: practise on 0.5.1: PoB v0.18.0 (before) vs v0.19.0 ("Update skills with 0.5.1
+31. [ ] (step 3 done 2026-11-22 on 0.5.1: 2/2 number changes read right, 16/18 lines not expressible (new stats,
+    rules, ascendancy/unique rewrites); next: "add stat" change type, passive changes, a bigger patch; step 3 plan: practise on 0.5.1: PoB v0.18.0 (before) vs v0.19.0 ("Update skills with 0.5.1
     changes"); notes at poe2db.tw/Version_0.5.1. Needs two more change types first: per-level gem fields (Repulsion's
     wave base crit 6%) and support restrictions (Cold/Fire/Lightning Attunement, Ice Bite I no longer attack-only).
     Then: PoB v0.18.0 in a second vendor dir (setup.sh POB_REF), our 0_5_1.json applied, compare changed skills' DPS
