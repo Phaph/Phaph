@@ -1069,6 +1069,68 @@ def best_combo_row(ranked: list[dict], req: dict) -> tuple[dict, dict] | None:
     return best
 
 
+ENDGAME_FINALISTS = 3      # endgame-first pick (Kyle 2026-11-22): the search's top skills built at Uber Endgame
+ENDGAME_LIGHT = True       # a light end stage (one tree pass, no jewels) if it ranks skills like the full one
+
+
+def endgame_decider(result: dict, top: int = ENDGAME_FINALISTS, light: bool = ENDGAME_LIGHT, log=print) -> dict:
+    """Pick the build by its endgame (Kyle, 2026-11-22: "when someone is looking for a build they are really looking
+    for an endgame build"). The search ranks on a mid-game build, and its #1 was the best Uber Endgame build on only
+    2 of 6 ascendancies checked (tools/rank_check.py: up to 43% given away). The top `top` distinct skills of the
+    ranking are built at Uber Endgame in parallel and scored like the search (mapping x boss, or one of them for a
+    mapping / bossing request); the winner moves to the top of result["ranked"], so plan_build and the guide follow
+    it. result["decider"] keeps every finalist's numbers."""
+    from guide import build_stage
+    from optimize import clear_score
+    ranked = result.get("ranked") or []
+    rows, seen = [], set()
+    for r in ranked:
+        key = (r["skill"], r["ascendancy"])
+        if key not in seen:
+            seen.add(key)
+            rows.append(r)
+        if len(rows) >= top:
+            break
+    if len(rows) < 2:
+        return result
+    mode = (result.get("searched") or result.get("request") or {}).get("mode", "balanced")
+
+    def one(r):
+        spec = plan_build(result, ascendancy=r["ascendancy"], skill=r["skill"])["spec"]
+        if light:
+            spec = {**spec, "_light": True}
+        try:
+            g = build_stage(spec, "end")
+        except Exception as e:  # noqa: BLE001 - one finalist failing must not stop the pick
+            return r, None, f"{type(e).__name__}: {e}"
+        return r, g, None
+
+    with ThreadPoolExecutor(max_workers=len(rows)) as ex:
+        built = list(ex.map(one, rows))
+    scored = []
+    for r, g, err in built:
+        if g is None:
+            continue
+        boss, clear = g.boss_dps or g.dps, clear_score(g.stats or {}) or g.dps
+        score = boss if mode == "bossing" else clear if mode == "mapping" else (max(boss, 0) * max(clear, 0)) ** 0.5
+        scored.append((score, r, g))
+    if not scored:
+        return result
+    scored.sort(key=lambda x: -x[0])
+    winner = scored[0][1]
+    first = rows[0]
+    result["decider"] = {"light": light, "mode": mode,
+                         "finalists": [{"skill": r["skill"], "ascendancy": r["ascendancy"], "search_rank": rows.index(r) + 1,
+                                        "end_score": round(sc), "boss_dps": round(g.boss_dps), "dps": round(g.dps)}
+                                       for sc, r, g in scored],
+                         "changed": winner is not first}
+    if winner is not first:
+        log(f"Endgame pick: {winner['skill']} ({winner['ascendancy']}) over the search's #1 {first['skill']}")
+        result["ranked"] = [winner] + [r for r in ranked if r is not winner]
+        result["best"] = dict(winner)
+    return result
+
+
 def options(result: dict) -> dict:
     """Alternatives to offer after a build: each other ascendancy and skill, with its damage
     relative to the recommendation."""

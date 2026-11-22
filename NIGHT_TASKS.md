@@ -299,7 +299,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     data). Option C: make the search's own ranking stage closer to endgame (end-stage gear and tree depth) and
     accept the cost on every candidate: more expensive than A. Recommend A, or B if it ranks the same.
 
-36. [ ] Endgame-first builds (Kyle 2026-11-22, replaces the decider-round question in 35): "when someone is looking
+36. [ ] ((a) code done 2026-11-22: generate.endgame_decider + api hook behind ENDGAME_DECIDER=1 (off), tests; waiting on
+    rank_check --light (~/rank_light.sh) to pick light vs full; then set it on + deploy; (b) leveling rule next)
+    Endgame-first builds (Kyle 2026-11-22, replaces the decider-round question in 35): "when someone is looking
     for a build they are really looking for an endgame build ... they will use whatever gets them to late fastest
     then swap." (a) The final pick among the search's top 3 is made on their Uber Endgame builds (light version first
     if it ranks the same as rank_check's full builds); (b) leveling (Kyle: "not swapping spells every act", then "maybe 3

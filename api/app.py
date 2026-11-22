@@ -227,6 +227,17 @@ def run_generate(req: dict, progress=None) -> dict:
         heads = []
     result = generate({**req, "_head_starts": heads} if heads else req, workers=GENERATE_WORKERS,
                       log=lambda *a: None, progress=progress)
+    # Endgame-first pick (Kyle 2026-11-22, NIGHT_TASKS 36): the search's top skills built at Uber Endgame, the best
+    # one wins. Off until rank_check --light shows the light build ranks like the full one (ENDGAME_DECIDER=1).
+    if os.environ.get("ENDGAME_DECIDER") == "1" and not req.get("random"):
+        from generate import endgame_decider
+        if progress:
+            progress({"step": "round", "round": 3, "label": "Endgame check", "count": 3,
+                      "text": "Building the top skills at Uber Endgame: the build is picked by its endgame."})
+        try:
+            result = endgame_decider(result, log=lambda *a: None)
+        except Exception as e:  # noqa: BLE001 - the check must never cost the player their build
+            print(f"endgame decider failed: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
     return {"result": result, "plan": plan_build(result), "options": options(result)}
 
 
