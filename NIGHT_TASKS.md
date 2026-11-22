@@ -1,8 +1,9 @@
-# START HERE (handoff, 2026-11-20 morning)
+# START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude, 2026-11-22 from 06:53 Berlin):** the FULL blind re-run on engine 2026-11-21.11 (everything
-  from 11-21/22), ~12 h via the Breaker queue; commits blind.txt. Compare with blind_2026-11-21.5.txt and the 3/20 run.
+- **Running (no Claude, 2026-11-22 evening Berlin):** (1) ~/rank_check.sh: the search's top 3 as full Uber builds on 6
+  ascendancies (Martial Artist, Oracle left) -> data/breaker/rank_check.json; (2) ~/blind_unlock.sh: blind test with
+  no class-weapon rule, ~12 h -> data/breaker/blind_unlocked.json/.txt (not committed by the script: commit it).
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Plan (agreed with Kyle 2026-11-22):**
