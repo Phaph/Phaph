@@ -716,13 +716,32 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
     return chosen
 
 
+# Stages already built for a spec (the endgame pick builds the winner's Uber stage: generate.endgame_decider), kept
+# here so the guide doesn't build it again. Same server process only (generate and guide jobs are threads); lost on
+# restart, which just means building it again.
+_PREBUILT: dict[str, StageGuide] = {}
+_SPEC_SKIP = {"name", "budget", "stages", "leveling", "leveling_why", "_light"}
+
+
+def prebuilt_key(spec: dict, stage_key: str) -> str:
+    import json as _json
+    core = {k: v for k, v in spec.items() if k not in _SPEC_SKIP and v not in (None, [], {}, "")}
+    return stage_key + "|" + _json.dumps(core, sort_keys=True, default=str)
+
+
+def keep_prebuilt(spec: dict, stage_key: str, g: StageGuide) -> None:
+    if len(_PREBUILT) > 50:
+        _PREBUILT.clear()
+    _PREBUILT[prebuilt_key(spec, stage_key)] = g
+
+
 def build_guide(spec: dict, stages: list[str] | None = None, log=print, progress=None) -> list[StageGuide]:
     """All stages side by side. With progress, each finished stage is also sent at once as a "stage_result"
     event, so the website can show it while the others are still being built."""
     keys = stages or spec.get("stages") or list(STAGE_DEFS)
 
     def one(k: str) -> StageGuide:
-        g = build_stage(spec, k, log, progress)
+        g = _PREBUILT.pop(prebuilt_key(spec, k), None) or build_stage(spec, k, log, progress)
         if progress:
             progress({"stage": k, "step": "stage_result", "result": asdict(g)})
         return g

@@ -30,3 +30,17 @@ def test_decider_keeps_the_order_when_the_search_was_right(monkeypatch):
     result = {"ranked": [_row("A", 2), _row("B", 1)], "request": {}}
     out = g.endgame_decider(result, log=lambda *a: None)
     assert out["ranked"][0]["skill"] == "A" and not out["decider"]["changed"]
+
+
+def test_guide_reuses_the_winners_uber_stage(monkeypatch):
+    import guide
+    calls = []
+    fake = types.SimpleNamespace(boss_dps=2e6, dps=2e6, stats={})
+    monkeypatch.setattr(guide, "build_stage", lambda spec, key, *a: (calls.append((spec["skill"], key)), fake)[1])
+    result = {"ranked": [_row("A", 2), _row("B", 1)], "request": {}}
+    out = g.endgame_decider(result, light=False, log=lambda *a: None)
+    spec = g.plan_build(out)["spec"]
+    monkeypatch.setattr(guide, "asdict", lambda x: {}, raising=False)
+    n = len(calls)
+    guides = guide.build_guide(spec, ["end"], log=lambda *a: None)
+    assert len(calls) == n and guides[0] is fake      # not built again

@@ -1124,6 +1124,10 @@ def endgame_decider(result: dict, top: int = ENDGAME_FINALISTS, light: bool = EN
                                         "end_score": round(sc), "boss_dps": round(g.boss_dps), "dps": round(g.dps)}
                                        for sc, r, g in scored],
                          "changed": winner is not first}
+    if not light:   # the guide reuses the winner's Uber stage instead of building it again
+        from guide import keep_prebuilt
+        keep_prebuilt(plan_build(result, ascendancy=winner["ascendancy"], skill=winner["skill"])["spec"], "end",
+                      scored[0][2])
     if winner is not first:
         log(f"Endgame pick: {winner['skill']} ({winner['ascendancy']}) over the search's #1 {first['skill']}")
         result["ranked"] = [winner] + [r for r in ranked if r is not winner]
