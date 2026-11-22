@@ -348,7 +348,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         # Bossing setup: a separate boss skill if the build has one, else a support swap.
         pob.set_config(**MODE_CONFIG["bossing"])
         boss, boss_dps = None, 0.0
-        partner = None
+        partner, partner_factor = None, 1.0
         weapon_sets = None
         if not light:
             # boss_dps is real single-target damage (not the theme score used to pick supports).
@@ -366,12 +366,20 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 pob.auto_config("bossing")
                 boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
                 # Setups and extra damage stat sets, as the search ranked it (partners.py)
-                boss_out, partner = apply_all(pob, skill, group, pob.calc(STAT_FIELDS), STAT_FIELDS, boss.supports)
+                raw = pob.calc(STAT_FIELDS)
+                boss_out, partner = apply_all(pob, skill, group, raw, STAT_FIELDS, boss.supports)
                 boss_dps = total_dps(boss_out)
+                partner_factor = boss_dps / max(total_dps(raw), 1e-9)
             for t in triggers:
                 t["bossing"] = cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="bossing", gem=t["gem"])
             if combo:
                 combo, boss_dps = score_combo(pob, group, setup_group, combo, combo_swap)
+                # score_combo works on PoB's raw numbers: give it the same setups / extra stat sets as the plain
+                # boss number (partners.py), or a combo build reads ~40% low next to a plain one (2026-11-22).
+                boss_dps *= partner_factor
+                for k in ("boss_dps", "alone"):
+                    if combo.get(k):
+                        combo[k] = combo[k] * partner_factor
                 if combo.get("boss_gems") and boss:
                     boss.supports = list(combo["boss_gems"][1:])   # the boss setup carries the break supports
 
