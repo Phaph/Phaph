@@ -644,3 +644,7 @@ Abyssal Lich on Entangle/Thunderstorm, Tactician and Disciple on Wolf Pack. Also
 Abyssal Liches** (overall 0.85%): the lead is a known build on that ascendancy, so not a new break there.
 Running: the blind test with the class lock off (`blind_test.py run --unlock`, not Off-meta, which would bring in
 poe.ninja popularity), ~12 h -> data/breaker/blind_unlocked.txt.
+**Lodestone has no class-weapon rule (Kyle, 2026-11-22):** that rule is Whetstone's only (guides that suit the
+class). Removed from the per-ascendancy condition and matrix scans, the blind test (any weapon is now the default;
+`--class-weapons` tests Whetstone's rule) and lead_builds' combo lookup. The 11-20 per-ascendancy scans skipped
+skills outside each class's weapons: re-run queued as task 37.

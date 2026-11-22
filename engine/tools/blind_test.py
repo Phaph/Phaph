@@ -14,7 +14,7 @@ Truth: data/meta_usage.json (overall shares). When data/meta_pairs.json exists (
 it}}, fetched on the PC, where poe.ninja isn't blocked) the report also checks each ascendancy's own top skills.
 If the search can't find today's strong builds, it won't find tomorrow's.
 
-  python tools/blind_test.py run [--unlock] [--workers 3] [--only Infernalist,Titan] [--out data/breaker/blind.json]  (resumable)
+  python tools/blind_test.py run [--class-weapons] [--workers 3] [--only Infernalist,Titan] [--out data/breaker/blind.json]  (resumable)
   python tools/blind_test.py report data/breaker/blind.json
 """
 from __future__ import annotations
@@ -35,7 +35,7 @@ FOUND_RANK = 5       # "found" = in the top 5 of some ascendancy
 UNPLAYED = 0.01      # under 1% of the ladder
 
 
-def run(workers: int, out: Path, only: set[str] | None, unlock: bool = False) -> None:
+def run(workers: int, out: Path, only: set[str] | None, unlock: bool = True) -> None:
     from generate import generate, main_skills
     from pob import PoB
     from prompt import parse_prompt
@@ -61,6 +61,7 @@ def run(workers: int, out: Path, only: set[str] | None, unlock: bool = False) ->
             req = dict(parse_prompt(f"{asc} build", catalog)["request"])
             req.pop("off_meta", None)
             if unlock:
+                # Lodestone has no class-weapon rule (Kyle 2026-11-22; --class-weapons tests Whetstone's rule instead).
                 # Any weapon, like the ladder plays (2026-11-22: Titans on shields, Gemlings on spears...). Not the
                 # off-meta toggle: that also brings in poe.ninja popularity, which a blind test must not see.
                 req["_class_unlocked"] = True
@@ -165,7 +166,7 @@ if __name__ == "__main__":
         workers = int(sys.argv[sys.argv.index("--workers") + 1]) if "--workers" in sys.argv else 3
         out = Path(sys.argv[sys.argv.index("--out") + 1]) if "--out" in sys.argv else OUT
         only = set(sys.argv[sys.argv.index("--only") + 1].split(",")) if "--only" in sys.argv else None
-        run(workers, out, only, unlock="--unlock" in sys.argv)
+        run(workers, out, only, unlock="--class-weapons" not in sys.argv)
     elif cmd == "report":
         print(report(json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))))
     else:

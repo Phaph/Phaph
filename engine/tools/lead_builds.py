@@ -70,7 +70,7 @@ def run(db: str, out: Path, only: str | None) -> None:
             from generate import combo_for
             main = {"skill": spec["skill"], "weapon_type": spec["weapon_type"],
                     "weapon_subtype": spec.get("weapon_subtype"), "cls": spec["class"], "ascendancy": spec["ascendancy"]}
-            c = combo_for(main, {})
+            c = combo_for(main, {"_class_unlocked": True})   # Lodestone: any weapon
             if not c:
                 print(f"{lead['name']}: no combo for {spec['skill']}", flush=True)
                 continue

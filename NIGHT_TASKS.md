@@ -301,11 +301,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     already shows stages; a stage's own skill name has to show there (check before deploying; page work is paused,
     so ask Kyle if it needs more than the skill name).
 
+37. [ ] Re-run the per-ascendancy condition and matrix scans without the class-weapon rule (Kyle 2026-11-22:
+    Lodestone has none; the 11-20 runs skipped skills outside each class's weapons). Queue `conditions_asc matrix_asc`
+    after the unlocked blind run.
+
 ## Waiting for Kyle
-- Class-weapon rule (decided 2026-11-18): the ladder plays across classes everywhere (BREAKER.md, per-ascendancy
-  truth). After blind_unlocked lands, show how much the rule costs and ask whether the default search should allow
-  any weapon (or show the best cross-class build as an option).
-(Kyle 2026-11-22: the Lodestone page stays unlisted; no need to make it public.)
+- Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
+  (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.
 - Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
   checks). Front-end is paused, so only with your OK.
 

@@ -31,6 +31,9 @@ Owner: Kyle. Day-one target: PoE 2 1.0 (Dec 11, 2026). First real test case is a
 - A theme's goal (e.g. bleed) drives every optimiser through one metric (`optimize.metric_for` / `score_of`).
 - Builds include spirit buffs, uniques (by what each stage has access to), a boss skill on weapon set 2 when worth it, and only the conditional bonuses the build keeps up (each listed with its reason).
 
+- The class-weapon rule (data/class_weapons.json: classes keep to their own weapons unless Off-meta / Random) is
+  Whetstone's only, so guides suit the class. Lodestone has no class rules: any class with any weapon (if a Gemling
+  stat-stack Spark build is the strongest, so be it). (Kyle, 2026-11-22)
 - The build-breaking discovery tool is called **Lodestone** in public (pairs with Whetstone: Whetstone sharpens a build, Lodestone finds the builds nobody has found). "Breaker" stays as the internal code name (files, scripts, BREAKER*.md). (Kyle, 2026-11-18)
 
 ## Working rules

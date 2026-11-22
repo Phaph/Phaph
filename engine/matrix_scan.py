@@ -48,10 +48,7 @@ def run(workers: int, out: Path, cls: str | None = None, asc: str | None = None)
 
     def one(s):
         opts = g.weapon_options(s, {})
-        if cls:   # per class: the class's own weapons (main or weapon set 2) and the ascendancy's passives
-            opts = [o for o in opts if g.weapon_ok({}, cls, asc, o[0], o[1], second=True)]
-            if not opts:
-                return
+        # Lodestone has no class-weapon rule (Kyle 2026-11-22): every skill on every class, with its ascendancy's passives.
         w, sub, off = (opts or [(None, None, None)])[0]
         c = g.Candidate(s["name"], w, sub, off, cls or g.DEFAULT_CLASS.get("Minion" if "Minion" in s["types"] else
                         "Spell" if "Spell" in s["types"] else "", "Mercenary"), asc, is_minion="Minion" in s["types"],
