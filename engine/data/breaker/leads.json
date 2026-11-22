@@ -55,7 +55,7 @@
   },
   {
    "name": "Dark Effigy vs Poisoned",
-   "status": "confirmed",
+   "status": "dead",
    "found": "2026-11-18",
    "detector": "condition scan",
    "what": "+100% damage against poisoned enemies. Combo finder (ailments, our cycle estimate): Frost Darts with Poison supports poisons a pinnacle boss every 0.6 s, up 76% of the fight: +69% over the better skill alone. Dark Effigy poisoning for itself with Poison supports gets about the same.",
@@ -87,7 +87,8 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22, full Uber Endgame Lich on the same engine: combo 1.20M (Frost Darts poisons every 0.5 s, up 79%; +15% over Dark Effigy alone in that build) vs the plain Dark Effigy build 1.19M (+1%). The plain build spends the setup's gems and attributes better."
   },
   {
    "name": "Lightning Conduit vs Shocked",

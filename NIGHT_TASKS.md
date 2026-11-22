@@ -5,8 +5,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   from 11-21/22), ~12 h via the Breaker queue; commits blind.txt. Compare with blind_2026-11-21.5.txt and the 3/20 run.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 30 rest (ailment combos in the
-  guide for Dark Effigy); blind full re-run write-up when it lands (~19:00 Berlin); 31 patch-notes mode practice; 14/29 when boss
+- **Next tasks, in order:** blind full re-run write-up when it lands (~19:00 Berlin); 31 patch-notes mode practice; 14/29 when boss
   immobilise data turns up;
   17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
@@ -236,7 +235,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the rules with sources (poe2wiki, patch notes), write them to data/immobilise_rules.json like trigger_rules.json,
     then score Siege Cascade (+101% vs immobilised) and other payoffs with time-to-immobilise and uptime.
 
-30. [ ] (2026-11-22 results: APR self-break +1% (dead), Bonestorm <- Coiling Bolts +11%; left: Dark Effigy + poison
+30. [x] (2026-11-22: all combo leads through the full-build bar: APR +1%, Bonestorm <- Coiling Bolts +11%, Dark
+    Effigy + poison +1% (guide now plays ailment combos); BREAKER.md table) (2026-11-22 results: APR self-break +1% (dead), Bonestorm <- Coiling Bolts +11%; left: Dark Effigy + poison
     (needs ailment combos in the guide); lead_builds.py takes a written spec + combo flag; APR Tactician and Bonestorm Lich <- Coiling Bolts
     running (~/lead_builds.sh); Dark Effigy + poison needs ailment combos in the guide first) Full-build bar for the "confirmed" combo leads (from task 16: pairs faded in full builds): Dark Effigy +
     poison (combo finder +69% vs a boss) and the Armour Broken combos. Build each as a full guide with its setup

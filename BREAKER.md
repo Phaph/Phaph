@@ -581,3 +581,17 @@ our scans call the right builds broken / nerfed: needs poe.ninja history from th
 the same target"; guides: channel to full on bosses, less on small targets); the impact explosion is on every spike
 (PoB data: own base damage; Power Charges only add area). Nothing checkable without the game contradicts PoB:
 Bonestorm Lich, full Uber Endgame, 8.8M boss DPS (9.8M with Coiling Bolts breaking armour), 0.85% of the ladder.
+
+### The full-build bar, all leads so far (2026-11-22, tasks 16 and 30)
+| Lead | Detector said | Full build vs plain (same engine) |
+|---|---|---|
+| Leopold's Applause + Fire Penetration I | +16% (pairs) | -10% |
+| Maligaro's Virtuosity + Pinpoint Critical | +42% (pairs) | +7% |
+| Armour Piercing Rounds breaking its own armour | +42% (combo finder) | +1% |
+| Coiling Bolts breaks armour for Bonestorm | +23% (combo finder) | +11% |
+| Frost Darts poisons for Dark Effigy | +69% (combo finder) | +1% (+15% inside the combo build) |
+**Pattern: every interaction lead shrinks to 0-11% once a full build is optimised around it.** The detectors
+measure on round-1 builds (no tree, crafted gear, one swap), where any interaction looks big; a finished build
+gets most of it another way. Use for the Breaker: the detectors find candidates, lead_builds.py is the filter, and
+only a full-build win counts. The one lead that survives as big is a skill, not an interaction: Bonestorm at full
+channel (the strongest caster in full builds, 0.85% of the ladder).
