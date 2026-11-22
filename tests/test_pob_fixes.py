@@ -123,3 +123,19 @@ def test_armour_broken_needs_a_fast_break(pob):
         assert "s, Fully Broken" in applied["conditionEnemyArmourBroken"]
     else:
         assert ab["enemy_armour"] > 0     # a slow break: left off
+
+
+def test_patch_gem_level_field_and_support_types(pob):
+    """Patch-notes mode: a per-level field (crit chance) and a support's required skill types, changed and reset."""
+    pob.new()
+    pob.set_class("Sorceress", None)
+    pob.set_level(60)
+    pob.add_item("Rarity: NORMAL\nAshen Staff\nAshen Staff")
+    pob.add_skill(["Fireball"])
+    c0 = pob.calc(["CritChance"])["CritChance"]
+    r = pob.send("patch_gem", skill="Fireball", level={"critChance": 50})
+    assert r["changed"] and pob.calc(["CritChance"])["CritChance"] > c0
+    r = pob.send("patch_gem", id="SupportIceBitePlayer", require_types=["Damage"])
+    assert "supports: Damage" in r["changed"][0]
+    pob.send("patch_reset")
+    assert abs(pob.calc(["CritChance"])["CritChance"] - c0) < 1e-9

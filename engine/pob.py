@@ -41,10 +41,11 @@ def apply_patch_file(pob: "PoB") -> list[str]:
     import json
     done = []
     for c in json.loads(Path(path).read_text(encoding="utf-8")).get("changes") or []:
-        if c.get("gem"):
-            args = {k: c[k] for k in ("constant", "scale", "base_multiplier", "set") if c.get(k) is not None}
-            r = pob.send("patch_gem", skill=c["gem"], **args)
-            done += [f"{c['gem']}: {x}" for x in r.get("changed") or []]
+        if c.get("gem") or c.get("id"):
+            args = {k: c[k] for k in ("constant", "scale", "base_multiplier", "set", "level", "require_types", "id")
+                    if c.get(k) is not None}
+            r = pob.send("patch_gem", skill=c.get("gem"), **args)
+            done += [f"{c.get('gem') or c['id']}: {x}" for x in r.get("changed") or []]
         elif c.get("unique"):
             r = pob.send("patch_unique", name=c["unique"], replace=c.get("replace") or [], add=c.get("add") or [])
             done += [f"{c['unique']}: {x}" for x in r.get("changed") or []]

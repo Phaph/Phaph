@@ -974,7 +974,8 @@ function handlers.set_part(cmd)
 	return { part = (ge and gem.statSet and gem.statSet[ge.id]) or 1, parts = labels }
 end
 
--- Patch-notes mode (task 31): change a gem's numbers in PoB's loaded data, as a patch would. cmd.skill = gem name;
+-- Patch-notes mode (task 31): change a gem's numbers in PoB's loaded data, as a patch would. cmd.skill = gem name
+-- (or cmd.id = PoB's skill id, for a triggered part like a support's wave); level = {field = value}; require_types;
 -- constant = {stat = value} (stat sets' constantStats), scale = {stat = factor} (that stat's per-level values),
 -- base_multiplier = factor (each level's damage multiplier), set = only this stat set (default all). The change
 -- lasts until patch_reset. Returns what was changed.
@@ -991,9 +992,26 @@ local function remember(t, k)
 	table.insert(patched, { t = t, k = k, v = t[k] })
 end
 function handlers.patch_gem(cmd)
-	local id, ge = findSkill(cmd.skill)
-	if not ge then error("no gem called " .. tostring(cmd.skill)) end
+	local id, ge
+	if cmd.id then id, ge = cmd.id, data.skills[cmd.id] else id, ge = findSkill(cmd.skill) end
+	if not ge then error("no gem called " .. tostring(cmd.skill or cmd.id)) end
 	local done = {}
+	-- level = {field = value}: every gem level's field (critChance, cooldown, storedUses...) set to value
+	for field, v in pairs(cmd.level or {}) do
+		for _, lv in pairs(ge.levels or {}) do remember(lv, field); lv[field] = v end
+		table.insert(done, field .. "=" .. tostring(v) .. " at every level")
+	end
+	-- require_types = {"Damage", ...}: a support's requireSkillTypes replaced (what it may support)
+	if cmd.require_types then
+		remember(ge, "requireSkillTypes")
+		local t = {}
+		for _, name in ipairs(cmd.require_types) do
+			if not SkillType[name] then error("no skill type " .. name) end
+			table.insert(t, SkillType[name])
+		end
+		ge.requireSkillTypes = t
+		table.insert(done, "supports: " .. table.concat(cmd.require_types, " / "))
+	end
 	for si, set in ipairs(ge.statSets or {}) do
 		if not cmd.set or cmd.set == si then
 			for _, cs in ipairs(set.constantStats or {}) do

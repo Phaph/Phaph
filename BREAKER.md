@@ -525,3 +525,7 @@ it faster, channel to full on bosses), so it's a lead, not a plain bug: leads.js
 Open: how many of the 20 spikes hit one boss, and whether the explosion needs Power Charges. This run predates
 partners, minion counts, Oil Barrage, infusions, extra stat sets, exposure and the armour fix: the full re-run on
 all of them is next in the queue.
+**More change types (2026-11-22):** patch_gem `level` (a per-level field such as critChance or cooldown set at every
+level), `require_types` (what a support may support: "no longer restricted to Attacks"), and `id` (PoB's skill id,
+for a triggered part such as a curse's shockwave). For the 0.5.1 practice: Repulsion's wave base crit 6%, the three
+Attunements and Ice Bite I no longer attack-only.
