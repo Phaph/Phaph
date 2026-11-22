@@ -45,3 +45,4 @@ What it can find, once fully built:
   rediscovered Lightning Conduit + Shock (a 0.1 broken build) blind, found the Armour Broken combo family. One-command
   patch-day run built (`engine/tools/breaker_day.sh`). Hexblast scoring fixed (usage limits). Still to do in week 1:
   blind test against poe.ninja's top builds. Week 2 starts with the combo finder's scoring (setup + payoff).
+- 2026-11-22: Kyle: the Lodestone page stays unlisted (no public discoveries page needed); results live there and in BREAKER.md.
