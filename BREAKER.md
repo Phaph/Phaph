@@ -675,3 +675,7 @@ suspect is time PoB doesn't count:** the release. PoB's use time is the channel 
 volley every 0.5 s), but the gem has a release animation (skill_animation_duration_multiplier_override 6) and a 300 ms
 minimum channel. If a release takes ~0.5 s in game, PoB over-rates Bonestorm ~2x. Next: the real release time
 (guides / videos / PoB issues), then a USAGE_LIMITS rule like Rain of Arrows'.
+**Step 2:** no PoB issue found, but a build author on PoB Archives warns "POB does not calculate bonestorm DPS
+correctly" (pobarchives.com/build/CXHUyphJ). Planned rule (tomorrow, after tonight's deploy): USAGE_LIMITS Bonestorm,
+each release adds the release animation (skill_animation_duration_multiplier_override 6 x the 0.125 s base cast =
+0.75 s, scaled by cast speed): releases/s = 1 / (1 / HitSpeed + 6 / Speed). 5 projectiles: x0.40; 1 projectile: x0.77.
