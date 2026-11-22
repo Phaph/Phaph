@@ -1017,6 +1017,24 @@ function handlers.patch_gem(cmd)
 			for _, cs in ipairs(set.constantStats or {}) do
 				local v = cmd.constant and cmd.constant[cs[1]]
 				if v ~= nil then remember(cs, 2); cs[2] = v; table.insert(done, cs[1] .. "=" .. v) end
+				-- rename = {old stat = new stat}: "now applies to all damage", not only attacks
+				local new = cmd.rename and cmd.rename[cs[1]]
+				if new then remember(cs, 1); table.insert(done, cs[1] .. " -> " .. new); cs[1] = new end
+			end
+			-- remove = {stat, ...}; add = {stat = value} (a new constant stat; PoB must map it: SkillStatMap)
+			if cmd.remove or cmd.add then
+				remember(set, "constantStats")
+				local kept = {}
+				for _, cs in ipairs(set.constantStats or {}) do
+					local drop = false
+					for _, r in ipairs(cmd.remove or {}) do if cs[1] == r then drop = true end end
+					if drop then table.insert(done, "- " .. cs[1]) else table.insert(kept, { cs[1], cs[2] }) end
+				end
+				for stat, v in pairs(cmd.add or {}) do
+					table.insert(kept, { stat, v })
+					table.insert(done, "+ " .. stat .. " " .. v .. (data.skillStatMap[stat] and "" or " (PoB has no mapping: no effect)"))
+				end
+				set.constantStats = kept
 			end
 			for stat, f in pairs(cmd.scale or {}) do
 				local idx

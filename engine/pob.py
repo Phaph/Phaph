@@ -42,7 +42,8 @@ def apply_patch_file(pob: "PoB") -> list[str]:
     done = []
     for c in json.loads(Path(path).read_text(encoding="utf-8")).get("changes") or []:
         if c.get("gem") or c.get("id"):
-            args = {k: c[k] for k in ("constant", "scale", "base_multiplier", "set", "level", "require_types", "id")
+            args = {k: c[k] for k in ("constant", "scale", "base_multiplier", "set", "level", "require_types", "id",
+                                      "rename", "add", "remove")
                     if c.get(k) is not None}
             r = pob.send("patch_gem", skill=c.get("gem"), **args)
             done += [f"{c.get('gem') or c['id']}: {x}" for x in r.get("changed") or []]

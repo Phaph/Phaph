@@ -547,3 +547,9 @@ needs poe.ninja from the PC.
 **Combo leads re-run (2026-11-22, after the Armour Broken fix):** APR breaking its own armour: combo 3.50M vs plain
 3.47M (+1%: dead, the plain build breaks fast enough itself). Coiling Bolts breaking armour for Bonestorm (Lich):
 9.78M vs 8.82M (+11%: real, small). Dark Effigy + poison still needs ailment combos in the guide.
+**Add / remove / rename stats (2026-11-22):** patch_gem `add` {stat: value}, `remove` [stat], `rename` {old: new}
+(flags a stat PoB has no mapping for). PoB's own 0.5.1 update for the Attunements was: Damage added to what they
+support, and the gain stat renamed from "..._gain_as_cold_with_attacks" to "..._gain_as_cold". With those in
+0_5_1.json, **Fireball + Cold Attunement on v0.18.0 + our file = 57 DPS, exactly PoB v0.19.0's 57** (75 unpatched:
+the support didn't apply to spells). So 5 of the 18 lines are now reproduced exactly; next: Ice Bite / Innervate's
+timed gain-as buffs, Stampede's area, passive/ascendancy changes.

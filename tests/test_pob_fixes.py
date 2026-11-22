@@ -139,3 +139,12 @@ def test_patch_gem_level_field_and_support_types(pob):
     assert "supports: Damage" in r["changed"][0]
     pob.send("patch_reset")
     assert abs(pob.calc(["CritChance"])["CritChance"] - c0) < 1e-9
+
+
+def test_patch_gem_add_remove_rename_stats(pob):
+    """Patch-notes mode: constant stats added, removed and renamed on a gem, then reset."""
+    pob.new()
+    r = pob.send("patch_gem", skill="Cold Attunement", rename={"non_skill_base_all_damage_%_to_gain_as_cold": "x_renamed"})
+    r2 = pob.send("patch_gem", skill="Fireball", add={"base_number_of_projectiles": 2}, remove=["no_such_stat"])
+    assert any("+ base_number_of_projectiles" in c for c in r2["changed"])
+    pob.send("patch_reset")

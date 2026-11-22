@@ -1,11 +1,61 @@
 {
   "patch": "0.5.1 (practice: written from the notes at poe2db.tw/Version_0.5.1, 2026-11-22, before looking at PoB's update)",
   "changes": [
-    {"gem": "Conductive Runes", "level": {"critChance": 7}, "note": "Conductive Runes now has a base Critical Strike Chance of 7%."},
-    {"id": "CurseOfRepulsionShockwavePlayer", "level": {"critChance": 6}, "note": "Repulsion's Triggered Wave now has a base Critical Strike Chance of 6%."}
+    {
+      "gem": "Conductive Runes",
+      "level": {
+        "critChance": 7
+      },
+      "note": "Conductive Runes now has a base Critical Strike Chance of 7%."
+    },
+    {
+      "id": "CurseOfRepulsionShockwavePlayer",
+      "level": {
+        "critChance": 6
+      },
+      "note": "Repulsion's Triggered Wave now has a base Critical Strike Chance of 6%."
+    },
+    {
+      "gem": "Cold Attunement",
+      "require_types": [
+        "Attack",
+        "CrossbowAmmoSkill",
+        "Damage"
+      ],
+      "rename": {
+        "non_skill_base_all_damage_%_to_gain_as_cold_with_attacks": "non_skill_base_all_damage_%_to_gain_as_cold"
+      },
+      "note": "Cold Attunement Support is no longer limited to supporting Attacks. Now grants Gain 25% of Damage as Extra Cold Damage.",
+      "_added": "2026-11-22 after the first grading (the change types didn't exist when the notes were first read)"
+    },
+    {
+      "gem": "Fire Attunement",
+      "require_types": [
+        "Attack",
+        "CrossbowAmmoSkill",
+        "Damage"
+      ],
+      "rename": {
+        "non_skill_base_all_damage_%_to_gain_as_fire_with_attacks": "non_skill_base_all_damage_%_to_gain_as_fire"
+      },
+      "note": "Fire Attunement Support is no longer limited to supporting Attacks. Now grants Gain 25% of Damage as Extra Fire Damage.",
+      "_added": "2026-11-22 after the first grading (the change types didn't exist when the notes were first read)"
+    },
+    {
+      "gem": "Lightning Attunement",
+      "require_types": [
+        "Attack",
+        "CrossbowAmmoSkill",
+        "Damage"
+      ],
+      "rename": {
+        "non_skill_base_all_damage_%_to_gain_as_lightning_with_attacks": "non_skill_base_all_damage_%_to_gain_as_lightning"
+      },
+      "note": "Lightning Attunement Support is no longer limited to supporting Attacks. Now grants Gain 25% of Damage as Extra Lightning Damage.",
+      "_added": "2026-11-22 after the first grading (the change types didn't exist when the notes were first read)"
+    }
   ],
   "not_expressible_yet": [
-    "Cold / Lightning / Fire Attunement: no longer limited to Attacks; now Gain 25% of Damage as Extra Cold / Lightning / Fire (a new stat, not a number change)",
     "Ice Bite I / II, Innervate: no longer limited to Attacks; new gain-as effects for 5 / 6 s",
     "Refutation's Cooldown no longer recovers while the Buff is active (a rule)",
     "Stampede now has 20% more Area of Effect as its special effect (a new stat)",
