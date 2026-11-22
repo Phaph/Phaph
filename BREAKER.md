@@ -679,3 +679,5 @@ minimum channel. If a release takes ~0.5 s in game, PoB over-rates Bonestorm ~2x
 correctly" (pobarchives.com/build/CXHUyphJ). Planned rule (tomorrow, after tonight's deploy): USAGE_LIMITS Bonestorm,
 each release adds the release animation (skill_animation_duration_multiplier_override 6 x the 0.125 s base cast =
 0.75 s, scaled by cast speed): releases/s = 1 / (1 / HitSpeed + 6 / Speed). 5 projectiles: x0.40; 1 projectile: x0.77.
+**Step 3 (2026-11-23):** done: USAGE_LIMITS Bonestorm (releases/s = 1 / (1 / HitSpeed + 6 / Speed)), test in
+tests/test_usage_limits.py; engine 2026-11-23.1. Re-check its lead build vs Comet and the unlocked blind rows after.

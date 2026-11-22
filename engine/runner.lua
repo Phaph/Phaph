@@ -213,6 +213,17 @@ local USAGE_LIMITS = {
 		if speed <= 0 then return nil end
 		return speed / 4.5
 	end,
+	-- Bonestorm: PoB times a volley by its channel ticks only (ceil(stages / projectiles) x the 0.125 s cast), so with 5
+	-- projectiles a full 20-spike volley every 0.5 s, as if releasing took no time. The gem has a release animation
+	-- (skill_animation_duration_multiplier_override 6: ~6 base casts = 0.75 s, faster with cast speed) and a build
+	-- author warns PoB over-rates it (pobarchives.com/build/CXHUyphJ). Each release adds 6 cast times: releases/s =
+	-- 1 / (1 / HitSpeed + 6 / Speed). It won every class in the unlocked blind test at 7-15x (2026-11-22) while 0.85%
+	-- of the ladder plays it. Estimate: confirm with guides / videos.
+	Bonestorm = function(out)
+		local hs, speed = out.HitSpeed or 0, out.Speed or 0
+		if hs <= 0 or speed <= 0 then return nil end
+		return 1 / (1 / hs + 6 / speed), "HitSpeed"
+	end,
 	-- Rain of Arrows: PoB scores it as one full hit on the target every 0.12 s (its per-enemy hit cap), however many
 	-- arrows land on it. In game the arrows (80 ms apart, one rain at a time, so at most 12.5 a second) fall spread
 	-- over the whole rain circle (3.6 m base radius) and each hits only within its small impact circle (0.7 m), so one

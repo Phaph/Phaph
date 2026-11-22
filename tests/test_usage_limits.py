@@ -68,3 +68,18 @@ def test_rain_of_arrows_hits_one_target_with_only_some_arrows(pob):
     pob.set_config(enemyIsBoss="None")   # a smaller target: fewer arrows on it
     maps = pob.calc(fields)
     assert maps["HitSpeed"] < boss["HitSpeed"]
+
+
+def test_bonestorm_release_time(pob):
+    """Bonestorm: each 20-spike volley also pays its release (6 cast times), not only the channel ticks."""
+    pob.new()
+    pob.set_class("Witch", None)
+    pob.set_level(80)
+    pob.add_item("Rarity: NORMAL\nAshen Staff\nAshen Staff")
+    g = pob.add_skill(["Bonestorm"])["group"]
+    pob.send("set_custom_mods", text="Skills fire 4 additional Projectiles")
+    pob.send("set_stages", group=g, count=20)
+    out = pob.calc(["HitSpeed", "UsageLimit", "UncappedSpeed", "Speed"])
+    assert out.get("UsageLimit") and abs(out["HitSpeed"] - 1 / (1 / out["UncappedSpeed"] + 6 / out["Speed"])) < 1e-6
+    assert out["HitSpeed"] < 0.5 * out["UncappedSpeed"]
+    pob.send("set_custom_mods", text="")
