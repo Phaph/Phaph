@@ -7,7 +7,6 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Next tasks, in order:** blind full re-run write-up when it lands (~19:00 Berlin); 34 skill leads through the
   full-build bar; 35 search vs full build disagreement; 14/29 when boss immobilise data turns up;
-  17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
@@ -157,7 +156,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     pair -10%, Maligaro's pair +7% in full builds: both dead. It is now the bar for a lead) Leads to full builds: the top Lodestone leads become full Whetstone guides automatically (anchor the piece),
     saved with their codes, so test requests come with a complete build.
 
-17. [ ] (2026-11-22: main fast-forwarded to the branch; ~/phaph pushes to BOTH branches (remote.origin.push x2); docs
+17. [x] (2026-11-22: done. Cloudflare Pages deploys from main (Kyle switched it); ~/phaph and ~/breaker on main;
+    the old branch is retired with a README pointing to main) (2026-11-22: main fast-forwarded to the branch; ~/phaph pushes to BOTH branches (remote.origin.push x2); docs
     updated. Left: ~/breaker the same once the queue is idle, then local checkouts to main; old branch README after
     Kyle switches Cloudflare Pages) (after the reset, when no queue job is running) Rename the working branch to `main` (Kyle agreed
     2026-11-19): merge claude/poe2-shadow-build-mobalytics-85ym0e into main, push, switch ~/phaph and ~/breaker to
@@ -290,8 +290,6 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     accept the cost on every candidate: more expensive than A. Recommend A, or B if it ranks the same.
 
 ## Waiting for Kyle
-- Cloudflare Pages: set the production branch to `main` (main now has everything and stays in sync with the old
-  branch). Tell me when it's done and I'll stop pushing the old branch.
 - Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
   checks). Front-end is paused, so only with your OK.
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or

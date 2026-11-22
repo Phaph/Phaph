@@ -27,7 +27,7 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 # To do when back on the PC
 
 ## Kyle
-1. **Start a session on the PC.** Claude desktop app, Code tab, new local session (not cloud). Clone `github.com/Phaph/Phaph`, open the folder, and check out branch `main` (the old `claude/poe2-shadow-build-mobalytics-85ym0e` is kept in sync for now).
+1. **Start a session on the PC.** Claude desktop app, Code tab, new local session (not cloud). Clone `github.com/Phaph/Phaph`, open the folder, and check out branch `main`.
 2. **Show Claude `C:\ai\PoB`.** Point the session at it so Claude can see which PoB version is installed there.
 3. **Make a new GitHub repo** for the app, e.g. `poe2-build-optimizer`. `Phaph/Phaph` is your profile repo.
 4. **Get a PoB code from a character you play.** We use it to check the engine's numbers against the PoB app.
