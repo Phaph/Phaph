@@ -565,3 +565,15 @@ re-parsed as PoB does on load; PATCH_FILE entries {"passive": ..., "replace": [[
 Forbidden Path "5% reduced maximum Life" -> 50%: Life 890 -> 490, reset 890. Keystones apply through PoB's keystone
 table, so rewording a keystone isn't covered yet. Next: a fully blind practice on 0.5.2 (PoB v0.20.0 -> v0.21.0,
 passive tree changes only).
+
+### Blind practice on 0.5.2 (2026-11-22)
+Written from the notes (poe2db.tw/Version_0.5.2) and the BEFORE game only (PoB v0.20.0), without looking at PoB's
+update: data/patches/0_5_2.json. Graded against PoB v0.21.0 ("Add 0.5.2 Passive tree changes"):
+**2 of 2 passive changes match** (Ice Storm, Lightning Storm: the removed "Unaffected by ... Ground" line and both
+new lines; only the line order and one letter's case differ). Not expressible: Zarokh's Gift's socket type, base item
+defences (Runemastered bases). 0.5.2 had no skill number changes.
+**Patch-notes mode, where it stands:** gem numbers, per-level fields, stats added / removed / renamed, what a support
+may support, unique lines, passive nodes: all apply before PoB updates (PATCH_FILE, breaker_day.sh PATCH=), graded on
+two real patches (0.5.1: 8/8 gems; 0.5.2: 2/2 nodes, blind). Not yet: keystones (PoB's keystone table), sockets and
+base item numbers, rule changes ("cooldown no longer recovers while..."), and the ladder side of the practice (did
+our scans call the right builds broken / nerfed: needs poe.ninja history from the PC).

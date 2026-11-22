@@ -1,0 +1,14 @@
+{
+  "patch": "0.5.2 (blind practice, 2026-11-22: written from the notes at poe2db.tw/Version_0.5.2 and the BEFORE game (PoB v0.20.0) only; PoB's update v0.21.0 not looked at)",
+  "changes": [
+    {"passive": "Ice Storm", "replace": [["Unaffected by Chilled Ground", ""]],
+     "add": ["15% reduced Effect of Chill on you", "15% increased Magnitude of Chill you inflict"],
+     "note": "The Ice Storm Notable Passive now has 15% reduced Effect of Chill on you, and 15% increased Magnitude of Chill you inflict. It no longer provides Unaffected by Chilled Ground, which was non-functional."},
+    {"passive": "Lightning Storm", "replace": [["Unaffected by Shocked Ground", ""]],
+     "add": ["15% reduced Effect of Shock on you", "15% increased Magnitude of Shock you inflict"],
+     "note": "Same for Lightning Storm with Shock."}
+  ],
+  "not_expressible_yet": ["Zarokh's Gift now grants a Sinister Jewel Socket (previously Jewel Socket): a socket type, not a line",
+                          "Bitter Dead base crit 12%: unclear what it is (no gem of that name checked)",
+                          "Runemastered base types' armour / energy shield / ward: base item numbers, not supported"]
+}

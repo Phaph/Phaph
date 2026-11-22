@@ -5,7 +5,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   from 11-21/22), ~12 h via the Breaker queue; commits blind.txt. Compare with blind_2026-11-21.5.txt and the 3/20 run.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 31 patch-notes: add-stat change type + passive changes; 30 rest (ailment combos in the
+- **Next tasks, in order:** 30 rest (ailment combos in the
   guide for Dark Effigy); blind full re-run write-up when it lands (~19:00 Berlin); 31 patch-notes mode practice; 14/29 when boss
   immobilise data turns up;
   17 branch rename (when no queue job runs).
@@ -241,7 +241,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     running (~/lead_builds.sh); Dark Effigy + poison needs ailment combos in the guide first) Full-build bar for the "confirmed" combo leads (from task 16: pairs faded in full builds): Dark Effigy +
     poison (combo finder +69% vs a boss) and the Armour Broken combos. Build each as a full guide with its setup
     (guide combo style) and the plain build on the same engine; keep the lead only if the full build wins.
-31. [ ] (2026-11-22: 0.5.1 8/8 gems match PoB's update via tools/patch_check.py (6 not blind); passive changes done (patch_node);
+31. [x] (2026-11-22: patch-notes mode built and graded: 0.5.1 8/8 gems, 0.5.2 2/2 passives blind; left for the PC:
+    the ladder side (poe.ninja history); later: keystones, sockets, base items, rule changes) (2026-11-22: 0.5.1 8/8 gems match PoB's update via tools/patch_check.py (6 not blind); passive changes done (patch_node);
     next: a fully blind practice on 0.5.2 (PoB v0.20.0 -> v0.21.0, passive changes), then a skill-heavy patch;
     step 3 done on 0.5.1: 2/2 number changes read right, 16/18 lines not expressible (new stats,
     rules, ascendancy/unique rewrites); next: "add stat" change type, passive changes, a bigger patch; step 3 plan: practise on 0.5.1: PoB v0.18.0 (before) vs v0.19.0 ("Update skills with 0.5.1

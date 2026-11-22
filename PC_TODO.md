@@ -51,6 +51,9 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 9. **Test making a Mobalytics page** through Chrome, and find out whether the passive tree can be entered.
 10. **Set up scheduled checks** for patches, PoB updates and ladder data.
 
+11. **Patch-notes practice: ladder side** (Breaker task 31): fetch poe.ninja's ladder from just before and after 0.5.1
+    / 0.5.2 (or 0.4 -> 0.5), so we can check whether our scans on the patched game called the right builds broken or nerfed.
+
 ## Engine gaps to work through
 - Jewels and attribute requirements aren't handled.
 - The tree optimiser is greedy, so it can miss a strong node behind weak ones.
