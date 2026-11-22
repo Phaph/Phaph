@@ -603,3 +603,11 @@ from spent Runic Ward), and the minion-count fix counted them at their full limi
 (SkillType Persistent: Wolf Pack, skeletons...) are counted at their limit (runner sync_minion_counts
 persistent_only, used by the search and the guide); temporary ones stay at one. Engine 2026-11-21.12. The running
 blind re-run predates this: read its Unearth / Wardbound ranks as over-rated.
+
+### Skill leads through the full-build bar (2026-11-22, task 34)
+Full Uber Endgame builds, same engine, our pick vs the skill the ladder plays on that ascendancy:
+| Ascendancy | Our pick | Popular skill | Result |
+|---|---|---|---|
+| Lich | Bonestorm 8.82M | Comet 4.45M | **2.0x: holds** (lead stays) |
+| Deadeye | Rain of Arrows 657k | Ice Shot 1.15M | **-43%: dead** |
+Rain of Arrows shows the search itself can rank skills in a different order than full builds do (task 35).

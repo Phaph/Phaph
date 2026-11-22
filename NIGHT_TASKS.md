@@ -6,7 +6,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Next tasks, in order:** blind full re-run write-up when it lands (~19:00 Berlin); 34 skill leads through the
-  full-build bar; 14/29 when boss immobilise data turns up;
+  full-build bar; 35 search vs full build disagreement; 14/29 when boss immobilise data turns up;
   17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -271,6 +271,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Serpent's Fury, Rain of Arrows, Supercharged Slam...), a full Uber Endgame build (lead_builds.py with a written spec)
     vs a full build of a skill the ladder plays a lot on that class (Comet, Spark, Lightning Spear, Ice Shot...). A
     lead = our skill's full build clearly beats the popular one; then evidence checks (TESTS.md) like Bonestorm's.
+
+35. [ ] Search vs full build disagree (from task 34): the search's #1 Deadeye skill (Rain of Arrows) is 43% weaker
+    than Ice Shot once both are full Uber Endgame builds (657k vs 1.15M). The search ranks on a mid-game build with a
+    quick tree; the guide's gear, jewels, supports and endgame stage reorder skills. Measure how often the search's
+    top pick isn't the best full build (top 3 finalists per ascendancy as full end-stage builds, a sample of 5-6
+    ascendancies), then decide: a final "full build of the top 2-3" round in generate (cost: ~20 min per build on 2
+    cores, so maybe only the Uber stage, light), or a better ranking stage. Whetstone quality, not just Lodestone.
 
 ## Waiting for Kyle
 - Cloudflare Pages: set the production branch to `main` (main now has everything and stays in sync with the old
