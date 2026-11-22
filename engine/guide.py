@@ -484,7 +484,12 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 f"{', '.join(weapon_sets['set1_only'][:6])} (those stay on set 1): {weapon_sets['gain']:+.0%} boss damage.")
         if spec.get("combo_note") and stage_key == "end":
             guide.notes.append(spec["combo_note"])
-        if combo and combo.get("boss_dps"):
+        if combo and combo.get("boss_dps") and combo.get("ailment"):
+            guide.notes.append(
+                f"Combo: {combo['setup']} applies {combo['ailment']} (about every {combo['time_to_break']:.1f} s), then "
+                f"{skill} while it lasts: up {combo['uptime']:.0%} of the fight. Boss damage {combo['boss_dps']:,.0f} vs "
+                f"{combo['alone']:,.0f} with {skill} alone (our cycle estimate on PoB's numbers).")
+        elif combo and combo.get("boss_dps"):
             extra = [x for x in combo.get("boss_gems") or [] if x.startswith("Armour")]
             who = combo.get("setup") or (f"{skill} itself (with {', '.join(extra)} for bosses)" if extra
                                          else f"{skill} itself (it breaks armour on hit)")
@@ -534,9 +539,39 @@ KIT_TOP_K = 15
 FULLY_BROKEN_S = 12.0
 
 
+def score_ailment_combo(pob: PoB, group: int, setup_group: int, combo: dict, swap: bool) -> tuple[dict, float]:
+    """Boss damage of an ailment combo (combo_scan.ailment_combos: e.g. Frost Darts poisons, then Dark Effigy, which
+    gains a lot vs Poisoned): t = 1 / the setup's applications per second (+ weapon swap), then the ailment's duration
+    of the main skill with the condition on.  DPS = (t x setup DPS + duration x payoff with it) / (t + duration)."""
+    from combo_scan import AILMENTS, SWAP_S, _apply_rate
+    a = combo["ailment"]
+    vars_ = AILMENTS[a]
+    off, on = {v: False for v in vars_}, {v: True for v in vars_}
+    pob.set_config(**off)
+    alone = total_dps(pob.calc(STAT_FIELDS))
+    pob.set_config(**on)
+    with_it = total_dps(pob.calc(STAT_FIELDS))
+    pob.set_config(**off)
+    pob.send("set_main", group=setup_group)
+    setup_dps = total_dps(pob.calc(STAT_FIELDS))
+    per_s, dur = _apply_rate(pob, a)
+    pob.send("set_main", group=group)
+    if per_s <= 0 or dur <= 0:
+        return {**combo, "boss_dps": 0, "alone": round(alone), "note": f"the setup doesn't apply {a.lower()} here"}, alone
+    t = 1 / per_s + (SWAP_S if swap else 0.0)
+    dps = (t * setup_dps + dur * with_it) / (t + dur)
+    if dps <= alone:
+        return {**combo, "boss_dps": 0, "alone": round(alone), "note": f"the {a.lower()} setup doesn't pay here"}, alone
+    return {**combo, "time_to_break": round(t, 2), "uptime": round(dur / (t + dur), 3), "boss_dps": round(dps),
+            "alone": round(alone), "broken": round(with_it), "setup_dps": round(setup_dps)}, dps
+
+
 def score_combo(pob: PoB, group: int, setup_group: int | None, combo: dict, swap: bool) -> tuple[dict, float]:
     """Boss damage of a setup + payoff combo (Armour Broken), with the combo finder's cycle model on this build:
-    T s of the setup (its own damage, armour intact), then 12 s of the main skill on a broken boss."""
+    T s of the setup (its own damage, armour intact), then 12 s of the main skill on a broken boss.
+    An ailment combo (combo["ailment"]) goes to score_ailment_combo."""
+    if combo.get("ailment") and setup_group is not None:
+        return score_ailment_combo(pob, group, setup_group, combo, swap)
     from combo_scan import break_rate, cycle, self_score, with_break_supports
     if setup_group is None:
         # The main skill breaks armour itself: Armour Break / Armour Demolisher in place of its weakest supports.

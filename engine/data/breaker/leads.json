@@ -58,7 +58,36 @@
    "status": "confirmed",
    "found": "2026-11-18",
    "detector": "condition scan",
-   "what": "+100% damage against poisoned enemies. Combo finder (ailments, our cycle estimate): Frost Darts with Poison supports poisons a pinnacle boss every 0.6 s, up 76% of the fight: +69% over the better skill alone. Dark Effigy poisoning for itself with Poison supports gets about the same."
+   "what": "+100% damage against poisoned enemies. Combo finder (ailments, our cycle estimate): Frost Darts with Poison supports poisons a pinnacle boss every 0.6 s, up 76% of the fight: +69% over the better skill alone. Dark Effigy poisoning for itself with Poison supports gets about the same.",
+   "build": {
+    "spec": {
+     "name": "Dark Effigy Lich",
+     "class": "Witch",
+     "ascendancy": "Lich",
+     "skill": "Dark Effigy",
+     "weapon_type": "Wand",
+     "support_slots": 5
+    },
+    "combo": {
+     "setup": "Frost Darts",
+     "setup_gems": [
+      "Frost Darts",
+      "Cold Attunement",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Poison III"
+     ],
+     "condition": "Poisoned",
+     "ailment": "Poison",
+     "edge": 0.689,
+     "time_to_break": 0.63,
+     "uptime": 0.76
+    },
+    "stages": [
+     "end"
+    ]
+   }
   },
   {
    "name": "Lightning Conduit vs Shocked",

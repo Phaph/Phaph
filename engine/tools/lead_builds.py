@@ -64,7 +64,9 @@ def run(db: str, out: Path, only: str | None) -> None:
                 continue
             job = json.loads(row[0])
         spec = {**job["spec"], **{k: b[k] for k in ("anchor_unique", "anchor_support", "anchor_keystone") if b.get(k)}}
-        if b.get("combo"):   # the combo finder's best setup for this skill (Armour Broken), as plan_build adds it
+        if isinstance(b.get("combo"), dict):   # a combo written out in the lead (an ailment combo)
+            spec["combo"] = dict(b["combo"])
+        elif b.get("combo"):   # the combo finder's best setup for this skill (Armour Broken), as plan_build adds it
             from generate import combo_for
             main = {"skill": spec["skill"], "weapon_type": spec["weapon_type"],
                     "weapon_subtype": spec.get("weapon_subtype"), "cls": spec["class"], "ascendancy": spec["ascendancy"]}
