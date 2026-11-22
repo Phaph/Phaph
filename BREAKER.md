@@ -657,6 +657,14 @@ rank_check --light (one tree pass, no jewels, no boss-support search) vs the ful
 | Titan | Supercharged Slam 5.67M | Supercharged Slam 2.12M: same |
 | Amazon | Fangs of Frost 2.20M | Lightning Spear 924k (Fangs 689k): **different** |
 | Tactician | Rapid Shot 6.30M | Plasma Blast 439k (Rapid Shot 242k): **different** |
+| Martial Artist | Killing Palm | Siphoning Strike: **different** |
+| Oracle | Flame Breath | (Oil Barrage's numbers predate its fix) |
 A light build misses what makes some skills strong at endgame (jewels, boss supports, the deep tree): it picks the
-wrong winner on 2 of 4. **The endgame pick uses full Uber builds** (generate.ENDGAME_LIGHT = False); to save time
+wrong winner on 3 of 5. **The endgame pick uses full Uber builds** (generate.ENDGAME_LIGHT = False); to save time
 the winner's Uber stage should be reused by the guide instead of being built again (next).
+
+**Unlocked blind run, first ascendancies (2026-11-22 night):** with any weapon allowed, Bonestorm is #1 on Infernalist
+AND on Titan, Warbringer and Smith of Kitava. A skill that wins every class by 7-15x while 0.85% of the ladder plays
+it (36% of Abyssal Liches) is more likely over-rated by our model than a hidden break: the Bonestorm per-spike sanity
+check is first tomorrow (spikes per channel vs projectiles, PoB's dpsMultiplier = stages, the explosion per spike,
+and whether all spikes land on one boss).

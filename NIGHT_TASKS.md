@@ -10,7 +10,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   - Sun 22 (rest of day): rank_check lands -> does a light Uber stage rank skills like the full one? -> task 36:
     endgame-first pick + leveling rule (endgame skill from Act 1 if it works, else max 3 same-theme skills, swap on
     unlock when clearly better) -> tests -> deploy. Unlocked blind run going overnight (~12 h).
-  - Mon 23: write up the unlocked blind run (vs 7/69 per ascendancy); queue task 37 (per-ascendancy scans without
+  - Mon 23: FIRST the Bonestorm sanity check (it wins every class by 7-15x in the unlocked run); write up the unlocked blind run (vs 7/69 per ascendancy); queue task 37 (per-ascendancy scans without
     class rules); new skill leads from it through the full-build bar (34); Bonestorm per-spike sanity check.
   - Tue 24-Wed 25: Breaker launch-day playbook (one doc: notes -> changes file -> PATCH day run -> lead checks ->
     what to publish, ask Kyle); patch-notes gaps (keystones, rule changes, base items); Whetstone class-rule cost

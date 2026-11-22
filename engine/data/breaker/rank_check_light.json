@@ -1,0 +1,161 @@
+{
+ "stage": "end",
+ "ascendancies": {
+  "Deadeye": {
+   "class": "Ranger",
+   "skills": {
+    "Rain of Arrows": {
+     "search_rank": 1,
+     "search_score": 1132223.1599622185,
+     "boss_dps": 321130,
+     "dps": 200052,
+     "seconds": 1066
+    },
+    "Ice Shot": {
+     "search_rank": 2,
+     "search_score": 228729.59609779,
+     "boss_dps": 506076,
+     "dps": 588098,
+     "seconds": 624
+    },
+    "Electrocuting Arrow": {
+     "search_rank": 3,
+     "search_score": 182990.74300695487,
+     "boss_dps": 440370,
+     "dps": 503025,
+     "seconds": 661
+    }
+   }
+  },
+  "Titan": {
+   "class": "Warrior",
+   "skills": {
+    "Supercharged Slam": {
+     "search_rank": 1,
+     "search_score": 657231.8194959738,
+     "boss_dps": 2117390,
+     "dps": 3030424,
+     "seconds": 582
+    },
+    "Hammer of the Gods": {
+     "search_rank": 2,
+     "search_score": 611415.0998766357,
+     "boss_dps": 1191236,
+     "dps": 1381845,
+     "seconds": 604
+    },
+    "Sunder": {
+     "search_rank": 3,
+     "search_score": 322479.62842377886,
+     "boss_dps": 805524,
+     "dps": 707537,
+     "seconds": 564
+    }
+   }
+  },
+  "Amazon": {
+   "class": "Huntress",
+   "skills": {
+    "Wind Serpent's Fury": {
+     "search_rank": 1,
+     "search_score": 312899.8876445108,
+     "boss_dps": 666051,
+     "dps": 1245642,
+     "seconds": 772
+    },
+    "Lightning Spear": {
+     "search_rank": 2,
+     "search_score": 277614.33122093393,
+     "boss_dps": 923739,
+     "dps": 1590668,
+     "seconds": 1204
+    },
+    "Fangs of Frost": {
+     "search_rank": 3,
+     "search_score": 273660.1295180037,
+     "boss_dps": 689223,
+     "dps": 1270882,
+     "seconds": 1191
+    }
+   }
+  },
+  "Tactician": {
+   "class": "Mercenary",
+   "skills": {
+    "Rapid Shot": {
+     "search_rank": 1,
+     "search_score": 1212635.360453,
+     "boss_dps": 241529,
+     "dps": 550671,
+     "seconds": 521
+    },
+    "Armour Piercing Rounds": {
+     "search_rank": 2,
+     "search_score": 741797.98502077,
+     "boss_dps": 115695,
+     "dps": 199726,
+     "seconds": 537
+    },
+    "Plasma Blast": {
+     "search_rank": 3,
+     "search_score": 477627.7388667811,
+     "boss_dps": 438635,
+     "dps": 519251,
+     "seconds": 533
+    }
+   }
+  },
+  "Martial Artist": {
+   "class": "Monk",
+   "skills": {
+    "Flicker Strike": {
+     "search_rank": 1,
+     "search_score": 818918.4750978645,
+     "boss_dps": 750438,
+     "dps": 926750,
+     "seconds": 529
+    },
+    "Siphoning Strike": {
+     "search_rank": 2,
+     "search_score": 384416.09073813347,
+     "boss_dps": 1161152,
+     "dps": 1899247,
+     "seconds": 599
+    },
+    "Killing Palm": {
+     "search_rank": 3,
+     "search_score": 369389.12131831207,
+     "boss_dps": 426069,
+     "dps": 2030625,
+     "seconds": 397
+    }
+   }
+  },
+  "Oracle": {
+   "class": "Druid",
+   "skills": {
+    "Oil Barrage": {
+     "search_rank": 1,
+     "search_score": 1600937.486263192,
+     "boss_dps": 173353,
+     "dps": 295123,
+     "seconds": 528
+    },
+    "Flame Breath": {
+     "search_rank": 2,
+     "search_score": 1104524.543976355,
+     "boss_dps": 1450408,
+     "dps": 1756893,
+     "seconds": 484
+    },
+    "Devour": {
+     "search_rank": 3,
+     "search_score": 722994.0125505704,
+     "boss_dps": 1246370,
+     "dps": 1247206,
+     "seconds": 486
+    }
+   }
+  }
+ }
+}
