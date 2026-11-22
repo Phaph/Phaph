@@ -2,8 +2,9 @@
 stage guide built around its pieces, saved with its PoB code, so a lead comes with a complete build.
 
 A lead's `build` (engine/data/breaker/leads.json):
-    {"job": "<job id of the build the lead was found on>", "anchor_unique": "...", "anchor_support": "...",
-     "anchor_keystone": "...", "stages": ["end"]}
+    {"job": "<job id of the build the lead was found on>" (or "spec": {class, ascendancy, skill, weapon_type, ...}),
+     "anchor_unique": "...", "anchor_support": "...", "anchor_keystone": "...", "combo": true, "stages": ["end"]}
+combo: the combo finder's best setup for the skill (generate.combo_for: Armour Broken), played as the guide's combo.
 The job's spec (class, ascendancy, skill, weapon) comes from the site's job database; the anchors make the guide
 wear the unique / take the keystone / keep the support at every stage that can (anchors.py). The saved job's own
 stage was the first baseline, but it ran on an older engine: each lead is also built without its pieces on today's
@@ -45,7 +46,7 @@ def run(db: str, out: Path, only: str | None) -> None:
             rec = json.loads(path.read_text(encoding="utf-8"))
             if all("now" in (s.get("baseline") or {}) or s.get("error") for s in rec["stages"].values()):
                 continue
-            plain = {k: v for k, v in rec["spec"].items() if not k.startswith("anchor_")}
+            plain = {k: v for k, v in rec["spec"].items() if not k.startswith("anchor_") and k != "combo"}
             for key, s in rec["stages"].items():
                 if s.get("error") or "now" in s["baseline"]:
                     continue
@@ -54,19 +55,31 @@ def run(db: str, out: Path, only: str | None) -> None:
                 print(f"{lead['name']} [{key}] baseline now: {g.boss_dps:,.0f}", flush=True)
             path.write_text(json.dumps(rec, indent=1, ensure_ascii=False), encoding="utf-8")
             continue
-        row = con.execute("select result from jobs where id=?", (b["job"],)).fetchone()
-        if not row:
-            print(f"{lead['name']}: job {b['job']} not in the database", flush=True)
-            continue
-        job = json.loads(row[0])
+        if b.get("spec"):   # written out in the lead (no saved job)
+            job = {"spec": dict(b["spec"]), "stages": []}
+        else:
+            row = con.execute("select result from jobs where id=?", (b["job"],)).fetchone()
+            if not row:
+                print(f"{lead['name']}: job {b['job']} not in the database", flush=True)
+                continue
+            job = json.loads(row[0])
         spec = {**job["spec"], **{k: b[k] for k in ("anchor_unique", "anchor_support", "anchor_keystone") if b.get(k)}}
+        if b.get("combo"):   # the combo finder's best setup for this skill (Armour Broken), as plan_build adds it
+            from generate import combo_for
+            main = {"skill": spec["skill"], "weapon_type": spec["weapon_type"],
+                    "weapon_subtype": spec.get("weapon_subtype"), "cls": spec["class"], "ascendancy": spec["ascendancy"]}
+            c = combo_for(main, {})
+            if not c:
+                print(f"{lead['name']}: no combo for {spec['skill']}", flush=True)
+                continue
+            spec["combo"] = c
         rec = {"lead": lead["name"], "spec": spec, "stages": {}}
         for key in b.get("stages") or ["end"]:
             t0 = time.time()
             base = next((s for s in job["stages"] if s.get("stage") == key), {})
             try:
                 g = build_stage(spec, key)
-                plain = {k: v for k, v in spec.items() if not k.startswith("anchor_")}
+                plain = {k: v for k, v in spec.items() if not k.startswith("anchor_") and k != "combo"}
                 g0 = build_stage(plain, key)   # the same build without the pieces, on today's engine
                 rec["stages"][key] = {"dps": round(g.dps), "boss_dps": round(g.boss_dps), "code": g.code,
                                       "supports": g.supports, "notes": g.notes,

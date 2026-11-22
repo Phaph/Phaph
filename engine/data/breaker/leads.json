@@ -145,6 +145,50 @@
     ]
    },
    "full_build": "2026-11-22: full Uber Endgame build around the pair 232k boss DPS vs 217k without it (+7%): far below the bench's +42%. Small; not a break."
+  },
+  {
+   "name": "Armour Piercing Rounds breaks armour itself (Tactician)",
+   "status": "unconfirmed",
+   "found": "2026-11-18",
+   "detector": "combo finder (Armour Broken)",
+   "what": "Combo finder: the skill with Armour Break supports breaks a pinnacle boss's armour in ~0.8 s and keeps it broken 94% of the time: +42% over the skill alone (round-1 builds).",
+   "check": "Full-build bar (lead_builds.py): combo build vs the plain build, same engine.",
+   "build": {
+    "spec": {
+     "name": "Armour Piercing Rounds Tactician",
+     "class": "Mercenary",
+     "ascendancy": "Tactician",
+     "skill": "Armour Piercing Rounds",
+     "weapon_type": "Crossbow",
+     "support_slots": 5
+    },
+    "combo": true,
+    "stages": [
+     "end"
+    ]
+   }
+  },
+  {
+   "name": "Coiling Bolts breaks armour for Bonestorm (Lich)",
+   "status": "unconfirmed",
+   "found": "2026-11-18",
+   "detector": "combo finder (Armour Broken)",
+   "what": "Combo finder: Coiling Bolts breaks a pinnacle boss's armour in ~1.3 s, then Bonestorm while it stays broken (90% uptime): +23% over Bonestorm alone (round-1 builds).",
+   "check": "Full-build bar (lead_builds.py).",
+   "build": {
+    "spec": {
+     "name": "Bonestorm Lich",
+     "class": "Witch",
+     "ascendancy": "Lich",
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "support_slots": 5
+    },
+    "combo": true,
+    "stages": [
+     "end"
+    ]
+   }
   }
  ]
 }

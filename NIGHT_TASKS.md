@@ -237,7 +237,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the rules with sources (poe2wiki, patch notes), write them to data/immobilise_rules.json like trigger_rules.json,
     then score Siege Cascade (+101% vs immobilised) and other payoffs with time-to-immobilise and uptime.
 
-30. [ ] Full-build bar for the "confirmed" combo leads (from task 16: pairs faded in full builds): Dark Effigy +
+30. [ ] (2026-11-22: lead_builds.py takes a written spec + combo flag; APR Tactician and Bonestorm Lich <- Coiling Bolts
+    running (~/lead_builds.sh); Dark Effigy + poison needs ailment combos in the guide first) Full-build bar for the "confirmed" combo leads (from task 16: pairs faded in full builds): Dark Effigy +
     poison (combo finder +69% vs a boss) and the Armour Broken combos. Build each as a full guide with its setup
     (guide combo style) and the plain build on the same engine; keep the lead only if the full build wins.
 31. [ ] Patch-notes mode, practice run (roadmap week 3): take a past patch (0.3 -> 0.4 or 0.4 -> 0.5): its notes ->
