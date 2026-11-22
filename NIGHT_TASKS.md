@@ -10,7 +10,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
-- **Waiting for Kyle:** Lodestone page public?, Cloudflare branch switch (task 17).
+- **Waiting for Kyle:** Lodestone page public?; decider round for the search (task 35, adds ~15 min per build).
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
