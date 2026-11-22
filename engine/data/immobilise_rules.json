@@ -1,0 +1,39 @@
+{
+  "_about": "Rules for Freeze / Heavy Stun / Electrocute / Pin buildup, which Path of Building does not model (it only has on/off config boxes). Draft from community sources (2026-11-22, task 29); every rule is unverified until a second source or patch notes agree. Edit numbers here, not in code.",
+  "freeze": {
+    "builds_from": "cold damage of hits",
+    "against": "enemy ailment threshold (PoB: EnemyAilmentThreshold)",
+    "buildup_duration_s": 4,
+    "_note": "Cold damage below the minimum to freeze adds to Freeze Buildup instead; a Freeze from filled buildup lasts 4 s by default.",
+    "_source": "Mobalytics freeze guide (https://mobalytics.gg/poe-2/guides/freeze); poe2.stratlore.com ailments guide",
+    "verified": false
+  },
+  "heavy_stun": {
+    "builds_from": "hit damage (physical and melee count more; cold doesn't build stun)",
+    "against": "enemy stun threshold (separate from the ailment threshold)",
+    "primed_at": {"normal": 0.4, "magic": 0.6, "rare": 0.7, "unique": 0.8},
+    "decay_after_s": 8,
+    "_note": "Heavy Stun at 100% buildup; bigger monsters and map bosses have much higher stun thresholds. Buildup decays after ~8 s without stun damage (one source), rapidly after a Heavy Stun ends.",
+    "_source": "poe2wiki Stun (https://www.poe2wiki.net/wiki/Stun); Mobalytics stun guide (https://mobalytics.gg/poe-2/guides/stun)",
+    "verified": false
+  },
+  "electrocute": {
+    "builds_from": "lightning damage of hits with an Electrocute source (supports, notables)",
+    "against": "enemy ailment threshold",
+    "_source": "poe2.stratlore.com ailments guide",
+    "verified": false
+  },
+  "pin": {
+    "builds_from": "physical projectile hits with a Pin source (PoB: PinBuildupInsteadOfHeavyStunBuildup)",
+    "against": "enemy stun threshold (Pin uses the heavy stun bar's maths)",
+    "duration_s": 4,
+    "_source": "PoB config tooltip ('Pinned enemies cannot move and cannot evade 4 seconds'); PoB CalcOffence (Pin buildup converted from heavy stun buildup)",
+    "verified": false
+  },
+  "bosses": {
+    "repeat_threshold_increase": "unknown",
+    "_note": "Bosses have no full immunity: each time a boss is frozen, stunned or electrocuted, its threshold for that effect goes up (poe2source.com stagger guide). The size of the increase is not published: until it is, model one immobilise per fight phase as the cautious case.",
+    "_source": "https://poe2source.com/learn/poe2/foundations/stagger-crowd-control",
+    "verified": false
+  }
+}

@@ -230,7 +230,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     mirrored Full DPS group (same gems, stat set k) in guide.py so the build page and PoB export show the real total;
     check Earthquake and Coiling Bolts end to end.
 
-29. [ ] Immobilise buildup model (from task 14): Freeze, Heavy Stun, Pin and Electrocute fill by damage against a
+29. [ ] (2026-11-22: draft rules with sources in data/immobilise_rules.json, all unverified; the blocker: how much a
+    boss's threshold rises after each immobilise is not published) Immobilise buildup model (from task 14): Freeze, Heavy Stun, Pin and Electrocute fill by damage against a
     threshold (cold vs ailment threshold; physical/melee vs stun threshold; projectile physical for Pin; lightning
     with Electrocute supports), and bosses resist (less buildup, immunity after). PoB gives no buildup output. Find
     the rules with sources (poe2wiki, patch notes), write them to data/immobilise_rules.json like trigger_rules.json,
