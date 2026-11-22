@@ -6,11 +6,11 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Next tasks, in order:** blind full re-run write-up when it lands (~19:00 Berlin); 34 skill leads through the
-  full-build bar; 35 search vs full build disagreement; 14/29 when boss immobilise data turns up;
+  full-build bar; 36 endgame-first builds (Kyle's call, replaces 35's question); 14/29 when boss immobilise data turns up;
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
-- **Waiting for Kyle:** decider round for the search (task 35, adds ~15 min per build).
+- **Waiting for Kyle:** nothing blocking.
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
@@ -288,6 +288,15 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     stage (one tree pass, no jewels) if that orders skills the same as the full one (check on the rank_check
     data). Option C: make the search's own ranking stage closer to endgame (end-stage gear and tree depth) and
     accept the cost on every candidate: more expensive than A. Recommend A, or B if it ranks the same.
+
+36. [ ] Endgame-first builds (Kyle 2026-11-22, replaces the decider-round question in 35): "when someone is looking
+    for a build they are really looking for an endgame build ... they will use whatever gets them to late fastest
+    then swap." (a) The final pick among the search's top 3 is made on their Uber Endgame builds (light version first
+    if it ranks the same as rank_check's full builds); (b) campaign stages (Act 1, 2, 3-4, Interludes) pick their own
+    leveling skill (fastest clear at that stage's level, gear and gems; can differ from the endgame skill), with a
+    "swap to <endgame skill> at Early Endgame" note; endgame stages keep the endgame skill. Front-end: the build page
+    already shows stages; a stage's own skill name has to show there (check before deploying; page work is paused,
+    so ask Kyle if it needs more than the skill name).
 
 ## Waiting for Kyle
 (Kyle 2026-11-22: the Lodestone page stays unlisted; no need to make it public.)
