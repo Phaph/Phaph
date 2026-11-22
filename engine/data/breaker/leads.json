@@ -251,11 +251,12 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22, full Uber Endgame Lich, same engine: Bonestorm 8.82M boss DPS vs Comet (14.6% of the ladder) 4.45M: about 2x. Holds through the full-build bar."
   },
   {
    "name": "Rain of Arrows (Deadeye)",
-   "status": "unconfirmed",
+   "status": "dead",
    "found": "2026-11-22",
    "detector": "blind test (top 3, under 1% of the ladder)",
    "what": "Our #1 on Deadeye (after its usage limit), 0.08% of the ladder; Ice Shot (7.1%) is what the ladder plays.",
@@ -280,7 +281,8 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22, full Uber Endgame Deadeye, same engine: Rain of Arrows 657k vs Ice Shot 1.15M (-43%). The search's round 1 ranks it first; a full build doesn't."
   },
   {
    "name": "Wind Serpent's Fury (Amazon)",
