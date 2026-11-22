@@ -668,3 +668,10 @@ AND on Titan, Warbringer and Smith of Kitava. A skill that wins every class by 7
 it (36% of Abyssal Liches) is more likely over-rated by our model than a hidden break: the Bonestorm per-spike sanity
 check is first tomorrow (spikes per channel vs projectiles, PoB's dpsMultiplier = stages, the explosion per spike,
 and whether all spikes land on one boss).
+**Bonestorm sanity check, step 1 (2026-11-22 night):** PoB's spike maths is consistent with the game rule (max 20
+spikes; extra projectiles prepare more per channel tick): at 20 stages, 1 / 3 / 5 projectiles -> 20 / 7 / 4 ticks of
+0.125 s -> 0.40 / 1.14 / 2.00 releases a second, DPS 262 / 749 / 1,311 on a bare build: no double counting. **The
+suspect is time PoB doesn't count:** the release. PoB's use time is the channel ticks only (5 projectiles: a 20-spike
+volley every 0.5 s), but the gem has a release animation (skill_animation_duration_multiplier_override 6) and a 300 ms
+minimum channel. If a release takes ~0.5 s in game, PoB over-rates Bonestorm ~2x. Next: the real release time
+(guides / videos / PoB issues), then a USAGE_LIMITS rule like Rain of Arrows'.
