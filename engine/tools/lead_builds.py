@@ -75,13 +75,16 @@ def run(db: str, out: Path, only: str | None) -> None:
                 print(f"{lead['name']}: no combo for {spec['skill']}", flush=True)
                 continue
             spec["combo"] = c
-        rec = {"lead": lead["name"], "spec": spec, "stages": {}}
+        rec = {"lead": lead["name"], "spec": spec, "stages": {},
+               "vs": (b.get("vs_spec") or {}).get("name")}
         for key in b.get("stages") or ["end"]:
             t0 = time.time()
             base = next((s for s in job["stages"] if s.get("stage") == key), {})
             try:
                 g = build_stage(spec, key)
                 plain = {k: v for k, v in spec.items() if not k.startswith("anchor_") and k != "combo"}
+                if b.get("vs_spec"):   # a skill lead: the baseline is a popular skill's full build, not the same one
+                    plain = dict(b["vs_spec"])
                 g0 = build_stage(plain, key)   # the same build without the pieces, on today's engine
                 rec["stages"][key] = {"dps": round(g.dps), "boss_dps": round(g.boss_dps), "code": g.code,
                                       "supports": g.supports, "notes": g.notes,
@@ -108,6 +111,8 @@ def report(out: Path) -> str:
             base = now or s["baseline"]["boss_dps"]
             gain = s["boss_dps"] / base - 1 if base else 0
             when = "today's engine" if now else "the saved job, an older engine"
+            if r.get("vs"):
+                when = f"vs {r['vs']}, same engine"
             lines.append(f"  {r['lead']} [{key}]: boss {s['boss_dps']:,} vs {base:,} without the pieces ({when}: {gain:+.0%}); "
                          f"mapping {s['dps']:,}; supports {', '.join(s['supports'])}")
     return "\n".join(lines)

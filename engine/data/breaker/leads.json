@@ -229,7 +229,87 @@
    "detector": "blind test (stage rules)",
    "what": "With its full 20-spike channel (PoB stretches the channel time only by stages / projectiles, and each spike hits and explodes), Bonestorm ranks #1 on all 7 Witch and Sorceress ascendancies at 5-12M vs ~1-1.7M for the next skill, and a full Uber Endgame Bonestorm Lich reaches 8.8M boss DPS. 0.85% of the ladder plays it. Guides: channel to full against bosses; extra projectiles charge it faster (Scattershot ~3x).",
    "check": "Everything checkable without the game agrees with PoB. Left: why the ladder doesn't play it (cast-while-channelling feel? defences?), and a full guide to look at.",
-   "evidence": "2026-11-22: a Mobalytics guide says the spikes 'can all Shotgun and hit the same target'; leveling guides (poe-vault) say to channel to full on elites and bosses and less on small targets, where the wider spread misses. So PoB's 20 hits on one boss is supported for big targets. The explosion doesn't need Power Charges: in PoB's data its stat set has its own base damage and charges only add area (+7 radius, +40% more area per extra charge), and the gem says the spikes 'fire at enemies and explode'. The strongest open lead: full Uber Endgame Bonestorm Lich 8.8M boss DPS, 9.8M with Coiling Bolts breaking armour, at 0.85% of the ladder."
+   "evidence": "2026-11-22: a Mobalytics guide says the spikes 'can all Shotgun and hit the same target'; leveling guides (poe-vault) say to channel to full on elites and bosses and less on small targets, where the wider spread misses. So PoB's 20 hits on one boss is supported for big targets. The explosion doesn't need Power Charges: in PoB's data its stat set has its own base damage and charges only add area (+7 radius, +40% more area per extra charge), and the gem says the spikes 'fire at enemies and explode'. The strongest open lead: full Uber Endgame Bonestorm Lich 8.8M boss DPS, 9.8M with Coiling Bolts breaking armour, at 0.85% of the ladder.",
+   "build": {
+    "spec": {
+     "name": "Bonestorm Lich",
+     "class": "Witch",
+     "ascendancy": "Lich",
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "support_slots": 5
+    },
+    "vs_spec": {
+     "name": "Comet Lich",
+     "class": "Witch",
+     "ascendancy": "Lich",
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "support_slots": 5
+    },
+    "stages": [
+     "end"
+    ]
+   }
+  },
+  {
+   "name": "Rain of Arrows (Deadeye)",
+   "status": "unconfirmed",
+   "found": "2026-11-22",
+   "detector": "blind test (top 3, under 1% of the ladder)",
+   "what": "Our #1 on Deadeye (after its usage limit), 0.08% of the ladder; Ice Shot (7.1%) is what the ladder plays.",
+   "check": "Full-build bar vs the popular skill on the same ascendancy (task 34).",
+   "build": {
+    "spec": {
+     "name": "Rain of Arrows Deadeye",
+     "class": "Ranger",
+     "ascendancy": "Deadeye",
+     "skill": "Rain of Arrows",
+     "weapon_type": "Bow",
+     "support_slots": 5
+    },
+    "vs_spec": {
+     "name": "Ice Shot Deadeye",
+     "class": "Ranger",
+     "ascendancy": "Deadeye",
+     "skill": "Ice Shot",
+     "weapon_type": "Bow",
+     "support_slots": 5
+    },
+    "stages": [
+     "end"
+    ]
+   }
+  },
+  {
+   "name": "Wind Serpent's Fury (Amazon)",
+   "status": "unconfirmed",
+   "found": "2026-11-22",
+   "detector": "blind test (top 3, under 1% of the ladder)",
+   "what": "Our #1 on Amazon, 0.20% of the ladder; Lightning Spear is the popular Amazon skill.",
+   "check": "Full-build bar vs the popular skill on the same ascendancy (task 34).",
+   "build": {
+    "spec": {
+     "name": "Wind Serpent's Fury Amazon",
+     "class": "Huntress",
+     "ascendancy": "Amazon",
+     "skill": "Wind Serpent's Fury",
+     "weapon_type": "Spear",
+     "support_slots": 5
+    },
+    "vs_spec": {
+     "name": "Lightning Spear Amazon",
+     "class": "Huntress",
+     "ascendancy": "Amazon",
+     "skill": "Lightning Spear",
+     "weapon_type": "Spear",
+     "support_slots": 5
+    },
+    "stages": [
+     "end"
+    ]
+   }
   }
  ]
 }
