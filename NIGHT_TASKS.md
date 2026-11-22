@@ -281,6 +281,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     top pick isn't the best full build (top 3 finalists per ascendancy as full end-stage builds, a sample of 5-6
     ascendancies), then decide: a final "full build of the top 2-3" round in generate (cost: ~20 min per build on 2
     cores, so maybe only the Uber stage, light), or a better ranking stage. Whetstone quality, not just Lodestone.
+    Design notes (2026-11-22, while the check runs): build_guide already runs the 7 stages in parallel, so the
+    site's wall time is the slowest stage. Option A, "decider round": after the search, build the Uber stage for
+    the top 3 skills in parallel (3 extra end-stage builds, ~+15 min wall time on 8 cores), keep the winner, then
+    the other stages for it only (its Uber stage is reused). Option B, cheaper: the decider round on a light end
+    stage (one tree pass, no jewels) if that orders skills the same as the full one (check on the rank_check
+    data). Option C: make the search's own ranking stage closer to endgame (end-stage gear and tree depth) and
+    accept the cost on every candidate: more expensive than A. Recommend A, or B if it ranks the same.
 
 ## Waiting for Kyle
 - Cloudflare Pages: set the production branch to `main` (main now has everything and stays in sync with the old
