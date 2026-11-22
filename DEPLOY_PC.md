@@ -40,7 +40,7 @@ docker run --rm -v "${PWD}/tests:/app/tests" poe2-optimizer sh -c "pip install -
 
 ## 4b. The page on Cloudflare Pages (done for phaphofbuilding.com)
 The page itself lives on Cloudflare Pages, so it stays up when this PC is off (it then shows "The forge is cold right now" and wakes up on its own when the engine is back).
-- Pages project `whetstone` (whetstone-6j1.pages.dev), connected to GitHub `Phaph/Phaph`, branch `claude/poe2-shadow-build-mobalytics-85ym0e`, build output `api/static`, no build command.
+- Pages project `whetstone` (whetstone-6j1.pages.dev), connected to GitHub `Phaph/Phaph`, branch `main` (was `claude/poe2-shadow-build-mobalytics-85ym0e`; both kept in sync until Kyle switches Pages), build output `api/static`, no build command.
 - Every push to that branch redeploys the page in about a minute. Engine changes still need `docker compose up -d --build app` here.
 - Custom domain `phaphofbuilding.com` points at Pages; `api.phaphofbuilding.com` goes through the tunnel to this PC.
 - The page finds the engine through the `API` constant at the top of the scripts in `index.html` and `tree.html`; the engine allows the site and `*.whetstone*.pages.dev` previews through CORS in `api/app.py`.
