@@ -148,7 +148,7 @@
   },
   {
    "name": "Armour Piercing Rounds breaks armour itself (Tactician)",
-   "status": "unconfirmed",
+   "status": "dead",
    "found": "2026-11-18",
    "detector": "combo finder (Armour Broken)",
    "what": "Combo finder: the skill with Armour Break supports breaks a pinnacle boss's armour in ~0.8 s and keeps it broken 94% of the time: +42% over the skill alone (round-1 builds).",
@@ -166,7 +166,8 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22, full Uber Endgame on the same engine (Armour Broken now needs a fast break): combo 3.50M vs plain 3.47M (+1%). The plain build already breaks fast enough on its own."
   },
   {
    "name": "Coiling Bolts breaks armour for Bonestorm (Lich)",
@@ -188,7 +189,8 @@
     "stages": [
      "end"
     ]
-   }
+   },
+   "full_build": "2026-11-22, full Uber Endgame on the same engine: combo 9.78M vs plain Bonestorm 8.82M (+11%). Real but small; Bonestorm itself is the bigger lead (see 'Bonestorm at full channel')."
   },
   {
    "name": "Bonestorm at full channel (every caster)",

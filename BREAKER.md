@@ -544,3 +544,6 @@ alone (poe2db.tw/Version_0.5.1), before looking at PoB's update: data/patches/0_
 set), (2) unique lines are already text (patch_unique works), (3) ascendancy/keystone text via the tree (passive
 changes), (4) practise on a bigger numeric patch (0.4 -> 0.5 skill reworks) once those exist. Ladder check still
 needs poe.ninja from the PC.
+**Combo leads re-run (2026-11-22, after the Armour Broken fix):** APR breaking its own armour: combo 3.50M vs plain
+3.47M (+1%: dead, the plain build breaks fast enough itself). Coiling Bolts breaking armour for Bonestorm (Lich):
+9.78M vs 8.82M (+11%: real, small). Dark Effigy + poison still needs ailment combos in the guide.
