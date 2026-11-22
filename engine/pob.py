@@ -47,6 +47,9 @@ def apply_patch_file(pob: "PoB") -> list[str]:
                     if c.get(k) is not None}
             r = pob.send("patch_gem", skill=c.get("gem"), **args)
             done += [f"{c.get('gem') or c['id']}: {x}" for x in r.get("changed") or []]
+        elif c.get("passive"):
+            r = pob.send("patch_node", name=c["passive"], replace=c.get("replace") or [], add=c.get("add") or [])
+            done += [f"{c['passive']}: {x}" for x in r.get("changed") or []]
         elif c.get("unique"):
             r = pob.send("patch_unique", name=c["unique"], replace=c.get("replace") or [], add=c.get("add") or [])
             done += [f"{c['unique']}: {x}" for x in r.get("changed") or []]

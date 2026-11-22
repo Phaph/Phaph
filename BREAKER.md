@@ -560,3 +560,8 @@ Covered: Conductive Runes, Repulsion's wave, the 3 Attunements, Ice Bite I/II, I
 area (not in PoB's update either), Refutation's cooldown rule, ascendancy/unique/rune rewrites. Honest note: only the
 2 crit lines were written blind; the other 6 were added after seeing what change types were missing (their content
 is from the notes, but the stat names came from knowing PoB's update). Next practice must be fully blind.
+**Passive changes (2026-11-22):** `patch_node` (a notable / ascendancy passive's lines reworded or added by name,
+re-parsed as PoB does on load; PATCH_FILE entries {"passive": ..., "replace": [[old, new]], "add": [...]}). Test:
+Forbidden Path "5% reduced maximum Life" -> 50%: Life 890 -> 490, reset 890. Keystones apply through PoB's keystone
+table, so rewording a keystone isn't covered yet. Next: a fully blind practice on 0.5.2 (PoB v0.20.0 -> v0.21.0,
+passive tree changes only).

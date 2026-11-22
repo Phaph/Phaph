@@ -148,3 +148,22 @@ def test_patch_gem_add_remove_rename_stats(pob):
     r2 = pob.send("patch_gem", skill="Fireball", add={"base_number_of_projectiles": 2}, remove=["no_such_stat"])
     assert any("+ base_number_of_projectiles" in c for c in r2["changed"])
     pob.send("patch_reset")
+
+
+def test_patch_node_rewords_a_passive(pob):
+    """Patch-notes mode: a notable's line reworded changes the numbers (re-parsed like PoB's load), then put back.
+    (Keystones apply through PoB's keystone table, not their own lines: not covered yet.)"""
+    pob.new()
+    pob.set_class("Sorceress", None)
+    pob.set_level(70)
+    pob.add_skill(["Fireball"])
+    pob.send("set_custom_mods", text="", nodes=["Forbidden Path"])
+    life0 = pob.calc(["Life"])["Life"]
+    r = pob.send("patch_node", name="Forbidden Path", replace=[["5% reduced maximum Life", "50% reduced maximum Life"]])
+    assert r["changed"]
+    pob.send("set_custom_mods", text="", nodes=["Forbidden Path"])
+    assert pob.calc(["Life"])["Life"] < life0 * 0.7
+    pob.send("patch_reset")
+    pob.send("set_custom_mods", text="", nodes=["Forbidden Path"])
+    assert pob.calc(["Life"])["Life"] == life0
+    pob.send("set_custom_mods", text="")

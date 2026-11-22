@@ -1109,9 +1109,51 @@ function handlers.gem_dump(cmd)
 	return { gems = out }
 end
 
+-- Patch-notes mode: reword a passive node (notable, keystone, ascendancy passive) by name: replace = {{old, new}}
+-- (whole line or part of it), add = {line}. The node is parsed again as PoB does on load. Undone by patch_reset.
+local patchedNodes = {}
+-- PoB's spec nodes inherit sd from the tree's node (metatable): edit only nodes that own their lines, then re-parse
+-- every node with that name so the build's copies pick it up (both on patch and on reset).
+local function reparseNamed(name)
+	for _, list in ipairs({ build.spec.tree.nodes, build.spec.nodes }) do
+		for _, node in pairs(list) do if node.dn == name then build.spec.tree:ProcessStats(node) end end
+	end
+end
+function handlers.patch_node(cmd)
+	local done = {}
+	for _, list in ipairs({ build.spec.tree.nodes, build.spec.nodes }) do
+		for _, node in pairs(list) do
+			if node.dn == cmd.name and rawget(node, "sd") then
+				table.insert(patchedNodes, { node = node, sd = { unpack(node.sd) } })
+				local sd = {}
+				for _, line in ipairs(node.sd) do
+					for _, pair in ipairs(cmd.replace or {}) do
+						local i, j = line:find(pair[1], 1, true)
+						if i then line = line:sub(1, i - 1) .. pair[2] .. line:sub(j + 1); table.insert(done, pair[1] .. " -> " .. pair[2]) end
+					end
+					if line ~= "" then table.insert(sd, line) end
+				end
+				for _, line in ipairs(cmd.add or {}) do table.insert(sd, line); table.insert(done, "+ " .. line) end
+				rawset(node, "sd", sd)
+			end
+		end
+	end
+	if #done == 0 then error("nothing changed on passive " .. tostring(cmd.name)) end
+	reparseNamed(cmd.name)
+	build.buildFlag = true
+	frame()
+	return { name = cmd.name, changed = done }
+end
+
 function handlers.patch_reset(cmd)
 	for i = #patched, 1, -1 do local r = patched[i]; r.t[r.k] = r.v end
-	local n = #patched
+	for i = #patchedNodes, 1, -1 do
+		local r = patchedNodes[i]
+		rawset(r.node, "sd", r.sd)
+		reparseNamed(r.node.dn)
+	end
+	local n = #patched + #patchedNodes
+	patchedNodes = {}
 	patched = {}
 	build.buildFlag = true
 	frame()
