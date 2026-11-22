@@ -613,3 +613,22 @@ Full Uber Endgame builds, same engine, our pick vs the skill the ladder plays on
 | Amazon | Wind Serpent's Fury 1.50M | Lightning Spear 1.69M | **-11%: dead** |
 Rain of Arrows and Wind Serpent's Fury show the search can rank skills in a different order than full builds do
 (task 35: tools/rank_check.py measures how often, on 6 ascendancies).
+
+### Full blind re-run on engine 2026-11-21.11 (2026-11-22, all fixes from 11-21/22)
+data/breaker/blind.txt. **Still 3/20 of the ladder's top skills in some top 5** (Comet #4 Stormweaver, Ice Shot #3
+Deadeye, Rend #4 Oracle); Spearman **+0.01** (was +0.25 / +0.19). What changed:
+- **Bonestorm now tops all 7 Witch/Sorceress ascendancies at 9.5-22M**, 7-15x every other class's best (its
+  explosion counted on top of the full channel). That alone wrecks the ascendancy order (Spearman): our scores say
+  "play a caster", the ladder spreads over everything. It is our strongest lead and it passed the full-build bar
+  (2x Comet), but such a gap also says: re-check Bonestorm's per-spike numbers before trusting the size.
+- Titan / Smith / Warbringer: Supercharged Slam #1 (full stages + aftershock), Earthquake #2 on Titan.
+- Oracle / Shaman: Oil Barrage gone (power-charge limit), Flame Breath #1. Engine is deterministic: unchanged
+  classes (Mercenary, Monk, Huntress) reproduce their earlier scores exactly.
+- Unearth #2 on Infernalist: this run predates the persistent-minion fix (12): over-rated here.
+**Why recall stays 3/20:** the misses are the same groups as before: setup skills listed as "main" (Frost Bomb, Frost
+Wall, Orb of Storms, Verisium, Oil Grenade), Druid (Tornado, Entangle, Wolf Pack score low on their own), Huntress'
+Whirling Slash / Twister (the combo helps only +23%), and plain spells behind Bonestorm. And ranking itself is off
+for full builds (task 35: the search's #1 is the best full build on 1 of 3 ascendancies checked so far).
+So the blind test now measures two things we know are wrong in different ways: our model's view of strength, and
+the ladder's mix of strength, mapping comfort, gear access and fashion. Next: finish rank_check (35) and decide the
+decider round; then re-run the blind test once more on engine 2026-11-21.12+.
