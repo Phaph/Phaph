@@ -7,6 +7,7 @@ the search's order vs the full-build order and how much the search's #1 gives aw
   python tools/rank_check.py run data/breaker/blind_2026-11-21.5.json --only Deadeye,Lich,Titan --top 3 \
       [--stage end] [--out data/breaker/rank_check.json]
   python tools/rank_check.py report data/breaker/rank_check.json
+  --light: a light build of the stage (one tree pass, no jewels, no boss setups): is it enough to rank finalists?
 """
 from __future__ import annotations
 
@@ -20,7 +21,7 @@ sys.path.insert(0, str(ENGINE))
 OUT = ENGINE / "data" / "breaker" / "rank_check.json"
 
 
-def run(blind: Path, only: set[str] | None, top: int, stage: str, out: Path) -> None:
+def run(blind: Path, only: set[str] | None, top: int, stage: str, out: Path, light: bool = False) -> None:
     from guide import build_stage
     d = json.loads(blind.read_text(encoding="utf-8"))
     done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"stage": stage, "ascendancies": {}}
@@ -39,7 +40,8 @@ def run(blind: Path, only: set[str] | None, top: int, stage: str, out: Path) -> 
             if r["skill"] in res["skills"]:
                 continue
             spec = {"name": f"{r['skill']} {asc}", "class": rec["class"], "ascendancy": asc, "skill": r["skill"],
-                    "weapon_type": r["weapon_type"], "weapon_subtype": r.get("weapon_subtype"), "support_slots": 5}
+                    "weapon_type": r["weapon_type"], "weapon_subtype": r.get("weapon_subtype"), "support_slots": 5,
+                    **({"_light": True} if light else {})}
             t0 = time.time()
             try:
                 g = build_stage(spec, stage)
@@ -75,7 +77,7 @@ if __name__ == "__main__":
     if a and a[0] == "run":
         run(Path(a[1]), set(a[a.index("--only") + 1].split(",")) if "--only" in a else None,
             int(a[a.index("--top") + 1]) if "--top" in a else 3, a[a.index("--stage") + 1] if "--stage" in a else "end",
-            Path(a[a.index("--out") + 1]) if "--out" in a else OUT)
+            Path(a[a.index("--out") + 1]) if "--out" in a else OUT, light="--light" in a)
     elif a and a[0] == "report":
         print(report(json.loads(Path(a[1] if len(a) > 1 else OUT).read_text(encoding="utf-8"))))
     else:

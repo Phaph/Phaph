@@ -140,7 +140,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
     website can show the work as it happens.
     """
     stage = make_stage(stage_key)
-    light = stage.light   # campaign: fewer passes, no jewels, no boss or trigger setups
+    # campaign: fewer passes, no jewels, no boss or trigger setups. spec["_light"] forces it (a quick end-stage
+    # build to rank finalists: the endgame-first pick, task 36)
+    light = spec.get("_light", stage.light)
     weapon = dict(weapon_type=spec["weapon_type"], weapon_subtype=spec.get("weapon_subtype"),
                   dual_wield=spec.get("dual_wield", False), offhand_type=spec.get("offhand_type"))
     dw_gear = spec.get("defence_weight", 0.4) * stage.def_mult
