@@ -500,3 +500,6 @@ Plan for the rest:
 file applied, so any tool runs on the patched game unchanged; `PATCH=engine/data/patches/<file>.json
 engine/tools/breaker_day.sh` does the whole day run that way. Format: data/patches/example.json. Left: unique and
 passive changes in the file, and the practice run on a past patch (step 3).
+**Unique changes (2026-11-22):** `patch_unique` (a unique's line replaced, removed or added in PoB's unique database;
+undone by patch_reset), used by PATCH_FILE entries {"unique": ..., "replace": [[old, new]], "add": [...]}. Test:
+Leopold's Applause "-50%" -> "-30%" and back. Passive-tree changes are still to do.

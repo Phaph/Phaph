@@ -1022,6 +1022,29 @@ function handlers.patch_gem(cmd)
 	frame()
 	return { skill = id, changed = done }
 end
+-- Patch-notes mode: change a unique's text, as a patch would. cmd.name = unique name; replace = {{old line, new
+-- line}, ...} (new = "" removes the line), add = {line, ...}. Items built from it afterwards use the new text.
+function handlers.patch_unique(cmd)
+	local done = {}
+	for _, item in pairs(main.uniqueDB.list) do
+		if item.name == cmd.name or item.name:sub(1, #cmd.name + 2) == cmd.name .. ", " then   -- "Name, Base"
+			remember(item, "raw")
+			local raw = item.raw
+			for _, pair in ipairs(cmd.replace or {}) do
+				local i, j = raw:find(pair[1], 1, true)
+				if i then
+					raw = raw:sub(1, i - 1) .. pair[2] .. raw:sub(j + 1)
+					table.insert(done, pair[1] .. " -> " .. pair[2])
+				end
+			end
+			for _, line in ipairs(cmd.add or {}) do raw = raw .. "\n" .. line; table.insert(done, "+ " .. line) end
+			item.raw = raw:gsub("\n\n+", "\n")
+		end
+	end
+	if #done == 0 then error("nothing changed on " .. tostring(cmd.name)) end
+	return { name = cmd.name, changed = done }
+end
+
 function handlers.patch_reset(cmd)
 	for i = #patched, 1, -1 do local r = patched[i]; r.t[r.k] = r.v end
 	local n = #patched

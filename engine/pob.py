@@ -33,7 +33,8 @@ def apply_patch_file(pob: "PoB") -> list[str]:
     """Patch-notes mode (task 31): with PATCH_FILE set (data/patches/<patch>.json), every PoB process starts with the
     file's number changes applied (runner patch_gem), so every scan and build runs on the patched game before PoB
     itself has it. The file: {"patch": "...", "changes": [{"gem": "Earthquake", "base_multiplier": 1.2,
-    "note": "<the patch note line>"}, {"gem": ..., "constant": {stat: value}, "scale": {stat: factor}, "set": 1}]}."""
+    "note": "<the patch note line>"}, {"gem": ..., "constant": {stat: value}, "scale": {stat: factor}, "set": 1},
+    {"unique": "Leopold's Applause", "replace": [["old line", "new line"]], "add": ["new line"]}]}."""
     path = os.environ.get("PATCH_FILE")
     if not path:
         return []
@@ -44,6 +45,9 @@ def apply_patch_file(pob: "PoB") -> list[str]:
             args = {k: c[k] for k in ("constant", "scale", "base_multiplier", "set") if c.get(k) is not None}
             r = pob.send("patch_gem", skill=c["gem"], **args)
             done += [f"{c['gem']}: {x}" for x in r.get("changed") or []]
+        elif c.get("unique"):
+            r = pob.send("patch_unique", name=c["unique"], replace=c.get("replace") or [], add=c.get("add") or [])
+            done += [f"{c['unique']}: {x}" for x in r.get("changed") or []]
     return done
 
 

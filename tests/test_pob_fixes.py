@@ -93,3 +93,15 @@ def test_patch_file_applies_on_start(tmp_path, monkeypatch):
     monkeypatch.setenv("PATCH_FILE", str(f))
     with PoB() as p:
         assert p.patched and "Earthquake" in p.patched[0]
+
+
+def test_patch_unique_changes_text_and_resets(pob):
+    """Patch-notes mode: a unique's line changed in PoB's unique database, then put back."""
+    raw0 = next(u["raw"] for u in pob.list_uniques() if u["name"].startswith("Leopold's Applause"))
+    line = next(l for l in raw0.split("\n") if "-50%" in l)
+    r = pob.send("patch_unique", name="Leopold's Applause", replace=[[line, line.replace("-50%", "-30%")]])
+    assert r["changed"]
+    raw1 = next(u["raw"] for u in pob.list_uniques() if u["name"].startswith("Leopold's Applause"))
+    assert "-30%" in raw1 and "-50%" not in raw1
+    pob.send("patch_reset")
+    assert next(u["raw"] for u in pob.list_uniques() if u["name"].startswith("Leopold's Applause")) == raw0
