@@ -46,3 +46,4 @@ What it can find, once fully built:
   patch-day run built (`engine/tools/breaker_day.sh`). Hexblast scoring fixed (usage limits). Still to do in week 1:
   blind test against poe.ninja's top builds. Week 2 starts with the combo finder's scoring (setup + payoff).
 - 2026-11-22: Kyle: the Lodestone page stays unlisted (no public discoveries page needed); results live there and in BREAKER.md.
+- 2026-11-23: launch-day playbook written (BREAKER_PLAYBOOK.md): notes -> changes file -> PATCH day run -> full-build bar -> theory for new mechanics -> PoB 1.0 -> launch.

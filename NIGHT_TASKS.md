@@ -13,8 +13,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   - Mon 23: FIRST Bonestorm's release time (BREAKER.md step 2: USAGE_LIMITS releases/s = 1 / (1/HitSpeed + 6/Speed),
     tests, deploy; then re-check its lead build vs Comet and the unlocked blind run's Bonestorm rows); write up the unlocked blind run (vs 7/69 per ascendancy); queue task 37 (per-ascendancy scans without
     class rules); new skill leads from it through the full-build bar (34); Bonestorm per-spike sanity check.
-  - Tue 24-Wed 25: Breaker launch-day playbook (one doc: notes -> changes file -> PATCH day run -> lead checks ->
-    what to publish, ask Kyle); patch-notes gaps (keystones, rule changes, base items); Whetstone class-rule cost
+  - Tue 24-Wed 25: (playbook done early: BREAKER_PLAYBOOK.md, 2026-11-23) patch-notes gaps (keystones, rule changes, base items); Whetstone class-rule cost
     for Kyle.
   - Thu 26-Fri 27: week 2 leftovers (mapping chain reactions, 3-piece combos if worth it), build speed (exposure
     step cost), Mobalytics leveling-skill counts (laptop session). Usage resets Fri 5 am Mazatlan.
