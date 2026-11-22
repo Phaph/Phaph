@@ -109,6 +109,7 @@ class StageGuide:
     # Supports for every other skill in the build: [{"skill", "role": spirit/utility/movement, "supports"}]
     setups: list[dict] = field(default_factory=list)
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
+    skill: str | None = None   # this stage's skill when it isn't the build's (a leveling skill, leveling.py)
     sockets: int = 5                                         # support sockets per skill at this stage
     tree_nodes: list[int] = field(default_factory=list)      # allocated passive ids, for the tree viewer
     # The order to take passives: each pick (most value per point first) with the path that reaches it.
@@ -168,7 +169,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.new()
         pob.set_class(spec["class"], spec.get("ascendancy"))
         pob.set_level(stage.level)
-        skill = spec["skill"]
+        # Leveling (leveling.py, Kyle 2026-11-22): a campaign stage may use the planned leveling skill instead.
+        leveling = spec.get("leveling") or {}
+        skill = leveling.get(stage_key) or spec["skill"]
         pob.totem_for = dict(spec.get("totems") or {}) or None   # Spell Totem + Fireball: the gem goes in front
         # What the build is made around (anchors.py): the unique is always worn, the keystone always taken, the
         # support always on the main skill. Popular uniques score lower when the player chose off-meta.
@@ -465,8 +468,17 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
             damage_split=damage_split(stats),
+            skill=skill if skill != spec["skill"] else None,
         )
         guide.notes.extend(notes_for(skill, partner) if partner else notes_for(skill, extra_note))
+        if leveling.get(stage_key):
+            guide.notes.append(f"Leveling: {skill} for now; the build's skill is {spec['skill']}. Swap to "
+                               f"{spec['skill']} when the guide does (the first stage that shows it).")
+        else:
+            order = ["act1", "act2", "act34", "interludes", "early"]
+            last = max((order.index(k) for k in order[:4] if leveling.get(k)), default=None)
+            if last is not None and stage_key in order and order.index(stage_key) == last + 1:
+                guide.notes.append(f"Swap from {leveling[order[last]]} to {skill} here: it's the build's skill from now on.")
         if stage_key == "end":
             guide.rating = rate(boss_dps or total_dps(stats), guide.clear, stats.get("TotalEHP") or 0)
         if isinstance(lowered, dict) and lowered:

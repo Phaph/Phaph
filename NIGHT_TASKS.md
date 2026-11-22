@@ -300,7 +300,10 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     accept the cost on every candidate: more expensive than A. Recommend A, or B if it ranks the same.
 
 36. [ ] ((a) code done 2026-11-22: generate.endgame_decider + api hook behind ENDGAME_DECIDER=1 (off), tests; waiting on
-    rank_check --light (~/rank_light.sh) to pick light vs full; then set it on + deploy; (b) leveling rule next)
+    rank_check --light (~/rank_light.sh) to pick light vs full; then set it on + deploy; (b) code done: engine/leveling.py (candidates same kind / weapon / damage type, unlock level from the catalog,
+    choose(): endgame skill within 20%, swap at +30%, max 3), guide uses spec["leveling"] per campaign stage with swap
+    notes, page shows a stage's own skill ("Leveling"), API behind LEVELING=1 (off). Next: run plan_leveling on 3-4
+    real builds, check the plans make sense, then switch both on + deploy)
     Endgame-first builds (Kyle 2026-11-22, replaces the decider-round question in 35): "when someone is looking
     for a build they are really looking for an endgame build ... they will use whatever gets them to late fastest
     then swap." (a) The final pick among the search's top 3 is made on their Uber Endgame builds (light version first

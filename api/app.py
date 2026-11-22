@@ -204,6 +204,17 @@ def run_guide(req: dict, progress=None) -> dict:
     from guide import build_guide
 
     spec = {k: v for k, v in req["spec"].items() if k != "budget"}
+    # Leveling skills for the campaign stages (leveling.py, Kyle 2026-11-22): the endgame skill from Act 1 when it
+    # works, else up to 3 same-theme skills. Off until checked on real builds (LEVELING=1).
+    campaign = {"act1", "act2", "act34", "interludes"} & set(req["stages"] or [])
+    if os.environ.get("LEVELING") == "1" and campaign and not spec.get("leveling"):
+        from leveling import plan_leveling
+        try:
+            plan = plan_leveling(spec)
+            spec["leveling"] = {k: v for k, v in plan.items() if not k.startswith("_")}
+            spec["leveling_why"] = plan.get("_why") or []
+        except Exception as e:  # noqa: BLE001 - leveling must never cost the player their build
+            print(f"leveling plan failed: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
     guides = build_guide(spec, req["stages"], log=lambda *a: None, progress=progress)
     out = {"spec": spec, "stages": [asdict(g) for g in guides]}
     if writeup.enabled():

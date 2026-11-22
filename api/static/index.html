@@ -582,7 +582,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // Where the engine lives. On phaphofbuilding.com the page comes from Cloudflare Pages (always up) and the engine
   // from the home PC through the tunnel at api.phaphofbuilding.com. Anywhere else (local runs, tests) the page and
   // the engine share one host.
-  const PAGE_VERSION = "2026-11-18.6";   // shown in the console, so a report can say which page a tab was running
+  const PAGE_VERSION = "2026-11-22.1";   // shown in the console, so a report can say which page a tab was running
   console.info("Whetstone page", PAGE_VERSION);
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
@@ -1925,7 +1925,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
     const cards = [];
     const add = (role, skill, supports, extra = "") => skill && cards.push({ role, skill, supports: supports || [], extra });
     const totem = name => (plan.spec.totems || {})[name];
-    add(s.clear_skill ? "Bosses and main" : "Mapping", plan.spec.skill, s.supports, totem(plan.spec.skill) ? `placed by ${totem(plan.spec.skill)}` : "");
+    add(s.clear_skill ? "Bosses and main" : (s.skill ? "Leveling" : "Mapping"), s.skill || plan.spec.skill, s.supports, totem(s.skill || plan.spec.skill) ? `placed by ${totem(s.skill || plan.spec.skill)}` : "");
     if (s.clear_skill) add("Clearing", s.clear_skill, s.clear_supports);
     if (s.boss_skill) add("Bossing", s.boss_skill, s.boss_supports, s.boss_weapon_set === 2 ? "weapon set 2" : "");
     else if ((s.boss_supports || []).length) add("Bossing swap", plan.spec.skill, s.boss_supports, "same skill, these supports for bosses");
@@ -1986,7 +1986,7 @@ canvas.fire { display: block; width: 100%; height: 210px; margin-top: -6px; -web
   // ---------- Saving and sharing ----------
   function kvFor(plan, s) {
     const kv = [];
-    kv.push([s.clear_skill ? "Main" : "Mapping", totemRow(plan, plan.spec.skill, s.supports)]);
+    kv.push([s.clear_skill ? "Main" : (s.skill ? "Leveling" : "Mapping"), totemRow(plan, s.skill || plan.spec.skill, s.supports)]);
     if (s.clear_skill) kv.push(["Clearing", totemRow(plan, s.clear_skill, s.clear_supports || [])]);
     if (s.boss_skill) kv.push(["Bossing", totemRow(plan, s.boss_skill, s.boss_supports) + (s.boss_weapon_set === 2 ? ' <span class="muted">(weapon set 2)</span>' : "")]);
     else if (s.boss_supports.length) kv.push(["Bossing swap", totemRow(plan, plan.spec.skill, s.boss_supports)]);

@@ -2153,6 +2153,8 @@ function handlers.skill_catalog(cmd)
 				from_item = (ge.fromItem or ge.fromTree) and true or false,
 				from_tree = ge.fromTree and true or false,
 				tier = gem.Tier, str = gem.reqStr, dex = gem.reqDex, int = gem.reqInt,
+				-- character level the gem can first be used at (its level 1 requirement): leveling skills (leveling.py)
+				unlock = ge.levels and ge.levels[1] and ge.levels[1].levelRequirement or 0,
 			})
 		end
 	end
