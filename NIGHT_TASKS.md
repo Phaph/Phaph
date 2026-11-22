@@ -5,8 +5,17 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   from 11-21/22), ~12 h via the Breaker queue; commits blind.txt. Compare with blind_2026-11-21.5.txt and the 3/20 run.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** blind full re-run write-up when it lands (~19:00 Berlin); 34 skill leads through the
-  full-build bar; 36 endgame-first builds (Kyle's call, replaces 35's question); 14/29 when boss immobilise data turns up;
+- **Plan (agreed with Kyle 2026-11-22):**
+  - Sun 22 (rest of day): rank_check lands -> does a light Uber stage rank skills like the full one? -> task 36:
+    endgame-first pick + leveling rule (endgame skill from Act 1 if it works, else max 3 same-theme skills, swap on
+    unlock when clearly better) -> tests -> deploy. Unlocked blind run going overnight (~12 h).
+  - Mon 23: write up the unlocked blind run (vs 7/69 per ascendancy); queue task 37 (per-ascendancy scans without
+    class rules); new skill leads from it through the full-build bar (34); Bonestorm per-spike sanity check.
+  - Tue 24-Wed 25: Breaker launch-day playbook (one doc: notes -> changes file -> PATCH day run -> lead checks ->
+    what to publish, ask Kyle); patch-notes gaps (keystones, rule changes, base items); Whetstone class-rule cost
+    for Kyle.
+  - Thu 26-Fri 27: week 2 leftovers (mapping chain reactions, 3-piece combos if worth it), build speed (exposure
+    step cost), Mobalytics leveling-skill counts (laptop session). Usage resets Fri 5 am Mazatlan.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
