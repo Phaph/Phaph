@@ -7,7 +7,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   exposure, minions, Oil Barrage): ~12 h, commits blind.txt. Next session: compare 3/20 (morning) -> 21.5 -> final.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 14 rest (immobilised, mapping combos);
+- **Next tasks, in order:** 30 full-build bar for combo leads; 31 patch-notes mode practice; 14/29 when boss
+  immobilise data turns up;
   17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -236,7 +237,19 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the rules with sources (poe2wiki, patch notes), write them to data/immobilise_rules.json like trigger_rules.json,
     then score Siege Cascade (+101% vs immobilised) and other payoffs with time-to-immobilise and uptime.
 
+30. [ ] Full-build bar for the "confirmed" combo leads (from task 16: pairs faded in full builds): Dark Effigy +
+    poison (combo finder +69% vs a boss) and the Armour Broken combos. Build each as a full guide with its setup
+    (guide combo style) and the plain build on the same engine; keep the lead only if the full build wins.
+31. [ ] Patch-notes mode, practice run (roadmap week 3): take a past patch (0.3 -> 0.4 or 0.4 -> 0.5): its notes ->
+    the exact number changes -> apply them to the current data (custom mods / gem stat edits) -> scan -> compare our
+    "this got broken / nerfed" calls with what happened on that patch's ladder. Start: what engine/tools/
+    breaker_day.sh already does, then a notes -> changes parser (Claude reads the notes; changes as JSON).
+32. [ ] Lodestone page text: leads marked "unconfirmed" show without a colour and the intro still says "needs
+    checking in the real game" (front-end paused: ask Kyle before touching the page; put it under Waiting).
+
 ## Waiting for Kyle
+- Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
+  checks). Front-end is paused, so only with your OK.
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
   sharing it is your call.
 
