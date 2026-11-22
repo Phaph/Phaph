@@ -230,6 +230,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     mirrored Full DPS group (same gems, stat set k) in guide.py so the build page and PoB export show the real total;
     check Earthquake and Coiling Bolts end to end.
 
+29. [ ] Immobilise buildup model (from task 14): Freeze, Heavy Stun, Pin and Electrocute fill by damage against a
+    threshold (cold vs ailment threshold; physical/melee vs stun threshold; projectile physical for Pin; lightning
+    with Electrocute supports), and bosses resist (less buildup, immunity after). PoB gives no buildup output. Find
+    the rules with sources (poe2wiki, patch notes), write them to data/immobilise_rules.json like trigger_rules.json,
+    then score Siege Cascade (+101% vs immobilised) and other payoffs with time-to-immobilise and uptime.
+
 ## Waiting for Kyle
 - Lodestone page public? It is live but unlisted (lodestone.html, noindex). Linking it from the home page or
   sharing it is your call.
