@@ -11,7 +11,12 @@
   "heavy_stun": {
     "builds_from": "hit damage (physical and melee count more; cold doesn't build stun)",
     "against": "enemy stun threshold (separate from the ailment threshold)",
-    "primed_at": {"normal": 0.4, "magic": 0.6, "rare": 0.7, "unique": 0.8},
+    "primed_at": {
+      "normal": 0.4,
+      "magic": 0.6,
+      "rare": 0.7,
+      "unique": 0.8
+    },
     "decay_after_s": 8,
     "_note": "Heavy Stun at 100% buildup; bigger monsters and map bosses have much higher stun thresholds. Buildup decays after ~8 s without stun damage (one source), rapidly after a Heavy Stun ends.",
     "_source": "poe2wiki Stun (https://www.poe2wiki.net/wiki/Stun); Mobalytics stun guide (https://mobalytics.gg/poe-2/guides/stun)",
@@ -32,8 +37,9 @@
   },
   "bosses": {
     "repeat_threshold_increase": "unknown",
-    "_note": "Bosses have no full immunity: each time a boss is frozen, stunned or electrocuted, its threshold for that effect goes up (poe2source.com stagger guide). The size of the increase is not published: until it is, model one immobilise per fight phase as the cautious case.",
-    "_source": "https://poe2source.com/learn/poe2/foundations/stagger-crowd-control",
-    "verified": false
+    "_note": "Bosses have no full immunity: each time a boss is frozen, stunned or electrocuted, its threshold for that effect goes up (poe2source.com stagger guide). The size of the increase is not published: until it is, model one immobilise per fight phase as the cautious case. 2026-11-22: two more sources agree it rises with each freeze / stun / electrocute and decays back over time (myrtana.net Freeze wiki; MMOJUGG crowd-control guide); none gives the size or the decay rate. Player guides re-apply freeze 'as soon as the diminishing returns go away'.",
+    "_source": "https://poe2source.com/learn/poe2/foundations/stagger-crowd-control; https://www.myrtana.net/en/path-of-exile-2/wiki/mechaniky/freeze; https://www.mmojugg.com/news/path-of-exile-2-crowd-control-and-status-effects.html",
+    "verified": false,
+    "decay": "the raised threshold decays back to base over time"
   }
 }
