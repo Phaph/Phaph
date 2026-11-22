@@ -12,22 +12,40 @@
    },
    "ranked": [
     {
-     "skill": "Skyfall",
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 12553412.113812117,
+     "dps": 8876602.8327059,
+     "boss": 8876602.8327059,
+     "clear": 17753205.6654118,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
      "weapon_type": "Wand",
      "weapon_subtype": null,
      "ascendancy": "Infernalist",
-     "score": 1754046.9864334199,
-     "dps": 2251141.9824845,
-     "boss": 2251141.9824845,
-     "clear": 1366720.0267930438,
+     "score": 5302688.651733544,
+     "dps": 3754225.568561751,
+     "boss": 3754225.568561751,
+     "clear": 7489828.84051795,
      "supports": [
-      "Concentrated Area",
       "Considered Casting",
-      "Fiery Death",
+      "Deliberation",
+      "Extraction",
       "Inexorable Critical I",
-      "Rakiata's Flow"
+      "Multishot II"
      ],
-     "relative": 1.0
+     "relative": 0.42241014663249726
     },
     {
      "skill": "Comet",
@@ -45,7 +63,7 @@
       "Dialla's Desire",
       "Rakiata's Flow"
      ],
-     "relative": 0.9162104866507624
+     "relative": 0.12801907787925265
     },
     {
      "skill": "Bone Cage",
@@ -63,7 +81,7 @@
       "Considered Casting",
       "Heft"
      ],
-     "relative": 0.8234941565472149
+     "relative": 0.11506413001831542
     },
     {
      "skill": "Snap",
@@ -81,7 +99,7 @@
       "Rakiata's Flow",
       "Spell Echo"
      ],
-     "relative": 0.7225140802349287
+     "relative": 0.10095451607913
     },
     {
      "skill": "Firestorm",
@@ -99,7 +117,7 @@
       "Hourglass",
       "Rakiata's Flow"
      ],
-     "relative": 0.6949548005795274
+     "relative": 0.09710374857547695
     },
     {
      "skill": "Ember Fusillade",
@@ -117,7 +135,7 @@
       "Rakiata's Flow",
       "Swift Affliction III"
      ],
-     "relative": 0.6436854996656366
+     "relative": 0.08994005778374291
     },
     {
      "skill": "Coiling Bolts",
@@ -135,7 +153,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.6007520622083605
+     "relative": 0.08394110977610882
     },
     {
      "skill": "Dark Effigy",
@@ -153,7 +171,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.5150451520376719
+     "relative": 0.07196556510837591
     },
     {
      "skill": "Incinerate",
@@ -171,25 +189,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.43296327826972675
-    },
-    {
-     "skill": "Comet",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Infernalist",
-     "score": 704775.0803680617,
-     "dps": 890056.8960479699,
-     "boss": 890056.8960479699,
-     "clear": 558063.1037333568,
-     "supports": [
-      "Cold Attunement",
-      "Concentrated Area",
-      "Considered Casting",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.4017994305848736
+     "relative": 0.06049653485443716
     },
     {
      "skill": "Spark",
@@ -207,11 +207,11 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.35718529688471773
+     "relative": 0.049908326749635336
     }
    ],
    "relaxed": [],
-   "seconds": 1471
+   "seconds": 1494
   },
   "Blood Mage": {
    "class": "Witch",
@@ -224,6 +224,42 @@
     "class": "Witch"
    },
    "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 6215267.200480655,
+     "dps": 4394857.5843462,
+     "boss": 4394857.5843462,
+     "clear": 8789715.1686924,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Blood Mage",
+     "score": 2891590.493717881,
+     "dps": 2047406.958848404,
+     "boss": 2047406.958848404,
+     "clear": 4083846.422043304,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 0.46523993264428937
+    },
     {
      "skill": "Comet",
      "weapon_type": "Staff",
@@ -240,7 +276,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 1.0
+     "relative": 0.19534942598625069
     },
     {
      "skill": "Firestorm",
@@ -258,25 +294,7 @@
       "Hourglass",
       "Rakiata's Flow"
      ],
-     "relative": 0.9399013985091696
-    },
-    {
-     "skill": "Skyfall",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Blood Mage",
-     "score": 1100885.2886746526,
-     "dps": 1355274.5876311,
-     "boss": 1355274.5876311,
-     "clear": 894245.660533377,
-     "supports": [
-      "Concentrated Area",
-      "Considered Casting",
-      "Fiery Death",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.9067135891162924
+     "relative": 0.18360919868244052
     },
     {
      "skill": "Ember Fusillade",
@@ -294,7 +312,7 @@
       "Rakiata's Flow",
       "Swift Affliction III"
      ],
-     "relative": 0.8130729355543673
+     "relative": 0.15883333124550145
     },
     {
      "skill": "Bone Cage",
@@ -312,7 +330,7 @@
       "Deliberation",
       "Heft"
      ],
-     "relative": 0.7931781579325372
+     "relative": 0.15494689785695284
     },
     {
      "skill": "Snap",
@@ -330,7 +348,7 @@
       "Rakiata's Flow",
       "Spell Echo"
      ],
-     "relative": 0.7872168218583443
+     "relative": 0.1537823542767481
     },
     {
      "skill": "Dark Effigy",
@@ -348,7 +366,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.7792510526272464
+     "relative": 0.1522262458299142
     },
     {
      "skill": "Coiling Bolts",
@@ -366,7 +384,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.744927998442539
+     "relative": 0.14552125689683662
     },
     {
      "skill": "Incinerate",
@@ -384,7 +402,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.6794970756920191
+     "relative": 0.13273936369577186
     },
     {
      "skill": "Spark",
@@ -402,29 +420,11 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.6583613958402514
-    },
-    {
-     "skill": "Comet",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Blood Mage",
-     "score": 458773.6916416459,
-     "dps": 589935.97292519,
-     "boss": 589935.97292519,
-     "clear": 356773.1242068098,
-     "supports": [
-      "Cold Attunement",
-      "Concentrated Area",
-      "Considered Casting",
-      "Elemental Focus",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.3778562079263669
+     "relative": 0.1286105207688999
     }
    ],
    "relaxed": [],
-   "seconds": 1505
+   "seconds": 1518
   },
   "Lich": {
    "class": "Witch",
@@ -437,6 +437,42 @@
     "class": "Witch"
    },
    "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 6555473.291725784,
+     "dps": 4635419.6184666,
+     "boss": 4635419.6184666,
+     "clear": 9270839.2369332,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Lich",
+     "score": 3037159.6088168924,
+     "dps": 2150426.249753544,
+     "boss": 2150426.249753544,
+     "clear": 4289539.569416044,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 0.46330134738712886
+    },
     {
      "skill": "Bone Cage",
      "weapon_type": "Staff",
@@ -453,25 +489,7 @@
       "Heft",
       "Inexorable Critical I"
      ],
-     "relative": 1.0
-    },
-    {
-     "skill": "Skyfall",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Lich",
-     "score": 975448.3930289611,
-     "dps": 1195950.6973861,
-     "boss": 1195950.6973861,
-     "clear": 795600.9972170292,
-     "supports": [
-      "Concentrated Area",
-      "Considered Casting",
-      "Fiery Death",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.8973408596417722
+     "relative": 0.16582224929922706
     },
     {
      "skill": "Comet",
@@ -489,7 +507,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.8919296723867657
+     "relative": 0.14790178449189617
     },
     {
      "skill": "Firestorm",
@@ -507,7 +525,7 @@
       "Hourglass",
       "Rakiata's Flow"
      ],
-     "relative": 0.6683481278329517
+     "relative": 0.11082698987218739
     },
     {
      "skill": "Snap",
@@ -525,7 +543,7 @@
       "Rakiata's Flow",
       "Spell Echo"
      ],
-     "relative": 0.6447689128282255
+     "relative": 0.10691703140339359
     },
     {
      "skill": "Ember Fusillade",
@@ -543,7 +561,7 @@
       "Rakiata's Flow",
       "Swift Affliction III"
      ],
-     "relative": 0.6185943112252303
+     "relative": 0.10257670009107378
     },
     {
      "skill": "Coiling Bolts",
@@ -561,7 +579,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.5158294176266522
+     "relative": 0.08553599428556184
     },
     {
      "skill": "Spark",
@@ -579,7 +597,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.5149185970718091
+     "relative": 0.08538495997244977
     },
     {
      "skill": "Dark Effigy",
@@ -597,7 +615,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.4833494810583065
+     "relative": 0.08015009814670253
     },
     {
      "skill": "Incinerate",
@@ -615,29 +633,11 @@
       "Elemental Focus",
       "Rakiata's Flow"
      ],
-     "relative": 0.4035437100471986
-    },
-    {
-     "skill": "Comet",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Lich",
-     "score": 364459.15724904154,
-     "dps": 444985.37558931,
-     "boss": 444985.37558931,
-     "clear": 298505.2646432918,
-     "supports": [
-      "Cold Attunement",
-      "Concentrated Area",
-      "Considered Casting",
-      "Elemental Focus",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.33527564944223637
+     "relative": 0.06691652569058157
     }
    ],
    "relaxed": [],
-   "seconds": 1466
+   "seconds": 1519
   },
   "Abyssal Lich": {
    "class": "Witch",
@@ -650,6 +650,42 @@
     "class": "Witch"
    },
    "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 5390460.636430982,
+     "dps": 3811631.2697395,
+     "boss": 3811631.2697395,
+     "clear": 7623262.539479,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Abyssal Lich",
+     "score": 2507024.4506359445,
+     "dps": 1775191.584374066,
+     "boss": 1775191.584374066,
+     "clear": 3540559.594474766,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 0.46508538318458864
+    },
     {
      "skill": "Bone Cage",
      "weapon_type": "Staff",
@@ -666,7 +702,7 @@
       "Deliberation",
       "Heft"
      ],
-     "relative": 1.0
+     "relative": 0.1856196135423956
     },
     {
      "skill": "Comet",
@@ -684,7 +720,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.8523116765302358
+     "relative": 0.15820576401521363
     },
     {
      "skill": "Snap",
@@ -702,25 +738,7 @@
       "Rakiata's Flow",
       "Spell Echo"
      ],
-     "relative": 0.7399353328818506
-    },
-    {
-     "skill": "Skyfall",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Abyssal Lich",
-     "score": 699177.7353708219,
-     "dps": 866236.86377769,
-     "boss": 866236.86377769,
-     "clear": 564336.9915087438,
-     "supports": [
-      "Concentrated Area",
-      "Considered Casting",
-      "Fiery Death",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.6987757854588235
+     "relative": 0.13734651053589295
     },
     {
      "skill": "Firestorm",
@@ -738,7 +756,7 @@
       "Hourglass",
       "Rakiata's Flow"
      ],
-     "relative": 0.6818073545397464
+     "relative": 0.12655681766003082
     },
     {
      "skill": "Ember Fusillade",
@@ -756,7 +774,7 @@
       "Rakiata's Flow",
       "Swift Affliction III"
      ],
-     "relative": 0.6243587455542443
+     "relative": 0.11589322906159373
     },
     {
      "skill": "Spark",
@@ -774,7 +792,7 @@
       "Lightning Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.49117625920552016
+     "relative": 0.09117194741492818
     },
     {
      "skill": "Coiling Bolts",
@@ -792,7 +810,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.4810638223904034
+     "relative": 0.08929488080133431
     },
     {
      "skill": "Dark Effigy",
@@ -810,7 +828,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.43379705276483815
+     "relative": 0.08052124129003944
     },
     {
      "skill": "Incinerate",
@@ -828,29 +846,11 @@
       "Elemental Focus",
       "Rakiata's Flow"
      ],
-     "relative": 0.4308587235953305
-    },
-    {
-     "skill": "Comet",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Abyssal Lich",
-     "score": 301837.57954791375,
-     "dps": 368527.73769193,
-     "boss": 368527.73769193,
-     "clear": 247215.92192201005,
-     "supports": [
-      "Concentrated Area",
-      "Considered Casting",
-      "Elemental Focus",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.30166405630425275
+     "relative": 0.07997582976513509
     }
    ],
    "relaxed": [],
-   "seconds": 1480
+   "seconds": 1569
   },
   "Deadeye": {
    "class": "Ranger",
@@ -1045,7 +1045,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1459
+   "seconds": 1568
   },
   "Pathfinder": {
    "class": "Ranger",
@@ -1240,7 +1240,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1437
+   "seconds": 1573
   },
   "Titan": {
    "class": "Warrior",
@@ -1253,6 +1253,24 @@
     "class": "Warrior"
    },
    "ranked": [
+    {
+     "skill": "Supercharged Slam",
+     "weapon_type": "Two Hand Mace",
+     "weapon_subtype": null,
+     "ascendancy": "Titan",
+     "score": 657231.8194959738,
+     "dps": 795361.35674042,
+     "boss": 795361.35674042,
+     "clear": 543091.0879656475,
+     "supports": [
+      "Bleed IV",
+      "Bloodlust",
+      "Concentrated Area",
+      "Heavy Swing",
+      "Heft"
+     ],
+     "relative": 1.0
+    },
     {
      "skill": "Hammer of the Gods",
      "weapon_type": "Two Hand Mace",
@@ -1269,43 +1287,7 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 1.0
-    },
-    {
-     "skill": "Hammer of the Gods",
-     "weapon_type": "One Hand Mace",
-     "weapon_subtype": null,
-     "ascendancy": "Titan",
-     "score": 517687.61735016986,
-     "dps": 630805.60464543,
-     "boss": 630805.60464543,
-     "clear": 424854.2929613577,
-     "supports": [
-      "Close Combat II",
-      "Concentrated Area",
-      "Deliberation",
-      "Fire Attunement",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.8467040108342482
-    },
-    {
-     "skill": "Supercharged Slam",
-     "weapon_type": "Two Hand Mace",
-     "weapon_subtype": null,
-     "ascendancy": "Titan",
-     "score": 487423.3374082871,
-     "dps": 631208.11638465,
-     "boss": 631208.11638465,
-     "clear": 376391.7219743953,
-     "supports": [
-      "Close Combat II",
-      "Concentrated Area",
-      "Heavy Swing",
-      "Heft",
-      "Poison III"
-     ],
-     "relative": 0.7972052661222037
+     "relative": 0.9302883423166052
     },
     {
      "skill": "Sunder",
@@ -1323,7 +1305,7 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 0.5274315738830216
+     "relative": 0.4906634445530743
     },
     {
      "skill": "Perfect Strike",
@@ -1341,7 +1323,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.31957838024133145
+     "relative": 0.29730004159493395
     },
     {
      "skill": "Molten Blast",
@@ -1359,7 +1341,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.2875026637340519
+     "relative": 0.2674603764567595
     },
     {
      "skill": "Leap Slam",
@@ -1377,7 +1359,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.2398155696165034
+     "relative": 0.22309762872024938
     },
     {
      "skill": "Boneshatter",
@@ -1395,7 +1377,7 @@
       "Immolate",
       "Rakiata's Flow"
      ],
-     "relative": 0.21195697137555744
+     "relative": 0.19718109954341548
     },
     {
      "skill": "Armour Breaker",
@@ -1413,7 +1395,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.19240049369763532
+     "relative": 0.1789879363428696
     },
     {
      "skill": "Volcanic Fissure",
@@ -1431,7 +1413,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.15096595248347933
+     "relative": 0.14044186568210337
     },
     {
      "skill": "Stampede",
@@ -1449,11 +1431,11 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 0.14616477038348258
+     "relative": 0.13597538194513722
     }
    ],
    "relaxed": [],
-   "seconds": 1474
+   "seconds": 1487
   },
   "Warbringer": {
    "class": "Warrior",
@@ -1466,6 +1448,24 @@
     "class": "Warrior"
    },
    "ranked": [
+    {
+     "skill": "Supercharged Slam",
+     "weapon_type": "Two Hand Mace",
+     "weapon_subtype": null,
+     "ascendancy": "Warbringer",
+     "score": 657231.8194959738,
+     "dps": 795361.35674042,
+     "boss": 795361.35674042,
+     "clear": 543091.0879656475,
+     "supports": [
+      "Bleed IV",
+      "Bloodlust",
+      "Concentrated Area",
+      "Heavy Swing",
+      "Heft"
+     ],
+     "relative": 1.0
+    },
     {
      "skill": "Hammer of the Gods",
      "weapon_type": "Two Hand Mace",
@@ -1482,43 +1482,7 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 1.0
-    },
-    {
-     "skill": "Hammer of the Gods",
-     "weapon_type": "One Hand Mace",
-     "weapon_subtype": null,
-     "ascendancy": "Warbringer",
-     "score": 517687.61735016986,
-     "dps": 630805.60464543,
-     "boss": 630805.60464543,
-     "clear": 424854.2929613577,
-     "supports": [
-      "Close Combat II",
-      "Concentrated Area",
-      "Deliberation",
-      "Fire Attunement",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.8467040108342482
-    },
-    {
-     "skill": "Supercharged Slam",
-     "weapon_type": "Two Hand Mace",
-     "weapon_subtype": null,
-     "ascendancy": "Warbringer",
-     "score": 487423.3374082871,
-     "dps": 631208.11638465,
-     "boss": 631208.11638465,
-     "clear": 376391.7219743953,
-     "supports": [
-      "Close Combat II",
-      "Concentrated Area",
-      "Heavy Swing",
-      "Heft",
-      "Poison III"
-     ],
-     "relative": 0.7972052661222037
+     "relative": 0.9302883423166052
     },
     {
      "skill": "Sunder",
@@ -1536,7 +1500,7 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 0.5274315738830216
+     "relative": 0.4906634445530743
     },
     {
      "skill": "Perfect Strike",
@@ -1554,7 +1518,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.31957838024133145
+     "relative": 0.29730004159493395
     },
     {
      "skill": "Molten Blast",
@@ -1572,7 +1536,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.2875026637340519
+     "relative": 0.2674603764567595
     },
     {
      "skill": "Leap Slam",
@@ -1590,7 +1554,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.23960248747532037
+     "relative": 0.22289940088835095
     },
     {
      "skill": "Boneshatter",
@@ -1608,7 +1572,7 @@
       "Immolate",
       "Rakiata's Flow"
      ],
-     "relative": 0.21244812032639962
+     "relative": 0.19763800968672496
     },
     {
      "skill": "Armour Breaker",
@@ -1626,7 +1590,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.19240049369763532
+     "relative": 0.1789879363428696
     },
     {
      "skill": "Volcanic Fissure",
@@ -1644,7 +1608,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.15096595248347933
+     "relative": 0.14044186568210337
     },
     {
      "skill": "Stampede",
@@ -1662,11 +1626,11 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 0.14616477038348258
+     "relative": 0.13597538194513722
     }
    ],
    "relaxed": [],
-   "seconds": 1474
+   "seconds": 1485
   },
   "Smith of Kitava": {
    "class": "Warrior",
@@ -1679,6 +1643,24 @@
     "class": "Warrior"
    },
    "ranked": [
+    {
+     "skill": "Supercharged Slam",
+     "weapon_type": "Two Hand Mace",
+     "weapon_subtype": null,
+     "ascendancy": "Smith of Kitava",
+     "score": 673789.8778530249,
+     "dps": 815415.1951299601,
+     "boss": 815415.1951299601,
+     "clear": 556762.7414949476,
+     "supports": [
+      "Bleed IV",
+      "Bloodlust",
+      "Concentrated Area",
+      "Heavy Swing",
+      "Heft"
+     ],
+     "relative": 1.0
+    },
     {
      "skill": "Hammer of the Gods",
      "weapon_type": "Two Hand Mace",
@@ -1695,43 +1677,7 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 1.0
-    },
-    {
-     "skill": "Supercharged Slam",
-     "weapon_type": "Two Hand Mace",
-     "weapon_subtype": null,
-     "ascendancy": "Smith of Kitava",
-     "score": 500980.9209705035,
-     "dps": 648729.21876674,
-     "boss": 648729.21876674,
-     "clear": 386882.34769751906,
-     "supports": [
-      "Close Combat II",
-      "Concentrated Area",
-      "Heavy Swing",
-      "Heft",
-      "Poison III"
-     ],
-     "relative": 0.7993659348347915
-    },
-    {
-     "skill": "Hammer of the Gods",
-     "weapon_type": "One Hand Mace",
-     "weapon_subtype": null,
-     "ascendancy": "Smith of Kitava",
-     "score": 410349.16996999277,
-     "dps": 504148.072382389,
-     "boss": 504148.072382389,
-     "clear": 334001.95402779075,
-     "supports": [
-      "Close Combat II",
-      "Concentrated Area",
-      "Deliberation",
-      "Fire Attunement",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.654753772311934
+     "relative": 0.9301458818931866
     },
     {
      "skill": "Sunder",
@@ -1749,7 +1695,7 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 0.5415879855403071
+     "relative": 0.5037558344331432
     },
     {
      "skill": "Perfect Strike",
@@ -1767,7 +1713,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.3214132140023204
+     "relative": 0.2989611773903118
     },
     {
      "skill": "Molten Blast",
@@ -1785,7 +1731,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.28723729054643043
+     "relative": 0.267172582927919
     },
     {
      "skill": "Leap Slam",
@@ -1803,7 +1749,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.24678255307595193
+     "relative": 0.22954377546668342
     },
     {
      "skill": "Boneshatter",
@@ -1821,7 +1767,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.21150675634824367
+     "relative": 0.19673213840990444
     },
     {
      "skill": "Armour Breaker",
@@ -1839,7 +1785,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.19626046711459802
+     "relative": 0.1825508652650765
     },
     {
      "skill": "Volcanic Fissure",
@@ -1857,7 +1803,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.16011849702194864
+     "relative": 0.148933560619892
     },
     {
      "skill": "Stampede",
@@ -1875,11 +1821,11 @@
       "Heavy Swing",
       "Heft"
      ],
-     "relative": 0.14657332853642335
+     "relative": 0.13633457793353126
     }
    ],
    "relaxed": [],
-   "seconds": 1459
+   "seconds": 1526
   },
   "Stormweaver": {
    "class": "Sorceress",
@@ -1892,6 +1838,42 @@
     "class": "Sorceress"
    },
    "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 6221007.200740714,
+     "dps": 4398916.3774541,
+     "boss": 4398916.3774541,
+     "clear": 8797832.7549082,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Stormweaver",
+     "score": 2731700.8302624803,
+     "dps": 1934111.824736095,
+     "boss": 1934111.824736095,
+     "clear": 3858199.578028495,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 0.4391090931283967
+    },
     {
      "skill": "Bone Cage",
      "weapon_type": "Staff",
@@ -1908,7 +1890,7 @@
       "Deliberation",
       "Heft"
      ],
-     "relative": 1.0
+     "relative": 0.1632462728252149
     },
     {
      "skill": "Comet",
@@ -1926,25 +1908,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.9569433295589787
-    },
-    {
-     "skill": "Skyfall",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Stormweaver",
-     "score": 827444.6991469236,
-     "dps": 993579.49325881,
-     "boss": 993579.49325881,
-     "clear": 689089.0309146104,
-     "supports": [
-      "Concentrated Area",
-      "Considered Casting",
-      "Fiery Death",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.8147699433895867
+     "relative": 0.15621743185545453
     },
     {
      "skill": "Firestorm",
@@ -1962,7 +1926,7 @@
       "Hourglass",
       "Rakiata's Flow"
      ],
-     "relative": 0.7373430945834416
+     "relative": 0.12036851198415673
     },
     {
      "skill": "Snap",
@@ -1980,7 +1944,7 @@
       "Rakiata's Flow",
       "Spell Echo"
      ],
-     "relative": 0.6958794398991058
+     "relative": 0.11359972489922715
     },
     {
      "skill": "Ember Fusillade",
@@ -1998,7 +1962,7 @@
       "Rakiata's Flow",
       "Swift Affliction III"
      ],
-     "relative": 0.6664599768291607
+     "relative": 0.10879710720453956
     },
     {
      "skill": "Spark",
@@ -2016,7 +1980,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 0.5859309046502841
+     "relative": 0.09565103631726524
     },
     {
      "skill": "Coiling Bolts",
@@ -2034,7 +1998,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.5408131638609471
+     "relative": 0.08828573329511182
     },
     {
      "skill": "Dark Effigy",
@@ -2052,7 +2016,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.49272114972610487
+     "relative": 0.08043489123494127
     },
     {
      "skill": "Incinerate",
@@ -2070,29 +2034,11 @@
       "Elemental Focus",
       "Rakiata's Flow"
      ],
-     "relative": 0.47678385425661873
-    },
-    {
-     "skill": "Comet",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Stormweaver",
-     "score": 368626.12210135174,
-     "dps": 450073.0195214,
-     "boss": 450073.0195214,
-     "clear": 301918.15994653205,
-     "supports": [
-      "Cold Attunement",
-      "Concentrated Area",
-      "Considered Casting",
-      "Elemental Focus",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.3629795259382174
+     "relative": 0.07783318715063346
     }
    ],
    "relaxed": [],
-   "seconds": 1430
+   "seconds": 1587
   },
   "Chronomancer": {
    "class": "Sorceress",
@@ -2105,6 +2051,42 @@
     "class": "Sorceress"
    },
    "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 5756639.308288309,
+     "dps": 4070558.6917357,
+     "boss": 4070558.6917357,
+     "clear": 8141117.3834714,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Chronomancer",
+     "score": 2590601.177907523,
+     "dps": 1834338.857676314,
+     "boss": 1834338.857676314,
+     "clear": 3658655.779378414,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 0.4500197144847377
+    },
     {
      "skill": "Comet",
      "weapon_type": "Staff",
@@ -2121,7 +2103,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 1.0
+     "relative": 0.17039651116511648
     },
     {
      "skill": "Bone Cage",
@@ -2139,25 +2121,7 @@
       "Deliberation",
       "Heft"
      ],
-     "relative": 0.9902114405380285
-    },
-    {
-     "skill": "Skyfall",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Chronomancer",
-     "score": 761975.5174267694,
-     "dps": 928543.46399639,
-     "boss": 928543.46399639,
-     "clear": 625287.5731405183,
-     "supports": [
-      "Concentrated Area",
-      "Considered Casting",
-      "Fiery Death",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.7768037263196039
+     "relative": 0.16872857478346423
     },
     {
      "skill": "Snap",
@@ -2175,7 +2139,7 @@
       "Rakiata's Flow",
       "Spell Echo"
      ],
-     "relative": 0.7750869211337602
+     "relative": 0.1320721072109045
     },
     {
      "skill": "Firestorm",
@@ -2193,7 +2157,7 @@
       "Hourglass",
       "Rakiata's Flow"
      ],
-     "relative": 0.7077375934808833
+     "relative": 0.12059601674953799
     },
     {
      "skill": "Ember Fusillade",
@@ -2211,7 +2175,7 @@
       "Rakiata's Flow",
       "Swift Affliction III"
      ],
-     "relative": 0.6334504602808972
+     "relative": 0.10793774842780207
     },
     {
      "skill": "Coiling Bolts",
@@ -2229,7 +2193,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.5273522468960237
+     "relative": 0.08985898302616754
     },
     {
      "skill": "Spark",
@@ -2247,7 +2211,7 @@
       "Lightning Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.506350844443573
+     "relative": 0.08628041731869544
     },
     {
      "skill": "Dark Effigy",
@@ -2265,7 +2229,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.4591619490920293
+     "relative": 0.0782395941850566
     },
     {
      "skill": "Incinerate",
@@ -2283,29 +2247,11 @@
       "Elemental Focus",
       "Rakiata's Flow"
      ],
-     "relative": 0.4491130977138225
-    },
-    {
-     "skill": "Comet",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Chronomancer",
-     "score": 357187.01776703296,
-     "dps": 429126.52163569,
-     "boss": 429126.52163569,
-     "clear": 297307.5753393281,
-     "supports": [
-      "Cold Attunement",
-      "Concentrated Area",
-      "Considered Casting",
-      "Elemental Focus",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.3641379546306536
+     "relative": 0.0765273049689934
     }
    ],
    "relaxed": [],
-   "seconds": 1463
+   "seconds": 1583
   },
   "Disciple of Varashta": {
    "class": "Sorceress",
@@ -2318,6 +2264,42 @@
     "class": "Sorceress"
    },
    "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 5654497.598009554,
+     "dps": 3998333.5957556,
+     "boss": 3998333.5957556,
+     "clear": 7996667.1915112,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Disciple of Varashta",
+     "score": 2529170.030510657,
+     "dps": 1790899.7763097682,
+     "boss": 1790899.7763097682,
+     "clear": 3571780.5808284683,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 0.44728465910056325
+    },
     {
      "skill": "Comet",
      "weapon_type": "Staff",
@@ -2334,7 +2316,7 @@
       "Inexorable Critical I",
       "Rakiata's Flow"
      ],
-     "relative": 1.0
+     "relative": 0.16906828221679562
     },
     {
      "skill": "Bone Cage",
@@ -2352,25 +2334,7 @@
       "Deliberation",
       "Heft"
      ],
-     "relative": 0.9802656083572859
-    },
-    {
-     "skill": "Skyfall",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Disciple of Varashta",
-     "score": 738106.579217111,
-     "dps": 914235.60315861,
-     "boss": 914235.60315861,
-     "clear": 595909.107456919,
-     "supports": [
-      "Concentrated Area",
-      "Considered Casting",
-      "Fiery Death",
-      "Inexorable Critical I",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.7720810841521416
+     "relative": 0.16573182252116847
     },
     {
      "skill": "Snap",
@@ -2388,7 +2352,7 @@
       "Rakiata's Flow",
       "Spell Echo"
      ],
-     "relative": 0.7550874432186117
+     "relative": 0.12766133694844287
     },
     {
      "skill": "Firestorm",
@@ -2406,7 +2370,7 @@
       "Hourglass",
       "Rakiata's Flow"
      ],
-     "relative": 0.7330633001229727
+     "relative": 0.1239377529079663
     },
     {
      "skill": "Ember Fusillade",
@@ -2424,7 +2388,7 @@
       "Rakiata's Flow",
       "Swift Affliction III"
      ],
-     "relative": 0.6395977665419549
+     "relative": 0.10813569569894738
     },
     {
      "skill": "Coiling Bolts",
@@ -2442,7 +2406,7 @@
       "Fire Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.5289098619458547
+     "relative": 0.08942188180670817
     },
     {
      "skill": "Spark",
@@ -2460,7 +2424,7 @@
       "Lightning Attunement",
       "Rakiata's Flow"
      ],
-     "relative": 0.5149495358570616
+     "relative": 0.08706163345568961
     },
     {
      "skill": "Dark Effigy",
@@ -2478,7 +2442,7 @@
       "Dialla's Desire",
       "Extraction"
      ],
-     "relative": 0.44441071880351
+     "relative": 0.07513575682684083
     },
     {
      "skill": "Incinerate",
@@ -2496,29 +2460,11 @@
       "Elemental Focus",
       "Rakiata's Flow"
      ],
-     "relative": 0.44003162247295435
-    },
-    {
-     "skill": "Comet",
-     "weapon_type": "Wand",
-     "weapon_subtype": null,
-     "ascendancy": "Disciple of Varashta",
-     "score": 347569.290928404,
-     "dps": 424363.74115139,
-     "boss": 424363.74115139,
-     "clear": 284671.8517201899,
-     "supports": [
-      "Cold Attunement",
-      "Concentrated Area",
-      "Considered Casting",
-      "Elemental Focus",
-      "Rakiata's Flow"
-     ],
-     "relative": 0.3635676506807816
+     "relative": 0.07439539053257191
     }
    ],
    "relaxed": [],
-   "seconds": 1450
+   "seconds": 1589
   },
   "Amazon": {
    "class": "Huntress",
@@ -2713,7 +2659,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1449
+   "seconds": 1559
   },
   "Spirit Walker": {
    "class": "Huntress",
@@ -2908,7 +2854,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1447
+   "seconds": 1570
   },
   "Ritualist": {
    "class": "Huntress",
@@ -3103,7 +3049,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1449
+   "seconds": 1558
   },
   "Tactician": {
    "class": "Mercenary",
@@ -3298,7 +3244,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1401
+   "seconds": 1592
   },
   "Witchhunter": {
    "class": "Mercenary",
@@ -3493,7 +3439,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1387
+   "seconds": 1575
   },
   "Gemling Legionnaire": {
    "class": "Mercenary",
@@ -3543,6 +3489,24 @@
      "relative": 0.6619789801436974
     },
     {
+     "skill": "Supercharged Slam",
+     "weapon_type": "Two Hand Mace",
+     "weapon_subtype": null,
+     "ascendancy": "Gemling Legionnaire",
+     "score": 599401.5462759831,
+     "dps": 784172.3740222601,
+     "boss": 784172.3740222601,
+     "clear": 458167.39479761466,
+     "supports": [
+      "Brutality III",
+      "Close Combat II",
+      "Concentrated Area",
+      "Heavy Swing",
+      "Heft"
+     ],
+     "relative": 0.4918466776871536
+    },
+    {
      "skill": "Hammer of the Gods",
      "weapon_type": "Two Hand Mace",
      "weapon_subtype": null,
@@ -3559,24 +3523,6 @@
       "Heft"
      ],
      "relative": 0.4829292082188193
-    },
-    {
-     "skill": "Supercharged Slam",
-     "weapon_type": "Two Hand Mace",
-     "weapon_subtype": null,
-     "ascendancy": "Gemling Legionnaire",
-     "score": 555495.4415943768,
-     "dps": 773192.5001936001,
-     "boss": 773192.5001936001,
-     "clear": 399092.3160207417,
-     "supports": [
-      "Close Combat II",
-      "Concentrated Area",
-      "Heavy Swing",
-      "Heft",
-      "Inexorable Critical I"
-     ],
-     "relative": 0.45581895661769645
     },
     {
      "skill": "Plasma Blast",
@@ -3688,7 +3634,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1431
+   "seconds": 1602
   },
   "Martial Artist": {
    "class": "Monk",
@@ -3883,7 +3829,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1379
+   "seconds": 1572
   },
   "Invoker": {
    "class": "Monk",
@@ -4078,7 +4024,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1358
+   "seconds": 1545
   },
   "Acolyte of Chayula": {
    "class": "Monk",
@@ -4273,7 +4219,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1337
+   "seconds": 1544
   },
   "Oracle": {
    "class": "Druid",
@@ -4468,7 +4414,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1334
+   "seconds": 1565
   },
   "Shaman": {
    "class": "Druid",
@@ -4663,7 +4609,7 @@
     }
    ],
    "relaxed": [],
-   "seconds": 1346
+   "seconds": 1560
   }
  },
  "main_skills": [
@@ -4834,5 +4780,5 @@
   "Wing Blast",
   "Wolf Pack"
  ],
- "updated": "2026-11-21 10:04"
+ "updated": "2026-11-22 04:48"
 }
