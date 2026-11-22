@@ -53,12 +53,44 @@
       },
       "note": "Lightning Attunement Support is no longer limited to supporting Attacks. Now grants Gain 25% of Damage as Extra Lightning Damage.",
       "_added": "2026-11-22 after the first grading (the change types didn't exist when the notes were first read)"
+    },
+    {
+      "gem": "Ice Bite I",
+      "require_types": [
+        "Attack",
+        "CrossbowAmmoSkill",
+        "Warcry",
+        "Damage"
+      ],
+      "note": "Ice Bite I Support is no longer limited to supporting Attacks. Now grants Gain 25% of Damage as Cold Damage for 5 seconds on Freezing an Enemy.",
+      "_added": "2026-11-22 (second pass)"
+    },
+    {
+      "gem": "Ice Bite II",
+      "require_types": [
+        "Attack",
+        "CrossbowAmmoSkill",
+        "Warcry",
+        "Damage"
+      ],
+      "note": "Ice Bite II Support is no longer limited to supporting Attacks. Now grants Gain 30% of Damage as Cold Damage for 6 seconds on Freezing an Enemy.",
+      "_added": "2026-11-22 (second pass)"
+    },
+    {
+      "gem": "Innervate",
+      "require_types": [
+        "Attack",
+        "CrossbowAmmoSkill",
+        "Damage"
+      ],
+      "note": "Innervate Support is no longer limited to supporting Attacks. Now grants Gain 25% of Damage as Lightning Damage for 5 seconds on killing a Shocked enemy.",
+      "_added": "2026-11-22 (second pass)"
     }
   ],
   "not_expressible_yet": [
-    "Ice Bite I / II, Innervate: no longer limited to Attacks; new gain-as effects for 5 / 6 s",
     "Refutation's Cooldown no longer recovers while the Buff is active (a rule)",
     "Stampede now has 20% more Area of Effect as its special effect (a new stat)",
-    "Ascendancy, rune and unique changes (Archon of Chayula, Eternal Life, Virtuous Barrier, Revered Vestments, Emergent Instinct)"
+    "Ascendancy, rune and unique changes (Archon of Chayula, Eternal Life, Virtuous Barrier, Revered Vestments, Emergent Instinct)",
+    "Stampede's 20% more Area of Effect: PoB's own 0.5.1 update didn't add it either"
   ]
 }

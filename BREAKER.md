@@ -553,3 +553,10 @@ support, and the gain stat renamed from "..._gain_as_cold_with_attacks" to "..._
 0_5_1.json, **Fireball + Cold Attunement on v0.18.0 + our file = 57 DPS, exactly PoB v0.19.0's 57** (75 unpatched:
 the support didn't apply to spells). So 5 of the 18 lines are now reproduced exactly; next: Ice Bite / Innervate's
 timed gain-as buffs, Stampede's area, passive/ascendancy changes.
+**Grading tool (2026-11-22):** `tools/patch_check.py` (runner gem_dump): per gem in a changes file, its supported
+skill types, constant stats, crit / cooldown / damage multiplier, in the patched old PoB vs the real new one.
+0.5.1: **8 of 8 gems match PoB v0.19.0 exactly** with our file (0 of 8 unpatched, so the check sees differences).
+Covered: Conductive Runes, Repulsion's wave, the 3 Attunements, Ice Bite I/II, Innervate. Not covered: Stampede's
+area (not in PoB's update either), Refutation's cooldown rule, ascendancy/unique/rune rewrites. Honest note: only the
+2 crit lines were written blind; the other 6 were added after seeing what change types were missing (their content
+is from the notes, but the stat names came from knowing PoB's update). Next practice must be fully blind.

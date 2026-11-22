@@ -1081,6 +1081,34 @@ function handlers.patch_unique(cmd)
 	return { name = cmd.name, changed = done }
 end
 
+-- Patch-notes practice: the fields a changes file can touch, per gem (by name or PoB id), to compare a patched old
+-- PoB with the real new one (tools/patch_check.py).
+function handlers.gem_dump(cmd)
+	local out = {}
+	local typeName = {}
+	for k, v in pairs(SkillType) do typeName[v] = k end
+	for _, key in ipairs(cmd.keys or {}) do
+		local id, ge = data.skills[key] and key or nil, data.skills[key]
+		if not ge then id, ge = findSkill(key) end
+		if ge then
+			local req = {}
+			for _, t in ipairs(ge.requireSkillTypes or {}) do table.insert(req, typeName[t] or tostring(t)) end
+			table.sort(req)
+			local sets = {}
+			for si, set in ipairs(ge.statSets or {}) do
+				local cs = {}
+				for _, c in ipairs(set.constantStats or {}) do cs[c[1]] = c[2] end
+				sets[si] = cs
+			end
+			local l1, l20 = ge.levels and ge.levels[1] or {}, ge.levels and ge.levels[20] or {}
+			out[key] = { id = id, require = req, constant = sets,
+				crit = { l1.critChance, l20.critChance }, cooldown = { l1.cooldown, l20.cooldown },
+				base_multiplier = { l1.baseMultiplier, l20.baseMultiplier } }
+		end
+	end
+	return { gems = out }
+end
+
 function handlers.patch_reset(cmd)
 	for i = #patched, 1, -1 do local r = patched[i]; r.t[r.k] = r.v end
 	local n = #patched
