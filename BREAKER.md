@@ -481,3 +481,18 @@ can't be the baseline). Uber Endgame, data/breaker/lead_builds/:
 well or better. The bench's numbers (a finished build with one slot swapped) overstate pairs. Lesson for the Breaker:
 a lead counts only when its full build beats the plain full build; lead_builds.py is now that bar (both leads ->
 dead in leads.json). Leopold's below-0 penetration is still a real mechanic (confirmed), just not a break here.
+
+### Patch-notes mode, step 1: applying number changes (2026-11-22, task 31)
+Patch day before PoB updates needs our own way to put the notes' numbers into the game data. New runner commands:
+`patch_gem` (a gem's constant stats, a per-level stat scaled, or its damage multiplier scaled, in PoB's loaded data)
+and `patch_reset` (puts every change back). Test: Earthquake's damage multiplier x1.5 -> DPS x1.5, reset exact.
+Plan for the rest:
+1. A changes file per patch (data/patches/<patch>.json): one entry per note line that changes a number:
+   {"gem": "Earthquake", "base_multiplier": 1.2, "note": "Earthquake deals 20% more damage"}; uniques as old -> new
+   lines; passives later. Claude reads the notes and writes it (the notes are prose; every entry keeps its line).
+2. `breaker_day.sh PATCH=<file>`: every scan runs with the changes applied (a scan reads the file and sends
+   patch_gem before measuring), so the day run scans the patched game before PoB has it.
+3. Practice on a past patch: PoB at a commit before that patch's data update (setup.sh POB_REF) = the old game;
+   our changes file from its notes = our patched game; PoB after the update = the real patched game. Compare
+   (a) our patched numbers with PoB's real ones (did we read the notes right), and (b) what our scans called
+   broken / nerfed with what that patch's ladder played. Needs: the PoB commit around a patch, that patch's notes.

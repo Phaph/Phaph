@@ -974,6 +974,63 @@ function handlers.set_part(cmd)
 	return { part = (ge and gem.statSet and gem.statSet[ge.id]) or 1, parts = labels }
 end
 
+-- Patch-notes mode (task 31): change a gem's numbers in PoB's loaded data, as a patch would. cmd.skill = gem name;
+-- constant = {stat = value} (stat sets' constantStats), scale = {stat = factor} (that stat's per-level values),
+-- base_multiplier = factor (each level's damage multiplier), set = only this stat set (default all). The change
+-- lasts until patch_reset. Returns what was changed.
+local patched = {}
+local function findSkill(name)
+	for id, ge in pairs(data.skills) do
+		if ge.name == name and not ge.hidden and not id:find("^Support") then return id, ge end
+	end
+	for id, ge in pairs(data.skills) do if ge.name == name then return id, ge end end
+	return nil
+end
+local function remember(t, k)
+	for _, r in ipairs(patched) do if r.t == t and r.k == k then return end end
+	table.insert(patched, { t = t, k = k, v = t[k] })
+end
+function handlers.patch_gem(cmd)
+	local id, ge = findSkill(cmd.skill)
+	if not ge then error("no gem called " .. tostring(cmd.skill)) end
+	local done = {}
+	for si, set in ipairs(ge.statSets or {}) do
+		if not cmd.set or cmd.set == si then
+			for _, cs in ipairs(set.constantStats or {}) do
+				local v = cmd.constant and cmd.constant[cs[1]]
+				if v ~= nil then remember(cs, 2); cs[2] = v; table.insert(done, cs[1] .. "=" .. v) end
+			end
+			for stat, f in pairs(cmd.scale or {}) do
+				local idx
+				for i, name in ipairs(set.stats or {}) do if name == stat then idx = i end end
+				if idx then
+					for _, lv in pairs(set.levels or {}) do
+						if type(lv[idx]) == "number" then remember(lv, idx); lv[idx] = lv[idx] * f end
+					end
+					table.insert(done, stat .. " x" .. f)
+				end
+			end
+		end
+	end
+	if cmd.base_multiplier then
+		for _, lv in pairs(ge.levels or {}) do
+			if lv.baseMultiplier then remember(lv, "baseMultiplier"); lv.baseMultiplier = lv.baseMultiplier * cmd.base_multiplier end
+		end
+		table.insert(done, "baseMultiplier x" .. cmd.base_multiplier)
+	end
+	build.buildFlag = true
+	frame()
+	return { skill = id, changed = done }
+end
+function handlers.patch_reset(cmd)
+	for i = #patched, 1, -1 do local r = patched[i]; r.t[r.k] = r.v end
+	local n = #patched
+	patched = {}
+	build.buildFlag = true
+	frame()
+	return { restored = n }
+end
+
 function handlers.set_main(cmd)
 	build.mainSocketGroup = cmd.group
 	-- Optional: which active skill of the group is the main one (e.g. a spell socketed in a Cast on X gem).

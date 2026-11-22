@@ -66,3 +66,19 @@ def test_oil_barrage_without_power_charges_only_spits(pob):
     pob.set_config(usePowerCharges=False)
     out = pob.calc(["Speed", "UsageLimit", "UncappedSpeed"])
     assert out.get("UsageLimit") and abs(out["Speed"] - out["UncappedSpeed"] / 4.5) < 1e-6
+
+
+def test_patch_gem_changes_and_resets(pob):
+    """Patch-notes mode: a gem's damage multiplier scaled in PoB's data, then put back."""
+    pob.new()
+    pob.set_class("Warrior", None)
+    pob.set_level(60)
+    pob.add_item("Rarity: NORMAL\nWooden Club\nWooden Club")
+    pob.add_skill(["Earthquake"])
+    before = pob.calc(["TotalDPS"])["TotalDPS"]
+    r = pob.send("patch_gem", skill="Earthquake", base_multiplier=1.5)
+    assert r["changed"]
+    after = pob.calc(["TotalDPS"])["TotalDPS"]
+    assert abs(after / before - 1.5) < 0.05
+    pob.send("patch_reset")
+    assert abs(pob.calc(["TotalDPS"])["TotalDPS"] - before) < 1e-6
