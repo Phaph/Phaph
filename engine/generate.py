@@ -342,7 +342,7 @@ def evaluate(c: Candidate, stage: Stage, req: dict, tree: bool) -> Candidate:
         if c.is_minion:
             # Count every minion the skill keeps (gem count = its limit). Without this every minion skill was ranked
             # with one minion (Wolf Pack: 1 wolf of 7), found by the blind test 2026-11-21.
-            p.send("sync_minion_counts")
+            p.send("sync_minion_counts", persistent_only=True)
         out = p.calc(FIELDS)
         if (bad := broken_numbers(out)):
             raise ValueError(f"impossible damage from Path of Building ({', '.join(bad)}), a calculation bug: skipped")

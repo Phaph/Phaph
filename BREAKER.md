@@ -595,3 +595,11 @@ measure on round-1 builds (no tree, crafted gear, one swap), where any interacti
 gets most of it another way. Use for the Breaker: the detectors find candidates, lead_builds.py is the filter, and
 only a full-build win counts. The one lead that survives as big is a skill, not an interaction: Bonestorm at full
 channel (the strongest caster in full builds, 0.85% of the ladder).
+
+### Temporary minions (2026-11-22)
+The full blind re-run's first Witch results put **Unearth** and **Wardbound Minions** at #2-4 behind Bonestorm. Both
+are temporary minions (Unearth's Bone Constructs come from corpses, which a boss leaves none of; Wardbound Minions
+from spent Runic Ward), and the minion-count fix counted them at their full limit. Now only persistent minions
+(SkillType Persistent: Wolf Pack, skeletons...) are counted at their limit (runner sync_minion_counts
+persistent_only, used by the search and the guide); temporary ones stay at one. Engine 2026-11-21.12. The running
+blind re-run predates this: read its Unearth / Wardbound ranks as over-rated.

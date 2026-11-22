@@ -167,3 +167,13 @@ def test_patch_node_rewords_a_passive(pob):
     pob.send("set_custom_mods", text="", nodes=["Forbidden Path"])
     assert pob.calc(["Life"])["Life"] == life0
     pob.send("set_custom_mods", text="")
+
+
+def test_temporary_minions_not_counted_at_their_limit(pob):
+    """persistent_only: Wolf Pack (persistent) counts its pack; Unearth's corpse constructs (temporary) are left at 1."""
+    pob.new()
+    pob.set_class("Witch", None)
+    pob.set_level(90)
+    pob.add_skill(["Unearth"], full_dps=True)
+    counts = pob.send("sync_minion_counts", persistent_only=True)["counts"]
+    assert not counts
