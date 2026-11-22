@@ -632,3 +632,15 @@ for full builds (task 35: the search's #1 is the best full build on 1 of 3 ascen
 So the blind test now measures two things we know are wrong in different ways: our model's view of strength, and
 the ladder's mix of strength, mapping comfort, gear access and fashion. Next: finish rank_check (35) and decide the
 decider round; then re-run the blind test once more on engine 2026-11-21.12+.
+
+### Per-ascendancy truth from poe.ninja (2026-11-22, via Kyle's laptop)
+engine/data/meta_pairs.json: Forbidden Rites, each ascendancy's share of characters using each skill (any skill, so
+buffs and heralds appear too). The blind run on 21.11 finds **7 of 69** of each ascendancy's top 3 in its top 5
+(10%). The main reason is the class-weapon rule (Kyle 2026-11-18: classes keep to their intended weapons unless
+Off-meta): the ladder plays across classes everywhere: Titan/Smith on shields (Shield Wall, Earthshatter),
+Warbringer on grenades (crossbow), Gemling on Whirling Slash/Twister (spear), Martial Artist on Rend/Devour
+(talisman), Acolyte on Poisonburst/Vine Arrow (bow), Ritualist/Oracle/Shaman on Spark/Comet/Frostbolt (spells),
+Abyssal Lich on Entangle/Thunderstorm, Tactician and Disciple on Wolf Pack. Also: **Bonestorm is used by 36% of
+Abyssal Liches** (overall 0.85%): the lead is a known build on that ascendancy, so not a new break there.
+Running: the blind test with the class lock off (`blind_test.py run --unlock`, not Off-meta, which would bring in
+poe.ninja popularity), ~12 h -> data/breaker/blind_unlocked.txt.

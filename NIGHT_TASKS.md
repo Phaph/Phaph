@@ -302,6 +302,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     so ask Kyle if it needs more than the skill name).
 
 ## Waiting for Kyle
+- Class-weapon rule (decided 2026-11-18): the ladder plays across classes everywhere (BREAKER.md, per-ascendancy
+  truth). After blind_unlocked lands, show how much the rule costs and ask whether the default search should allow
+  any weapon (or show the best cross-class build as an option).
 (Kyle 2026-11-22: the Lodestone page stays unlisted; no need to make it public.)
 - Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
   checks). Front-end is paused, so only with your OK.
