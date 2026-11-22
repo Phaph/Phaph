@@ -648,3 +648,15 @@ poe.ninja popularity), ~12 h -> data/breaker/blind_unlocked.txt.
 class). Removed from the per-ascendancy condition and matrix scans, the blind test (any weapon is now the default;
 `--class-weapons` tests Whetstone's rule) and lead_builds' combo lookup. The 11-20 per-ascendancy scans skipped
 skills outside each class's weapons: re-run queued as task 37.
+
+### Light vs full Uber builds for the endgame pick (2026-11-22, task 36a)
+rank_check --light (one tree pass, no jewels, no boss-support search) vs the full Uber builds, same finalists:
+| Ascendancy | Full builds' winner | Light builds' winner |
+|---|---|---|
+| Deadeye | Ice Shot 1.15M | Ice Shot 506k: same |
+| Titan | Supercharged Slam 5.67M | Supercharged Slam 2.12M: same |
+| Amazon | Fangs of Frost 2.20M | Lightning Spear 924k (Fangs 689k): **different** |
+| Tactician | Rapid Shot 6.30M | Plasma Blast 439k (Rapid Shot 242k): **different** |
+A light build misses what makes some skills strong at endgame (jewels, boss supports, the deep tree): it picks the
+wrong winner on 2 of 4. **The endgame pick uses full Uber builds** (generate.ENDGAME_LIGHT = False); to save time
+the winner's Uber stage should be reused by the guide instead of being built again (next).

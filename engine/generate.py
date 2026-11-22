@@ -1070,7 +1070,7 @@ def best_combo_row(ranked: list[dict], req: dict) -> tuple[dict, dict] | None:
 
 
 ENDGAME_FINALISTS = 3      # endgame-first pick (Kyle 2026-11-22): the search's top skills built at Uber Endgame
-ENDGAME_LIGHT = True       # a light end stage (one tree pass, no jewels) if it ranks skills like the full one
+ENDGAME_LIGHT = False      # full Uber builds: a light one picked the wrong winner on 2 of 4 (BREAKER.md, 2026-11-22)
 
 
 def endgame_decider(result: dict, top: int = ENDGAME_FINALISTS, light: bool = ENDGAME_LIGHT, log=print) -> dict:
