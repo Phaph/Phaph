@@ -5,8 +5,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   from 11-21/22), ~12 h via the Breaker queue; commits blind.txt. Compare with blind_2026-11-21.5.txt and the 3/20 run.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** blind full re-run write-up when it lands (~19:00 Berlin); 31 patch-notes mode practice; 14/29 when boss
-  immobilise data turns up;
+- **Next tasks, in order:** blind full re-run write-up when it lands (~19:00 Berlin); 34 skill leads through the
+  full-build bar; 14/29 when boss immobilise data turns up;
   17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
@@ -263,6 +263,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     "alone" inside it, but the plain build is 3.92M. So the combo path changes the build itself (gear / tree /
     supports / boss setup) or score_combo's "alone" leaves something out. Diff the two builds (lead_builds/ codes:
     supports, gear, tree, config) and fix; then re-run the combo leads. Until then combo leads stay unconfirmed.
+
+34. [ ] Skill leads through the full-build bar (from tasks 16/30: interaction leads fade, a strong skill survives):
+    after the full blind re-run, for each skill it ranks top 3 while under 1% of the ladder plays it (Bonestorm, Wind
+    Serpent's Fury, Rain of Arrows, Supercharged Slam...), a full Uber Endgame build (lead_builds.py with a written spec)
+    vs a full build of a skill the ladder plays a lot on that class (Comet, Spark, Lightning Spear, Ice Shot...). A
+    lead = our skill's full build clearly beats the popular one; then evidence checks (TESTS.md) like Bonestorm's.
 
 ## Waiting for Kyle
 - Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
