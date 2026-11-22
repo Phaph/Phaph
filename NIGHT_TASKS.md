@@ -272,7 +272,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     vs a full build of a skill the ladder plays a lot on that class (Comet, Spark, Lightning Spear, Ice Shot...). A
     lead = our skill's full build clearly beats the popular one; then evidence checks (TESTS.md) like Bonestorm's.
 
-35. [ ] Search vs full build disagree (from task 34): the search's #1 Deadeye skill (Rain of Arrows) is 43% weaker
+35. [ ] (2026-11-22: tools/rank_check.py; ~/rank_check.sh queued after the lead builds: top 3 of Deadeye, Titan,
+    Amazon, Tactician, Martial Artist, Oracle as full Uber builds, ~6 h -> data/breaker/rank_check.json) Search vs full build disagree (from task 34): the search's #1 Deadeye skill (Rain of Arrows) is 43% weaker
     than Ice Shot once both are full Uber Endgame builds (657k vs 1.15M). The search ranks on a mid-game build with a
     quick tree; the guide's gear, jewels, supports and endgame stage reorder skills. Measure how often the search's
     top pick isn't the best full build (top 3 finalists per ascendancy as full end-stage builds, a sample of 5-6
