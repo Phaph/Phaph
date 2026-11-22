@@ -292,9 +292,10 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 36. [ ] Endgame-first builds (Kyle 2026-11-22, replaces the decider-round question in 35): "when someone is looking
     for a build they are really looking for an endgame build ... they will use whatever gets them to late fastest
     then swap." (a) The final pick among the search's top 3 is made on their Uber Endgame builds (light version first
-    if it ranks the same as rank_check's full builds); (b) campaign stages (Act 1, 2, 3-4, Interludes) pick their own
-    leveling skill (fastest clear at that stage's level, gear and gems; can differ from the endgame skill), with a
-    "swap to <endgame skill> at Early Endgame" note; endgame stages keep the endgame skill. Front-end: the build page
+    if it ranks the same as rank_check's full builds); (b) leveling (Kyle: "keep the builds close to the end result
+    they asked for and not have them swapping spells every act"): the endgame skill from Act 1 whenever it works;
+    otherwise ONE leveling skill for all campaign stages, from the same theme / element / weapon as the endgame skill,
+    and one swap at Early Endgame, only when the endgame skill is clearly weak or unavailable early. Never per-act. Front-end: the build page
     already shows stages; a stage's own skill name has to show there (check before deploying; page work is paused,
     so ask Kyle if it needs more than the skill name).
 

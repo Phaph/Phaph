@@ -20,8 +20,9 @@ Owner: Kyle. Day-one target: PoE 2 1.0 (Dec 11, 2026). First real test case is a
 - No budget or prices (Kyle reversed the old budget picker on 2026-11-18). Gear and uniques follow what a player realistically has at each stage (`gear.STAGE_DEFS`, `UNIQUE_ACCESS`); poe.ninja data only measures how common a unique is and is never shown. Common uniques the build can use are allowed from Act 1 on (Kyle: uniques drop all through the campaign).
 - Every build gets 7 Mobalytics-style stages: Act 1, Act 2, Acts 3-4, Interludes, Early Endgame, Mid Endgame, Uber Endgame. Act stages are light (one tree pass, no jewels, no boss setups); Uber Endgame builds for pinnacle bosses first, with best-in-slot uniques, more toughness and chaos resistance.
 - Builds are chosen for endgame (Kyle, 2026-11-22): the skill is picked by its Uber Endgame build (players want the
-  endgame build), and the campaign stages (Act 1 to Interludes) can use a different leveling skill, whatever gets
-  there fastest, with a swap point in the guide. Endgame stages use the endgame skill.
+  endgame build). Keep the build close to what they asked for and don't put them through the wringer: the endgame
+  skill from Act 1 whenever it works; if not, ONE leveling skill for the whole campaign, close to the request (same
+  theme, element and weapon), and one swap at Early Endgame, only when clearly worth it. Never a new skill every act.
 - Compare takes up to 3 builds and shows DPS numbers plus basic pros and cons.
 - Hosting plan: one Hetzner server (website + PoB workers), Claude API for prompts and write-ups.
 - Total DPS = hit DPS + damage over time (PoB's CombinedDPS drops DoT for some skills). Builds with several damage sources (minions, heralds, a boss skill) use PoB's Full DPS.
