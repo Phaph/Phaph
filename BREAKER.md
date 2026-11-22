@@ -510,3 +510,9 @@ the combo vs 1.79M for APR alone in that build (+34%: the combo itself works), b
 combo build is ~2x weaker before the combo, so the combo path changes the build somewhere (task 33). A first cause
 fixed on the way: score_combo used PoB's raw numbers, without the setups / extra stat sets the plain boss number gets
 (Bonestorm's explosion), now scaled the same. Combo leads stay unconfirmed until 33 is done.
+**Cause found (2026-11-22, task 33):** not the combo path, the plain build. auto_config turned on "enemy Armour
+Broken" for ANY build that breaks armour on hit, as if the boss were always Fully Broken (no time to break). So the
+plain APR Tactician (3.92M) had the Armour Broken bonus free; the combo build measured APR unbroken (1.79M) and
+modelled the real break (2.39M). Fixed in runner.lua auto_config: Armour Broken only when the build fully breaks the
+boss's armour in <= 1.33 s (Fully Broken 90% of the time, the ailment rule's bar), with the break time in its reason.
+Every armour-breaking build's boss number changes with this; the combo leads get re-run on it.

@@ -7,7 +7,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   exposure, minions, Oil Barrage): ~12 h, commits blind.txt. Next session: compare 3/20 (morning) -> 21.5 -> final.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
-- **Next tasks, in order:** 33 combo builds read 2x weak (blocks 30); 31 patch-notes mode practice; 14/29 when boss
+- **Next tasks, in order:** 30 re-run the combo lead builds (after engine 2026-11-21.11); 31 patch-notes mode practice; 14/29 when boss
   immobilise data turns up;
   17 branch rename (when no queue job runs).
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
@@ -250,7 +250,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 32. [ ] Lodestone page text: leads marked "unconfirmed" show without a colour and the intro still says "needs
     checking in the real game" (front-end paused: ask Kyle before touching the page; put it under Waiting).
 
-33. [ ] Combo builds read ~2x weaker before the combo (task 30): APR Tactician combo build: combo 2.39M vs 1.79M
+33. [x] (2026-11-22: cause = auto_config gave every armour-breaking plain build "always Fully Broken"; now only when it
+    breaks a boss in <= 1.33 s; combo leads to re-run (task 30)) Combo builds read ~2x weaker before the combo (task 30): APR Tactician combo build: combo 2.39M vs 1.79M
     "alone" inside it, but the plain build is 3.92M. So the combo path changes the build itself (gear / tree /
     supports / boss setup) or score_combo's "alone" leaves something out. Diff the two builds (lead_builds/ codes:
     supports, gear, tree, config) and fix; then re-run the combo leads. Until then combo leads stay unconfirmed.

@@ -39,7 +39,7 @@ from .jobs import JobStore  # noqa: E402
 
 StageKey = Literal["act1", "act2", "act34", "interludes", "early", "mid", "end"]
 # Bump when the engine's results change shape or quality, so cached builds from before are rebuilt.
-ENGINE_VERSION = "2026-11-21.10"
+ENGINE_VERSION = "2026-11-21.11"
 MAX_ACTIVE_JOBS_PER_CLIENT = int(os.environ.get("MAX_ACTIVE_JOBS_PER_CLIENT", "2"))
 # PoB processes a search runs side by side (one CPU thread each).
 GENERATE_WORKERS = int(os.environ.get("GENERATE_WORKERS", "8"))

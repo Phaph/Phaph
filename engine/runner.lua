@@ -1203,7 +1203,28 @@ function handlers.auto_config(cmd)
 			end
 		end
 		if (out.CritChance or 0) >= 40 then set("conditionCritRecently", string.format("%.0f%% crit chance", out.CritChance)) end
-		if (out.ArmourBreakPerHit or 0) > 0 then set("conditionEnemyArmourBroken", "build breaks armour on hit") end
+		-- Armour Broken only when the build keeps the boss Fully Broken 90% of the time (like the ailment rule): one
+		-- cycle = T s to break its armour + 12 s Fully Broken, so T <= 1.33 s. Before 2026-11-22 any armour break on
+		-- hit counted as always broken, so a plain build got the Armour Broken bonus for free (Armour Piercing Rounds
+		-- Tactician: 3.92M "always broken" vs 1.79M unbroken).
+		if (out.ArmourBreakPerHit or 0) > 0 or next(handlers.armour_break({}).pct or {}) then
+			local ab = handlers.armour_break({})
+			local per_hit = ab.flat or 0
+			local PCT_TYPES = { WsArmourBreakPhysPct = { "Physical" }, WsArmourBreakAllPct = { "Physical", "Fire", "Cold", "Lightning", "Chaos" },
+				WsArmourBreakChaosPct = { "Chaos" }, WsArmourBreakFirePct = { "Fire" } }
+			for stat, v in pairs(ab.pct or {}) do
+				for _, t in ipairs(PCT_TYPES[stat] or {}) do per_hit = per_hit + v / 100 * (ab[t .. "HitAverage"] or 0) end
+			end
+			per_hit = per_hit * (ab.more or 1)
+			local rate = per_hit * (ab.speed or 0) * math.min(out.HitChance or 100, 100) / 100
+			local armour = ab.enemy_armour or 0
+			if not ab.cannot and rate > 0 then
+				local t = armour > 0 and armour / rate or 0
+				if t <= 12 / 0.9 - 12 then
+					set("conditionEnemyArmourBroken", string.format("breaks the boss's armour in %.1f s, Fully Broken %d%% of the time", t, math.floor(12 / (t + 12) * 100)))
+				end
+			end
+		end
 		local text = buildText()
 		for _, c in ipairs({ { "Frenzy", "useFrenzyCharges" }, { "Power", "usePowerCharges" }, { "Endurance", "useEnduranceCharges" } }) do
 			local name = c[1]:lower() .. " charge"

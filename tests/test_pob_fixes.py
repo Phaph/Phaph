@@ -105,3 +105,21 @@ def test_patch_unique_changes_text_and_resets(pob):
     assert "-30%" in raw1 and "-50%" not in raw1
     pob.send("patch_reset")
     assert next(u["raw"] for u in pob.list_uniques() if u["name"].startswith("Leopold's Applause")) == raw0
+
+
+def test_armour_broken_needs_a_fast_break(pob):
+    """auto_config turns on Armour Broken only when the build fully breaks the boss's armour fast enough to keep it
+    broken 90% of the time, with the break time in its reason (not for any armour break on hit)."""
+    from optimize import MODE_CONFIG
+    pob.new()
+    pob.set_class("Warrior", None)
+    pob.set_level(60)
+    pob.add_item("Rarity: NORMAL\nWooden Club\nWooden Club")
+    pob.add_skill(["Armour Breaker"])
+    pob.set_config(**MODE_CONFIG["bossing"])
+    applied = {a["var"]: a["why"] for a in pob.auto_config("bossing")}
+    ab = pob.send("armour_break")
+    if "conditionEnemyArmourBroken" in applied:
+        assert "s, Fully Broken" in applied["conditionEnemyArmourBroken"]
+    else:
+        assert ab["enemy_armour"] > 0     # a slow break: left off
