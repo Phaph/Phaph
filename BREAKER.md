@@ -516,3 +516,12 @@ plain APR Tactician (3.92M) had the Armour Broken bonus free; the combo build me
 modelled the real break (2.39M). Fixed in runner.lua auto_config: Armour Broken only when the build fully breaks the
 boss's armour in <= 1.33 s (Fully Broken 90% of the time, the ailment rule's bar), with the break time in its reason.
 Every armour-breaking build's boss number changes with this; the combo leads get re-run on it.
+
+### Blind test on engine 2026-11-21.5 (stage rules only) (2026-11-22)
+data/breaker/blind_2026-11-21.5.txt: still 3/20 (Comet, Ice Shot, Rend), Spearman +0.19. The stage rule made
+**Bonestorm #1 on all 7 Witch/Sorceress ascendancies** (5-12M vs ~1-1.7M next), at 0.85% of the ladder. Checked: PoB
+and the guides agree (up to 20 spikes per channel, each its own hit + small impact explosion, extra projectiles charge
+it faster, channel to full on bosses), so it's a lead, not a plain bug: leads.json "Bonestorm at full channel".
+Open: how many of the 20 spikes hit one boss, and whether the explosion needs Power Charges. This run predates
+partners, minion counts, Oil Barrage, infusions, extra stat sets, exposure and the armour fix: the full re-run on
+all of them is next in the queue.

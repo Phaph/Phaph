@@ -189,6 +189,14 @@
      "end"
     ]
    }
+  },
+  {
+   "name": "Bonestorm at full channel (every caster)",
+   "status": "unconfirmed",
+   "found": "2026-11-22",
+   "detector": "blind test (stage rules)",
+   "what": "With its full 20-spike channel (PoB stretches the channel time only by stages / projectiles, and each spike hits and explodes), Bonestorm ranks #1 on all 7 Witch and Sorceress ascendancies at 5-12M vs ~1-1.7M for the next skill, and a full Uber Endgame Bonestorm Lich reaches 8.8M boss DPS. 0.85% of the ladder plays it. Guides: channel to full against bosses; extra projectiles charge it faster (Scattershot ~3x).",
+   "check": "Do all 20 spikes hit one boss (they spread; guides say channel less on small targets)? Is the impact explosion on every spike, or only with Power Charges ('consumes Power Charges to cause much larger explosions')? Web/video evidence, then a share-of-spikes limit like Rain of Arrows' if needed."
   }
  ]
 }
