@@ -82,3 +82,14 @@ def test_patch_gem_changes_and_resets(pob):
     assert abs(after / before - 1.5) < 0.05
     pob.send("patch_reset")
     assert abs(pob.calc(["TotalDPS"])["TotalDPS"] - before) < 1e-6
+
+
+def test_patch_file_applies_on_start(tmp_path, monkeypatch):
+    """PATCH_FILE: a new PoB process starts with the changes applied."""
+    import json
+    from pob import PoB
+    f = tmp_path / "p.json"
+    f.write_text(json.dumps({"changes": [{"gem": "Earthquake", "base_multiplier": 2.0}]}))
+    monkeypatch.setenv("PATCH_FILE", str(f))
+    with PoB() as p:
+        assert p.patched and "Earthquake" in p.patched[0]

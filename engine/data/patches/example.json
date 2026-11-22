@@ -1,0 +1,7 @@
+{
+  "patch": "example (not a real patch)",
+  "_about": "Patch-notes mode changes file: one entry per note line that changes a number. Run any tool with PATCH_FILE=data/patches/<file>.json to use the patched game.",
+  "changes": [
+    {"gem": "Earthquake", "base_multiplier": 1.2, "note": "Earthquake now deals 20% more damage at all gem levels"}
+  ]
+}

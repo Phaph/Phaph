@@ -241,7 +241,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     running (~/lead_builds.sh); Dark Effigy + poison needs ailment combos in the guide first) Full-build bar for the "confirmed" combo leads (from task 16: pairs faded in full builds): Dark Effigy +
     poison (combo finder +69% vs a boss) and the Armour Broken combos. Build each as a full guide with its setup
     (guide combo style) and the plain build on the same engine; keep the lead only if the full build wins.
-31. [ ] (step 1 done 2026-11-22: runner patch_gem / patch_reset; plan in BREAKER.md: changes file, PATCH= in the day
+31. [ ] (step 2 done 2026-11-22: PATCH_FILE applies a changes file in every PoB process; breaker_day.sh PATCH=...;
+    step 1: runner patch_gem / patch_reset; plan in BREAKER.md: changes file, PATCH= in the day
     run, practice on PoB's commits around a past patch) Patch-notes mode, practice run (roadmap week 3): take a past patch (0.3 -> 0.4 or 0.4 -> 0.5): its notes ->
     the exact number changes -> apply them to the current data (custom mods / gem stat edits) -> scan -> compare our
     "this got broken / nerfed" calls with what happened on that patch's ladder. Start: what engine/tools/

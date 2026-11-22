@@ -4,6 +4,7 @@
 #
 #   ~/phaph/engine/tools/breaker_day.sh            (server; about 1 hour on 6 cores)
 #   CPUS=8 SCALER=1 engine/tools/breaker_day.sh    (also re-run the scaler scan on every saved build)
+#   PATCH=engine/data/patches/1_0.json engine/tools/breaker_day.sh   (patch-notes mode: scan the patched game)
 #
 # Writes engine/data/breaker/day/<date>/ :
 #   text_new.txt     risky wording that is NEW or CHANGED since the last text scan (read this first: new content
@@ -22,8 +23,11 @@ DAY=engine/data/breaker/day/$(date +%F)
 mkdir -p "$DAY"
 CPUS=${CPUS:-6}
 JOBS_VOL=${JOBS_VOL:-phaph_jobs}
+# PATCH=engine/data/patches/<patch>.json: every scan runs on the patched game (patch-notes mode, pob.apply_patch_file)
+PATCH_ENV=()
+[ -n "${PATCH:-}" ] && PATCH_ENV=(-e "PATCH_FILE=/app/engine_src/${PATCH#engine/}")
 run() {   # run a command in the engine image with the repo's engine code
-  docker run --rm --cpus "$CPUS" -v "$HOST_DIR/engine:/app/engine_src" -v "$JOBS_VOL:/data:ro" poe2-optimizer sh -c \
+  docker run --rm --cpus "$CPUS" "${PATCH_ENV[@]}" -v "$HOST_DIR/engine:/app/engine_src" -v "$JOBS_VOL:/data:ro" poe2-optimizer sh -c \
     "cp /app/engine_src/*.py /app/engine_src/runner.lua /app/engine/ && cp -r /app/engine_src/tools /app/engine/ && cp /app/engine_src/data/*.json /app/engine/data/ && cd /app/engine && $1"
 }
 echo "$(date -u +%FT%TZ) Breaker day run -> $DAY"

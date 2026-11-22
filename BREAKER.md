@@ -496,3 +496,7 @@ Plan for the rest:
    our changes file from its notes = our patched game; PoB after the update = the real patched game. Compare
    (a) our patched numbers with PoB's real ones (did we read the notes right), and (b) what our scans called
    broken / nerfed with what that patch's ladder played. Needs: the PoB commit around a patch, that patch's notes.
+**Step 2 (2026-11-22):** `pob.apply_patch_file`: with PATCH_FILE set, every PoB process starts with the changes
+file applied, so any tool runs on the patched game unchanged; `PATCH=engine/data/patches/<file>.json
+engine/tools/breaker_day.sh` does the whole day run that way. Format: data/patches/example.json. Left: unique and
+passive changes in the file, and the practice run on a past patch (step 3).

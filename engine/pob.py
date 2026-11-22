@@ -29,6 +29,24 @@ def encode_build_code(xml: str) -> str:
     return base64.b64encode(zlib.compress(xml.encode("utf-8"), 9)).decode().replace("+", "-").replace("/", "_")
 
 
+def apply_patch_file(pob: "PoB") -> list[str]:
+    """Patch-notes mode (task 31): with PATCH_FILE set (data/patches/<patch>.json), every PoB process starts with the
+    file's number changes applied (runner patch_gem), so every scan and build runs on the patched game before PoB
+    itself has it. The file: {"patch": "...", "changes": [{"gem": "Earthquake", "base_multiplier": 1.2,
+    "note": "<the patch note line>"}, {"gem": ..., "constant": {stat: value}, "scale": {stat: factor}, "set": 1}]}."""
+    path = os.environ.get("PATCH_FILE")
+    if not path:
+        return []
+    import json
+    done = []
+    for c in json.loads(Path(path).read_text(encoding="utf-8")).get("changes") or []:
+        if c.get("gem"):
+            args = {k: c[k] for k in ("constant", "scale", "base_multiplier", "set") if c.get(k) is not None}
+            r = pob.send("patch_gem", skill=c["gem"], **args)
+            done += [f"{c['gem']}: {x}" for x in r.get("changed") or []]
+    return done
+
+
 class PoB:
     """One long-running PoB process. Commands are sent one at a time."""
 
@@ -51,6 +69,7 @@ class PoB:
         ready = self._read()
         self.version = ready["version"]
         self.patch = ready.get("patch") or "unknown"   # game patch PoB's data is for, e.g. "0_5"
+        self.patched = apply_patch_file(self)   # patch-notes mode: PATCH_FILE's number changes, if set
 
     on_event = None   # called with live events (e.g. tree steps) that arrive before a command's reply
     # Skills placed by a totem gem in this build: {"Fireball": "Spell Totem"}. Every group whose first gem is one of
