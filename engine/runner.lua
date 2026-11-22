@@ -2154,7 +2154,8 @@ function handlers.skill_catalog(cmd)
 				from_tree = ge.fromTree and true or false,
 				tier = gem.Tier, str = gem.reqStr, dex = gem.reqDex, int = gem.reqInt,
 				-- character level the gem can first be used at (its level 1 requirement): leveling skills (leveling.py)
-				unlock = ge.levels and ge.levels[1] and ge.levels[1].levelRequirement or 0,
+				-- (PoE 2: a gem of tier T is first cut at gem level T, so its requirement at level T)
+				unlock = ge.levels and ge.levels[math.max(gem.Tier or 1, 1)] and ge.levels[math.max(gem.Tier or 1, 1)].levelRequirement or 0,
 			})
 		end
 	end

@@ -24,6 +24,7 @@ MAX_SKILLS = 3          # across the campaign, the endgame skill included (4 if 
 SWAP_GAIN = 1.30        # a newly unlocked skill must clear ~30% faster to be worth a swap
 ENDGAME_WITHIN = 0.80   # the endgame skill takes over once it's within 20% of the best option
 KINDS = ("Minion", "Spell", "Attack")
+SHORTLIST = 5           # candidates kept after the mid-campaign screen (plus the endgame skill)
 
 
 def kind_of(types) -> str | None:
@@ -98,12 +99,11 @@ def plan_leveling(spec: dict, catalog: list[dict] | None = None, workers: int = 
     if not cands:
         return {}
     req = {"mode": "mapping"}
-    jobs = []
-    for st in CAMPAIGN:
-        stage = make_stage(st)
-        for s in cands:
-            if (s.get("unlock") or 0) <= stage.level:
-                jobs.append((st, stage, s))
+
+    # Screen once at mid-campaign, keep the best SHORTLIST (+ the endgame skill) for the per-stage scoring: scoring
+    # every candidate at every stage took 30-55 min on one core (2026-11-22).
+    mid = make_stage("act34")
+    screen = [(None, mid, s) for s in cands]
 
     def one(job):
         st, stage, s = job
@@ -113,7 +113,19 @@ def plan_leveling(spec: dict, catalog: list[dict] | None = None, workers: int = 
         return st, s["name"], (0.0 if c.error else c.score)
 
     with ThreadPoolExecutor(max_workers=workers) as ex:
+        first = list(ex.map(one, screen))
+    keep = {n for _, n, sc in sorted(first, key=lambda x: -x[2])[:SHORTLIST] if sc > 0} | {spec["skill"]}
+    short = [s for s in cands if s["name"] in keep]
+    jobs = []
+    for st in CAMPAIGN:
+        stage = make_stage(st)
+        for s in short:
+            if (s.get("unlock") or 0) <= stage.level and st != "act34":
+                jobs.append((st, stage, s))
+    with ThreadPoolExecutor(max_workers=workers) as ex:
         res = list(ex.map(one, jobs))
+    res += [("act34", n, sc) for _, n, sc in first if n in keep
+            and next((s.get("unlock") or 0) for s in short if s["name"] == n) <= mid.level]
     scores: dict[str, dict[str, float]] = {}
     for st, name, sc in res:
         if sc > 0:
