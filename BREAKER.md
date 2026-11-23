@@ -728,3 +728,7 @@ endgame pick 41 min, leveling plan + 7 stages 35 min); before the endgame pick ~
 answer again (Firestorm 8.1M / 7.1M map over the search's #1 Fireball 6.0M / 2.7M). The nightly sweep's 45-min limit
 killed every build: raised to 2 h. Found on the way: the leveling filter compared all tags, not damage types
 ("Spell" in common let physical Bonestorm level a fire Firestorm build): fixed, engine 2026-11-23.3.
+**Finalists run, first weapons (2026-11-23):** Bow -> Poisonburst Arrow / Rain of Arrows, both on Invoker (1.78M /
+1.25M boss); Crossbow (redone after the Purple Flames fix) -> Rapid Shot on Deadeye 5.32M: the Acolyte lead was the
+free flames (status fixed). Caution for the ranking: finalists take the search's ascendancy, which can be off too
+(Poisonburst Arrow on Deadeye reached 2.57M in today's player-build test vs 1.78M on Invoker here).
