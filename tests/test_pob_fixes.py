@@ -177,3 +177,21 @@ def test_temporary_minions_not_counted_at_their_limit(pob):
     pob.add_skill(["Unearth"], full_dps=True)
     counts = pob.send("sync_minion_counts", persistent_only=True)["counts"]
     assert not counts
+
+
+def test_patch_base_changes_item_numbers(pob):
+    """Patch-notes mode: a base item's armour changed in PoB's data (new items use it), then put back."""
+    raw = "Rarity: NORMAL\nRusted Cuirass\nRusted Cuirass"
+
+    def armour():
+        pob.new()
+        pob.set_class("Warrior", None)
+        pob.set_level(60)
+        pob.add_item(raw)
+        return pob.calc(["Armour"])["Armour"]
+    a0 = armour()
+    r = pob.send("patch_base", name="Rusted Cuirass", armour={"Armour": 450})
+    assert r["changed"]
+    assert armour() > a0 * 3
+    pob.send("patch_reset")
+    assert abs(armour() - a0) < 1e-6

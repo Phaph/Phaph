@@ -17,8 +17,8 @@ publishing). Times assume the server (8 cores); heavy runs go through the Breake
      (`"id"` for a triggered part); uniques: `{"unique": ..., "replace": [[old, new]], "add": [...]}`;
      passives and keystones: `{"passive": ..., "replace": [[old, new]], "add": [...]}` (runner `node_debug` shows a
      node's lines and parsed mods before and after).
-   - What can't be written yet goes under `"not_expressible_yet"`: socket types,
-     base item numbers, rule changes ("cooldown no longer recovers while ..."), brand-new skills and items.
+   - base items: `{"base": "Ornate Ringmail", "armour": {"Armour": 725}}` (also weapon / req / flask / charm).
+   - What can't be written yet goes under `"not_expressible_yet"`: socket types, rule changes ("cooldown no longer recovers while ..."), brand-new skills and items.
 3. Check it applies: `PATCH_FILE=engine/data/patches/1_0.json` + any small run; `pob.patched` lists every change.
 
 ## 2. Scan the patched game (no Claude, ~1-12 h)

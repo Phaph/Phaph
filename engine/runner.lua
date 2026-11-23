@@ -1124,6 +1124,28 @@ function handlers.gem_dump(cmd)
 	return { gems = out }
 end
 
+-- Patch-notes mode: change a base item's numbers (data.itemBases), as a patch would: cmd.name = base name; armour =
+-- {Armour = 725, EnergyShield = 206, Ward = 130, Evasion = ...}; weapon = {PhysicalMin = .., PhysicalMax = ..,
+-- CritChanceBase = .., AttackRateBase = ..}; req = {str = .., level = ..}. Items built afterwards use the new numbers.
+-- Undone by patch_reset.
+function handlers.patch_base(cmd)
+	local b = data.itemBases[cmd.name]
+	if not b then error("no base item called " .. tostring(cmd.name)) end
+	local done = {}
+	for _, part in ipairs({ "armour", "weapon", "req", "flask", "charm" }) do
+		for k, v in pairs(cmd[part] or {}) do
+			b[part] = b[part] or {}
+			remember(b[part], k)
+			table.insert(done, part .. "." .. k .. ": " .. tostring(b[part][k]) .. " -> " .. tostring(v))
+			b[part][k] = v
+		end
+	end
+	if #done == 0 then error("nothing changed on " .. cmd.name) end
+	build.buildFlag = true
+	frame()
+	return { name = cmd.name, changed = done }
+end
+
 -- Patch-notes mode: reword a passive node (notable, keystone, ascendancy passive) by name: replace = {{old, new}}
 -- (whole line or part of it), add = {line}. The node is parsed again as PoB does on load. Undone by patch_reset.
 local patchedNodes = {}

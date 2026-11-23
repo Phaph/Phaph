@@ -690,3 +690,6 @@ Life to 1 elsewhere. Left for patch day: socket types, base item numbers, rule c
 at half our release estimate it stays behind Comet. **Lodestone has no standing break now**: every lead so far was a
 modelling gap (fixed) or an interaction that fades in a full build. That is the honest state before 1.0: the tools
 are sharper (and the search finds what it should), the broken builds will have to come from 1.0's changes.
+**Base items in patch-notes mode (2026-11-23):** runner `patch_base` (a base's armour / weapon / req / flask / charm
+numbers in PoB's data; new items use them; patch_reset puts them back), PATCH_FILE entries {"base": ..., "armour":
+{...}}. Covers 0.5.2's Runemastered base changes. Left: socket types, rule changes.
