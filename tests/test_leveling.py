@@ -20,3 +20,14 @@ def test_swap_when_much_better_and_never_more_than_three():
     plan, why = choose(sc, "E")
     assert plan["act1"] == "A" and plan["act2"] == "B"
     assert len(set(plan.values()) | {"E"}) <= 3
+
+
+def test_candidates_share_a_damage_type_not_just_spell():
+    """A fire spell levels with fire skills: a physical spell (Bonestorm) is not a candidate for Firestorm."""
+    from leveling import candidates
+    cat = [{"name": "Firestorm", "types": ["Spell", "Area", "Fire", "Damage"], "weapons": []},
+           {"name": "Bonestorm", "types": ["Spell", "Area", "Physical", "Projectile", "Damage"], "weapons": []},
+           {"name": "Fireball", "types": ["Spell", "Area", "Fire", "Projectile", "Damage"], "weapons": []}]
+    import generate
+    names = {s["name"] for s in candidates(cat, {"skill": "Firestorm", "weapon_type": "Staff", "weapon_subtype": "none"})}
+    assert "Fireball" in names and "Bonestorm" not in names

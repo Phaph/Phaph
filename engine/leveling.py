@@ -40,13 +40,16 @@ def candidates(catalog: list[dict], spec: dict) -> list[dict]:
     main = skills.get(spec["skill"])
     if not main:
         return []
-    kind, dmg = kind_of(main["types"]), damage_types(main["types"])
+    # damage_types() returns all of a skill's tags; keep the damage types only (2026-11-23: "Spell" in common let a
+    # physical Bonestorm level a fire Firestorm build)
+    elements = {"Physical", "Fire", "Cold", "Lightning", "Chaos"}
+    kind, dmg = kind_of(main["types"]), damage_types(main["types"]) & elements
     want_weapon = (spec.get("weapon_type"), spec.get("weapon_subtype"))
     out = []
     for s in skills.values():
         if kind_of(s["types"]) != kind or s.get("from_item"):
             continue
-        if s["name"] != main["name"] and not (damage_types(s["types"]) & dmg):
+        if s["name"] != main["name"] and not (damage_types(s["types"]) & elements & dmg):
             continue
         opts = weapon_options(s, {})
         if opts and not any((w, ws) == want_weapon or (w, None) == (want_weapon[0], None) for w, ws, _ in opts):

@@ -14,7 +14,7 @@ cd "$(dirname "$0")/../.."
 HOST_DIR=$(pwd -W 2>/dev/null || pwd)           # a Windows path for Docker Desktop, a normal one on Linux
 OUT_NAME=${OUT_NAME:-az_sweep.json}
 OUT=engine/data/baseline/$OUT_NAME
-LIMIT=${LIMIT:-2700}            # seconds per build (45 min)
+LIMIT=${LIMIT:-7200}            # seconds per build (2 h: a build with the endgame pick took 76 min, 2026-11-23)
 CPUS=${SWEEP_CPUS:-4}           # on the server, leave the rest for the live site
 SHARD=${SHARD:-0}
 SHARDS=${SHARDS:-1}

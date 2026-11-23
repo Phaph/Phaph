@@ -721,3 +721,10 @@ ascendancy; full Uber build 9.26M boss DPS. Checked: PoB's config defaults Acoly
 (Into the Breach), and nothing of ours touched it: 12.0M with 10 flames, **7.02M with 0** (x1.7 free). auto_config now
 sets them to 0 for every build (only bonuses a build keeps up itself); engine 2026-11-23.2. Even at 0 flames Rapid
 Shot Acolyte beats Rapid Shot Tactician (6.30M): a lead (unconfirmed), 0.1% of Acolytes play it.
+
+### Player build time with the endgame pick (2026-11-23)
+One real request through the live API, server otherwise idle (fire Infernalist, all 7 stages): **76 min** (search +
+endgame pick 41 min, leveling plan + 7 stages 35 min); before the endgame pick ~25-45 min. The pick changed the
+answer again (Firestorm 8.1M / 7.1M map over the search's #1 Fireball 6.0M / 2.7M). The nightly sweep's 45-min limit
+killed every build: raised to 2 h. Found on the way: the leveling filter compared all tags, not damage types
+("Spell" in common let physical Bonestorm level a fire Firestorm build): fixed, engine 2026-11-23.3.
