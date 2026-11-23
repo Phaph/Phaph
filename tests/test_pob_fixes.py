@@ -209,3 +209,19 @@ def test_auto_config_turns_off_free_purple_flames(pob):
     with_flames = pob.calc(["TotalDPS"])["TotalDPS"]
     pob.auto_config("bossing")
     assert pob.calc(["TotalDPS"])["TotalDPS"] < 0.8 * with_flames
+
+
+def test_inexorable_critical_uses_time_between_crits(pob):
+    """auto_config sets Inexorable Critical's 'seconds since crit' from the build's own crit rate, not PoB's 10 s."""
+    from optimize import MODE_CONFIG
+    pob.new()
+    pob.set_class("Sorceress", None)
+    pob.set_level(80)
+    pob.add_item("Rarity: NORMAL\nAshen Staff\nAshen Staff")
+    pob.add_skill(["Fireball", "Inexorable Critical I"])
+    pob.set_config(**MODE_CONFIG["bossing"])
+    pob.set_config(SecondsSinceInevitableCrit=10)
+    at_cap = pob.calc(["CritChance"])["CritChance"]
+    applied = {a["var"]: a["why"] for a in pob.auto_config("bossing")}
+    assert pob.calc(["CritChance"])["CritChance"] <= at_cap
+    assert "SecondsSinceInevitableCrit" in applied or at_cap == pob.calc(["CritChance"])["CritChance"]

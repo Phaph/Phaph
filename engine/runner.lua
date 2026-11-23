@@ -1340,6 +1340,11 @@ function handlers.auto_config(cmd)
 	-- Breach). Not something a build keeps up on its own: 0 until we model it (2026-11-23, Rapid Shot Acolyte 12.0M ->
 	-- 7.0M).
 	input.purpleFlameStacks = 0
+	-- Inexorable Critical: +X% increased crit chance per second since the last crit, up to a cap; PoB defaults the
+	-- seconds to 10 (always at the cap). The counter resets on every crit, so a build that crits often barely builds
+	-- it. Measured with the support's bonus off, the time between crits T = 1 / (crit chance x hits per second);
+	-- seconds used = min(10, T), refined once with the raised crit chance (2026-11-23).
+	input.SecondsSinceInevitableCrit = 0
 	-- Two passes: turning conditions on changes chances and speed.
 	for _ = 1, 2 do
 		build.configTab:BuildModList()
@@ -1396,6 +1401,28 @@ function handlers.auto_config(cmd)
 		end
 		for _, e in ipairs({ "Fire", "Cold", "Lightning" }) do
 			if text:find(e:lower() .. " exposure") then set("conditionEnemy" .. e .. "Exposure", "build applies " .. e:lower() .. " exposure") end
+		end
+	end
+	do
+		build.configTab:BuildModList(); build.buildFlag = true; frame()
+		local out = build.calcsTab.mainOutput
+		local hits = out.HitSpeed or out.Speed or 0
+		local function secs(o)
+			local c = math.min((o.CritChance or 0) / 100, 1)
+			local h = o.HitSpeed or o.Speed or hits
+			if c <= 0 or h <= 0 then return 10 end
+			return math.min(10, 1 / (c * h))
+		end
+		local s1 = secs(out)
+		if s1 > 0 then
+			input.SecondsSinceInevitableCrit = math.max(1, math.floor(s1 + 0.5))
+			build.configTab:BuildModList(); build.buildFlag = true; frame()
+			local s2 = (s1 + secs(build.calcsTab.mainOutput)) / 2
+			input.SecondsSinceInevitableCrit = math.max(1, math.floor(s2 + 0.5))
+			if input.SecondsSinceInevitableCrit ~= 10 then
+				table.insert(applied, { var = "SecondsSinceInevitableCrit",
+					why = string.format("a crit about every %.1f s (Inexorable Critical builds up between crits)", s2) })
+			end
 		end
 	end
 	build.configTab:BuildModList()

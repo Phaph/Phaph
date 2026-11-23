@@ -732,3 +732,12 @@ killed every build: raised to 2 h. Found on the way: the leveling filter compare
 1.25M boss); Crossbow (redone after the Purple Flames fix) -> Rapid Shot on Deadeye 5.32M: the Acolyte lead was the
 free flames (status fixed). Caution for the ranking: finalists take the search's ascendancy, which can be off too
 (Poisonburst Arrow on Deadeye reached 2.57M in today's player-build test vs 1.78M on Invoker here).
+
+### More free PoB defaults (2026-11-23)
+After Purple Flames, the other config defaults that hand out bonuses: **Inexorable Critical's "seconds since crit"
+defaults to 10** (always at its +100% crit chance cap); it resets on every crit, so a build that crits often barely
+builds it. auto_config now sets it from the build's own time between crits (min(10, 1 / (crit chance x hits/s)),
+refined once), with the reason listed. Many searched builds pick Inexorable Critical I, so crit builds were
+over-rated. Checked and harmless: Flicker Strike "Bypass CD" (no cooldown in PoE 2 data). Others are skill-specific
+and only if used (Demon Form stacks, Glorious Madness, Corrupting Cry stacks). Engine 2026-11-23.4; the finalists
+run restarts on it.
