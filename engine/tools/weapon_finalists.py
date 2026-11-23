@@ -39,7 +39,7 @@ def run(only: set[str] | None, top: int, workers: int, out: Path) -> None:
                 for r in res["ranked"]:
                     if pob_w == "Staff" and (r.get("weapon_subtype") == "Warstaff") != (w == "Quarterstaff"):
                         continue
-                    key = (r["skill"], r["ascendancy"])
+                    key = r["skill"]   # different skills (each on its best ascendancy): two Rapid Shots waste a build
                     if key not in seen:
                         seen.add(key)
                         rows.append(r)
