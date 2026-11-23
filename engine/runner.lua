@@ -301,6 +301,18 @@ afterFrame = function()
 	end
 end
 
+-- Explosions that only happen when an enemy dies: no damage to a boss, and on maps not a steady DPS. PoB adds them to
+-- Full DPS at the supported skill's own rate (Fiery Death was 82% of a minion Lich's total, once per minion skill,
+-- 2026-11-24). They do no damage here; the tree and gear scoring sees the same.
+for _, id in ipairs({ "TriggeredFieryDeathPlayer", "PlagueBurstPlayer" }) do
+	for _, set in ipairs(data.skills[id] and data.skills[id].statSets or {}) do
+		set.baseMods = set.baseMods or {}
+		local m = modLib.createMod("Damage", "MORE", -100)
+		m.source = "Skill:" .. id
+		table.insert(set.baseMods, m)
+	end
+end
+
 local handlers = {}
 
 -- Armour Break amounts. PoB turns "Break Armour equal to X% of Physical damage dealt" into a flag only (the enemy can
@@ -858,6 +870,27 @@ function handlers.full_dps_all(cmd)
 	build.buildFlag = true
 	frame()
 	return { groups = #build.skillsTab.socketGroupList }
+end
+
+-- What the Full DPS total is made of, biggest first: PoB's own list (each skill x its count, the best of each ailment).
+-- Empty when Full DPS isn't on (the main skill alone).
+function handlers.dps_sources(cmd)
+	build.buildFlag = true
+	frame()
+	local out = build.calcsTab.mainOutput
+	local list = {}
+	-- A usage limit (afterFrame) takes its cut out of the total, not out of PoB's list: take it off the main skill.
+	local f = out.UsageLimit and out.UncappedSpeed and out.UncappedSpeed > 0 and out.UsageLimit / out.UncappedSpeed or 1
+	local main = mainSkillName()
+	for _, s in ipairs((out.FullDPS or 0) > 0 and out.SkillDPS or {}) do
+		local total = (s.dps or 0) * (s.count or 1)
+		if s.name == main then total = total * f end
+		if total > 0 then
+			table.insert(list, { name = s.name, dps = total, count = s.count or 1, trigger = s.trigger, source = s.source })
+		end
+	end
+	table.sort(list, function(a, b) return a.dps > b.dps end)
+	return { total = out.FullDPS or 0, sources = list }
 end
 
 -- Mark a group to count toward PoB's Full DPS (the sum over several skills, e.g. minions + buffs).

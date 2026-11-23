@@ -259,6 +259,14 @@ class PoB:
         out = self.send("calc", **kwargs)["output"]
         return out if isinstance(out, dict) else {}  # dkjson sends an empty table as []
 
+    def dps_sources(self) -> list[dict]:
+        """What Full DPS is made of, biggest first: [{"name", "dps", "share"}]. Empty without Full DPS."""
+        r = self.send("dps_sources")
+        total = r.get("total") or 0
+        return [{"name": x["name"], "dps": round(x["dps"]), "share": round(x["dps"] / total, 3),
+                 **({"count": x["count"]} if x.get("count", 1) != 1 else {})}
+                for x in (r.get("sources") or []) if total > 0]
+
     def warnings(self) -> list[str]:
         w = self.send("calc", fields=["TotalDPS"]).get("warnings")
         return w if isinstance(w, list) else []

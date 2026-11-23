@@ -338,7 +338,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
     quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
 
-39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; left: the rest) Full DPS fix
+39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; 2026-11-24: per-source breakdown done, on-death explosions out, engine 2026-11-24.1; left: Skeletal Sniper shows 0 of its own damage, Cast on X counts 0, re-run leads, rank_check, combos) Full DPS fix
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.

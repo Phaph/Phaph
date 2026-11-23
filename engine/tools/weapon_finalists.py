@@ -63,6 +63,7 @@ def run(only: set[str] | None, top: int, workers: int, out: Path) -> None:
             try:
                 g = build_stage(f["spec"], "end")
                 rec["finalists"][key] = {"boss_dps": round(g.boss_dps), "dps": round(g.dps), "code": g.code,
+                                         "sources": g.sources, "boss_sources": g.boss_sources,
                                          "seconds": round(time.time() - t0)}
             except Exception as e:  # noqa: BLE001
                 rec["finalists"][key] = {"error": f"{type(e).__name__}: {e}"}
@@ -76,7 +77,10 @@ def report(d: dict) -> str:
     for w, rec in d["weapons"].items():
         for key, f in rec.get("finalists", {}).items():
             if f.get("boss_dps"):
-                rows.append((f["boss_dps"], f["dps"], w, key))
+                other = [x for x in f.get("boss_sources") or [] if x["name"] != key.split(" | ")[0]
+                         and not x["name"].startswith("Best ") and x["share"] >= 0.1]
+                rows.append((f["boss_dps"], f["dps"], w,
+                             key + "".join(f" [{x['name']} {x['share']:.0%}]" for x in other)))
     rows.sort(reverse=True)
     out = ["Cross-class ranking: each weapon type's best search finalists as full Uber Endgame builds (boss DPS, map DPS):"]
     for i, (b, m, w, key) in enumerate(rows, 1):

@@ -58,3 +58,20 @@ def test_boss_skill_never_adds_to_the_main_skill(pob, two):
     own = total_dps(pob.calc(F))
     pob.send("set_main", group=main)
     assert own > 0 and total_dps(pob.calc(F)) == pytest.approx(alone[main], rel=0.01)
+
+
+def test_sources_add_up_to_the_total(pob, two):
+    pob.add_skill(["Raging Spirits"], main=False, full_dps=True)
+    pob.use_full_dps()
+    src = pob.dps_sources()
+    assert {"Boneshatter", "Raging Spirits"} <= {x["name"] for x in src}
+    assert sum(x["dps"] for x in src) == pytest.approx(total_dps(pob.calc(F)), rel=0.02)
+
+
+def test_on_death_explosions_are_not_dps(pob, two):
+    pob.new()
+    pob.set_class("Witch", "Lich")
+    pob.set_level(90)
+    pob.add_skill(["Skeletal Sniper", "Fiery Death"], full_dps=True)
+    pob.use_full_dps()
+    assert "Fiery Death" not in {x["name"] for x in pob.dps_sources()}

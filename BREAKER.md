@@ -764,3 +764,12 @@ rank_check, the endgame pick (not measured on the Deadeye pick itself; a Poisonb
 build), the trigger leads, and gear / tree choices made on the inflated total. **All earlier full-build numbers
 (leads, "x0.41 to x1.83 per skill" in task 38) need a re-run before they are quoted.** Not checked yet: the search's
 own rounds, where they call use_full_dps, and how much picks change.
+
+### Where every total comes from; on-death explosions out (2026-11-24, engine 2026-11-24.1)
+Every stage now keeps `sources` (map) and `boss_sources` from PoB's own Full DPS list (runner `dps_sources`; usage
+limits taken off the main skill). On the 8 saved lead builds it sums to the total. The finalists report marks any
+boss-fight source other than the main skill at 10%+. Its first catch: **Fiery Death** ("chance to explode on death") was
+82% of the Maligaro's Skeletal Sniper Lich, four times over; on-death explosions (Fiery Death, Plague Burst) do no damage
+now: 1.33M -> 168k. (So "minion Lich unchanged" above was right about the Full DPS fix, but its total was never real.)
+Open: in that build Skeletal Sniper, the main skill, shows 0 damage of its own; Dark Effigy's damage is listed as Vile
+Effusion. Combust (Infernal Cry) not checked.

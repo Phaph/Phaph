@@ -108,6 +108,8 @@ class StageGuide:
     weapon_sets: dict | None = None   # set-specific passives when the build swaps weapons (weaponsets.py)   # every Cast on X setup (trigger is the first, kept for old pages)
     # Supports for every other skill in the build: [{"skill", "role": spirit/utility/movement, "supports"}]
     setups: list[dict] = field(default_factory=list)
+    sources: list[dict] = field(default_factory=list)       # what the map dps is made of (pob.dps_sources)
+    boss_sources: list[dict] = field(default_factory=list)  # same for the boss dps, before setups / extra stat sets
     damage_split: dict = field(default_factory=dict)        # dps by type: physical, fire, ..., minion
     skill: str | None = None   # this stage's skill when it isn't the build's (a leveling skill, leveling.py)
     sockets: int = 5                                         # support sockets per skill at this stage
@@ -396,6 +398,12 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             boss_out, partner = apply_all(pob, skill, group, raw, STAT_FIELDS, None)
             boss_dps = total_dps(boss_out)
 
+        if boss_group and not light:
+            pob.send("set_main", group=boss_group)
+        boss_sources = pob.dps_sources()
+        if boss_group and not light:
+            pob.send("set_main", group=group)
+
         # Mapping setup last, so the PoB code and stats are the mapping version.
         pob.set_config(**MODE_CONFIG["mapping"])
         conditions = pob.auto_config("mapping")
@@ -467,7 +475,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                         for s in tree["steps"]],
             theme_issues=theme_check(spec, stats, catalog),
             clear=clear_score(stats),
-            damage_split=damage_split(stats),
+            damage_split=damage_split(stats), sources=pob.dps_sources(), boss_sources=boss_sources,
             skill=skill if skill != spec["skill"] else None,
         )
         guide.notes.extend(notes_for(skill, partner) if partner else notes_for(skill, extra_note))
