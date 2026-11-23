@@ -1,10 +1,11 @@
 # START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (2026-11-24 00:45 Berlin):** ~/after_fulldps.sh: full suite -> if green deploy engine 2026-11-24.1
-  (on-death explosions, skeleton counts, per-source breakdown) and restart ~/after_sweep.sh from scratch (weapon
-  finalists, ~11 h; commit finalists.json + .txt; then task 37). Result: ~/after_fulldps_deploy.log. Until it goes
-  green the finalists keep running on 2026-11-23.5 (live). Old finalists: ~/old_runs/.
+- **Running (2026-11-24 01:00 Berlin):** engine 2026-11-24.1 live (222 tests). ~/after_sweep.sh: weapon finalists
+  from scratch on it (~11 h; commit finalists.json + .txt), then task 37. Task 40: engine/tools/old_patch.sh 2 v0.5.0
+  v0.8.0 v0.12.2 v0.15.0 (2 cores, ~/old_patch.log, data/breaker/old/) = condition + matrix scans on PoB of patches
+  0.1-0.4; then grade against data/breaker/answer_key.json by its own rules (no tuning first).
+  Runner shims for old PoB (newItem, custom mods) are in the working tree, tests running: commit when green.
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%
   included). Invoker elemental crit = known (rediscovered blind).
 - **Waiting for Kyle:** whether to trim the endgame pick further (finalists without herald/mark/movement supports,
@@ -343,7 +344,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.
-40. [ ] (agreed with Kyle 2026-11-23, by ~Dec 1) Grade Lodestone on known answers: 15-20 past broken builds plus
+40. [ ] (2026-11-24: PoB tags back to 0.1 run on our runner; Lightning Conduit vs Shocked reads +500% / +115% / +116% / +68% on 0.1-0.4,
+    in step with the nerfs; answer key written first; scans started; left: a v0.17.1 (0.5) case set, ordinary builds, scalers and pairs on old
+    patches, then the grade) (agreed with Kyle 2026-11-23, by ~Dec 1) Grade Lodestone on known answers: 15-20 past broken builds plus
     ordinary ones on patch data we can load; hit rate and false alarms. Proposed bar: at least half found, at most one
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
     ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.

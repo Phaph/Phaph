@@ -1,0 +1,151 @@
+{
+ "written": "2026-11-24, before any old-patch scan (Lightning Conduit alone was seen in a compatibility test: 1.4 is not blind)",
+ "source": "research/broken_builds.md (row numbers are the ids)",
+ "rules": [
+  "A case is FOUND when the named detector, at its default thresholds, on that patch's PoB, flags one of its hit pieces.",
+  "condition = condition_scan.payoffs(); matrix = matrix_scan.outliers(); no tuning after seeing results (a tuned re-run is a separate column).",
+  "False alarm = a flagged row whose piece was not cut by the next major patch (notes checked per flagged row).",
+  "Bar (agreed 2026-11-23): at least half of the calculable cases found, at most one false alarm per real find.",
+  "Cases PoB can't calculate (D, E, F, G, J) are listed but scored separately: they are what Lodestone does not cover yet."
+ ],
+ "cases": [
+  {
+   "id": "1.4",
+   "tag": "v0.5.0",
+   "name": "Lightning Conduit on Shock",
+   "detector": "condition",
+   "hit": [
+    "Lightning Conduit"
+   ],
+   "why": "A",
+   "blind": false
+  },
+  {
+   "id": "1.3",
+   "tag": "v0.5.0",
+   "name": "Archmage mana stacking",
+   "detector": "matrix",
+   "hit": [
+    "Archmage",
+    "Everlasting Gaze",
+    "Dream Fragments"
+   ],
+   "why": "B/C",
+   "note": "Archmage is a spirit skill, so the matrix (uniques, keystones) may not see it"
+  },
+  {
+   "id": "1.9",
+   "tag": "v0.5.0",
+   "name": "Gemling attribute stacking",
+   "detector": "matrix",
+   "hit": [
+    "Pillar of the Caged God",
+    "Hand of Wisdom and Action",
+    "Astramentis"
+   ],
+   "why": "B"
+  },
+  {
+   "id": "2.1",
+   "tag": "v0.8.0",
+   "name": "Lightning Spear + Tangletongue",
+   "detector": "matrix",
+   "hit": [
+    "Tangletongue"
+   ],
+   "why": "A/I",
+   "note": "Tangletongue is a weapon unique: the matrix skips weapon uniques, expected miss"
+  },
+  {
+   "id": "2.5",
+   "tag": "v0.8.0",
+   "name": "Glacial Cascade vs Frozen",
+   "detector": "condition",
+   "hit": [
+    "Glacial Cascade"
+   ],
+   "why": "H"
+  },
+  {
+   "id": "2.2",
+   "tag": "v0.8.0",
+   "name": "Ice Shards / Spearfield hidden more",
+   "detector": "condition",
+   "hit": [
+    "Ice Shards",
+    "Spearfield"
+   ],
+   "why": "A",
+   "note": "hidden mod, expected miss"
+  },
+  {
+   "id": "3.2",
+   "tag": "v0.12.2",
+   "name": "Rathpith / Atalui's life Blood Mage",
+   "detector": "matrix",
+   "hit": [
+    "Rathpith Globe",
+    "Atalui's Bloodletting",
+    "Kaom's Heart"
+   ],
+   "why": "B/C/I"
+  },
+  {
+   "id": "3.3a",
+   "tag": "v0.12.2",
+   "name": "Indigon",
+   "detector": "matrix",
+   "hit": [
+    "Indigon"
+   ],
+   "why": "B"
+  },
+  {
+   "id": "3.3b",
+   "tag": "v0.12.2",
+   "name": "The Whispering Ice",
+   "detector": "matrix",
+   "hit": [
+    "The Whispering Ice"
+   ],
+   "why": "B",
+   "note": "weapon unique, expected miss"
+  },
+  {
+   "id": "3.4",
+   "tag": "v0.12.2",
+   "name": "Hollow Palm evasion",
+   "detector": "matrix",
+   "hit": [
+    "Hollow Palm Technique"
+   ],
+   "why": "B/C"
+  },
+  {
+   "id": "3.6",
+   "tag": "v0.12.2",
+   "name": "Tactician vs Immobilised",
+   "detector": "condition",
+   "hit": [
+    "Siege Cascade",
+    "Siege Ballista"
+   ],
+   "why": "H"
+  }
+ ],
+ "not_calculable": [
+  "1.1 Raging Spirits loop (D)",
+  "1.2 Cast on Freeze (D)",
+  "1.5 Herald chains (F)",
+  "1.6 Hexblast (E)",
+  "1.7 poison clouds (E)",
+  "2.4 Blood Hunt (our own)",
+  "2.8 Hyrri's (G)",
+  "3.1 Lightning Rod (D/E)",
+  "3.5 infinite ignite (F)",
+  "4.1 Walking Calamity (E)",
+  "4.6 Vitality Siphon (D)",
+  "5.1 Hollow Form (E)",
+  "5.2 Flicker (D)"
+ ]
+}
