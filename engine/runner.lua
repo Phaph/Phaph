@@ -147,6 +147,41 @@ local function useFull()
 	return n > 1 or minion
 end
 
+-- What keeps dealing damage while the player presses something else: minions, totems, persistent skills (heralds,
+-- auras) and skills an item triggers. Everything else is pressed instead of the main skill, so it never adds to it
+-- in Full DPS: other attacks and spells, the weapon's own basic attack (PoB adds Mace Strike, Bow Shot, Spear Stab
+-- as groups), and the spells in a Cast on X gem (PoB scores them as cast by hand; triggers.py estimates those).
+local function worksAlongside(g)
+	local keep, meta = false, false
+	local function look(types)
+		if not types then return end
+		if types[SkillType.Minion] or types[SkillType.SummonsTotem] or types[SkillType.Persistent] then keep = true end
+		if types[SkillType.Meta] and not types[SkillType.SummonsTotem] then meta = true end
+	end
+	for _, gem in ipairs(g.gemList or {}) do
+		local ge = gem.grantedEffect or (gem.gemData and gem.gemData.grantedEffect)
+		if ge and not ge.support then look(ge.skillTypes) end
+	end
+	for i, s in ipairs(g.displaySkillList or {}) do
+		if s.minion then keep = true end
+		-- Only the group's own skill: a support can add a triggered effect (Fiery Death) to any attack.
+		if i == 1 and s.skillTypes and s.skillTypes[SkillType.Triggered] then keep = true end
+	end
+	return keep and not meta
+end
+
+-- Change the main skill. Once Full DPS is on, the skill left behind stops counting (unless it works alongside) and
+-- the new one counts in its place. A skill played as the main one always counts.
+local function setMainGroup(index)
+	local list = build.skillsTab.socketGroupList
+	local old, new = list[build.mainSocketGroup], list[index]
+	if old and new and old ~= new and old.includeInFullDPS then
+		old.includeInFullDPS = worksAlongside(old)
+		new.includeInFullDPS = true
+	end
+	build.mainSocketGroup = index
+end
+
 local function findClass(name)
 	for id, class in pairs(build.spec.tree.classes) do
 		if class.name:lower() == name:lower() then return id, class end
@@ -625,8 +660,9 @@ function handlers.add_skill(cmd)
 	scoreTotemSkill(build.skillsTab.socketGroupList[index])
 	-- Full DPS costs a second calculation pass, so it is only switched on for builds that
 	-- need it (several damage sources or minion counts); see set_full_dps.
-	build.skillsTab.socketGroupList[index].includeInFullDPS = cmd.full_dps == true
-	if cmd.main ~= false then build.mainSocketGroup = index end
+	local added = build.skillsTab.socketGroupList[index]
+	added.includeInFullDPS = cmd.full_dps == true and (cmd.main ~= false or worksAlongside(added))
+	if cmd.main ~= false then setMainGroup(index) end
 	frame()
 	local missing = {}
 	for _, gem in ipairs(build.skillsTab.socketGroupList[index].gemList) do
@@ -721,7 +757,7 @@ function handlers.try_skill(cmd)
 	list[cmd.group] = new
 	capGemLevels(new)
 	applyStageRules(new)
-	if not cmd.keep_main then build.mainSocketGroup = cmd.group end
+	if not cmd.keep_main then setMainGroup(cmd.group) end
 	-- Resolve gems and global gem counts before recalculating, otherwise the
 	-- calculation sees the previous gem list and results lag one step behind.
 	build.skillsTab:ProcessSocketGroup(new)
@@ -808,10 +844,16 @@ function handlers.set_weapon_set(cmd)
 	return {}
 end
 
--- Count every enabled group toward Full DPS.
+-- Turn Full DPS on: the main skill plus everything that works alongside it.
 function handlers.full_dps_all(cmd)
-	for _, g in ipairs(build.skillsTab.socketGroupList) do
-		if g.enabled ~= false then g.includeInFullDPS = true end
+	local seen = {}   -- the same herald from a gem and from an item works once
+	for i, g in ipairs(build.skillsTab.socketGroupList) do
+		local first = g.displaySkillList and g.displaySkillList[1]
+		local ge = first and first.activeEffect and first.activeEffect.grantedEffect
+		local name = ge and not first.minion and not (first.skillTypes and first.skillTypes[SkillType.SummonsTotem]) and ge.name
+		local on = g.enabled ~= false and (i == build.mainSocketGroup or (worksAlongside(g) and not (name and seen[name])))
+		g.includeInFullDPS = on
+		if on and name then seen[name] = true end
 	end
 	build.buildFlag = true
 	frame()
@@ -1212,7 +1254,7 @@ function handlers.patch_reset(cmd)
 end
 
 function handlers.set_main(cmd)
-	build.mainSocketGroup = cmd.group
+	setMainGroup(cmd.group)
 	-- Optional: which active skill of the group is the main one (e.g. a spell socketed in a Cast on X gem).
 	local g = build.skillsTab.socketGroupList[cmd.group]
 	if cmd.skill and g then g.mainActiveSkill = cmd.skill; g.mainActiveSkillCalcs = cmd.skill end

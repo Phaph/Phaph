@@ -745,3 +745,22 @@ run restarts on it.
 non-negative elemental resistances ("Sunder my Enemies...") + 10% extra lightning / cold. Guides confirm it, and
 players already run crossbow and bow Invokers (Mobalytics). **Lodestone rediscovered a known cross-class build
 blind**: status "known". A good sign for the no-class-rule search; not a new break.
+
+### Full DPS added up skills that are never used together (2026-11-23, engine 2026-11-23.5)
+Found while checking score_combo's setup DPS. `full_dps_all` (run by every build through optimise_spirit) put *every*
+skill group in Full DPS: the weapon's own basic attack (Mace Strike, Bow Shot, Spear Stab + Spear Throw; kit_out even
+gave it supports), the boss skill, the clear skill, the combo setup, and the spells in a Cast on X gem as if cast by
+hand. Saved Uber builds, old total -> main skill + what really works alongside (same gear; not re-optimised):
+APR Tactician 4.69M -> 3.11M, Rain of Arrows Deadeye 257k -> 69k, Wind Serpent's Fury Amazon 1.66M -> 848k, Leopold's
+Fireball 1.13M -> 291k, Coiling Bolts / Bonestorm 3.43M -> 2.07M, Dark Effigy 1.06M -> 802k, Bonestorm 2.56M -> 2.36M,
+minion Lich unchanged. Only Rain of Arrows and Wind Serpent's Fury were measured on the final fix, the rest on its
+first version: re-measure. The boss / clear skill double count is read from the code, not measured. Cast on X spells
+now count as 0 in the total, so some builds may read low. (These are mapping-config codes, so not the boss numbers quoted elsewhere.)
+Fix (runner.lua `worksAlongside`, `setMainGroup`): Full DPS = the main skill + minions, totems, persistent skills
+(heralds, once each) and item-triggered skills; changing the main skill moves the count with it.
+What it puts in doubt: every attack vs spell comparison (Comet's Staff adds little, a spear adds two attacks),
+rank_check, the endgame pick (not measured on the Deadeye pick itself; a Poisonburst Arrow *Invoker* finalist,
+2.30M, had 1.76M from a second button, Rain of Arrows), all combo results (the payoff phase included the setup's damage; setup DPS was the whole
+build), the trigger leads, and gear / tree choices made on the inflated total. **All earlier full-build numbers
+(leads, "x0.41 to x1.83 per skill" in task 38) need a re-run before they are quoted.** Not checked yet: the search's
+own rounds, where they call use_full_dps, and how much picks change.

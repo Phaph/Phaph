@@ -340,6 +340,15 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
     quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
 
+39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 committed; deploy + finalists restart: see START HERE) Full DPS fix
+    (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
+    ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
+    and re-run leads, rank_check and combos before quoting any older full-build number.
+40. [ ] (agreed with Kyle 2026-11-23, by ~Dec 1) Grade Lodestone on known answers: 15-20 past broken builds plus
+    ordinary ones on patch data we can load; hit rate and false alarms. Proposed bar: at least half found, at most one
+    false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
+    ranked leads).
+
 ## Waiting for Kyle
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
   (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.

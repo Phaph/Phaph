@@ -156,8 +156,8 @@ class PoB:
         return self.send("add_skill", text=text, main=main, full_dps=full_dps)
 
     def use_full_dps(self) -> None:
-        """Count every skill group in PoB's Full DPS (needed once a build has more than one
-        damage source, or minions whose count matters)."""
+        """Count the main skill and everything that works alongside it (minions, totems, heralds) in PoB's Full DPS.
+        Skills pressed instead of the main one (boss skill, clear skill, basic attack) never add to it."""
         self.send("full_dps_all")
         self.send("sync_minion_counts")
 
