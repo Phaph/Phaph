@@ -797,6 +797,34 @@ function handlers.try_skill(cmd)
 	return { output = result, supported = supported, main_skill = mainSkillName(), warnings = warnings() }
 end
 
+-- Skeletons have no limit stat: every copy reserves spirit again (PoB's gem count). The main skill gets as many as the
+-- spirit left over pays for (at least one), an extra skill one. (Limit 0 used to set the count to 0: no damage and no
+-- spirit reserved, until 2026-11-24.)
+local MAX_COPIES = 30
+local function fitCopies(i, isMain)
+	local g = build.skillsTab.socketGroupList[i]
+	local gem = g and g.gemList[1]
+	if not gem then return end
+	local function left(n)
+		gem.count = n
+		build.buildFlag = true
+		frame()
+		return build.calcsTab.mainOutput.SpiritUnreserved or 0
+	end
+	local one = left(1)
+	if not isMain or one <= 0 then return 1 end
+	local per = one - left(2)
+	local n = per > 0 and math.min(1 + math.floor(one / per), MAX_COPIES) or 1
+	while n > 1 and left(n) < 0 do n = n - 1 end
+	left(n)
+	return n
+end
+
+local function isCopies(g)
+	local ge = g.gemList[1] and g.gemList[1].gemData and g.gemList[1].gemData.grantedEffect
+	return ge and ge.skillTypes and ge.skillTypes[SkillType.Minion] and ge.skillTypes[SkillType.MultipleReservation]
+end
+
 -- Spirit safety net for skills the optimisers didn't add: an item can grant spirit skills (The Coming Calamity grants
 -- three heralds) and PoB turns them on, so a build can end up reserving more spirit than it has. Turn such groups off,
 -- item-granted ones first, then the latest added, until the spirit fits. The main group is never touched.
@@ -809,6 +837,8 @@ function handlers.fit_spirit(cmd)
 		return build.calcsTab.mainOutput.SpiritUnreserved or 0
 	end
 	local off = {}
+	local mainG = list[build.mainSocketGroup]
+	if left() < 0 and mainG and isCopies(mainG) then fitCopies(build.mainSocketGroup, true) end
 	if left() >= 0 then return { off = off } end
 	local order = {}
 	for i = #list, 1, -1 do
@@ -920,7 +950,9 @@ function handlers.sync_minion_counts(cmd)
 			local limit = build.calcsTab.mainOutput.ActiveMinionLimit
 			local active = g.gemList[1]
 			-- also lowers a count back down (e.g. a one-minion skill after a Breaker test raised its limit)
-			if active and limit and active.count ~= limit and (limit > 1 or (active.count or 1) > limit) then
+			if active and (limit or 0) <= 0 and isCopies(g) then
+				counts[tostring(i)] = fitCopies(i, i == main)
+			elseif active and limit and limit > 0 and active.count ~= limit and (limit > 1 or (active.count or 1) > limit) then
 				active.count = limit
 				counts[tostring(i)] = limit
 			end

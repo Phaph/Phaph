@@ -771,5 +771,8 @@ limits taken off the main skill). On the 8 saved lead builds it sums to the tota
 boss-fight source other than the main skill at 10%+. Its first catch: **Fiery Death** ("chance to explode on death") was
 82% of the Maligaro's Skeletal Sniper Lich, four times over; on-death explosions (Fiery Death, Plague Burst) do no damage
 now: 1.33M -> 168k. (So "minion Lich unchanged" above was right about the Full DPS fix, but its total was never real.)
-Open: in that build Skeletal Sniper, the main skill, shows 0 damage of its own; Dark Effigy's damage is listed as Vile
-Effusion. Combust (Infernal Cry) not checked.
+**Skeletons counted as zero (found by the same list, bug since 2026-11-17):** skeleton skills have no limit stat (each
+copy reserves spirit again), and sync_minion_counts set their count to the limit, 0: no damage and no spirit reserved.
+Now the main skeleton skill gets as many as the spirit left over pays for, an extra one counts once (`fitCopies`). So
+every earlier result that ranked or built a skeleton skill is wrong. Open: copies are taken before auras, not traded
+against them; Dark Effigy's damage is listed as Vile Effusion; Combust (Infernal Cry) not checked.

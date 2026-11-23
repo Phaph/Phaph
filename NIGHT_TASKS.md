@@ -1,9 +1,10 @@
 # START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (2026-11-24 00:00 Berlin):** engine 2026-11-23.5 live (Full DPS fix, BREAKER.md last section).
-  ~/after_sweep.sh restarted on it from scratch: weapon finalists (task 38, ~11 h; finalists.json + finalists.txt:
-  commit both), then task 37. Old finalists kept in ~/old_runs/. Next light work: tasks 39 (rest) and 40.
+- **Running (2026-11-24 00:45 Berlin):** ~/after_fulldps.sh: full suite -> if green deploy engine 2026-11-24.1
+  (on-death explosions, skeleton counts, per-source breakdown) and restart ~/after_sweep.sh from scratch (weapon
+  finalists, ~11 h; commit finalists.json + .txt; then task 37). Result: ~/after_fulldps_deploy.log. Until it goes
+  green the finalists keep running on 2026-11-23.5 (live). Old finalists: ~/old_runs/.
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%
   included). Invoker elemental crit = known (rediscovered blind).
 - **Waiting for Kyle:** whether to trim the endgame pick further (finalists without herald/mark/movement supports,
@@ -338,7 +339,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
     quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
 
-39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; 2026-11-24: per-source breakdown done, on-death explosions out, engine 2026-11-24.1; left: Skeletal Sniper shows 0 of its own damage, Cast on X counts 0, re-run leads, rank_check, combos) Full DPS fix
+39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; 2026-11-24: per-source breakdown done, on-death explosions out, engine 2026-11-24.1; skeletons counted 0 since 11-17: fixed; left: Cast on X counts 0, re-run leads, rank_check, combos) Full DPS fix
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.

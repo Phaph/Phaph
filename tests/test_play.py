@@ -75,3 +75,15 @@ def test_on_death_explosions_are_not_dps(pob, two):
     pob.add_skill(["Skeletal Sniper", "Fiery Death"], full_dps=True)
     pob.use_full_dps()
     assert "Fiery Death" not in {x["name"] for x in pob.dps_sources()}
+
+
+def test_skeletons_fill_the_spirit(pob, two):
+    pob.new()
+    pob.set_class("Witch", "Lich")
+    pob.set_level(90)
+    pob.add_skill(["Skeletal Sniper"], full_dps=True)
+    one = total_dps(pob.calc(F))
+    pob.use_full_dps()
+    out = pob.calc(F + ["SpiritUnreserved"])
+    assert total_dps(out) > 1.5 * one, "several skeletons, not none"
+    assert 0 <= out["SpiritUnreserved"] < 100
