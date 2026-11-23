@@ -320,7 +320,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     already shows stages; a stage's own skill name has to show there (check before deploying; page work is paused,
     so ask Kyle if it needs more than the skill name).
 
-37. [ ] Re-run the per-ascendancy condition and matrix scans without the class-weapon rule (Kyle 2026-11-22:
+37. [ ] (queued 2026-11-23: ~/after_unlock.sh runs conditions_asc + matrix_asc after the unlocked blind run; the scans
+    resume, so only skills the rule skipped get scanned; ~16-20 h; then read for cross-class payoffs) Re-run the per-ascendancy condition and matrix scans without the class-weapon rule (Kyle 2026-11-22:
     Lodestone has none; the 11-20 runs skipped skills outside each class's weapons). Queue `conditions_asc matrix_asc`
     after the unlocked blind run.
 
