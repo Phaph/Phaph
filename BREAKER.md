@@ -741,3 +741,7 @@ refined once), with the reason listed. Many searched builds pick Inexorable Crit
 over-rated. Checked and harmless: Flicker Strike "Bypass CD" (no cooldown in PoE 2 data). Others are skill-specific
 and only if used (Demon Form stacks, Glorious Madness, Corrupting Cry stacks). Engine 2026-11-23.4; the finalists
 run restarts on it.
+**Invoker (2026-11-23):** the no-class-rule search keeps picking Invoker for bows, crossbows and spears: its crits ignore
+non-negative elemental resistances ("Sunder my Enemies...") + 10% extra lightning / cold. Guides confirm it, and
+players already run crossbow and bow Invokers (Mobalytics). **Lodestone rediscovered a known cross-class build
+blind**: status "known". A good sign for the no-class-rule search; not a new break.
