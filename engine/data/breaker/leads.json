@@ -253,7 +253,7 @@
      "end"
     ]
    },
-   "full_build": "2026-11-23, with its release time counted (USAGE_LIMITS, engine 2026-11-23.1): full Uber Endgame Bonestorm Lich 2.72M vs Comet Lich 4.45M (-39%). Before the fix 8.82M (2x Comet): PoB timed a volley by its channel ticks only. A modelling gap, not a break. CORRECTION 2026-11-23: that build used a Wand for Bonestorm and a Staff for Comet (unequal); re-run with a Staff.",
+   "full_build": "2026-11-23, fair comparison (both on a Staff), release time counted (usage limit: 6 casts per volley): full Uber Endgame Bonestorm Lich 6.03M boss DPS vs Comet Lich 4.45M (+35%). (Earlier numbers: 8.82M on a Wand without the release time; 2.72M on a Wand with it: the Wand was the mistake.) Depends on the release estimate: at 9 casts per volley the edge would shrink to roughly +10-15%.",
    "ladder": "poe.ninja per ascendancy (2026-11-22): 36% of Abyssal Liches use Bonestorm (0.85% overall). A known build on Abyssal Lich; under-played on the other Witch/Sorceress ascendancies."
   },
   {

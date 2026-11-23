@@ -693,3 +693,9 @@ are sharper (and the search finds what it should), the broken builds will have t
 **Base items in patch-notes mode (2026-11-23):** runner `patch_base` (a base's armour / weapon / req / flask / charm
 numbers in PoB's data; new items use them; patch_reset puts them back), PATCH_FILE entries {"base": ..., "armour":
 {...}}. Covers 0.5.2's Runemastered base changes. Left: socket types, rule changes.
+**Bonestorm, corrected (2026-11-23):** the -39% compared Bonestorm on a Wand with Comet on a Staff (my mistake in the
+lead's spec). Both on a Staff, release time counted: **Bonestorm Lich 6.03M vs Comet Lich 4.45M (+35%)** at Uber
+Endgame. A moderate lead again (unconfirmed): it rests on the release estimate (6 casts per volley) and on 20 spikes
+landing on one boss. The search still rates it 5-6x Comet at every step (round 1, with tree, mid or end gear), so
+the search over-rates it vs full builds; the endgame pick corrects that for players. Also checked: scoring round 1
+at end-stage gear gives the same order as mid-stage, and today's round 1 picks the full-build winner on 4 of 6.
