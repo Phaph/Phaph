@@ -685,3 +685,8 @@ tests/test_usage_limits.py; engine 2026-11-23.1. Re-check its lead build vs Come
 PoB's keystone table (the same node), and its parsed mods follow (runner `node_debug`). The earlier "Chaos
 Inoculation stays at 1 Life" was the test case: PoB also turns its other line into a ChaosInoculation flag that sets
 Life to 1 elsewhere. Left for patch day: socket types, base item numbers, rule changes.
+**Bonestorm result (2026-11-23):** with the release time counted, full Uber Endgame Bonestorm Lich 2.72M vs Comet Lich
+4.45M (**-39%**; was 8.82M, 2x Comet). The lead was PoB's uncounted release: status "fixed" (a modelling gap). Even
+at half our release estimate it stays behind Comet. **Lodestone has no standing break now**: every lead so far was a
+modelling gap (fixed) or an interaction that fades in a full build. That is the honest state before 1.0: the tools
+are sharper (and the search finds what it should), the broken builds will have to come from 1.0's changes.

@@ -220,11 +220,11 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22, full Uber Endgame on the same engine: combo 9.78M vs plain Bonestorm 8.82M (+11%). Real but small; Bonestorm itself is the bigger lead (see 'Bonestorm at full channel')."
+   "full_build": "2026-11-22, full Uber Endgame on the same engine: combo 9.78M vs plain Bonestorm 8.82M (+11%). Real but small; Bonestorm itself is the bigger lead (see 'Bonestorm at full channel'). Built before the Bonestorm release-time fix (2026-11-23): its numbers are over-rated."
   },
   {
    "name": "Bonestorm at full channel (every caster)",
-   "status": "unconfirmed",
+   "status": "fixed",
    "found": "2026-11-22",
    "detector": "blind test (stage rules)",
    "what": "With its full 20-spike channel (PoB stretches the channel time only by stages / projectiles, and each spike hits and explodes), Bonestorm ranks #1 on all 7 Witch and Sorceress ascendancies at 5-12M vs ~1-1.7M for the next skill, and a full Uber Endgame Bonestorm Lich reaches 8.8M boss DPS. 0.85% of the ladder plays it. Guides: channel to full against bosses; extra projectiles charge it faster (Scattershot ~3x).",
@@ -252,7 +252,7 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22, full Uber Endgame Lich, same engine: Bonestorm 8.82M boss DPS vs Comet (14.6% of the ladder) 4.45M: about 2x. Holds through the full-build bar.",
+   "full_build": "2026-11-23, with its release time counted (USAGE_LIMITS, engine 2026-11-23.1): full Uber Endgame Bonestorm Lich 2.72M vs Comet Lich 4.45M (-39%). Before the fix 8.82M (2x Comet): PoB timed a volley by its channel ticks only. A modelling gap, not a break.",
    "ladder": "poe.ninja per ascendancy (2026-11-22): 36% of Abyssal Liches use Bonestorm (0.85% overall). A known build on Abyssal Lich; under-played on the other Witch/Sorceress ascendancies."
   },
   {
