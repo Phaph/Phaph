@@ -1335,6 +1335,11 @@ function handlers.auto_config(cmd)
 	local function set(var, why)
 		if not input[var] then input[var] = true; table.insert(applied, { var = var, why = why }) end
 	end
+	-- Counts PoB fills in by itself unless told otherwise: Acolyte of Chayula's Purple Flames default to the full 10
+	-- (ConfigOptions purpleFlameStacks defaultState 10), a 1.7x boost a build gets only by collecting them (Into the
+	-- Breach). Not something a build keeps up on its own: 0 until we model it (2026-11-23, Rapid Shot Acolyte 12.0M ->
+	-- 7.0M).
+	input.purpleFlameStacks = 0
 	-- Two passes: turning conditions on changes chances and speed.
 	for _ = 1, 2 do
 		build.configTab:BuildModList()

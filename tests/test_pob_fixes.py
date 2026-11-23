@@ -195,3 +195,24 @@ def test_patch_base_changes_item_numbers(pob):
     assert armour() > a0 * 3
     pob.send("patch_reset")
     assert abs(armour() - a0) < 1e-6
+
+
+def test_auto_config_turns_off_free_purple_flames(pob):
+    """auto_config sets Acolyte's Purple Flames to 0 (PoB's own default is 10: a free 1.7x boost). Checked on the
+    saved Rapid Shot Acolyte finalist (it takes the notable that uses them)."""
+    import json
+    from pathlib import Path
+    import pytest
+    from optimize import MODE_CONFIG
+    f = Path(__file__).resolve().parents[1] / "engine" / "data" / "breaker" / "finalists.json"
+    if not f.exists():
+        f = Path("/app/engine/data/breaker/finalists.json")
+    if not f.exists():
+        pytest.skip("no saved finalist build")
+    code = json.loads(f.read_text())["weapons"]["Crossbow"]["finalists"]["Rapid Shot | Acolyte of Chayula"]["code"]
+    pob.load_code(code)
+    pob.set_config(**MODE_CONFIG["bossing"])
+    pob.set_config(purpleFlameStacks=10)
+    with_flames = pob.calc(["TotalDPS"])["TotalDPS"]
+    pob.auto_config("bossing")
+    assert pob.calc(["TotalDPS"])["TotalDPS"] < 0.8 * with_flames

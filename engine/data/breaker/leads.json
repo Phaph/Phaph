@@ -321,8 +321,8 @@
    "status": "unconfirmed",
    "found": "2026-11-23",
    "detector": "cross-class finalists (weapon_finalists.py)",
-   "what": "The Crossbow search with no class rule picks Acolyte of Chayula as Rapid Shot's best ascendancy; its full Uber Endgame build reaches 9.26M boss DPS, above Rapid Shot Tactician (6.30M) and every other full build so far. 0.1% of Acolytes play it.",
-   "check": "First: what does Acolyte give it? PoB's config defaults Into the Breach's Purple Flames to 10 stacks (ConfigOptions purpleFlameStacks defaultState 10): if the build gets them free, the number is inflated (a Bonestorm-type trap). Then the usual evidence checks."
+   "what": "The Crossbow search with no class rule picks Acolyte of Chayula as Rapid Shot's best ascendancy; its full Uber Endgame build reaches 9.26M boss DPS, above Rapid Shot Tactician (6.30M) and every other full build so far. 0.1% of Acolytes play it. Checked 2026-11-23: PoB's default 10 Purple Flames gave it 12.0M bossing; with 0 flames 7.02M, still above Rapid Shot Tactician 6.30M. auto_config now sets the flames to 0 for every build (engine 2026-11-23.2).",
+   "check": "Why Acolyte beats Tactician without flames (which ascendancy nodes), then evidence checks; and a model for how many Purple Flames a build keeps up."
   }
  ]
 }

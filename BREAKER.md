@@ -714,3 +714,10 @@ weapon) it buries every attack build. Being measured: search-style scores vs ful
 factor fixes it. Whetstone: the endgame pick (top 3 by full builds) covers it. **Lodestone plan:** shortlist the best
 ~2 skills per weapon type by search score, then rank the finalists by full Uber builds (rank_check-style); weekly,
 on the server's free time or the PC.
+
+### First cross-class finalist, and a free PoB bonus (2026-11-23, task 38 trial)
+Crossbow finalists (weapon_finalists.py, no class rule): the search picks **Acolyte of Chayula** as Rapid Shot's best
+ascendancy; full Uber build 9.26M boss DPS. Checked: PoB's config defaults Acolyte's Purple Flames to 10 stacks
+(Into the Breach), and nothing of ours touched it: 12.0M with 10 flames, **7.02M with 0** (x1.7 free). auto_config now
+sets them to 0 for every build (only bonuses a build keeps up itself); engine 2026-11-23.2. Even at 0 flames Rapid
+Shot Acolyte beats Rapid Shot Tactician (6.30M): a lead (unconfirmed), 0.1% of Acolytes play it.
