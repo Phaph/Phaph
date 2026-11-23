@@ -204,18 +204,40 @@ def run_guide(req: dict, progress=None) -> dict:
     from guide import build_guide
 
     spec = {k: v for k, v in req["spec"].items() if k != "budget"}
+    stages = list(req["stages"] or [])
     # Leveling skills for the campaign stages (leveling.py, Kyle 2026-11-22): the endgame skill from Act 1 when it
-    # works, else up to 3 same-theme skills. Off until checked on real builds (LEVELING=1).
-    campaign = {"act1", "act2", "act34", "interludes"} & set(req["stages"] or [])
-    if os.environ.get("LEVELING") == "1" and campaign and not spec.get("leveling"):
+    # works, else up to 3 same-theme skills. The endgame stages don't use the plan and are the slowest, so they build
+    # while the plan is made and the campaign stages follow it (2026-11-23: ~6 min off a 76 min build).
+    camp_keys = [k for k in stages if k in ("act1", "act2", "act34", "interludes")]
+    if os.environ.get("LEVELING") == "1" and camp_keys and not spec.get("leveling"):
+        from concurrent.futures import ThreadPoolExecutor as _TPE
         from leveling import plan_leveling
-        try:
-            plan = plan_leveling(spec)
-            spec["leveling"] = {k: v for k, v in plan.items() if not k.startswith("_")}
-            spec["leveling_why"] = plan.get("_why") or []
-        except Exception as e:  # noqa: BLE001 - leveling must never cost the player their build
-            print(f"leveling plan failed: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
-    guides = build_guide(spec, req["stages"], log=lambda *a: None, progress=progress)
+        end_keys = [k for k in stages if k not in camp_keys]
+
+        def campaign():
+            sp = dict(spec)
+            try:
+                plan = plan_leveling(sp)
+                sp["leveling"] = {k: v for k, v in plan.items() if not k.startswith("_")}
+                sp["leveling_why"] = plan.get("_why") or []
+            except Exception as e:  # noqa: BLE001 - leveling must never cost the player their build
+                print(f"leveling plan failed: {type(e).__name__}: {e}", file=sys.stderr, flush=True)
+            return sp, build_guide(sp, camp_keys, log=lambda *a: None, progress=progress)
+
+        with _TPE(max_workers=2) as ex:
+            f_camp = ex.submit(campaign)
+            f_end = ex.submit(build_guide, spec, end_keys, lambda *a: None, progress) if end_keys else None
+            spec, camp_guides = f_camp.result()
+            end_guides = f_end.result() if f_end else []
+        by_key = {g.stage: g for g in [*camp_guides, *end_guides]}
+        guides = [by_key[k] for k in stages if k in by_key]
+        lev = spec.get("leveling") or {}
+        last = camp_keys[-1] if lev.get(camp_keys[-1]) else None   # leveling right up to the endgame stages
+        if last and end_keys:   # the swap note on the first endgame stage, which was built without the plan
+            first_end = by_key[end_keys[0]]
+            first_end.notes.append(f"Swap from {lev[last]} to {spec['skill']} here: it's the build's skill from now on.")
+    else:
+        guides = build_guide(spec, stages, log=lambda *a: None, progress=progress)
     out = {"spec": spec, "stages": [asdict(g) for g in guides]}
     if writeup.enabled():
         # Claude's overview of the finished build, written from its real data (api/writeup.py). Stored with the guide.
