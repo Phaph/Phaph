@@ -328,6 +328,11 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Lodestone has none; the 11-20 runs skipped skills outside each class's weapons). Queue `conditions_asc matrix_asc`
     after the unlocked blind run.
 
+38. [ ] The search's scores across weapon kinds (from the unlocked blind test, 2026-11-23): staff spells score ~10x
+    attacks in the search while full Uber builds have them level (Bonestorm 6.0M, Supercharged Slam 5.7M, Rapid Shot
+    6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
+    quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
+
 ## Waiting for Kyle
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
   (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.

@@ -699,3 +699,12 @@ Endgame. A moderate lead again (unconfirmed): it rests on the release estimate (
 landing on one boss. The search still rates it 5-6x Comet at every step (round 1, with tree, mid or end gear), so
 the search over-rates it vs full builds; the endgame pick corrects that for players. Also checked: scoring round 1
 at end-stage gear gives the same order as mid-stage, and today's round 1 picks the full-build winner on 4 of 6.
+
+### Blind test with no class-weapon rule (2026-11-23, engine 2026-11-23.1)
+data/breaker/blind_unlocked.txt. **Bonestorm #1 on all 23 ascendancies; every top 5 is the same staff spells**
+(Bonestorm, Coiling Bolts, Comet 23/23, Fireball 20, Firestorm 17). 1/20 of the ladder's top skills, 5/69 per
+ascendancy, Spearman +0.20. Full builds don't agree: at Uber Endgame Bonestorm Lich 6.0M, Supercharged Slam Titan
+5.7M, Rapid Shot Tactician 6.3M are level, while the search scores Witch spells ~10x the Titan's best. So the
+search's scores aren't comparable across weapon kinds: staff spells over-rated, attacks under-rated. With
+Whetstone's class weapons it matters less (each class compares like with like); for Lodestone (any class, any
+weapon) it buries every attack build. Being measured: search-style scores vs full builds per skill kind (task 38).

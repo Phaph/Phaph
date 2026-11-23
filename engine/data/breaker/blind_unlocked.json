@@ -1,0 +1,5095 @@
+{
+ "ascendancies": {
+  "Infernalist": {
+   "class": "Witch",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Infernalist",
+    "class": "Witch",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 11197672.829914715,
+     "dps": 9416082.9418592,
+     "boss": 9416082.9418592,
+     "clear": 13316352.200807234,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Infernalist",
+     "score": 4754970.481641099,
+     "dps": 4010651.222452775,
+     "boss": 4010651.222452775,
+     "clear": 5637424.704173317,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.42463916867959733
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 2048978.3326043691,
+     "dps": 2167989.9783575195,
+     "boss": 2167989.9783575195,
+     "clear": 1936499.8221360988,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.18298251464630216
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 1607076.243048467,
+     "dps": 2029103.25467684,
+     "boss": 2029103.25467684,
+     "clear": 1272825.3453923427,
+     "supports": [
+      "Cold Mastery",
+      "Concentrated Area",
+      "Considered Casting",
+      "Dialla's Desire",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1435187710392059
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 1331753.092446512,
+     "dps": 1367331.483850998,
+     "boss": 1367331.483850998,
+     "clear": 1297100.4618760892,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.11893123800587546
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 1219577.0516079376,
+     "dps": 1450329.7070662,
+     "boss": 1450329.7070662,
+     "clear": 1025537.9708228091,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10891343854500045
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 1129689.3241253,
+     "dps": 1129689.3241253,
+     "boss": 1129689.3241253,
+     "clear": 1129689.3241253,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.1008860806423386
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 903413.3968088209,
+     "dps": 338893.84554664,
+     "boss": 338893.84554664,
+     "clear": 2408293.2642733087,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.08067867408979314
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 759437.9334853484,
+     "dps": 927684.7431,
+     "boss": 927684.7431,
+     "clear": 621704.710685671,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.0678210504111623
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 678090.3598066657,
+     "dps": 712114.70522974,
+     "boss": 712114.70522974,
+     "clear": 645691.673947938,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.060556364711347815
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Infernalist",
+     "score": 626519.7935989655,
+     "dps": 336619.66594687,
+     "boss": 336619.66594687,
+     "clear": 1166084.7284936837,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.0559508929324324
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1702
+  },
+  "Blood Mage": {
+   "class": "Witch",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Blood Mage",
+    "class": "Witch",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 5549580.426280437,
+     "dps": 4666622.2866214,
+     "boss": 4666622.2866214,
+     "clear": 6599600.52821253,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Blood Mage",
+     "score": 2592577.7203317564,
+     "dps": 2187273.594701542,
+     "boss": 2187273.594701542,
+     "clear": 3072985.1319207116,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.4671664380345617
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 1753788.580462521,
+     "dps": 1830848.43741673,
+     "boss": 1830848.43741673,
+     "clear": 1679972.1495792225,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.3160218333186648
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 1242682.7596091009,
+     "dps": 1276316.7542382278,
+     "boss": 1276316.7542382278,
+     "clear": 1209935.101064614,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.22392373191390963
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 1214148.8799650671,
+     "dps": 1526190.7950523999,
+     "boss": 1526190.7950523999,
+     "clear": 965906.430244073,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.21878210363712863
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 1141180.2302775085,
+     "dps": 1358111.3557351886,
+     "boss": 1358111.3557351886,
+     "clear": 958899.5132665357,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.2056336051773153
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 987191.5940332443,
+     "dps": 997676.628488762,
+     "boss": 997676.628488762,
+     "clear": 976816.751542131,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.177885807251
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 946126.7927589708,
+     "dps": 354916.7505213,
+     "boss": 354916.7505213,
+     "clear": 2522157.3979294463,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.1704861845552358
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 941032.6392173974,
+     "dps": 960693.407192533,
+     "boss": 960693.407192533,
+     "clear": 921774.2324893342,
+     "supports": [
+      "Atalui's Bloodletting",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.16956824965741008
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 825010.6133910035,
+     "dps": 1011241.1172301159,
+     "boss": 1011241.1172301159,
+     "clear": 673076.381696329,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.14866179963517717
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Blood Mage",
+     "score": 799348.7513716795,
+     "dps": 435079.94208038296,
+     "boss": 435079.94208038296,
+     "clear": 1468600.0537377398,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.14403769113540657
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1673
+  },
+  "Lich": {
+   "class": "Witch",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Lich",
+    "class": "Witch",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 5831485.580468632,
+     "dps": 4903675.3202198,
+     "boss": 4903675.3202198,
+     "clear": 6934844.143329071,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Lich",
+     "score": 2719808.906459559,
+     "dps": 2294490.3194125295,
+     "boss": 2294490.3194125295,
+     "clear": 3223966.7454995974,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.46640069137253853
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 1081079.2541635558,
+     "dps": 1133404.1663637792,
+     "boss": 1133404.1663637792,
+     "clear": 1031169.9819600912,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.1853865947614463
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 969566.198035208,
+     "dps": 1183789.1028667,
+     "boss": 1183789.1028667,
+     "clear": 794109.8715100297,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1662640136301754
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 726523.3721094884,
+     "dps": 887046.65305375,
+     "boss": 887046.65305375,
+     "clear": 595048.984632557,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12458632746050675
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 675012.9132209249,
+     "dps": 692878.330575526,
+     "boss": 692878.330575526,
+     "clear": 657608.1440395593,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1157531651080031
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 672438.8178004,
+     "dps": 672438.8178004,
+     "boss": 672438.8178004,
+     "clear": 672438.8178004,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.1153117517863023
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 623406.5847433658,
+     "dps": 638851.119947775,
+     "boss": 638851.119947775,
+     "clear": 608335.4286569265,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.10690356276132082
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 559738.8246144695,
+     "dps": 300739.25530248,
+     "boss": 300739.25530248,
+     "clear": 1041791.3400286465,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.09598563125821664
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 525421.8277299086,
+     "dps": 202359.985184,
+     "boss": 202359.985184,
+     "clear": 1364242.5245486018,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.0901008534582854
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Lich",
+     "score": 438669.4969396897,
+     "dps": 536066.03645376,
+     "boss": 536066.03645376,
+     "clear": 358968.69874150126,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.07522431306508301
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1637
+  },
+  "Abyssal Lich": {
+   "class": "Witch",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Abyssal Lich",
+    "class": "Witch",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 4811417.124183569,
+     "dps": 4045903.4120162996,
+     "boss": 4045903.4120162996,
+     "clear": 5721771.4773250315,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Abyssal Lich",
+     "score": 2249557.0721808355,
+     "dps": 1898077.9536762482,
+     "boss": 1898077.9536762482,
+     "clear": 2666121.8055862705,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.46754563450213316
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 929940.413553063,
+     "dps": 966139.7612740789,
+     "boss": 966139.7612740789,
+     "clear": 895097.3838596778,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.19327786170916555
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 852801.9433804982,
+     "dps": 1041226.1169203,
+     "boss": 1041226.1169203,
+     "clear": 698475.7132145804,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1772454811897455
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 682199.5438683694,
+     "dps": 832929.600525,
+     "boss": 832929.600525,
+     "clear": 558746.1621736934,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1417876534627268
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 629536.638323562,
+     "dps": 647620.8080007801,
+     "boss": 647620.8080007801,
+     "clear": 611957.4511745058,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1308422491908526
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 624717.8892854,
+     "dps": 624717.8892854,
+     "boss": 624717.8892854,
+     "clear": 624717.8892854,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.1298407253333717
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 505766.2705770183,
+     "dps": 518213.90012782393,
+     "boss": 518213.90012782393,
+     "clear": 493617.63625076355,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction"
+     ],
+     "relative": 0.10511794291018571
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 491458.7936869257,
+     "dps": 264053.42121312,
+     "boss": 264053.42121312,
+     "clear": 914707.8829070188,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10214429158858669
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 434046.58157051867,
+     "dps": 167167.89288192,
+     "boss": 167167.89288192,
+     "clear": 1126989.3501985325,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.09021179631025451
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Abyssal Lich",
+     "score": 431106.56221486593,
+     "dps": 526839.8158938,
+     "boss": 526839.8158938,
+     "clear": 352769.21443269233,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08960074570296558
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1707
+  },
+  "Deadeye": {
+   "class": "Ranger",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Deadeye",
+    "class": "Ranger",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 6062252.828989831,
+     "dps": 4621799.6684678,
+     "boss": 4621799.6684678,
+     "clear": 7951644.813453958,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Dialla's Desire",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Deadeye",
+     "score": 2630279.3527068463,
+     "dps": 2005298.12649597,
+     "boss": 2005298.12649597,
+     "clear": 3450045.3483019047,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.43387820120744397
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 797324.9290764463,
+     "dps": 948184.47862675,
+     "boss": 948184.47862675,
+     "clear": 670467.674652806,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13152287632472542
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 768931.322151847,
+     "dps": 869886.15800329,
+     "boss": 869886.15800329,
+     "clear": 679692.8227290534,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1268392038145951
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 634657.6352455475,
+     "dps": 657485.1801070779,
+     "boss": 657485.1801070779,
+     "clear": 612622.650916439,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10469006376814248
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 632882.97513839,
+     "dps": 632882.97513839,
+     "boss": 632882.97513839,
+     "clear": 632882.97513839,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.10439732439266294
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 503418.51614498015,
+     "dps": 270479.20028631,
+     "boss": 270479.20028631,
+     "clear": 936967.4345729746,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08304149139699707
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 496592.7593649515,
+     "dps": 595845.734986,
+     "boss": 595845.734986,
+     "clear": 413872.8435464775,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.08191554746615543
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 418832.66389543953,
+     "dps": 498078.7839,
+     "boss": 498078.7839,
+     "clear": 352194.885660839,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.06908861700597049
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 417477.81979155523,
+     "dps": 156606.78077096,
+     "boss": 156606.78077096,
+     "clear": 1112900.2790294818,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.06886512845441992
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Deadeye",
+     "score": 366293.52564183174,
+     "dps": 436008.7318296,
+     "boss": 436008.7318296,
+     "clear": 307725.3667927908,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.06042201405560121
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1911
+  },
+  "Pathfinder": {
+   "class": "Ranger",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Pathfinder",
+    "class": "Ranger",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 4913298.147353126,
+     "dps": 3998429.168041,
+     "boss": 3998429.168041,
+     "clear": 6037495.643973383,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Pathfinder",
+     "score": 1907948.1091564966,
+     "dps": 1573812.97391715,
+     "boss": 1573812.97391715,
+     "clear": 2313023.242001489,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.3883232915927033
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 820177.1724440939,
+     "dps": 975360.52903333,
+     "boss": 975360.52903333,
+     "clear": 689684.0441811662,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1669300636449137
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 770335.6531868895,
+     "dps": 870674.8666872601,
+     "boss": 870674.8666872601,
+     "clear": 681559.835106648,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.15678585546490434
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 657617.5857091411,
+     "dps": 680344.6631958659,
+     "boss": 680344.6631958659,
+     "clear": 635649.711724743,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1338444291363451
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 649329.70189084,
+     "dps": 649329.70189084,
+     "boss": 649329.70189084,
+     "clear": 649329.70189084,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.13215760216803543
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 527939.8992215822,
+     "dps": 619913.1534815901,
+     "boss": 619913.1534815901,
+     "clear": 449612.2329792955,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.10745122388023452
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 511721.6570265596,
+     "dps": 274940.35305183,
+     "boss": 274940.35305183,
+     "clear": 952421.3210733888,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10415033683682161
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 421388.1799292137,
+     "dps": 158073.65849184,
+     "boss": 158073.65849184,
+     "clear": 1123324.403814072,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.0857648299149569
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 363068.1697477164,
+     "dps": 431763.250695,
+     "boss": 431763.250695,
+     "clear": 305302.72243358183,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.07389500064092532
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Pathfinder",
+     "score": 362681.33142125804,
+     "dps": 431713.0866804,
+     "boss": 431713.0866804,
+     "clear": 304687.8869782204,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.0738162677175698
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1849
+  },
+  "Titan": {
+   "class": "Warrior",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Titan",
+    "class": "Warrior",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 2925082.7126522693,
+     "dps": 2228484.09337842,
+     "boss": 2228484.09337842,
+     "clear": 3839430.0867034467,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Titan",
+     "score": 1112889.1186303645,
+     "dps": 1002284.4651672901,
+     "boss": 1002284.4651672901,
+     "clear": 1235699.278407103,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.38046415365166586
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 703887.6304852361,
+     "dps": 728451.710716441,
+     "boss": 728451.710716441,
+     "clear": 680151.874257844,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.24063853901997795
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 685050.9144117221,
+     "dps": 814667.42155754,
+     "boss": 814667.42155754,
+     "clear": 576056.8581950964,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.2341988181901919
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 677919.745508885,
+     "dps": 806186.98476,
+     "boss": 806186.98476,
+     "clear": 570060.2838281319,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.2317608806672659
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 552760.800858185,
+     "dps": 580761.274286542,
+     "boss": 580761.274286542,
+     "clear": 526110.325349671,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.18897270783737208
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 517230.2708267938,
+     "dps": 277900.04842971,
+     "boss": 277900.04842971,
+     "clear": 962674.0066122185,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.17682586156950209
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 483904.7841067884,
+     "dps": 491237.739720801,
+     "boss": 491237.739720801,
+     "clear": 476681.2912512105,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.16543285494584045
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 410986.75988975307,
+     "dps": 424877.63710762805,
+     "boss": 424877.63710762805,
+     "clear": 397550.02864951914,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.14050432082212738
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 341503.7352880582,
+     "dps": 128106.92704926,
+     "boss": 128106.92704926,
+     "clear": 910370.7652814998,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.11675011233388523
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Titan",
+     "score": 341070.62093847105,
+     "dps": 406169.13712499995,
+     "boss": 406169.13712499995,
+     "clear": 286405.7306046705,
+     "supports": [
+      "Concentrated Area",
+      "Controlled Destruction",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.11660204323904777
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1655
+  },
+  "Warbringer": {
+   "class": "Warrior",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Warbringer",
+    "class": "Warrior",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 2925082.7126522693,
+     "dps": 2228484.09337842,
+     "boss": 2228484.09337842,
+     "clear": 3839430.0867034467,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Warbringer",
+     "score": 1112889.1186303645,
+     "dps": 1002284.4651672901,
+     "boss": 1002284.4651672901,
+     "clear": 1235699.278407103,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.38046415365166586
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 703887.6304852361,
+     "dps": 728451.710716441,
+     "boss": 728451.710716441,
+     "clear": 680151.874257844,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.24063853901997795
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 685050.9144117221,
+     "dps": 814667.42155754,
+     "boss": 814667.42155754,
+     "clear": 576056.8581950964,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.2341988181901919
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 649393.9695784053,
+     "dps": 772263.9290625,
+     "boss": 772263.9290625,
+     "clear": 546073.0611058607,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.22200875440871834
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 552760.800858185,
+     "dps": 580761.274286542,
+     "boss": 580761.274286542,
+     "clear": 526110.325349671,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.18897270783737208
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 517230.2708267938,
+     "dps": 277900.04842971,
+     "boss": 277900.04842971,
+     "clear": 962674.0066122185,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.17682586156950209
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 483904.7841067884,
+     "dps": 491237.739720801,
+     "boss": 491237.739720801,
+     "clear": 476681.2912512105,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.16543285494584045
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 410986.75988975307,
+     "dps": 424877.63710762805,
+     "boss": 424877.63710762805,
+     "clear": 397550.02864951914,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.14050432082212738
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 341503.7352880582,
+     "dps": 128106.92704926,
+     "boss": 128106.92704926,
+     "clear": 910370.7652814998,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.11675011233388523
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Warbringer",
+     "score": 341070.62093847105,
+     "dps": 406169.13712499995,
+     "boss": 406169.13712499995,
+     "clear": 286405.7306046705,
+     "supports": [
+      "Concentrated Area",
+      "Controlled Destruction",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.11660204323904777
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1628
+  },
+  "Smith of Kitava": {
+   "class": "Warrior",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Smith of Kitava",
+    "class": "Warrior",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 2925082.7126522693,
+     "dps": 2228484.09337842,
+     "boss": 2228484.09337842,
+     "clear": 3839430.0867034467,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Smith of Kitava",
+     "score": 1112889.1186303645,
+     "dps": 1002284.4651672901,
+     "boss": 1002284.4651672901,
+     "clear": 1235699.278407103,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.38046415365166586
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 716176.2136292645,
+     "dps": 741059.14721169,
+     "boss": 741059.14721169,
+     "clear": 692128.7874230006,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.24483964522831692
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 691773.30775398,
+     "dps": 822661.73955,
+     "boss": 822661.73955,
+     "clear": 581709.6946585265,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.23649700733649556
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 685050.9144117221,
+     "dps": 814667.42155754,
+     "boss": 814667.42155754,
+     "clear": 576056.8581950964,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.2341988181901919
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 555044.8191553252,
+     "dps": 586520.093096192,
+     "boss": 586520.093096192,
+     "clear": 525258.648249996,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.18975354671323044
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 517230.2708267938,
+     "dps": 277900.04842971,
+     "boss": 277900.04842971,
+     "clear": 962674.0066122185,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.17682586156950209
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 494151.48724657873,
+     "dps": 501666.761685208,
+     "boss": 501666.761685208,
+     "clear": 486748.796208329,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.1689359022598425
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 385655.3967254703,
+     "dps": 409115.6110852391,
+     "boss": 409115.6110852391,
+     "clear": 363540.4785188997,
+     "supports": [
+      "Atalui's Bloodletting",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.13184427061065354
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 344884.9381095507,
+     "dps": 410713.163625,
+     "boss": 410713.163625,
+     "clear": 289607.519479048,
+     "supports": [
+      "Concentrated Area",
+      "Controlled Destruction",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.11790604642315639
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Smith of Kitava",
+     "score": 341503.7352880582,
+     "dps": 128106.92704926,
+     "boss": 128106.92704926,
+     "clear": 910370.7652814998,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.11675011233388523
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1628
+  },
+  "Stormweaver": {
+   "class": "Sorceress",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Stormweaver",
+    "class": "Sorceress",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 5545355.163613658,
+     "dps": 4663069.2783914,
+     "boss": 4663069.2783914,
+     "clear": 6594575.815786441,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Stormweaver",
+     "score": 2452217.7862845664,
+     "dps": 2068628.480542841,
+     "boss": 2068628.480542841,
+     "clear": 2906936.7109324415,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.4422111323680423
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 1068910.7665628055,
+     "dps": 1112601.95594844,
+     "boss": 1112601.95594844,
+     "clear": 1026935.3031110733,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.19275785500206707
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 971829.7684540044,
+     "dps": 1186552.8027572,
+     "boss": 1186552.8027572,
+     "clear": 795963.8177573998,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1752511317635256
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 748813.3797958839,
+     "dps": 890494.1990625,
+     "boss": 890494.1990625,
+     "clear": 629674.4867643771,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1350343409398355
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 701777.1907414952,
+     "dps": 719013.4886045799,
+     "boss": 719013.4886045799,
+     "clear": 684954.08396416,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1265522531985451
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 676827.5873392,
+     "dps": 676827.5873392,
+     "boss": 676827.5873392,
+     "clear": 676827.5873392,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.12205306375690135
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 595045.7856880185,
+     "dps": 319709.15467933,
+     "boss": 319709.15467933,
+     "clear": 1107504.9990989931,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10730526145421027
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 539944.1308954004,
+     "dps": 561367.209983193,
+     "boss": 561367.209983193,
+     "clear": 519338.6063591385,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction"
+     ],
+     "relative": 0.09736871939930772
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 500386.0375633657,
+     "dps": 187707.80810502,
+     "boss": 187707.80810502,
+     "clear": 1333914.6043849082,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.09023516489019373
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Stormweaver",
+     "score": 484200.8177206904,
+     "dps": 591703.6677710001,
+     "boss": 591703.6677710001,
+     "clear": 396229.47203383193,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08731646638213854
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1666
+  },
+  "Chronomancer": {
+   "class": "Sorceress",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Chronomancer",
+    "class": "Sorceress",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 5118489.994409674,
+     "dps": 4304119.8878111,
+     "boss": 4304119.8878111,
+     "clear": 6086944.719422222,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Chronomancer",
+     "score": 2324925.513729742,
+     "dps": 1961586.8793879503,
+     "boss": 1961586.8793879503,
+     "clear": 2755564.2328103487,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.4542209745977789
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 1009946.6107937209,
+     "dps": 1050153.247369072,
+     "boss": 1050153.247369072,
+     "clear": 971279.3434759065,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.19731338967093168
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 980911.2541682972,
+     "dps": 1149637.0454879,
+     "boss": 1149637.0454879,
+     "clear": 836948.4023939698,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.19164074858789046
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 694227.7704433857,
+     "dps": 825580.60404375,
+     "boss": 825580.60404375,
+     "clear": 583773.6435354217,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13563136221846858
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 638194.7593662627,
+     "dps": 661585.2497990441,
+     "boss": 661585.2497990441,
+     "clear": 615631.244811272,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12468418616882869
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 621358.68544762,
+     "dps": 621358.68544762,
+     "boss": 621358.68544762,
+     "clear": 621358.68544762,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.12139492040157492
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 496685.2418723216,
+     "dps": 266861.51324825,
+     "boss": 266861.51324825,
+     "clear": 924435.3990613681,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.09703745487727682
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 495820.4634344514,
+     "dps": 507995.607824503,
+     "boss": 507995.607824503,
+     "clear": 483937.1210573215,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.09686850301084458
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 450397.12335022225,
+     "dps": 170688.77252325,
+     "boss": 170688.77252325,
+     "clear": 1188464.6290635404,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.08799413964707134
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Chronomancer",
+     "score": 440540.09194187465,
+     "dps": 529801.3547408,
+     "boss": 529801.3547408,
+     "clear": 366317.62239095237,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08606837024650335
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1692
+  },
+  "Disciple of Varashta": {
+   "class": "Sorceress",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Disciple of Varashta",
+    "class": "Sorceress",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 5041549.872771887,
+     "dps": 4239421.2153367,
+     "boss": 4239421.2153367,
+     "clear": 5995446.979341391,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Disciple of Varashta",
+     "score": 2271391.9343453553,
+     "dps": 1916568.083182259,
+     "boss": 1916568.083182259,
+     "clear": 2691906.1027264902,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.45053445699556766
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 983237.6671932014,
+     "dps": 1023904.7588713019,
+     "boss": 1023904.7588713019,
+     "clear": 944185.7768619312,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.19502686515180875
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 955996.1956944722,
+     "dps": 1136877.4778354,
+     "boss": 1136877.4778354,
+     "clear": 803893.7739556703,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1896234729041483
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 700805.726120797,
+     "dps": 833403.1557375,
+     "boss": 833403.1557375,
+     "clear": 589305.0228842547,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13900600882789405
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 620713.9637754621,
+     "dps": 643953.773569286,
+     "boss": 643953.773569286,
+     "clear": 598312.861325893,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1231196714184617
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 611453.03158879,
+     "dps": 611453.03158879,
+     "boss": 611453.03158879,
+     "clear": 611453.03158879,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.12128274975342214
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 492289.7972539851,
+     "dps": 264499.90693632,
+     "boss": 264499.90693632,
+     "clear": 916254.5548218918,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.09764651935959526
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 486692.07261319365,
+     "dps": 498744.82988046104,
+     "boss": 498744.82988046104,
+     "clear": 474930.5844459559,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.09653620114752652
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 424854.9565020014,
+     "dps": 163627.84750406,
+     "boss": 163627.84750406,
+     "clear": 1103123.5625087523,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.08427070389535044
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Disciple of Varashta",
+     "score": 420668.55706941057,
+     "dps": 514109.4642354,
+     "boss": 514109.4642354,
+     "clear": 344210.8095987759,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08344032444096867
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1632
+  },
+  "Amazon": {
+   "class": "Huntress",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Amazon",
+    "class": "Huntress",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 4405437.816333353,
+     "dps": 3598570.374002562,
+     "boss": 3598570.374002562,
+     "clear": 5393220.178154604,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Amazon",
+     "score": 1713450.6382398605,
+     "dps": 1487624.87142614,
+     "boss": 1487624.87142614,
+     "clear": 1973557.4109284799,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.38893992145052364
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 823955.0987494033,
+     "dps": 979853.26587556,
+     "boss": 979853.26587556,
+     "clear": 692860.8888683936,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1870313764717218
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 664386.0830893159,
+     "dps": 687346.5210651939,
+     "boss": 687346.5210651939,
+     "clear": 642192.626098847,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.15081045534817802
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 649209.7178380537,
+     "dps": 726921.5208494619,
+     "boss": 726921.5208494619,
+     "clear": 579805.7226904528,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.147365538887209
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 631169.38624799,
+     "dps": 631169.38624799,
+     "boss": 631169.38624799,
+     "clear": 631169.38624799,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.14327052442050187
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 515266.46812980325,
+     "dps": 276844.9267646,
+     "boss": 276844.9267646,
+     "clear": 959018.957947944,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1169614666264112
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 486515.24064739636,
+     "dps": 569238.2110544699,
+     "boss": 569238.2110544699,
+     "clear": 415813.7573788852,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.11043516239035764
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 420006.612724359,
+     "dps": 499474.8522,
+     "boss": 499474.8522,
+     "clear": 353182.0550227686,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.09533822294963877
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 400027.9983875981,
+     "dps": 150060.89922816,
+     "boss": 150060.89922816,
+     "clear": 1066383.0505952267,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.09080323342766906
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Amazon",
+     "score": 383902.0358058557,
+     "dps": 456948.8885652,
+     "boss": 456948.8885652,
+     "clear": 322532.29361964273,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08714276578425921
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1705
+  },
+  "Spirit Walker": {
+   "class": "Huntress",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Spirit Walker",
+    "class": "Huntress",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 4636132.803353811,
+     "dps": 3879254.9779697,
+     "boss": 3879254.9779697,
+     "clear": 5540684.356247837,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Dialla's Desire",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Spirit Walker",
+     "score": 1757513.5005458489,
+     "dps": 1436725.7968484086,
+     "boss": 1436725.7968484086,
+     "clear": 2149925.693111804,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.37909041330189064
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 848157.2882116436,
+     "dps": 1008634.6817827,
+     "boss": 1008634.6817827,
+     "clear": 713212.4232284827,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.18294499406878093
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 778060.8334164388,
+     "dps": 917187.18961563,
+     "boss": 917187.18961563,
+     "clear": 660038.2859145496,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.16782539811059427
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 656716.99119531,
+     "dps": 656716.99119531,
+     "boss": 656716.99119531,
+     "clear": 656716.99119531,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.14165189373355233
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 619237.9923744852,
+     "dps": 641937.988729538,
+     "boss": 641937.988729538,
+     "clear": 597340.705694769,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13356778561790209
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 500620.2473864851,
+     "dps": 268975.73255179,
+     "boss": 268975.73255179,
+     "clear": 931759.2695655165,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1079822922726314
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 487640.2287507736,
+     "dps": 581471.25711096,
+     "boss": 581471.25711096,
+     "clear": 408950.5539406734,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction"
+     ],
+     "relative": 0.10518254101737795
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 413476.2351193066,
+     "dps": 155105.68235616,
+     "boss": 155105.68235616,
+     "clear": 1102232.9705230582,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.08918558907980267
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 373731.1444095952,
+     "dps": 444443.73603,
+     "boss": 444443.73603,
+     "clear": 314269.1796026969,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08061269171134085
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Spirit Walker",
+     "score": 372067.02931068465,
+     "dps": 442874.62048176,
+     "boss": 442874.62048176,
+     "clear": 312580.28321760497,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08025374705433994
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1625
+  },
+  "Ritualist": {
+   "class": "Huntress",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Ritualist",
+    "class": "Huntress",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 5061673.972226525,
+     "dps": 4119177.025837,
+     "boss": 4119177.025837,
+     "clear": 6219820.910928066,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Ritualist",
+     "score": 1820455.4302878836,
+     "dps": 1580526.87073669,
+     "boss": 1580526.87073669,
+     "clear": 2096805.8405232602,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.3596548178086435
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 858325.2128824207,
+     "dps": 1020726.450146,
+     "boss": 1020726.450146,
+     "clear": 721762.5946347091,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.16957338967149269
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 745398.8852201392,
+     "dps": 840712.1147908701,
+     "boss": 840712.1147908701,
+     "clear": 660891.5088914097,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1472633143324033
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 682021.96992099,
+     "dps": 682021.96992099,
+     "boss": 682021.96992099,
+     "clear": 682021.96992099,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.13474237449176973
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 681186.0230911257,
+     "dps": 704211.981054822,
+     "boss": 704211.981054822,
+     "clear": 658912.955953501,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13457722224481522
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 530764.1732510878,
+     "dps": 285171.6107324,
+     "boss": 285171.6107324,
+     "clear": 987863.4373295418,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10485941531663204
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 491543.36649280234,
+     "dps": 582203.87887429,
+     "boss": 582203.87887429,
+     "clear": 415000.4661773253,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.09711083115781609
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 439609.7295960122,
+     "dps": 522787.01826,
+     "boss": 522787.01826,
+     "clear": 369666.24572794145,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08685066086993293
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 430759.85395661904,
+     "dps": 161589.21699648,
+     "boss": 161589.21699648,
+     "clear": 1148307.140969498,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.08510225200599729
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Ritualist",
+     "score": 409177.04427214456,
+     "dps": 486999.419352,
+     "boss": 486999.419352,
+     "clear": 343790.6636152973,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08083828522289359
+    }
+   ],
+   "relaxed": [],
+   "seconds": 2209
+  },
+  "Tactician": {
+   "class": "Mercenary",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Tactician",
+    "class": "Mercenary",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 4605838.639785954,
+     "dps": 3748219.4257907,
+     "boss": 3748219.4257907,
+     "clear": 5659687.218357077,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Dialla's Desire",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Tactician",
+     "score": 1873859.5306957301,
+     "dps": 1573934.3710472248,
+     "boss": 1573934.3710472248,
+     "clear": 2230937.709583741,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.40684437238183696
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 912468.0871782973,
+     "dps": 391723.16215692996,
+     "boss": 391723.16215692996,
+     "clear": 2125475.566811824,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.19811117117657043
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 783859.9486678513,
+     "dps": 920041.71588211,
+     "boss": 920041.71588211,
+     "clear": 667835.3910686129,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.17018832181760485
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 605370.9006997262,
+     "dps": 719911.38232772,
+     "boss": 719911.38232772,
+     "clear": 509054.22029731213,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1314355425894511
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 596124.4350019112,
+     "dps": 708915.41953125,
+     "boss": 708915.41953125,
+     "clear": 501278.9004382532,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12942798947676873
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 587227.9470016807,
+     "dps": 610285.479366822,
+     "boss": 610285.479366822,
+     "clear": 565041.563986711,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12749642202597242
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 559410.3683689352,
+     "dps": 567289.432519235,
+     "boss": 567289.432519235,
+     "clear": 551640.7362798125,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.12145678824626226
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 499288.33540548343,
+     "dps": 268260.11626848,
+     "boss": 268260.11626848,
+     "clear": 929280.3020426835,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10840334941232044
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 401513.8409992545,
+     "dps": 476632.34957807,
+     "boss": 476632.34957807,
+     "clear": 338234.20642070513,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.08717496907749117
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Tactician",
+     "score": 324407.51685529214,
+     "dps": 386265.75162,
+     "boss": 386265.75162,
+     "clear": 272455.5220100118,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.07043397353372507
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1858
+  },
+  "Witchhunter": {
+   "class": "Mercenary",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Witchhunter",
+    "class": "Mercenary",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 4605838.639785954,
+     "dps": 3748219.4257907,
+     "boss": 3748219.4257907,
+     "clear": 5659687.218357077,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Dialla's Desire",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Witchhunter",
+     "score": 1875156.095980725,
+     "dps": 1574731.021083702,
+     "boss": 1574731.021083702,
+     "clear": 2232895.864256157,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.4071258770949624
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 783859.9486678513,
+     "dps": 920041.71588211,
+     "boss": 920041.71588211,
+     "clear": 667835.3910686129,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.17018832181760485
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 605370.9006997262,
+     "dps": 719911.38232772,
+     "boss": 719911.38232772,
+     "clear": 509054.22029731213,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1314355425894511
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 587227.9470016807,
+     "dps": 610285.479366822,
+     "boss": 610285.479366822,
+     "clear": 565041.563986711,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12749642202597242
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 559410.3683689352,
+     "dps": 567289.432519235,
+     "boss": 567289.432519235,
+     "clear": 551640.7362798125,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.12145678824626226
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 499288.33540548343,
+     "dps": 268260.11626848,
+     "boss": 268260.11626848,
+     "clear": 929280.3020426835,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10840334941232044
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 403814.32696565887,
+     "dps": 151481.24948736,
+     "boss": 151481.24948736,
+     "clear": 1076476.5356410313,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.08767444075818194
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 401513.8409992545,
+     "dps": 476632.34957807,
+     "boss": 476632.34957807,
+     "clear": 338234.20642070513,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.08717496907749117
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 395551.07721830584,
+     "dps": 470392.155375,
+     "boss": 470392.155375,
+     "clear": 332617.4828826186,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08588035929037414
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Witchhunter",
+     "score": 330954.91501051583,
+     "dps": 393990.50439180003,
+     "boss": 393990.50439180003,
+     "clear": 278004.5573400306,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.07185551663744265
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1665
+  },
+  "Gemling Legionnaire": {
+   "class": "Mercenary",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Gemling Legionnaire",
+    "class": "Mercenary",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 4767010.4597485615,
+     "dps": 3879380.6308870995,
+     "boss": 3879380.6308870995,
+     "clear": 5857736.294918758,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Gemling Legionnaire",
+     "score": 1774035.9463549252,
+     "dps": 1540225.28440773,
+     "boss": 1540225.28440773,
+     "clear": 2043339.7443995494,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.3721485323630898
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 783859.9486678513,
+     "dps": 920041.71588211,
+     "boss": 920041.71588211,
+     "clear": 667835.3910686129,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.16443428334940058
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 661518.4298621102,
+     "dps": 786682.42349745,
+     "boss": 786682.42349745,
+     "clear": 556268.4762953143,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13877008146883787
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 595267.6000520567,
+     "dps": 707896.4653125,
+     "boss": 707896.4653125,
+     "clear": 500558.3910004564,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12487230835307511
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 587227.9470016807,
+     "dps": 610285.479366822,
+     "boss": 610285.479366822,
+     "clear": 565041.563986711,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12318578949219557
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 558601.7206770019,
+     "dps": 566542.964123835,
+     "boss": 566542.964123835,
+     "clear": 550771.7897898074,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.11718072057816832
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 499288.33540548343,
+     "dps": 268260.11626848,
+     "boss": 268260.11626848,
+     "clear": 929280.3020426835,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1047382504446652
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 403814.32696565887,
+     "dps": 151481.24948736,
+     "boss": 151481.24948736,
+     "clear": 1076476.5356410313,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.08471018269738771
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 373508.74392085394,
+     "dps": 428929.67851234006,
+     "boss": 428929.67851234006,
+     "clear": 325248.6101432603,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.07835282659324286
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Gemling Legionnaire",
+     "score": 324407.51685529214,
+     "dps": 386265.75162,
+     "boss": 386265.75162,
+     "clear": 272455.5220100118,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.06805261276317887
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1684
+  },
+  "Martial Artist": {
+   "class": "Monk",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Martial Artist",
+    "class": "Monk",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 4723912.071338151,
+     "dps": 3972320.726762,
+     "boss": 3972320.726762,
+     "clear": 5617709.84588257,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Martial Artist",
+     "score": 2044593.1380439377,
+     "dps": 1725245.1935903141,
+     "boss": 1725245.1935903141,
+     "clear": 2423053.3234738847,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.43281778051062714
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 880212.5137411351,
+     "dps": 907691.6228931169,
+     "boss": 907691.6228931169,
+     "clear": 853565.2966334798,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Fire Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1863312653683234
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 787195.3658785989,
+     "dps": 936138.33,
+     "boss": 936138.33,
+     "clear": 661949.7612716501,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.16664056273503175
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 773562.3563274526,
+     "dps": 793936.459608526,
+     "boss": 793936.459608526,
+     "clear": 753711.096001233,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.16375460521819668
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 761723.0093290838,
+     "dps": 930023.55040213,
+     "boss": 930023.55040213,
+     "clear": 623878.7638124594,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.16124834624902518
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 742461.34331595,
+     "dps": 742461.34331595,
+     "boss": 742461.34331595,
+     "clear": 742461.34331595,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.15717086433948627
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 613469.7077514093,
+     "dps": 329608.05101712,
+     "boss": 329608.05101712,
+     "clear": 1141795.7818908128,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1298647600732396
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 482474.6054183035,
+     "dps": 574188.1215168,
+     "boss": 574188.1215168,
+     "clear": 405410.24126138556,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10213454402457413
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 474312.6331642658,
+     "dps": 503841.274388048,
+     "boss": 503841.274388048,
+     "clear": 446514.57793422113,
+     "supports": [
+      "Chaos Attunement",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.1004067446644718
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Martial Artist",
+     "score": 461525.09352863743,
+     "dps": 173130.057972,
+     "boss": 173130.057972,
+     "clear": 1230320.2254519344,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.09769976378876595
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1673
+  },
+  "Invoker": {
+   "class": "Monk",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Invoker",
+    "class": "Monk",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 5274212.404037845,
+     "dps": 4435066.303842099,
+     "boss": 4435066.303842099,
+     "clear": 6272130.916917412,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Invoker",
+     "score": 2420638.9849126483,
+     "dps": 2040962.0218045567,
+     "boss": 2040962.0218045567,
+     "clear": 2870946.65784038,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.45895743278360374
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 1059260.8779227026,
+     "dps": 1293301.5681848,
+     "boss": 1293301.5681848,
+     "clear": 867573.0665604876,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.20083773590759274
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 1053403.9439193727,
+     "dps": 1111639.84096593,
+     "boss": 1111639.84096593,
+     "clear": 998218.8728506522,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.19972725086174098
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 901126.2182345318,
+     "dps": 1071625.71024,
+     "boss": 1071625.71024,
+     "clear": 757753.8066045543,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1708551247470893
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 714118.05511008,
+     "dps": 714118.05511008,
+     "boss": 714118.05511008,
+     "clear": 714118.05511008,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.13539804626817148
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 711255.2791193207,
+     "dps": 721751.478137308,
+     "boss": 721751.478137308,
+     "clear": 700911.7229391554,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Fire Mastery",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13485525887709718
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 652148.91419288,
+     "dps": 350389.80713152,
+     "boss": 350389.80713152,
+     "clear": 1213785.8968121046,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12364858754903503
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 566459.9718998346,
+     "dps": 674073.3543878399,
+     "boss": 674073.3543878399,
+     "clear": 476026.6782183756,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10740181253719754
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 546521.1097740508,
+     "dps": 558984.034599942,
+     "boss": 558984.034599942,
+     "clear": 534336.0542352976,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.10362136901343671
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Invoker",
+     "score": 502604.7421171257,
+     "dps": 188540.10184896,
+     "boss": 188540.10184896,
+     "clear": 1339829.162715687,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.09529474803334433
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1637
+  },
+  "Acolyte of Chayula": {
+   "class": "Monk",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Acolyte of Chayula",
+    "class": "Monk",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 7634261.73125994,
+     "dps": 6419623.3229251,
+     "boss": 6419623.3229251,
+     "clear": 9078718.368607312,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Acolyte of Chayula",
+     "score": 3762492.417253789,
+     "dps": 3174125.1142302714,
+     "boss": 3174125.1142302714,
+     "clear": 4459921.610029285,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.4928429951317423
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 1585160.486864763,
+     "dps": 1850687.2498052502,
+     "boss": 1850687.2498052502,
+     "clear": 1357730.0915547726,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.20763769211291527
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 1030872.0090384906,
+     "dps": 1258640.2591417,
+     "boss": 1258640.2591417,
+     "clear": 844321.5535976378,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Embitter",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.13503231161402138
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 792891.9685263089,
+     "dps": 942912.7704,
+     "boss": 942912.7704,
+     "clear": 666740.0140172342,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.10385967843880195
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 779246.1552186611,
+     "dps": 292315.4860248,
+     "boss": 292315.4860248,
+     "clear": 2077291.8283622814,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.10207223470317885
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 762047.1820948318,
+     "dps": 795583.19964596,
+     "boss": 795583.19964596,
+     "clear": 729924.7998161553,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.09981936812232732
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 748547.8202992223,
+     "dps": 756425.501786042,
+     "boss": 756425.501786042,
+     "clear": 740752.179760865,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Fire Mastery",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.0980511078411355
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 712883.7786915546,
+     "dps": 720160.1659914539,
+     "boss": 720160.1659914539,
+     "clear": 705680.9108872319,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.09337953082909327
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 666157.5707843171,
+     "dps": 357916.44771072,
+     "boss": 357916.44771072,
+     "clear": 1239858.9445990727,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.08725893796077333
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Acolyte of Chayula",
+     "score": 542028.1433854755,
+     "dps": 644977.1821568,
+     "boss": 644977.1821568,
+     "clear": 455511.4759865745,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.0709994184723898
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1681
+  },
+  "Oracle": {
+   "class": "Druid",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Oracle",
+    "class": "Druid",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 4219640.102972155,
+     "dps": 3216680.486580429,
+     "boss": 3216680.486580429,
+     "clear": 5535322.103918157,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Heft",
+      "Multishot II"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Oracle",
+     "score": 1759066.350563614,
+     "dps": 1617149.65366093,
+     "boss": 1617149.65366093,
+     "clear": 1913437.2744539948,
+     "supports": [
+      "Brutality III",
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Heft"
+     ],
+     "relative": 0.41687592013465646
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 1082085.8339646265,
+     "dps": 1117455.941998988,
+     "boss": 1117455.941998988,
+     "clear": 1047835.2730151592,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.2564403142349619
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 1011107.221808378,
+     "dps": 1190683.6125,
+     "boss": 1190683.6125,
+     "clear": 858614.1635446892,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.23961930333731357
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 929282.8906863474,
+     "dps": 1105109.8254545,
+     "boss": 1105109.8254545,
+     "clear": 781430.651534759,
+     "supports": [
+      "Cold Attunement",
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.22022799765122042
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 853454.4378750001,
+     "dps": 853454.4378750001,
+     "boss": 853454.4378750001,
+     "clear": 853454.4378750001,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.20225763739278593
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 742810.51296574,
+     "dps": 742810.51296574,
+     "boss": 742810.51296574,
+     "clear": 742810.51296574,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.17603646160309555
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 707570.4767857366,
+     "dps": 380166.9795,
+     "boss": 380166.9795,
+     "clear": 1316937.0477079917,
+     "supports": [
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Lightning Attunement",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1676850298885326
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 618255.6020667455,
+     "dps": 229660.804,
+     "boss": 229660.804,
+     "clear": 1664367.549139617,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.1465185624791246
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 593012.5008103165,
+     "dps": 705702.2837,
+     "boss": 705702.2837,
+     "clear": 498317.54018639534,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.14053627473883873
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Oracle",
+     "score": 576310.2373414128,
+     "dps": 590349.1262147181,
+     "boss": 590349.1262147181,
+     "clear": 562605.2024403505,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction"
+     ],
+     "relative": 0.1365780548287712
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1607
+  },
+  "Shaman": {
+   "class": "Druid",
+   "request": {
+    "damage": [],
+    "kinds": [],
+    "weapons": [],
+    "goals": [],
+    "ascendancy": "Shaman",
+    "class": "Druid",
+    "_class_unlocked": true
+   },
+   "ranked": [
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 3675400.877059107,
+     "dps": 3247833.4668055,
+     "boss": 3247833.4668055,
+     "clear": 4159256.238089571,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Dialla's Desire",
+      "Heft",
+      "Inexorable Critical I"
+     ],
+     "relative": 1.0
+    },
+    {
+     "skill": "Bonestorm",
+     "weapon_type": "Wand",
+     "weapon_subtype": null,
+     "ascendancy": "Shaman",
+     "score": 1580461.7153874564,
+     "dps": 1200891.21115752,
+     "boss": 1200891.21115752,
+     "clear": 2080004.5920877496,
+     "supports": [
+      "Brutality III",
+      "Deliberation",
+      "Heft",
+      "Inexorable Critical I",
+      "Multishot II"
+     ],
+     "relative": 0.4300107031187498
+    },
+    {
+     "skill": "Coiling Bolts",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 951534.3914127592,
+     "dps": 991356.7122481309,
+     "boss": 991356.7122481309,
+     "clear": 913311.7139924394,
+     "supports": [
+      "Chaos Mastery",
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.258892682251884
+    },
+    {
+     "skill": "Comet",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 728477.7194898365,
+     "dps": 866310.88713827,
+     "boss": 866310.88713827,
+     "clear": 612574.3029112045,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1982036093087979
+    },
+    {
+     "skill": "Firestorm",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 723634.5115732016,
+     "dps": 873966.541357,
+     "boss": 873966.541357,
+     "clear": 599161.2739850706,
+     "supports": [
+      "Concentrated Area",
+      "Considered Casting",
+      "Elemental Focus",
+      "Hourglass",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.1968858733451198
+    },
+    {
+     "skill": "Fireball",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 679410.6900898302,
+     "dps": 706526.9966502179,
+     "boss": 706526.9966502179,
+     "clear": 653335.0997157497,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Fire Attunement",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.18485349294291525
+    },
+    {
+     "skill": "Ember Fusillade",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 608480.5133766653,
+     "dps": 618407.856984027,
+     "boss": 618407.856984027,
+     "clear": 598712.5340949435,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Dialla's Desire",
+      "Rakiata's Flow",
+      "Swift Affliction III"
+     ],
+     "relative": 0.16555486972173344
+    },
+    {
+     "skill": "Spark",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 548062.2690302393,
+     "dps": 294465.61753344,
+     "boss": 294465.61753344,
+     "clear": 1020058.8213001258,
+     "supports": [
+      "Considered Casting",
+      "Deliberation",
+      "Elemental Focus",
+      "Inexorable Critical I",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.14911632427665264
+    },
+    {
+     "skill": "Incinerate",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 465617.2684964205,
+     "dps": 554359.89123898,
+     "boss": 554359.89123898,
+     "clear": 391080.67547514423,
+     "supports": [
+      "Concentrated Area",
+      "Deliberation",
+      "Dialla's Desire",
+      "Elemental Focus",
+      "Rakiata's Flow"
+     ],
+     "relative": 0.12668475741045881
+    },
+    {
+     "skill": "Essence Drain",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 456450.2601021727,
+     "dps": 472484.91465062904,
+     "boss": 472484.91465062904,
+     "clear": 440959.77138529305,
+     "supports": [
+      "Atalui's Bloodletting",
+      "Considered Casting",
+      "Deliberation",
+      "Extraction",
+      "Inexorable Critical I"
+     ],
+     "relative": 0.12419060542517037
+    },
+    {
+     "skill": "Dark Effigy",
+     "weapon_type": "Staff",
+     "weapon_subtype": "none",
+     "ascendancy": "Shaman",
+     "score": 451766.505621025,
+     "dps": 167815.80070502,
+     "boss": 167815.80070502,
+     "clear": 1216172.581745018,
+     "supports": [
+      "Chaos Attunement",
+      "Chaos Mastery",
+      "Concentrated Area",
+      "Dialla's Desire",
+      "Extraction"
+     ],
+     "relative": 0.12291625341900352
+    }
+   ],
+   "relaxed": [],
+   "seconds": 1454
+  }
+ },
+ "main_skills": [
+  "Animus Exchange",
+  "Arc",
+  "Armour Breaker",
+  "Armour Piercing Rounds",
+  "Artillery Ballista",
+  "Ball Lightning",
+  "Bitter Dead",
+  "Blood Hunt",
+  "Bone Cage",
+  "Boneshatter",
+  "Bonestorm",
+  "Cackling Companions",
+  "Cluster Grenade",
+  "Coiling Bolts",
+  "Comet",
+  "Conductive Runes",
+  "Contagion",
+  "Cross Slash",
+  "Cull The Weak",
+  "Dark Effigy",
+  "Detonate Dead",
+  "Detonate Living",
+  "Detonate Minion",
+  "Detonating Arrow",
+  "Devour",
+  "Disengage",
+  "Earthquake",
+  "Earthshatter",
+  "Electrocuting Arrow",
+  "Elemental Sundering",
+  "Ember Fusillade",
+  "Entangle",
+  "Escape Shot",
+  "Essence Drain",
+  "Eternal March",
+  "Explosive Grenade",
+  "Explosive Shot",
+  "Explosive Spear",
+  "Eye of Winter",
+  "Falling Thunder",
+  "Fangs of Frost",
+  "Fireball",
+  "Firestorm",
+  "Flame Breath",
+  "Flame Wall",
+  "Flameblast",
+  "Flash Grenade",
+  "Flicker Strike",
+  "Forge Hammer",
+  "Fortifying Cry",
+  "Fragmentation Rounds",
+  "Fragments Of The Past",
+  "Freezing Salvo",
+  "Frost Bomb",
+  "Frost Darts",
+  "Frost Wall",
+  "Frostbolt",
+  "Frostflame Nova",
+  "Frozen Locus",
+  "Furious Slam",
+  "Fury of the Mountain",
+  "Galvanic Shards",
+  "Gas Arrow",
+  "Gas Grenade",
+  "Gathering Storm",
+  "Glacial Bolt",
+  "Glacial Cascade",
+  "Glacial Lance",
+  "Grim Pillars",
+  "Hailstorm Rounds",
+  "Hammer of the Gods",
+  "Hexblast",
+  "High Velocity Rounds",
+  "Ice Nova",
+  "Ice Shards",
+  "Ice Shot",
+  "Ice Strike",
+  "Incendiary Shot",
+  "Incinerate",
+  "Killing Palm",
+  "Leap Slam",
+  "Lightning Arrow",
+  "Lightning Conduit",
+  "Lightning Rod",
+  "Lightning Spear",
+  "Lunar Assault",
+  "Magnetic Salvo",
+  "Molten Blast",
+  "Oil Barrage",
+  "Oil Grenade",
+  "Orb of Storms",
+  "Perfect Strike",
+  "Permafrost Bolts",
+  "Plasma Blast",
+  "Poisonburst Arrow",
+  "Powered by Verisium",
+  "Primal Strikes",
+  "Profane Ritual",
+  "Rain of Arrows",
+  "Raise Zombie",
+  "Rake",
+  "Rampage",
+  "Rapid Assault",
+  "Rapid Shot",
+  "Rend",
+  "Rolling Magma",
+  "Rolling Slam",
+  "Seismic Cry",
+  "Shattering Palm",
+  "Shield Wall",
+  "Shockburst Rounds",
+  "Shockchain Arrow",
+  "Shockwave Totem",
+  "Siege Ballista",
+  "Siege Cascade",
+  "Siphoning Strike",
+  "Skeletal Arsonist",
+  "Skeletal Brute",
+  "Skeletal Cleric",
+  "Skeletal Frost Mage",
+  "Skeletal Reaver",
+  "Skeletal Sniper",
+  "Skeletal Storm Mage",
+  "Skyfall",
+  "Snap",
+  "Snipe",
+  "Solar Orb",
+  "Spark",
+  "Spear of Solaris",
+  "Spearfield",
+  "Spiral Volley",
+  "Stampede",
+  "Storm Lance",
+  "Storm Wave",
+  "Stormblast Bolts",
+  "Stormcaller Arrow",
+  "Summon Spectre",
+  "Sunder",
+  "Supercharged Slam",
+  "Tame Beast",
+  "Tamed Companion",
+  "Tempest Bell",
+  "Tempest Flurry",
+  "Thrashing Vines",
+  "Thunderous Leap",
+  "Thunderstorm",
+  "Tornado",
+  "Tornado Shot",
+  "Toxic Growth",
+  "Twister",
+  "Unearth",
+  "Vaulting Impact",
+  "Vine Arrow",
+  "Volcanic Fissure",
+  "Volcano",
+  "Voltaic Barrier",
+  "Voltaic Grenade",
+  "Wardbound Minions",
+  "Wave of Frost",
+  "Whirling Assault",
+  "Whirling Slash",
+  "Whirlwind Lance",
+  "Wind Blast",
+  "Wind Serpent's Fury",
+  "Wing Blast",
+  "Wolf Pack"
+ ],
+ "updated": "2026-11-23 11:23"
+}
