@@ -315,6 +315,14 @@
     ]
    },
    "full_build": "2026-11-22, full Uber Endgame Amazon, same engine: Wind Serpent's Fury 1.50M vs Lightning Spear 1.69M (-11%)."
+  },
+  {
+   "name": "Rapid Shot on Acolyte of Chayula (crossbow Monk)",
+   "status": "unconfirmed",
+   "found": "2026-11-23",
+   "detector": "cross-class finalists (weapon_finalists.py)",
+   "what": "The Crossbow search with no class rule picks Acolyte of Chayula as Rapid Shot's best ascendancy; its full Uber Endgame build reaches 9.26M boss DPS, above Rapid Shot Tactician (6.30M) and every other full build so far. 0.1% of Acolytes play it.",
+   "check": "First: what does Acolyte give it? PoB's config defaults Into the Breach's Purple Flames to 10 stacks (ConfigOptions purpleFlameStacks defaultState 10): if the build gets them free, the number is inflated (a Bonestorm-type trap). Then the usual evidence checks."
   }
  ]
 }
