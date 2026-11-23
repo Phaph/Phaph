@@ -284,7 +284,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     vs a full build of a skill the ladder plays a lot on that class (Comet, Spark, Lightning Spear, Ice Shot...). A
     lead = our skill's full build clearly beats the popular one; then evidence checks (TESTS.md) like Bonestorm's.
 
-35. [ ] (2026-11-22: tools/rank_check.py; ~/rank_check.sh queued after the lead builds: top 3 of Deadeye, Titan,
+35. [x] (2026-11-23: answered by 36: the search's #1 was the best full build on 2 of 6; light builds wrong on 3 of 5;
+    the endgame pick uses full Uber builds) (2026-11-22: tools/rank_check.py; ~/rank_check.sh queued after the lead builds: top 3 of Deadeye, Titan,
     Amazon, Tactician, Martial Artist, Oracle as full Uber builds, ~6 h -> data/breaker/rank_check.json) Search vs full build disagree (from task 34): the search's #1 Deadeye skill (Rain of Arrows) is 43% weaker
     than Ice Shot once both are full Uber Endgame builds (657k vs 1.15M). The search ranks on a mid-game build with a
     quick tree; the guide's gear, jewels, supports and endgame stage reorder skills. Measure how often the search's
@@ -299,7 +300,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     data). Option C: make the search's own ranking stage closer to endgame (end-stage gear and tree depth) and
     accept the cost on every candidate: more expensive than A. Recommend A, or B if it ranks the same.
 
-36. [ ] ((a) code done 2026-11-22: generate.endgame_decider + api hook behind ENDGAME_DECIDER=1 (off), tests; waiting on
+36. [x] (2026-11-23: live since engine 2026-11-22.1 (ENDGAME_DECIDER + LEVELING on). End-to-end Deadeye: picked
+    Poisonburst Arrow (Uber 2.57M boss / 6.37M map) over Ice Shot and the search's #1 Rain of Arrows (657k); leveling
+    'Poisonburst Arrow from Act 1' (no swap); ~2 h search+pick and 32 min guide on 2 shared cores. (a) code done 2026-11-22: generate.endgame_decider + api hook behind ENDGAME_DECIDER=1 (off), tests; waiting on
     rank_check --light (~/rank_light.sh) to pick light vs full; then set it on + deploy; (b) code done: engine/leveling.py (candidates same kind / weapon / damage type, unlock level from the catalog,
     choose(): endgame skill within 20%, swap at +30%, max 3), guide uses spec["leveling"] per campaign stage with swap
     notes, page shows a stage's own skill ("Leveling"), API behind LEVELING=1 (off). Trial 2026-11-22: Bonestorm Lich:
