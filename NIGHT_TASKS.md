@@ -1,12 +1,10 @@
 # START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (no Claude, from 2026-11-23 01:40 Berlin):** ~/blind_unlock.sh restarted on engine 2026-11-23.1 (the
-  first run predated the Bonestorm fix: Bonestorm #1 on every class); blind test with no class-weapon rule, ~12 h ->
-  data/breaker/blind_unlocked.json/.txt (commit it). Then the nightly A-to-Z sweep (cron 05:00, waiting in the queue, ~17 h,
-  first sweep with the endgame pick + leveling), then ~/after_sweep.sh: all weapon finalists (task 38, ~12 h; Crossbow done:
-  Rapid Shot Acolyte 9.26M before the Purple Flames fix, 7.02M after) -> data/breaker/finalists.json/.txt (commit),
-  then task 37.
+- **Running (2026-11-23 evening):** ~/after_crit.sh: full suite (6 cores) -> deploy engine 2026-11-23.4 (Inexorable
+  Critical fix) -> clear finalists.json -> ~/after_sweep.sh: all weapon finalists (task 38, ~12 h, writes
+  data/breaker/finalists.json/.txt: commit) -> task 37. The 11-23 nightly sweep was stopped (every build timed out at
+  45 min; limit now 2 h); the rotating sweep starts again tomorrow night.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Plan (agreed with Kyle 2026-11-22):**
