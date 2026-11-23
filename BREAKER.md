@@ -708,3 +708,9 @@ ascendancy, Spearman +0.20. Full builds don't agree: at Uber Endgame Bonestorm L
 search's scores aren't comparable across weapon kinds: staff spells over-rated, attacks under-rated. With
 Whetstone's class weapons it matters less (each class compares like with like); for Lodestone (any class, any
 weapon) it buries every attack build. Being measured: search-style scores vs full builds per skill kind (task 38).
+**Measured (task 38):** search-style boss estimate (end gear, quick tree) vs the full Uber build: Bonestorm 11.0M vs
+6.03M (x1.83), Supercharged Slam 4.07M vs 5.67M (x0.72), Rapid Shot 2.56M vs 6.30M (x0.41). The error is per skill
+(gear, jewels, boss supports, Fresh Clip...: what only the full build has), a 4.5x spread, so no single weapon-kind
+factor fixes it. Whetstone: the endgame pick (top 3 by full builds) covers it. **Lodestone plan:** shortlist the best
+~2 skills per weapon type by search score, then rank the finalists by full Uber builds (rank_check-style); weekly,
+on the server's free time or the PC.

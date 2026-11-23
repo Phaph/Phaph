@@ -328,7 +328,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Lodestone has none; the 11-20 runs skipped skills outside each class's weapons). Queue `conditions_asc matrix_asc`
     after the unlocked blind run.
 
-38. [ ] The search's scores across weapon kinds (from the unlocked blind test, 2026-11-23): staff spells score ~10x
+38. [ ] (2026-11-23: the error is per skill (x0.41 Rapid Shot to x1.83 Bonestorm), no single factor; plan: Lodestone
+    shortlists ~2 skills per weapon type by search score, ranks finalists by full Uber builds (tools/rank_check.py
+    style), weekly) The search's scores across weapon kinds (from the unlocked blind test, 2026-11-23): staff spells score ~10x
     attacks in the search while full Uber builds have them level (Bonestorm 6.0M, Supercharged Slam 5.7M, Rapid Shot
     6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
     quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
