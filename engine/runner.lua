@@ -182,6 +182,13 @@ local function setMainGroup(index)
 	build.mainSocketGroup = index
 end
 
+-- Older PoB versions (old-patch grading, task 40) parse the item in new(); newer ones in a method.
+local function newItem(raw)
+	local item = new("Item")
+	if item.Item then return item:Item(raw) end
+	return new("Item", raw)
+end
+
 local function findClass(name)
 	for id, class in pairs(build.spec.tree.classes) do
 		if class.name:lower() == name:lower() then return id, class end
@@ -472,7 +479,7 @@ end
 -- An item's mod lines as the game shows them, with its selected variants applied (e.g. the four
 -- "Legacy of ..." choices on Mageblood). Used to show a unique's mods.
 function handlers.item_lines(cmd)
-	local item = new("Item"):Item(cmd.raw)
+	local item = newItem(cmd.raw)
 	if not item.base then error("could not parse item") end
 	local chosen = {}
 	for _, v in ipairs({ item.variant, item.variantAlt, item.variantAlt2, item.variantAlt3, item.variantAlt4, item.variantAlt5 }) do
@@ -519,7 +526,7 @@ end
 function handlers.equip(cmd)
 	local slot = build.itemsTab.slots[cmd.slot]
 	if not slot then error("unknown slot: " .. tostring(cmd.slot)) end
-	local item = new("Item"):Item(cmd.raw)
+	local item = newItem(cmd.raw)
 	if not item.base then error("could not parse item base") end
 	item:NormaliseQuality()
 	item:BuildModList()
@@ -549,7 +556,7 @@ function handlers.try_items(cmd)
 	local full = useFull()
 	local results = {}
 	for i, raw in ipairs(cmd.items) do
-		local item = new("Item"):Item(raw)
+		local item = newItem(raw)
 		if item.base then
 			item:NormaliseQuality()
 			item:BuildModList()
@@ -1355,6 +1362,8 @@ function handlers.set_custom_mods(cmd)
 		table.insert(breakerNodes, node)
 	end
 	local set = cfg.configSets[cfg.activeConfigSetId]
+	-- Older PoB versions (no list in the config set) read one text box.
+	if set.customModsList == nil then cfg.input.customMods = cmd.text or ""; if set.input then set.input.customMods = cmd.text or "" end end
 	set.customModsList = { { title = "Breaker", enabled = true, text = cmd.text or "" } }
 	cfg:BuildModList()
 	build.buildFlag = true
@@ -1566,7 +1575,7 @@ end
 local function equipRaw(slotName, raw)
 	local slot = build.itemsTab.slots[slotName]
 	if not slot then return false end
-	local item = new("Item"):Item(raw)
+	local item = newItem(raw)
 	if not item.base then return false end
 	item:NormaliseQuality()
 	item:BuildModList()
@@ -1769,7 +1778,7 @@ function handlers.optimise_tree(cmd)
 	-- its path plus that jewel, and every socket taken gets the jewel at once, so later picks see it.
 	local proxy
 	if cmd.jewel then
-		proxy = new("Item"):Item(cmd.jewel)
+		proxy = newItem(cmd.jewel)
 		if proxy.base then proxy:NormaliseQuality(); proxy:BuildModList() else proxy = nil end
 	end
 	local function isSocketTarget(node)
@@ -2452,7 +2461,7 @@ function handlers.list_uniques(cmd)
 	local list = {}
 	for _, item in pairs(main.uniqueDB.list) do
 		if not cmd.type or (item.type and item.type:lower() == cmd.type:lower()) then
-			local parsed = new("Item"):Item(item.raw)
+			local parsed = newItem(item.raw)
 			table.insert(list, { name = item.name, base = item.baseName, type = item.type, raw = item.raw,
 				level = parsed.requirements and parsed.requirements.level or 0,
 				subType = parsed.base and parsed.base.subType })
@@ -2471,7 +2480,7 @@ function handlers.trade_query(cmd)
 	if not buySimilar then
 		buySimilar = LoadModule("Classes/CompareBuySimilar")
 	end
-	local item = new("Item"):Item(cmd.raw)
+	local item = newItem(cmd.raw)
 	local q = { status = { option = "available" }, stats = { { type = "and", filters = {} } } }
 	local isUnique = item.rarity == "UNIQUE" or item.rarity == "RELIC"
 	if isUnique then

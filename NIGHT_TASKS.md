@@ -5,7 +5,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   from scratch on it (~11 h; commit finalists.json + .txt), then task 37. Task 40: engine/tools/old_patch.sh 2 v0.5.0
   v0.8.0 v0.12.2 v0.15.0 (2 cores, ~/old_patch.log, data/breaker/old/) = condition + matrix scans on PoB of patches
   0.1-0.4; then grade against data/breaker/answer_key.json by its own rules (no tuning first).
-  Runner shims for old PoB (newItem, custom mods) are in the working tree, tests running: commit when green.
+  Runner shims for old PoB (newItem, custom mods) committed (3 test files green; full suite before the next deploy).
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%
   included). Invoker elemental crit = known (rediscovered blind).
 - **Waiting for Kyle:** whether to trim the endgame pick further (finalists without herald/mark/movement supports,
