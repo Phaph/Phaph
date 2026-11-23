@@ -1,10 +1,15 @@
 # START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (2026-11-23 evening):** ~/after_crit.sh: full suite (6 cores) -> deploy engine 2026-11-23.4 (Inexorable
-  Critical fix) -> clear finalists.json -> ~/after_sweep.sh: all weapon finalists (task 38, ~12 h, writes
-  data/breaker/finalists.json/.txt: commit) -> task 37. The 11-23 nightly sweep was stopped (every build timed out at
-  45 min; limit now 2 h); the rotating sweep starts again tomorrow night.
+- **Running (2026-11-23 22:30 Berlin):** engine 2026-11-23.4 live (endgame pick + leveling on; Bonestorm release
+  time; Purple Flames 0; Inexorable Critical from crit rate; leveling damage types; leveling alongside endgame stages).
+  ~/after_sweep.sh: weapon finalists for all weapons (task 38, ~11 h, ~/finalists.log -> data/breaker/finalists.json +
+  finalists.txt: commit both), then task 37 (per-ascendancy scans without class rules). Nightly sweep = rotating fifth
+  from tomorrow night (2 h limit per build). A player build takes ~70 min now (76 measured, minus the parallel leveling).
+- **Leads now:** Bonestorm Lich +35% vs Comet (unconfirmed, rests on the release estimate); Invoker elemental crit =
+  known (rediscovered blind). Everything else fixed or dead (BREAKER.md, leads.json).
+- **Waiting for Kyle:** whether to trim the endgame pick further (finalists without herald/mark/movement supports,
+  ~-7 min, can slightly change the pick). Not blocking.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Plan (agreed with Kyle 2026-11-22):**
