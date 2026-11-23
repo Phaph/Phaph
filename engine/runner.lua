@@ -1160,6 +1160,20 @@ function handlers.patch_node(cmd)
 	return { name = cmd.name, changed = done }
 end
 
+-- Debug for patch-notes mode: a node's lines and parsed mods (tree node and the keystone table's entry).
+function handlers.node_debug(cmd)
+	local out = {}
+	local function dump(node, where)
+		local mods = {}
+		for _, m in ipairs(node.modList or {}) do table.insert(mods, m.name .. " " .. tostring(m.type) .. " " .. tostring(type(m.value) == "table" and "{}" or m.value)) end
+		table.insert(out, { where = where, sd = node.sd, mods = mods, raw_sd = rawget(node, "sd") ~= nil })
+	end
+	for id, node in pairs(build.spec.tree.nodes) do if node.dn == cmd.name then dump(node, "tree " .. id) end end
+	local k = build.spec.tree.keystoneMap[cmd.name]
+	if k then dump(k, "keystoneMap") end
+	return { nodes = out }
+end
+
 function handlers.patch_reset(cmd)
 	for i = #patched, 1, -1 do local r = patched[i]; r.t[r.k] = r.v end
 	for i = #patchedNodes, 1, -1 do

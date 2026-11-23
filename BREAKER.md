@@ -681,3 +681,7 @@ each release adds the release animation (skill_animation_duration_multiplier_ove
 0.75 s, scaled by cast speed): releases/s = 1 / (1 / HitSpeed + 6 / Speed). 5 projectiles: x0.40; 1 projectile: x0.77.
 **Step 3 (2026-11-23):** done: USAGE_LIMITS Bonestorm (releases/s = 1 / (1 / HitSpeed + 6 / Speed)), test in
 tests/test_usage_limits.py; engine 2026-11-23.1. Re-check its lead build vs Comet and the unlocked blind rows after.
+**Keystones in patch-notes mode work (2026-11-23):** patch_node changes a keystone's lines in the tree node and
+PoB's keystone table (the same node), and its parsed mods follow (runner `node_debug`). The earlier "Chaos
+Inoculation stays at 1 Life" was the test case: PoB also turns its other line into a ChaosInoculation flag that sets
+Life to 1 elsewhere. Left for patch day: socket types, base item numbers, rule changes.

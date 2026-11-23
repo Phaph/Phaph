@@ -15,8 +15,9 @@ publishing). Times assume the server (8 cores); heavy runs go through the Breake
 2. Write `engine/data/patches/1_0.json`: one entry per note line that changes a number or a rule, the note line kept:
    - gems: `{"gem": ..., "base_multiplier" | "level" | "constant" | "scale" | "add" | "remove" | "rename" | "require_types"}`
      (`"id"` for a triggered part); uniques: `{"unique": ..., "replace": [[old, new]], "add": [...]}`;
-     passives: `{"passive": ..., "replace": [[old, new]], "add": [...]}`.
-   - What can't be written yet goes under `"not_expressible_yet"`: keystones (PoB's keystone table), socket types,
+     passives and keystones: `{"passive": ..., "replace": [[old, new]], "add": [...]}` (runner `node_debug` shows a
+     node's lines and parsed mods before and after).
+   - What can't be written yet goes under `"not_expressible_yet"`: socket types,
      base item numbers, rule changes ("cooldown no longer recovers while ..."), brand-new skills and items.
 3. Check it applies: `PATCH_FILE=engine/data/patches/1_0.json` + any small run; `pob.patched` lists every change.
 
