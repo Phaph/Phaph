@@ -32,9 +32,13 @@ def run(only: set[str] | None, top: int, workers: int, out: Path) -> None:
         if "search" not in rec:
             t0 = time.time()
             try:
-                res = generate({"weapons": [w], "_class_unlocked": True}, workers=workers, log=lambda *a: None)
+                # PoB has no "Quarterstaff" type: it's a Staff with the Warstaff subtype. Search Staff, keep one kind.
+                pob_w = "Staff" if w == "Quarterstaff" else w
+                res = generate({"weapons": [pob_w], "_class_unlocked": True}, workers=workers, log=lambda *a: None)
                 rows, seen = [], set()
                 for r in res["ranked"]:
+                    if pob_w == "Staff" and (r.get("weapon_subtype") == "Warstaff") != (w == "Quarterstaff"):
+                        continue
                     key = (r["skill"], r["ascendancy"])
                     if key not in seen:
                         seen.add(key)
