@@ -1,13 +1,11 @@
 # START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (2026-11-23 22:30 Berlin):** engine 2026-11-23.4 live (endgame pick + leveling on; Bonestorm release
-  time; Purple Flames 0; Inexorable Critical from crit rate; leveling damage types; leveling alongside endgame stages).
-  ~/after_sweep.sh: weapon finalists for all weapons (task 38, ~11 h, ~/finalists.log -> data/breaker/finalists.json +
-  finalists.txt: commit both), then task 37 (per-ascendancy scans without class rules). Nightly sweep = rotating fifth
-  from tomorrow night (2 h limit per build). A player build takes ~70 min now (76 measured, minus the parallel leveling).
-- **Leads now:** Bonestorm Lich +35% vs Comet (unconfirmed, rests on the release estimate); Invoker elemental crit =
-  known (rediscovered blind). Everything else fixed or dead (BREAKER.md, leads.json).
+- **Running (2026-11-24 00:00 Berlin):** engine 2026-11-23.5 live (Full DPS fix, BREAKER.md last section).
+  ~/after_sweep.sh restarted on it from scratch: weapon finalists (task 38, ~11 h; finalists.json + finalists.txt:
+  commit both), then task 37. Old finalists kept in ~/old_runs/. Next light work: tasks 39 (rest) and 40.
+- **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%
+  included). Invoker elemental crit = known (rediscovered blind).
 - **Waiting for Kyle:** whether to trim the endgame pick further (finalists without herald/mark/movement supports,
   ~-7 min, can slightly change the pick). Not blocking.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
@@ -340,14 +338,14 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
     quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
 
-39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 committed; deploy + finalists restart: see START HERE) Full DPS fix
+39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; left: the rest) Full DPS fix
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.
 40. [ ] (agreed with Kyle 2026-11-23, by ~Dec 1) Grade Lodestone on known answers: 15-20 past broken builds plus
     ordinary ones on patch data we can load; hit rate and false alarms. Proposed bar: at least half found, at most one
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
-    ranked leads).
+    ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.
 
 ## Waiting for Kyle
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
