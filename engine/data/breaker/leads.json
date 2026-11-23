@@ -324,6 +324,14 @@
    "what": "The Crossbow search with no class rule picks Acolyte of Chayula as Rapid Shot's best ascendancy; its full Uber Endgame build reaches 9.26M boss DPS, above Rapid Shot Tactician (6.30M) and every other full build so far. 0.1% of Acolytes play it. Checked 2026-11-23: PoB's default 10 Purple Flames gave it 12.0M bossing; with 0 flames 7.02M, still above Rapid Shot Tactician 6.30M. auto_config now sets the flames to 0 for every build (engine 2026-11-23.2).",
    "check": "Why Acolyte beats Tactician without flames (which ascendancy nodes), then evidence checks; and a model for how many Purple Flames a build keeps up.",
    "full_build": "2026-11-23: with Purple Flames at 0 (engine 2026-11-23.2) the Crossbow search no longer ranks Acolyte first for Rapid Shot (Deadeye, 5.32M full Uber build). The lead was PoB's default 10 Purple Flames: a modelling gap, fixed."
+  },
+  {
+   "name": "Invoker for elemental crit builds on any weapon",
+   "status": "unconfirmed",
+   "found": "2026-11-23",
+   "detector": "cross-class finalists (weapon_finalists.py)",
+   "what": "With no class rule the search picks Invoker (a Monk ascendancy) for bow, crossbow and spear skills. Invoker's 'Sunder my Enemies...' makes critical hits ignore non-negative enemy elemental resistances (big vs pinnacle bosses), plus 10% of damage as extra lightning / cold. Armour Piercing Rounds on Invoker: 7.06M full Uber build (Tactician earlier: 3.47M). ~0.3% of the ladder plays Invoker. Physical/chaos skills don't gain (Poisonburst Arrow did better on Deadeye).",
+   "check": "The finalists run (engine 2026-11-23.4) per weapon; then the same elemental crit skill as a full build on Invoker vs its usual ascendancy; evidence: does the resistance bypass apply to pinnacle bosses in game (guides, patch notes)."
   }
  ]
 }
