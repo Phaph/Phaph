@@ -19,6 +19,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   - Thu 26-Fri 27: week 2 leftovers (mapping chain reactions, 3-piece combos if worth it), build speed (exposure
     step cost), Mobalytics leveling-skill counts (laptop session). Usage resets Fri 5 am Mazatlan.
 - **Open check:** guide.score_combo's setup DPS reads the same as the main skill (weapon set 2 group); see Credit plan.
+- **Server time (Kyle 2026-11-23):** Lodestone first. The nightly Whetstone sweep is one rotating fifth of the
+  ascendancies on weekdays (~3-4 h) and all 23 on Saturday nights (~17 h) (~/routines/nightly_sweep.sh).
 - **Rules that matter:** no website front-end work for now; Lodestone first; ntfy only per memory rules; heavy jobs
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
 - **Waiting for Kyle:** nothing blocking.

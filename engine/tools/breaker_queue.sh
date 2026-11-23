@@ -83,7 +83,9 @@ for job in $JOBS; do
     sweep)
       state "A-to-Z sweep on the server: running"
       rm -f engine/data/baseline/az_sweep_server.json
-      SWEEP_CPUS=$CPUS OUT_NAME=az_sweep_server.json engine/tools/night_sweep.sh > engine/data/baseline/az_sweep_server.log 2>&1
+      # SWEEP_SHARD / SWEEP_SHARDS: one share of the ascendancies (the nightly rotation, Kyle 2026-11-23); default all.
+      SHARD=${SWEEP_SHARD:-0} SHARDS=${SWEEP_SHARDS:-1} SWEEP_CPUS=$CPUS OUT_NAME=az_sweep_server.json \
+        engine/tools/night_sweep.sh > engine/data/baseline/az_sweep_server.log 2>&1
       save "A-to-Z sweep on the server" engine/data/baseline/az_sweep_server.json engine/data/baseline/az_sweep_server.log ;;
     blind)
       state "blind test vs poe.ninja (search per ascendancy): running"
