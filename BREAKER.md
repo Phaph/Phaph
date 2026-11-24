@@ -861,3 +861,14 @@ but has no row). Indigon and Hollow Palm gained under 5% on plain builds, as the
 flagged: 0 cut by 0.4, 14 not, 1 unjudged (Maligaro's). Several flags are skills nobody builds damage on (Fortifying Cry,
 Seismic Cry). The stack scan uses the same catalogue, so Rathpith can't be found there either; Indigon and Hollow Palm can.
 Fix after the grade (a new column, not the main score): add Focus, Quiver and Shield uniques to the catalogue.
+
+**Path luck, first result (task 42, 2026-11-24, run still going):** the same Rain of Arrows Invoker spec gives 849k boss as is and
+3.46M with the gear slots crafted in reverse order (x4.1). One spec and one pair of orders, so the typical spread isn't known
+yet; Rapid Shot, Ice Shot and Bonestorm have only their first order. Moving single items from the 3.46M build into the
+849k build: quiver +104% damage (it wore Rearguard), amulet +36% (Choir of the Storm), ring 1 +25%, gloves +18%. Those
+four also score higher on the gear score itself, so the optimiser's own rule prefers them: a unique is picked one slot
+at a time and never checked again. All gear swapped: 520k -> 776k in the same boss config. So gear is the smaller part on its own;
+the rest of the x4 is tree, gems and heralds built around that gear (not split yet). The bad build also ends at
+66% elemental resistances (target 75): with 9 of 10 slots unique there is no rare left to fix them. The other direction (bad items into the good
+build) wasn't measured: PoB exited after about a dozen load_xml calls in one process (cause unknown; restart it per slot).
+Until the run is read: no full-build comparison between skills is safe to quote, not only those under 20-30%.

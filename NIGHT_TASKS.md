@@ -21,6 +21,12 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   stopped and waits for the sweep (~/finalists_offhand.sh; resumes, finished builds kept), then task 37.
 - 0.3 matrix graded: 0 of 4 cases (2 untestable: weapon and focus uniques aren't scanned), 0 real / 14 false. 0.3 stack
   running. After the grade: off-hand uniques into breaker.UNIQUE_TYPES (not before: frozen engine).
+- **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
+  worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
+  merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
+  same 12 builds on the branch (~/path_luck_revisit.log, ~/revisit_out/path_luck_revisit.json), then the full suite
+  (~/revisit_tests.log). Next: compare both reports (`path_luck.py report`); judge on spread AND level per spec. If the
+  "as is" builds rise and nothing falls, merge and deploy. If the spread stays > 10%, do best-of-two starts.
 - Task 41 A/B: quiver +43-46%, focus +64-79% (search-style); suite running. 0.3 condition graded (3.6 missed; 1 real, 34 false).
 - Task 40: 0.1 stack scan judged (Archmage real, Irongrasp false alarm); 0.3 scans running.
 - Task 40: 0.2 condition false alarms judged (2 real, 25 false, 12 unjudged; tools/old_skill_verdicts.py does 0.3+ the same way).
@@ -384,7 +390,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
     bow / wand / sceptre skills read low.
 
-42. [ ] (running since 11:05: tools/path_luck.py, 4 specs x 3 slot orders, 3 cores, ~/path_luck.log -> data/breaker/path_luck.json) (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
+42. [ ] (2026-11-24 12:40: unique re-check on branch `revisit`, A/B queued, see START HERE) (running since 11:05: tools/path_luck.py, 4 specs x 3 slot orders, 3 cores, ~/path_luck.log -> data/breaker/path_luck.json) (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
     a quiver (BREAKER.md). Measure: the same spec built 3 times with small starting differences (gear slot order, first
     supports), 3 skills; if the spread is > 10%, try best-of-two starts for the Uber stage or a final pass that retries
     each unique slot with a rare and the next-best uniques once everything else is set. Needs free cores.
