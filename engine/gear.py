@@ -680,7 +680,9 @@ def _revisit_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Score
                 _fill(pob, x, stage, score, stage.max_affixes, allow=lambda g: True)
             out = pob.calc(SCORE_FIELDS)
             short = sum(own_deficit(pob.calc(SCORE_FIELDS + _req_fields(x.slot)), x.slot) for x in works) if score.attr_weight else 0
-            if score(out, current) > min_gain and short <= short0:
+            # Both ways: the score is linear, so on a big swap it can like "+200% EHP, -50% damage" and like the way back
+            # just as much. Only a swap whose reverse looks like a loss is taken.
+            if score(out, current) > min_gain and score(current, out) < 0 and short <= short0:
                 log(f"  {w.slot:<12} {name} no longer pays: back to a rare")
                 back += 1
                 changed = True

@@ -183,3 +183,20 @@ def test_uniques_are_checked_again_once_the_rest_is_set():
     assert n == 1 and [w.unique for w in works] == [None, "Good", "Anchor", None]
     assert pob.worn["Helmet"] == works[0].raw() != "BAD"
     assert (pob.worn["Gloves"], pob.worn["Boots"], pob.worn["Belt"]) == ("GOOD", "ANCHOR", belt)
+
+
+def test_a_unique_is_not_dropped_for_toughness_that_costs_most_of_the_damage():
+    """+200% EHP for -50% damage scores as a win both ways round: the unique stays."""
+    from gear import Scorer, _revisit_uniques, _Work
+
+    class Trade(_FakePob):
+        def calc(self, fields=None):
+            out = super().calc(fields)
+            worn = self.worn.get("Helmet") == "STRONG"
+            return {**out, "TotalDPS": 2000 if worn else 1000, "CombinedDPS": 2000 if worn else 1000,
+                    "TotalEHP": 1000 if worn else 3000}
+    pob = Trade({})
+    w = _Work("Helmet", "Cap", "h", {}, unique="Strong", unique_raw="STRONG")
+    pob.send("equip", slot="Helmet", raw="STRONG")
+    assert _revisit_uniques(pob, [w], make_stage("end"), Scorer(def_weight=0.6, metric="total"), log=lambda *a: None) == 0
+    assert w.unique == "Strong" and pob.worn["Helmet"] == "STRONG"
