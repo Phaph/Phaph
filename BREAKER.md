@@ -808,3 +808,10 @@ rule (row 58 of 65, +17% vs Armour Broken), but that is not its hidden multiplie
 read it as a miss. The strict column on 0.2 flags Lightning Conduit (known) and four others (Raise Zombie, Skeletal Reaver, Skeletal
 Sniper, Unearth, all vs Armour Broken), none of them in the key. stack_scan.py (piece x piled-up stat) was written
 after the 0.1 misses; only the 0.3 cases test it.
+
+**Retraction (2026-11-24 04:30):** the 0.1 matrix scan above was invalid. The old-PoB shim in runner set_custom_mods only
+wrote the mod box on its first call, so no unique's mods were ever applied (keystones were: they go in as nodes). Archmage
+and Gemling attributes were NOT tested; "1 of 3" is withdrawn, the graded score is Lightning Conduit only (0.1), plus the
+0.2 condition cases. Condition scans don't use that box and stand; the live site (current PoB) was never affected. Fixed
+(flag decided once); checked on v0.5.0, v0.12.2 and current. The stack scan's first smoke run (0 flagged) was the same bug.
+0.1 and 0.2 matrix scans are being redone. The answer key and thresholds are unchanged.

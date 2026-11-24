@@ -1367,8 +1367,13 @@ function handlers.set_custom_mods(cmd)
 		table.insert(breakerNodes, node)
 	end
 	local set = cfg.configSets[cfg.activeConfigSetId]
-	-- Older PoB versions (no list in the config set) read one text box.
-	if set.customModsList == nil then cfg.input.customMods = cmd.text or ""; if set.input then set.input.customMods = cmd.text or "" end end
+	-- Older PoB versions (no list in the config set) read one text box: decided once, before we add a list ourselves
+	-- (checking each time left the first text in for good and every old-patch matrix read 0, 2026-11-24).
+	if cfg.breakerTextBox == nil then cfg.breakerTextBox = set.customModsList == nil end
+	if cfg.breakerTextBox then
+		cfg.input.customMods = cmd.text or ""
+		if set.input then set.input.customMods = cmd.text or "" end
+	end
 	set.customModsList = { { title = "Breaker", enabled = true, text = cmd.text or "" } }
 	cfg:BuildModList()
 	build.buildFlag = true
