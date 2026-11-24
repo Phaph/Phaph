@@ -1,0 +1,19 @@
+Cross-class ranking: each weapon type's best search finalists as full Uber Endgame builds (boss DPS, map DPS):
+   1. Earthquake | Invoker [Armour Explosion 18%]  One Hand Mace   boss    7,938,241  map    7,679,323
+   2. Bonestorm | Infernalist                      Staff           boss    6,992,450  map    3,861,814
+   3. Armour Piercing Rounds | Invoker [Rapid Shot 100%] Crossbow        boss    6,907,095  map    3,641,256
+   4. Earthquake | Amazon [Gale Force 13%]         Two Hand Mace   boss    6,845,192  map    4,886,621
+   5. Skyfall | Infernalist [Bonestorm 12%]        Wand            boss    5,675,262  map    4,984,736
+   6. Devour | Oracle [Flame Breath 100%]          Talisman        boss    5,466,707  map    2,813,266
+   7. Rapid Shot | Deadeye                         Crossbow        boss    4,756,024  map    4,034,920
+   8. Supercharged Slam | Amazon                   Two Hand Mace   boss    3,735,055  map    3,149,376
+   9. Skyfall | Infernalist                        Sceptre         boss    3,068,990  map    6,031,506
+  10. Bonestorm | Infernalist                      Wand            boss    3,001,953  map    2,867,719
+  11. Coiling Bolts | Infernalist [Bonestorm 89%]  Staff           boss    2,883,034  map    6,352,597
+  12. Flame Breath | Invoker                       Talisman        boss    2,731,177  map    2,486,015
+  13. Wolf Pack | Infernalist [Skyfall 49%]        Sceptre         boss    2,127,309  map    3,065,442
+  14. Ice Shot | Invoker [Rain of Arrows 100%]     Bow             boss    1,752,824  map      904,497
+  15. Glacial Lance | Invoker [Caltrops 17%]       Spear           boss    1,233,368  map      996,976
+  16. Rain of Arrows | Invoker                     Bow             boss      945,303  map      227,442
+  17. Fangs of Frost | Invoker                     Spear           boss      866,253  map      717,396
+  18. Hammer of the Gods | Ritualist [Earthquake 20%] [Gale Force 13%] One Hand Mace   boss      440,325  map    3,106,839
