@@ -872,3 +872,17 @@ the rest of the x4 is tree, gems and heralds built around that gear (not split y
 66% elemental resistances (target 75): with 9 of 10 slots unique there is no rare left to fix them. The other direction (bad items into the good
 build) wasn't measured: PoB exited after about a dozen load_xml calls in one process (cause unknown; restart it per slot).
 Until the run is read: no full-build comparison between skills is safe to quote, not only those under 20-30%.
+
+**Path luck, more orders (task 42, 13:30; 9 of 12 builds in):** boss damage by order: Rapid Shot 4.76M / 5.04M (+6%), Ice Shot 2.56M /
+2.61M (+2%), Bonestorm 6.99M / 4.17M (-40%), Rain of Arrows 849k / 3.46M / 3.57M. No order is reliably the better one. Two are
+small, two are large: it isn't a uniform ~10%.
+**Bonestorm's gap isn't (mainly) uniques.** The two builds wear almost the same gear; mapping is 17% apart (3.86M / 3.30M), boss 68%.
+Swapping gloves moves 13-17%, boots nothing, Demon Form nothing. The full boss support search on the saved builds gives 4.05M /
+2.42M raw, so the gap is in the build (13 of 128 passives differ; not split further).
+**Support search holds conditions fixed (task 44):** see NIGHT_TASKS.md.
+**Filler supports reserved 76% of life (task 43, live bug):** fit_supports fills empty sockets without looking at toughness and put
+Atziri's Communion (spirit skills reserve life instead) on Herald of Ash: EHP 12.6k -> 3.2k (Rapid Shot), 24.2k -> 7.8k (Ice Shot),
+23.7k -> 6.5k (Rain of Arrows reversed), no damage of its own. 13 of 18 finalists and 7 of 9 path-luck builds hold it. Taking
+it out leaves the build ~100 spirit over, so fit_spirit will turn a skill off: the damage after the fix may be lower and isn't measured.
+**Rejected:** "the last mapping search re-uses a stale shortlist" (a full search gained 1-16% on 7 of 9 saved builds, nothing on
+the 2 Bonestorms). Nearly all of it is Execute III, +30% on Low Life, which these builds only are because of Communion.

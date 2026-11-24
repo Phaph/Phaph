@@ -21,6 +21,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   stopped and waits for the sweep (~/finalists_offhand.sh; resumes, finished builds kept), then task 37.
 - 0.3 matrix graded: 0 of 4 cases (2 untestable: weapon and focus uniques aren't scanned), 0 real / 14 false. 0.3 stack
   running. After the grade: off-hand uniques into breaker.UNIQUE_TYPES (not before: frozen engine).
+- **Task 43 (13:50, filler supports):** branch `kitlife` (worktree ~/phaph_kitlife): fit_supports skips fillers that cost > 1% EHP;
+  suite running (~/kitlife_tests.log, started by ~/kitlife.sh; its new test passes). Green -> merge to main, deploy 2026-11-24.4, push.
+  (This runner doesn't copy data/breaker: failures about missing breaker data are the runner's, also in revisit_ab.sh.)
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
@@ -394,6 +397,16 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     a quiver (BREAKER.md). Measure: the same spec built 3 times with small starting differences (gear slot order, first
     supports), 3 skills; if the spread is > 10%, try best-of-two starts for the Uber stage or a final pass that retries
     each unique slot with a rare and the next-best uniques once everything else is set. Needs free cores.
+
+43. [ ] Atziri's Communion as a filler support (found 2026-11-24): BREAKER.md. (a) merge + deploy branch `kitlife`; (b) the
+    damage search for spirit skills (kit_out -> optimise_supports) still ignores toughness: a life-reserving support picked
+    there for damage isn't checked; (c) EHP of finished builds in finalists / path_luck (13 of 18, 7 of 9 hold it) and in guides
+    cached before the fix is wrong; boss DPS is computed before the fillers, so it isn't affected.
+44. [ ] Support search vs conditions (found 2026-11-24): conditions (enemy chilled, ignited...) are set from the supports in place
+    and held fixed while the search swaps supports. Bonestorm Lich: from Elemental Focus the full search finds nothing better;
+    swapping to Extraction and re-running auto_config gives +35% (4.37M -> 5.92M mapping score). Extraction is better in
+    the saved mapping setup; how often this happens elsewhere isn't measured. Try: auto_config + search again until stable,
+    or re-score the top few sets with auto_config run on each. After 42's A/B (so it measures one change).
 
 ## Waiting for Kyle
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
