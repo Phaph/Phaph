@@ -1,7 +1,7 @@
 # START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (2026-11-24 03:15 Berlin):** ~/after_fulldps.sh: full suite -> if green deploy engine 2026-11-24.2 (extra
+- **Running (2026-11-24 03:30 Berlin):** engine 2026-11-24.2 live (224 tests), finalists restarted at 03:29 with 3 builds at once. How: ~/after_fulldps.sh: full suite -> if green deploy engine 2026-11-24.2 (extra
   stat sets fix) and restart ~/after_sweep.sh from scratch with --builds 3 (finalists; commit .json + .txt; then task
   37). Result: ~/after_fulldps_deploy.log. Task 40: engine/tools/old_patch.sh (2 cores, ~/old_patch.log) on PoB of 0.1-0.4;
   grade with tools/grade_old.py. The old-patch scans from 0.2 on pick up the fixed engine, 0.1's did not.

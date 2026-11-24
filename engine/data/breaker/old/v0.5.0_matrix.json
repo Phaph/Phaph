@@ -1,0 +1,2227 @@
+{
+ "skills": {
+  "Armour Breaker": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "Multistrikeable",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25
+   },
+   "dps": 8347
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "types": [
+    "CanRapidFire",
+    "Chains",
+    "Damage",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 28431
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 3258
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CanRapidFire",
+    "CannotChain",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "TotemsAreBallistae",
+    "Trappable",
+    "UseGlobalStats",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.289
+   },
+   "dps": 11110
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "CannotChain",
+    "Damage",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 2734
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "CanRapidFire",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Nonpathing",
+    "Nova",
+    "Physical",
+    "Spell",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 36877
+  },
+  "Boneshatter": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "Multistrikeable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.253
+   },
+   "dps": 11420
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Channel",
+    "ConsumesCharges",
+    "Damage",
+    "Duration",
+    "Nonpathing",
+    "Physical",
+    "Projectile",
+    "SkillConsumesPowerChargesOnUse",
+    "Spell",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 30978
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "Nonpathing",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 778
+  },
+  "Cold Snap": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "SkillConsumesFreeze",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 146004
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 34210
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Chaos",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 4124
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "Damage",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Physical",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 35513
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chaos",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesNumberModifiersNotApplied",
+    "Spell",
+    "SummonsTotem",
+    "Trappable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 15064
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cooldown",
+    "Damage",
+    "Fire",
+    "Spell"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 7089
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanRapidFire",
+    "Channel",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.129
+   },
+   "dps": 4522
+  },
+  "Earthshatter": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesFissure",
+    "Duration",
+    "Melee",
+    "Multistrikeable",
+    "Slam",
+    "SupportedByFountains",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25
+   },
+   "dps": 10064
+  },
+  "Earthquake": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesGroundEffect",
+    "Duration",
+    "Melee",
+    "Multistrikeable",
+    "Slam",
+    "Totemable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.242,
+    "keystone:Dance with Death": 0.248
+   },
+   "dps": 7001
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Attack",
+    "CannotChain",
+    "Duration",
+    "Jumping",
+    "Lightning",
+    "Projectile",
+    "ProjectileNoCollision",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.216
+   },
+   "dps": 4958
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Nonpathing",
+    "Projectile",
+    "Spell",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 25173
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Cooldown",
+    "Jumping",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "ProjectilesNumberModifiersNotApplied",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.197
+   },
+   "dps": 4027
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "types": [
+    "CanRapidFire",
+    "Chaos",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 67236
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "Nonpathing",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.237
+   },
+   "dps": 9291
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1303
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Lightning",
+    "Melee",
+    "Multistrikeable",
+    "Projectile",
+    "ProjectilesNotFromUser",
+    "QuarterstaffSkill",
+    "RangedAttack",
+    "SkillConsumesPowerChargesOnUse",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.204
+   },
+   "dps": 35541
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "types": [
+    "CanRapidFire",
+    "Cold",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectileSpiral",
+    "SingleMainProjectile",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 11552
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Damage",
+    "Fire",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 15162
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "SkillConsumesIgnite",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 4826
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "CausesBurning",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 372
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Channel",
+    "Damage",
+    "Fire",
+    "Nonpathing",
+    "Nova",
+    "Spell",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 23180
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Duration",
+    "Grenade",
+    "Nonpathing",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 4496
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "Multistrikeable",
+    "QuarterstaffSkill",
+    "SkillConsumesPowerChargesOnUse"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.22
+   },
+   "dps": 27288
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 2444
+  },
+  "Freezing Mark": {
+   "weapon": "Wand",
+   "types": [
+    "CanRapidFire",
+    "Cold",
+    "Duration",
+    "Limit",
+    "Mark",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 372
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotChain",
+    "Cold",
+    "Damage",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 4460
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Orb",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 19962
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "IceCrystal",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "SupportedByFountains",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 5784
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "CanRapidFire",
+    "Cold",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 20966
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Attack",
+    "Cold",
+    "CreatesGroundEffect",
+    "Duration",
+    "IceCrystal",
+    "Melee",
+    "NonWeaponAttack",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1695
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 3258
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanBecomeArrowRain",
+    "CanRapidFire",
+    "Chaos",
+    "Duration",
+    "Fire",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.146
+   },
+   "dps": 8872
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Chaos",
+    "Cooldown",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "Nonpathing",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1785
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerfectTiming",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.136
+   },
+   "dps": 15416
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1955
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "CreatesFissure",
+    "Melee",
+    "Multistrikeable",
+    "Nonpathing",
+    "QuarterstaffSkill",
+    "SkillConsumesFreeze"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.165
+   },
+   "dps": 11047
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1955
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Duration",
+    "Melee",
+    "Multistrikeable",
+    "Nonpathing",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 9653
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "Chaos",
+    "Damage",
+    "DynamicCooldown",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 13199
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1955
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 10898
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 3258
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Attack",
+    "CanRapidFire",
+    "Cold",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.19
+   },
+   "dps": 6431
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "Multistrikeable",
+    "PerformsFinalStrike",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.167
+   },
+   "dps": 33720
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 2444
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Nonpathing",
+    "Spell",
+    "Sustained",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 68239
+  },
+  "Infernal Cry": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "EmpowersOtherSkill",
+    "Fire",
+    "Nonpathing",
+    "SkillConsumesEnduranceChargesOnUse",
+    "Warcry"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 372
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "GeneratesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "Physical",
+    "UseGlobalStats"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.196
+   },
+   "dps": 27889
+  },
+  "Leap Slam": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.3,
+    "keystone:Dance with Death": 0.101
+   },
+   "dps": 12029
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanBecomeArrowRain",
+    "CanRapidFire",
+    "Chains",
+    "Lightning",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.192
+   },
+   "dps": 7297
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanRapidFire",
+    "Duration",
+    "Lightning",
+    "Nonpathing",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.134
+   },
+   "dps": 2619
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "DynamicCooldown",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "SkillConsumesShock",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 3793
+  },
+  "Lightning Warp": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 51377
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Damage",
+    "Lightning",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.184
+   },
+   "dps": 1893
+  },
+  "Molten Blast": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Damage",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.177,
+    "keystone:Dance with Death": 0.248
+   },
+   "dps": 15879
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "CreatesGroundEffect",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "Nonpathing",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1071
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chains",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Limit",
+    "Mineable",
+    "Nonpathing",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 6307
+  },
+  "Perfect Strike": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Duration",
+    "Fire",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerfectTiming"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.246
+   },
+   "dps": 27750
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 2444
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1955
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanBecomeArrowRain",
+    "CanRapidFire",
+    "Chaos",
+    "Duration",
+    "Nonpathing",
+    "Projectile",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.193
+   },
+   "dps": 9040
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CanRapidFire",
+    "Cascadable",
+    "Chaos",
+    "CreatesGroundRune",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "GeneratesCharges",
+    "Limit",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 30360
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Nonpathing",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 4547
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "types": [
+    "ConsumesCharges",
+    "CreatesMinion",
+    "Duration",
+    "Limit",
+    "Minion",
+    "MinionsCanExplode",
+    "Nonpathing",
+    "Physical",
+    "SkillConsumesPowerChargesOnUse",
+    "TargetsDestructibleCorpses",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 4340
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1629
+  },
+  "Resonating Shield": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Melee",
+    "NonWeaponAttack",
+    "Nonpathing",
+    "Physical",
+    "RequiresShield",
+    "Sustained"
+   ],
+   "error": "No One Hand Mace bases up to item level 82",
+   "gains": {}
+  },
+  "Rolling Slam": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "Multistrikeable",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.056
+   },
+   "dps": 1073
+  },
+  "Ripwire Ballista": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CanRapidFire",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "TotemsAreBallistae",
+    "Trappable",
+    "UseGlobalStats",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 6627
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "EmpowersOtherSkill",
+    "ManualCooldownConsumption",
+    "Nonpathing",
+    "Physical",
+    "Warcry"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 638
+  },
+  "Shield Charge": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Cooldown",
+    "Melee",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "Travel"
+   ],
+   "error": "No One Hand Mace bases up to item level 82",
+   "gains": {}
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "SupportedByFountains",
+    "Wall"
+   ],
+   "error": "No One Hand Mace bases up to item level 82",
+   "gains": {}
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "UseGlobalStats"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 19630
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanBecomeArrowRain",
+    "CanRapidFire",
+    "Chains",
+    "Lightning",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesShock",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.184
+   },
+   "dps": 2645
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 2444
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1955
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Mineable",
+    "Nova",
+    "Physical",
+    "Slam",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Trappable",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.158
+   },
+   "dps": 11350
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "GeneratesCharges",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "QuarterstaffSkill",
+    "SkillConsumesShock"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.18
+   },
+   "dps": 45164
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "Fire",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 19772
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "types": [
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": "StopIteration: ",
+   "gains": {}
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "types": [
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 28526
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "types": [
+    "Cold",
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 22114
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 29556
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "types": [
+    "Chaos",
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "Fire",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 33619
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Lightning",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 21567
+  },
+  "Skeletal Warrior": {
+   "weapon": "Sceptre",
+   "types": [
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 58804
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanRapidFire",
+    "Channel",
+    "MirageArcherCanUse",
+    "PerfectTiming",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.169
+   },
+   "dps": 5281
+  },
+  "Sniper's Mark": {
+   "weapon": "Wand",
+   "types": [
+    "CanRapidFire",
+    "Cooldown",
+    "Duration",
+    "GeneratesCharges",
+    "Limit",
+    "Mark",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 391
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Nonpathing",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 10011
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "types": [
+    "CanRapidFire",
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 13625
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "types": [
+    "Attack",
+    "ConsumesCharges",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 3309
+  },
+  "Stampede": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesGroundEffect",
+    "Duration",
+    "Melee",
+    "Slam",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.242,
+    "keystone:Dance with Death": 0.248
+   },
+   "dps": 9313
+  },
+  "Staggering Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "MeleeSingleTarget",
+    "Physical",
+    "UseGlobalStats"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 24053
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesFissure",
+    "Lightning",
+    "Melee",
+    "Multistrikeable",
+    "Nonpathing",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.192
+   },
+   "dps": 35547
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "Nonpathing",
+    "ReservesManually"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 1955
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanBecomeArrowRain",
+    "CanRapidFire",
+    "Duration",
+    "Lightning",
+    "Nonpathing",
+    "Projectile",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.182
+   },
+   "dps": 2631
+  },
+  "Sunder": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CreatesFissure",
+    "Melee",
+    "Multistrikeable",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.353,
+    "keystone:Dance with Death": 0.06
+   },
+   "dps": 18693
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Melee",
+    "NoDualWield",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 19941
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "ComboStacking",
+    "Duration",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "Nova",
+    "QuarterstaffSkill",
+    "RangedAttack",
+    "SupportedByFountains",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.136
+   },
+   "dps": 6993
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "Multistrikeable",
+    "PerformsFinalStrike",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.166
+   },
+   "dps": 31087
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanRapidFire",
+    "CannotChain",
+    "DamageOverTime",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Nonpathing",
+    "Physical",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "SupportedByFountains",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.139
+   },
+   "dps": 6597
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Chaos",
+    "Duration",
+    "Jumping",
+    "Projectile",
+    "ProjectileNoCollision",
+    "RangedAttack",
+    "SupportedByFountains"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 2622
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Jumping",
+    "Melee",
+    "Multistrikeable",
+    "QuarterstaffSkill",
+    "Slam",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.136
+   },
+   "dps": 14864
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "types": [
+    "Area",
+    "CanRapidFire",
+    "CreatesMinion",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Minion",
+    "Nonpathing",
+    "Physical",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 14469
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "CanRapidFire",
+    "Chaos",
+    "Duration",
+    "Nonpathing",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "SupportedByFountains"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.189
+   },
+   "dps": 6638
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Melee",
+    "Multistrikeable",
+    "Slam",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.17,
+    "keystone:Dance with Death": 0.25
+   },
+   "dps": 12210
+  },
+  "Voltaic Mark": {
+   "weapon": "Wand",
+   "types": [
+    "CanRapidFire",
+    "Duration",
+    "Lightning",
+    "Limit",
+    "Mark",
+    "Mineable",
+    "Multicastable",
+    "Nonpathing",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 372
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Duration",
+    "Grenade",
+    "Lightning",
+    "Nonpathing",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {},
+   "dps": 5084
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Cold",
+    "Jumping",
+    "Melee",
+    "Movement",
+    "Multistrikeable",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.172
+   },
+   "dps": 10174
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "Multistrikeable",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.136
+   },
+   "dps": 3643
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.19
+   },
+   "dps": 20972
+  }
+ },
+ "updated": "2026-11-24 02:15"
+}
