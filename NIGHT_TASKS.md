@@ -5,6 +5,12 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   stat sets fix) and restart ~/after_sweep.sh from scratch with --builds 3 (finalists; commit .json + .txt; then task
   37). Result: ~/after_fulldps_deploy.log. Task 40: engine/tools/old_patch.sh (2 cores, ~/old_patch.log) on PoB of 0.1-0.4;
   grade with tools/grade_old.py. The old-patch scans from 0.2 on pick up the fixed engine, 0.1's did not.
+- **Task 41 (found 2026-11-24 07:00): nothing fills Weapon 2.** Live engine too: bows have no quiver, wands / sceptres no
+  focus, one-handed weapons no shield or second weapon, unless a skill or anchor asks. So every bow / one-hand number
+  is low against two-handers (finalists, all saved leads but staves and crossbows). Fix for bow / wand / sceptre on
+  branch `offhand` (worktree ~/phaph_offhand, not pushed or merged): ~/offhand.sh runs A/B (~/offhand_ab.log), then the
+  suite (~/offhand_tests.log). Do NOT merge into ~/phaph or push main until ~/old_all.sh has finished: each old-patch
+  scan copies ~/phaph/engine when it starts, and the grade needs one engine. Same branch: Quarterstaff search fix.
 - Task 39: Cast on X is settled (guides already add triggers.py's estimate beside the total; no engine change). Lead
   re-run queued: ~/after_leads.sh (2 cores, after old_all.sh) -> data/breaker/lead_builds_fulldps, log ~/after_leads.log;
   then update leads.json from it. Left in 39: rank_check and combos after the finalists.
@@ -362,6 +368,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     ordinary ones on patch data we can load; hit rate and false alarms. Proposed bar: at least half found, at most one
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
     ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.
+
+41. [ ] Off-hands (see START HERE): (a) read the A/B and the suite on branch `offhand`; (b) once old_all.sh is done: merge,
+    bump ENGINE_VERSION, deploy, stop nothing in the queue; (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
+    Sceptre (the rest of today's run is comparable only within itself); (d) one-handed martial weapons: try shield and second weapon and keep the better by score (dual wield is the
+    Shadow build's case); (e) weapon set 2 (craft_weapon) has no off-hand either; (f) lead re-run (~/after_leads.sh)
+    starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
+    bow / wand / sceptre skills read low.
 
 ## Waiting for Kyle
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player

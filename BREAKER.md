@@ -829,3 +829,12 @@ next patch" is not "was not broken", and PoB data is not the notes. Matrix, stac
 0.2 halved its lightning gain at gem level 20 (6% to 3% per 100 mana). Irongrasp with strength (+98%) was unchanged in 0.2: a
 false alarm, though it is a strong piece. Gemling attributes missed (Pillar is a weapon, ascendancies are not scanned).
 So 1 real per false alarm on 2 rows: too few to say more. 0.3 (Rathpith, Indigon, Hollow Palm) is the blind test.
+
+### Off-hands are empty (2026-11-24, not fixed on main yet: task 41)
+`craft_gear` fills Weapon 2 only when a spec names an off-hand, and the search names one only for skills that need a
+shield, block builds and anchor off-hands. So bows have no quiver, wands and sceptres no focus, one-handed weapons
+nothing. Checked: all finalists so far and all 8 saved lead builds have an empty Weapon 2. Bow, wand, sceptre and
+one-handed numbers are therefore low against staves, crossbows and other two-handers; how much is being measured.
+Staff Bonestorm's 6.99M vs wand 3.00M is not a fair comparison until then. (The x1.77 over its own source list is the
+explosion added after the list, as designed.) Also: the Quarterstaff finalists search found nothing, because staff
+spells filled the ranking before the filter.
