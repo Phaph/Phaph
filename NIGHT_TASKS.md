@@ -71,6 +71,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   Ice Shot 5%. Don't merge. AB3 (re-check in the final gear pass only, commit on `revisit`) running since 19:06 -> ~/revisit_out/path_luck_revisit3.json.
   If it isn't clean either: best-of-N orders. Don't read "lower spread" as better where the level fell.
 - Sceptre again on 2026-11-24.6: ~/sceptre.sh, after that deploy and AB3 -> data/breaker/finalists_sceptre.json, ~/sceptre.log (commit it).
+- **20:05: 2026-11-24.6 live (231 passed), tempminions merged.** Sceptre finalists started now (3 cores were free). AB3 at 4 of 12: RoA as is 2.63M (plain 849k),
+  reversed 3.46M (= plain), Rapid Shot and Ice Shot as is = plain: no loss so far.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -426,7 +428,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.
-40. [ ] (2026-11-24: PoB tags back to 0.1 run on our runner; Lightning Conduit vs Shocked reads +500% / +115% / +116% / +68% on 0.1-0.4,
+40. [ ] (2026-11-24 20:05: GRADE DONE, failed: 2 of 11 found, 11 real vs 129 false; claim narrowed. Left: launch-day rehearsal timing; nerf-risk labels; off-hand / weapon uniques into breaker.UNIQUE_TYPES (the 0.4 scans still running are frozen code, no case set)) (2026-11-24: PoB tags back to 0.1 run on our runner; Lightning Conduit vs Shocked reads +500% / +115% / +116% / +68% on 0.1-0.4,
     in step with the nerfs; answer key written first; scans started; left: a v0.17.1 (0.5) case set, ordinary builds, scalers and pairs on old
     patches, then the grade) (agreed with Kyle 2026-11-23, by ~Dec 1) Grade Lodestone on known answers: 15-20 past broken builds plus
     ordinary ones on patch data we can load; hit rate and false alarms. Proposed bar: at least half found, at most one

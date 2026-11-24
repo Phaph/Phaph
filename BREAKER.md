@@ -918,3 +918,9 @@ perhaps other temporary minions) were affected too. Fixed on branch `tempminions
 means Unearth being picked over other Sceptre skills isn't established. Rows 2-12 are one slot order each (spread up to 320%, task 42), so no
 ranking is quoted. Earthquake's 9.7M boss vs 0.7M in its sources is by design: the Aftershock is added after the list.
 No other finalist counts more than one minion except Wolf Pack (7, persistent).
+
+**Grade complete (task 40, 2026-11-24 20:05):** 0.2 matrix done: 2.1 missed as the key expected (weapon uniques aren't scanned). Final: **2 of 11 found**
+(1.4 not blind; 2.2 at row 58 of 65), or 2 of 9 without the 2 cases the scans can't test (2.1 is one more the key itself expected to miss). The
+stack column adds Archmage. The 0.2 matrix flagged 38 pieces: 2 real (Crown of Eyes 150% -> 100%, Maligaro's Virtuosity 300% -> 250%, both cut in 0.3), 35 false, 1
+unjudged (Hyrri's Ire, reworked). Condition and matrix scans together, 0.1-0.3: 11 real vs 129 false: about 12 false alarms per real find (bar: 1). The
+claim on the page was narrowed the same day. Caveats: "unchanged" is PoB's text, "real" is lenient (a cut, not proof of why).
