@@ -5,6 +5,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   stat sets fix) and restart ~/after_sweep.sh from scratch with --builds 3 (finalists; commit .json + .txt; then task
   37). Result: ~/after_fulldps_deploy.log. Task 40: engine/tools/old_patch.sh (2 cores, ~/old_patch.log) on PoB of 0.1-0.4;
   grade with tools/grade_old.py. The old-patch scans from 0.2 on pick up the fixed engine, 0.1's did not.
+- Task 39: Cast on X is settled (guides already add triggers.py's estimate beside the total; no engine change). Lead
+  re-run queued: ~/after_leads.sh (2 cores, after old_all.sh) -> data/breaker/lead_builds_fulldps, log ~/after_leads.log;
+  then update leads.json from it. Left in 39: rank_check and combos after the finalists.
+- Task 40: 0.1 stack scan judged (Archmage real, Irongrasp false alarm); 0.3 scans running.
 - Task 40: 0.2 condition false alarms judged (2 real, 25 false, 12 unjudged; tools/old_skill_verdicts.py does 0.3+ the same way).
 - Task 40 runs now from ~/old_all.sh (2 cores, log ~/old_patch.log): stack 0.1, then 0.3 (condition, matrix, stack),
   matrix 0.1 + 0.2 again (the first 0.1 matrix was invalid: custom mods never applied), 0.4. Grade: tools/grade_old.py,
@@ -348,7 +352,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
     quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
 
-39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; 2026-11-24: per-source breakdown done, on-death explosions out, engine 2026-11-24.1; skeletons counted 0 since 11-17: fixed; left: Cast on X counts 0, re-run leads, rank_check, combos) Full DPS fix
+39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; 2026-11-24: per-source breakdown done, on-death explosions out, engine 2026-11-24.1; skeletons counted 0 since 11-17: fixed; Cast on X settled; left: re-run leads (queued), rank_check, combos) Full DPS fix
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.
