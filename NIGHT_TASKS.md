@@ -91,8 +91,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   measured yet; the run going now is the serial version).
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%
   included). Invoker elemental crit = known (rediscovered blind).
-- **Waiting for Kyle:** whether to trim the endgame pick further (finalists without herald/mark/movement supports,
-  ~-7 min, can slightly change the pick). Not blocking.
+- **Kyle 2026-11-24:** endgame pick trimming: leave as is. Lodestone claim and page fixes: Claude's call, done (task 32). Leads need more than one full build.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Plan (agreed with Kyle 2026-11-22):**
@@ -359,7 +358,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the exact number changes -> apply them to the current data (custom mods / gem stat edits) -> scan -> compare our
     "this got broken / nerfed" calls with what happened on that patch's ladder. Start: what engine/tools/
     breaker_day.sh already does, then a notes -> changes parser (Claude reads the notes; changes as JSON).
-32. [ ] Lodestone page text: leads marked "unconfirmed" show without a colour and the intro still says "needs
+32. [x] (2026-11-24, Kyle's OK: text fixes and the narrower claim on the page; single-full-build leads re-labelled) Lodestone page text: leads marked "unconfirmed" show without a colour and the intro still says "needs
     checking in the real game" (front-end paused: ask Kyle before touching the page; put it under Waiting).
 
 33. [x] (2026-11-22: cause = auto_config gave every armour-breaking plain build "always Fully Broken"; now only when it
@@ -457,15 +456,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     or re-score the top few sets with auto_config run on each. After 42's A/B (so it measures one change).
 
 ## Waiting for Kyle
-- **Lodestone's claim (draft, 2026-11-24; needs your OK before any page changes):** the grade on past broken builds failed (2 of 10 found,
-  false alarms far over one per find: BREAKER.md). Proposed wording: "Lodestone is an idea generator, not a detector. It scans every
-  skill for conditions and item pairs that Path of Building scores unusually high and lists them for a person to check.
-  Most flags are ordinary; some are PoB errors. It can't see exploits PoB doesn't calculate (copies, charge loops, bugs). Expect it to
-  miss most of what breaks the game." Keep: ranked leads, the patch-notes reading, the full-build check. Drop: any hit-rate or "finds
-  broken builds" claim, and any lead that rests on one full build (the slot-order spread is up to 320%).
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
   (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.
-- Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
-  checks). Front-end is paused, so only with your OK.
 
 ## Done
