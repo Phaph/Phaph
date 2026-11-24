@@ -6,7 +6,11 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   37). Result: ~/after_fulldps_deploy.log. Task 40: engine/tools/old_patch.sh (2 cores, ~/old_patch.log) on PoB of 0.1-0.4;
   grade with tools/grade_old.py. The old-patch scans from 0.2 on pick up the fixed engine, 0.1's did not.
 - Task 40 runs now from ~/old_all.sh (2 cores, log ~/old_patch.log): stack 0.1, then 0.3 (condition, matrix, stack),
-  matrix 0.1 + 0.2 again (the first 0.1 matrix was invalid: custom mods never applied), 0.4. Grade: tools/grade_old.py.
+  matrix 0.1 + 0.2 again (the first 0.1 matrix was invalid: custom mods never applied), 0.4. Grade: tools/grade_old.py,
+  then false alarms of matrix / stack pieces: python3 engine/tools/old_verdicts.py (next patch's PoB text; unchanged =
+  false alarm, changed = read the lines) -> old/verdicts.json. 0.5 gets no case set: its known broken builds (5.1-5.7)
+  are copies, charge loops and bugs PoB can't calculate, so there is nothing to grade there; left for 40 after the
+  scans: the grade, ordinary builds (false-alarm check), the launch-day rehearsal timing.
 - weapon_finalists.py now builds 3 finalists beside the next search (--builds; takes effect at the next run, speed not
   measured yet; the run going now is the serial version).
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%
