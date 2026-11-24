@@ -28,6 +28,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   (3 of 4 over the 10% bar). `revisit` A/B running since 14:08 (path-luck-revisit). Queued after it: ~/fixcheck.sh (4 specs on main
   with the filler fix: ~/fixcheck_out/fixcheck.json, compare dps / TotalEHP / Communion with path_luck.json's "as is").
   finalists_offhand (hungry_nobel) runs one order per build, so its ranking has this luck in it: don't quote it.
+- **15:00:** 0.3 stack scan graded: 1 flag (Irongrasp, unchanged in 0.4: false alarm); Indigon, Hollow Palm missed, Rathpith untestable.
+  0.1 matrix running (then 0.2 matrix, 0.4). Revisit A/B so far, "as is": Rain of Arrows 849k -> 3.66M, Rapid Shot and Ice Shot
+  identical to plain. Task 44: 0 of 10 rows gain anything; only Bonestorm is left to run.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the

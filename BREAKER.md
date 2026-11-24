@@ -893,3 +893,10 @@ the 2 Bonestorms). Nearly all of it is Execute III, +30% on Low Life, which thes
 4 hand-picked specs, so this is not an average over skills. The old lead rule ("under ~20-30% isn't real") is too lenient for at
 least two of the four. A best-of-N start would have lifted Rapid Shot 22% and Rain of Arrows 320% over the default order,
 Bonestorm 0%, Ice Shot 5%, at N times the build time.
+
+**0.3 stack scan (task 40, 2026-11-24 15:00):** flagged one piece, Irongrasp on Bonestorm (strength), unchanged in 0.4: a false alarm (as in 0.1).
+Testable cases: Indigon and Hollow Palm both missed; Rathpith was never in the catalogue. Stack scans so far (0.1, 0.3): 1 known case
+found of 4 testable (Archmage; Gemling, Indigon, Hollow Palm missed), 2 false alarms (Irongrasp twice). Whole grade so far: 2 of 8
+graded cases found (one not blind, the other at row 58 of 65), plus Archmage by the stack column, against a bar of half
+found. 3 cases wait on scans (0.1 / 0.2 matrix). Not a pass on these numbers even if those three all hit (5 of 11),
+so the claim has to be narrowed as agreed.
