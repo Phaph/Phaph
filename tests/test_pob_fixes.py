@@ -170,13 +170,15 @@ def test_patch_node_rewords_a_passive(pob):
 
 
 def test_temporary_minions_not_counted_at_their_limit(pob):
-    """persistent_only: Wolf Pack (persistent) counts its pack; Unearth's corpse constructs (temporary) are left at 1."""
+    """Wolf Pack (persistent) counts its pack; Unearth's corpse constructs (temporary) are left at 1."""
     pob.new()
     pob.set_class("Witch", None)
     pob.set_level(90)
     pob.add_skill(["Unearth"], full_dps=True)
-    counts = pob.send("sync_minion_counts", persistent_only=True)["counts"]
-    assert not counts
+    assert not pob.send("sync_minion_counts")["counts"]
+    pob.use_full_dps()   # the guide's final pass: counted 30 constructs until 2026-11-24.6
+    assert all(s.get("count", 1) <= 1 for s in pob.dps_sources())
+    assert max(pob.send("sync_minion_counts", all=True)["counts"].values()) > 1   # Breaker limit scans still can
 
 
 def test_patch_base_changes_item_numbers(pob):
