@@ -55,6 +55,13 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - Full suite on `revisit` with the symmetric rule: green, 229 passed 16:42. AB2 starts after fixcheck.
 - **17:35 task 43 check done (4 of 4):** boss and map dps identical to the digit; EHP Rapid Shot 3.2k -> 12.6k, Ice Shot 7.8k -> 24.2k, RoA
   6.3k -> 7.9k, Bonestorm unchanged (never had Communion). 43 left: (b) and old cached guides. AB2 running since 17:06. settle-ab: 13 of 24, all +0%.
+- **18:10 task 44 A/B done: 24 of 24 rows, 2 gain (+42%, Bonestorm "as is" map and boss), 22 +0.0%, 0 lose.** On saved builds only; a full
+  guide with it isn't measured (the boss step probably avoided Elemental Focus already). ~/merge_settle.sh merges + deploys 2026-11-24.5 if
+  the suite is green (~/settle_tests.log, ~/merge_settle.log).
+- **18:10 correction to the 16:05 note:** RoA reversed is 1,736,171 in AB1 and AB2, so the symmetric rule did not act there: the "linear
+  score trades damage for EHP in the re-check" explanation is wrong for that build. It is untested for RoA rotated. RoA as is went 3.66M (v1)
+  -> 1.83M (v2), so there the rule did act, and cost damage. The re-check runs in the FIRST gear pass too, before the tree: other gear -> other tree is the
+  next suspect (37 passives differ). Test: re-check only in the final pass (attr_weight set).
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
