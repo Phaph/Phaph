@@ -726,8 +726,10 @@ def _anchor_work(pob: PoB, stage: Stage, score: "Scorer") -> "_Work | None":
 
 # The off-hand a build holds when nothing else asks for one. Until 2026-11-24 it stayed empty: every bow build had no
 # quiver and every wand / sceptre build no focus, which understated them against two-handed weapons. One-handed martial
-# weapons still have an empty off-hand (second weapon or shield: a choice to make by score, not made here yet).
+# martial weapons take the better by score: a second weapon of the same kind or a shield (spears and flails: shield).
 DEFAULT_OFFHAND = {"Bow": "Quiver", "Wand": "Focus", "Sceptre": "Focus"}
+DUAL_WIELDABLE = {"One Hand Mace", "One Hand Sword", "One Hand Axe", "Claw", "Dagger"}
+SHIELD_ONLY = {"Spear", "Flail"}
 
 
 def craft_gear(
@@ -767,15 +769,27 @@ def craft_gear(
         weapon_slots.append(("Weapon 2", DEFAULT_OFFHAND[weapon_type], None))
     # The anchor unique (the build is made around it) is equipped first, so every other slot is crafted around it.
     anchor = _anchor_work(pob, stage, score)
-    for slot, wtype, wsub in weapon_slots:
-        if anchor and anchor.slot == slot:
-            continue
+
+    def hand_bases(wtype, wsub):
         pool = sorted((b for b in bases if b["type"] == wtype and _sub_ok(b.get("subType"), wsub)
                        and not b["name"].startswith("Runeforged") and base_usable(b)),
                       key=lambda b: -b["level"])
         cands = pool[:6]
         if attrs is not None:
             cands += [b for b in pool if _meets(b, attrs) and b not in cands][:2]
+        return cands
+
+    def new_work(slot, cands):
+        base = _best_base(pob, slot, cands, stage, score)
+        res = pob.send("affixes", base=base, max_level=stage.item_level)
+        imp = base_implicits(next(c for c in cands if c["name"] == base), stage.roll) or []
+        return _Work(slot, base, f"{stage.name} {slot}", _tier_choices(res["affixes"], stage, keep), implicits=tuple(imp),
+                     base_tags=frozenset(res.get("item_tags") or ()))
+
+    for slot, wtype, wsub in weapon_slots:
+        if anchor and anchor.slot == slot:
+            continue
+        cands = hand_bases(wtype, wsub)
         if not cands:
             if slot == "Weapon 2" and not (dual_wield or offhand_type):
                 continue   # a default off-hand with no base this early: the hand stays empty
@@ -791,16 +805,32 @@ def craft_gear(
 
     works: list[_Work] = [anchor] if anchor else []
     for slot, cands in slot_bases:
-        base = _best_base(pob, slot, cands, stage, score)
-        res = pob.send("affixes", base=base, max_level=stage.item_level)
-        imp = base_implicits(next(c for c in cands if c["name"] == base), stage.roll) or []
-        works.append(_Work(slot, base, f"{stage.name} {slot}", _tier_choices(res["affixes"], stage, keep), implicits=tuple(imp),
-                           base_tags=frozenset(res.get("item_tags") or ())))
+        works.append(new_work(slot, cands))
 
     no_res = Scorer(def_weight=def_weight, res_weight=0.0, mode=mode, metric=metric, goals=goals, attr_weight=attr_weight)
     for w in works:
         reserve = 0 if w.slot.startswith("Weapon") else 2
         _fill(pob, w, stage, no_res, stage.max_affixes - reserve, allow=lambda g: not _is_res_group(g))
+    # One-handed martial weapon with nothing asked for: try a second weapon and a shield, keep the better.
+    if not (dual_wield or offhand_type or (anchor and anchor.slot == "Weapon 2")):
+        kinds = ([(weapon_type, weapon_subtype)] if weapon_type in DUAL_WIELDABLE else []) + (
+            [("Shield", None)] if weapon_type in DUAL_WIELDABLE | SHIELD_ONLY else [])
+        ref, tried = pob.calc(SCORE_FIELDS), []
+        for wtype, wsub in kinds:
+            cands = hand_bases(wtype, wsub)
+            if not cands:
+                continue
+            w = new_work("Weapon 2", cands)
+            _fill(pob, w, stage, no_res, stage.max_affixes - (2 if wtype == "Shield" else 0),
+                  allow=lambda g: not _is_res_group(g))
+            pob.send("equip", slot="Weapon 2", raw=w.raw(), fields=SCORE_FIELDS)
+            out = pob.calc(SCORE_FIELDS + _req_fields("Weapon 2"))
+            tried.append((no_res(out, ref) - no_res.attr_weight * own_deficit(out, "Weapon 2"), len(tried), w, wtype, wsub))
+        if tried:
+            _, _, w, wtype, wsub = max(tried)
+            pob.send("equip", slot="Weapon 2", raw=w.raw(), fields=SCORE_FIELDS)
+            works.append(w)
+            weapon_slots.append(("Weapon 2", wtype, wsub))
     _cap_resistances(pob, works, stage)
     for w in works:
         _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)

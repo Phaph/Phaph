@@ -117,3 +117,17 @@ def test_bows_get_a_quiver_and_wands_a_focus(pob):
         if off:
             assert off in held[0].base.lower()
             assert pob.calc(["TotalDPS"])["TotalDPS"] > 0
+
+
+def test_one_handed_martial_weapons_fill_the_off_hand(pob):
+    """A second weapon or a shield, whichever scores better; a spear can only take a shield."""
+    for cls, wtype, skill, kinds in (("Warrior", "One Hand Mace", "Boneshatter", {"One Hand Mace", "Shield"}),
+                                     ("Huntress", "Spear", "Whirlwind Lance", {"Shield"})):
+        stage = make_stage("end")
+        pob.new()
+        pob.set_class(cls)
+        pob.set_level(stage.level)
+        pob.add_skill([skill])
+        types = {b["name"]: b["type"] for b in pob.send("bases", max_level=stage.item_level)["bases"]}
+        held = [p for p in craft_gear(pob, stage, wtype, uniques=False, log=lambda *a: None) if p.slot == "Weapon 2"]
+        assert len(held) == 1 and types[held[0].base] in kinds
