@@ -371,7 +371,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 pob.send("set_main", group=group)
             else:
                 pob.auto_config("bossing")
-                boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
+                boss = search_supports(pob, group, skill, "bossing", slots, boss_metric, log=quiet)[0]
                 # Setups and extra damage stat sets, as the search ranked it (partners.py)
                 raw = pob.calc(STAT_FIELDS)
                 boss_out, partner = apply_all(pob, skill, group, raw, STAT_FIELDS, boss.supports)
@@ -408,8 +408,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_config(**MODE_CONFIG["mapping"])
         conditions = pob.auto_config("mapping")
         mobility = mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type"))
-        best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
-                                 shortlist=shortlist)[0]
+        best = (optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist) if light
+                else search_supports(pob, group, skill, "mapping", slots, map_metric, log=quiet, shortlist=shortlist))[0]
+        if not light:
+            conditions = pob.auto_config("mapping")   # what the chosen supports keep up
         for t in triggers:
             t["mapping"] = cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="mapping", gem=t["gem"])
             t.pop("group", None)
@@ -634,6 +636,37 @@ def score_combo(pob: PoB, group: int, setup_group: int | None, combo: dict, swap
         return {**combo, "boss_dps": 0, "alone": round(alone), "note": "the setup doesn't break armour fast enough here"}, alone
     return {**combo, **{"time_to_break": c["time_to_break"], "uptime": c["uptime"]}, "boss_dps": c["dps"],
             "alone": round(alone), "broken": round(broken), "setup_dps": round(setup_dps)}, c["dps"]
+
+
+# Supports whose skill can't inflict elemental ailments itself (their own text says so). A build set up with one shows
+# no chilled / ignited / shocked enemy, so bonuses that need those look worthless to the support search.
+AILMENT_BLOCKERS = {"Elemental Focus", "Elemental Armament III"}
+
+
+def search_supports(pob: PoB, group: int, skill: str, mode: str, slots: int, metric: str, log=lambda *a: None,
+                    shortlist: dict | None = None) -> list:
+    """optimise_supports, and when its pick blocks ailments a second search with no blockers, each scored with the
+    conditions that set itself keeps up. The conditions otherwise stay what the old supports allowed (task 44: Bonestorm
+    Lich +42% without Elemental Focus)."""
+    res = optimise_supports(pob, group, skill, slots=slots, metric=metric, log=log, shortlist=shortlist)
+    best = res[0]
+    if not set(best.supports) & AILMENT_BLOCKERS:
+        return res
+    from goals import FOCUS_FIELDS
+    fields = STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + list(FOCUS_FIELDS) + ["BleedDPS", "PoisonDPS", "IgniteDPS"] + MINION_AILMENT_FIELDS
+
+    def settled(supports):
+        pob.try_skill(group, [skill, *supports], ["TotalDPS"])
+        pob.auto_config(mode)
+        return score_of(pob.calc(fields), metric)
+
+    first = settled(best.supports)
+    settled([s for s in best.supports if s not in AILMENT_BLOCKERS])   # conditions without the blocker
+    other = optimise_supports(pob, group, skill, slots=slots, metric=metric, log=log, exclude=set(AILMENT_BLOCKERS))
+    if other and settled(other[0].supports) > first * 1.005:
+        return other
+    settled(best.supports)
+    return res
 
 
 def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], movement: list[str], metric: str,
