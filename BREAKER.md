@@ -824,3 +824,8 @@ of 1: the default threshold is not usable as a "this will be nerfed" list. The s
 Lightning Conduit: Raise Zombie, Skeletal Reaver, Skeletal Sniper (unjudged) and Unearth (not cut), so 0 confirmed real.
 Spearfield is not a real find either: the hidden multiplier went, but its base rose x4.16. Caveats: "not cut by the
 next patch" is not "was not broken", and PoB data is not the notes. Matrix, stack and 0.3-0.4 scans still to come.
+
+**0.1 stack scan (2026-11-24, not blind for 0.1):** 2 pieces flagged. Archmage with mana (+91% on Cold Snap) is a true find:
+0.2 halved its lightning gain at gem level 20 (6% to 3% per 100 mana). Irongrasp with strength (+98%) was unchanged in 0.2: a
+false alarm, though it is a strong piece. Gemling attributes missed (Pillar is a weapon, ascendancies are not scanned).
+So 1 real per false alarm on 2 rows: too few to say more. 0.3 (Rathpith, Indigon, Hollow Palm) is the blind test.
