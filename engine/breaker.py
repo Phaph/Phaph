@@ -161,8 +161,12 @@ def scan_jobs(db: str, out_path: Path) -> None:
 
 
 # ---------- interaction finder ----------
-UNIQUE_TYPES = {"Amulet", "Ring", "Belt", "Body Armour", "Helmet", "Gloves", "Boots", "Jewel"}   # no weapons: their
-# local mods ("Adds X to Y") would read as global ones in the custom modifier box
+UNIQUE_TYPES = {"Amulet", "Ring", "Belt", "Body Armour", "Helmet", "Gloves", "Boots", "Jewel"}
+# Weapons and off-hands are worn for real (Bench equips them): their local mods ("Adds X to Y") would read as global
+# ones in the custom modifier box. Only on builds that already hold that kind of item.
+HAND_TYPES = {"Bow", "Crossbow", "Spear", "Staff", "Wand", "Sceptre", "Talisman", "One Hand Mace", "Two Hand Mace",
+              "Claw", "Dagger", "One Hand Sword", "Two Hand Sword", "One Hand Axe", "Two Hand Axe", "Flail",
+              "Quiver", "Focus", "Shield"}
 POOL = 30          # pairs are tried among this many pieces with the biggest single gain, plus every keystone
 SYNERGY_FLAG = 1.10
 _RANGE = re.compile(r"\((-?\d+(?:\.\d+)?)-(-?\d+(?:\.\d+)?)\)")
@@ -173,14 +177,19 @@ def _top_roll(line: str) -> str:
 
 
 def pieces(pob: PoB) -> list[dict]:
-    """Every keystone and every non-weapon unique as custom modifier text (uniques at their top rolls)."""
+    """Every keystone and every unique: worn kinds as custom modifier text, hand items as whole items (top rolls)."""
     out = [{"kind": "keystone", "name": k["name"], "mods": ""} for k in pob.list_keystones()]   # applied as nodes
     seen = set()
     for u in pob.send("list_uniques")["uniques"]:
         name = u["name"].split(",")[0]
-        if u.get("type") not in UNIQUE_TYPES or name in seen:
+        if u.get("type") not in UNIQUE_TYPES | HAND_TYPES or name in seen:
             continue
         seen.add(name)
+        if u["type"] in HAND_TYPES:
+            raw = "\n".join(_top_roll(l) for l in u["raw"].split("\n"))
+            out.append({"kind": "unique", "name": name, "slot": u["type"], "subtype": u.get("subType"), "mods": "",
+                        "raw": raw})
+            continue
         try:
             lines = pob.send("item_lines", raw=u["raw"])
         except PoBError:
@@ -220,6 +229,8 @@ class Bench:
         self.supports = [s["name"] for s in pob.send("fitting_supports", group=self.group)["supports"]
                          if s["name"] not in self.gems]
         self.weakest = []   # the skill's own supports, least damage first: a tried support replaces one (task 19)
+        worn = pob.send("equipped")["slots"]
+        self.hands = {s: (worn[s]["type"], worn[s].get("subType")) for s in ("Weapon 1", "Weapon 2") if s in worn}
         self.base = self._dmg([])
         if replace and len(self.gems) > 1:
             own = self.gems[1:]
@@ -230,7 +241,16 @@ class Bench:
             self.pob.try_skill(self.group, self.gems, DMG)
             self.weakest = sorted(own, key=lambda s: loss[s])
 
+    def hand_of(self, p: dict) -> str:
+        """The hand a weapon or off-hand unique goes in: the one that holds its kind of item. PoBError: neither does."""
+        for slot, (t, sub) in self.hands.items():
+            # A quarterstaff and a caster staff share a type, so they must match further; shields and foci needn't.
+            if t == p["slot"] and (t != "Staff" or (sub == "Warstaff") == (p.get("subtype") == "Warstaff")):
+                return slot
+        raise PoBError(f"{p['name']}: this build holds no {p['slot']}")
+
     def _dmg(self, ps: list[dict]) -> float:
+        hand = [(self.hand_of(p), p["raw"]) for p in ps if p.get("raw")]
         text = "\n".join(p["mods"] for p in ps if p["kind"] == "unique")
         # A unique goes in its slot: take out what the build wears there (two rings: both ring slots), so its gain is
         # over the real item, not on top of it (Leopold's Applause read +38% stacked, +4% worn, 2026-11-19).
@@ -242,7 +262,16 @@ class Bench:
                     slots.append(f"Ring {rings}")
                 else:
                     slots.append(p["slot"])
-        prev = self.pob.send("clear_slots", slots=slots)["prev"] if slots and self.replace else {}
+        slots = slots if self.replace else []
+        slots += [s for s, _ in hand]   # hand items always replace what is held
+        prev = self.pob.send("clear_slots", slots=slots)["prev"] if slots else {}
+        tried = []
+        try:
+            for s, raw in hand:
+                tried.append(self.pob.send("equip", slot=s, raw=raw, fields=[])["id"])
+        except PoBError:
+            self.pob.send("restore_slots", prev=prev, delete=tried)
+            raise
         self.pob.send("set_custom_mods", text=text, nodes=[p["name"] for p in ps if p["kind"] == "keystone"])
         new = [p["name"] for p in ps if p["kind"] == "support"]
         # A support takes a socket the build already uses: it replaces the build's weakest support (2026-11-21;
@@ -254,7 +283,7 @@ class Bench:
         finally:
             self.pob.send("set_custom_mods", text="")
             if prev:
-                self.pob.send("restore_slots", prev=prev)
+                self.pob.send("restore_slots", prev=prev, delete=tried)
         return total_dps(o)
 
     def gain(self, ps: list[dict]) -> float:

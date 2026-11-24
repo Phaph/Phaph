@@ -598,6 +598,10 @@ function handlers.restore_slots(cmd)
 		local slot = build.itemsTab.slots[name]
 		if slot then slot:SetSelItemId(id) end
 	end
+	for _, id in ipairs(cmd.delete or {}) do   -- items only tried on
+		if build.itemsTab.items[id] then build.itemsTab:DeleteItem(build.itemsTab.items[id], true) end
+	end
+	build.itemsTab:PopulateSlots()
 	build.buildFlag = true
 	frame()
 	return {}
@@ -608,7 +612,8 @@ function handlers.equipped(cmd)
 	for name, slot in pairs(build.itemsTab.slots) do
 		local item = slot.selItemId and build.itemsTab.items[slot.selItemId]
 		if item and not slot.nodeId then
-			slots[name] = { name = item.name, base = item.baseName, type = item.type, rarity = item.rarity, raw = item.raw }
+			slots[name] = { name = item.name, base = item.baseName, type = item.type, rarity = item.rarity, raw = item.raw,
+				subType = item.base and item.base.subType }
 		end
 	end
 	return { slots = slots }
