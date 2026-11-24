@@ -215,6 +215,7 @@ def optimise_supports(
     exclude: set[str] | None = None,
     shortlist: dict | None = None,
     keep_main: bool = False,
+    keep_ehp: float = 0.0,
     log=print,
 ) -> list[Result]:
     """Find the support set that maximises `metric` for the skill in `group`.
@@ -226,6 +227,8 @@ def optimise_supports(
     Conditional supports (Hit and Run, Glory gems, combo finishers...) are skipped
     unless allow_conditional, because PoB counts their bonus but not their downtime.
     Only the `top_k` best supports from screening go into the combination search.
+    With keep_ehp (0.9), no support set may take the build's toughness below that share of what it is with the skill
+    unsupported (Atziri's Communion on a herald reserves most of the life for a little damage).
     Pass the same `shortlist` dict to later calls for the same skill to skip the full screen
     and only re-check the 2 x top_k best supports from the first one.
     """
@@ -268,7 +271,10 @@ def optimise_supports(
     base = pob.try_skill(group, active_gems, fields, keep_main=keep_main)
     base_score = score_of(base["output"], field_name)
     # Supports can raise a skill's spirit reservation ("Cost & Reservation Multiplier"): never one that overdraws spirit.
-    spirit_ok = lambda out: (base["output"].get("SpiritUnreserved") or 0) < 0 or (out.get("SpiritUnreserved") or 0) >= 0
+    # And never one that costs more toughness than keep_ehp allows.
+    ehp_floor = (base["output"].get("TotalEHP") or 0) * keep_ehp
+    spirit_ok = lambda out: ((base["output"].get("SpiritUnreserved") or 0) < 0 or (out.get("SpiritUnreserved") or 0) >= 0) \
+        and (out.get("TotalEHP") or 0) >= ehp_floor
     log(f"Base {active}: {metric} DPS = {base_score:,.0f}")
 
     # Screen every support once on its own: drop ones that don't support the skill or add nothing.
@@ -317,7 +323,7 @@ def optimise_supports(
     # A player fills every socket: top the best set up with any support that still adds something, best first.
     if len(best.supports) < slots + len(required):
         best = _fill_sockets(pob, group, active_gems, best, required, [n for n in sorted(solo, key=lambda n: -solo[n]) if solo[n] > base_score], family,
-                             slots + len(required), fields, field_name, keep_main)
+                             slots + len(required), fields, field_name, keep_main, ehp_floor)
     # Leave the build holding the winning setup, and return it first (callers read [0]).
     pob.try_skill(group, [active, *best.supports], fields, keep_main=keep_main)
     log(f"Best: {best.supports}. Done in {time.time() - t0:.1f}s")
@@ -327,7 +333,7 @@ def optimise_supports(
 FILL_GAIN = 0.001   # a support fills an empty socket only if it adds at least 0.1% (no do-nothing filler)
 
 
-def _fill_sockets(pob, group, active_gems, best, required, ranked, family, total, fields, field_name, keep_main):
+def _fill_sockets(pob, group, active_gems, best, required, ranked, family, total, fields, field_name, keep_main, ehp_floor=0.0):
     """Add supports to `best` one at a time (the strongest that fits) while each still adds at least FILL_GAIN."""
     while len(best.supports) < total:
         used = {family.get(s, s) for s in best.supports}
@@ -338,6 +344,7 @@ def _fill_sockets(pob, group, active_gems, best, required, ranked, family, total
             combo = [s for s in best.supports if s not in required] + [name]
             res = pob.try_skill(group, [*active_gems, *combo], fields, keep_main=keep_main)
             if not all(res["supported"].get(s) for s in combo) or res.get("warnings") \
+                    or (res["output"].get("TotalEHP") or 0) < ehp_floor \
                     or (res["output"].get("SpiritUnreserved") or 0) < 0 <= (best.output.get("SpiritUnreserved") or 0):
                 continue
             sc = score_of(res["output"], field_name)

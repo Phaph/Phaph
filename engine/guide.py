@@ -693,7 +693,7 @@ def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], m
             continue
         try:
             res = optimise_supports(pob, gid, name, slots=slots, metric=metric, keep_main=True, log=log,
-                                    beam=KIT_BEAM, top_k=KIT_TOP_K)
+                                    beam=KIT_BEAM, top_k=KIT_TOP_K, keep_ehp=KIT_EHP)
             chosen = res[0].supports if res else []
         except (PoBError, ValueError):
             chosen = []
@@ -728,6 +728,7 @@ def _alone_supports(pob: PoB) -> set[str]:
     return _ALONE
 
 
+KIT_EHP = 0.9   # share of the toughness a side skill's supports must leave the build
 FIT_EHP_LOSS = 0.01   # most toughness one filler support may cost
 FIT_MIN = 0.6   # a support counts as made for a skill when the skill type it needs is rarer than 60% of skills
 
