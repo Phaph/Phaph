@@ -24,6 +24,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Task 43: merged, deployed 2026-11-24.4 and pushed 14:05** (228 passed). Left: 43 (b), (c). Damage after the fix not measured.
   Running: 12 revisit builds start after path-luck (~/revisit_ab.sh); task 44 measurement (condition swaps) in the session
   scratchpad cond.log, first row +0%.
+- **Task 42, plain run done 14:08 (12 of 12):** spread by slot order: Ice Shot 5%, Rapid Shot 22%, Bonestorm 68%, Rain of Arrows 320%
+  (3 of 4 over the 10% bar). `revisit` A/B running since 14:08 (path-luck-revisit). Queued after it: ~/fixcheck.sh (4 specs on main
+  with the filler fix: ~/fixcheck_out/fixcheck.json, compare dps / TotalEHP / Communion with path_luck.json's "as is").
+  finalists_offhand (hungry_nobel) runs one order per build, so its ranking has this luck in it: don't quote it.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the

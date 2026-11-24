@@ -886,3 +886,10 @@ Atziri's Communion (spirit skills reserve life instead) on Herald of Ash: EHP 12
 it out leaves the build ~100 spirit over, so fit_spirit will turn a skill off: the damage after the fix may be lower and isn't measured.
 **Rejected:** "the last mapping search re-uses a stale shortlist" (a full search gained 1-16% on 7 of 9 saved builds, nothing on
 the 2 Bonestorms). Nearly all of it is Execute III, +30% on Low Life, which these builds only are because of Communion.
+
+**Path luck, complete (task 42, 2026-11-24, engine 2026-11-24.3, 4 specs x 3 slot orders):** spread (best / worst boss damage - 1): Ice Shot
++5% (2.56M / 2.61M / 2.67M), Rapid Shot +22% (4.76M / 5.04M / 5.78M), Bonestorm +68% (6.99M / 4.17M / 4.41M), Rain of Arrows
++320% (849k / 3.46M / 3.57M). "as is" is the best order once and the worst order three times; no order wins everywhere.
+4 hand-picked specs, so this is not an average over skills. The old lead rule ("under ~20-30% isn't real") is too lenient for at
+least two of the four. A best-of-N start would have lifted Rapid Shot 22% and Rain of Arrows 320% over the default order,
+Bonestorm 0%, Ice Shot 5%, at N times the build time.
