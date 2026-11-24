@@ -853,3 +853,9 @@ Choir of the Storm, a crit-damage build with half the EHP, 6.2k vs 11.3k). So th
 at least ~10% in one step, probably more (it lost the quiver's gain as well): don't read single full-build differences
 under ~20-30% as real (the +11% / -11% lead verdicts are inside that). Open: a second start (best of two gear orders), or
 keeping the earlier build as a candidate, would show how much is left on the table.
+
+**0.3 matrix scan (task 40, 2026-11-24):** 0 of 4 cases found (Rathpith Globe, Indigon, The Whispering Ice, Hollow Palm: none
+gained even 5% on any plain build, as their stat isn't piled up there; The Whispering Ice is a weapon, left out by
+design). 15 pieces flagged: 0 cut by 0.4, 14 not, 1 unjudged (Maligaro's). Several flags are support-type skills (Fortifying Cry,
+Seismic Cry) that nobody builds damage on. Graded blind so far: matrix 0 of 4. The 0.3 stack scan is the last chance for
+B/C cases on this patch.

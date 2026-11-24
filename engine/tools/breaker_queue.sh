@@ -46,7 +46,8 @@ p = PoB(); [print(c[\"name\"] + \"|\" + a) for c in p.list_classes() for a in c[
 failed=0
 
 # Wait for anything else heavy on the server (a Breaker day run or another scan) to finish first.
-while pgrep -f breaker_day.sh > /dev/null || docker ps --format '{{.Image}} {{.Names}}' | grep -v phaph- | grep -q poe2-optimizer; do
+# By name, not image: a rebuild leaves running containers with a bare image id (2026-11-24: the sweep started on top).
+while pgrep -f breaker_day.sh > /dev/null || docker ps --format '{{.Names}}' | grep -v '^phaph-' | grep -q .; do
   state "waiting for the running Breaker scan to finish"
   sleep 120
 done
