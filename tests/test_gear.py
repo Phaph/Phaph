@@ -150,3 +150,36 @@ def test_top_tier_slots_are_capped(pob, monk):
         if not p.unique:
             assert sum(1 for i in p.affix_info if i.get("tier") == 1 and (i.get("of") or 0) > 1) <= stage.top_mods, p
             assert len(p.affixes) <= stage.max_affixes
+
+
+class _FakePob:
+    """Just enough of a build: each slot's item adds a fixed amount of damage."""
+    def __init__(self, worth):
+        self.worth, self.worn = worth, {}
+
+    def calc(self, fields=None):
+        dps = 1000 + sum(self.worth.get(raw, 500) for raw in self.worn.values())
+        return {"TotalDPS": dps, "CombinedDPS": dps, "TotalEHP": 1000, "FireResist": 75, "ColdResist": 75,
+                "LightningResist": 75, "ChaosResist": 75, "Str": 100, "Dex": 100, "Int": 100}
+
+    def send(self, cmd, **kw):
+        assert cmd == "equip"
+        self.worn[kw["slot"]] = kw["raw"]
+        return {"output": self.calc()}
+
+
+def test_uniques_are_checked_again_once_the_rest_is_set():
+    """A unique that no longer beats its rare goes back; one that still does, and the anchor, stay as they were."""
+    from gear import Scorer, _revisit_uniques, _Work
+    pob = _FakePob({"BAD": 0, "GOOD": 5000, "ANCHOR": 0})
+    works = [_Work("Helmet", "Cap", "h", {}, unique="Bad", unique_raw="BAD"),
+             _Work("Gloves", "Mitts", "g", {}, unique="Good", unique_raw="GOOD"),
+             _Work("Boots", "Shoes", "b", {}, unique="Anchor", unique_raw="ANCHOR"),
+             _Work("Belt", "Belt", "r", {}, lines=["+10 to Strength"], picked=["x"])]
+    for w in works:
+        pob.send("equip", slot=w.slot, raw=w.raw())
+    belt = works[3].raw()
+    n = _revisit_uniques(pob, works, make_stage("end"), Scorer(metric="total"), skip=works[2], log=lambda *a: None)
+    assert n == 1 and [w.unique for w in works] == [None, "Good", "Anchor", None]
+    assert pob.worn["Helmet"] == works[0].raw() != "BAD"
+    assert (pob.worn["Gloves"], pob.worn["Boots"], pob.worn["Belt"]) == ("GOOD", "ANCHOR", belt)

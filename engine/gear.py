@@ -8,6 +8,7 @@ target values, which works as a trade search for players.
 """
 from __future__ import annotations
 
+import copy
 import re
 from dataclasses import dataclass, field
 
@@ -656,6 +657,45 @@ def _consider_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scor
             pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
 
 
+def _revisit_uniques(pob: PoB, works: list["_Work"], stage: Stage, score: "Scorer", skip: "_Work | None" = None,
+                     min_gain: float = 0.01, rounds: int = 2, log=print) -> int:
+    """Uniques are chosen one slot at a time, each against a build whose later slots were still rares. Once every slot
+    is set, check each unique again: if its rare (with resistances re-balanced) now scores better, the slot goes back.
+    Without this the order slots are tried in could cost a build most of its damage (task 42)."""
+    keep = ("lines", "picked", "counts", "meta", "unique", "unique_raw")
+    back = 0
+    for _ in range(rounds):
+        changed = False
+        for w in works:
+            if not w.unique or w is skip:
+                continue
+            current = pob.calc(SCORE_FIELDS)
+            short0 = sum(own_deficit(pob.calc(SCORE_FIELDS + _req_fields(x.slot)), x.slot) for x in works) if score.attr_weight else 0
+            before = [({k: copy.copy(getattr(x, k)) for k in keep}, x.raw()) for x in works]
+            name = w.unique
+            w.unique = w.unique_raw = None
+            pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
+            _cap_resistances(pob, works, stage)
+            for x in works:
+                _fill(pob, x, stage, score, stage.max_affixes, allow=lambda g: True)
+            out = pob.calc(SCORE_FIELDS)
+            short = sum(own_deficit(pob.calc(SCORE_FIELDS + _req_fields(x.slot)), x.slot) for x in works) if score.attr_weight else 0
+            if score(out, current) > min_gain and short <= short0:
+                log(f"  {w.slot:<12} {name} no longer pays: back to a rare")
+                back += 1
+                changed = True
+                continue
+            for x, (state, raw) in zip(works, before):
+                now = x.raw()
+                for k, v in state.items():
+                    setattr(x, k, v)
+                if now != raw:
+                    pob.send("equip", slot=x.slot, raw=raw, fields=SCORE_FIELDS)
+        if not changed:
+            break
+    return back
+
+
 def _best_base(pob: PoB, slot: str, candidates: list[dict], stage: Stage, score: Scorer) -> str:
     """Try each candidate base bare (implicit + base defences only) and keep the best."""
     title = f"{stage.name} {slot}"
@@ -858,6 +898,10 @@ def craft_gear(
                     _cap_resistances(pob, works, stage)
                     for w in works:
                         _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
+
+            # (the acts keep their few uniques as chosen: gear there is light and quick)
+            if stage.max_uniques is None:
+                _revisit_uniques(pob, works, stage, score, skip=anchor, log=log)
 
     plans = []
     for w in works:
