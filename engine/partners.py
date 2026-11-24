@@ -176,11 +176,19 @@ def apply_extra_sets(p, skill: str, group: int, out: dict, fields: list[str]) ->
     base = _dps(out)
     if base <= 0:
         return out, None
+    # Only the skill's own damage: Full DPS also holds heralds and minions, which a second part must not add again
+    # (2026-11-24). A part marked "no hit" (Poisonburst Arrow's burst, Gas Grenade's cloud) adds its damage over time
+    # only: PoB repeats the skill's hit for it, which read as x2.03 instead of x1.03. Ailments both parts share are one.
+    own = ["TotalDPS", "TotalDotDPS"]
     extra, labels = 0.0, []
+    first = p.calc(own)
     try:
         for k in sets:
             r = p.send("set_part", group=group, part=k)
-            extra += _dps(p.calc(fields))
+            o = p.calc(own)
+            no_hit = (r.get("no_hit") or [])[k - 1:k] == [True]
+            extra += (0 if no_hit else o.get("TotalDPS") or 0)
+            extra += max((o.get("TotalDotDPS") or 0) - (first.get("TotalDotDPS") or 0), 0)
             labels.append(r["parts"][k - 1] if k - 1 < len(r["parts"]) else str(k))
     finally:
         p.send("set_part", group=group, part=1)

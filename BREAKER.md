@@ -792,3 +792,12 @@ that is small numbers and a base cut isn't about the flagged condition; on a str
 proper find. A stricter threshold (+60% above usual) is written into the key before the 0.2-0.4 scans, as its own column.
 Bow finalists: "Poisonburst Arrow Invoker" 1.75M boss is 97% its boss skill, Rain of Arrows (which as a main skill is 945k
 in its own build); its map DPS (1.63M) is doubled by the extra stat sets on top of the 800k in `sources`.
+
+### Extra stat sets counted too much (2026-11-24, engine 2026-11-24.2)
+partners.apply_extra_sets added a skill's second part as the whole Full DPS of the build with that part on: (1) heralds and
+minions were added again, for all 12 skills in EXTRA_SETS; (2) parts the game marks "no hit" (Poisonburst Arrow's burst,
+Gas Grenade's cloud) were given the arrow's hit: on the saved Poisonburst Invoker x2.03 instead of x1.03 (map 1.63M ->
+~0.83M). Now: the skill's own damage only; no-hit parts add their damage over time only. It is used in the search, the
+guide and the endgame pick, so the Deadeye's Poisonburst Arrow pick (2.57M boss / 6.37M map, engine 2026-11-22.1) is
+suspect. Open: Fireball's explosion and Supercharged Slam's aftershock show exactly the first part's numbers in PoB (x2);
+whether both really land on one target rests on the gem text.

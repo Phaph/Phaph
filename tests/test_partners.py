@@ -72,3 +72,33 @@ def test_frost_bomb_exposure_helps_a_plain_cold_spell(pob):
     scaled, note = apply_exposure(pob, "Comet", g, out, fields, [])
     assert note and note["setup"] == "Frost Bomb" and 1.02 < note["factor"] < 1.2
     assert pob.calc(fields)["TotalDPS"] == out["TotalDPS"]      # the build is left as it was
+
+
+def test_no_hit_part_adds_only_its_damage_over_time(pob):
+    """Poisonburst Arrow's burst deals no hit: PoB repeats the arrow's hit for it (read as x2 until 2026-11-24)."""
+    from partners import apply_extra_sets
+    F = ["TotalDPS", "TotalDotDPS", "FullDPS", "MinionDPS", "MinionDotDPS"]
+    pob.new()
+    pob.set_class("Ranger", "Deadeye")
+    pob.set_level(90)
+    pob.add_item("Rarity: Rare\nT\nGemini Bow\nAdds 100 to 200 Physical Damage")
+    g = pob.add_skill(["Poisonburst Arrow"])["group"]
+    out = pob.calc(F)
+    scaled, note = apply_extra_sets(pob, "Poisonburst Arrow", g, out, F)
+    assert out["TotalDPS"] > 0 and note and note["factor"] < 1.9
+
+
+def test_extra_part_does_not_count_minions_again(pob):
+    from optimize import total_dps
+    from partners import apply_extra_sets
+    F = ["TotalDPS", "TotalDotDPS", "FullDPS", "MinionDPS", "MinionDotDPS"]
+    pob.new()
+    pob.set_class("Sorceress", "Stormweaver")
+    pob.set_level(90)
+    g = pob.add_skill(["Fireball"])["group"]
+    own = pob.calc(F)["TotalDPS"]
+    pob.add_skill(["Raging Spirits"], main=False, full_dps=True)
+    pob.use_full_dps()
+    out = pob.calc(F)
+    scaled, _ = apply_extra_sets(pob, "Fireball", g, out, F)
+    assert total_dps(scaled) - total_dps(out) <= own * 1.05

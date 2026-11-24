@@ -1,11 +1,10 @@
 # START HERE (handoff, updated 2026-11-22 evening)
 Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. Sessions are short now (Kyle,
 2026-11-20): one task or working block per session, write state back here before stopping.
-- **Running (2026-11-24 01:00 Berlin):** engine 2026-11-24.1 live (222 tests). ~/after_sweep.sh: weapon finalists
-  from scratch on it (~11 h; commit finalists.json + .txt), then task 37. Task 40: engine/tools/old_patch.sh 2 v0.5.0
-  v0.8.0 v0.12.2 v0.15.0 (2 cores, ~/old_patch.log, data/breaker/old/) = condition + matrix scans on PoB of patches
-  0.1-0.4; then grade against data/breaker/answer_key.json by its own rules (no tuning first).
-  Runner shims for old PoB (newItem, custom mods) committed (3 test files green; full suite before the next deploy).
+- **Running (2026-11-24 03:15 Berlin):** ~/after_fulldps.sh: full suite -> if green deploy engine 2026-11-24.2 (extra
+  stat sets fix) and restart ~/after_sweep.sh from scratch with --builds 3 (finalists; commit .json + .txt; then task
+  37). Result: ~/after_fulldps_deploy.log. Task 40: engine/tools/old_patch.sh (2 cores, ~/old_patch.log) on PoB of 0.1-0.4;
+  grade with tools/grade_old.py. The old-patch scans from 0.2 on pick up the fixed engine, 0.1's did not.
 - weapon_finalists.py now builds 3 finalists beside the next search (--builds; takes effect at the next run, speed not
   measured yet; the run going now is the serial version).
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%

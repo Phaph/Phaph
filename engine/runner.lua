@@ -1098,9 +1098,14 @@ function handlers.set_part(cmd)
 	end
 	build.buildFlag = true
 	frame()
-	local labels = {}
-	for i, set in ipairs(ge and ge.statSets or {}) do labels[i] = set.label end
-	return { part = (ge and gem.statSet and gem.statSet[ge.id]) or 1, parts = labels }
+	local labels, noHit = {}, {}
+	for i, set in ipairs(ge and ge.statSets or {}) do
+		labels[i] = set.label
+		noHit[i] = false
+		-- The game's own mark: this part deals no hit (PoB shows the skill's hit for it anyway).
+		for _, st in ipairs(set.stats or {}) do if st == "display_statset_no_hit_damage" then noHit[i] = true end end
+	end
+	return { part = (ge and gem.statSet and gem.statSet[ge.id]) or 1, parts = labels, no_hit = noHit }
 end
 
 -- Patch-notes mode (task 31): change a gem's numbers in PoB's loaded data, as a patch would. cmd.skill = gem name
