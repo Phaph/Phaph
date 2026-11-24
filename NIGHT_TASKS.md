@@ -81,6 +81,14 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   (map 3.86M -> 8.84M, EHP 7.0k -> 10.6k); 5 identical. ~/merge_revisit.sh: when 12 of 12, gate (~/revisit_gate.log: no loss over 5% in boss, map or EHP vs plain),
   main merged into `revisit`, full suite, then merge + deploy 2026-11-24.7 + push (~/merge_revisit.log). If the gate fails, decide by hand. AB3's base is
   2026-11-24.3 code (plain too), so the gain on .6 isn't measured. Its 66% resistances: Loreweave (both builds wear it) has a "Maximum Resistances are" line in PoB, so 66 is probably the cap and not a missing resist; unconfirmed on the build.
+- **21:20 AB3 complete (12 of 12): 5 builds change:** boss x3.09 (RoA as is), x1.02 (RoA rotated), Bonestorm x1.62 / x1.80 / x2.41; 7 identical. Spread: RoA 320% -> 39%, Bonestorm 68%
+  -> 50%, Rapid Shot 22%, Ice Shot 5% (unchanged). Gate FAILED on RoA rotated (EHP x0.75), nothing merged. By hand: that loss is Communion (both
+  builds hold it; without it 10.6k -> 12.5k EHP). ~/merge_revisit2.sh rebuilds that spec on today's main and on revisit, runs the suite, and
+  merges + deploys 2026-11-24.7 only if neither boss, map nor EHP is over 5% lower (~/merge_revisit2.log). Spread is still over the 10% bar for 3 of 4:
+  42 stays open (best-of-N orders next).
+- **handuniques merged 20:37 (232 passed).** **43(b): branch `kitehp`** (worktree ~/phaph_kitehp, 2026-11-24.8, 2 unit tests pass): side skills' support search keeps 90% of the
+  toughness. How often it bites: ~/kit_freq.log (old finalists, so Communion is in it). Left: full suite after the revisit merge (merge main first;
+  app.py version conflict: keep .8), then merge + deploy.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
