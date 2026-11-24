@@ -379,6 +379,11 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
     bow / wand / sceptre skills read low.
 
+42. [ ] (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
+    a quiver (BREAKER.md). Measure: the same spec built 3 times with small starting differences (gear slot order, first
+    supports), 3 skills; if the spread is > 10%, try best-of-two starts for the Uber stage or a final pass that retries
+    each unique slot with a rare and the next-best uniques once everything else is set. Needs free cores.
+
 ## Waiting for Kyle
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
   (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.

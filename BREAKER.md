@@ -846,3 +846,10 @@ wand +64%, Bonestorm wand +79% with a quiver / focus. Not full builds; a staff s
 gain vs an immobilised enemy at all (today's PoB doubles Siege Cascade), so the detector had nothing to read. False
 alarms: 41 skills flagged, 1 real (Lightning Conduit, cut again 20 to 10, known), 34 not cut, 6 unjudged. Strict: Lightning Conduit, two skeletons
 (unjudged) and Unearth (not cut). Three patches, same result: the condition scan on its own fails the bar.
+
+**Off-hand, first full builds (2026-11-24):** Ice Shot Invoker 1.75M -> 2.56M boss (+46%, as the quick A/B). Rain of Arrows Invoker
+945k -> 849k (-10%) although it now holds a quiver: the greedy gear / tree / supports took another route (Rearguard quiver,
+Choir of the Storm, a crit-damage build with half the EHP, 6.2k vs 11.3k). So the full-build optimiser's own path luck is
+at least ~10% in one step, probably more (it lost the quiver's gain as well): don't read single full-build differences
+under ~20-30% as real (the +11% / -11% lead verdicts are inside that). Open: a second start (best of two gear orders), or
+keeping the earlier build as a candidate, would show how much is left on the table.
