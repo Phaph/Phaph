@@ -8,8 +8,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Task 41 (found 2026-11-24 07:00): nothing fills Weapon 2.** Live engine too: bows have no quiver, wands / sceptres no
   focus, one-handed weapons no shield or second weapon, unless a skill or anchor asks. So every bow / one-hand number
   is low against two-handers (finalists, all saved leads but staves and crossbows). Fix for bow / wand / sceptre on
-  branch `offhand` (worktree ~/phaph_offhand, not pushed or merged): ~/offhand.sh runs A/B (~/offhand_ab.log), then the
-  suite (~/offhand_tests.log). Do NOT merge into ~/phaph or push main until ~/old_all.sh has finished: each old-patch
+  branch `offhand` (worktree ~/phaph_offhand, not pushed or merged): A/B in ~/offhand_ab.log; ~/offhand2.sh runs the full
+  suite now (~/offhand_tests.log; also covers (d), one-handed martial: second weapon or shield by score; its 2 new tests pass). Do NOT merge into ~/phaph or push main until ~/old_all.sh has finished: each old-patch
   scan copies ~/phaph/engine when it starts, and the grade needs one engine. Same branch: Quarterstaff search fix.
 - Task 39: Cast on X is settled (guides already add triggers.py's estimate beside the total; no engine change). Lead
   re-run queued: ~/after_leads.sh (2 cores, after old_all.sh) -> data/breaker/lead_builds_fulldps, log ~/after_leads.log;
@@ -372,8 +372,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 
 41. [ ] Off-hands (see START HERE): (a) read the A/B and the suite on branch `offhand`; (b) once old_all.sh is done: merge,
     bump ENGINE_VERSION, deploy, stop nothing in the queue; (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
-    Sceptre (the rest of today's run is comparable only within itself); (d) one-handed martial weapons: try shield and second weapon and keep the better by score (dual wield is the
-    Shadow build's case); (e) weapon set 2 (craft_weapon) has no off-hand either; (f) lead re-run (~/after_leads.sh)
+    Sceptre (the rest of today's run is comparable only within itself); (d) done on the branch 2026-11-24: one-handed martial weapons try a second weapon and a shield by score (spear,
+    flail: shield only; damage effect not measured yet); (e) weapon set 2 (craft_weapon) has no off-hand either; (f) lead re-run (~/after_leads.sh)
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
     bow / wand / sceptre skills read low.
 
