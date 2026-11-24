@@ -5,6 +5,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   stat sets fix) and restart ~/after_sweep.sh from scratch with --builds 3 (finalists; commit .json + .txt; then task
   37). Result: ~/after_fulldps_deploy.log. Task 40: engine/tools/old_patch.sh (2 cores, ~/old_patch.log) on PoB of 0.1-0.4;
   grade with tools/grade_old.py. The old-patch scans from 0.2 on pick up the fixed engine, 0.1's did not.
+- Next for task 40: engine/stack_scan.py (smoke test running on 0.1 Spark); if it works: `SCANS=stack engine/tools/old_patch.sh
+  2 v0.5.0 v0.12.2` once old_patch.sh is done (~3 h each on 2 free cores, a guess).
 - weapon_finalists.py now builds 3 finalists beside the next search (--builds; takes effect at the next run, speed not
   measured yet; the run going now is the serial version).
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%

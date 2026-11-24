@@ -801,3 +801,10 @@ Gas Grenade's cloud) were given the arrow's hit: on the saved Poisonburst Invoke
 guide and the endgame pick, so the Deadeye's Poisonburst Arrow pick (2.57M boss / 6.37M map, engine 2026-11-22.1) is
 suspect. Open: Fireball's explosion and Supercharged Slam's aftershock show exactly the first part's numbers in PoB (x2);
 whether both really land on one target rests on the gem text.
+
+**Patches 0.1 and 0.2 so far (2026-11-24):** 0.1: 1 of 3 (Archmage, Gemling attributes missed: their pieces gained under 5%
+on a plain build). 0.2 condition scan: Glacial Cascade vs Frozen missed; "Spearfield" counts as found by the key's literal
+rule (row 58 of 65, +17% vs Armour Broken), but that is not its hidden multiplier: a right name for the wrong reason,
+read it as a miss. The strict column on 0.2 flags Lightning Conduit (known) and four others (Raise Zombie, Skeletal Reaver, Skeletal
+Sniper, Unearth, all vs Armour Broken), none of them in the key. stack_scan.py (piece x piled-up stat) was written
+after the 0.1 misses; only the 0.3 cases test it.
