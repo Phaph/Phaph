@@ -1,0 +1,4439 @@
+{
+ "skills": {
+  "Armour Breaker": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Melee",
+    "MeleeSingleTarget",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.074,
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.229,
+    "unique:Ingenuity": 0.122,
+    "unique:Doryani's Prototype": 0.059,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.194
+   },
+   "dps": 42269
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "types": [
+    "Chains",
+    "Damage",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.159,
+    "unique:Painter's Servant": 0.134,
+    "unique:Crown of the Victor": 0.099,
+    "unique:Ingenuity": 0.129,
+    "unique:Doryani's Prototype": 0.106,
+    "unique:Irongrasp": 0.214,
+    "unique:Thrillsteel": 0.059,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.195,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Maligaro's Virtuosity": 0.218,
+    "unique:Doedre's Tenure": 0.114
+   },
+   "dps": 28994
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Bow",
+    "Duration",
+    "GroundTargetedProjectile",
+    "Limit",
+    "Mineable",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "ProjectilesFromUser",
+    "Rain",
+    "RangedAttack",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Sustained",
+    "TotemsAreBallistae",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.096,
+    "unique:Hyrri's Ire": 0.255,
+    "unique:Ingenuity": 0.101,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Irongrasp": 0.308,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.27
+   },
+   "dps": 2070
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.074,
+    "unique:Hyrri's Ire": 0.247,
+    "unique:Ingenuity": 0.101,
+    "unique:Doryani's Prototype": 0.067,
+    "unique:Irongrasp": 0.323,
+    "unique:Thrillsteel": 0.108,
+    "unique:Perfidy": 0.099,
+    "unique:Heart of the Well": 0.113,
+    "unique:Rondel of Fragility": 0.301
+   },
+   "dps": 145066
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.159,
+    "unique:Painter's Servant": 0.141,
+    "unique:Crown of the Victor": 0.082,
+    "unique:Ingenuity": 0.059,
+    "unique:Doryani's Prototype": 0.104,
+    "unique:Irongrasp": 0.257,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.272,
+    "unique:The Bringer of Rain": 0.077,
+    "unique:Maligaro's Virtuosity": 0.162,
+    "unique:Doedre's Tenure": 0.265
+   },
+   "dps": 26066
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CannotSpiritStrike",
+    "Melee",
+    "MeleeSingleTarget",
+    "Movement",
+    "Physical",
+    "SkillConsumesBleeding",
+    "Spear"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.17,
+    "unique:Hyrri's Ire": 0.277,
+    "unique:Ingenuity": 0.077,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.057,
+    "unique:Ming's Heart": 0.127,
+    "unique:Rondel of Fragility": 0.254
+   },
+   "dps": 24451
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Necrotic",
+    "Nova",
+    "Physical",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.068,
+    "unique:Snakepit": 0.101,
+    "unique:Crown of the Victor": 0.085,
+    "unique:Ingenuity": 0.071,
+    "unique:The Coming Calamity": 0.09,
+    "unique:Irongrasp": 0.234,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.071,
+    "unique:Atsak's Sight": 0.178,
+    "unique:Scold's Bridle": 0.173,
+    "unique:The Bringer of Rain": 0.119,
+    "unique:Ming's Heart": 0.071,
+    "unique:Maligaro's Virtuosity": 0.232,
+    "unique:Seed of Cataclysm": 0.069,
+    "unique:Doedre's Tenure": 0.105
+   },
+   "dps": 42011
+  },
+  "Boneshatter": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.071,
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.237,
+    "unique:Ingenuity": 0.122,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.083,
+    "unique:Rondel of Fragility": 0.205
+   },
+   "dps": 36818
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Channel",
+    "ConsumesCharges",
+    "Damage",
+    "Necrotic",
+    "Physical",
+    "Projectile",
+    "SkillConsumesPowerChargesOnUse",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.072,
+    "unique:Snakepit": 0.105,
+    "unique:Crown of the Victor": 0.074,
+    "unique:Ingenuity": 0.068,
+    "unique:The Coming Calamity": 0.095,
+    "unique:Irongrasp": 0.191,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.197,
+    "unique:The Bringer of Rain": 0.104,
+    "unique:Ming's Heart": 0.08,
+    "unique:Maligaro's Virtuosity": 0.355,
+    "unique:Seed of Cataclysm": 0.071,
+    "unique:Doedre's Tenure": 0.105
+   },
+   "dps": 82964
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Fire",
+    "Grenade",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.098,
+    "unique:Hyrri's Ire": 0.197,
+    "unique:Sands of Silk": 0.232,
+    "unique:Ingenuity": 0.094,
+    "unique:Irongrasp": 0.717,
+    "unique:Ryslatha's Coil": 0.104,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.262,
+    "unique:The Bringer of Rain": 0.086,
+    "unique:Ming's Heart": 0.054,
+    "unique:Rondel of Fragility": 0.08
+   },
+   "dps": 5047
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlaceIsDefault",
+    "Companion",
+    "CreatesCompanion",
+    "CreatesMinion",
+    "HasReservation",
+    "Minion",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:The Coming Calamity": 0.054,
+    "unique:Perfidy": 0.1,
+    "unique:Vis Mortis": 0.243,
+    "unique:Evergrasping Ring": 0.203
+   },
+   "dps": 25381
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Damage",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.137,
+    "unique:Crown of the Victor": 0.099,
+    "unique:Ingenuity": 0.076,
+    "unique:Irongrasp": 0.221,
+    "unique:Perfidy": 0.1,
+    "unique:Heatshiver": 0.121,
+    "unique:Scold's Bridle": 0.24,
+    "unique:The Bringer of Rain": 0.086,
+    "unique:Maligaro's Virtuosity": 0.292,
+    "unique:Doedre's Tenure": 0.192
+   },
+   "dps": 46500
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chaos",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Crown of the Victor": 0.167,
+    "unique:Irongrasp": 0.204,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.213,
+    "unique:Doedre's Tenure": 0.213
+   },
+   "dps": 9773
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCancelActions",
+    "Cooldown",
+    "Melee",
+    "Shapeshift",
+    "Triggerable",
+    "Wolf"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.068,
+    "unique:Hyrri's Ire": 0.079,
+    "unique:Sands of Silk": 0.199,
+    "unique:The Coming Calamity": 0.051,
+    "unique:Ryslatha's Coil": 0.133,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.254,
+    "unique:The Bringer of Rain": 0.07,
+    "unique:Ming's Heart": 0.183,
+    "unique:Rondel of Fragility": 0.152
+   },
+   "dps": 25771
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "GeneratesCharges",
+    "Melee",
+    "MeleeSingleTarget"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.122,
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.253,
+    "unique:Ingenuity": 0.127,
+    "unique:Doryani's Prototype": 0.068,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.287
+   },
+   "dps": 15761
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "AttackInPlaceIsDefault",
+    "Chaos",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesNumberModifiersNotApplied",
+    "Spell",
+    "SummonsTotem",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.077,
+    "unique:Crown of the Victor": 0.109,
+    "unique:Plaguefinger": 0.051,
+    "unique:Ingenuity": 0.108,
+    "unique:Irongrasp": 0.146,
+    "unique:Thrillsteel": 0.065,
+    "unique:Perfidy": 0.1,
+    "unique:Atsak's Sight": 0.086,
+    "unique:Scold's Bridle": 0.095,
+    "unique:The Bringer of Rain": 0.055,
+    "unique:Ming's Heart": 0.159,
+    "unique:Maligaro's Virtuosity": 0.143,
+    "unique:Snakebite": 0.088
+   },
+   "dps": 28522
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Detonator",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Physical",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Blackflame Covenant": 0.103,
+    "keystone:Crimson Assault": 0.286,
+    "unique:Snakepit": 0.081,
+    "unique:Plaguefinger": 0.125,
+    "unique:The Coming Calamity": 0.134,
+    "unique:Irongrasp": 0.186,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.321,
+    "unique:Atsak's Sight": 0.055,
+    "unique:Scold's Bridle": 0.268,
+    "unique:Icefang Orbit": 0.053,
+    "unique:The Bringer of Rain": 0.082,
+    "unique:Ming's Heart": 0.201,
+    "unique:Maligaro's Virtuosity": 0.248,
+    "unique:Snakebite": 0.143,
+    "unique:Seed of Cataclysm": 0.146,
+    "unique:Doedre's Tenure": 0.214
+   },
+   "dps": 18057
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "Damage",
+    "Fire"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.156,
+    "unique:Sands of Silk": 0.228,
+    "unique:Yoke of Suffering": 0.199,
+    "unique:Ingenuity": 0.194,
+    "unique:Irongrasp": 0.441,
+    "unique:Perfidy": 0.1,
+    "unique:Heatshiver": 0.054,
+    "unique:Wake of Destruction": 0.081,
+    "unique:Mind of the Council": 0.091,
+    "unique:Scold's Bridle": 0.405,
+    "unique:Rondel of Fragility": 0.081
+   },
+   "dps": 5379
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Channel",
+    "Detonator",
+    "Fire",
+    "GainsStages",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.063,
+    "unique:Hyrri's Ire": 0.1,
+    "unique:Ingenuity": 0.136,
+    "unique:Irongrasp": 0.336,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.163
+   },
+   "dps": 30970
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "GamepadDoNotForceSkillAtLocation",
+    "GeneratesCharges",
+    "Jumping",
+    "Melee",
+    "Movement",
+    "Shapeshift",
+    "Slam",
+    "TargetsDestructibleCorpses",
+    "Triggerable",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.25,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.092,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.102,
+    "unique:Rondel of Fragility": 0.15
+   },
+   "dps": 155170
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCancelActions",
+    "CannotSpiritStrike",
+    "Cooldown",
+    "GeneratesCharges",
+    "Jumping",
+    "Melee",
+    "MeleeSingleTarget",
+    "Movement",
+    "SkillConsumesParried",
+    "Spear",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.276,
+    "unique:Sands of Silk": 0.207,
+    "unique:Ingenuity": 0.077,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.123,
+    "unique:Atsak's Sight": 0.057,
+    "unique:The Bringer of Rain": 0.073,
+    "unique:Ming's Heart": 0.127,
+    "unique:Rondel of Fragility": 0.174
+   },
+   "dps": 12510
+  },
+  "Earthquake": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CreatesGroundEffect",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.073,
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.237,
+    "unique:Ingenuity": 0.122,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.244
+   },
+   "dps": 19761
+  },
+  "Earthshatter": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "CreatesFissure",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.072,
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.237,
+    "unique:Ingenuity": 0.122,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.247
+   },
+   "dps": 23681
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "CannotChain",
+    "Duration",
+    "GroundTargetedProjectile",
+    "Lightning",
+    "Projectile",
+    "ProjectileNoCollision",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.11,
+    "unique:Irongrasp": 0.35,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.275
+   },
+   "dps": 37662
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Fire",
+    "Lightning",
+    "Melee",
+    "Nova",
+    "SkillConsumesFreeze",
+    "SkillConsumesIgnite",
+    "SkillConsumesShock",
+    "Spear"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.23,
+    "unique:Ingenuity": 0.3,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Thrillsteel": 0.114,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.103,
+    "unique:Mind of the Council": 0.099,
+    "unique:Rondel of Fragility": 0.259
+   },
+   "dps": 3395
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Candlemaker": 0.055,
+    "unique:Hyrri's Ire": 0.157,
+    "unique:Painter's Servant": 0.083,
+    "unique:Crown of the Victor": 0.108,
+    "unique:Ingenuity": 0.114,
+    "unique:Irongrasp": 0.119,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.225,
+    "unique:The Bringer of Rain": 0.054,
+    "unique:Maligaro's Virtuosity": 0.184,
+    "unique:Doedre's Tenure": 0.158
+   },
+   "dps": 57406
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "CreatesFissure",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Nature",
+    "Physical",
+    "Plant",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.552,
+    "unique:Hyrri's Ire": 0.074,
+    "unique:Snakepit": 0.106,
+    "unique:Crown of the Victor": 0.095,
+    "unique:Plaguefinger": 0.055,
+    "unique:Ingenuity": 0.071,
+    "unique:The Coming Calamity": 0.096,
+    "unique:Irongrasp": 0.248,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.072,
+    "unique:Atsak's Sight": 0.176,
+    "unique:Scold's Bridle": 0.208,
+    "unique:The Bringer of Rain": 0.095,
+    "unique:Ming's Heart": 0.088,
+    "unique:Maligaro's Virtuosity": 0.187,
+    "unique:Snakebite": 0.063,
+    "unique:Doedre's Tenure": 0.139
+   },
+   "dps": 11303
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Bow",
+    "CanCancelActions",
+    "Cold",
+    "GroundTargetedProjectile",
+    "Jumping",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "ProjectilesNumberModifiersNotApplied",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.065,
+    "unique:Hyrri's Ire": 0.242,
+    "unique:Ingenuity": 0.113,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Irongrasp": 0.369,
+    "unique:Perfidy": 0.1,
+    "unique:Rondel of Fragility": 0.051
+   },
+   "dps": 21378
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "types": [
+    "Chaos",
+    "Damage",
+    "DamageOverTime",
+    "Duration",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.057,
+    "unique:Crown of the Victor": 0.11,
+    "unique:Plaguefinger": 0.066,
+    "unique:Ingenuity": 0.109,
+    "unique:Irongrasp": 0.146,
+    "unique:Thrillsteel": 0.065,
+    "unique:Perfidy": 0.1,
+    "unique:Atsak's Sight": 0.086,
+    "unique:Scold's Bridle": 0.094,
+    "unique:The Bringer of Rain": 0.055,
+    "unique:Ming's Heart": 0.069,
+    "unique:Maligaro's Virtuosity": 0.143,
+    "unique:Snakebite": 0.088
+   },
+   "dps": 53058
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Detonator",
+    "Fire",
+    "Grenade",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.092,
+    "unique:Hyrri's Ire": 0.209,
+    "unique:Sands of Silk": 0.231,
+    "unique:Ingenuity": 0.109,
+    "unique:Doryani's Prototype": 0.057,
+    "unique:Irongrasp": 0.321,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 41765
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.24,
+    "unique:Ingenuity": 0.101,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.253,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.207
+   },
+   "dps": 47412
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "CannotChain",
+    "ConsumesCharges",
+    "CreatesGroundEffect",
+    "DetonatesAfterTime",
+    "Detonator",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Projectile",
+    "ProjectilesFromUser",
+    "ProjectilesNumberModifiersNotApplied",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Spear",
+    "UsableWhileMounted",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.228,
+    "unique:Ingenuity": 0.122,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Irongrasp": 0.353,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.238
+   },
+   "dps": 19799
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "types": [
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "InteractsWithElementalGround",
+    "Mineable",
+    "Projectile",
+    "ProjectileSpiral",
+    "SingleMainProjectile",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Demon Stitcher": 0.078,
+    "unique:Hyrri's Ire": 0.113,
+    "unique:Snakepit": 0.36,
+    "unique:Crown of the Victor": 0.101,
+    "unique:Whisper of the Brotherhood": 0.071,
+    "unique:Plaguefinger": 0.109,
+    "unique:Sine Aequo": 0.107,
+    "unique:The Coming Calamity": 0.272,
+    "unique:Irongrasp": 0.302,
+    "unique:Thrillsteel": 0.161,
+    "unique:Perfidy": 0.1,
+    "unique:Atsak's Sight": 0.094,
+    "unique:Heartbound Loop": 0.071,
+    "unique:Lochtonial Caress": 0.107,
+    "unique:Scold's Bridle": 0.137,
+    "unique:The Bringer of Rain": 0.063,
+    "unique:Ming's Heart": 0.265,
+    "unique:Maligaro's Virtuosity": 0.133,
+    "unique:Evergrasping Ring": 0.071,
+    "unique:Seed of Cataclysm": 0.088
+   },
+   "dps": 5702
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "ConsumesCharges",
+    "Lightning",
+    "Melee",
+    "Projectile",
+    "ProjectilesNotFromUser",
+    "QuarterstaffSkill",
+    "RangedAttack",
+    "SkillConsumesPowerChargesOnUse",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.109,
+    "unique:Ingenuity": 0.108,
+    "unique:Doryani's Prototype": 0.148,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.069,
+    "unique:Rondel of Fragility": 0.115
+   },
+   "dps": 92766
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Cold",
+    "CreatesGroundEffect",
+    "Melee",
+    "MeleeSingleTarget",
+    "SkillConsumesParried",
+    "Spear"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.305,
+    "unique:Ingenuity": 0.114,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.275
+   },
+   "dps": 52342
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Fire",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Candlemaker": 0.054,
+    "unique:Hyrri's Ire": 0.159,
+    "unique:Painter's Servant": 0.093,
+    "unique:Crown of the Victor": 0.098,
+    "unique:Ingenuity": 0.129,
+    "unique:Irongrasp": 0.214,
+    "unique:Thrillsteel": 0.065,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.202,
+    "unique:The Bringer of Rain": 0.052,
+    "unique:Maligaro's Virtuosity": 0.177,
+    "unique:Doedre's Tenure": 0.124
+   },
+   "dps": 32783
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Storm",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Candlemaker": 0.054,
+    "unique:Hyrri's Ire": 0.16,
+    "unique:Painter's Servant": 0.092,
+    "unique:Crown of the Victor": 0.113,
+    "unique:Ingenuity": 0.129,
+    "unique:Irongrasp": 0.214,
+    "unique:Thrillsteel": 0.065,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.197,
+    "unique:The Bringer of Rain": 0.052,
+    "unique:Maligaro's Virtuosity": 0.177,
+    "unique:Doedre's Tenure": 0.123
+   },
+   "dps": 12016
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "ConsumesCharges",
+    "ConsumesRage",
+    "Cooldown",
+    "CreatesGroundEffect",
+    "Damage",
+    "Detonator",
+    "Duration",
+    "Fire",
+    "ManualCooldownConsumption",
+    "Shapeshift",
+    "SkillConsumesPowerChargesOnUse",
+    "Sustained",
+    "UsableWhileMoving",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.202,
+    "unique:Sands of Silk": 0.232,
+    "unique:Ingenuity": 0.099,
+    "unique:Perfidy": 0.1,
+    "unique:Fireflower": 0.184,
+    "unique:Rondel of Fragility": 0.107
+   },
+   "dps": 1585
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "CausesBurning",
+    "Damage",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "Fire",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Candlemaker": 0.133,
+    "unique:Hyrri's Ire": 0.131,
+    "unique:Painter's Servant": 0.131,
+    "unique:Crown of the Victor": 0.121,
+    "unique:Plaguefinger": 0.052,
+    "unique:Ingenuity": 0.185,
+    "unique:Thrillsteel": 0.065,
+    "unique:Perfidy": 0.1,
+    "unique:Maligaro's Virtuosity": 0.078
+   },
+   "dps": 14984
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "Cooldown",
+    "Damage",
+    "Fire",
+    "GainsStages",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Candlemaker": 0.074,
+    "unique:Hyrri's Ire": 0.135,
+    "unique:Sands of Silk": 0.232,
+    "unique:Crown of the Victor": 0.109,
+    "unique:Ingenuity": 0.054,
+    "unique:Irongrasp": 0.247,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.246,
+    "unique:The Bringer of Rain": 0.093,
+    "unique:Ming's Heart": 0.055,
+    "unique:Maligaro's Virtuosity": 0.104,
+    "unique:Doedre's Tenure": 0.252
+   },
+   "dps": 22820
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Grenade",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.076,
+    "unique:Sands of Silk": 0.19,
+    "unique:The Coming Calamity": 0.07,
+    "unique:Irongrasp": 0.83,
+    "unique:Ryslatha's Coil": 0.143,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.301,
+    "unique:Atsak's Sight": 0.063,
+    "unique:The Bringer of Rain": 0.089,
+    "unique:Ming's Heart": 0.162,
+    "unique:Maligaro's Virtuosity": 0.099,
+    "unique:Rondel of Fragility": 0.131
+   },
+   "dps": 7885
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "QuarterstaffSkill",
+    "SkillConsumesPowerChargesOnUse"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.103,
+    "unique:Venopuncture": 0.057,
+    "unique:The Coming Calamity": 0.07,
+    "unique:Ryslatha's Coil": 0.054,
+    "unique:Thrillsteel": 0.085,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.086,
+    "unique:Heart of the Well": 0.057,
+    "unique:Icefang Orbit": 0.053,
+    "unique:Ming's Heart": 0.244,
+    "unique:Rondel of Fragility": 0.462
+   },
+   "dps": 30804
+  },
+  "Forge Hammer": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Cooldown",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "Slam",
+    "Sustained",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.222,
+    "unique:Sands of Silk": 0.182,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.057,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 8946
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "EmpowersOtherSkill",
+    "Nova",
+    "Physical",
+    "SkillConsumesEnduranceChargesOnUse",
+    "UsableWhileMoving",
+    "Warcry"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Demon Stitcher": 0.12,
+    "unique:Hyrri's Ire": 0.125,
+    "unique:Snakepit": 0.624,
+    "unique:Crown of the Victor": 0.137,
+    "unique:Whisper of the Brotherhood": 0.1,
+    "unique:Plaguefinger": 0.12,
+    "unique:Sine Aequo": 0.15,
+    "unique:Irongrasp": 0.2,
+    "unique:Thrillsteel": 0.2,
+    "unique:Perfidy": 0.1,
+    "unique:Atsak's Sight": 0.099,
+    "unique:Heartbound Loop": 0.1,
+    "unique:Lochtonial Caress": 0.15,
+    "unique:Scold's Bridle": 0.7,
+    "unique:Icefang Orbit": 0.1,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Ming's Heart": 0.399,
+    "unique:Maligaro's Virtuosity": 0.147,
+    "unique:Evergrasping Ring": 0.1,
+    "unique:Rondel of Fragility": 0.989,
+    "unique:Stone of Lazhwar": 0.25,
+    "unique:Snakebite": 0.12,
+    "unique:Seed of Cataclysm": 0.082,
+    "unique:Doedre's Tenure": 0.5
+   },
+   "dps": 407
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.077,
+    "unique:Hyrri's Ire": 0.25,
+    "unique:Ingenuity": 0.103,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Irongrasp": 0.251,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.151
+   },
+   "dps": 13557
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Bow",
+    "CannotChain",
+    "Cold",
+    "Damage",
+    "GroundTargetedProjectile",
+    "HasSeals",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.064,
+    "unique:Hyrri's Ire": 0.241,
+    "unique:Ingenuity": 0.113,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Irongrasp": 0.369,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.29
+   },
+   "dps": 20919
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "DetonatesAfterTime",
+    "Duration",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Invokable",
+    "Limit",
+    "Mineable",
+    "Multicastable",
+    "Orb",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.156,
+    "unique:Sands of Silk": 0.3,
+    "unique:Painter's Servant": 0.074,
+    "unique:Crown of the Victor": 0.073,
+    "unique:Ingenuity": 0.058,
+    "unique:Irongrasp": 0.257,
+    "unique:Perfidy": 0.1,
+    "unique:Heatshiver": 0.117,
+    "unique:Scold's Bridle": 0.245,
+    "unique:The Bringer of Rain": 0.117,
+    "unique:Maligaro's Virtuosity": 0.135,
+    "unique:Seed of Cataclysm": 0.076,
+    "unique:Doedre's Tenure": 0.251
+   },
+   "dps": 6709
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cold",
+    "Damage",
+    "Projectile",
+    "Spell",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.158,
+    "unique:Painter's Servant": 0.067,
+    "unique:Crown of the Victor": 0.071,
+    "unique:Ingenuity": 0.129,
+    "unique:Irongrasp": 0.214,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.181,
+    "unique:The Bringer of Rain": 0.086,
+    "unique:Maligaro's Virtuosity": 0.29,
+    "unique:Doedre's Tenure": 0.095
+   },
+   "dps": 10763
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Duration",
+    "IceCrystal",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "ToggleSpawnedObjectTargetable_DefaultOff",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wall"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.156,
+    "unique:Sands of Silk": 0.3,
+    "unique:Painter's Servant": 0.078,
+    "unique:Crown of the Victor": 0.062,
+    "unique:Ingenuity": 0.059,
+    "unique:Irongrasp": 0.257,
+    "unique:Perfidy": 0.1,
+    "unique:Heatshiver": 0.214,
+    "unique:Scold's Bridle": 0.253,
+    "unique:The Bringer of Rain": 0.105,
+    "unique:Maligaro's Virtuosity": 0.121,
+    "unique:Seed of Cataclysm": 0.058,
+    "unique:Doedre's Tenure": 0.259
+   },
+   "dps": 5352
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "Cold",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.16,
+    "unique:Painter's Servant": 0.07,
+    "unique:Crown of the Victor": 0.081,
+    "unique:Ingenuity": 0.129,
+    "unique:Irongrasp": 0.214,
+    "unique:Perfidy": 0.1,
+    "unique:Heatshiver": 0.263,
+    "unique:Scold's Bridle": 0.179,
+    "unique:The Bringer of Rain": 0.081,
+    "unique:Maligaro's Virtuosity": 0.273,
+    "unique:Doedre's Tenure": 0.098
+   },
+   "dps": 39791
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCancelActions",
+    "Cold",
+    "CreatesGroundEffect",
+    "Duration",
+    "IceCrystal",
+    "Limit",
+    "Melee",
+    "QuarterstaffSkill",
+    "ToggleSpawnedObjectTargetable_DefaultOn"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.233,
+    "unique:Ingenuity": 0.297,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Thrillsteel": 0.114,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.101,
+    "unique:Mind of the Council": 0.097,
+    "unique:Rondel of Fragility": 0.223
+   },
+   "dps": 3986
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Bear",
+    "ConsumesRage",
+    "Melee",
+    "Shapeshift",
+    "Slam",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.105,
+    "unique:Venopuncture": 0.052,
+    "unique:The Coming Calamity": 0.078,
+    "unique:Ryslatha's Coil": 0.062,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.124,
+    "unique:Atsak's Sight": 0.104,
+    "unique:Heart of the Well": 0.101,
+    "unique:Icefang Orbit": 0.055,
+    "unique:The Bringer of Rain": 0.084,
+    "unique:Ming's Heart": 0.237,
+    "unique:Rondel of Fragility": 0.371
+   },
+   "dps": 26953
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Bear",
+    "Channel",
+    "ConsumesRage",
+    "CreatesFissure",
+    "Duration",
+    "Melee",
+    "Shapeshift",
+    "Slam",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.226,
+    "unique:Ingenuity": 0.095,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.102,
+    "unique:Rondel of Fragility": 0.254
+   },
+   "dps": 29267
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.231,
+    "unique:Ingenuity": 0.098,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Irongrasp": 0.247,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.137
+   },
+   "dps": 11067
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chaos",
+    "CreatesGroundEffect",
+    "Duration",
+    "Fire",
+    "GroundTargetedProjectile",
+    "Limit",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.168,
+    "unique:Hyrri's Ire": 0.264,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.37,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.287
+   },
+   "dps": 11905
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Chaos",
+    "Cooldown",
+    "CreatesGroundEffect",
+    "DetonatesAfterTime",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "Limit",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.118,
+    "unique:Hyrri's Ire": 0.251,
+    "unique:Sands of Silk": 0.231,
+    "unique:Ingenuity": 0.103,
+    "unique:Doryani's Prototype": 0.068,
+    "unique:Irongrasp": 0.323,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 10788
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotSpiritStrike",
+    "Channel",
+    "CreatesGroundEffect",
+    "Duration",
+    "Lightning",
+    "Melee",
+    "PerfectTiming",
+    "QuarterstaffSkill",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.084,
+    "unique:Ingenuity": 0.113,
+    "unique:Doryani's Prototype": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.055,
+    "unique:Rondel of Fragility": 0.247
+   },
+   "dps": 34121
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "ToggleSpawnedObjectTargetable_DefaultOn",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.235,
+    "unique:Ingenuity": 0.096,
+    "unique:Doryani's Prototype": 0.065,
+    "unique:Irongrasp": 0.251,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.153
+   },
+   "dps": 28917
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "CreatesFissure",
+    "Melee",
+    "QuarterstaffSkill",
+    "SkillConsumesFreeze",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.304,
+    "unique:Ingenuity": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.069,
+    "unique:Rondel of Fragility": 0.289
+   },
+   "dps": 31835
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Cold",
+    "ConsumesCharges",
+    "Duration",
+    "Projectile",
+    "ProjectileSpeed",
+    "ProjectilesFromUser",
+    "ProjectilesNumberModifiersNotApplied",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Spear",
+    "UsableWhileMounted",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.227,
+    "unique:Ingenuity": 0.115,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Irongrasp": 0.362,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.238
+   },
+   "dps": 43777
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.231,
+    "unique:Ingenuity": 0.093,
+    "unique:Doryani's Prototype": 0.063,
+    "unique:Irongrasp": 0.309,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.192
+   },
+   "dps": 44117
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "HasUsageCondition",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.404,
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.097,
+    "unique:Ingenuity": 0.151,
+    "unique:Thrillsteel": 0.099,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.064,
+    "unique:Atsak's Sight": 0.055,
+    "unique:Heart of the Well": 0.085,
+    "unique:The Bringer of Rain": 0.073,
+    "unique:Rondel of Fragility": 0.438
+   },
+   "dps": 76422
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Chaos",
+    "Damage",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Crown of the Victor": 0.081,
+    "unique:Ingenuity": 0.062,
+    "unique:Blackflame": 0.253,
+    "unique:The Coming Calamity": 0.311,
+    "unique:Irongrasp": 0.115,
+    "unique:Perfidy": 0.1,
+    "unique:Atsak's Sight": 0.079,
+    "unique:Scold's Bridle": 0.118,
+    "unique:The Bringer of Rain": 0.112,
+    "unique:Ming's Heart": 0.169,
+    "unique:Maligaro's Virtuosity": 0.217,
+    "unique:Snakebite": 0.286,
+    "unique:Seed of Cataclysm": 0.071,
+    "unique:Doedre's Tenure": 0.112
+   },
+   "dps": 46544
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.276,
+    "unique:Ingenuity": 0.065,
+    "unique:Irongrasp": 0.846,
+    "unique:Ryslatha's Coil": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.077,
+    "unique:Heart of the Well": 0.073,
+    "unique:Ming's Heart": 0.152,
+    "unique:Rondel of Fragility": 0.569
+   },
+   "dps": 29101
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Mineable",
+    "Multicastable",
+    "Nova",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.159,
+    "unique:Painter's Servant": 0.071,
+    "unique:Crown of the Victor": 0.08,
+    "unique:Ingenuity": 0.129,
+    "unique:Irongrasp": 0.214,
+    "unique:Perfidy": 0.1,
+    "unique:Heatshiver": 0.263,
+    "unique:Scold's Bridle": 0.179,
+    "unique:The Bringer of Rain": 0.081,
+    "unique:Maligaro's Virtuosity": 0.273,
+    "unique:Doedre's Tenure": 0.098
+   },
+   "dps": 20835
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.234,
+    "unique:Ingenuity": 0.093,
+    "unique:Doryani's Prototype": 0.064,
+    "unique:Irongrasp": 0.309,
+    "unique:Thrillsteel": 0.11,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.118,
+    "unique:Rondel of Fragility": 0.336
+   },
+   "dps": 48143
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Cold",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.065,
+    "unique:Hyrri's Ire": 0.242,
+    "unique:Ingenuity": 0.113,
+    "unique:Doryani's Prototype": 0.06,
+    "unique:Irongrasp": 0.369,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.187
+   },
+   "dps": 45730
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerformsFinalStrike",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.304,
+    "unique:Ingenuity": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.069,
+    "unique:Rondel of Fragility": 0.285
+   },
+   "dps": 89368
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.224,
+    "unique:Ingenuity": 0.098,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Irongrasp": 0.246,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.15
+   },
+   "dps": 7550
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "CreatesGroundEffect",
+    "Damage",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "Fire",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Candlemaker": 0.06,
+    "unique:Hyrri's Ire": 0.159,
+    "unique:Painter's Servant": 0.095,
+    "unique:Crown of the Victor": 0.124,
+    "unique:Ingenuity": 0.129,
+    "unique:Irongrasp": 0.213,
+    "unique:Thrillsteel": 0.069,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.2,
+    "unique:Maligaro's Virtuosity": 0.154,
+    "unique:Doedre's Tenure": 0.128
+   },
+   "dps": 51236
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "GeneratesCharges",
+    "Melee",
+    "MeleeSingleTarget",
+    "Palm",
+    "Physical",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.242,
+    "unique:Ingenuity": 0.201,
+    "unique:Doryani's Prototype": 0.071,
+    "unique:Thrillsteel": 0.142,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.097,
+    "unique:Mind of the Council": 0.073,
+    "unique:Heart of the Well": 0.088,
+    "unique:Rondel of Fragility": 0.253
+   },
+   "dps": 22800
+  },
+  "Leap Slam": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Totemable",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.065,
+    "keystone:Dance with Death": 0.093,
+    "unique:Hyrri's Ire": 0.236,
+    "unique:Ingenuity": 0.12,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.055
+   },
+   "dps": 53006
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chains",
+    "Lightning",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.11,
+    "unique:Irongrasp": 0.35,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.275
+   },
+   "dps": 30814
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cooldown",
+    "Damage",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.138,
+    "unique:Sands of Silk": 0.23,
+    "unique:Crown of the Victor": 0.093,
+    "unique:Ingenuity": 0.052,
+    "unique:Doryani's Prototype": 0.092,
+    "unique:Irongrasp": 0.264,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.267,
+    "unique:Levinstone": 0.052,
+    "unique:The Bringer of Rain": 0.098,
+    "unique:Maligaro's Virtuosity": 0.113,
+    "unique:Seed of Cataclysm": 0.061,
+    "unique:Doedre's Tenure": 0.272
+   },
+   "dps": 3459
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Duration",
+    "GroundTargetedProjectile",
+    "Lightning",
+    "ObjectDurability",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "Sustained",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.214,
+    "unique:Ingenuity": 0.122,
+    "unique:Doryani's Prototype": 0.135,
+    "unique:Irongrasp": 0.336,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.208
+   },
+   "dps": 22145
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "ConsumesCharges",
+    "Lightning",
+    "Projectile",
+    "ProjectileSpeed",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Spear",
+    "UsableWhileMounted",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.229,
+    "unique:Ingenuity": 0.128,
+    "unique:Doryani's Prototype": 0.132,
+    "unique:Irongrasp": 0.343,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.225
+   },
+   "dps": 37642
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "Shapeshift",
+    "Triggerable",
+    "Wolf"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.229,
+    "unique:Ingenuity": 0.092,
+    "unique:Doryani's Prototype": 0.084,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.102,
+    "unique:Rondel of Fragility": 0.204
+   },
+   "dps": 47923
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Bow",
+    "Damage",
+    "GroundTargetedProjectile",
+    "Lightning",
+    "Projectile",
+    "ProjectileNoCollision",
+    "ProjectilesFromUser",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.11,
+    "unique:Irongrasp": 0.35,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.28
+   },
+   "dps": 10670
+  },
+  "Molten Blast": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Damage",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.165,
+    "unique:Ingenuity": 0.125,
+    "unique:Irongrasp": 0.299,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.147
+   },
+   "dps": 40730
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "ConsumesCharges",
+    "CreatesGroundEffect",
+    "Damage",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "Shapeshift",
+    "SkillConsumesPowerChargesOnUse",
+    "Sustained",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.162,
+    "unique:Irongrasp": 0.732,
+    "unique:Ryslatha's Coil": 0.167,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.28,
+    "unique:Heart of the Well": 0.089,
+    "unique:Icefang Orbit": 0.095,
+    "unique:The Bringer of Rain": 0.055,
+    "unique:Ming's Heart": 0.194,
+    "unique:Rondel of Fragility": 0.358
+   },
+   "dps": 7770
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "CreatesGroundEffect",
+    "DetonatesAfterTime",
+    "Duration",
+    "Fire",
+    "Grenade",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.079,
+    "unique:Sands of Silk": 0.194,
+    "unique:The Coming Calamity": 0.073,
+    "unique:Irongrasp": 0.831,
+    "unique:Ryslatha's Coil": 0.149,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.275,
+    "unique:Atsak's Sight": 0.066,
+    "unique:The Bringer of Rain": 0.092,
+    "unique:Ming's Heart": 0.17,
+    "unique:Maligaro's Virtuosity": 0.105,
+    "unique:Rondel of Fragility": 0.128
+   },
+   "dps": 9536
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Chains",
+    "Damage",
+    "Duration",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Lightning",
+    "Limit",
+    "Mineable",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.16,
+    "unique:Painter's Servant": 0.127,
+    "unique:Crown of the Victor": 0.103,
+    "unique:Ingenuity": 0.129,
+    "unique:Doryani's Prototype": 0.106,
+    "unique:Irongrasp": 0.214,
+    "unique:Thrillsteel": 0.055,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.191,
+    "unique:The Bringer of Rain": 0.07,
+    "unique:Maligaro's Virtuosity": 0.237,
+    "unique:Doedre's Tenure": 0.109
+   },
+   "dps": 19390
+  },
+  "Perfect Strike": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Fire",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerfectTiming"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.227,
+    "unique:Ingenuity": 0.12,
+    "unique:Doryani's Prototype": 0.059,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.25
+   },
+   "dps": 64711
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.229,
+    "unique:Ingenuity": 0.095,
+    "unique:Doryani's Prototype": 0.064,
+    "unique:Irongrasp": 0.251,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.246
+   },
+   "dps": 7917
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.255,
+    "unique:Hyrri's Ire": 0.093,
+    "unique:Ingenuity": 0.111,
+    "unique:Irongrasp": 0.283,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 185523
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chaos",
+    "Duration",
+    "Projectile",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.289,
+    "unique:Ingenuity": 0.078,
+    "unique:Irongrasp": 0.872,
+    "unique:Ryslatha's Coil": 0.052,
+    "unique:Thrillsteel": 0.055,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.063,
+    "unique:Heart of the Well": 0.073,
+    "unique:Ming's Heart": 0.138,
+    "unique:Rondel of Fragility": 0.538
+   },
+   "dps": 15484
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerformsFinalStrike",
+    "SkillConsumesShock"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.236,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.054,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.282
+   },
+   "dps": 35972
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Chaos",
+    "CreatesGroundRune",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "GeneratesCharges",
+    "Limit",
+    "Multicastable",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Crown of the Victor": 0.167,
+    "unique:Irongrasp": 0.204,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.213,
+    "unique:Doedre's Tenure": 0.213
+   },
+   "dps": 78140
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Bow",
+    "ConsumesCharges",
+    "GroundTargetedProjectile",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Sustained",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.165,
+    "unique:Hyrri's Ire": 0.264,
+    "unique:Ingenuity": 0.123,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.376,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.234
+   },
+   "dps": 20968
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "Movement",
+    "Physical",
+    "Spear"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.206,
+    "keystone:Dance with Death": 0.103,
+    "unique:Venopuncture": 0.06,
+    "unique:Ryslatha's Coil": 0.217,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.375,
+    "unique:Heart of the Well": 0.071,
+    "unique:Bursting Decay": 0.066,
+    "unique:The Bringer of Rain": 0.063,
+    "unique:Rondel of Fragility": 0.256
+   },
+   "dps": 15124
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "types": [
+    "ConsumesCharges",
+    "CreatesMinion",
+    "Duration",
+    "Limit",
+    "Minion",
+    "MinionsCanExplode",
+    "Physical",
+    "SkillConsumesPowerChargesOnUse",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:The Coming Calamity": 0.062,
+    "unique:Perfidy": 0.1,
+    "unique:Vis Mortis": 0.273,
+    "unique:Evergrasping Ring": 0.227
+   },
+   "dps": 2850
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Bear",
+    "Channel",
+    "ConsumesRage",
+    "CreatesGroundEffect",
+    "Melee",
+    "Shapeshift",
+    "Slam",
+    "Sustained",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.086,
+    "unique:Venopuncture": 0.051,
+    "unique:The Covenant": 0.096,
+    "unique:The Coming Calamity": 0.064,
+    "unique:Ryslatha's Coil": 0.071,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.128,
+    "unique:Heart of the Well": 0.085,
+    "unique:Ming's Heart": 0.178,
+    "unique:Rondel of Fragility": 0.338
+   },
+   "dps": 37611
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Duration",
+    "Melee",
+    "MeleeSingleTarget",
+    "Physical",
+    "Spear"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.264,
+    "unique:Ingenuity": 0.117,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.293
+   },
+   "dps": 5940
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.233,
+    "unique:Ingenuity": 0.099,
+    "unique:Doryani's Prototype": 0.063,
+    "unique:Irongrasp": 0.304,
+    "unique:Thrillsteel": 0.118,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.119,
+    "unique:Rondel of Fragility": 0.34
+   },
+   "dps": 244650
+  },
+  "Resonating Shield": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Melee",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "Sustained",
+    "UsableWhileMoving"
+   ],
+   "error": "No One Hand Mace bases up to item level 82",
+   "gains": {}
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "Duration",
+    "Melee",
+    "MeleeSingleTarget",
+    "Shapeshift",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.105,
+    "unique:The Coming Calamity": 0.077,
+    "unique:Ryslatha's Coil": 0.062,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.105,
+    "unique:Atsak's Sight": 0.103,
+    "unique:Heart of the Well": 0.101,
+    "unique:Icefang Orbit": 0.055,
+    "unique:The Bringer of Rain": 0.084,
+    "unique:Ming's Heart": 0.236,
+    "unique:Rondel of Fragility": 0.439
+   },
+   "dps": 38961
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "Damage",
+    "Detonator",
+    "Fire",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Shapeshift",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.071,
+    "unique:Ingenuity": 0.108,
+    "unique:Irongrasp": 0.253,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.161
+   },
+   "dps": 53954
+  },
+  "Rolling Slam": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.073,
+    "unique:Hyrri's Ire": 0.238,
+    "unique:Ingenuity": 0.121,
+    "unique:Doryani's Prototype": 0.061,
+    "unique:Perfidy": 0.1,
+    "unique:Rondel of Fragility": 0.208
+   },
+   "dps": 3351
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "ConsumesCharges",
+    "Cooldown",
+    "Damage",
+    "EmpowersOtherSkill",
+    "Nova",
+    "Physical",
+    "SkillConsumesEnduranceChargesOnUse",
+    "UsableWhileMoving",
+    "Warcry"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Demon Stitcher": 0.12,
+    "unique:Hyrri's Ire": 0.116,
+    "unique:Snakepit": 0.468,
+    "unique:Yoke of Suffering": 0.078,
+    "unique:Crown of the Victor": 0.137,
+    "unique:Plaguefinger": 0.17,
+    "unique:Sine Aequo": 0.15,
+    "unique:The Coming Calamity": 0.419,
+    "unique:Irongrasp": 0.918,
+    "unique:Thrillsteel": 0.2,
+    "unique:Xoph's Blood": 0.07,
+    "unique:Perfidy": 0.1,
+    "unique:The Pandemonius": 0.139,
+    "unique:Beacon of Azis": 0.055,
+    "unique:Leopold's Applause": 0.084,
+    "unique:Atsak's Sight": 0.069,
+    "unique:Lochtonial Caress": 0.15,
+    "unique:Scold's Bridle": 0.566,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Ming's Heart": 0.153,
+    "unique:Maligaro's Virtuosity": 0.147,
+    "unique:Rondel of Fragility": 0.884,
+    "unique:Stone of Lazhwar": 0.25,
+    "unique:Snakebite": 0.07,
+    "unique:Doedre's Tenure": 0.382
+   },
+   "dps": 701
+  },
+  "Shield Charge": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "Melee",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "Travel"
+   ],
+   "error": "No One Hand Mace bases up to item level 82",
+   "gains": {}
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCreateStoneElementals",
+    "Duration",
+    "Limit",
+    "Melee",
+    "NonWeaponAttack",
+    "Physical",
+    "RequiresShield",
+    "Wall"
+   ],
+   "error": "No One Hand Mace bases up to item level 82",
+   "gains": {}
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Cold",
+    "Melee",
+    "MeleeSingleTarget",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.251,
+    "unique:Ingenuity": 0.192,
+    "unique:Doryani's Prototype": 0.059,
+    "unique:Thrillsteel": 0.142,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.081,
+    "unique:Mind of the Council": 0.056,
+    "unique:Heart of the Well": 0.088,
+    "unique:Rondel of Fragility": 0.262
+   },
+   "dps": 8992
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.239,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Irongrasp": 0.305,
+    "unique:Thrillsteel": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.111,
+    "unique:Rondel of Fragility": 0.281
+   },
+   "dps": 45904
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Chains",
+    "Lightning",
+    "Mineable",
+    "MirageArcherCanUse",
+    "ObjectDurability",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesShock",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.11,
+    "unique:Irongrasp": 0.35,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.277
+   },
+   "dps": 20976
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CannotCreateJaggedGround",
+    "Duration",
+    "Limit",
+    "Melee",
+    "Mineable",
+    "Nova",
+    "Slam",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "Trappable",
+    "UsableWhileShapeshifted",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.086,
+    "unique:Hyrri's Ire": 0.279,
+    "unique:Ingenuity": 0.113,
+    "unique:Doryani's Prototype": 0.067,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.084,
+    "unique:Rondel of Fragility": 0.282
+   },
+   "dps": 3264
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Barrageable",
+    "CannotChain",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SummonsAttackTotem",
+    "SummonsTotem",
+    "TotemsAreBallistae",
+    "Trappable",
+    "UsableWhileMoving",
+    "UsedByTotem"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.232,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.063,
+    "unique:Irongrasp": 0.303,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.065,
+    "unique:Rondel of Fragility": 0.242
+   },
+   "dps": 3305
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.076,
+    "unique:Hyrri's Ire": 0.25,
+    "unique:Ingenuity": 0.103,
+    "unique:Doryani's Prototype": 0.069,
+    "unique:Irongrasp": 0.256,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.198
+   },
+   "dps": 21280
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotSpiritStrike",
+    "GeneratesCharges",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "QuarterstaffSkill",
+    "SkillConsumesShock"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.243,
+    "unique:Ingenuity": 0.099,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.097,
+    "unique:Rondel of Fragility": 0.216
+   },
+   "dps": 79233
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "Detonator",
+    "Fire",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:Perfidy": 0.1,
+    "unique:Fireflower": 0.088,
+    "unique:Vis Mortis": 0.208,
+    "unique:Evergrasping Ring": 0.174
+   },
+   "dps": 15992
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:Perfidy": 0.1,
+    "unique:Vis Mortis": 0.242,
+    "unique:Evergrasping Ring": 0.201
+   },
+   "dps": 12857
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "types": [
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Crown of the Victor": 0.14,
+    "unique:Deathblow": 0.111,
+    "unique:Leer Cast": 0.549,
+    "unique:Perfidy": 0.1,
+    "unique:Fixation of Yix": 0.315,
+    "unique:Vis Mortis": 1.197,
+    "unique:Evergrasping Ring": 1.002
+   },
+   "dps": 38
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "types": [
+    "Cold",
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:Perfidy": 0.1,
+    "unique:Vis Mortis": 0.169,
+    "unique:Evergrasping Ring": 0.141
+   },
+   "dps": 15347
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:Leer Cast": 0.055,
+    "unique:Perfidy": 0.1,
+    "unique:Vis Mortis": 0.298,
+    "unique:Evergrasping Ring": 0.248
+   },
+   "dps": 9700
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "types": [
+    "Chaos",
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "Fire",
+    "HasReservation",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:Perfidy": 0.1,
+    "unique:Fireflower": 0.112,
+    "unique:Vis Mortis": 0.265,
+    "unique:Evergrasping Ring": 0.221
+   },
+   "dps": 20028
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Cold",
+    "Cooldown",
+    "Damage",
+    "Fire",
+    "GeneratesInfusion",
+    "GeneratesRemnants",
+    "Lightning",
+    "ManualCooldownConsumption",
+    "Mineable",
+    "Multicastable",
+    "SkillConsumesFreeze",
+    "SkillConsumesIgnite",
+    "SkillConsumesShock",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.156,
+    "unique:Sands of Silk": 0.298,
+    "unique:Painter's Servant": 0.071,
+    "unique:Crown of the Victor": 0.081,
+    "unique:Ingenuity": 0.058,
+    "unique:Irongrasp": 0.256,
+    "unique:Perfidy": 0.1,
+    "unique:Heatshiver": 0.116,
+    "unique:Scold's Bridle": 0.245,
+    "unique:The Bringer of Rain": 0.117,
+    "unique:Maligaro's Virtuosity": 0.135,
+    "unique:Seed of Cataclysm": 0.076,
+    "unique:Doedre's Tenure": 0.251
+   },
+   "dps": 30868
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "types": [
+    "CommandableMinion",
+    "CreatesMinion",
+    "CreatesSkeletonMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Lightning",
+    "Minion",
+    "MinionsCanExplode",
+    "MultipleReservation",
+    "Persistent"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:Doryani's Prototype": 0.135,
+    "unique:Perfidy": 0.1,
+    "unique:Levinstone": 0.11,
+    "unique:Vis Mortis": 0.14,
+    "unique:Evergrasping Ring": 0.117
+   },
+   "dps": 20290
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Channel",
+    "Cold",
+    "MirageArcherCanUse",
+    "PerfectTiming",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFreeze"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.243,
+    "unique:Ingenuity": 0.069,
+    "unique:Irongrasp": 0.861,
+    "unique:Ryslatha's Coil": 0.055,
+    "unique:Thrillsteel": 0.055,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.113,
+    "unique:Heart of the Well": 0.073,
+    "unique:Ming's Heart": 0.165,
+    "unique:Rondel of Fragility": 0.537
+   },
+   "dps": 6483
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Damage",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Mineable",
+    "Orb",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Candlemaker": 0.054,
+    "unique:Hyrri's Ire": 0.156,
+    "unique:Painter's Servant": 0.09,
+    "unique:Crown of the Victor": 0.106,
+    "unique:Ingenuity": 0.059,
+    "unique:Irongrasp": 0.257,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.274,
+    "unique:The Bringer of Rain": 0.075,
+    "unique:Maligaro's Virtuosity": 0.087,
+    "unique:Doedre's Tenure": 0.278
+   },
+   "dps": 12433
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "types": [
+    "Damage",
+    "Duration",
+    "Invokable",
+    "Lightning",
+    "Mineable",
+    "Multicastable",
+    "Projectile",
+    "ProjectilesFromUser",
+    "Spell",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.16,
+    "unique:Painter's Servant": 0.134,
+    "unique:Crown of the Victor": 0.078,
+    "unique:Ingenuity": 0.129,
+    "unique:Doryani's Prototype": 0.106,
+    "unique:Irongrasp": 0.214,
+    "unique:Thrillsteel": 0.059,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.195,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Maligaro's Virtuosity": 0.218,
+    "unique:Doedre's Tenure": 0.114
+   },
+   "dps": 21409
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "CannotChain",
+    "CreatesGroundEffect",
+    "Fire",
+    "GroundTargetedProjectile",
+    "HasUsageCondition",
+    "Projectile",
+    "ProjectilesNumberModifiersNotApplied",
+    "Rain",
+    "RangedAttack",
+    "Spear",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.051,
+    "keystone:Dance with Death": 0.056,
+    "unique:Hyrri's Ire": 0.089,
+    "unique:Ingenuity": 0.14,
+    "unique:Irongrasp": 0.347,
+    "unique:Perfidy": 0.1,
+    "unique:The Bringer of Rain": 0.093
+   },
+   "dps": 44927
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Duration",
+    "Hazard",
+    "Melee",
+    "Spear",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.124,
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.254,
+    "unique:Ingenuity": 0.126,
+    "unique:Doryani's Prototype": 0.067,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.097,
+    "unique:Rondel of Fragility": 0.451
+   },
+   "dps": 8670
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "types": [
+    "Attack",
+    "Bow",
+    "ConsumesCharges",
+    "Mineable",
+    "MirageArcherCanUse",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.219,
+    "unique:Ingenuity": 0.115,
+    "unique:Doryani's Prototype": 0.084,
+    "unique:Irongrasp": 0.38,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.056,
+    "unique:Rondel of Fragility": 0.178
+   },
+   "dps": 14824
+  },
+  "Stampede": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesGroundEffect",
+    "Duration",
+    "Jumping",
+    "Melee",
+    "Slam",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.073,
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.237,
+    "unique:Ingenuity": 0.122,
+    "unique:Doryani's Prototype": 0.062,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.244
+   },
+   "dps": 26348
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "ConsumesCharges",
+    "CreatesGroundEffect",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Limit",
+    "Projectile",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Spear",
+    "Sustained",
+    "UsableWhileMounted",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.241,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.092,
+    "unique:Irongrasp": 0.36,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.055,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.234
+   },
+   "dps": 16926
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "CreatesFissure",
+    "Lightning",
+    "Melee",
+    "QuarterstaffSkill",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.238,
+    "unique:Ingenuity": 0.105,
+    "unique:Doryani's Prototype": 0.14,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.069,
+    "unique:Rondel of Fragility": 0.285
+   },
+   "dps": 90114
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "types": [
+    "Attack",
+    "CrossbowAmmoSkill",
+    "ReservesManually",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.233,
+    "unique:Ingenuity": 0.099,
+    "unique:Doryani's Prototype": 0.095,
+    "unique:Irongrasp": 0.304,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.192
+   },
+   "dps": 20208
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CanBecomeArrowRain",
+    "Duration",
+    "Lightning",
+    "Projectile",
+    "RangedAttack",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.189,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.11,
+    "unique:Irongrasp": 0.35,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.288
+   },
+   "dps": 6824
+  },
+  "Sunder": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesFullyBrokenArmour",
+    "CreatesFissure",
+    "Duration",
+    "Melee",
+    "Slam",
+    "Totemable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.096,
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.251,
+    "unique:Ingenuity": 0.095,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.092,
+    "unique:Heart of the Well": 0.084,
+    "unique:Ming's Heart": 0.067,
+    "unique:Rondel of Fragility": 0.347
+   },
+   "dps": 32380
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlaceIsDefault",
+    "CreatesMinion",
+    "CreatesUndeadMinion",
+    "HasReservation",
+    "Mineable",
+    "Minion",
+    "MinionsCanExplode",
+    "Multicastable",
+    "MultipleReservation",
+    "Persistent",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Essentia Sanguis": 0.131,
+    "unique:Venopuncture": 0.061,
+    "unique:Crown of the Victor": 0.136,
+    "unique:Deathblow": 0.114,
+    "unique:Leer Cast": 0.536,
+    "unique:Hand of Wisdom and Action": 0.069,
+    "unique:Blackheart": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.131,
+    "unique:Mind of the Council": 0.131,
+    "unique:Fixation of Yix": 0.307,
+    "unique:Icefang Orbit": 0.069,
+    "unique:Bursting Decay": 0.192,
+    "unique:Treefingers": 0.065,
+    "unique:Vis Mortis": 1.166,
+    "unique:Evergrasping Ring": 0.976
+   },
+   "dps": 39
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "Channel",
+    "GainsStages",
+    "Melee",
+    "NoDualWield",
+    "Slam"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.1,
+    "unique:The Coming Calamity": 0.06,
+    "unique:Ryslatha's Coil": 0.079,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.088,
+    "unique:Atsak's Sight": 0.072,
+    "unique:Heart of the Well": 0.1,
+    "unique:Icefang Orbit": 0.058,
+    "unique:The Bringer of Rain": 0.082,
+    "unique:Ming's Heart": 0.23,
+    "unique:Rondel of Fragility": 0.368
+   },
+   "dps": 113514
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "types": [
+    "Companion",
+    "Duration",
+    "Minion"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Crown of the Victor": 0.14,
+    "unique:Deathblow": 0.111,
+    "unique:Leer Cast": 0.549,
+    "unique:Perfidy": 0.1,
+    "unique:Fixation of Yix": 0.315,
+    "unique:Vis Mortis": 1.197,
+    "unique:Evergrasping Ring": 1.002
+   },
+   "dps": 38
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "ComboStacking",
+    "Cooldown",
+    "Duration",
+    "HasUsageCondition",
+    "Limit",
+    "ManualCooldownConsumption",
+    "Melee",
+    "ObjectDurability",
+    "QuarterstaffSkill",
+    "RangedAttack",
+    "Sustained",
+    "ToggleSpawnedObjectTargetable_DefaultOn"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.244,
+    "unique:Sands of Silk": 0.109,
+    "unique:Ingenuity": 0.099,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Perfidy": 0.1,
+    "unique:The Bringer of Rain": 0.084,
+    "unique:Rondel of Fragility": 0.096
+   },
+   "dps": 20311
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlaceIsDefault",
+    "Companion",
+    "CreatesCompanion",
+    "CreatesMinion",
+    "HasReservation",
+    "Mineable",
+    "Minion",
+    "MinionsCanExplode",
+    "Multicastable",
+    "Persistent",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Essentia Sanguis": 0.131,
+    "unique:Venopuncture": 0.061,
+    "unique:Crown of the Victor": 0.136,
+    "unique:Deathblow": 0.114,
+    "unique:Leer Cast": 0.536,
+    "unique:Hand of Wisdom and Action": 0.069,
+    "unique:Blackheart": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Wake of Destruction": 0.131,
+    "unique:Mind of the Council": 0.131,
+    "unique:Fixation of Yix": 0.307,
+    "unique:Icefang Orbit": 0.069,
+    "unique:Bursting Decay": 0.192,
+    "unique:Treefingers": 0.065,
+    "unique:Vis Mortis": 1.166,
+    "unique:Evergrasping Ring": 0.976
+   },
+   "dps": 39
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Lightning",
+    "Melee",
+    "MeleeSingleTarget",
+    "PerformsFinalStrike",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.268,
+    "unique:Ingenuity": 0.099,
+    "unique:Doryani's Prototype": 0.093,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.069,
+    "unique:Rondel of Fragility": 0.302
+   },
+   "dps": 57881
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "GamepadDeflectable",
+    "Limit",
+    "Nature",
+    "Physical",
+    "Plant",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.404,
+    "unique:Hyrri's Ire": 0.182,
+    "unique:Snakepit": 0.091,
+    "unique:Crown of the Victor": 0.096,
+    "unique:Ingenuity": 0.079,
+    "unique:Irongrasp": 0.242,
+    "unique:Thrillsteel": 0.051,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.083,
+    "unique:Atsak's Sight": 0.136,
+    "unique:Scold's Bridle": 0.21,
+    "unique:The Bringer of Rain": 0.077,
+    "unique:Maligaro's Virtuosity": 0.262,
+    "unique:Doedre's Tenure": 0.128
+   },
+   "dps": 12550
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Detonator",
+    "Jumping",
+    "Lightning",
+    "Melee",
+    "Slam",
+    "Spear",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.067,
+    "unique:Hyrri's Ire": 0.244,
+    "unique:Ingenuity": 0.13,
+    "unique:Doryani's Prototype": 0.127,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 36292
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Cascadable",
+    "Damage",
+    "Duration",
+    "Lightning",
+    "Limit",
+    "Spell",
+    "Storm",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Hyrri's Ire": 0.128,
+    "unique:Painter's Servant": 0.084,
+    "unique:Crown of the Victor": 0.11,
+    "unique:Ingenuity": 0.129,
+    "unique:Doryani's Prototype": 0.138,
+    "unique:Irongrasp": 0.214,
+    "unique:Thrillsteel": 0.058,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.189,
+    "unique:The Bringer of Rain": 0.065,
+    "unique:Maligaro's Virtuosity": 0.218,
+    "unique:Doedre's Tenure": 0.112
+   },
+   "dps": 13370
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "DamageOverTime",
+    "DegenOnlySpellDamage",
+    "Duration",
+    "InteractsWithElementalGround",
+    "Limit",
+    "Physical",
+    "Spell",
+    "Storm",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Wildsurge Incantation": 0.5,
+    "unique:Snakepit": 0.101,
+    "unique:Crown of the Victor": 0.161,
+    "unique:Irongrasp": 0.327,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.337,
+    "unique:Empire's Grasp": 0.067,
+    "unique:Doedre's Tenure": 0.337
+   },
+   "dps": 4882
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "CannotChain",
+    "DamageOverTime",
+    "Duration",
+    "Limit",
+    "Mineable",
+    "MirageArcherCanUse",
+    "ObjectDurability",
+    "Physical",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "Totemable",
+    "Trappable",
+    "Triggerable",
+    "UsableWhileMoving",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.167,
+    "unique:Hyrri's Ire": 0.265,
+    "unique:Ingenuity": 0.124,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.374,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.294
+   },
+   "dps": 23819
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "Barrageable",
+    "Bow",
+    "Chaos",
+    "DetonatesAfterTime",
+    "GroundTargetedProjectile",
+    "Limit",
+    "Plant",
+    "Projectile",
+    "Rain",
+    "RangedAttack"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.169,
+    "unique:Hyrri's Ire": 0.265,
+    "unique:Ingenuity": 0.125,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.368,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.085,
+    "unique:Rondel of Fragility": 0.298
+   },
+   "dps": 7925
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "CannotTerrainChain",
+    "Duration",
+    "InteractsWithElementalGround",
+    "Projectile",
+    "RangedAttack",
+    "Spear",
+    "UsableWhileMoving",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.288,
+    "unique:Ingenuity": 0.079,
+    "unique:Irongrasp": 0.881,
+    "unique:Thrillsteel": 0.055,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.066,
+    "unique:Heart of the Well": 0.074,
+    "unique:Ming's Heart": 0.134,
+    "unique:Rondel of Fragility": 0.579
+   },
+   "dps": 13270
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Duration",
+    "Jumping",
+    "Melee",
+    "Physical",
+    "QuarterstaffSkill",
+    "Slam",
+    "Travel"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.069,
+    "unique:Venopuncture": 0.081,
+    "unique:Ryslatha's Coil": 0.06,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.146,
+    "unique:Icefang Orbit": 0.078,
+    "unique:Ming's Heart": 0.2,
+    "unique:Rondel of Fragility": 0.476
+   },
+   "dps": 14004
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "Bow",
+    "Chaos",
+    "DamageOverTime",
+    "Duration",
+    "Limit",
+    "Plant",
+    "ProjectileNoCollision",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "Rain",
+    "RangedAttack",
+    "ToggleSpawnedObjectTargetable_DefaultOff",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Avatar of Fire": 0.167,
+    "unique:Hyrri's Ire": 0.265,
+    "unique:Ingenuity": 0.125,
+    "unique:Doryani's Prototype": 0.066,
+    "unique:Irongrasp": 0.375,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.072,
+    "unique:Rondel of Fragility": 0.244
+   },
+   "dps": 25999
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "types": [
+    "Area",
+    "CreatesMinion",
+    "Damage",
+    "Duration",
+    "Limit",
+    "Minion",
+    "Necrotic",
+    "Physical",
+    "Spell",
+    "TargetsDestructibleCorpses",
+    "Totemable",
+    "Triggerable",
+    "Unleashable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.105,
+    "unique:Snakepit": 0.077,
+    "unique:Deathblow": 0.088,
+    "unique:Irongrasp": 0.207,
+    "unique:Perfidy": 0.1,
+    "unique:Maligaro's Virtuosity": 0.104,
+    "unique:Vis Mortis": 0.172,
+    "unique:Evergrasping Ring": 0.109,
+    "unique:Doedre's Tenure": 0.169
+   },
+   "dps": 11561
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Handed Mace",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CreatesFissure",
+    "Duration",
+    "Fire",
+    "Limit",
+    "Melee",
+    "Slam",
+    "Sustained"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.25,
+    "unique:Hyrri's Ire": 0.218,
+    "unique:Ingenuity": 0.117,
+    "unique:Doryani's Prototype": 0.056,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.096,
+    "unique:Rondel of Fragility": 0.304
+   },
+   "dps": 25851
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "types": [
+    "Area",
+    "AreaSpell",
+    "Channel",
+    "Damage",
+    "Duration",
+    "Fire",
+    "GamepadDeflectable",
+    "Limit",
+    "Mineable",
+    "Projectile",
+    "Spell",
+    "Sustained",
+    "Totemable",
+    "Trappable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Candlemaker": 0.065,
+    "unique:Hyrri's Ire": 0.159,
+    "unique:Painter's Servant": 0.104,
+    "unique:Crown of the Victor": 0.114,
+    "unique:Ingenuity": 0.129,
+    "unique:Irongrasp": 0.214,
+    "unique:Thrillsteel": 0.073,
+    "unique:Perfidy": 0.1,
+    "unique:Scold's Bridle": 0.206,
+    "unique:Maligaro's Virtuosity": 0.132,
+    "unique:Doedre's Tenure": 0.134
+   },
+   "dps": 30814
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "types": [
+    "Area",
+    "Attack",
+    "Cooldown",
+    "DetonatesAfterTime",
+    "Duration",
+    "Grenade",
+    "Lightning",
+    "Projectile",
+    "ProjectileNumber",
+    "ProjectileSpeed",
+    "RangedAttack",
+    "Triggerable",
+    "UsableWhileMoving"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.223,
+    "unique:Sands of Silk": 0.231,
+    "unique:Ingenuity": 0.098,
+    "unique:Doryani's Prototype": 0.096,
+    "unique:Irongrasp": 0.309,
+    "unique:Perfidy": 0.1
+   },
+   "dps": 18175
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "CanCancelActions",
+    "Cold",
+    "Jumping",
+    "Melee",
+    "Movement",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.303,
+    "unique:Ingenuity": 0.096,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.069,
+    "unique:Rondel of Fragility": 0.23
+   },
+   "dps": 53425
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "MeleeSingleTarget",
+    "QuarterstaffSkill"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.243,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.051
+   },
+   "dps": 23472
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "AttackInPlaceIsDefault",
+    "GainsStages",
+    "InteractsWithElementalGround",
+    "Melee",
+    "MeleeSingleTarget",
+    "Spear",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.286,
+    "unique:Ingenuity": 0.08,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.072,
+    "unique:Heart of the Well": 0.074,
+    "unique:Ming's Heart": 0.132,
+    "unique:Rondel of Fragility": 0.54
+   },
+   "dps": 12778
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "Barrageable",
+    "ConsumesCharges",
+    "Duration",
+    "InteractsWithElementalGround",
+    "Limit",
+    "Projectile",
+    "ProjectileSpeed",
+    "ProjectilesFromUser",
+    "RangedAttack",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Spear",
+    "UsableWhileMounted",
+    "UsableWhileMoving",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.248,
+    "unique:Hyrri's Ire": 0.281,
+    "unique:Ingenuity": 0.078,
+    "unique:Irongrasp": 0.863,
+    "unique:Thrillsteel": 0.055,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.078,
+    "unique:Heart of the Well": 0.073,
+    "unique:Ming's Heart": 0.131,
+    "unique:Rondel of Fragility": 0.538
+   },
+   "dps": 14757
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "types": [
+    "Area",
+    "Attack",
+    "Melee",
+    "QuarterstaffSkill",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Hyrri's Ire": 0.243,
+    "unique:Ingenuity": 0.1,
+    "unique:Doryani's Prototype": 0.094,
+    "unique:Perfidy": 0.1,
+    "unique:Heart of the Well": 0.097,
+    "unique:Rondel of Fragility": 0.215
+   },
+   "dps": 67380
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "types": [
+    "Area",
+    "Attack",
+    "ConsumesCharges",
+    "HasUsageCondition",
+    "Melee",
+    "RequiresCharges",
+    "SkillConsumesFrenzyChargesOnUse",
+    "Spear",
+    "Sustained",
+    "Wind"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Dance with Death": 0.223,
+    "unique:Hyrri's Ire": 0.23,
+    "unique:Ingenuity": 0.068,
+    "unique:Ryslatha's Coil": 0.051,
+    "unique:Thrillsteel": 0.063,
+    "unique:Perfidy": 0.1,
+    "unique:Edyrn's Tusks": 0.099,
+    "unique:Heart of the Well": 0.08,
+    "unique:Ming's Heart": 0.15,
+    "unique:Rondel of Fragility": 0.476
+   },
+   "dps": 23976
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "types": [
+    "Area",
+    "Attack",
+    "CanCancelActions",
+    "GeneratesCharges",
+    "Melee",
+    "Shapeshift",
+    "Triggerable",
+    "Wind",
+    "Wyvern"
+   ],
+   "error": null,
+   "gains": {
+    "keystone:Crimson Assault": 0.097,
+    "unique:Hyrri's Ire": 0.089,
+    "unique:The Coming Calamity": 0.066,
+    "unique:Ryslatha's Coil": 0.101,
+    "unique:Perfidy": 0.1,
+    "unique:Apron of Emiran": 0.154,
+    "unique:Atsak's Sight": 0.084,
+    "unique:Heart of the Well": 0.086,
+    "unique:The Bringer of Rain": 0.082,
+    "unique:Ming's Heart": 0.197,
+    "unique:Rondel of Fragility": 0.343
+   },
+   "dps": 21765
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "types": [
+    "AttackInPlaceIsDefault",
+    "Companion",
+    "CreatesCompanion",
+    "CreatesMinion",
+    "HasReservation",
+    "Minion",
+    "Persistent",
+    "Physical"
+   ],
+   "error": null,
+   "gains": {
+    "unique:Deathblow": 0.111,
+    "unique:The Coming Calamity": 0.065,
+    "unique:Perfidy": 0.1,
+    "unique:Prism of Belief": 0.418,
+    "unique:Vis Mortis": 0.253,
+    "unique:Evergrasping Ring": 0.211
+   },
+   "dps": 19863
+  }
+ },
+ "updated": "2026-11-24 22:27"
+}

@@ -101,6 +101,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   Nerf-risk labels wait for the lead re-run. path-luck-7 first row: RoA as is 2.63M, the same as AB3.
 - **23:05: 2026-11-24.8 live (43b, 235 passed).** 43 left: (c) guides cached before .4 (old engine versions). breaker_day.sh keeps the real baseline in PATCH mode
   (fix not run yet; the rehearsal uses it). Lead re-run started early (after-leads, 2 cores, engine .8). path-luck-7, 4 of 12: the four "as is" builds equal AB3.
+- **23:35:** 0.4 scans done (no case set, committed ungraded). orders-sceptre, Skyfall best of 3: 2.98M (default order 2.95M). combos-8: Armour Broken combos
+  again on .8 -> combos_8.json (~/combos_8.log); compare with combos.json (Nov 18), then replace it (the page reads it); the ailment combos after.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -475,7 +477,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     supports), 3 skills; if the spread is > 10%, try best-of-two starts for the Uber stage or a final pass that retries
     each unique slot with a rare and the next-best uniques once everything else is set. Needs free cores.
 
-43. [ ] Atziri's Communion as a filler support (found 2026-11-24): BREAKER.md. (a) done 2026-11-24 14:05; (b) the
+43. [x] (2026-11-24: fillers .4, side-skill search .8; the cache key has the engine version, so old guides aren't served to new requests, only by their old job) Atziri's Communion as a filler support (found 2026-11-24): BREAKER.md. (a) done 2026-11-24 14:05; (b) the
     damage search for spirit skills (kit_out -> optimise_supports) still ignores toughness: a life-reserving support picked
     there for damage isn't checked; (c) EHP of finished builds in finalists / path_luck (13 of 18, 7 of 9 hold it) and in guides
     cached before the fix is wrong; boss DPS is computed before the fillers, so it isn't affected.
