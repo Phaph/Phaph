@@ -31,6 +31,12 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **15:00:** 0.3 stack scan graded: 1 flag (Irongrasp, unchanged in 0.4: false alarm); Indigon, Hollow Palm missed, Rathpith untestable.
   0.1 matrix running (then 0.2 matrix, 0.4). Revisit A/B so far, "as is": Rain of Arrows 849k -> 3.66M, Rapid Shot and Ice Shot
   identical to plain. Task 44: 0 of 10 rows gain anything; only Bonestorm is left to run.
+- **15:35 task 44 measured (16 of 16 rows, Communion removed first, ~/cond_swaps.py):** 1 of 8 builds gains: Bonestorm "as is" +42% mapping and +42%
+  boss (drops Elemental Focus, which blocks ailments and so the chilled / ignited conditions); the other 7 builds gain 0. Brute force
+  takes 2-7 min per search, too slow. Try: re-score the search's final 3 sets, each with its own auto_config, plus the best set without
+  ailment-blocking supports.
+- **15:35 revisit A/B, 5 of 12: NOT a clean win.** As is: RoA 849k -> 3.66M, Bonestorm 6.99M -> 7.42M, Rapid Shot / Ice Shot same. But RoA reversed
+  3.46M -> 1.74M (-50%). Don't merge on "as is" alone; see why that build got worse (code in ~/revisit_out/path_luck_revisit.json).
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
