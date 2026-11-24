@@ -898,5 +898,6 @@ Bonestorm 0%, Ice Shot 5%, at N times the build time.
 Testable cases: Indigon and Hollow Palm both missed; Rathpith was never in the catalogue. Stack scans so far (0.1, 0.3): 1 known case
 found of 4 testable (Archmage; Gemling, Indigon, Hollow Palm missed), 2 false alarms (Irongrasp twice). Whole grade so far: 2 of 8
 graded cases found (one not blind, the other at row 58 of 65), plus Archmage by the stack column, against a bar of half
-found. 3 cases wait on scans (0.1 / 0.2 matrix). Not a pass on these numbers even if those three all hit (5 of 11),
-so the claim has to be narrowed as agreed.
+found. 3 cases wait on scans (0.1 / 0.2 matrix). If all three hit that is 5 of 11 (below half), or 5 of 9 without the 2 untestable cases
+(above half), so the hit half of the bar is still open. The false-alarm half isn't: at most one per real find was the bar, and the
+condition scans alone stand at 9 real vs 72 false, the matrix at 0 vs 14. So the claim has to be narrowed as agreed.
