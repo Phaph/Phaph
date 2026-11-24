@@ -776,3 +776,10 @@ copy reserves spirit again), and sync_minion_counts set their count to the limit
 Now the main skeleton skill gets as many as the spirit left over pays for, an extra one counts once (`fitCopies`). So
 every earlier result that ranked or built a skeleton skill is wrong. Open: copies are taken before auras, not traded
 against them; Dark Effigy's damage is listed as Vile Effusion; Combust (Infernal Cry) not checked.
+
+### Grading on past patches: first result (2026-11-24, task 40)
+Patch 0.1 (PoB v0.5.0) condition scan, all 119 skills, default thresholds: Lightning Conduit vs Shocked is row 1 of 35
+(+500%; the next skill is +41%). The case was seen in a compatibility test first, so it is marked not blind. The same
+threshold flags 35 rows over 26 skills, so unless most of the other 25 were also cut in 0.2 (not judged yet), the
+proposed bar of one false alarm per real find fails for this detector at its default threshold. Not tuned.
+tools/grade_old.py grades finished scans only; matrix (cases 1.3, 1.9) is running.
