@@ -1,47 +1,49 @@
-# Morning report, Sunday 2026-11-22
+# Morning report: Tuesday 2026-11-24 (8 am Mazatlan)
 
-## Overnight
-- **No new nightly sweep.** It skipped again because the Breaker queue was busy. That is the 4th night in a row
-  (19th to 22nd). The latest sweep results are still the ones from 11-19.
-- **Running now:** the full blind re-run (our picks compared with the ladder's top builds). It started at 06:53
-  server time and takes about 12 hours, so expect results around 19:00 Berlin (about 11:00 your time).
-- **No messages were held back** during quiet hours.
-- I couldn't `git pull` this morning because the command needed an approval nobody was there to give. This report
-  is based on the server's local copy.
+## The server session
+- **Finished and live:** bows, wands, sceptres and other one-handed weapons now get an off-hand item (quiver, focus,
+  shield or second weapon). In early tests a quiver added 43-46% damage and a focus 64-79%. Also live: a fix for
+  a filler support gem that could eat most of a build's life (its effect on damage is not measured yet).
+- **Finished measuring:**
+  - Same build, gear made in a different order: damage changes by 5% (Ice Shot), 22% (Rapid Shot), 68% (Bonestorm)
+    and 320% (Rain of Arrows). The target was 10%.
+  - Enemy-condition check: 1 of 8 builds gains from it (Bonestorm, +42%); the other 7 gain nothing.
+- **On now:** testing a fix for that order luck. At the last note (5 of 12 builds done) it was not a clean win:
+  Rain of Arrows went from 849k to 3.66M one way, but from 3.46M down to 1.74M the other way. Not merged.
+- **Also in progress:** grading Lodestone on old patches, and the off-hand finalists run with the per-ascendancy
+  rescans after it. The notes list these as running or queued; I did not check that they are still alive.
+- **Waiting for you (nothing blocking):** (1) whether to trim the endgame pick (saves about 7 minutes, can slightly
+  change the pick); (2) the Whetstone class-weapon rule, once there are cost numbers; (3) two small Lodestone page
+  text fixes, only if you OK page work.
+- **Held messages:** the missing off-hands (since fixed and live), and "Breaker queue finished: sweep (0 failed)".
 
-## Finished by the server session (all on 11-22)
-- Trigger scan: nothing strong enough to be a lead. The only fast trigger it found is the Mjölner build
-  everyone already knows about.
-- The new "full build" test is now the bar a lead has to pass. Leopold's and Maligaro's pairs both failed it.
-- Combo leads checked as full builds: Bonestorm fed by Coiling Bolts held up (+11%). Armour Piercing Rounds
-  breaking armour itself (+1%) and Dark Effigy with poison (+1%) didn't.
-- Patch-notes practice: the tool read the 0.5.1 and 0.5.2 changes correctly without seeing the answers.
-- Fixed a bug that made combo builds look about twice as weak as they are.
-- Skill leads, first 3: Bonestorm still beats Comet by about 2x on Lich. Rain of Arrows and Wind Serpent's Fury
-  lost to the popular skills.
-- Started a check on how often the tool's top skill pick turns out to be the wrong one in a full build.
+## The A-to-Z sweep (one fifth of the ascendancies)
+- **4 of 4 builds finished, 0 passed every check, 0 timed out.** Yesterday the first 4 all hit the 45-minute limit;
+  the limit is now 2 hours.
 
-## Last sweep we have (11-19, 23 builds)
-- **0 builds passed every check.** Every build that finished was flagged "slow" (35 to 43 minutes each).
-- **4 builds hung** and were cut off at 45 minutes: Smith of Kitava, Stormweaver, Spirit Walker and Ritualist.
-  Their results weren't saved because of a file permission bug. That bug has been fixed since, so the next sweep
-  should record hung builds.
-- 1 build was short on strength: Witchhunter, crossbow at Mid Endgame.
-- These numbers come from before several fixes (Ember Fusillade, Oil Barrage, attributes), so they're out of date.
+| Build | Damage | Time | Problems |
+|---|---|---|---|
+| Abyssal Lich, Bonestorm | 3.77M | 48 min | 5 |
+| Smith of Kitava, Supercharged Slam | 3.38M | 50 min | only slow |
+| Spirit Walker, Lightning Spear | 1.15M | 72 min | 2 |
+| Martial Artist, Flicker Strike | 1.93M | 59 min | only slow |
 
-## Leads and possible bugs
-- Bonestorm on Lich is still the strongest skill lead.
-- The nightly sweep keeps losing its slot to the queue, so we have no fresh health check of the main app since
-  11-19.
+- **Most common failures:** too slow (all 4; other jobs shared the server, so some of this may be load), then a
+  made-up gem ("Fire Spell on Melee Hit") 3 times, all in the Abyssal Lich build.
+- "0 failed" in the queue message means the job ran to the end. It does not mean the builds passed.
+- The queue log's per-ascendancy results for this run are the 4 builds above. It waited over 5 hours for another scan.
 
-## 3 most useful next steps
-1. When the blind re-run lands tonight, write it up and run the remaining skill leads through the full-build test.
-2. Give the nightly sweep a real slot (for example, right after the queue finishes) so we get a fresh check on
-   today's engine and see whether the 4 hung builds still hang.
-3. Build speed: every build still takes about 40 minutes. Cutting that would help the sweep, the queue and the
-   live site.
+## Bugs and leads
+- **Likely bugs:** a gem players can't get is put in the Abyssal Lich build; a Megalomaniac jewel with no readable
+  stats in its endgame; Lightning Spear has no support gems in Act 1.
+- **No leads to quote.** Order luck can move a build's damage up to 4 times, so close rankings can't be trusted yet.
+- **Lodestone grade so far is weak:** on 0.3, the main scan found 0 of 4 known cases (2 could not be tested) with 14
+  false alarms. The stack scan's one flag was a false alarm.
 
-## Waiting for you
-- Cloudflare Pages: switch the production branch to `main`.
-- Lodestone page: OK to make two small text fixes?
-- Lodestone page: make it public or keep it unlisted?
+## The 3 most useful next steps
+1. **Finish the order-luck test** and find out why Rain of Arrows lost half its damage before merging anything.
+2. **Fix the made-up gem, the empty jewel and the missing Act 1 supports.** They can reach players' guides.
+3. **Cut Lodestone's false alarms,** or narrow what it claims, before the early December grade.
+
+Note: git pull was not allowed in this check-in. The local copy matched its last known remote, and its newest
+commit is from 15:26 server time.

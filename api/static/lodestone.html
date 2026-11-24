@@ -51,7 +51,7 @@ section > .intro { max-width: 70ch; color: var(--muted); font-size: 16px; }
 .lead .meta { font-size: 13px; color: var(--faint); }
 .chip { display: inline-block; font: 600 12px/1 var(--mono); letter-spacing: .04em; text-transform: uppercase; padding: 5px 8px; border-radius: 4px;
   border: 1px solid currentColor; justify-self: start; }
-.s-to_test { color: var(--brass-hi); } .s-confirmed { color: var(--good); } .s-known { color: var(--lode); }
+.s-to_test, .s-unconfirmed { color: var(--brass-hi); } .s-confirmed { color: var(--good); } .s-known { color: var(--lode); }
 .s-dead { color: var(--faint); } .s-fixed { color: var(--bad); }
 .filters { display: flex; flex-wrap: wrap; gap: 8px; }
 .filters button { background: var(--iron2); border: 1px solid var(--edge); color: var(--muted); border-radius: 4px; padding: 6px 10px; font: 500 14px var(--body); cursor: pointer; }
@@ -76,16 +76,19 @@ footer { color: var(--faint); font-size: 14px; }
 <body>
 <div class="wrap">
   <header>
-    <p class="eyebrow">Whetstone sharpens a build. Lodestone finds the ones nobody has found.</p>
+    <p class="eyebrow">Whetstone sharpens a build. Lodestone looks for the ones nobody has found.</p>
     <h1>Lodestone</h1>
-    <p class="lede">What the hunt has turned up so far, in plain words. Numbers are from Path of Building against a pinnacle boss;
-      anything marked <span class="chip s-to_test">to test</span> needs checking in the real game before anyone builds on it.</p>
+    <p class="lede">Lodestone is an idea generator, not a detector. It scans every skill for conditions and item pairs that Path of Building scores
+      unusually high and lists them for a person to check. Most flags are ordinary; some are Path of Building errors. It can't see exploits Path of
+      Building doesn't calculate (copies, charge loops, bugs). Expect it to miss most of what breaks the game.</p>
+    <p class="lede">Numbers are from Path of Building. Anything marked <span class="chip s-unconfirmed">unconfirmed</span> is an idea, not a result:
+      nobody has checked it in the game.</p>
     <p class="small" id="stamp">Loading…</p>
   </header>
 
   <section id="leads-sec">
     <h2>Leads</h2>
-    <p class="intro">Each find and where it stands: waiting for an in-game test, confirmed, rediscovered (a known strong build found again without being told: proof the hunt works), explained away, or a bug in our maths that is now fixed.</p>
+    <p class="intro">Each lead and where it stands: unconfirmed, confirmed (from game data, guides or calculation, not an in-game test), rediscovered (a strong build players already know), explained away, or a bug in our maths that is now fixed.</p>
     <div class="filters" id="filters"></div>
     <div class="leads" id="leads"></div>
   </section>
@@ -104,7 +107,7 @@ footer { color: var(--faint); font-size: 14px; }
 
   <section>
     <h2>Items and keystones that click with one skill</h2>
-    <p class="intro">A unique or keystone that is ordinary for most builds but far stronger with one skill than with the rest of that skill's family (same weapon or kind, same damage type). These are the shape broken builds take.</p>
+    <p class="intro">A unique or keystone that is ordinary for most builds but far stronger with one skill than with the rest of that skill's family (same weapon or kind, same damage type). Ideas to check, not results.</p>
     <div class="panel scroll"><table id="inter"><thead><tr><th>Piece</th><th>With</th><th class="num">Gain</th><th class="num">Family usual</th></tr></thead><tbody></tbody></table></div>
     <p class="small" id="broad"></p>
   </section>
@@ -124,11 +127,11 @@ footer { color: var(--faint); font-size: 14px; }
 </div>
 <script>
 (() => {
-  const PAGE_VERSION = "2026-11-19.1";
+  const PAGE_VERSION = "2026-11-24.1";
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
-  const STATUS = { to_test: "to test", confirmed: "confirmed", known: "rediscovered", dead: "explained away", fixed: "bug fixed" };
-  const ORDER = ["to_test", "confirmed", "known", "fixed", "dead"];
+  const STATUS = { unconfirmed: "unconfirmed", to_test: "to test", confirmed: "confirmed", known: "rediscovered", dead: "explained away", fixed: "bug fixed" };
+  const ORDER = ["unconfirmed", "to_test", "confirmed", "known", "fixed", "dead"];
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
   const pct = v => (v >= 0 ? "+" : "") + Math.round(v * 100) + "%";
   const row = (cells) => { const tr = el("tr"); cells.forEach(([t, cls]) => tr.appendChild(el("td", cls || "", t))); return tr; };

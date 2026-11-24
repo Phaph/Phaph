@@ -189,7 +189,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.anchor_notes = []
         group = pob.add_skill([skill], full_dps=minion_build)["group"]
         if minion_build:
-            pob.send("sync_minion_counts", persistent_only=True)   # every persistent minion (gem count = limit)
+            pob.send("sync_minion_counts")   # every persistent minion (gem count = limit)
         seed_ailment(pob, group, skill, spec.get("ailment"))   # so gear and tree chase the ailment from the start
         helpers = list(spec.get("with_skills") or [])   # skills the player asked for (Charged Staff, Cast on X)
         picked_helpers = []
@@ -371,7 +371,7 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
                 pob.send("set_main", group=group)
             else:
                 pob.auto_config("bossing")
-                boss = optimise_supports(pob, group, skill, slots=slots, metric=boss_metric, log=quiet)[0]
+                boss = search_supports(pob, group, skill, "bossing", slots, boss_metric, log=quiet)[0]
                 # Setups and extra damage stat sets, as the search ranked it (partners.py)
                 raw = pob.calc(STAT_FIELDS)
                 boss_out, partner = apply_all(pob, skill, group, raw, STAT_FIELDS, boss.supports)
@@ -408,8 +408,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         pob.set_config(**MODE_CONFIG["mapping"])
         conditions = pob.auto_config("mapping")
         mobility = mobility_skills(catalog, spec["weapon_type"], offhand_type=spec.get("offhand_type"))
-        best = optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet,
-                                 shortlist=shortlist)[0]
+        best = (optimise_supports(pob, group, skill, slots=slots, metric=map_metric, log=quiet, shortlist=shortlist) if light
+                else search_supports(pob, group, skill, "mapping", slots, map_metric, log=quiet, shortlist=shortlist))[0]
+        if not light:
+            conditions = pob.auto_config("mapping")   # what the chosen supports keep up
         for t in triggers:
             t["mapping"] = cast_on_crit(pob, group, find_groups(pob, t["gem"])[0], mode="mapping", gem=t["gem"])
             t.pop("group", None)
@@ -636,6 +638,37 @@ def score_combo(pob: PoB, group: int, setup_group: int | None, combo: dict, swap
             "alone": round(alone), "broken": round(broken), "setup_dps": round(setup_dps)}, c["dps"]
 
 
+# Supports whose skill can't inflict elemental ailments itself (their own text says so). A build set up with one shows
+# no chilled / ignited / shocked enemy, so bonuses that need those look worthless to the support search.
+AILMENT_BLOCKERS = {"Elemental Focus", "Elemental Armament III"}
+
+
+def search_supports(pob: PoB, group: int, skill: str, mode: str, slots: int, metric: str, log=lambda *a: None,
+                    shortlist: dict | None = None) -> list:
+    """optimise_supports, and when its pick blocks ailments a second search with no blockers, each scored with the
+    conditions that set itself keeps up. The conditions otherwise stay what the old supports allowed (task 44: Bonestorm
+    Lich +42% without Elemental Focus)."""
+    res = optimise_supports(pob, group, skill, slots=slots, metric=metric, log=log, shortlist=shortlist)
+    best = res[0]
+    if not set(best.supports) & AILMENT_BLOCKERS:
+        return res
+    from goals import FOCUS_FIELDS
+    fields = STAT_FIELDS + CLEAR_FIELDS + GOAL_FIELDS + list(FOCUS_FIELDS) + ["BleedDPS", "PoisonDPS", "IgniteDPS"] + MINION_AILMENT_FIELDS
+
+    def settled(supports):
+        pob.try_skill(group, [skill, *supports], ["TotalDPS"])
+        pob.auto_config(mode)
+        return score_of(pob.calc(fields), metric)
+
+    first = settled(best.supports)
+    settled([s for s in best.supports if s not in AILMENT_BLOCKERS])   # conditions without the blocker
+    other = optimise_supports(pob, group, skill, slots=slots, metric=metric, log=log, exclude=set(AILMENT_BLOCKERS))
+    if other and settled(other[0].supports) > first * 1.005:
+        return other
+    settled(best.supports)
+    return res
+
+
 def kit_out(pob: PoB, main_group: int, spirit: list[str], utility: list[dict], movement: list[str], metric: str,
             slots: int, used: set[str], log=lambda *a: None, skip: set[str] = frozenset()) -> list[dict]:
     """Supports for every skill besides the main one, so the build is complete, not just its main attack.
@@ -695,6 +728,7 @@ def _alone_supports(pob: PoB) -> set[str]:
     return _ALONE
 
 
+FIT_EHP_LOSS = 0.01   # most toughness one filler support may cost
 FIT_MIN = 0.6   # a support counts as made for a skill when the skill type it needs is rarer than 60% of skills
 
 
@@ -707,6 +741,7 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
               if getattr(pob, "no_lineage", False) else set())
     if any(c in alone for c in chosen):
         return chosen   # e.g. Uhtred's Exodus: only works with no other supports, so the other sockets stay empty
+    toughness = pob.calc(["TotalEHP"]).get("TotalEHP") or 0
     fams = {}
     for s in pob.send("fitting_supports", group=group).get("supports") or []:
         fam = s.get("family")
@@ -717,9 +752,14 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
             continue
         if fams[s["name"]] in {fams.get(c, c) for c in chosen}:
             continue
-        res = pob.try_skill(group, [name, *chosen, s["name"]], ["TotalDPS", "SpiritUnreserved"], keep_main=keep_main)
-        if res["supported"].get(s["name"]) and not res.get("warnings") and (res["output"].get("SpiritUnreserved") or 0) >= 0:
+        res = pob.try_skill(group, [name, *chosen, s["name"]], ["TotalDPS", "SpiritUnreserved", "TotalEHP"],
+                            keep_main=keep_main)
+        # Filler only: it must not cost toughness (Atziri's Communion reserves life instead of spirit: 12.6k -> 3.2k EHP).
+        ehp = res["output"].get("TotalEHP") or 0
+        if res["supported"].get(s["name"]) and not res.get("warnings") \
+                and (res["output"].get("SpiritUnreserved") or 0) >= 0 and ehp >= toughness * (1 - FIT_EHP_LOSS):
             chosen.append(s["name"])
+            toughness = ehp
     pob.try_skill(group, [name, *chosen], ["TotalDPS"], keep_main=keep_main)
     return chosen
 

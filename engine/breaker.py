@@ -81,7 +81,7 @@ def dominant_group(pob: PoB) -> int | None:
 def _apply(pob: PoB, mod: str | None, kind: str, n: int, limits: list[str]) -> None:
     if kind == "count":   # PoB has no mod text for most minion limits, so raise every limit stat directly
         pob.send("set_custom_mods", text="", raw=[{"name": l, "type": "BASE", "value": n} for l in limits])
-        pob.send("sync_minion_counts")
+        pob.send("sync_minion_counts", all=True)
     else:
         pob.send("set_custom_mods", text=mod.format(n=n))
 
@@ -89,7 +89,7 @@ def _apply(pob: PoB, mod: str | None, kind: str, n: int, limits: list[str]) -> N
 def _clear(pob: PoB, kind: str) -> None:
     pob.send("set_custom_mods", text="")
     if kind == "count":
-        pob.send("sync_minion_counts")
+        pob.send("sync_minion_counts", all=True)
 
 
 def boss(pob: PoB) -> None:

@@ -21,6 +21,69 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   stopped and waits for the sweep (~/finalists_offhand.sh; resumes, finished builds kept), then task 37.
 - 0.3 matrix graded: 0 of 4 cases (2 untestable: weapon and focus uniques aren't scanned), 0 real / 14 false. 0.3 stack
   running. After the grade: off-hand uniques into breaker.UNIQUE_TYPES (not before: frozen engine).
+- **Task 43: merged, deployed 2026-11-24.4 and pushed 14:05** (228 passed). Left: 43 (b), (c). Damage after the fix not measured.
+  Running: 12 revisit builds start after path-luck (~/revisit_ab.sh); task 44 measurement (condition swaps) in the session
+  scratchpad cond.log, first row +0%.
+- **Task 42, plain run done 14:08 (12 of 12):** spread by slot order: Ice Shot 5%, Rapid Shot 22%, Bonestorm 68%, Rain of Arrows 320%
+  (3 of 4 over the 10% bar). `revisit` A/B running since 14:08 (path-luck-revisit). Queued after it: ~/fixcheck.sh (4 specs on main
+  with the filler fix: ~/fixcheck_out/fixcheck.json, compare dps / TotalEHP / Communion with path_luck.json's "as is").
+  finalists_offhand (hungry_nobel) runs one order per build, so its ranking has this luck in it: don't quote it.
+- **15:00:** 0.3 stack scan graded: 1 flag (Irongrasp, unchanged in 0.4: false alarm); Indigon, Hollow Palm missed, Rathpith untestable.
+  0.1 matrix running (then 0.2 matrix, 0.4). Revisit A/B so far, "as is": Rain of Arrows 849k -> 3.66M, Rapid Shot and Ice Shot
+  identical to plain. Task 44: 0 of 10 rows gain anything; only Bonestorm is left to run.
+- **15:35 task 44 measured (16 of 16 rows, Communion removed first, ~/cond_swaps.py):** 1 of 8 builds gains: Bonestorm "as is" +42% mapping and +42%
+  boss (drops Elemental Focus, which blocks ailments and so the chilled / ignited conditions); the other 7 builds gain 0. Brute force
+  takes 2-7 min per search, too slow. Try: re-score the search's final 3 sets, each with its own auto_config, plus the best set without
+  ailment-blocking supports.
+- **15:35 revisit A/B, 5 of 12: NOT a clean win.** As is: RoA 849k -> 3.66M, Bonestorm 6.99M -> 7.42M, Rapid Shot / Ice Shot same. But RoA reversed
+  3.46M -> 1.74M (-50%). Don't merge on "as is" alone; see why that build got worse (code in ~/revisit_out/path_luck_revisit.json).
+- **16:05 revisit, why it lost damage:** 9 of 12 in: every build it changed gained 136-330% EHP; RoA reversed -50% and rotated -66% boss, RoA
+  as is +331%, Bonestorm as is +6% / reversed +118%, Rapid Shot and Ice Shot untouched. Likely (not proven): the linear score (d + 0.6 x EHP)
+  accepts a big one-off swap that trades damage for EHP. Branch `revisit` now takes a swap only if its reverse scores as a loss (2 unit
+  tests; the new one fails without the rule). ~/revisit_ab2.sh runs the 12 builds on it after ~/fixcheck.sh (path_luck_revisit2.json). Judge
+  boss damage AND EHP per build against path_luck.json; merge if nothing loses much, else best-of-N orders.
+  Note the running A/B's suite (~/revisit_tests.log) will test the new commit, not the old one.
+  The same linear score picks single-unique swaps in _consider_uniques and affixes: one to look at if AB2 is still noisy.
+- **16:40 revisit A/B 1 complete (12 of 12): spread RoA 201%, Rapid Shot 43%, Bonestorm 125%, Ice Shot 5% (plain: 320 / 22 / 68 / 5).**
+  Not a fix for the spread; AB2 (symmetric rule) runs after fixcheck.
+- **Task 44: branch `settle`** (worktree ~/phaph_settle, off main, not merged): guide.search_supports; 3 unit tests pass. A/B on the 12
+  saved builds running (container settle-ab; script / log settle.py / settle.log in the session scratchpad). Then the full suite.
+- **17:05 grade:** 0.1 matrix: Archmage and Gemling both missed (Archmage was found by the stack scan only). 2 of 10 graded cases found, 1 case
+  left (2.1, 0.2 matrix): at most 3 of 11, or 3 of 9 without the 2 untestable: below half either way. Task 40's grade fails the bar on
+  both halves; left: 2.1, ordinary builds (false alarms), launch-day timing, the narrowed claim (for Kyle).
+- **17:05 filler fix on full builds:** boss and map dps identical, EHP RoA 6.3k -> 7.9k, Ice Shot 7.8k -> 24.2k (2 of 4 in, ~/fixcheck.log).
+- Full suite on `revisit` with the symmetric rule: green, 229 passed 16:42. AB2 starts after fixcheck.
+- **17:35 task 43 check done (4 of 4):** boss and map dps identical to the digit; EHP Rapid Shot 3.2k -> 12.6k, Ice Shot 7.8k -> 24.2k, RoA
+  6.3k -> 7.9k, Bonestorm unchanged (never had Communion). 43 left: (b) and old cached guides. AB2 running since 17:06. settle-ab: 13 of 24, all +0%.
+- **18:10 task 44 A/B done: 24 of 24 rows, 2 gain (+42%, Bonestorm "as is" map and boss), 22 +0.0%, 0 lose.** On saved builds only; a full
+  guide with it isn't measured (the boss step probably avoided Elemental Focus already). ~/merge_settle.sh merges + deploys 2026-11-24.5 if
+  the suite is green (~/settle_tests.log, ~/merge_settle.log).
+- **18:10 correction to the 16:05 note:** RoA reversed is 1,736,171 in AB1 and AB2, so the symmetric rule did not act there: the "linear
+  score trades damage for EHP in the re-check" explanation is wrong for that build. It is untested for RoA rotated. RoA as is went 3.66M (v1)
+  -> 1.83M (v2), so there the rule did act, and cost damage. The re-check runs in the FIRST gear pass too, before the tree: other gear -> other tree is the
+  next suspect (37 passives differ). Test: re-check only in the final pass (attr_weight set).
+- **19:30: engine 2026-11-24.5 (task 44, settle) is live, 231 passed.** Finalists off-hand run done: Unearth 15.6M is false (30 temporary
+  minions; live bug, BREAKER.md). Fix on branch `tempminions` (worktree ~/phaph_tempmin); ~/tempmin.sh runs the suite, then merges,
+  deploys 2026-11-24.6 and pushes (~/tempmin_tests.log, ~/merge_tempmin.log): check it. After it: rebuild Sceptre finalists (drop
+  that row from finalists_offhand.json and re-search Sceptre on the new engine). after_leads starts on whatever main is then.
+- **Task 42, AB2 complete 19:06 (12 of 12), boss by order as is / reversed / rotated:** RoA 1.83M / 1.74M / 1.33M (+38% spread, but plain was 849k / 3.46M /
+  3.57M: 2 of 3 orders lose about half or more); Rapid Shot rotated 6.79M (plain 5.78M); Bonestorm 7.42M / 9.09M / 3.94M (plain 6.99M / 4.17M / 4.41M), spread 131%;
+  Ice Shot 5%. Don't merge. AB3 (re-check in the final gear pass only, commit on `revisit`) running since 19:06 -> ~/revisit_out/path_luck_revisit3.json.
+  If it isn't clean either: best-of-N orders. Don't read "lower spread" as better where the level fell.
+- Sceptre again on 2026-11-24.6: ~/sceptre.sh, after that deploy and AB3 -> data/breaker/finalists_sceptre.json, ~/sceptre.log (commit it).
+- **20:05: 2026-11-24.6 live (231 passed), tempminions merged.** Sceptre finalists started now (3 cores were free). AB3 at 4 of 12: RoA as is 2.63M (plain 849k),
+  reversed 3.46M (= plain), Rapid Shot and Ice Shot as is = plain: no loss so far.
+- **20:30: branch `handuniques`** (worktree ~/phaph_hands): weapon and off-hand uniques in matrix / pair scans, worn for real in the hand that holds their
+  kind. Probe (round-1 builds, 4 skills, 87 tries): base unchanged after the tries; only Sunsplinter +16% and Chernobog's Pillar +10% (Lightning
+  Spear) gain; Tangletongue -69%, Rathpith -29%: both known cases would still be missed, so this does not change the grade. ~/hands.sh: full suite, then merge +
+  push (no deploy) and ~/breaker pull for task 37 (~/hands_tests.log, ~/merge_hands.log).
+- Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
+- **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
+  worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
+  merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
+  same 12 builds on the branch (~/path_luck_revisit.log, ~/revisit_out/path_luck_revisit.json), then the full suite
+  (~/revisit_tests.log). Next: compare both reports (`path_luck.py report`); judge on spread AND level per spec. If the
+  "as is" builds rise and nothing falls, merge and deploy. If the spread stays > 10%, do best-of-two starts.
 - Task 41 A/B: quiver +43-46%, focus +64-79% (search-style); suite running. 0.3 condition graded (3.6 missed; 1 real, 34 false).
 - Task 40: 0.1 stack scan judged (Archmage real, Irongrasp false alarm); 0.3 scans running.
 - Task 40: 0.2 condition false alarms judged (2 real, 25 false, 12 unjudged; tools/old_skill_verdicts.py does 0.3+ the same way).
@@ -34,8 +97,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   measured yet; the run going now is the serial version).
 - **Leads now:** none to quote: every full-build number before engine 2026-11-23.5 needs a re-run (Bonestorm Lich +35%
   included). Invoker elemental crit = known (rediscovered blind).
-- **Waiting for Kyle:** whether to trim the endgame pick further (finalists without herald/mark/movement supports,
-  ~-7 min, can slightly change the pick). Not blocking.
+- **Kyle 2026-11-24:** endgame pick trimming: leave as is. Lodestone claim and page fixes: Claude's call, done (task 32). Leads need more than one full build.
 - **Done 2026-11-20 (session):** task 12 written up (BREAKER.md); PoB gap fixed (Oracle Forced Outcome + Maligaro's
   x2.73 -> +2%); sweep chown fix (tonight's 10 pm sweep should record hung builds).
 - **Plan (agreed with Kyle 2026-11-22):**
@@ -302,7 +364,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the exact number changes -> apply them to the current data (custom mods / gem stat edits) -> scan -> compare our
     "this got broken / nerfed" calls with what happened on that patch's ladder. Start: what engine/tools/
     breaker_day.sh already does, then a notes -> changes parser (Claude reads the notes; changes as JSON).
-32. [ ] Lodestone page text: leads marked "unconfirmed" show without a colour and the intro still says "needs
+32. [x] (2026-11-24, Kyle's OK: text fixes and the narrower claim on the page; single-full-build leads re-labelled) Lodestone page text: leads marked "unconfirmed" show without a colour and the intro still says "needs
     checking in the real game" (front-end paused: ask Kyle before touching the page; put it under Waiting).
 
 33. [x] (2026-11-22: cause = auto_config gave every armour-breaking plain build "always Fully Broken"; now only when it
@@ -370,29 +432,37 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.
-40. [ ] (2026-11-24: PoB tags back to 0.1 run on our runner; Lightning Conduit vs Shocked reads +500% / +115% / +116% / +68% on 0.1-0.4,
+40. [ ] (2026-11-24 20:05: GRADE DONE, failed: 2 of 11 found, 11 real vs 129 false; claim narrowed. Left: launch-day rehearsal timing; nerf-risk labels; off-hand / weapon uniques into breaker.UNIQUE_TYPES (the 0.4 scans still running are frozen code, no case set)) (2026-11-24: PoB tags back to 0.1 run on our runner; Lightning Conduit vs Shocked reads +500% / +115% / +116% / +68% on 0.1-0.4,
     in step with the nerfs; answer key written first; scans started; left: a v0.17.1 (0.5) case set, ordinary builds, scalers and pairs on old
     patches, then the grade) (agreed with Kyle 2026-11-23, by ~Dec 1) Grade Lodestone on known answers: 15-20 past broken builds plus
     ordinary ones on patch data we can load; hit rate and false alarms. Proposed bar: at least half found, at most one
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
     ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.
 
-41. [ ] Off-hands (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
+41. [ ] Off-hands: (c) done 2026-11-24 (one false row, BREAKER.md); left: Sceptre again, (f). Was: (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
     Sceptre and every other one-handed weapon (the rest of today's run is comparable only within itself); (d) done on the branch 2026-11-24: one-handed martial weapons try a second weapon and a shield by score (spear,
     flail: shield only; damage effect not measured yet); (e) done on branch `offhand2` (on top of offhand, worktree ~/phaph_offhand, not pushed): gear.craft_swap fills both hands of set 2; new test passes, full suite
     running (~/offhand3_tests.log). suite green (227 passed); ~/merge_offhand.sh now merges offhand2 (holds both) as 2026-11-24.3; (f) lead re-run (~/after_leads.sh)
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
     bow / wand / sceptre skills read low.
 
-42. [ ] (running since 11:05: tools/path_luck.py, 4 specs x 3 slot orders, 3 cores, ~/path_luck.log -> data/breaker/path_luck.json) (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
+42. [ ] (2026-11-24 12:40: unique re-check on branch `revisit`, A/B queued, see START HERE) (running since 11:05: tools/path_luck.py, 4 specs x 3 slot orders, 3 cores, ~/path_luck.log -> data/breaker/path_luck.json) (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
     a quiver (BREAKER.md). Measure: the same spec built 3 times with small starting differences (gear slot order, first
     supports), 3 skills; if the spread is > 10%, try best-of-two starts for the Uber stage or a final pass that retries
     each unique slot with a rare and the next-best uniques once everything else is set. Needs free cores.
 
+43. [ ] Atziri's Communion as a filler support (found 2026-11-24): BREAKER.md. (a) done 2026-11-24 14:05; (b) the
+    damage search for spirit skills (kit_out -> optimise_supports) still ignores toughness: a life-reserving support picked
+    there for damage isn't checked; (c) EHP of finished builds in finalists / path_luck (13 of 18, 7 of 9 hold it) and in guides
+    cached before the fix is wrong; boss DPS is computed before the fillers, so it isn't affected.
+44. [ ] Support search vs conditions (found 2026-11-24): conditions (enemy chilled, ignited...) are set from the supports in place
+    and held fixed while the search swaps supports. Bonestorm Lich: from Elemental Focus the full search finds nothing better;
+    swapping to Extraction and re-running auto_config gives +35% (4.37M -> 5.92M mapping score). Extraction is better in
+    the saved mapping setup; how often this happens elsewhere isn't measured. Try: auto_config + search again until stable,
+    or re-score the top few sets with auto_config run on each. After 42's A/B (so it measures one change).
+
 ## Waiting for Kyle
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
   (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.
-- Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game
-  checks). Front-end is paused, so only with your OK.
 
 ## Done

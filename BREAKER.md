@@ -861,3 +861,66 @@ but has no row). Indigon and Hollow Palm gained under 5% on plain builds, as the
 flagged: 0 cut by 0.4, 14 not, 1 unjudged (Maligaro's). Several flags are skills nobody builds damage on (Fortifying Cry,
 Seismic Cry). The stack scan uses the same catalogue, so Rathpith can't be found there either; Indigon and Hollow Palm can.
 Fix after the grade (a new column, not the main score): add Focus, Quiver and Shield uniques to the catalogue.
+
+**Path luck, first result (task 42, 2026-11-24, run still going):** the same Rain of Arrows Invoker spec gives 849k boss as is and
+3.46M with the gear slots crafted in reverse order (x4.1). One spec and one pair of orders, so the typical spread isn't known
+yet; Rapid Shot, Ice Shot and Bonestorm have only their first order. Moving single items from the 3.46M build into the
+849k build: quiver +104% damage (it wore Rearguard), amulet +36% (Choir of the Storm), ring 1 +25%, gloves +18%. Those
+four also score higher on the gear score itself, so the optimiser's own rule prefers them: a unique is picked one slot
+at a time and never checked again. All gear swapped: 520k -> 776k in the same boss config. So gear is the smaller part on its own;
+the rest of the x4 is tree, gems and heralds built around that gear (not split yet). The bad build also ends at
+66% elemental resistances (target 75): with 9 of 10 slots unique there is no rare left to fix them. The other direction (bad items into the good
+build) wasn't measured: PoB exited after about a dozen load_xml calls in one process (cause unknown; restart it per slot).
+Until the run is read: no full-build comparison between skills is safe to quote, not only those under 20-30%.
+
+**Path luck, more orders (task 42, 13:30; 9 of 12 builds in):** boss damage by order: Rapid Shot 4.76M / 5.04M (+6%), Ice Shot 2.56M /
+2.61M (+2%), Bonestorm 6.99M / 4.17M (-40%), Rain of Arrows 849k / 3.46M / 3.57M. No order is reliably the better one. Two are
+small, two are large: it isn't a uniform ~10%.
+**Bonestorm's gap isn't (mainly) uniques.** The two builds wear almost the same gear; mapping is 17% apart (3.86M / 3.30M), boss 68%.
+Swapping gloves moves 13-17%, boots nothing, Demon Form nothing. The full boss support search on the saved builds gives 4.05M /
+2.42M raw, so the gap is in the build (13 of 128 passives differ; not split further).
+**Support search holds conditions fixed (task 44):** see NIGHT_TASKS.md.
+**Filler supports reserved 76% of life (task 43, live bug):** fit_supports fills empty sockets without looking at toughness and put
+Atziri's Communion (spirit skills reserve life instead) on Herald of Ash: EHP 12.6k -> 3.2k (Rapid Shot), 24.2k -> 7.8k (Ice Shot),
+23.7k -> 6.5k (Rain of Arrows reversed), no damage of its own. 13 of 18 finalists and 7 of 9 path-luck builds hold it. Taking
+it out leaves the build ~100 spirit over, so fit_spirit will turn a skill off: the damage after the fix may be lower and isn't measured.
+**Rejected:** "the last mapping search re-uses a stale shortlist" (a full search gained 1-16% on 7 of 9 saved builds, nothing on
+the 2 Bonestorms). Nearly all of it is Execute III, +30% on Low Life, which these builds only are because of Communion.
+
+**Path luck, complete (task 42, 2026-11-24, engine 2026-11-24.3, 4 specs x 3 slot orders):** spread (best / worst boss damage - 1): Ice Shot
++5% (2.56M / 2.61M / 2.67M), Rapid Shot +22% (4.76M / 5.04M / 5.78M), Bonestorm +68% (6.99M / 4.17M / 4.41M), Rain of Arrows
++320% (849k / 3.46M / 3.57M). "as is" is the best order once and the worst order three times; no order wins everywhere.
+4 hand-picked specs, so this is not an average over skills. The old lead rule ("under ~20-30% isn't real") is too lenient for at
+least two of the four. A best-of-N start would have lifted Rapid Shot 22% and Rain of Arrows 320% over the default order,
+Bonestorm 0%, Ice Shot 5%, at N times the build time.
+
+**0.3 stack scan (task 40, 2026-11-24 15:00):** flagged one piece, Irongrasp on Bonestorm (strength), unchanged in 0.4: a false alarm (as in 0.1).
+Testable cases: Indigon and Hollow Palm both missed; Rathpith was never in the catalogue. Stack scans so far (0.1, 0.3): 1 known case
+found of 4 testable (Archmage; Gemling, Indigon, Hollow Palm missed), 2 false alarms (Irongrasp twice). Whole grade so far: 2 of 8
+graded cases found (one not blind, the other at row 58 of 65), plus Archmage by the stack column, against a bar of half
+found. 3 cases wait on scans (0.1 / 0.2 matrix). If all three hit that is 5 of 11 (below half), or 5 of 9 without the 2 untestable cases
+(above half), so the hit half of the bar is still open. The false-alarm half isn't: at most one per real find was the bar, and the
+condition scans alone stand at 9 real vs 72 false, the matrix at 0 vs 14. So the claim has to be narrowed as agreed.
+
+**Grade, 0.1 matrix (task 40, 2026-11-24 17:05):** Archmage and Gemling attribute stacking both missed. Found so far 2 of 10 graded
+cases (1.4 not blind; 2.2 at row 58 of 65); one case left (2.1). Best possible: 3 of 11, or 3 of 9 without the 2 cases the scans
+can't test. That is below the agreed half, and false alarms were already over the bar, so the grade fails whatever 2.1 does. The stack
+scan's Archmage is the only case found by more than a low-ranked row or a case we had already looked at (1.4). What the scans missed (Glacial Cascade vs Frozen, Indigon,
+Hollow Palm, immobilise) is not explained here beyond the two untestable cases and the 0.3 PoB gaps noted above.
+
+**Filler fix on full builds (task 43):** Ice Shot and Rain of Arrows rebuilt on 2026-11-24.4 with the same spec: boss and map damage unchanged
+to the digit; EHP 7,758 -> 24,203 and 6,345 -> 7,853. Rapid Shot and Bonestorm still building.
+
+**Off-hand finalists (task 41c, complete 2026-11-24 18:50, code of branch offhand = 2026-11-24.3 without the later fixes):** Unearth Sceptre 15.6M boss is
+FALSE: 84% of it is 30 Bone Constructs, temporary minions made from corpses, counted at their limit. The persistent-only rule (2026-11-22) was
+passed by the search and the guide's start but not by use_full_dps (which the guide calls later) or the spirit search, so live guides with Unearth (and
+perhaps other temporary minions) were affected too. Fixed on branch `tempminions` (2026-11-24.6: the rule is the default). It also
+means Unearth being picked over other Sceptre skills isn't established. Rows 2-12 are one slot order each (spread up to 320%, task 42), so no
+ranking is quoted. Earthquake's 9.7M boss vs 0.7M in its sources is by design: the Aftershock is added after the list.
+No other finalist counts more than one minion except Wolf Pack (7, persistent).
+
+**Grade complete (task 40, 2026-11-24 20:05):** 0.2 matrix done: 2.1 missed as the key expected (weapon uniques aren't scanned). Final: **2 of 11 found**
+(1.4 not blind; 2.2 at row 58 of 65), or 2 of 9 without the 2 cases the scans can't test (2.1 is one more the key itself expected to miss). The
+stack column adds Archmage. The 0.2 matrix flagged 38 pieces: 2 real (Crown of Eyes 150% -> 100%, Maligaro's Virtuosity 300% -> 250%, both cut in 0.3), 35 false, 1
+unjudged (Hyrri's Ire, reworked). Condition and matrix scans together, 0.1-0.3: 11 real vs 129 false: about 12 false alarms per real find (bar: 1). The
+claim on the page was narrowed the same day. Caveats: "unchanged" is PoB's text, "real" is lenient (a cut, not proof of why).

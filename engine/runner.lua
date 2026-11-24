@@ -946,10 +946,12 @@ function handlers.sync_minion_counts(cmd)
 	local main = build.mainSocketGroup
 	local counts = {}
 	for i, g in ipairs(build.skillsTab.socketGroupList) do
-		local ge = g.gemList[1] and g.gemList[1].gemData and g.gemList[1].gemData.grantedEffect
-		-- persistent_only: temporary minions (Unearth's Bone Constructs from corpses, Wardbound Minions from Runic
+		local gem1 = g.gemList[1]   -- (skills granted by an item have no gemData)
+		local ge = gem1 and (gem1.grantedEffect or (gem1.gemData and gem1.gemData.grantedEffect))
+		-- Unless `all` is asked for (Breaker minion-limit scans): temporary minions (Unearth's Bone Constructs from corpses, Wardbound Minions from Runic
 		-- Ward) aren't all out at once, and a boss leaves no corpses: only persistent minions count at their limit.
-		local skip = cmd.persistent_only and not (ge and ge.skillTypes and ge.skillTypes[SkillType.Persistent])
+		-- The default, so no caller can forget it (use_full_dps and the spirit search did until 2026-11-24.6).
+		local skip = not cmd.all and not (ge and ge.skillTypes and ge.skillTypes[SkillType.Persistent])
 		if g.includeInFullDPS and g.enabled ~= false and not skip then
 			build.mainSocketGroup = i
 			build.buildFlag = true
