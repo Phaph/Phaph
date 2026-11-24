@@ -37,6 +37,13 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   ailment-blocking supports.
 - **15:35 revisit A/B, 5 of 12: NOT a clean win.** As is: RoA 849k -> 3.66M, Bonestorm 6.99M -> 7.42M, Rapid Shot / Ice Shot same. But RoA reversed
   3.46M -> 1.74M (-50%). Don't merge on "as is" alone; see why that build got worse (code in ~/revisit_out/path_luck_revisit.json).
+- **16:05 revisit, why it lost damage:** 9 of 12 in: every build it changed gained 136-330% EHP; RoA reversed -50% and rotated -66% boss, RoA
+  as is +331%, Bonestorm as is +6% / reversed +118%, Rapid Shot and Ice Shot untouched. Likely (not proven): the linear score (d + 0.6 x EHP)
+  accepts a big one-off swap that trades damage for EHP. Branch `revisit` now takes a swap only if its reverse scores as a loss (2 unit
+  tests; the new one fails without the rule). ~/revisit_ab2.sh runs the 12 builds on it after ~/fixcheck.sh (path_luck_revisit2.json). Judge
+  boss damage AND EHP per build against path_luck.json; merge if nothing loses much, else best-of-N orders.
+  Note the running A/B's suite (~/revisit_tests.log) will test the new commit, not the old one.
+  The same linear score picks single-unique swaps in _consider_uniques and affixes: one to look at if AB2 is still noisy.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
