@@ -910,3 +910,11 @@ Hollow Palm, immobilise) is not explained here beyond the two untestable cases a
 
 **Filler fix on full builds (task 43):** Ice Shot and Rain of Arrows rebuilt on 2026-11-24.4 with the same spec: boss and map damage unchanged
 to the digit; EHP 7,758 -> 24,203 and 6,345 -> 7,853. Rapid Shot and Bonestorm still building.
+
+**Off-hand finalists (task 41c, complete 2026-11-24 18:50, code of branch offhand = 2026-11-24.3 without the later fixes):** Unearth Sceptre 15.6M boss is
+FALSE: 84% of it is 30 Bone Constructs, temporary minions made from corpses, counted at their limit. The persistent-only rule (2026-11-22) was
+passed by the search and the guide's start but not by use_full_dps (which the guide calls later) or the spirit search, so live guides with Unearth (and
+perhaps other temporary minions) were affected too. Fixed on branch `tempminions` (2026-11-24.6: the rule is the default). It also
+means Unearth being picked over other Sceptre skills isn't established. Rows 2-12 are one slot order each (spread up to 320%, task 42), so no
+ranking is quoted. Earthquake's 9.7M boss vs 0.7M in its sources is by design: the Aftershock is added after the list.
+No other finalist counts more than one minion except Wolf Pack (7, persistent).

@@ -1,0 +1,13 @@
+Cross-class ranking: each weapon type's best search finalists as full Uber Endgame builds (boss DPS, map DPS):
+   1. Unearth | Infernalist                        Sceptre         boss   15,569,171  map   20,708,982
+   2. Skyfall | Infernalist                        Wand            boss   10,530,234  map   14,777,771
+   3. Earthquake | Invoker                         One Hand Mace   boss    9,706,366  map    8,540,357
+   4. Bonestorm | Infernalist                      Wand            boss    3,935,016  map    3,040,937
+   5. Skyfall | Infernalist                        Sceptre         boss    2,950,994  map    2,385,492
+   6. Ice Shot | Invoker [Rain of Arrows 100%]     Bow             boss    2,557,120  map    1,555,749
+   7. Flicker Strike | Invoker                     Quarterstaff    boss    1,925,989  map    2,450,384
+   8. Glacial Cascade | Invoker [Flicker Strike 100%] Quarterstaff    boss    1,541,388  map      652,697
+   9. Glacial Lance | Invoker                      Spear           boss    1,466,508  map    1,271,255
+  10. Fangs of Frost | Invoker                     Spear           boss    1,312,925  map    1,035,208
+  11. Rain of Arrows | Invoker                     Bow             boss      849,284  map      250,627
+  12. Hammer of the Gods | Invoker [Earthquake 100%] One Hand Mace   boss      542,875  map    2,985,205

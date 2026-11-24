@@ -62,6 +62,14 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   score trades damage for EHP in the re-check" explanation is wrong for that build. It is untested for RoA rotated. RoA as is went 3.66M (v1)
   -> 1.83M (v2), so there the rule did act, and cost damage. The re-check runs in the FIRST gear pass too, before the tree: other gear -> other tree is the
   next suspect (37 passives differ). Test: re-check only in the final pass (attr_weight set).
+- **19:30: engine 2026-11-24.5 (task 44, settle) is live, 231 passed.** Finalists off-hand run done: Unearth 15.6M is false (30 temporary
+  minions; live bug, BREAKER.md). Fix on branch `tempminions` (worktree ~/phaph_tempmin); ~/tempmin.sh runs the suite, then merges,
+  deploys 2026-11-24.6 and pushes (~/tempmin_tests.log, ~/merge_tempmin.log): check it. After it: rebuild Sceptre finalists (drop
+  that row from finalists_offhand.json and re-search Sceptre on the new engine). after_leads starts on whatever main is then.
+- **Task 42, AB2 (8 of 12 in, rest running):** RoA 1.83M / 1.74M / 1.33M vs plain 849k / 3.46M / 3.57M; Bonestorm as is and reversed same as
+  v1 (7.42M / 9.09M vs plain 6.99M / 4.17M); Rapid Shot, Ice Shot same as plain so far. Still not a clean win. AB3 = re-check in the final gear pass
+  only (commit on `revisit`), ~/revisit_ab3.sh, starts after AB2 -> ~/revisit_out/path_luck_revisit3.json. If it isn't clean either: best-of-N orders.
+- Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
@@ -424,7 +432,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
     ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.
 
-41. [ ] Off-hands (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
+41. [ ] Off-hands: (c) done 2026-11-24 (one false row, BREAKER.md); left: Sceptre again, (f). Was: (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
     Sceptre and every other one-handed weapon (the rest of today's run is comparable only within itself); (d) done on the branch 2026-11-24: one-handed martial weapons try a second weapon and a shield by score (spear,
     flail: shield only; damage effect not measured yet); (e) done on branch `offhand2` (on top of offhand, worktree ~/phaph_offhand, not pushed): gear.craft_swap fills both hands of set 2; new test passes, full suite
     running (~/offhand3_tests.log). suite green (227 passed); ~/merge_offhand.sh now merges offhand2 (holds both) as 2026-11-24.3; (f) lead re-run (~/after_leads.sh)
