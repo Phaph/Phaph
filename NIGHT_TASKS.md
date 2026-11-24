@@ -48,6 +48,11 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   Not a fix for the spread; AB2 (symmetric rule) runs after fixcheck.
 - **Task 44: branch `settle`** (worktree ~/phaph_settle, off main, not merged): guide.search_supports; 3 unit tests pass. A/B on the 12
   saved builds running (container settle-ab; script / log settle.py / settle.log in the session scratchpad). Then the full suite.
+- **17:05 grade:** 0.1 matrix: Archmage and Gemling both missed (Archmage was found by the stack scan only). 2 of 10 graded cases found, 1 case
+  left (2.1, 0.2 matrix): at most 3 of 11, or 3 of 9 without the 2 untestable: below half either way. Task 40's grade fails the bar on
+  both halves; left: 2.1, ordinary builds (false alarms), launch-day timing, the narrowed claim (for Kyle).
+- **17:05 filler fix on full builds:** boss and map dps identical, EHP RoA 6.3k -> 7.9k, Ice Shot 7.8k -> 24.2k (2 of 4 in, ~/fixcheck.log).
+- Full suite on `revisit` with the symmetric rule: green, 229 passed 16:42. AB2 starts after fixcheck.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the

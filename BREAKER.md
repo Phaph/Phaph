@@ -901,3 +901,12 @@ graded cases found (one not blind, the other at row 58 of 65), plus Archmage by 
 found. 3 cases wait on scans (0.1 / 0.2 matrix). If all three hit that is 5 of 11 (below half), or 5 of 9 without the 2 untestable cases
 (above half), so the hit half of the bar is still open. The false-alarm half isn't: at most one per real find was the bar, and the
 condition scans alone stand at 9 real vs 72 false, the matrix at 0 vs 14. So the claim has to be narrowed as agreed.
+
+**Grade, 0.1 matrix (task 40, 2026-11-24 17:05):** Archmage and Gemling attribute stacking both missed. Found so far 2 of 10 graded
+cases (1.4 not blind; 2.2 at row 58 of 65); one case left (2.1). Best possible: 3 of 11, or 3 of 9 without the 2 cases the scans
+can't test. That is below the agreed half, and false alarms were already over the bar, so the grade fails whatever 2.1 does. The stack
+scan is the only detector with a find of its own that was blind (Archmage). What the scans missed (Glacial Cascade vs Frozen, Indigon,
+Hollow Palm, immobilise) is not explained here beyond the two untestable cases and the 0.3 PoB gaps noted above.
+
+**Filler fix on full builds (task 43):** Ice Shot and Rain of Arrows rebuilt on 2026-11-24.4 with the same spec: boss and map damage unchanged
+to the digit; EHP 7,758 -> 24,203 and 6,345 -> 7,853. Rapid Shot and Bonestorm still building.
