@@ -372,7 +372,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
     ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.
 
-41. [ ] Off-hands (see START HERE): (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
+41. [ ] Off-hands (see START HERE): (c) queued: ~/finalists_offhand.sh after after_sweep.sh -> data/breaker/finalists_offhand.json. (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
     Sceptre and every other one-handed weapon (the rest of today's run is comparable only within itself); (d) done on the branch 2026-11-24: one-handed martial weapons try a second weapon and a shield by score (spear,
     flail: shield only; damage effect not measured yet); (e) weapon set 2 (craft_weapon) has no off-hand either; (f) lead re-run (~/after_leads.sh)
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
