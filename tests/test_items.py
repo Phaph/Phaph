@@ -100,3 +100,20 @@ def test_special_and_unlisted_bases_are_never_used(monkeypatch):
     assert not gear.base_usable({"name": "Dark Staff", "tags": ["staff"], "implicit": ""})
     assert gear.base_usable({"name": "Wyrm Quarterstaff", "tags": ["staff"], "implicit": ""})
     assert gear.base_usable({"name": "Not Yet Checked", "tags": ["staff"], "implicit": ""})
+
+
+def test_bows_get_a_quiver_and_wands_a_focus(pob):
+    """Empty until 2026-11-24: nothing filled Weapon 2 unless a skill or an anchor asked for it."""
+    for cls, wtype, skill, off in (("Ranger", "Bow", "Lightning Arrow", "quiver"), ("Witch", "Wand", "Spark", "focus"),
+                                   ("Witch", "Staff", "Spark", None)):
+        stage = make_stage("end")
+        pob.new()
+        pob.set_class(cls)
+        pob.set_level(stage.level)
+        pob.add_skill([skill])
+        plans = craft_gear(pob, stage, wtype, "none" if wtype == "Staff" else None, uniques=False, log=lambda *a: None)
+        held = [p for p in plans if p.slot == "Weapon 2"]
+        assert bool(held) == bool(off), wtype
+        if off:
+            assert off in held[0].base.lower()
+            assert pob.calc(["TotalDPS"])["TotalDPS"] > 0

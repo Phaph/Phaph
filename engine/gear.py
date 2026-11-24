@@ -724,6 +724,12 @@ def _anchor_work(pob: PoB, stage: Stage, score: "Scorer") -> "_Work | None":
     return w
 
 
+# The off-hand a build holds when nothing else asks for one. Until 2026-11-24 it stayed empty: every bow build had no
+# quiver and every wand / sceptre build no focus, which understated them against two-handed weapons. One-handed martial
+# weapons still have an empty off-hand (second weapon or shield: a choice to make by score, not made here yet).
+DEFAULT_OFFHAND = {"Bow": "Quiver", "Wand": "Focus", "Sceptre": "Focus"}
+
+
 def craft_gear(
     pob: PoB,
     stage: Stage,
@@ -757,6 +763,8 @@ def craft_gear(
         weapon_slots.append(("Weapon 2", weapon_type, weapon_subtype))
     elif offhand_type:
         weapon_slots.append(("Weapon 2", offhand_type, None))
+    elif weapon_type in DEFAULT_OFFHAND:
+        weapon_slots.append(("Weapon 2", DEFAULT_OFFHAND[weapon_type], None))
     # The anchor unique (the build is made around it) is equipped first, so every other slot is crafted around it.
     anchor = _anchor_work(pob, stage, score)
     for slot, wtype, wsub in weapon_slots:
@@ -769,6 +777,8 @@ def craft_gear(
         if attrs is not None:
             cands += [b for b in pool if _meets(b, attrs) and b not in cands][:2]
         if not cands:
+            if slot == "Weapon 2" and not (dual_wield or offhand_type):
+                continue   # a default off-hand with no base this early: the hand stays empty
             raise ValueError(f"No {wtype} bases up to item level {stage.item_level}")
         slot_bases.append((slot, cands))
     for slot, item_type in {**ARMOUR_SLOTS, **JEWELLERY_SLOTS}.items():
