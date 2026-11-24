@@ -5,6 +5,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   stat sets fix) and restart ~/after_sweep.sh from scratch with --builds 3 (finalists; commit .json + .txt; then task
   37). Result: ~/after_fulldps_deploy.log. Task 40: engine/tools/old_patch.sh (2 cores, ~/old_patch.log) on PoB of 0.1-0.4;
   grade with tools/grade_old.py. The old-patch scans from 0.2 on pick up the fixed engine, 0.1's did not.
+- Task 40: 0.2 condition false alarms judged (2 real, 25 false, 12 unjudged; tools/old_skill_verdicts.py does 0.3+ the same way).
 - Task 40 runs now from ~/old_all.sh (2 cores, log ~/old_patch.log): stack 0.1, then 0.3 (condition, matrix, stack),
   matrix 0.1 + 0.2 again (the first 0.1 matrix was invalid: custom mods never applied), 0.4. Grade: tools/grade_old.py,
   then false alarms of matrix / stack pieces: python3 engine/tools/old_verdicts.py (next patch's PoB text; unchanged =

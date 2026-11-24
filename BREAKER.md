@@ -815,3 +815,12 @@ and Gemling attributes were NOT tested; "1 of 3" is withdrawn, the graded score 
 0.2 condition cases. Condition scans don't use that box and stand; the live site (current PoB) was never affected. Fixed
 (flag decided once); checked on v0.5.0, v0.12.2 and current. The stack scan's first smoke run (0 flagged) was the same bug.
 0.1 and 0.2 matrix scans are being redone. The answer key and thresholds are unchanged.
+
+**0.2 condition false alarms, judged (2026-11-24):** tools/old_skill_verdicts.py (PoB data, next patch; its cuts agree with the hand-made
+0.1 verdicts on all 19 judged skills, Lightning Conduit by its printed multiplier). Of 39 flagged skills: 2 real (Frost
+Bomb, base x0.51; Sunder, which lost its guaranteed crit vs broken armour), 25 not cut, 12 unjudged (minion skills and reworks).
+Two patches now read 2 and 12 false alarms per real find against a bar
+of 1: the default threshold is not usable as a "this will be nerfed" list. The strict column (+60%) on 0.2 flags only four besides
+Lightning Conduit: Raise Zombie, Skeletal Reaver, Skeletal Sniper (unjudged) and Unearth (not cut), so 0 confirmed real.
+Spearfield is not a real find either: the hidden multiplier went, but its base rose x4.16. Caveats: "not cut by the
+next patch" is not "was not broken", and PoB data is not the notes. Matrix, stack and 0.3-0.4 scans still to come.

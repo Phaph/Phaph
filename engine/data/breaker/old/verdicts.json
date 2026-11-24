@@ -20,5 +20,34 @@
   "Snipe": false,
   "Sunder": false
  },
- "_how": "v0.5.0: PoB data 0.1 vs 0.2 (official notes blocked, 403): real = base damage at gem level 20 cut 20%+, or the conditional multiplier cut (Lightning Conduit). Lenient: a base cut is not proof the flagged condition was why. Hammer of the Gods also lost its cooldown, so its cut may not be a nerf. The skeletons, Raise Zombie and Detonate Minion are not comparable (unjudged)."
+ "_how": "v0.5.0: PoB data 0.1 vs 0.2 (official notes blocked, 403): real = base damage at gem level 20 cut 20%+, or the conditional multiplier cut (Lightning Conduit). Lenient: a base cut is not proof the flagged condition was why. Hammer of the Gods also lost its cooldown, so its cut may not be a nerf. The skeletons, Raise Zombie and Detonate Minion are not comparable (unjudged). | v0.8.0 (tools/old_skill_verdicts.py, 0.2 vs 0.3, same rule): Sunder is real by its conditional (guaranteed crit vs broken armour and +100% crit damage removed). Spearfield's hidden 300% was removed but its base went up x4.16, so not a cut. Reworked, so unjudged: Blood Hunt, Snipe, Solar Orb (one part x0.67, another x1.35), Killing Palm, Shattering Palm. Minions unjudged. On 0.1, Detonate Dead's corpse damage fell 20% to 10.7% of life: false by the rule's letter, arguably real.",
+ "v0.8.0": {
+  "Frost Bomb": true,
+  "Sunder": true,
+  "Bone Cage": false,
+  "Bonestorm": false,
+  "Cluster Grenade": false,
+  "Detonate Dead": false,
+  "Disengage": false,
+  "Elemental Siphon": false,
+  "Flameblast": false,
+  "Flash Grenade": false,
+  "Frost Wall": false,
+  "Frostbolt": false,
+  "Gas Grenade": false,
+  "Glacial Lance": false,
+  "Hammer of the Gods": false,
+  "Ice Nova": false,
+  "Lightning Conduit": false,
+  "Oil Grenade": false,
+  "Primal Strikes": false,
+  "Rake": false,
+  "Spearfield": false,
+  "Supercharged Slam": false,
+  "Twister": false,
+  "Unearth": false,
+  "Whirling Slash": false,
+  "Whirlwind Lance": false,
+  "Wind Serpent's Fury": false
+ }
 }
