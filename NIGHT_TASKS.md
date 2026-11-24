@@ -374,7 +374,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 
 41. [ ] Off-hands (see START HERE): (c) queued: ~/finalists_offhand.sh after after_sweep.sh -> data/breaker/finalists_offhand.json. (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
     Sceptre and every other one-handed weapon (the rest of today's run is comparable only within itself); (d) done on the branch 2026-11-24: one-handed martial weapons try a second weapon and a shield by score (spear,
-    flail: shield only; damage effect not measured yet); (e) weapon set 2 (craft_weapon) has no off-hand either; (f) lead re-run (~/after_leads.sh)
+    flail: shield only; damage effect not measured yet); (e) done on branch `offhand2` (on top of offhand, worktree ~/phaph_offhand, not pushed): gear.craft_swap fills both hands of set 2; new test passes, full suite
+    running (~/offhand3_tests.log). After ~/merge_offhand.sh finished and that suite is green: merge offhand2 in ~/phaph, bump
+    to 2026-11-24.4, deploy, push; (f) lead re-run (~/after_leads.sh)
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
     bow / wand / sceptre skills read low.
 
