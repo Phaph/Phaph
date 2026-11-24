@@ -73,6 +73,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - Sceptre again on 2026-11-24.6: ~/sceptre.sh, after that deploy and AB3 -> data/breaker/finalists_sceptre.json, ~/sceptre.log (commit it).
 - **20:05: 2026-11-24.6 live (231 passed), tempminions merged.** Sceptre finalists started now (3 cores were free). AB3 at 4 of 12: RoA as is 2.63M (plain 849k),
   reversed 3.46M (= plain), Rapid Shot and Ice Shot as is = plain: no loss so far.
+- **20:30: branch `handuniques`** (worktree ~/phaph_hands): weapon and off-hand uniques in matrix / pair scans, worn for real in the hand that holds their
+  kind. Probe (round-1 builds, 4 skills, 87 tries): base unchanged after the tries; only Sunsplinter +16% and Chernobog's Pillar +10% (Lightning
+  Spear) gain; Tangletongue -69%, Rathpith -29%: both known cases would still be missed, so this does not change the grade. ~/hands.sh: full suite, then merge +
+  push (no deploy) and ~/breaker pull for task 37 (~/hands_tests.log, ~/merge_hands.log).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
