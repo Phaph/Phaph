@@ -66,9 +66,11 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   minions; live bug, BREAKER.md). Fix on branch `tempminions` (worktree ~/phaph_tempmin); ~/tempmin.sh runs the suite, then merges,
   deploys 2026-11-24.6 and pushes (~/tempmin_tests.log, ~/merge_tempmin.log): check it. After it: rebuild Sceptre finalists (drop
   that row from finalists_offhand.json and re-search Sceptre on the new engine). after_leads starts on whatever main is then.
-- **Task 42, AB2 (8 of 12 in, rest running):** RoA 1.83M / 1.74M / 1.33M vs plain 849k / 3.46M / 3.57M; Bonestorm as is and reversed same as
-  v1 (7.42M / 9.09M vs plain 6.99M / 4.17M); Rapid Shot, Ice Shot same as plain so far. Still not a clean win. AB3 = re-check in the final gear pass
-  only (commit on `revisit`), ~/revisit_ab3.sh, starts after AB2 -> ~/revisit_out/path_luck_revisit3.json. If it isn't clean either: best-of-N orders.
+- **Task 42, AB2 complete 19:06 (12 of 12), boss by order as is / reversed / rotated:** RoA 1.83M / 1.74M / 1.33M (+38% spread, but plain was 849k / 3.46M /
+  3.57M: 2 of 3 orders lose about half or more); Rapid Shot rotated 6.79M (plain 5.78M); Bonestorm 7.42M / 9.09M / 3.94M (plain 6.99M / 4.17M / 4.41M), spread 131%;
+  Ice Shot 5%. Don't merge. AB3 (re-check in the final gear pass only, commit on `revisit`) running since 19:06 -> ~/revisit_out/path_luck_revisit3.json.
+  If it isn't clean either: best-of-N orders. Don't read "lower spread" as better where the level fell.
+- Sceptre again on 2026-11-24.6: ~/sceptre.sh, after that deploy and AB3 -> data/breaker/finalists_sceptre.json, ~/sceptre.log (commit it).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
