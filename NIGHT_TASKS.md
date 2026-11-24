@@ -95,6 +95,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   (~/kitehp_tests.log, ~/merge_kitehp.log). **42, best of N:** weapon_finalists.py builds each finalist in 3 slot orders, keeps the best and prints the worst
   (Lodestone only: Whetstone guides would take ~3x longer, so that is a question for Kyle). Running: orders-sceptre (first use, finalists_orders.json),
   path-luck-7 (the 12 builds again on .7: the current spread, path_luck_7.json). Task 37 waits for all of these.
+- **22:40 launch-day rehearsal queued** (task 40): ~/rehearsal.sh, after orders-sceptre, path-luck-7 and kitehp-tests: breaker_day.sh with PATCH=0_5_2.json on 6 cores in the
+  clone ~/rehearsal (it can't push), timed -> ~/rehearsal.log; put the times in BREAKER_PLAYBOOK.md (0.4 scans use 2 other cores: say so). Known gap: with PATCH,
+  breaker_day.sh overwrites and commits the baseline text_scan.json with the PATCHED game, so a later diff compares with our guess: keep the old one.
+  Nerf-risk labels wait for the lead re-run. path-luck-7 first row: RoA as is 2.63M, the same as AB3.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
