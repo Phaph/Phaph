@@ -25,7 +25,7 @@ from concurrent.futures import ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 
 from anchors import find_unique, stage_notes
-from gear import STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_weapon, make_stage
+from gear import STAGE_DEFS, Scorer, SlotPlan, add_trade_info, craft_gear, craft_swap, make_stage
 from jewels import craft_jewels, proxy_jewel
 from weaponsets import specialise_set2
 from triggers import best_triggers, cast_on_crit, find_groups
@@ -230,16 +230,16 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
         def boss_weapon():
             # The swap weapon is scored with the boss skill as the main skill.
             pob.send("set_main", group=boss_group)
-            plan = craft_weapon(pob, stage, "Weapon 1 Swap", spec["boss_weapon_type"],
-                                spec.get("boss_weapon_subtype"), mode="bossing", metric=boss_metric, log=quiet)
+            plan = craft_swap(pob, stage, spec["boss_weapon_type"], spec.get("boss_weapon_subtype"),
+                              mode="bossing", metric=boss_metric, log=quiet)
             pob.send("set_main", group=group)
             return plan
 
         def combo_weapon():
             # The armour breaker's weapon on set 2, scored with it as the main skill.
             pob.send("set_main", group=setup_group)
-            plan = craft_weapon(pob, stage, "Weapon 1 Swap", combo["weapon_type"], combo.get("weapon_subtype"),
-                                mode="bossing", metric=boss_metric, log=quiet)
+            plan = craft_swap(pob, stage, combo["weapon_type"], combo.get("weapon_subtype"),
+                              mode="bossing", metric=boss_metric, log=quiet)
             pob.send("set_main", group=group)
             return plan
 
@@ -329,9 +329,9 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             pob.set_config(**MODE_CONFIG["mapping"])
             pob.auto_config("mapping")
         if boss_swap:
-            gear.append(boss_weapon())
+            gear += boss_weapon()
         if combo_swap:
-            gear.append(combo_weapon())
+            gear += combo_weapon()
         # Safety net: a build must never reserve more spirit than it has. If the gear still came up short, take buffs
         # out (spare-spirit ones first, then the rest from the last chosen) until it fits.
         for name in [*reversed(spare), *reversed([n for n in spirit if n not in spare])]:

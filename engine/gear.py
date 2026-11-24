@@ -896,3 +896,30 @@ def craft_weapon(pob: PoB, stage: Stage, slot: str, weapon_type: str, weapon_sub
         pob.send("equip", slot=w.slot, raw=w.raw(), fields=SCORE_FIELDS)
     log(f"  {slot:<12} {base:<28} " + "; ".join(w.picked))
     return SlotPlan(slot, base, w.picked, w.raw(), affix_info=_affix_info(w), implicits=list(w.implicits))
+
+
+def craft_swap(pob: PoB, stage: Stage, weapon_type: str, weapon_subtype: str | None = None, **kw) -> list[SlotPlan]:
+    """Both hands of weapon set 2: the weapon, then what its other hand holds (DEFAULT_OFFHAND, or for a one-handed
+    martial weapon the better of a second one and a shield). The skill that uses it must be the main skill."""
+    quiet = {**kw, "log": kw.get("log", print)}
+    off = "Weapon 2 Swap"
+    pob.send("unequip", slot=off)   # an earlier pass's: the weapon is chosen with that hand empty, as it was
+    plans = [craft_weapon(pob, stage, "Weapon 1 Swap", weapon_type, weapon_subtype, **quiet)]
+    if weapon_type in DEFAULT_OFFHAND:
+        kinds = [(DEFAULT_OFFHAND[weapon_type], None)]
+    else:
+        kinds = ([(weapon_type, weapon_subtype)] if weapon_type in DUAL_WIELDABLE else []) + (
+            [("Shield", None)] if weapon_type in DUAL_WIELDABLE | SHIELD_ONLY else [])
+    score = Scorer(def_weight=kw.get("def_weight", 0.4), mode=kw.get("mode", "bossing"), metric=kw.get("metric"))
+    ref, tried = pob.calc(SCORE_FIELDS), []
+    for t, sub in kinds:
+        try:
+            plan = craft_weapon(pob, stage, off, t, sub, **quiet)
+        except ValueError:
+            continue   # no such base this early: the hand stays empty
+        tried.append((score(pob.calc(SCORE_FIELDS), ref), -len(tried), plan))
+    if tried:
+        best = max(tried)[2]
+        pob.send("equip", slot=off, raw=best.raw, fields=SCORE_FIELDS)
+        plans.append(best)
+    return plans
