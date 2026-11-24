@@ -901,8 +901,9 @@ def craft_gear(
                     for w in works:
                         _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
 
-            # (the acts keep their few uniques as chosen: gear there is light and quick)
-            if stage.max_uniques is None:
+            # (the acts keep their few uniques as chosen: gear there is light and quick. Final pass only: the tree is grown
+            # around the first pass's gear, so changing that sends the whole build elsewhere, task 42)
+            if stage.max_uniques is None and score.attr_weight:
                 _revisit_uniques(pob, works, stage, score, skip=anchor, log=log)
 
     plans = []
