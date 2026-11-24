@@ -924,3 +924,10 @@ No other finalist counts more than one minion except Wolf Pack (7, persistent).
 stack column adds Archmage. The 0.2 matrix flagged 38 pieces: 2 real (Crown of Eyes 150% -> 100%, Maligaro's Virtuosity 300% -> 250%, both cut in 0.3), 35 false, 1
 unjudged (Hyrri's Ire, reworked). Condition and matrix scans together, 0.1-0.3: 11 real vs 129 false: about 12 false alarms per real find (bar: 1). The
 claim on the page was narrowed the same day. Caveats: "unchanged" is PoB's text, "real" is lenient (a cut, not proof of why).
+
+**Armour Broken combos on engine 2026-11-24.8 (replaces Nov 18):** 166 skills, 32 payoffs (was 30). Best edges: Wolf Pack + Rampage +49%, Skeletal Reaver + Whirlwind
+Lance +45%, Armour Piercing Rounds itself +42%, Armour Breaker itself +41%, Skeletal Sniper + Vaulting Impact +35%, Unearth + Rend +30%. Minion
+rows are new since minions are counted at their limit; they assume the player's setup skill leaves the minions' own damage out while breaking (conservative)
+and that the break time estimate holds. Quick round-1 builds: no full-build check on any of them (Armour Piercing Rounds was +1% as a full build).
+**Best of 3 orders (42):** Sceptre: Unearth 2.75M / 5.47M / 5.06M, Skyfall 2.95M / 2.98M / 2.90M. Unearth's own hits are 4% of its boss damage (ignite 65%, Skyfall 30%);
+the finalists report now flags builds whose skill deals under half.

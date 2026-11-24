@@ -106,6 +106,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **00:05 (11-25): orders-sceptre done (finalists_orders.json, committed):** Skyfall 2.98M (worst order 2.90M), Unearth 5.47M (worst 2.75M: a 99% spread on .7). Best-of-3
   changed the Sceptre winner, so it matters for rankings. Unearth's 5.47M: its boss sources are Ignite 62% (which skill lights it isn't checked), Skyfall 30%, Unearth's own hit 4%: not an Unearth lead; report should say so. path-luck-7 6 of 12, all equal to AB3. First lead re-run: Leopold's
   1.38M (its plain build still to come). ailments-8 (ailment combos on .8) started -> combos_ailments_8.json.
+- **00:40:** combos.json is now the 2026-11-24.8 run (BREAKER.md; best edges are minions: none full-build checked). Finalists report flags builds whose skill
+  deals under half their boss damage. Left running: ailments-8 (then compare with combos_ailments.json, old one untracked), after-leads, path-luck-7 (7 of 12, all equal
+  to AB3, 1-2 left to check), then the rehearsal.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or

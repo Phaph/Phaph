@@ -33,13 +33,13 @@
      "Lightning Attunement",
      "Rakiata's Flow"
     ],
-    "dps": 30433,
-    "dps_broken": 30433,
+    "dps": 65374,
+    "dps_broken": 65374,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 1.63
+    "speed": 1.84
    },
    "gain_broken": 0.0
   },
@@ -57,15 +57,15 @@
      "Exploit Weakness",
      "Rakiata's Flow"
     ],
-    "dps": 15563,
-    "dps_broken": 22265,
-    "break_hit": 7678,
-    "break_s": 12715,
+    "dps": 38890,
+    "dps_broken": 55305,
+    "break_hit": 9864,
+    "break_s": 22869,
     "armour": 8063,
-    "phys_hit": 52,
-    "speed": 1.66
+    "phys_hit": 68,
+    "speed": 2.32
    },
-   "gain_broken": 0.431,
+   "gain_broken": 0.422,
    "setup": {
     "gems": [
      "Armour Breaker",
@@ -75,13 +75,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 10024,
-    "dps_broken": 14517,
-    "break_hit": 13070,
-    "break_s": 21644,
+    "dps": 25050,
+    "dps_broken": 35963,
+    "break_hit": 16792,
+    "break_s": 38930,
     "armour": 8063,
-    "phys_hit": 52,
-    "speed": 1.66
+    "phys_hit": 68,
+    "speed": 2.32
    },
    "self": {
     "gems": [
@@ -92,13 +92,13 @@
      "Exploit Weakness",
      "Rakiata's Flow"
     ],
-    "dps": 15563,
-    "dps_broken": 22265,
-    "break_hit": 7678,
-    "break_s": 12715,
+    "dps": 38890,
+    "dps_broken": 55305,
+    "break_hit": 9864,
+    "break_s": 22869,
     "armour": 8063,
-    "phys_hit": 52,
-    "speed": 1.66
+    "phys_hit": 68,
+    "speed": 2.32
    }
   },
   "Armour Piercing Rounds": {
@@ -200,6 +200,30 @@
     "speed": 0.64
    }
   },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Ball Lightning",
+     "Concentrated Area",
+     "Considered Casting",
+     "Elemental Focus",
+     "Hourglass",
+     "Rakiata's Flow"
+    ],
+    "dps": 60052,
+    "dps_broken": 60052,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 0,
+    "speed": 0.1
+   },
+   "gain_broken": 0.0
+  },
   "Bitter Dead": {
    "weapon": "Wand",
    "class": "Sorceress",
@@ -219,30 +243,6 @@
    },
    "gain_broken": 0
   },
-  "Ball Lightning": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Ball Lightning",
-     "Concentrated Area",
-     "Considered Casting",
-     "Elemental Focus",
-     "Hourglass",
-     "Rakiata's Flow"
-    ],
-    "dps": 31220,
-    "dps_broken": 31220,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 0,
-    "speed": 0.1
-   },
-   "gain_broken": 0.0
-  },
   "Bone Cage": {
    "weapon": "Wand",
    "class": "Sorceress",
@@ -254,18 +254,18 @@
      "Atalui's Bloodletting",
      "Brutality III",
      "Concentrated Area",
-     "Deliberation",
+     "Considered Casting",
      "Heft"
     ],
-    "dps": 47928,
-    "dps_broken": 59115,
+    "dps": 128861,
+    "dps_broken": 156204,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 17490,
-    "speed": 2.15
+    "phys_hit": 42702,
+    "speed": 2.06
    },
-   "gain_broken": 0.233,
+   "gain_broken": 0.212,
    "setup": {
     "gems": [
      "Bone Cage",
@@ -275,13 +275,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 32390,
-    "dps_broken": 40441,
-    "break_hit": 4006,
-    "break_s": 8613,
+    "dps": 85994,
+    "dps_broken": 105018,
+    "break_hit": 8220,
+    "break_s": 19892,
     "armour": 8063,
-    "phys_hit": 11782,
-    "speed": 2.15
+    "phys_hit": 24176,
+    "speed": 2.42
    },
    "self": {
     "gems": [
@@ -289,16 +289,16 @@
      "Atalui's Bloodletting",
      "Brutality III",
      "Concentrated Area",
-     "Heft",
-     "Armour Break III"
+     "Considered Casting",
+     "Heft"
     ],
-    "dps": 39728,
-    "dps_broken": 49262,
-    "break_hit": 2896,
-    "break_s": 6225,
+    "dps": 128861,
+    "dps_broken": 156204,
+    "break_hit": 0,
+    "break_s": 0,
     "armour": 8063,
-    "phys_hit": 14478,
-    "speed": 2.15
+    "phys_hit": 42702,
+    "speed": 2.06
    }
   },
   "Blood Hunt": {
@@ -373,15 +373,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 21196,
-    "dps_broken": 21639,
+    "dps": 49435,
+    "dps_broken": 50211,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 85,
+    "phys_hit": 65,
     "speed": 1.51
    },
-   "gain_broken": 0.021,
+   "gain_broken": 0.016,
    "setup": {
     "gems": [
      "Boneshatter",
@@ -391,12 +391,12 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 13666,
-    "dps_broken": 14109,
-    "break_hit": 29,
-    "break_s": 44,
+    "dps": 31843,
+    "dps_broken": 32619,
+    "break_hit": 22,
+    "break_s": 34,
     "armour": 8063,
-    "phys_hit": 85,
+    "phys_hit": 65,
     "speed": 1.51
    }
   },
@@ -412,17 +412,17 @@
      "Considered Casting",
      "Deliberation",
      "Heft",
-     "Inexorable Critical I"
+     "Multishot II"
     ],
-    "dps": 28749,
-    "dps_broken": 36841,
+    "dps": 199413,
+    "dps_broken": 253494,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 5716,
-    "speed": 6.8
+    "phys_hit": 7166,
+    "speed": 12.96
    },
-   "gain_broken": 0.281,
+   "gain_broken": 0.271,
    "setup": {
     "gems": [
      "Bonestorm",
@@ -432,30 +432,30 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 17776,
-    "dps_broken": 23571,
-    "break_hit": 1396,
-    "break_s": 11171,
+    "dps": 143951,
+    "dps_broken": 183157,
+    "break_hit": 2393,
+    "break_s": 45572,
     "armour": 8063,
-    "phys_hit": 4107,
-    "speed": 8
+    "phys_hit": 7040,
+    "speed": 19.04
    },
    "self": {
     "gems": [
      "Bonestorm",
      "Brutality III",
-     "Considered Casting",
      "Deliberation",
      "Heft",
+     "Multishot II",
      "Armour Break III"
     ],
-    "dps": 24587,
-    "dps_broken": 31823,
-    "break_hit": 1143,
-    "break_s": 7773,
+    "dps": 169284,
+    "dps_broken": 219337,
+    "break_hit": 1030,
+    "break_s": 15663,
     "armour": 8063,
-    "phys_hit": 5716,
-    "speed": 6.8
+    "phys_hit": 5152,
+    "speed": 15.2
    }
   },
   "Cackling Companions": {
@@ -466,10 +466,10 @@
    "plain": {
     "gems": [
      "Cackling Companions",
-     "Fiery Death"
+     "Armour Explosion"
     ],
-    "dps": 1795,
-    "dps_broken": 1795,
+    "dps": 1,
+    "dps_broken": 1,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -533,15 +533,15 @@
      "Deliberation",
      "Heft"
     ],
-    "dps": 28458,
-    "dps_broken": 35467,
+    "dps": 68837,
+    "dps_broken": 84130,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 14081,
-    "speed": 1.79
+    "phys_hit": 29003,
+    "speed": 2.02
    },
-   "gain_broken": 0.246,
+   "gain_broken": 0.222,
    "setup": {
     "gems": [
      "Coiling Bolts",
@@ -551,13 +551,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 21389,
-    "dps_broken": 27179,
-    "break_hit": 3045,
-    "break_s": 6426,
+    "dps": 52139,
+    "dps_broken": 64341,
+    "break_hit": 6329,
+    "break_s": 15063,
     "armour": 8063,
-    "phys_hit": 8957,
-    "speed": 2.11
+    "phys_hit": 18614,
+    "speed": 2.38
    },
    "self": {
     "gems": [
@@ -568,13 +568,13 @@
      "Heft",
      "Armour Break III"
     ],
-    "dps": 24849,
-    "dps_broken": 31127,
-    "break_hit": 2457,
-    "break_s": 4399,
+    "dps": 60169,
+    "dps_broken": 73722,
+    "break_hit": 5068,
+    "break_s": 10237,
     "armour": 8063,
-    "phys_hit": 12287,
-    "speed": 1.79
+    "phys_hit": 25340,
+    "speed": 2.02
    }
   },
   "Comet": {
@@ -591,13 +591,13 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 58612,
-    "dps_broken": 58612,
+    "dps": 122367,
+    "dps_broken": 122367,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 0.61
+    "speed": 0.64
    },
    "gain_broken": 0.0
   },
@@ -615,8 +615,8 @@
      "Hourglass",
      "Swift Affliction I"
     ],
-    "dps": 5853,
-    "dps_broken": 5853,
+    "dps": 10672,
+    "dps_broken": 10672,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -639,15 +639,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 2150,
-    "dps_broken": 2191,
+    "dps": 3650,
+    "dps_broken": 3691,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 8,
     "speed": 1.25
    },
-   "gain_broken": 0.019,
+   "gain_broken": 0.011,
    "setup": {
     "gems": [
      "Conductive Runes",
@@ -657,8 +657,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 1461,
-    "dps_broken": 1496,
+    "dps": 2479,
+    "dps_broken": 2514,
     "break_hit": 2,
     "break_s": 3,
     "armour": 8063,
@@ -796,13 +796,13 @@
      "Dialla's Desire",
      "Extraction"
     ],
-    "dps": 13233,
-    "dps_broken": 13233,
+    "dps": 28212,
+    "dps_broken": 28212,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.11
+    "speed": 2.38
    },
    "gain_broken": 0.0
   },
@@ -814,54 +814,37 @@
    "plain": {
     "gems": [
      "Detonate Dead",
-     "Atalui's Bloodletting",
-     "Brutality III",
+     "Bleed III",
      "Concentrated Area",
      "Considered Casting",
-     "Deliberation"
+     "Poison II",
+     "Atalui's Bloodletting"
     ],
-    "dps": 145439,
-    "dps_broken": 176274,
+    "dps": 50873,
+    "dps_broken": 54177,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 55620,
-    "speed": 2.29
+    "phys_hit": 49430,
+    "speed": 0.25
    },
-   "gain_broken": 0.212,
+   "gain_broken": 0.065,
    "setup": {
     "gems": [
      "Detonate Dead",
-     "Atalui's Bloodletting",
-     "Brutality III",
      "Concentrated Area",
+     "Considered Casting",
+     "Atalui's Bloodletting",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 101009,
-    "dps_broken": 123245,
-    "break_hit": 11168,
-    "break_s": 30015,
+    "dps": 15172,
+    "dps_broken": 18371,
+    "break_hit": 16224,
+    "break_s": 4056,
     "armour": 8063,
-    "phys_hit": 32848,
-    "speed": 2.69
-   },
-   "self": {
-    "gems": [
-     "Detonate Dead",
-     "Atalui's Bloodletting",
-     "Brutality III",
-     "Concentrated Area",
-     "Deliberation",
-     "Armour Break III"
-    ],
-    "dps": 121543,
-    "dps_broken": 147894,
-    "break_hit": 7908,
-    "break_s": 21253,
-    "armour": 8063,
-    "phys_hit": 39541,
-    "speed": 2.69
+    "phys_hit": 47718,
+    "speed": 0.25
    }
   },
   "Detonate Living": {
@@ -872,54 +855,54 @@
    "plain": {
     "gems": [
      "Detonate Living",
+     "Brutality III",
      "Considered Casting",
      "Deliberation",
-     "Extraction",
-     "Fire Attunement",
-     "Rakiata's Flow"
+     "Dialla's Desire",
+     "Heft"
     ],
-    "dps": 2577,
-    "dps_broken": 3848,
+    "dps": 5989,
+    "dps_broken": 8768,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 272,
-    "speed": 2.4
+    "phys_hit": 1486,
+    "speed": 2.75
    },
-   "gain_broken": 0.493,
+   "gain_broken": 0.464,
    "setup": {
     "gems": [
      "Detonate Living",
+     "Brutality III",
      "Considered Casting",
      "Deliberation",
-     "Rakiata's Flow",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 1529,
-    "dps_broken": 2801,
-    "break_hit": 93,
-    "break_s": 222,
+    "dps": 4329,
+    "dps_broken": 6659,
+    "break_hit": 360,
+    "break_s": 990,
     "armour": 8063,
-    "phys_hit": 272,
-    "speed": 2.4
+    "phys_hit": 1057,
+    "speed": 2.75
    },
    "self": {
     "gems": [
      "Detonate Living",
+     "Brutality III",
      "Considered Casting",
      "Deliberation",
-     "Extraction",
-     "Fire Attunement",
-     "Rakiata's Flow"
+     "Heft",
+     "Armour Break III"
     ],
-    "dps": 2577,
-    "dps_broken": 3848,
-    "break_hit": 0,
-    "break_s": 0,
+    "dps": 5266,
+    "dps_broken": 7855,
+    "break_hit": 260,
+    "break_s": 715,
     "armour": 8063,
-    "phys_hit": 272,
-    "speed": 2.4
+    "phys_hit": 1299,
+    "speed": 2.75
    }
   },
   "Detonate Minion": {
@@ -936,8 +919,8 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 7112,
-    "dps_broken": 7112,
+    "dps": 10095,
+    "dps_broken": 10095,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -960,15 +943,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 17868,
-    "dps_broken": 18070,
+    "dps": 28014,
+    "dps_broken": 28354,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 59,
-    "speed": 0.87
+    "phys_hit": 129,
+    "speed": 0.94
    },
-   "gain_broken": 0.011,
+   "gain_broken": 0.012,
    "setup": {
     "gems": [
      "Detonating Arrow",
@@ -978,13 +961,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 11576,
-    "dps_broken": 11779,
-    "break_hit": 20,
-    "break_s": 17,
+    "dps": 18229,
+    "dps_broken": 18569,
+    "break_hit": 44,
+    "break_s": 41,
     "armour": 8063,
-    "phys_hit": 59,
-    "speed": 0.87
+    "phys_hit": 129,
+    "speed": 0.94
    }
   },
   "Devour": {
@@ -1100,15 +1083,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 10576,
-    "dps_broken": 10807,
+    "dps": 24736,
+    "dps_broken": 25111,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 31,
+    "phys_hit": 25,
     "speed": 1.89
    },
-   "gain_broken": 0.022,
+   "gain_broken": 0.015,
    "setup": {
     "gems": [
      "Earthquake",
@@ -1118,12 +1101,12 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 6807,
-    "dps_broken": 7038,
-    "break_hit": 10,
-    "break_s": 20,
+    "dps": 15906,
+    "dps_broken": 16281,
+    "break_hit": 8,
+    "break_s": 16,
     "armour": 8063,
-    "phys_hit": 31,
+    "phys_hit": 25,
     "speed": 1.89
    }
   },
@@ -1141,8 +1124,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 12720,
-    "dps_broken": 12999,
+    "dps": 12921,
+    "dps_broken": 13203,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -1159,8 +1142,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 8187,
-    "dps_broken": 8465,
+    "dps": 8317,
+    "dps_broken": 8599,
     "break_hit": 12,
     "break_s": 24,
     "armour": 8063,
@@ -1177,36 +1160,36 @@
     "gems": [
      "Electrocuting Arrow",
      "Charged Shots II",
+     "Deliberation",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
+     "Rakiata's Flow"
     ],
-    "dps": 23311,
-    "dps_broken": 23562,
+    "dps": 35335,
+    "dps_broken": 35788,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 30,
-    "speed": 2.13
+    "phys_hit": 58,
+    "speed": 1.93
    },
-   "gain_broken": 0.011,
+   "gain_broken": 0.013,
    "setup": {
     "gems": [
      "Electrocuting Arrow",
+     "Deliberation",
      "Elemental Focus",
      "Rakiata's Flow",
-     "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 14943,
-    "dps_broken": 15194,
-    "break_hit": 10,
-    "break_s": 21,
+    "dps": 23460,
+    "dps_broken": 23913,
+    "break_hit": 20,
+    "break_s": 38,
     "armour": 8063,
-    "phys_hit": 30,
-    "speed": 2.13
+    "phys_hit": 58,
+    "speed": 1.93
    }
   },
   "Ember Fusillade": {
@@ -1219,17 +1202,17 @@
      "Ember Fusillade",
      "Considered Casting",
      "Deliberation",
-     "Elemental Focus",
      "Fire Attunement",
-     "Rakiata's Flow"
+     "Rakiata's Flow",
+     "Swift Affliction III"
     ],
-    "dps": 97392,
-    "dps_broken": 97392,
+    "dps": 126430,
+    "dps_broken": 126430,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 4.47
+    "speed": 3.79
    },
    "gain_broken": 0.0
   },
@@ -1268,18 +1251,18 @@
      "Atalui's Bloodletting",
      "Brutality III",
      "Concentrated Area",
-     "Considered Casting",
+     "Deliberation",
      "Heft"
     ],
-    "dps": 14095,
-    "dps_broken": 18324,
+    "dps": 34115,
+    "dps_broken": 42888,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 5808,
-    "speed": 2.03
+    "phys_hit": 10079,
+    "speed": 2.69
    },
-   "gain_broken": 0.3,
+   "gain_broken": 0.257,
    "setup": {
     "gems": [
      "Entangle",
@@ -1289,13 +1272,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 8987,
-    "dps_broken": 12323,
-    "break_hit": 1062,
-    "break_s": 2537,
+    "dps": 22580,
+    "dps_broken": 28990,
+    "break_hit": 2257,
+    "break_s": 6068,
     "armour": 8063,
-    "phys_hit": 3124,
-    "speed": 2.39
+    "phys_hit": 6638,
+    "speed": 2.69
    },
    "self": {
     "gems": [
@@ -1306,13 +1289,13 @@
      "Heft",
      "Armour Break III"
     ],
-    "dps": 11359,
-    "dps_broken": 15219,
-    "break_hit": 793,
-    "break_s": 1894,
+    "dps": 28178,
+    "dps_broken": 35739,
+    "break_hit": 1661,
+    "break_s": 4467,
     "armour": 8063,
-    "phys_hit": 3964,
-    "speed": 2.39
+    "phys_hit": 8307,
+    "speed": 2.69
    }
   },
   "Escape Shot": {
@@ -1329,13 +1312,13 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 11519,
-    "dps_broken": 11571,
+    "dps": 18196,
+    "dps_broken": 18291,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 19,
-    "speed": 0.69
+    "phys_hit": 32,
+    "speed": 0.73
    },
    "gain_broken": 0.005,
    "setup": {
@@ -1347,13 +1330,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 7744,
-    "dps_broken": 7796,
-    "break_hit": 6,
-    "break_s": 4,
+    "dps": 12142,
+    "dps_broken": 12237,
+    "break_hit": 11,
+    "break_s": 8,
     "armour": 8063,
-    "phys_hit": 19,
-    "speed": 0.69
+    "phys_hit": 32,
+    "speed": 0.73
    }
   },
   "Eternal March": {
@@ -1389,13 +1372,13 @@
      "Deliberation",
      "Extraction"
     ],
-    "dps": 30675,
-    "dps_broken": 30675,
+    "dps": 65303,
+    "dps_broken": 65303,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.24
+    "speed": 2.52
    },
    "gain_broken": 0.0
   },
@@ -1481,6 +1464,30 @@
     "speed": 0.99
    }
   },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Eye of Winter",
+     "Atziri's Impatience",
+     "Considered Casting",
+     "Elemental Focus",
+     "Rakiata's Flow",
+     "Tul's Stillness"
+    ],
+    "dps": 1592,
+    "dps_broken": 1592,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 0,
+    "speed": 0.2
+   },
+   "gain_broken": 0.0
+  },
   "Explosive Spear": {
    "weapon": "Spear",
    "class": "Mercenary",
@@ -1495,8 +1502,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 12572,
-    "dps_broken": 12727,
+    "dps": 12769,
+    "dps_broken": 12927,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -1513,38 +1520,14 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 8079,
-    "dps_broken": 8234,
+    "dps": 8206,
+    "dps_broken": 8364,
     "break_hit": 7,
     "break_s": 13,
     "armour": 8063,
     "phys_hit": 20,
     "speed": 1.95
    }
-  },
-  "Eye of Winter": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Eye of Winter",
-     "Atziri's Impatience",
-     "Considered Casting",
-     "Elemental Focus",
-     "Rakiata's Flow",
-     "Tul's Stillness"
-    ],
-    "dps": 804,
-    "dps_broken": 804,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 0,
-    "speed": 0.2
-   },
-   "gain_broken": 0.0
   },
   "Falling Thunder": {
    "weapon": "Quarterstaff",
@@ -1601,8 +1584,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 31299,
-    "dps_broken": 31478,
+    "dps": 31791,
+    "dps_broken": 31973,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -1619,8 +1602,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 20106,
-    "dps_broken": 20284,
+    "dps": 20423,
+    "dps_broken": 20604,
     "break_hit": 6,
     "break_s": 15,
     "armour": 8063,
@@ -1642,13 +1625,13 @@
      "Rakiata's Flow",
      "Xoph's Pyre"
     ],
-    "dps": 32759,
-    "dps_broken": 32759,
+    "dps": 68314,
+    "dps_broken": 68314,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 1.76
+    "speed": 1.98
    },
    "gain_broken": 0.0
   },
@@ -1666,8 +1649,8 @@
      "Hourglass",
      "Rakiata's Flow"
     ],
-    "dps": 65736,
-    "dps_broken": 65736,
+    "dps": 128626,
+    "dps_broken": 128626,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -1714,13 +1697,13 @@
      "Fire Attunement",
      "Rakiata's Flow"
     ],
-    "dps": 30667,
-    "dps_broken": 30667,
+    "dps": 65713,
+    "dps_broken": 65713,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.15
+    "speed": 2.42
    },
    "gain_broken": 0.0
   },
@@ -1738,8 +1721,8 @@
      "Rakiata's Flow",
      "Xoph's Pyre"
     ],
-    "dps": 7747,
-    "dps_broken": 7747,
+    "dps": 88628,
+    "dps_broken": 88628,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -1864,6 +1847,47 @@
     "speed": 3.71
    }
   },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Forge Hammer",
+     "Atziri's Impatience",
+     "Concentrated Area",
+     "Elemental Armament II",
+     "Elemental Focus",
+     "Rakiata's Flow"
+    ],
+    "dps": 17700,
+    "dps_broken": 17863,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 100,
+    "speed": 0.25
+   },
+   "gain_broken": 0.009,
+   "setup": {
+    "gems": [
+     "Forge Hammer",
+     "Atziri's Impatience",
+     "Concentrated Area",
+     "Rakiata's Flow",
+     "Armour Break III",
+     "Armour Demolisher II"
+    ],
+    "dps": 11427,
+    "dps_broken": 11590,
+    "break_hit": 34,
+    "break_s": 8,
+    "armour": 8063,
+    "phys_hit": 100,
+    "speed": 0.25
+   }
+  },
   "Fortifying Cry": {
    "weapon": "Wand",
    "class": "Mercenary",
@@ -1882,88 +1906,6 @@
     "speed": 0.12
    },
    "gain_broken": 0
-  },
-  "Forge Hammer": {
-   "weapon": "One Hand Mace",
-   "class": "Mercenary",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Forge Hammer",
-     "Atziri's Impatience",
-     "Concentrated Area",
-     "Elemental Armament II",
-     "Elemental Focus",
-     "Rakiata's Flow"
-    ],
-    "dps": 7549,
-    "dps_broken": 7641,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 131,
-    "speed": 0.25
-   },
-   "gain_broken": 0.012,
-   "setup": {
-    "gems": [
-     "Forge Hammer",
-     "Atziri's Impatience",
-     "Concentrated Area",
-     "Rakiata's Flow",
-     "Armour Break III",
-     "Armour Demolisher II"
-    ],
-    "dps": 4875,
-    "dps_broken": 4967,
-    "break_hit": 45,
-    "break_s": 11,
-    "armour": 8063,
-    "phys_hit": 131,
-    "speed": 0.25
-   }
-  },
-  "Fragments Of The Past": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Fragments Of The Past",
-     "Deliberation",
-     "Elemental Armament II",
-     "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
-    ],
-    "dps": 10020,
-    "dps_broken": 10393,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 104,
-    "speed": 1.16
-   },
-   "gain_broken": 0.037,
-   "setup": {
-    "gems": [
-     "Fragments Of The Past",
-     "Deliberation",
-     "Rakiata's Flow",
-     "Rapid Attacks II",
-     "Armour Break III",
-     "Armour Demolisher II"
-    ],
-    "dps": 6548,
-    "dps_broken": 6921,
-    "break_hit": 35,
-    "break_s": 41,
-    "armour": 8063,
-    "phys_hit": 104,
-    "speed": 1.16
-   }
   },
   "Fragmentation Rounds": {
    "weapon": "Crossbow",
@@ -2006,6 +1948,47 @@
     "speed": 1.41
    }
   },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Fragments Of The Past",
+     "Deliberation",
+     "Elemental Armament II",
+     "Elemental Focus",
+     "Rakiata's Flow",
+     "Rapid Attacks II"
+    ],
+    "dps": 15995,
+    "dps_broken": 16584,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 244,
+    "speed": 1.26
+   },
+   "gain_broken": 0.037,
+   "setup": {
+    "gems": [
+     "Fragments Of The Past",
+     "Deliberation",
+     "Rakiata's Flow",
+     "Rapid Attacks II",
+     "Armour Break III",
+     "Armour Demolisher II"
+    ],
+    "dps": 10552,
+    "dps_broken": 11140,
+    "break_hit": 83,
+    "break_s": 105,
+    "armour": 8063,
+    "phys_hit": 244,
+    "speed": 1.26
+   }
+  },
   "Frost Bomb": {
    "weapon": "Wand",
    "class": "Sorceress",
@@ -2020,8 +2003,8 @@
      "Rakiata's Flow",
      "Spell Echo"
     ],
-    "dps": 12055,
-    "dps_broken": 12055,
+    "dps": 24778,
+    "dps_broken": 24778,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -2038,37 +2021,37 @@
    "plain": {
     "gems": [
      "Freezing Salvo",
+     "Charged Shots II",
      "Concentrated Area",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
+     "Rakiata's Flow"
     ],
-    "dps": 13167,
-    "dps_broken": 13239,
+    "dps": 20964,
+    "dps_broken": 21074,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 9,
-    "speed": 1.93
+    "phys_hit": 15,
+    "speed": 1.75
    },
    "gain_broken": 0.005,
    "setup": {
     "gems": [
      "Freezing Salvo",
      "Concentrated Area",
+     "Elemental Focus",
      "Rakiata's Flow",
-     "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 8536,
-    "dps_broken": 8608,
-    "break_hit": 3,
-    "break_s": 6,
+    "dps": 13990,
+    "dps_broken": 14101,
+    "break_hit": 5,
+    "break_s": 9,
     "armour": 8063,
-    "phys_hit": 9,
-    "speed": 1.93
+    "phys_hit": 15,
+    "speed": 1.75
    }
   },
   "Frost Darts": {
@@ -2085,13 +2068,13 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 10654,
-    "dps_broken": 10654,
+    "dps": 22628,
+    "dps_broken": 22628,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.24
+    "speed": 2.52
    },
    "gain_broken": 0.0
   },
@@ -2109,8 +2092,8 @@
      "Rakiata's Flow",
      "Spell Echo"
     ],
-    "dps": 9321,
-    "dps_broken": 9321,
+    "dps": 18158,
+    "dps_broken": 18158,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -2152,13 +2135,13 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 40114,
-    "dps_broken": 40114,
+    "dps": 85870,
+    "dps_broken": 85870,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.64
+    "speed": 2.98
    },
    "gain_broken": 0.0
   },
@@ -2323,15 +2306,15 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 7394,
-    "dps_broken": 7580,
+    "dps": 12020,
+    "dps_broken": 12361,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 29,
-    "speed": 1.59
+    "phys_hit": 48,
+    "speed": 1.75
    },
-   "gain_broken": 0.025,
+   "gain_broken": 0.028,
    "setup": {
     "gems": [
      "Gas Arrow",
@@ -2341,13 +2324,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 4895,
-    "dps_broken": 5080,
-    "break_hit": 10,
-    "break_s": 16,
+    "dps": 7899,
+    "dps_broken": 8239,
+    "break_hit": 16,
+    "break_s": 29,
     "armour": 8063,
-    "phys_hit": 29,
-    "speed": 1.59
+    "phys_hit": 48,
+    "speed": 1.75
    }
   },
   "Gas Grenade": {
@@ -2531,6 +2514,30 @@
     "speed": 1.95
    }
   },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Grim Pillars",
+     "Cold Attunement",
+     "Concentrated Area",
+     "Considered Casting",
+     "Elemental Focus",
+     "Rakiata's Flow"
+    ],
+    "dps": 53560,
+    "dps_broken": 53560,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 0,
+    "speed": 2.94
+   },
+   "gain_broken": 0.0
+  },
   "Glacial Lance": {
    "weapon": "Spear",
    "class": "Mercenary",
@@ -2545,8 +2552,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 25352,
-    "dps_broken": 25897,
+    "dps": 25754,
+    "dps_broken": 26304,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -2563,38 +2570,14 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 16339,
-    "dps_broken": 16883,
+    "dps": 16600,
+    "dps_broken": 17149,
     "break_hit": 49,
     "break_s": 72,
     "armour": 8063,
     "phys_hit": 145,
     "speed": 1.46
    }
-  },
-  "Grim Pillars": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Grim Pillars",
-     "Cold Attunement",
-     "Concentrated Area",
-     "Considered Casting",
-     "Elemental Focus",
-     "Rakiata's Flow"
-    ],
-    "dps": 24411,
-    "dps_broken": 24411,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 0,
-    "speed": 2.61
-   },
-   "gain_broken": 0.0
   },
   "Hailstorm Rounds": {
    "weapon": "Crossbow",
@@ -2646,52 +2629,35 @@
     "gems": [
      "Hammer of the Gods",
      "Concentrated Area",
-     "Deliberation",
+     "Elemental Armament II",
      "Fire Attunement",
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 39629,
-    "dps_broken": 44050,
+    "dps": 93996,
+    "dps_broken": 98520,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 12328,
+    "phys_hit": 7681,
     "speed": 1.26
    },
-   "gain_broken": 0.112,
+   "gain_broken": 0.048,
    "setup": {
     "gems": [
      "Hammer of the Gods",
      "Concentrated Area",
-     "Deliberation",
+     "Rakiata's Flow",
      "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 20591,
-    "dps_broken": 25012,
-    "break_hit": 4192,
-    "break_s": 5282,
+    "dps": 59031,
+    "dps_broken": 63555,
+    "break_hit": 2612,
+    "break_s": 3291,
     "armour": 8063,
-    "phys_hit": 12328,
-    "speed": 1.26
-   },
-   "self": {
-    "gems": [
-     "Hammer of the Gods",
-     "Concentrated Area",
-     "Deliberation",
-     "Fire Attunement",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
-    ],
-    "dps": 39629,
-    "dps_broken": 44050,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 12328,
+    "phys_hit": 7681,
     "speed": 1.26
    }
   },
@@ -2709,8 +2675,8 @@
      "Poison II",
      "Xoph's Pyre"
     ],
-    "dps": 25586,
-    "dps_broken": 25586,
+    "dps": 53241,
+    "dps_broken": 53241,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -2791,13 +2757,13 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 20680,
-    "dps_broken": 20680,
+    "dps": 44056,
+    "dps_broken": 44056,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.15
+    "speed": 2.42
    },
    "gain_broken": 0.0
   },
@@ -2809,37 +2775,37 @@
    "plain": {
     "gems": [
      "Ice Shot",
+     "Charged Shots II",
      "Deliberation",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
+     "Rakiata's Flow"
     ],
-    "dps": 27204,
-    "dps_broken": 27353,
+    "dps": 43933,
+    "dps_broken": 44164,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 22,
-    "speed": 1.74
+    "phys_hit": 36,
+    "speed": 1.58
    },
    "gain_broken": 0.005,
    "setup": {
     "gems": [
      "Ice Shot",
      "Deliberation",
+     "Elemental Focus",
      "Rakiata's Flow",
-     "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 17648,
-    "dps_broken": 17797,
-    "break_hit": 7,
-    "break_s": 13,
+    "dps": 29314,
+    "dps_broken": 29545,
+    "break_hit": 12,
+    "break_s": 19,
     "armour": 8063,
-    "phys_hit": 22,
-    "speed": 1.74
+    "phys_hit": 36,
+    "speed": 1.58
    }
   },
   "Ice Shards": {
@@ -2979,13 +2945,13 @@
      "Fire Attunement",
      "Rakiata's Flow"
     ],
-    "dps": 56608,
-    "dps_broken": 56608,
+    "dps": 122097,
+    "dps_broken": 122097,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 8.6
+    "speed": 9.68
    },
    "gain_broken": 0.0
   },
@@ -3038,36 +3004,36 @@
    "plain": {
     "gems": [
      "Leap Slam",
+     "Close Combat II",
      "Concentrated Area",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Xoph's Pyre"
+     "Rakiata's Flow"
     ],
-    "dps": 23177,
-    "dps_broken": 23572,
+    "dps": 67497,
+    "dps_broken": 68344,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 227,
+    "phys_hit": 267,
     "speed": 0.87
    },
-   "gain_broken": 0.017,
+   "gain_broken": 0.013,
    "setup": {
     "gems": [
      "Leap Slam",
+     "Close Combat II",
      "Concentrated Area",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Xoph's Pyre"
+     "Rakiata's Flow"
     ],
-    "dps": 23177,
-    "dps_broken": 23572,
+    "dps": 67497,
+    "dps_broken": 68344,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 227,
+    "phys_hit": 267,
     "speed": 0.87
    }
   },
@@ -3080,36 +3046,36 @@
     "gems": [
      "Lightning Arrow",
      "Charged Shots II",
+     "Deliberation",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
+     "Rakiata's Flow"
     ],
-    "dps": 19073,
-    "dps_broken": 19278,
+    "dps": 28910,
+    "dps_broken": 29281,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 30,
-    "speed": 1.74
+    "phys_hit": 58,
+    "speed": 1.58
    },
-   "gain_broken": 0.011,
+   "gain_broken": 0.013,
    "setup": {
     "gems": [
      "Lightning Arrow",
+     "Deliberation",
      "Elemental Focus",
      "Rakiata's Flow",
-     "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 12226,
-    "dps_broken": 12432,
-    "break_hit": 10,
-    "break_s": 18,
+    "dps": 19194,
+    "dps_broken": 19565,
+    "break_hit": 20,
+    "break_s": 31,
     "armour": 8063,
-    "phys_hit": 30,
-    "speed": 1.74
+    "phys_hit": 58,
+    "speed": 1.58
    }
   },
   "Lightning Conduit": {
@@ -3126,8 +3092,8 @@
      "Extraction",
      "Rakiata's Flow"
     ],
-    "dps": 5853,
-    "dps_broken": 5853,
+    "dps": 11836,
+    "dps_broken": 11836,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -3150,13 +3116,13 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 12622,
-    "dps_broken": 12622,
+    "dps": 19871,
+    "dps_broken": 19871,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 1.9
+    "speed": 2.1
    },
    "gain_broken": 0.0
   },
@@ -3174,8 +3140,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 23742,
-    "dps_broken": 23871,
+    "dps": 24115,
+    "dps_broken": 24246,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -3192,8 +3158,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 15242,
-    "dps_broken": 15371,
+    "dps": 15482,
+    "dps_broken": 15613,
     "break_hit": 7,
     "break_s": 11,
     "armour": 8063,
@@ -3256,15 +3222,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 6647,
-    "dps_broken": 6676,
+    "dps": 10036,
+    "dps_broken": 10090,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 8,
-    "speed": 0.97
+    "phys_hit": 12,
+    "speed": 1.05
    },
-   "gain_broken": 0.004,
+   "gain_broken": 0.005,
    "setup": {
     "gems": [
      "Magnetic Salvo",
@@ -3274,13 +3240,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 4293,
-    "dps_broken": 4322,
-    "break_hit": 3,
-    "break_s": 2,
+    "dps": 6695,
+    "dps_broken": 6749,
+    "break_hit": 4,
+    "break_s": 4,
     "armour": 8063,
-    "phys_hit": 8,
-    "speed": 0.97
+    "phys_hit": 12,
+    "speed": 1.05
    }
   },
   "Molten Blast": {
@@ -3297,15 +3263,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 23411,
-    "dps_broken": 23593,
+    "dps": 28107,
+    "dps_broken": 28262,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 23,
-    "speed": 1.89
+    "speed": 1.61
    },
-   "gain_broken": 0.008,
+   "gain_broken": 0.006,
    "setup": {
     "gems": [
      "Molten Blast",
@@ -3315,13 +3281,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 15197,
-    "dps_broken": 15380,
+    "dps": 18312,
+    "dps_broken": 18467,
     "break_hit": 8,
-    "break_s": 15,
+    "break_s": 12,
     "armour": 8063,
     "phys_hit": 23,
-    "speed": 1.89
+    "speed": 1.61
    }
   },
   "Oil Barrage": {
@@ -3338,13 +3304,13 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 105595,
-    "dps_broken": 108023,
+    "dps": 24912,
+    "dps_broken": 25486,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 116,
-    "speed": 6.76
+    "speed": 1.5
    },
    "gain_broken": 0.023,
    "setup": {
@@ -3356,38 +3322,14 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 68227,
-    "dps_broken": 70656,
+    "dps": 16270,
+    "dps_broken": 16843,
     "break_hit": 39,
-    "break_s": 267,
+    "break_s": 59,
     "armour": 8063,
     "phys_hit": 116,
-    "speed": 6.76
+    "speed": 1.5
    }
-  },
-  "Orb of Storms": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Orb of Storms",
-     "Considered Casting",
-     "Deliberation",
-     "Elemental Focus",
-     "Lightning Attunement",
-     "Rakiata's Flow"
-    ],
-    "dps": 21007,
-    "dps_broken": 21007,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 0,
-    "speed": 2.29
-   },
-   "gain_broken": 0.0
   },
   "Oil Grenade": {
    "weapon": "Crossbow",
@@ -3447,6 +3389,30 @@
     "speed": 0.5
    }
   },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Orb of Storms",
+     "Considered Casting",
+     "Deliberation",
+     "Elemental Focus",
+     "Lightning Attunement",
+     "Rakiata's Flow"
+    ],
+    "dps": 45664,
+    "dps_broken": 45664,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 0,
+    "speed": 2.58
+   },
+   "gain_broken": 0.0
+  },
   "Perfect Strike": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
@@ -3461,15 +3427,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 35032,
-    "dps_broken": 35466,
+    "dps": 81813,
+    "dps_broken": 82553,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 51,
+    "phys_hit": 43,
     "speed": 0.76
    },
-   "gain_broken": 0.012,
+   "gain_broken": 0.009,
    "setup": {
     "gems": [
      "Perfect Strike",
@@ -3479,12 +3445,12 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 22557,
-    "dps_broken": 22990,
-    "break_hit": 17,
-    "break_s": 13,
+    "dps": 52668,
+    "dps_broken": 53408,
+    "break_hit": 15,
+    "break_s": 11,
     "armour": 8063,
-    "phys_hit": 51,
+    "phys_hit": 43,
     "speed": 0.76
    }
   },
@@ -3578,21 +3544,21 @@
    "plain": {
     "gems": [
      "Poisonburst Arrow",
-     "Charged Shots II",
      "Close Combat II",
      "Deliberation",
+     "Fire Attunement",
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 9572,
-    "dps_broken": 11797,
+    "dps": 18122,
+    "dps_broken": 21537,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 1904,
-    "speed": 1.93
+    "phys_hit": 3593,
+    "speed": 2.1
    },
-   "gain_broken": 0.232,
+   "gain_broken": 0.188,
    "setup": {
     "gems": [
      "Poisonburst Arrow",
@@ -3602,30 +3568,30 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 5412,
-    "dps_broken": 7638,
-    "break_hit": 648,
-    "break_s": 1251,
+    "dps": 10820,
+    "dps_broken": 14236,
+    "break_hit": 1222,
+    "break_s": 2563,
     "armour": 8063,
-    "phys_hit": 1904,
-    "speed": 1.93
+    "phys_hit": 3593,
+    "speed": 2.1
    },
    "self": {
     "gems": [
      "Poisonburst Arrow",
-     "Charged Shots II",
      "Close Combat II",
      "Deliberation",
+     "Fire Attunement",
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 9572,
-    "dps_broken": 11797,
+    "dps": 18122,
+    "dps_broken": 21537,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 1904,
-    "speed": 1.93
+    "phys_hit": 3593,
+    "speed": 2.1
    }
   },
   "Powered by Verisium": {
@@ -3661,8 +3627,8 @@
      "Hourglass",
      "Swift Affliction III"
     ],
-    "dps": 46876,
-    "dps_broken": 46876,
+    "dps": 85474,
+    "dps_broken": 85474,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -3685,8 +3651,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 17385,
-    "dps_broken": 17807,
+    "dps": 17661,
+    "dps_broken": 18087,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -3703,8 +3669,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 11208,
-    "dps_broken": 11630,
+    "dps": 11388,
+    "dps_broken": 11814,
     "break_hit": 19,
     "break_s": 36,
     "armour": 8063,
@@ -3721,35 +3687,35 @@
     "gems": [
      "Rain of Arrows",
      "Concentrated Area",
+     "Deliberation",
      "Elemental Armament II",
      "Elemental Focus",
-     "Hourglass",
      "Rakiata's Flow"
     ],
-    "dps": 85842,
-    "dps_broken": 88358,
+    "dps": 107761,
+    "dps_broken": 110871,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 90,
-    "speed": 0.1
+    "phys_hit": 186,
+    "speed": 0.96
    },
    "gain_broken": 0.029,
    "setup": {
     "gems": [
      "Rain of Arrows",
      "Concentrated Area",
-     "Elemental Focus",
+     "Deliberation",
      "Rakiata's Flow",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 53216,
-    "dps_broken": 55231,
-    "break_hit": 21,
-    "break_s": 20,
+    "dps": 70669,
+    "dps_broken": 73779,
+    "break_hit": 63,
+    "break_s": 61,
     "armour": 8063,
-    "phys_hit": 61,
+    "phys_hit": 186,
     "speed": 0.96
    }
   },
@@ -3762,20 +3728,20 @@
     "gems": [
      "Raise Zombie",
      "Bleed III",
+     "Brutality III",
      "Feeding Frenzy I",
-     "Fiery Death",
-     "Poison II",
-     "Rakiata's Flow"
+     "Heavy Swing",
+     "Heft"
     ],
-    "dps": 6468,
-    "dps_broken": 7246,
+    "dps": 1856,
+    "dps_broken": 2944,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
     "speed": 1.67
    },
-   "gain_broken": 0.12
+   "gain_broken": 0.586
   },
   "Rake": {
    "weapon": "Spear",
@@ -3907,8 +3873,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 3040,
-    "dps_broken": 3146,
+    "dps": 3087,
+    "dps_broken": 3195,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -3925,8 +3891,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 1960,
-    "dps_broken": 2066,
+    "dps": 1991,
+    "dps_broken": 2098,
     "break_hit": 9,
     "break_s": 9,
     "armour": 8063,
@@ -4071,30 +4037,30 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 3100,
-    "dps_broken": 3165,
+    "dps": 6137,
+    "dps_broken": 6227,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 22,
+    "phys_hit": 15,
     "speed": 0.67
    },
-   "gain_broken": 0.021,
+   "gain_broken": 0.015,
    "setup": {
     "gems": [
      "Rolling Slam",
-     "Close Combat II",
      "Concentrated Area",
+     "Elemental Focus",
      "Rakiata's Flow",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 1995,
-    "dps_broken": 2060,
-    "break_hit": 7,
-    "break_s": 5,
+    "dps": 4185,
+    "dps_broken": 4262,
+    "break_hit": 4,
+    "break_s": 3,
     "armour": 8063,
-    "phys_hit": 22,
+    "phys_hit": 13,
     "speed": 0.67
    }
   },
@@ -4109,29 +4075,29 @@
      "Atziri's Impatience",
      "Bleed III",
      "Concentrated Area",
-     "Poison II",
-     "Rakiata's Flow"
+     "Rakiata's Flow",
+     "Fire Attunement"
     ],
-    "dps": 230,
-    "dps_broken": 302,
+    "dps": 333,
+    "dps_broken": 405,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 88,
     "speed": 0.25
    },
-   "gain_broken": 0.313,
+   "gain_broken": 0.216,
    "setup": {
     "gems": [
      "Seismic Cry",
      "Atziri's Impatience",
      "Concentrated Area",
-     "Rakiata's Flow",
+     "Fire Attunement",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 163,
-    "dps_broken": 235,
+    "dps": 110,
+    "dps_broken": 182,
     "break_hit": 30,
     "break_s": 7,
     "armour": 8063,
@@ -4144,11 +4110,11 @@
      "Atziri's Impatience",
      "Bleed III",
      "Concentrated Area",
-     "Poison II",
-     "Rakiata's Flow"
+     "Rakiata's Flow",
+     "Fire Attunement"
     ],
-    "dps": 230,
-    "dps_broken": 302,
+    "dps": 333,
+    "dps_broken": 405,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -4304,37 +4270,37 @@
    "plain": {
     "gems": [
      "Shockchain Arrow",
-     "Charged Shots II",
+     "Deliberation",
      "Elemental Armament II",
      "Elemental Focus",
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 13048,
-    "dps_broken": 13105,
+    "dps": 19573,
+    "dps_broken": 19697,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 10,
-    "speed": 1.35
+    "phys_hit": 21,
+    "speed": 1.47
    },
-   "gain_broken": 0.004,
+   "gain_broken": 0.006,
    "setup": {
     "gems": [
      "Shockchain Arrow",
-     "Elemental Focus",
+     "Deliberation",
      "Rakiata's Flow",
      "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 8426,
-    "dps_broken": 8482,
-    "break_hit": 4,
-    "break_s": 5,
+    "dps": 12716,
+    "dps_broken": 12840,
+    "break_hit": 7,
+    "break_s": 10,
     "armour": 8063,
-    "phys_hit": 10,
-    "speed": 1.35
+    "phys_hit": 21,
+    "speed": 1.47
    }
   },
   "Shockwave Totem": {
@@ -4351,31 +4317,31 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 2115,
-    "dps_broken": 2181,
+    "dps": 3223,
+    "dps_broken": 3344,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 17,
-    "speed": 0.97
+    "phys_hit": 28,
+    "speed": 1.05
    },
-   "gain_broken": 0.031,
+   "gain_broken": 0.038,
    "setup": {
     "gems": [
      "Shockwave Totem",
-     "Elemental Focus",
+     "Concentrated Area",
      "Rakiata's Flow",
      "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 1313,
-    "dps_broken": 1364,
-    "break_hit": 5,
-    "break_s": 4,
+    "dps": 2106,
+    "dps_broken": 2227,
+    "break_hit": 10,
+    "break_s": 10,
     "armour": 8063,
-    "phys_hit": 13,
-    "speed": 0.97
+    "phys_hit": 28,
+    "speed": 1.05
    }
   },
   "Siege Ballista": {
@@ -4419,47 +4385,6 @@
     "speed": 0.64
    }
   },
-  "Siege Cascade": {
-   "weapon": "Crossbow",
-   "class": "Mercenary",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Siege Cascade",
-     "Concentrated Area",
-     "Elemental Armament II",
-     "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
-    ],
-    "dps": 10176,
-    "dps_broken": 10413,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 58,
-    "speed": 1.03
-   },
-   "gain_broken": 0.023,
-   "setup": {
-    "gems": [
-     "Siege Cascade",
-     "Concentrated Area",
-     "Rakiata's Flow",
-     "Rapid Attacks II",
-     "Armour Break III",
-     "Armour Demolisher II"
-    ],
-    "dps": 6554,
-    "dps_broken": 6790,
-    "break_hit": 20,
-    "break_s": 20,
-    "armour": 8063,
-    "phys_hit": 58,
-    "speed": 1.03
-   }
-  },
   "Siphoning Strike": {
    "weapon": "Quarterstaff",
    "class": "Mercenary",
@@ -4501,6 +4426,47 @@
     "speed": 2.44
    }
   },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Siege Cascade",
+     "Concentrated Area",
+     "Elemental Armament II",
+     "Elemental Focus",
+     "Rakiata's Flow",
+     "Rapid Attacks II"
+    ],
+    "dps": 10176,
+    "dps_broken": 10413,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 58,
+    "speed": 1.03
+   },
+   "gain_broken": 0.023,
+   "setup": {
+    "gems": [
+     "Siege Cascade",
+     "Concentrated Area",
+     "Rakiata's Flow",
+     "Rapid Attacks II",
+     "Armour Break III",
+     "Armour Demolisher II"
+    ],
+    "dps": 6554,
+    "dps_broken": 6790,
+    "break_hit": 20,
+    "break_s": 20,
+    "armour": 8063,
+    "phys_hit": 58,
+    "speed": 1.03
+   }
+  },
   "Skeletal Arsonist": {
    "weapon": "Sceptre",
    "class": "Witch",
@@ -4510,20 +4476,44 @@
     "gems": [
      "Skeletal Arsonist",
      "Concentrated Area",
-     "Fiery Death",
+     "Feeding Frenzy I",
      "Fire Attunement",
      "Rakiata's Flow",
-     "Xoph's Pyre"
+     "Rapid Attacks II"
     ],
-    "dps": 12750,
-    "dps_broken": 13118,
+    "dps": 14648,
+    "dps_broken": 17437,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
     "speed": 0
    },
-   "gain_broken": 0.029
+   "gain_broken": 0.19
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "minion": true,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Skeletal Brute",
+     "Bleed III",
+     "Brutality III",
+     "Feeding Frenzy I",
+     "Heavy Swing",
+     "Heft"
+    ],
+    "dps": 13844,
+    "dps_broken": 20744,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 0,
+    "speed": 0
+   },
+   "gain_broken": 0.498
   },
   "Skeletal Cleric": {
    "weapon": "Sceptre",
@@ -4544,30 +4534,6 @@
    },
    "gain_broken": 0
   },
-  "Skeletal Brute": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "minion": true,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Skeletal Brute",
-     "Bleed III",
-     "Feeding Frenzy I",
-     "Fiery Death",
-     "Poison II",
-     "Rakiata's Flow"
-    ],
-    "dps": 7939,
-    "dps_broken": 9077,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 0,
-    "speed": 0
-   },
-   "gain_broken": 0.143
-  },
   "Skeletal Frost Mage": {
    "weapon": "Sceptre",
    "class": "Witch",
@@ -4576,14 +4542,14 @@
    "plain": {
     "gems": [
      "Skeletal Frost Mage",
+     "Cold Attunement",
      "Elemental Focus",
      "Feeding Frenzy I",
-     "Fiery Death",
-     "Rakiata's Flow",
-     "Tul's Stillness"
+     "Hulking Minions",
+     "Rakiata's Flow"
     ],
-    "dps": 9086,
-    "dps_broken": 9086,
+    "dps": 11924,
+    "dps_broken": 11924,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -4601,44 +4567,20 @@
     "gems": [
      "Skeletal Reaver",
      "Bleed III",
+     "Brutality III",
      "Feeding Frenzy I",
-     "Fiery Death",
      "Heavy Swing",
-     "Poison II"
+     "Heft"
     ],
-    "dps": 2761,
-    "dps_broken": 3683,
+    "dps": 8345,
+    "dps_broken": 16331,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
     "speed": 0
    },
-   "gain_broken": 0.334
-  },
-  "Skeletal Storm Mage": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "minion": true,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Skeletal Storm Mage",
-     "Elemental Focus",
-     "Esh's Radiance",
-     "Feeding Frenzy I",
-     "Fiery Death",
-     "Rakiata's Flow"
-    ],
-    "dps": 9914,
-    "dps_broken": 9914,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 0,
-    "speed": 0
-   },
-   "gain_broken": 0.0
+   "gain_broken": 0.957
   },
   "Skeletal Sniper": {
    "weapon": "Sceptre",
@@ -4649,20 +4591,44 @@
     "gems": [
      "Skeletal Sniper",
      "Bleed III",
+     "Brutality III",
      "Feeding Frenzy I",
-     "Fiery Death",
-     "Poison II",
-     "Rakiata's Flow"
+     "Heft",
+     "Hulking Minions"
     ],
-    "dps": 6955,
-    "dps_broken": 7830,
+    "dps": 9859,
+    "dps_broken": 16197,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
     "speed": 0
    },
-   "gain_broken": 0.126
+   "gain_broken": 0.643
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "minion": true,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Skeletal Storm Mage",
+     "Elemental Focus",
+     "Feeding Frenzy I",
+     "Hulking Minions",
+     "Lightning Attunement",
+     "Rakiata's Flow"
+    ],
+    "dps": 16024,
+    "dps_broken": 16024,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 0,
+    "speed": 0
+   },
+   "gain_broken": 0.0
   },
   "Snap": {
    "weapon": "Wand",
@@ -4678,8 +4644,8 @@
      "Rakiata's Flow",
      "Spell Echo"
     ],
-    "dps": 54929,
-    "dps_broken": 54929,
+    "dps": 122153,
+    "dps_broken": 122153,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -4696,21 +4662,79 @@
    "plain": {
     "gems": [
      "Skyfall",
+     "Bleed III",
      "Cold Attunement",
      "Concentrated Area",
      "Considered Casting",
-     "Fiery Death",
      "Rakiata's Flow"
     ],
-    "dps": 33416,
-    "dps_broken": 34830,
+    "dps": 64098,
+    "dps_broken": 67749,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 6328,
-    "speed": 0.57
+    "phys_hit": 20266,
+    "speed": 0.61
    },
-   "gain_broken": 0.042
+   "gain_broken": 0.057
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "minion": false,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Snipe",
+     "Bleed III",
+     "Close Combat II",
+     "Heft",
+     "Poison II",
+     "Rapid Attacks II"
+    ],
+    "dps": 6149,
+    "dps_broken": 7394,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 4101,
+    "speed": 0.94
+   },
+   "gain_broken": 0.202,
+   "setup": {
+    "gems": [
+     "Snipe",
+     "Close Combat II",
+     "Heft",
+     "Rapid Attacks II",
+     "Armour Break III",
+     "Armour Demolisher II"
+    ],
+    "dps": 4016,
+    "dps_broken": 5261,
+    "break_hit": 1394,
+    "break_s": 1316,
+    "armour": 8063,
+    "phys_hit": 4101,
+    "speed": 0.94
+   },
+   "self": {
+    "gems": [
+     "Snipe",
+     "Bleed III",
+     "Close Combat II",
+     "Heft",
+     "Poison II",
+     "Rapid Attacks II"
+    ],
+    "dps": 6149,
+    "dps_broken": 7394,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 4101,
+    "speed": 0.94
+   }
   },
   "Solar Orb": {
    "weapon": "Wand",
@@ -4726,8 +4750,8 @@
      "Hourglass",
      "Rakiata's Flow"
     ],
-    "dps": 16152,
-    "dps_broken": 16152,
+    "dps": 32034,
+    "dps_broken": 32034,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -4735,64 +4759,6 @@
     "speed": 0.1
    },
    "gain_broken": 0.0
-  },
-  "Snipe": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "minion": false,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Snipe",
-     "Bleed III",
-     "Close Combat II",
-     "Poison II",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
-    ],
-    "dps": 3241,
-    "dps_broken": 3969,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 1774,
-    "speed": 0.87
-   },
-   "gain_broken": 0.225,
-   "setup": {
-    "gems": [
-     "Snipe",
-     "Close Combat II",
-     "Rakiata's Flow",
-     "Rapid Attacks II",
-     "Armour Break III",
-     "Armour Demolisher II"
-    ],
-    "dps": 2319,
-    "dps_broken": 3048,
-    "break_hit": 603,
-    "break_s": 525,
-    "armour": 8063,
-    "phys_hit": 1774,
-    "speed": 0.87
-   },
-   "self": {
-    "gems": [
-     "Snipe",
-     "Bleed III",
-     "Close Combat II",
-     "Poison II",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
-    ],
-    "dps": 3241,
-    "dps_broken": 3969,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 1774,
-    "speed": 0.87
-   }
   },
   "Spark": {
    "weapon": "Wand",
@@ -4808,13 +4774,13 @@
      "Lightning Attunement",
      "Rakiata's Flow"
     ],
-    "dps": 21147,
-    "dps_broken": 21147,
+    "dps": 43502,
+    "dps_broken": 43502,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.56
+    "speed": 2.89
    },
    "gain_broken": 0.0
   },
@@ -4832,8 +4798,8 @@
      "Fire Attunement",
      "Rakiata's Flow"
     ],
-    "dps": 20788,
-    "dps_broken": 21131,
+    "dps": 21117,
+    "dps_broken": 21463,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -4850,8 +4816,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 13579,
-    "dps_broken": 13922,
+    "dps": 13802,
+    "dps_broken": 14148,
     "break_hit": 184,
     "break_s": 96,
     "armour": 8063,
@@ -4914,15 +4880,15 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 9043,
-    "dps_broken": 9264,
+    "dps": 14166,
+    "dps_broken": 14525,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 59,
-    "speed": 0.96
+    "phys_hit": 124,
+    "speed": 1.02
    },
-   "gain_broken": 0.024,
+   "gain_broken": 0.025,
    "setup": {
     "gems": [
      "Spiral Volley",
@@ -4932,13 +4898,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 5987,
-    "dps_broken": 6207,
-    "break_hit": 20,
-    "break_s": 19,
+    "dps": 9323,
+    "dps_broken": 9682,
+    "break_hit": 42,
+    "break_s": 43,
     "armour": 8063,
-    "phys_hit": 59,
-    "speed": 0.96
+    "phys_hit": 124,
+    "speed": 1.02
    }
   },
   "Stampede": {
@@ -4955,15 +4921,15 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 14102,
-    "dps_broken": 14409,
+    "dps": 32981,
+    "dps_broken": 33481,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 31,
+    "phys_hit": 25,
     "speed": 2.52
    },
-   "gain_broken": 0.022,
+   "gain_broken": 0.015,
    "setup": {
     "gems": [
      "Stampede",
@@ -4973,12 +4939,12 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 9076,
-    "dps_broken": 9384,
-    "break_hit": 10,
-    "break_s": 26,
+    "dps": 21208,
+    "dps_broken": 21708,
+    "break_hit": 8,
+    "break_s": 21,
     "armour": 8063,
-    "phys_hit": 31,
+    "phys_hit": 25,
     "speed": 2.52
    }
   },
@@ -4996,8 +4962,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 10645,
-    "dps_broken": 10890,
+    "dps": 10813,
+    "dps_broken": 11061,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -5014,8 +4980,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 6851,
-    "dps_broken": 7097,
+    "dps": 6960,
+    "dps_broken": 7208,
     "break_hit": 14,
     "break_s": 21,
     "armour": 8063,
@@ -5113,21 +5079,21 @@
    "plain": {
     "gems": [
      "Stormcaller Arrow",
-     "Charged Shots II",
+     "Deliberation",
      "Elemental Armament II",
      "Elemental Focus",
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 4275,
-    "dps_broken": 4294,
+    "dps": 6107,
+    "dps_broken": 6146,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 3,
-    "speed": 1.55
+    "phys_hit": 6,
+    "speed": 1.68
    },
-   "gain_broken": 0.004,
+   "gain_broken": 0.006,
    "setup": {
     "gems": [
      "Stormcaller Arrow",
@@ -5137,13 +5103,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 2761,
-    "dps_broken": 2780,
-    "break_hit": 1,
-    "break_s": 2,
+    "dps": 4100,
+    "dps_broken": 4133,
+    "break_hit": 2,
+    "break_s": 3,
     "armour": 8063,
-    "phys_hit": 3,
-    "speed": 1.55
+    "phys_hit": 5,
+    "speed": 1.68
    }
   },
   "Summon Spectre": {
@@ -5154,10 +5120,10 @@
    "plain": {
     "gems": [
      "Summon Spectre",
-     "Fiery Death"
+     "Armour Explosion"
     ],
-    "dps": 1795,
-    "dps_broken": 1795,
+    "dps": 1,
+    "dps_broken": 1,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -5174,53 +5140,36 @@
    "plain": {
     "gems": [
      "Sunder",
-     "Atalui's Bloodletting",
      "Close Combat II",
      "Concentrated Area",
+     "Fire Attunement",
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 15285,
-    "dps_broken": 18115,
+    "dps": 48439,
+    "dps_broken": 51590,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 9069,
+    "phys_hit": 6200,
     "speed": 1.01
    },
-   "gain_broken": 0.185,
+   "gain_broken": 0.065,
    "setup": {
     "gems": [
      "Sunder",
-     "Atalui's Bloodletting",
      "Close Combat II",
      "Concentrated Area",
+     "Fire Attunement",
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 15285,
-    "dps_broken": 18115,
+    "dps": 48439,
+    "dps_broken": 51590,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 9069,
-    "speed": 1.01
-   },
-   "self": {
-    "gems": [
-     "Sunder",
-     "Atalui's Bloodletting",
-     "Close Combat II",
-     "Concentrated Area",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
-    ],
-    "dps": 15285,
-    "dps_broken": 18115,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 9069,
+    "phys_hit": 6200,
     "speed": 1.01
    }
   },
@@ -5232,21 +5181,21 @@
    "plain": {
     "gems": [
      "Supercharged Slam",
-     "Bleed III",
      "Brutality III",
      "Concentrated Area",
      "Heavy Swing",
-     "Heft"
+     "Heft",
+     "Rapid Attacks II"
     ],
-    "dps": 37616,
-    "dps_broken": 45256,
+    "dps": 50812,
+    "dps_broken": 62535,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 14549,
-    "speed": 0.9
+    "phys_hit": 23201,
+    "speed": 1.56
    },
-   "gain_broken": 0.203,
+   "gain_broken": 0.231,
    "setup": {
     "gems": [
      "Supercharged Slam",
@@ -5256,13 +5205,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 26284,
-    "dps_broken": 32857,
-    "break_hit": 4115,
-    "break_s": 3703,
+    "dps": 34652,
+    "dps_broken": 42851,
+    "break_hit": 6579,
+    "break_s": 8403,
     "armour": 8063,
-    "phys_hit": 12102,
-    "speed": 0.9
+    "phys_hit": 19350,
+    "speed": 1.28
    },
    "self": {
     "gems": [
@@ -5270,16 +5219,16 @@
      "Brutality III",
      "Concentrated Area",
      "Heavy Swing",
-     "Heft",
+     "Rapid Attacks II",
      "Armour Break III"
     ],
-    "dps": 31558,
-    "dps_broken": 39198,
-    "break_hit": 2910,
-    "break_s": 2619,
+    "dps": 42390,
+    "dps_broken": 52419,
+    "break_hit": 3870,
+    "break_s": 6047,
     "armour": 8063,
-    "phys_hit": 14549,
-    "speed": 0.9
+    "phys_hit": 19350,
+    "speed": 1.56
    }
   },
   "Tame Beast": {
@@ -5309,10 +5258,10 @@
    "plain": {
     "gems": [
      "Tamed Companion",
-     "Fiery Death"
+     "Armour Explosion"
     ],
-    "dps": 1795,
-    "dps_broken": 1795,
+    "dps": 1,
+    "dps_broken": 1,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -5417,15 +5366,15 @@
      "Considered Casting",
      "Heft"
     ],
-    "dps": 16281,
-    "dps_broken": 20835,
+    "dps": 37149,
+    "dps_broken": 46100,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 7475,
-    "speed": 1.83
+    "phys_hit": 14370,
+    "speed": 2.06
    },
-   "gain_broken": 0.28,
+   "gain_broken": 0.241,
    "setup": {
     "gems": [
      "Thrashing Vines",
@@ -5435,13 +5384,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 11560,
-    "dps_broken": 15323,
-    "break_hit": 1527,
-    "break_s": 3282,
+    "dps": 26799,
+    "dps_broken": 33898,
+    "break_hit": 2987,
+    "break_s": 7227,
     "armour": 8063,
-    "phys_hit": 4490,
-    "speed": 2.15
+    "phys_hit": 8784,
+    "speed": 2.42
    },
    "self": {
     "gems": [
@@ -5452,13 +5401,13 @@
      "Heft",
      "Armour Break III"
     ],
-    "dps": 13833,
-    "dps_broken": 18080,
-    "break_hit": 1077,
-    "break_s": 2316,
+    "dps": 31869,
+    "dps_broken": 40002,
+    "break_hit": 2093,
+    "break_s": 5065,
     "armour": 8063,
-    "phys_hit": 5386,
-    "speed": 2.15
+    "phys_hit": 10465,
+    "speed": 2.42
    }
   },
   "Thunderous Leap": {
@@ -5516,8 +5465,8 @@
      "Hourglass",
      "Rakiata's Flow"
     ],
-    "dps": 19036,
-    "dps_broken": 19036,
+    "dps": 38471,
+    "dps_broken": 38471,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -5540,8 +5489,8 @@
      "Hourglass",
      "Swift Affliction I"
     ],
-    "dps": 8835,
-    "dps_broken": 8835,
+    "dps": 16691,
+    "dps_broken": 16691,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -5564,15 +5513,15 @@
      "Elemental Focus",
      "Rakiata's Flow"
     ],
-    "dps": 14836,
-    "dps_broken": 15205,
+    "dps": 24151,
+    "dps_broken": 24800,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 49,
-    "speed": 1.9
+    "phys_hit": 91,
+    "speed": 2.1
    },
-   "gain_broken": 0.025,
+   "gain_broken": 0.027,
    "setup": {
     "gems": [
      "Tornado Shot",
@@ -5582,13 +5531,13 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 9725,
-    "dps_broken": 10094,
-    "break_hit": 17,
-    "break_s": 32,
+    "dps": 15884,
+    "dps_broken": 16533,
+    "break_hit": 31,
+    "break_s": 65,
     "armour": 8063,
-    "phys_hit": 49,
-    "speed": 1.9
+    "phys_hit": 91,
+    "speed": 2.1
    }
   },
   "Toxic Growth": {
@@ -5599,37 +5548,37 @@
    "plain": {
     "gems": [
      "Toxic Growth",
+     "Charged Shots II",
      "Concentrated Area",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
+     "Rakiata's Flow"
     ],
-    "dps": 4834,
-    "dps_broken": 4985,
+    "dps": 7565,
+    "dps_broken": 7786,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 20,
-    "speed": 1.93
+    "phys_hit": 31,
+    "speed": 1.75
    },
-   "gain_broken": 0.031,
+   "gain_broken": 0.029,
    "setup": {
     "gems": [
      "Toxic Growth",
      "Concentrated Area",
+     "Elemental Focus",
      "Rakiata's Flow",
-     "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 3149,
-    "dps_broken": 3300,
-    "break_hit": 7,
-    "break_s": 13,
+    "dps": 4977,
+    "dps_broken": 5197,
+    "break_hit": 10,
+    "break_s": 18,
     "armour": 8063,
-    "phys_hit": 20,
-    "speed": 1.93
+    "phys_hit": 31,
+    "speed": 1.75
    }
   },
   "Twister": {
@@ -5690,6 +5639,30 @@
     "speed": 1.95
    }
   },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "minion": true,
+   "error": null,
+   "plain": {
+    "gems": [
+     "Unearth",
+     "Brutality III",
+     "Concentrated Area",
+     "Considered Casting",
+     "Minion Pact II",
+     "Atalui's Bloodletting"
+    ],
+    "dps": 23370,
+    "dps_broken": 34983,
+    "break_hit": 0,
+    "break_s": 0,
+    "armour": 8063,
+    "phys_hit": 8338,
+    "speed": 1.85
+   },
+   "gain_broken": 0.497
+  },
   "Vaulting Impact": {
    "weapon": "Quarterstaff",
    "class": "Mercenary",
@@ -5748,30 +5721,6 @@
     "speed": 0.66
    }
   },
-  "Unearth": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "minion": true,
-   "error": null,
-   "plain": {
-    "gems": [
-     "Unearth",
-     "Considered Casting",
-     "Deliberation",
-     "Fiery Death",
-     "Living Lightning II",
-     "Minion Pact II"
-    ],
-    "dps": 7169,
-    "dps_broken": 10390,
-    "break_hit": 0,
-    "break_s": 0,
-    "armour": 8063,
-    "phys_hit": 1093,
-    "speed": 1.4
-   },
-   "gain_broken": 0.449
-  },
   "Vine Arrow": {
    "weapon": "Bow",
    "class": "Mercenary",
@@ -5781,36 +5730,36 @@
     "gems": [
      "Vine Arrow",
      "Charged Shots II",
+     "Deliberation",
      "Elemental Armament II",
      "Elemental Focus",
-     "Rakiata's Flow",
-     "Rapid Attacks II"
+     "Rakiata's Flow"
     ],
-    "dps": 15749,
-    "dps_broken": 16150,
+    "dps": 25667,
+    "dps_broken": 26322,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
-    "phys_hit": 53,
-    "speed": 1.93
+    "phys_hit": 140,
+    "speed": 1.75
    },
-   "gain_broken": 0.025,
+   "gain_broken": 0.026,
    "setup": {
     "gems": [
      "Vine Arrow",
+     "Deliberation",
      "Elemental Focus",
      "Rakiata's Flow",
-     "Rapid Attacks II",
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 10466,
-    "dps_broken": 10868,
-    "break_hit": 18,
-    "break_s": 35,
+    "dps": 16927,
+    "dps_broken": 17582,
+    "break_hit": 48,
+    "break_s": 84,
     "armour": 8063,
-    "phys_hit": 53,
-    "speed": 1.93
+    "phys_hit": 140,
+    "speed": 1.75
    }
   },
   "Volcanic Fissure": {
@@ -5827,8 +5776,8 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 15213,
-    "dps_broken": 15270,
+    "dps": 15452,
+    "dps_broken": 15510,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -5845,8 +5794,8 @@
      "Armour Break III",
      "Armour Demolisher II"
     ],
-    "dps": 9768,
-    "dps_broken": 9825,
+    "dps": 9922,
+    "dps_broken": 9980,
     "break_hit": 2,
     "break_s": 5,
     "armour": 8063,
@@ -5868,13 +5817,13 @@
      "Fire Attunement",
      "Rakiata's Flow"
     ],
-    "dps": 34763,
-    "dps_broken": 34763,
+    "dps": 74247,
+    "dps_broken": 74247,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 2.64
+    "speed": 2.98
    },
    "gain_broken": 0.0
   },
@@ -5892,13 +5841,13 @@
      "Rakiata's Flow",
      "Rapid Attacks II"
     ],
-    "dps": 4376,
-    "dps_broken": 4376,
+    "dps": 6503,
+    "dps_broken": 6503,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
-    "speed": 1.93
+    "speed": 2.1
    },
    "gain_broken": 0.0
   },
@@ -5951,14 +5900,14 @@
    "plain": {
     "gems": [
      "Wardbound Minions",
+     "Cold Attunement",
      "Concentrated Area",
      "Elemental Focus",
      "Feeding Frenzy I",
-     "Fiery Death",
      "Rakiata's Flow"
     ],
-    "dps": 20633,
-    "dps_broken": 20633,
+    "dps": 18667,
+    "dps_broken": 18667,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
@@ -6330,22 +6279,22 @@
    "plain": {
     "gems": [
      "Wolf Pack",
+     "Brutality III",
      "Feeding Frenzy I",
-     "Fiery Death",
      "Heavy Swing",
      "Hulking Minions",
-     "Poison II"
+     "Heft"
     ],
-    "dps": 3534,
-    "dps_broken": 4999,
+    "dps": 17165,
+    "dps_broken": 29990,
     "break_hit": 0,
     "break_s": 0,
     "armour": 8063,
     "phys_hit": 0,
     "speed": 1
    },
-   "gain_broken": 0.415
+   "gain_broken": 0.747
   }
  },
- "updated": "2026-11-18 17:19"
+ "updated": "2026-11-24 23:28"
 }

@@ -112,8 +112,13 @@ def report(d: dict) -> str:
             if f.get("boss_dps"):
                 other = [x for x in f.get("boss_sources") or [] if x["name"] != key.split(" | ")[0]
                          and not x["name"].startswith("Best ") and x["share"] >= 0.1]
+                # What the build's damage is: a skill that only carries another skill or an ailment isn't the find itself.
+                own = sum(x["share"] for x in f.get("boss_sources") or [] if x["name"] == key.split(" | ")[0])
+                dots = sum(x["share"] for x in f.get("boss_sources") or [] if x["name"].startswith("Best "))
                 v = [x for x in (f.get("orders") or {}).values() if isinstance(x, int)]
                 luck = f"  best of {len(v)} orders, worst {min(v):,}" if v else "  ONE order: luck up to x4"
+                if f.get("boss_sources") and own < 0.5:
+                    luck += f"  (own hits {own:.0%}, ailments {dots:.0%}: check what deals it)"
                 rows.append((f["boss_dps"], f["dps"], w, luck,
                              key + "".join(f" [{x['name']} {x['share']:.0%}]" for x in other)))
     rows.sort(reverse=True)
