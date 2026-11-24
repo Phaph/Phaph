@@ -103,6 +103,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   (fix not run yet; the rehearsal uses it). Lead re-run started early (after-leads, 2 cores, engine .8). path-luck-7, 4 of 12: the four "as is" builds equal AB3.
 - **23:35:** 0.4 scans done (no case set, committed ungraded). orders-sceptre, Skyfall best of 3: 2.98M (default order 2.95M). combos-8: Armour Broken combos
   again on .8 -> combos_8.json (~/combos_8.log); compare with combos.json (Nov 18), then replace it (the page reads it); the ailment combos after.
+- **00:05 (11-25): orders-sceptre done (finalists_orders.json, committed):** Skyfall 2.98M (worst order 2.90M), Unearth 5.47M (worst 2.75M: a 99% spread on .7). Best-of-3
+  changed the Sceptre winner, so it matters for rankings. Unearth's 5.47M isn't sanity-checked. path-luck-7 6 of 12, all equal to AB3. First lead re-run: Leopold's
+  1.38M (its plain build still to come). ailments-8 (ailment combos on .8) started -> combos_ailments_8.json.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
