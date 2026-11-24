@@ -35,3 +35,27 @@ def test_bench_slots_round_trip(pob, monk):
     assert pob.calc(["Life"])["Life"] < worn
     pob.send("restore_slots", prev=prev)
     assert pob.calc(["Life"])["Life"] == worn
+
+
+def test_hand_uniques_are_worn_in_the_hand_that_holds_their_kind(pob, monk):
+    """A quarterstaff unique replaces the quarterstaff and leaves nothing behind; a caster staff or a bow doesn't fit."""
+    import pytest
+    from breaker import Bench, pieces
+    from pob import PoBError
+    ps = {p["name"]: p for p in pieces(pob)}
+    hands = [p for p in ps.values() if p.get("raw")]
+    assert {"Tangletongue"} <= set(ps) and len(hands) > 50
+    pob.add_item("Rarity: RARE\nTest Staff\nWrapped Quarterstaff\nAdds 10 to 20 Physical Damage")
+    g = pob.add_skill(["Glacial Cascade"])["group"]
+    pob.send("set_main", group=g)
+    bench = Bench(pob)
+    before = pob.send("equipped")["slots"]["Weapon 1"]["raw"]
+    quarter = [p for p in hands if p["slot"] == "Staff" and p.get("subtype") == "Warstaff"]
+    caster = [p for p in hands if p["slot"] == "Staff" and p.get("subtype") != "Warstaff"]
+    assert quarter and caster
+    assert any(abs(bench.gain([p])) > 0.01 for p in quarter)
+    for p in (caster[0], ps["Tangletongue"]):
+        with pytest.raises(PoBError):
+            bench.gain([p])
+    assert pob.send("equipped")["slots"]["Weapon 1"]["raw"] == before
+    assert abs(bench.gain([])) < 1e-6

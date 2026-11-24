@@ -3,10 +3,11 @@
 The pair scan (breaker.py pairs) tries every unique and keystone, but only on the ~31 saved builds' skills, and only the
 30 best singles go into pairs. A unique that is ordinary on most skills and broken on one particular skill (a classic
 broken-build shape, research/broken_builds.md group I) is invisible there. This scan builds every main-capable skill
-the quick round-1 way and measures each non-weapon unique (top rolls) and each keystone on it alone, against a
+the quick round-1 way and measures each unique (top rolls) and each keystone on it alone, against a
 pinnacle boss, reusing breaker.Bench. A gain far above what that piece usually gives is flagged: an interaction.
 
-Weapon uniques are not in it yet: their local mods ("Adds X to Y") would apply globally through the custom modifier box.
+Weapon and off-hand uniques are worn for real, on builds that hold that kind of item (since 2026-11-24). A build's own
+weapon is a rare, so a weapon unique's gain is against a rare.
 
   python matrix_scan.py run [--workers 6] [--out data/breaker/matrix.json]   (resumable)
   python matrix_scan.py run --class Ranger --ascendancy Deadeye --out ...   (that class's weapons and ascendancy)
