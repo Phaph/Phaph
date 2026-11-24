@@ -149,6 +149,7 @@
   "5.2 Flicker (D)"
  ],
  "amendments": [
-  "2026-11-24, after the 0.1 condition scan, before any 0.2-0.4 scan: (a) verdicts use PoB data (old/verdicts.json _how), as the official notes could not be read; (b) a second, separate column 'strict': condition rows at +60% above usual or more, chosen after seeing 0.1 (and Lightning Conduit on 0.2-0.4), so only 0.2-0.4 test it, with Lightning Conduit left out. The main score keeps the default threshold."
+  "2026-11-24, after the 0.1 condition scan, before any 0.2-0.4 scan: (a) verdicts use PoB data (old/verdicts.json _how), as the official notes could not be read; (b) a second, separate column 'strict': condition rows at +60% above usual or more, chosen after seeing 0.1 (and Lightning Conduit on 0.2-0.4), so only 0.2-0.4 test it, with Lightning Conduit left out. The main score keeps the default threshold.",
+  "2026-11-24, after 0.1 was graded (1 of 3) and before any stack scan and any 0.3 scan: a third column 'stack' (stack_scan.flagged at its fixed thresholds) for the group B/C cases 1.3, 1.9, 3.2, 3.3a, 3.4. Written because of the 0.1 misses, so only the 0.3 cases test it; 1.3 and 1.9 in it are not blind. The main score does not change. Hits are the same pieces, plus Archmage as a spirit skill."
  ]
 }

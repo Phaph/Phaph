@@ -53,12 +53,21 @@ def main() -> None:
         found += bool(hit)
         print(f"  {c['id']:<5} {c['name']:<40} " + (f"FOUND, row {hit[0]} of {len(rows)} ({hit[1][0]} / {hit[1][1]} +{hit[1][2]:.0%})"
               if hit else f"missed ({len(rows)} rows flagged)") + ("" if c.get("blind", True) else "  [not blind]"))
+    for c in key["cases"]:
+        f = B / "old" / f"{c['tag']}_stack.json"
+        if not c["why"].startswith("B") or "Whispering" in c["name"] or not f.exists():
+            continue
+        from stack_scan import flagged as stack_flagged
+        rows = stack_flagged(json.loads(f.read_text(encoding="utf-8")))
+        hit = next((i for i, r in enumerate(rows, 1) if r["piece"].split(":", 1)[1] in c["hit"]), None)
+        print(f"  stack column: {c['id']:<5} {c['name']:<36} " + (f"FOUND, {hit} of {len(rows)}" if hit else f"missed ({len(rows)} flagged)"))
     print(f"found {found} of {graded} graded ({len(key['cases'])} cases)")
     for tag in sorted({c["tag"] for c in key["cases"]}):
         for det in ("condition", "matrix"):
             rows = flagged(tag, det)
             if rows is not None:
-                pieces = {r[0] for r in rows}
+                # A verdict is about the piece the detector flags: the skill (condition) or the item / keystone (matrix).
+                pieces = {r[0] if det == "condition" else str(r[1]).split(":", 1)[-1] for r in rows}
                 v = verdicts.get(tag, {})
                 if det == "condition":
                     from condition_scan import payoffs
