@@ -695,6 +695,7 @@ def _alone_supports(pob: PoB) -> set[str]:
     return _ALONE
 
 
+FIT_EHP_LOSS = 0.01   # most toughness one filler support may cost
 FIT_MIN = 0.6   # a support counts as made for a skill when the skill type it needs is rarer than 60% of skills
 
 
@@ -707,6 +708,7 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
               if getattr(pob, "no_lineage", False) else set())
     if any(c in alone for c in chosen):
         return chosen   # e.g. Uhtred's Exodus: only works with no other supports, so the other sockets stay empty
+    toughness = pob.calc(["TotalEHP"]).get("TotalEHP") or 0
     fams = {}
     for s in pob.send("fitting_supports", group=group).get("supports") or []:
         fam = s.get("family")
@@ -717,9 +719,14 @@ def fit_supports(pob: PoB, group: int, name: str, chosen: list[str], slots: int,
             continue
         if fams[s["name"]] in {fams.get(c, c) for c in chosen}:
             continue
-        res = pob.try_skill(group, [name, *chosen, s["name"]], ["TotalDPS", "SpiritUnreserved"], keep_main=keep_main)
-        if res["supported"].get(s["name"]) and not res.get("warnings") and (res["output"].get("SpiritUnreserved") or 0) >= 0:
+        res = pob.try_skill(group, [name, *chosen, s["name"]], ["TotalDPS", "SpiritUnreserved", "TotalEHP"],
+                            keep_main=keep_main)
+        # Filler only: it must not cost toughness (Atziri's Communion reserves life instead of spirit: 12.6k -> 3.2k EHP).
+        ehp = res["output"].get("TotalEHP") or 0
+        if res["supported"].get(s["name"]) and not res.get("warnings") \
+                and (res["output"].get("SpiritUnreserved") or 0) >= 0 and ehp >= toughness * (1 - FIT_EHP_LOSS):
             chosen.append(s["name"])
+            toughness = ehp
     pob.try_skill(group, [name, *chosen], ["TotalDPS"], keep_main=keep_main)
     return chosen
 
