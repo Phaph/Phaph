@@ -44,6 +44,17 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   boss damage AND EHP per build against path_luck.json; merge if nothing loses much, else best-of-N orders.
   Note the running A/B's suite (~/revisit_tests.log) will test the new commit, not the old one.
   The same linear score picks single-unique swaps in _consider_uniques and affixes: one to look at if AB2 is still noisy.
+- **16:40 revisit A/B 1 complete (12 of 12): spread RoA 201%, Rapid Shot 43%, Bonestorm 125%, Ice Shot 5% (plain: 320 / 22 / 68 / 5).**
+  Not a fix for the spread; AB2 (symmetric rule) runs after fixcheck.
+- **Task 44: branch `settle`** (worktree ~/phaph_settle, off main, not merged): guide.search_supports; 3 unit tests pass. A/B on the 12
+  saved builds running (container settle-ab; script / log settle.py / settle.log in the session scratchpad). Then the full suite.
+- **17:05 grade:** 0.1 matrix: Archmage and Gemling both missed (Archmage was found by the stack scan only). 2 of 10 graded cases found, 1 case
+  left (2.1, 0.2 matrix): at most 3 of 11, or 3 of 9 without the 2 untestable: below half either way. Task 40's grade fails the bar on
+  both halves; left: 2.1, ordinary builds (false alarms), launch-day timing, the narrowed claim (for Kyle).
+- **17:05 filler fix on full builds:** boss and map dps identical, EHP RoA 6.3k -> 7.9k, Ice Shot 7.8k -> 24.2k (2 of 4 in, ~/fixcheck.log).
+- Full suite on `revisit` with the symmetric rule: green, 229 passed 16:42. AB2 starts after fixcheck.
+- **17:35 task 43 check done (4 of 4):** boss and map dps identical to the digit; EHP Rapid Shot 3.2k -> 12.6k, Ice Shot 7.8k -> 24.2k, RoA
+  6.3k -> 7.9k, Bonestorm unchanged (never had Communion). 43 left: (b) and old cached guides. AB2 running since 17:06. settle-ab: 13 of 24, all +0%.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
@@ -429,6 +440,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     or re-score the top few sets with auto_config run on each. After 42's A/B (so it measures one change).
 
 ## Waiting for Kyle
+- **Lodestone's claim (draft, 2026-11-24; needs your OK before any page changes):** the grade on past broken builds failed (2 of 10 found,
+  false alarms far over one per find: BREAKER.md). Proposed wording: "Lodestone is an idea generator, not a detector. It scans every
+  skill for conditions and item pairs that Path of Building scores unusually high and lists them for a person to check.
+  Most flags are ordinary; some are PoB errors. It can't see exploits PoB doesn't calculate (copies, charge loops, bugs). Expect it to
+  miss most of what breaks the game." Keep: ranked leads, the patch-notes reading, the full-build check. Drop: any hit-rate or "finds
+  broken builds" claim, and any lead that rests on one full build (the slot-order spread is up to 320%).
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
   (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.
 - Lodestone page: two small text fixes (task 32: 'unconfirmed' has no colour; the intro still mentions in-game

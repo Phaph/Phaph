@@ -20,7 +20,14 @@
   "Snipe": false,
   "Sunder": false,
   "Archmage": true,
-  "Irongrasp": false
+  "Irongrasp": false,
+  "Avatar of Fire": false,
+  "Doedre's Tenure": false,
+  "Maligaro's Virtuosity": false,
+  "Ming's Heart": false,
+  "Rondel of Fragility": false,
+  "Snakebite": false,
+  "Snakepit": false
  },
  "_how": "v0.5.0: PoB data 0.1 vs 0.2 (official notes blocked, 403): real = base damage at gem level 20 cut 20%+, or the conditional multiplier cut (Lightning Conduit). Lenient: a base cut is not proof the flagged condition was why. Hammer of the Gods also lost its cooldown, so its cut may not be a nerf. The skeletons, Raise Zombie and Detonate Minion are not comparable (unjudged). | v0.8.0 (tools/old_skill_verdicts.py, 0.2 vs 0.3, same rule): Sunder is real by its conditional (guaranteed crit vs broken armour and +100% crit damage removed). Spearfield's hidden 300% was removed but its base went up x4.16, so not a cut. Reworked, so unjudged: Blood Hunt, Snipe, Solar Orb (one part x0.67, another x1.35), Killing Palm, Shattering Palm. Minions unjudged. On 0.1, Detonate Dead's corpse damage fell 20% to 10.7% of life: false by the rule's letter, arguably real. | v0.5.0 Archmage: gain per 100 mana 6% to 3%; Irongrasp: item text unchanged (tools/old_verdicts.py). | v0.12.2 (0.3 vs 0.4): Lightning Conduit real by its multiplier (20 to 10 per 5% Shock); Raise Zombie, skeletons, Elemental Siphon (gone) unjudged. | v0.12.2 matrix (old_verdicts.py): text unchanged, or only gained a line (Sands of Silk, The Coming Calamity) = not cut; Maligaro's Virtuosity got a restriction unrelated to its size: unjudged.",
  "v0.8.0": {
