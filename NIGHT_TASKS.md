@@ -77,6 +77,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   kind. Probe (round-1 builds, 4 skills, 87 tries): base unchanged after the tries; only Sunsplinter +16% and Chernobog's Pillar +10% (Lightning
   Spear) gain; Tangletongue -69%, Rathpith -29%: both known cases would still be missed, so this does not change the grade. ~/hands.sh: full suite, then merge +
   push (no deploy) and ~/breaker pull for task 37 (~/hands_tests.log, ~/merge_hands.log).
+- **20:40 AB3 (re-check in the final pass only), 7 of 12:** 2 builds change, both better: RoA as is 849k -> 2.63M (EHP 6.3k -> 6.6k), Bonestorm as is 6.99M -> 11.31M
+  (map 3.86M -> 8.84M, EHP 7.0k -> 10.6k); 5 identical. ~/merge_revisit.sh: when 12 of 12, gate (~/revisit_gate.log: no loss over 5% in boss, map or EHP vs plain),
+  main merged into `revisit`, full suite, then merge + deploy 2026-11-24.7 + push (~/merge_revisit.log). If the gate fails, decide by hand. AB3's base is
+  2026-11-24.3 code (plain too), so the gain on .6 isn't measured. RoA as is still ends at 66% resistances: next thing to look at.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
