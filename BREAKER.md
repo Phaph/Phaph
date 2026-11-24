@@ -783,3 +783,12 @@ Patch 0.1 (PoB v0.5.0) condition scan, all 119 skills, default thresholds: Light
 threshold flags 35 rows over 26 skills, so unless most of the other 25 were also cut in 0.2 (not judged yet), the
 proposed bar of one false alarm per real find fails for this detector at its default threshold. Not tuned.
 tools/grade_old.py grades finished scans only; matrix (cases 1.3, 1.9) is running.
+
+**False alarms on 0.1, judged (2026-11-24):** by PoB's data for 0.1 vs 0.2 (the official notes could not be read): of 26
+flagged skills 6 were cut (Lightning Conduit's multiplier; 5 by base damage, one of those also lost its cooldown), 13 were
+not, 7 can't be compared. **About 2 false alarms per real find, with a lenient definition of real: the detector fails the
+1:1 bar at its default threshold.** Flagged skills were base-cut more often than unflagged ones (5 of 19 vs 7 of 82), but
+that is small numbers and a base cut isn't about the flagged condition; on a strict reading only Lightning Conduit is a
+proper find. A stricter threshold (+60% above usual) is written into the key before the 0.2-0.4 scans, as its own column.
+Bow finalists: "Poisonburst Arrow Invoker" 1.75M boss is 97% its boss skill, Rain of Arrows (which as a main skill is 945k
+in its own build); its map DPS (1.63M) is doubled by the extra stat sets on top of the 800k in `sources`.

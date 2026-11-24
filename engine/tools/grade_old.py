@@ -60,6 +60,10 @@ def main() -> None:
             if rows is not None:
                 pieces = {r[0] for r in rows}
                 v = verdicts.get(tag, {})
+                if det == "condition":
+                    from condition_scan import payoffs
+                    d = json.loads((B / "old" / f"{tag}_condition.json").read_text(encoding="utf-8"))
+                    print(f"  {tag} strict (+60% above usual): {sorted({n for n, c, g, above in payoffs(d) if above >= 0.6})}")
                 print(f"  {tag} {det}: {len(rows)} rows, {len(pieces)} pieces: {sum(v.get(p) is True for p in pieces)} real, "
                       f"{sum(v.get(p) is False for p in pieces)} false alarms, {sum(p not in v for p in pieces)} unjudged")
 

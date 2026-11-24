@@ -147,5 +147,8 @@
   "4.6 Vitality Siphon (D)",
   "5.1 Hollow Form (E)",
   "5.2 Flicker (D)"
+ ],
+ "amendments": [
+  "2026-11-24, after the 0.1 condition scan, before any 0.2-0.4 scan: (a) verdicts use PoB data (old/verdicts.json _how), as the official notes could not be read; (b) a second, separate column 'strict': condition rows at +60% above usual or more, chosen after seeing 0.1 (and Lightning Conduit on 0.2-0.4), so only 0.2-0.4 test it, with Lightning Conduit left out. The main score keeps the default threshold."
  ]
 }

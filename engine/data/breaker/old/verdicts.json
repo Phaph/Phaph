@@ -1,0 +1,24 @@
+{
+ "v0.5.0": {
+  "Lightning Conduit": true,
+  "Bonestorm": true,
+  "Eye of Winter": true,
+  "Comet": true,
+  "Unearth": true,
+  "Hammer of the Gods": true,
+  "Bone Cage": false,
+  "Cluster Grenade": false,
+  "Cold Snap": false,
+  "Detonate Dead": false,
+  "Flash Grenade": false,
+  "Frost Bomb": false,
+  "Frost Wall": false,
+  "Frostbolt": false,
+  "Ice Nova": false,
+  "Killing Palm": false,
+  "Shattering Palm": false,
+  "Snipe": false,
+  "Sunder": false
+ },
+ "_how": "v0.5.0: PoB data 0.1 vs 0.2 (official notes blocked, 403): real = base damage at gem level 20 cut 20%+, or the conditional multiplier cut (Lightning Conduit). Lenient: a base cut is not proof the flagged condition was why. Hammer of the Gods also lost its cooldown, so its cut may not be a nerf. The skeletons, Raise Zombie and Detonate Minion are not comparable (unjudged)."
+}
