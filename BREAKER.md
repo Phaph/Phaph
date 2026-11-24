@@ -854,8 +854,10 @@ at least ~10% in one step, probably more (it lost the quiver's gain as well): do
 under ~20-30% as real (the +11% / -11% lead verdicts are inside that). Open: a second start (best of two gear orders), or
 keeping the earlier build as a candidate, would show how much is left on the table.
 
-**0.3 matrix scan (task 40, 2026-11-24):** 0 of 4 cases found (Rathpith Globe, Indigon, The Whispering Ice, Hollow Palm: none
-gained even 5% on any plain build, as their stat isn't piled up there; The Whispering Ice is a weapon, left out by
-design). 15 pieces flagged: 0 cut by 0.4, 14 not, 1 unjudged (Maligaro's). Several flags are support-type skills (Fortifying Cry,
-Seismic Cry) that nobody builds damage on. Graded blind so far: matrix 0 of 4. The 0.3 stack scan is the last chance for
-B/C cases on this patch.
+**0.3 matrix scan (task 40, 2026-11-24):** 0 of 4 cases found. Two were never testable: The Whispering Ice is a weapon (known),
+and Rathpith Globe is a focus, which breaker.UNIQUE_TYPES leaves out with shields and quivers (not noted in the key: the
+key is wrong to call it matrix-calculable; the 3.2 case also lists Kaom's Heart, a body armour, which was in the catalogue
+but has no row). Indigon and Hollow Palm gained under 5% on plain builds, as their stat isn't piled up there. 15 pieces
+flagged: 0 cut by 0.4, 14 not, 1 unjudged (Maligaro's). Several flags are skills nobody builds damage on (Fortifying Cry,
+Seismic Cry). The stack scan uses the same catalogue, so Rathpith can't be found there either; Indigon and Hollow Palm can.
+Fix after the grade (a new column, not the main score): add Focus, Quiver and Shield uniques to the catalogue.

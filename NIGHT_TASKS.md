@@ -19,7 +19,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **10:18 engine 2026-11-24.3 live (off-hands), main pushed.** 10:30: the nightly sweep started on top of everything (the
   queue's wait matched image names, which a rebuild changes: fixed in breaker_queue.sh), so the finalists re-run was
   stopped and waits for the sweep (~/finalists_offhand.sh; resumes, finished builds kept), then task 37.
-- 0.3 matrix graded: 0 of 4 cases, 0 real / 14 false. 0.3 stack running.
+- 0.3 matrix graded: 0 of 4 cases (2 untestable: weapon and focus uniques aren't scanned), 0 real / 14 false. 0.3 stack
+  running. After the grade: off-hand uniques into breaker.UNIQUE_TYPES (not before: frozen engine).
 - Task 41 A/B: quiver +43-46%, focus +64-79% (search-style); suite running. 0.3 condition graded (3.6 missed; 1 real, 34 false).
 - Task 40: 0.1 stack scan judged (Archmage real, Irongrasp false alarm); 0.3 scans running.
 - Task 40: 0.2 condition false alarms judged (2 real, 25 false, 12 unjudged; tools/old_skill_verdicts.py does 0.3+ the same way).
