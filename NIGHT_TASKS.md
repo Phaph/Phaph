@@ -99,6 +99,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   clone ~/rehearsal (it can't push), timed -> ~/rehearsal.log; put the times in BREAKER_PLAYBOOK.md (0.4 scans use 2 other cores: say so). Known gap: with PATCH,
   breaker_day.sh overwrites and commits the baseline text_scan.json with the PATCHED game, so a later diff compares with our guess: keep the old one.
   Nerf-risk labels wait for the lead re-run. path-luck-7 first row: RoA as is 2.63M, the same as AB3.
+- **23:05: 2026-11-24.8 live (43b, 235 passed).** 43 left: (c) guides cached before .4 (old engine versions). breaker_day.sh keeps the real baseline in PATCH mode
+  (fix not run yet; the rehearsal uses it). Lead re-run started early (after-leads, 2 cores, engine .8). path-luck-7, 4 of 12: the four "as is" builds equal AB3.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or

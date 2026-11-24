@@ -42,6 +42,12 @@ else
   echo "(no earlier scan to compare with)" > "$DAY/text_new.txt"
 fi
 
+# Patch-notes mode: the patched game's text stays with the day; the baseline stays the real game, for the next diff.
+if [ -n "${PATCH:-}" ]; then
+  cp $B/text_scan.json "$DAY/text_scan_patched.json"
+  [ -f "$DAY/text_scan_before.json" ] && cp --remove-destination "$DAY/text_scan_before.json" $B/text_scan.json
+fi
+
 # 2. Condition scan, fresh.
 run "python condition_scan.py run --workers $CPUS --out /app/engine_src/${DAY#engine/}/conditions.json" > "$DAY/conditions_run.log" 2>&1
 run "python condition_scan.py report /app/engine_src/${DAY#engine/}/conditions.json" > "$DAY/conditions.txt" 2>&1
@@ -62,6 +68,9 @@ rows = [(n, l) for n, ls in new.items() for l in ls if l not in old.get(n, [])]
 print(f"{len(rows)} unreadable unique lines new since the last run ({len(new)} uniques have some):")
 for n, l in rows: print(f"  {n}: {l}")
 PY
+if [ -n "${PATCH:-}" ] && [ -f "$DAY/unsupported_before.json" ]; then
+  cp $B/unsupported.json "$DAY/unsupported_patched.json"; git checkout -q -- $B/unsupported.json $B/unsupported.txt
+fi
 
 # 4. Summary.
 {
