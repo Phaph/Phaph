@@ -838,3 +838,11 @@ one-handed numbers are therefore low against staves, crossbows and other two-han
 Staff Bonestorm's 6.99M vs wand 3.00M is not a fair comparison until then. (The x1.77 over its own source list is the
 explosion added after the list, as designed.) Also: the Quarterstaff finalists search found nothing, because staff
 spells filled the ranking before the filter.
+
+**Off-hand measured (search-style, end gear, 2026-11-24, branch offhand):** Ice Shot bow +43%, Lightning Arrow bow +46%, Skyfall
+wand +64%, Bonestorm wand +79% with a quiver / focus. Not full builds; a staff still gets its two-handed rolls.
+
+**0.3 condition scan (task 40):** case 3.6 (Tactician vs Immobilised) missed: 0.3's PoB gave Siege Cascade / Siege Ballista no
+gain vs an immobilised enemy at all (today's PoB doubles Siege Cascade), so the detector had nothing to read. False
+alarms: 41 skills flagged, 1 real (Lightning Conduit, cut again 20 to 10, known), 34 not cut, 6 unjudged. Strict: Lightning Conduit, two skeletons
+(unjudged) and Unearth (not cut). Three patches, same result: the condition scan on its own fails the bar.

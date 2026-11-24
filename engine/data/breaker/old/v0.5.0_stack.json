@@ -1,0 +1,423 @@
+{
+ "skills": {
+  "Cold Snap": {
+   "kind": "Spell",
+   "error": null,
+   "rows": [
+    {
+     "piece": "unique:Irongrasp",
+     "stat": "strength",
+     "alone": 0.328,
+     "gain": 0.977,
+     "synergy": 1.489
+    },
+    {
+     "piece": "spirit:Archmage",
+     "stat": "mana",
+     "alone": 0.083,
+     "gain": 0.912,
+     "synergy": 1.766
+    },
+    {
+     "piece": "spirit:Archmage",
+     "stat": "intelligence",
+     "alone": 0.083,
+     "gain": 0.249,
+     "synergy": 1.153
+    }
+   ],
+   "dps": 146004,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Incinerate": {
+   "kind": "Spell",
+   "error": null,
+   "rows": [
+    {
+     "piece": "unique:Irongrasp",
+     "stat": "strength",
+     "alone": 0.377,
+     "gain": 1.027,
+     "synergy": 1.472
+    }
+   ],
+   "dps": 68239,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Siphoning Strike": {
+   "kind": "Attack",
+   "error": null,
+   "rows": [
+    {
+     "piece": "unique:Hand of Wisdom and Action",
+     "stat": "dexterity",
+     "alone": -0.256,
+     "gain": 0.059,
+     "synergy": 1.423
+    },
+    {
+     "piece": "unique:Hand of Wisdom and Action",
+     "stat": "intelligence",
+     "alone": -0.256,
+     "gain": 0.006,
+     "synergy": 1.352
+    },
+    {
+     "piece": "unique:Thrillsteel",
+     "stat": "dexterity",
+     "alone": -0.017,
+     "gain": 0.123,
+     "synergy": 1.142
+    },
+    {
+     "piece": "unique:Atsak's Sight",
+     "stat": "dexterity",
+     "alone": -0.087,
+     "gain": 0.007,
+     "synergy": 1.103
+    },
+    {
+     "piece": "unique:Crown of the Victor",
+     "stat": "dexterity",
+     "alone": -0.115,
+     "gain": 0.01,
+     "synergy": 1.141
+    }
+   ],
+   "dps": 45164,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Essence Drain": {
+   "kind": "Spell",
+   "error": null,
+   "rows": [
+    {
+     "piece": "unique:Irongrasp",
+     "stat": "strength",
+     "alone": 0.253,
+     "gain": 0.679,
+     "synergy": 1.34
+    },
+    {
+     "piece": "spirit:Archmage",
+     "stat": "mana",
+     "alone": 0.06,
+     "gain": 0.656,
+     "synergy": 1.563
+    },
+    {
+     "piece": "spirit:Archmage",
+     "stat": "intelligence",
+     "alone": 0.06,
+     "gain": 0.179,
+     "synergy": 1.113
+    }
+   ],
+   "dps": 67236,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Storm Wave": {
+   "kind": "Attack",
+   "error": null,
+   "rows": [
+    {
+     "piece": "unique:Hand of Wisdom and Action",
+     "stat": "dexterity",
+     "alone": -0.261,
+     "gain": 0.055,
+     "synergy": 1.429
+    },
+    {
+     "piece": "unique:Thrillsteel",
+     "stat": "dexterity",
+     "alone": -0.016,
+     "gain": 0.127,
+     "synergy": 1.145
+    },
+    {
+     "piece": "unique:Atsak's Sight",
+     "stat": "dexterity",
+     "alone": -0.089,
+     "gain": 0.007,
+     "synergy": 1.105
+    },
+    {
+     "piece": "unique:Crown of the Victor",
+     "stat": "dexterity",
+     "alone": -0.118,
+     "gain": 0.009,
+     "synergy": 1.145
+    }
+   ],
+   "dps": 35547,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Falling Thunder": {
+   "kind": "Attack",
+   "error": null,
+   "rows": [
+    {
+     "piece": "unique:Hand of Wisdom and Action",
+     "stat": "dexterity",
+     "alone": -0.262,
+     "gain": 0.055,
+     "synergy": 1.429
+    },
+    {
+     "piece": "unique:Thrillsteel",
+     "stat": "dexterity",
+     "alone": -0.016,
+     "gain": 0.122,
+     "synergy": 1.14
+    },
+    {
+     "piece": "unique:Atsak's Sight",
+     "stat": "dexterity",
+     "alone": -0.086,
+     "gain": 0.008,
+     "synergy": 1.102
+    },
+    {
+     "piece": "unique:Crown of the Victor",
+     "stat": "dexterity",
+     "alone": -0.117,
+     "gain": 0.007,
+     "synergy": 1.14
+    }
+   ],
+   "dps": 35541,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Skeletal Warrior": {
+   "kind": "Minion",
+   "error": null,
+   "rows": [],
+   "dps": 58804,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Skeletal Sniper": {
+   "kind": "Minion",
+   "error": null,
+   "rows": [],
+   "dps": 33619,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  },
+  "Skeletal Reaver": {
+   "kind": "Minion",
+   "error": null,
+   "rows": [],
+   "dps": 29556,
+   "piles": {
+    "mana": 1.0,
+    "life": 1.0,
+    "energy shield": 1.0,
+    "strength": 1.0,
+    "dexterity": 1.0,
+    "intelligence": 1.0,
+    "evasion": 1.0,
+    "armour": 1.0,
+    "spirit": 1.0
+   }
+  }
+ },
+ "quick": {
+  "Armour Breaker": 8347,
+  "Arc": 28431,
+  "Armour Piercing Rounds": 3258,
+  "Artillery Ballista": 11110,
+  "Ball Lightning": 2734,
+  "Bone Cage": 36877,
+  "Boneshatter": 11420,
+  "Bonestorm": 30978,
+  "Cluster Grenade": 778,
+  "Cold Snap": 146004,
+  "Contagion": 4124,
+  "Comet": 34210,
+  "Dark Effigy": 15064,
+  "Detonate Dead": 35513,
+  "Detonate Minion": 7089,
+  "Detonating Arrow": 4522,
+  "Earthquake": 7001,
+  "Earthshatter": 10064,
+  "Electrocuting Arrow": 4958,
+  "Ember Fusillade": 25173,
+  "Escape Shot": 4027,
+  "Essence Drain": 67236,
+  "Explosive Grenade": 9291,
+  "Explosive Shot": 1303,
+  "Eye of Winter": 11552,
+  "Falling Thunder": 35541,
+  "Fireball": 15162,
+  "Firestorm": 4826,
+  "Flame Wall": 372,
+  "Flash Grenade": 4496,
+  "Flameblast": 23180,
+  "Fragmentation Rounds": 2444,
+  "Flicker Strike": 27288,
+  "Freezing Mark": 372,
+  "Freezing Salvo": 4460,
+  "Frost Bomb": 19962,
+  "Frost Wall": 5784,
+  "Frostbolt": 20966,
+  "Frozen Locus": 1695,
+  "Galvanic Shards": 3258,
+  "Gas Arrow": 8872,
+  "Gas Grenade": 1785,
+  "Gathering Storm": 15416,
+  "Glacial Bolt": 1955,
+  "Glacial Cascade": 11047,
+  "Hailstorm Rounds": 1955,
+  "Hammer of the Gods": 9653,
+  "Hexblast": 13199,
+  "High Velocity Rounds": 1955,
+  "Ice Nova": 10898,
+  "Ice Shards": 3258,
+  "Ice Shot": 6431,
+  "Ice Strike": 33720,
+  "Incendiary Shot": 2444,
+  "Incinerate": 68239,
+  "Killing Palm": 27889,
+  "Leap Slam": 12029,
+  "Lightning Arrow": 7297,
+  "Lightning Conduit": 3793,
+  "Lightning Rod": 2619,
+  "Lightning Warp": 51377,
+  "Magnetic Salvo": 1893,
+  "Molten Blast": 15879,
+  "Oil Grenade": 1071,
+  "Orb of Storms": 6307,
+  "Perfect Strike": 27750,
+  "Permafrost Bolts": 2444,
+  "Plasma Blast": 1955,
+  "Profane Ritual": 30360,
+  "Poisonburst Arrow": 9040,
+  "Rain of Arrows": 4547,
+  "Rapid Shot": 1629,
+  "Resonating Shield": 0,
+  "Raise Zombie": 4340,
+  "Ripwire Ballista": 6627,
+  "Rolling Slam": 1073,
+  "Shield Charge": 0,
+  "Shield Wall": 0,
+  "Shattering Palm": 19630,
+  "Shockburst Rounds": 2444,
+  "Shockchain Arrow": 2645,
+  "Shockwave Totem": 11350,
+  "Siege Cascade": 1955,
+  "Siphoning Strike": 45164,
+  "Skeletal Arsonist": 19772,
+  "Skeletal Brute": 28526,
+  "Skeletal Cleric": 0,
+  "Skeletal Frost Mage": 22114,
+  "Skeletal Reaver": 29556,
+  "Skeletal Sniper": 33619,
+  "Skeletal Storm Mage": 21567,
+  "Snipe": 5281,
+  "Sniper's Mark": 391,
+  "Skeletal Warrior": 58804,
+  "Solar Orb": 10011,
+  "Spark": 13625,
+  "Spiral Volley": 3309,
+  "Staggering Palm": 24053,
+  "Stampede": 9313,
+  "Storm Wave": 35547,
+  "Stormblast Bolts": 1955,
+  "Stormcaller Arrow": 2631,
+  "Sunder": 18693,
+  "Supercharged Slam": 19941,
+  "Tempest Bell": 6993,
+  "Tempest Flurry": 31087,
+  "Tornado Shot": 6597,
+  "Toxic Growth": 2622,
+  "Vaulting Impact": 14864,
+  "Vine Arrow": 6638,
+  "Unearth": 14469,
+  "Volcanic Fissure": 12210,
+  "Voltaic Grenade": 5084,
+  "Voltaic Mark": 372,
+  "Wave of Frost": 10174,
+  "Whirling Assault": 3643,
+  "Wind Blast": 20972
+ },
+ "updated": "2026-11-24 05:18"
+}
