@@ -384,7 +384,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
     bow / wand / sceptre skills read low.
 
-42. [ ] (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
+42. [ ] (running since 11:05: tools/path_luck.py, 4 specs x 3 slot orders, 3 cores, ~/path_luck.log -> data/breaker/path_luck.json) (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
     a quiver (BREAKER.md). Measure: the same spec built 3 times with small starting differences (gear slot order, first
     supports), 3 skills; if the spread is > 10%, try best-of-two starts for the Uber stage or a final pass that retries
     each unique slot with a rare and the next-best uniques once everything else is set. Needs free cores.
