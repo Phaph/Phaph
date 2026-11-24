@@ -44,6 +44,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   boss damage AND EHP per build against path_luck.json; merge if nothing loses much, else best-of-N orders.
   Note the running A/B's suite (~/revisit_tests.log) will test the new commit, not the old one.
   The same linear score picks single-unique swaps in _consider_uniques and affixes: one to look at if AB2 is still noisy.
+- **16:40 revisit A/B 1 complete (12 of 12): spread RoA 201%, Rapid Shot 43%, Bonestorm 125%, Ice Shot 5% (plain: 320 / 22 / 68 / 5).**
+  Not a fix for the spread; AB2 (symmetric rule) runs after fixcheck.
+- **Task 44: branch `settle`** (worktree ~/phaph_settle, off main, not merged): guide.search_supports; 3 unit tests pass. A/B on the 12
+  saved builds running (container settle-ab; script / log settle.py / settle.log in the session scratchpad). Then the full suite.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
   merged; 1 new unit test passes): gear._revisit_uniques. ~/revisit_ab.sh waits for the path-luck container, then runs the
