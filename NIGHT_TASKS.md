@@ -89,6 +89,12 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **handuniques merged 20:37 (232 passed).** **43(b): branch `kitehp`** (worktree ~/phaph_kitehp, 2026-11-24.8, 2 unit tests pass): side skills' support search keeps 90% of the
   toughness. How often it bites: ~/kit_freq.log (old finalists, so Communion is in it). Left: full suite after the revisit merge (merge main first;
   app.py version conflict: keep .8), then merge + deploy.
+- **22:10: engine 2026-11-24.7 live (unique re-check in the final pass, 234 passed).** RoA rotated on current code, main vs revisit: boss x1.02, map x1.02, EHP x1.18.
+  Sceptre on .6: Skyfall 2.95M, Unearth 2.75M (was 15.6M): finalists_sceptre.json. kit_freq (30 old finalists): 21 builds' worst EHP support is Communion; Her
+  Declaration, Seraph's Heart, Healing Runes also cost 10%+ EHP, all next to Communion where looked at. **43b:** ~/kitehp.sh: suite, then merge + deploy .8
+  (~/kitehp_tests.log, ~/merge_kitehp.log). **42, best of N:** weapon_finalists.py builds each finalist in 3 slot orders, keeps the best and prints the worst
+  (Lodestone only: Whetstone guides would take ~3x longer, so that is a question for Kyle). Running: orders-sceptre (first use, finalists_orders.json),
+  path-luck-7 (the 12 builds again on .7: the current spread, path_luck_7.json). Task 37 waits for all of these.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -451,7 +457,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
     ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.
 
-41. [ ] Off-hands: (c) done 2026-11-24 (one false row, BREAKER.md); left: Sceptre again, (f). Was: (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
+41. [ ] Off-hands: (c) done 2026-11-24 (Sceptre redone), left: (f). Was: (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
     Sceptre and every other one-handed weapon (the rest of today's run is comparable only within itself); (d) done on the branch 2026-11-24: one-handed martial weapons try a second weapon and a shield by score (spear,
     flail: shield only; damage effect not measured yet); (e) done on branch `offhand2` (on top of offhand, worktree ~/phaph_offhand, not pushed): gear.craft_swap fills both hands of set 2; new test passes, full suite
     running (~/offhand3_tests.log). suite green (227 passed); ~/merge_offhand.sh now merges offhand2 (holds both) as 2026-11-24.3; (f) lead re-run (~/after_leads.sh)

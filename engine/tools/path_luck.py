@@ -30,7 +30,8 @@ def build(spec: dict, order: str) -> dict:
     from guide import build_stage
     t0 = time.time()
     g = build_stage(spec, "end")
-    return {"boss_dps": round(g.boss_dps), "dps": round(g.dps), "code": g.code, "seconds": round(time.time() - t0)}
+    return {"boss_dps": round(g.boss_dps), "dps": round(g.dps), "code": g.code, "sources": g.sources, "boss_sources": g.boss_sources,
+            "seconds": round(time.time() - t0)}
 
 
 def run(workers: int, files: list[Path], out: Path) -> None:

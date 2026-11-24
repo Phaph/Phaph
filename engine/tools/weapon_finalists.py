@@ -4,7 +4,7 @@ shortlists its best TOP skill + ascendancy pairs (any class may use the weapon: 
 lock), and the finalists are ranked by full Uber Endgame builds. The answer to "what is the strongest build in the
 game", with every weapon given a fair chance. Weekly (server free time or the PC). Resumable.
 
-  python tools/weapon_finalists.py run [--only Bow,Staff] [--top 2] [--workers 6] [--builds 3] [--out data/breaker/finalists.json]
+  python tools/weapon_finalists.py run [--only Bow,Staff] [--top 2] [--workers 6] [--builds 3] [--orders 3] [--out data/breaker/finalists.json]
   python tools/weapon_finalists.py report data/breaker/finalists.json
 """
 from __future__ import annotations
@@ -16,18 +16,20 @@ from pathlib import Path
 
 ENGINE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ENGINE))
+sys.path.insert(0, str(ENGINE / "tools"))
 OUT = ENGINE / "data" / "breaker" / "finalists.json"
 WEAPONS = ["Bow", "Crossbow", "Spear", "Quarterstaff", "Staff", "Wand", "Sceptre", "Talisman", "One Hand Mace",
            "Two Hand Mace", "Claw", "Dagger", "One Hand Sword", "Two Hand Sword", "One Hand Axe", "Two Hand Axe", "Flail"]
 
 
-def run(only: set[str] | None, top: int, workers: int, out: Path, builds: int = 3) -> None:
+def run(only: set[str] | None, top: int, workers: int, out: Path, builds: int = 3, orders: int = 3) -> None:
     """Each weapon's search uses `workers` processes; its finalists' full builds (one process each, the slow part) go to
     a pool of `builds` and run beside the next weapon's search."""
+    import multiprocessing as mp
     import threading
-    from concurrent.futures import ThreadPoolExecutor
+    from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
     from generate import generate, plan_build
-    from guide import build_stage
+    from path_luck import ORDERS, build as path_build
     done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"weapons": {}}
     lock = threading.Lock()
 
@@ -35,13 +37,20 @@ def run(only: set[str] | None, top: int, workers: int, out: Path, builds: int = 
         out.write_text(json.dumps(done, indent=1, ensure_ascii=False), encoding="utf-8")
 
     def build(w, rec, key, spec):
-        t0 = time.time()
-        try:
-            g = build_stage(spec, "end")
-            res = {"boss_dps": round(g.boss_dps), "dps": round(g.dps), "code": g.code, "sources": g.sources,
-                   "boss_sources": g.boss_sources, "seconds": round(time.time() - t0)}
-        except Exception as e:  # noqa: BLE001
-            res = {"error": f"{type(e).__name__}: {e}"}
+        """The same spec in several gear slot orders, the best kept: one order is luck (task 42, up to x4 between them)."""
+        with ProcessPoolExecutor(1, mp_context=mp.get_context("spawn"), max_tasks_per_child=1) as one:   # an order changes module state: its own process
+            got = {}
+            for o in ORDERS[:orders]:
+                try:
+                    got[o] = one.submit(path_build, spec, o).result()
+                except Exception as e:  # noqa: BLE001
+                    got[o] = {"error": f"{type(e).__name__}: {e}"}
+        ok = [r for r in got.values() if r.get("boss_dps")]
+        if ok:
+            res = {**max(ok, key=lambda r: r["boss_dps"]), "orders": {o: r.get("boss_dps") or r["error"] for o, r in got.items()},
+                   "seconds": sum(r["seconds"] for r in ok)}
+        else:
+            res = next(iter(got.values()))
         with lock:
             rec["finalists"][key] = res
             save()
@@ -103,12 +112,14 @@ def report(d: dict) -> str:
             if f.get("boss_dps"):
                 other = [x for x in f.get("boss_sources") or [] if x["name"] != key.split(" | ")[0]
                          and not x["name"].startswith("Best ") and x["share"] >= 0.1]
-                rows.append((f["boss_dps"], f["dps"], w,
+                v = [x for x in (f.get("orders") or {}).values() if isinstance(x, int)]
+                luck = f"  best of {len(v)} orders, worst {min(v):,}" if v else "  ONE order: luck up to x4"
+                rows.append((f["boss_dps"], f["dps"], w, luck,
                              key + "".join(f" [{x['name']} {x['share']:.0%}]" for x in other)))
     rows.sort(reverse=True)
     out = ["Cross-class ranking: each weapon type's best search finalists as full Uber Endgame builds (boss DPS, map DPS):"]
-    for i, (b, m, w, key) in enumerate(rows, 1):
-        out.append(f"  {i:>2}. {key:<44} {w:<15} boss {b:>12,}  map {m:>12,}")
+    for i, (b, m, w, luck, key) in enumerate(rows, 1):
+        out.append(f"  {i:>2}. {key:<44} {w:<15} boss {b:>12,}  map {m:>12,}{luck}")
     return "\n".join(out)
 
 
@@ -119,7 +130,8 @@ if __name__ == "__main__":
             int(a[a.index("--top") + 1]) if "--top" in a else 2,
             int(a[a.index("--workers") + 1]) if "--workers" in a else 4,
             Path(a[a.index("--out") + 1]) if "--out" in a else OUT,
-            int(a[a.index("--builds") + 1]) if "--builds" in a else 3)
+            int(a[a.index("--builds") + 1]) if "--builds" in a else 3,
+            int(a[a.index("--orders") + 1]) if "--orders" in a else 3)
     elif a and a[0] == "report":
         print(report(json.loads(Path(a[1] if len(a) > 1 else OUT).read_text(encoding="utf-8"))))
     else:
