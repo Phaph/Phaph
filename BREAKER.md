@@ -905,7 +905,7 @@ condition scans alone stand at 9 real vs 72 false, the matrix at 0 vs 14. So the
 **Grade, 0.1 matrix (task 40, 2026-11-24 17:05):** Archmage and Gemling attribute stacking both missed. Found so far 2 of 10 graded
 cases (1.4 not blind; 2.2 at row 58 of 65); one case left (2.1). Best possible: 3 of 11, or 3 of 9 without the 2 cases the scans
 can't test. That is below the agreed half, and false alarms were already over the bar, so the grade fails whatever 2.1 does. The stack
-scan is the only detector with a find of its own that was blind (Archmage). What the scans missed (Glacial Cascade vs Frozen, Indigon,
+scan's Archmage is the only case found by more than a low-ranked row or a case we had already looked at (1.4). What the scans missed (Glacial Cascade vs Frozen, Indigon,
 Hollow Palm, immobilise) is not explained here beyond the two untestable cases and the 0.3 PoB gaps noted above.
 
 **Filler fix on full builds (task 43):** Ice Shot and Rain of Arrows rebuilt on 2026-11-24.4 with the same spec: boss and map damage unchanged
