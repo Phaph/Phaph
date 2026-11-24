@@ -104,6 +104,21 @@ def test_boss_skill_on_weapon_set_two(pob, monk):
     assert pob.calc(["TotalDPS"]).get("TotalDPS", 0) > 0, "Tempest Flurry still uses the staff"
 
 
+def test_weapon_set_two_holds_an_off_hand(pob, monk):
+    from gear import craft_swap
+    boss = pob.add_skill(["Spark"], main=False, full_dps=True)["group"]
+    pob.send("set_weapon_set", group=boss, set=2)
+    pob.send("set_main", group=boss)
+    alone = craft_weapon(pob, make_stage("mid"), "Weapon 1 Swap", "Wand", log=lambda *a: None)
+    before = pob.calc(["TotalDPS"])["TotalDPS"]
+    plans = craft_swap(pob, make_stage("mid"), "Wand", log=lambda *a: None)
+    assert [p.slot for p in plans] == ["Weapon 1 Swap", "Weapon 2 Swap"] and "focus" in plans[1].base.lower()
+    assert plans[0].base == alone.base
+    assert pob.calc(["TotalDPS"])["TotalDPS"] > before
+    pob.send("unequip", slot="Weapon 2 Swap")
+    pob.send("set_main", group=monk)
+
+
 def test_theme_metric_drives_every_optimiser():
     """Regression: a bleed request came back as an elemental hit build, because only skill
     choice saw the theme. Every optimiser now scores with the same theme metric."""

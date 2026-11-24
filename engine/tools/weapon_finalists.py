@@ -59,10 +59,15 @@ def run(only: set[str] | None, top: int, workers: int, out: Path, builds: int = 
             try:
                 # PoB has no "Quarterstaff" type: it's a Staff with the Warstaff subtype. Search Staff, keep one kind.
                 pob_w = "Staff" if w == "Quarterstaff" else w
-                res = generate({"weapons": [pob_w], "_class_unlocked": True}, workers=workers, log=lambda *a: None)
+                req = {"weapons": [pob_w], "_class_unlocked": True}
+                if w == "Quarterstaff":   # staff spells outscore every attack, so a plain Staff search ranked none
+                    req["kinds"] = ["Attack"]
+                res = generate(req, workers=workers, log=lambda *a: None)
                 rows, seen = [], set()
                 for r in res["ranked"]:
                     if pob_w == "Staff" and (r.get("weapon_subtype") == "Warstaff") != (w == "Quarterstaff"):
+                        continue
+                    if r.get("weapon_type") != pob_w:   # no skill uses this weapon: the search dropped the weapon (Claw)
                         continue
                     key = r["skill"]   # different skills (each on its best ascendancy): two Rapid Shots waste a build
                     if key not in seen:
