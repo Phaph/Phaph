@@ -67,6 +67,8 @@ def run(only: set[str] | None, top: int, workers: int, out: Path, builds: int = 
                 for r in res["ranked"]:
                     if pob_w == "Staff" and (r.get("weapon_subtype") == "Warstaff") != (w == "Quarterstaff"):
                         continue
+                    if r.get("weapon_type") != pob_w:   # no skill uses this weapon: the search dropped the weapon (Claw)
+                        continue
                     key = r["skill"]   # different skills (each on its best ascendancy): two Rapid Shots waste a build
                     if key not in seen:
                         seen.add(key)
