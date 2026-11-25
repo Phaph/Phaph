@@ -982,3 +982,5 @@ release: stays open, no usage limit added.
 - Bonestorm + armour break: 7.20M vs 6.59M (+9%); +9% / +5% / -43%: inside the luck. Not a lead.
 Best-of-3 against best-of-3 still has luck in it when one side's spread is 2x: ask for the same sign in all three orders. (Until now I called these "one side done": wrong,
 the log prints a lead once both sides are built.)
+- Bonestorm Lich vs Comet Lich (both Staff): 10.54M vs 5.78M best vs best; +18 / +82 / +69% by order: ahead in all three, size unknown (Bonestorm's own orders spread x2). Rests on the
+  release-time estimate (6 casts a volley) and PoB's 20 spikes + explosion on one boss. "Known" stays (36% of Abyssal Liches). leads.json updated for these six.

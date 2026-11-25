@@ -121,6 +121,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **05:10:** 45, 46 done. Waiting on leads-orders (5 leads fully done, both sides, verdicts in BREAKER.md; the earlier 'no plain builds' notes were wrong): then verdicts in leads.json, nerf-risk labels (40), 39 closes. 37 starts by itself after it.
 - **05:40:** leads: Dark Effigy + poison +42% in all 3 orders (1.03M: weak in absolute terms), others dead or luck. 3 skill leads (Bonestorm, Rain of Arrows, Wind Serpent's Fury) left to
   build. Then update leads.json once, with the same-sign-in-all-orders rule.
+- **06:10:** leads.json updated for 6 leads (Bonestorm ahead of Comet in all 3 orders, +18 to +82%). Rain of Arrows and Wind Serpent's Fury still to build.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or

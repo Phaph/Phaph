@@ -36,7 +36,7 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22: a full Uber Endgame build around Leopold's + Fire Penetration I (Fireball Blood Mage) reaches 3.76M boss DPS; the same build without them, on the same engine, 4.17M (-10%). The below-0 penetration is real (confirmed), but in a full build other gloves and supports beat it. data/breaker/lead_builds/."
+   "full_build": "2026-11-25, best of 3 slot orders per side: 1.38M vs 1.40M boss DPS without it (-1%). Dead. | Earlier: 2026-11-22: a full Uber Endgame build around Leopold's + Fire Penetration I (Fireball Blood Mage) reaches 3.76M boss DPS; the same build without them, on the same engine, 4.17M (-10%). The below-0 penetration is real (confirmed), but in a full build other gloves and supports beat it. data/breaker/lead_builds/."
   },
   {
    "name": "\"Not consumed\" charges reaching 100% (Flicker Strike)",
@@ -88,7 +88,7 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22, full Uber Endgame Lich on the same engine: combo 1.20M (Frost Darts poisons every 0.5 s, up 79%; +15% over Dark Effigy alone in that build) vs the plain Dark Effigy build 1.19M (+1%). The plain build spends the setup's gems and attributes better."
+   "full_build": "2026-11-25, 3 slot orders per side, engine 2026-11-24.8: 1.03M vs 727k boss DPS without the poison setup (+42%; +41 / +40 / +42% by order): a steady synergy on our poison estimate (2026-11-22 read +1%, not explained), but far under the 5-10M other full builds reach. Not a break. | Earlier: 2026-11-22, full Uber Endgame Lich on the same engine: combo 1.20M (Frost Darts poisons every 0.5 s, up 79%; +15% over Dark Effigy alone in that build) vs the plain Dark Effigy build 1.19M (+1%). The plain build spends the setup's gems and attributes better."
   },
   {
    "name": "Lightning Conduit vs Shocked",
@@ -174,7 +174,7 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22: full Uber Endgame build around the pair 232k boss DPS vs 217k without it (+7%): far below the bench's +42%. Small; not a break."
+   "full_build": "2026-11-25, 3 slot orders per side: 41k vs 43k boss DPS (-4%, lower in every order). Dead. The 2026-11-22 numbers (232k vs 217k) were probably mostly Fiery Death's on-death explosions, no longer counted. | Earlier: 2026-11-22: full Uber Endgame build around the pair 232k boss DPS vs 217k without it (+7%): far below the bench's +42%. Small; not a break."
   },
   {
    "name": "Armour Piercing Rounds breaks armour itself (Tactician)",
@@ -197,7 +197,7 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22, full Uber Endgame on the same engine (Armour Broken now needs a fast break): combo 3.50M vs plain 3.47M (+1%). The plain build already breaks fast enough on its own."
+   "full_build": "2026-11-25, 3 slot orders per side: 3.19M vs 2.46M best vs best, but +144 / 0 / 0% by order: slot-order luck, no gain shown. | Earlier: 2026-11-22, full Uber Endgame on the same engine (Armour Broken now needs a fast break): combo 3.50M vs plain 3.47M (+1%). The plain build already breaks fast enough on its own."
   },
   {
    "name": "Coiling Bolts breaks armour for Bonestorm (Lich)",
@@ -220,15 +220,15 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22, full Uber Endgame on the same engine: combo 9.78M vs plain Bonestorm 8.82M (+11%). Real but small; Bonestorm itself is the bigger lead (see 'Bonestorm at full channel'). Built before the Bonestorm release-time fix (2026-11-23): its numbers are over-rated."
+   "full_build": "2026-11-25, 3 slot orders per side: 7.20M vs 6.59M best vs best (+9%), +9 / +5 / -43% by order: inside the luck. | Earlier: 2026-11-22, full Uber Endgame on the same engine: combo 9.78M vs plain Bonestorm 8.82M (+11%). Real but small; Bonestorm itself is the bigger lead (see 'Bonestorm at full channel'). Built before the Bonestorm release-time fix (2026-11-23): its numbers are over-rated."
   },
   {
    "name": "Bonestorm at full channel (every caster)",
    "status": "known",
    "found": "2026-11-22",
    "detector": "blind test (stage rules)",
-   "what": "Ranked first by the search on all 7 Witch and Sorceress ascendancies. Players already know it: 36% of Abyssal Liches use it. No advantage over other skills is claimed: the +35% over Comet rests on one full build each, and the order gear slots are tried in moved Bonestorm's boss damage by up to 68%.",
-   "check": "Several full builds per skill (different slot orders) before any comparison is quoted.",
+   "what": "Ranked first by the search on all 7 Witch and Sorceress ascendancies. Players already know it: 36% of Abyssal Liches use it. In full builds it beats Comet in all 3 slot orders tried (+18% to +82%), but the size isn't pinned down and it depends on our estimate of its release time.",
+   "check": "The release time in game (video), which decides the size of the gap to Comet.",
    "evidence": "2026-11-22: a Mobalytics guide says the spikes 'can all Shotgun and hit the same target'; leveling guides (poe-vault) say to channel to full on elites and bosses and less on small targets, where the wider spread misses. So PoB's 20 hits on one boss is supported for big targets. The explosion doesn't need Power Charges: in PoB's data its stat set has its own base damage and charges only add area (+7 radius, +40% more area per extra charge), and the gem says the spikes 'fire at enemies and explode'. The strongest open lead: full Uber Endgame Bonestorm Lich 8.8M boss DPS, 9.8M with Coiling Bolts breaking armour, at 0.85% of the ladder.",
    "build": {
     "spec": {
@@ -253,7 +253,7 @@
      "end"
     ]
    },
-   "full_build": "2026-11-23, fair comparison (both on a Staff), release time counted (usage limit: 6 casts per volley): full Uber Endgame Bonestorm Lich 6.03M boss DPS vs Comet Lich 4.45M (+35%). (Earlier numbers: 8.82M on a Wand without the release time; 2.72M on a Wand with it: the Wand was the mistake.) Depends on the release estimate: at 9 casts per volley the edge would shrink to roughly +10-15%.",
+   "full_build": "2026-11-25, 3 slot orders per side, both on a Staff: 10.54M vs Comet Lich 5.78M boss DPS best vs best; +18 / +82 / +69% by order (its own orders spread x2). Ahead of Comet in all three, so stronger than Comet in our model by an unknown amount; it rests on our release-time estimate and on PoB's 20 hits plus explosion on one boss. Known build on Abyssal Lich. | Earlier: 2026-11-23, fair comparison (both on a Staff), release time counted (usage limit: 6 casts per volley): full Uber Endgame Bonestorm Lich 6.03M boss DPS vs Comet Lich 4.45M (+35%). (Earlier numbers: 8.82M on a Wand without the release time; 2.72M on a Wand with it: the Wand was the mistake.) Depends on the release estimate: at 9 casts per volley the edge would shrink to roughly +10-15%.",
    "ladder": "poe.ninja per ascendancy (2026-11-22): 36% of Abyssal Liches use Bonestorm (0.85% overall). A known build on Abyssal Lich; under-played on the other Witch/Sorceress ascendancies."
   },
   {
