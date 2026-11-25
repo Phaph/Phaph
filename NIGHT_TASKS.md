@@ -183,7 +183,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   ~/breaker cleaned 2026-11-26 00:00 (its uncommitted diff in ~/asc_before47/breaker_wip) and pulled to main. Start 48 after 49 is settled.
 - **00:55 task 49:** suite 247 + 1 failed: test_style's combo test, failing on main too (the 11-25 combo re-run moved Rend's setups to Talisman / Bow / Spear); test fixed on main (picks any combo a Titan can use),
   merged into `distance`. A/B single order (respend -> distance, boss): Bonestorm, Earthquake identical (melee / spells untouched, as meant); Gemling Rapid Shot 5.12 -> 4.04M; Deadeye Rapid Shot 5.76 -> 8.12M, but
-  same ascendancy (Point Blank), the new build is simply better at every distance (7.11M vs 4.94M at 2 m): rebuild luck. So the A/B can't judge 49. Same build 2 m -> 4 m: -16%. Running: ~/distance_blind.sh,
+  same ascendancy (Point Blank), the new build is simply better at every distance (7.11M vs 4.94M at 2 m): rebuild luck. Invoker Ice Shot (bow, so not a control here) 2.56 -> 2.34M boss, 1.56 -> 1.13M map. So the A/B can't judge 49. Same build 2 m -> 4 m: -16%. Running: ~/distance_blind.sh,
   blind search Deadeye + Tactician, class weapons, main vs distance side by side (~/dist_blind/{main,distance}.json, 3 cores each, a few hours). Judge: ladder skills' ranks (Ice Shot, Tornado Shot, Snipe; Galvanic Shards,
   Wolf Pack, Stormblast Bolts) better or not. Merge if not worse; 4 m stays an estimate (note it on the lead page later).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
