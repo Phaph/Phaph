@@ -109,6 +109,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **00:40:** combos.json is now the 2026-11-24.8 run (BREAKER.md; best edges are minions: none full-build checked). Finalists report flags builds whose skill
   deals under half their boss damage. Left running: ailments-8 (then compare with combos_ailments.json, old one untracked), after-leads, path-luck-7 (9 of 12, all equal
   to AB3), then the rehearsal.
+- **01:05: path-luck-7 done (BREAKER.md).** Rehearsal running since 00:54 (~/rehearsal.log). Next for 42: lead_builds.py in 3 orders per side. after-leads so far: Leopold's
+  1.38M, Dark Effigy 0.83M (single order each; not verdicts).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -494,6 +496,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     or re-score the top few sets with auto_config run on each. After 42's A/B (so it measures one change).
 
 ## Waiting for Kyle
+- **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
+  stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
   (Lodestone has no class rules: Kyle 2026-11-22) and ask whether Whetstone should change.
 

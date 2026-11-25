@@ -931,3 +931,8 @@ rows are new since minions are counted at their limit; they assume the player's 
 and that the break time estimate holds. Quick round-1 builds: no full-build check on any of them (Armour Piercing Rounds was +1% as a full build).
 **Best of 3 orders (42):** Sceptre: Unearth 2.75M / 5.47M / 5.06M, Skyfall 2.95M / 2.98M / 2.90M. Unearth's own hits are 4% of its boss damage (ignite 65%, Skyfall 30%);
 the finalists report now flags builds whose skill deals under half.
+
+**Path luck on 2026-11-24.7 (task 42, complete, 12 of 12; path_luck_7.json):** spread Ice Shot 5%, Rapid Shot 22%, Rain of Arrows 39%, Bonestorm 50% (before the re-check: 5 / 22 /
+320 / 68). Every boss number equals AB3's (2026-11-24.3 base), so .4 to .6 moved no boss damage on these 4 specs. Best of 3 over the default order: Ice Shot +5%, Rapid Shot
++22%, Rain of Arrows +39%, Bonestorm 0%: 4 hand-picked specs, at 3x the Uber stage's time. Still over the 10% bar for 3 of 4: a lead needs best-of-3 on both sides
+(finalists do this; lead_builds.py doesn't yet).
