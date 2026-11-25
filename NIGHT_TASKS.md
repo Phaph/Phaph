@@ -144,8 +144,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **Hit by it:** every per-ascendancy comparison: blind tests (Titan, Warbringer, Smith score identically, so do Tactician and Witchhunter), finalists, rank8's search, and task 37's scans (no ascendancy
   passive on any of 158 skills for Titan and Abyssal Lich, on 155 Warbringer, 144 Tactician, 130 Disciple). 37's condition scans are nearly done and stay as a "before"; after the merge
   they and matrix_asc need a redo (48). breaker_queue copies engine code per job from ~/breaker and pulls at each push: after a merge mid-queue, later scans mix code: check dates.
-- 15:35: first suite run: 2 fails, probably task 47's own cases (zero-damage builds read as a 100% loss in the filler check; fixed on the branch, uncommitted until the cases pass). The suite
-  must run again (~/asc_tests.sh) after that commit. The A/B isn't affected (its builds have damage).
+- 15:35: first suite run: 2 fails, probably task 47's own cases (zero-damage builds read as a 100% loss in the filler check; fixed, cases pass, committed; all 23 ascendancies spend 8 of 8). The suite
+  was restarted at 15:36 (~/asc_tests.log). The A/B isn't affected (its builds have damage).
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
