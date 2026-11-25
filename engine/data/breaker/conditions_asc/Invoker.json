@@ -1,5 +1,908 @@
 {
  "skills": {
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.33,
+    "Shocked": 0.33,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 76214
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.246,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.113,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 71614
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 1904
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 71712
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 110705
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.23,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.166,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 134196
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.287,
+    "CriticalWeakness": 0.163,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 11405
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.269,
+    "CriticalWeakness": 0.206,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.149,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 206788
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Blinded": 0.087,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.253,
+    "Intimidated": 0.1,
+    "Maimed": 0.058,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.328,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Sunder my Enemies...",
+    "Critical Chance"
+   ],
+   "dps": 1
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 64189
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.077,
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.143,
+    "Intimidated": 0.1,
+    "Moving": 0.177,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Critical Chance"
+   ],
+   "dps": 4728
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.222,
+    "CriticalWeakness": 0.236,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 70174
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10672
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.195,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.129,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance",
+    "Elemental Damage",
+    "I am the Thunder..."
+   ],
+   "dps": 140888
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.221,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.112,
+    "Intimidated": 0.1,
+    "Moving": 0.216,
+    "OnProfaneGround": 0.111,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 10773
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CoveredInFrost": 0.071,
+    "CriticalWeakness": 0.176,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.085,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Critical Chance"
+   ],
+   "dps": 4358
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.32,
+    "CriticalWeakness": 0.207,
+    "Crushed": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 9356
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.063,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "Moving": 0.349,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "I am the Thunder...",
+    "Critical Chance",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 53711
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.238,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.23,
+    "Poisoned": 1.0,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance",
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 29452
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.455,
+    "CriticalWeakness": 0.287,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.165,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 6237
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 11881
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.155,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 33030
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.092,
+    "CriticalWeakness": 0.134,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.28,
+    "Shocked": 0.28
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 98895
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.1,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 32124
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.176,
+    "CriticalWeakness": 0.204,
+    "Crushed": 0.078,
+    "Intimidated": 0.1,
+    "Moving": 0.115,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 9625
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 17188
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.066,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 45700
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CoveredInFrost": 0.058,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 3501
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.191,
+    "CriticalWeakness": 0.224,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 139645
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.256,
+    "CriticalWeakness": 0.226,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 35030
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.066,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 23441
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.238,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance",
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 68172
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 38260
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 31488
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 16857
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.177,
+    "CriticalWeakness": 0.229,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.14,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 1879
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 73036
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.175,
+    "CriticalWeakness": 0.22,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 74855
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 42138
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.164,
+    "CriticalWeakness": 0.197
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 162291
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.183,
+    "CriticalWeakness": 0.3,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 149011
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.192,
+    "CriticalWeakness": 0.193,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.059,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Critical Chance"
+   ],
+   "dps": 72113
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.17,
+    "CriticalWeakness": 0.322,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.084
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 100472
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.123,
+    "CriticalWeakness": 0.161,
+    "Crushed": 0.058,
+    "Intimidated": 0.1,
+    "Moving": 0.177,
+    "OnProfaneGround": 0.072,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 6116
+  },
   "Flicker Strike": {
    "weapon": "Quarterstaff",
    "class": "Monk",
@@ -14,25 +917,181 @@
    },
    "dps": 60581
   },
-  "Glacial Cascade": {
-   "weapon": "Quarterstaff",
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.057,
-    "CoveredInFrost": 0.119,
-    "CriticalWeakness": 0.1,
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.108,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 23012
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.095,
+    "CriticalWeakness": 0.106,
     "Intimidated": 0.1,
     "OnShockedGround": 0.23,
     "Shocked": 0.23
    },
    "ascendancy_nodes": [
     "I am the Blizzard...",
+    "I am the Thunder...",
     "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 8549
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.066,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 27006
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.108,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 21599
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.192,
+    "CriticalWeakness": 0.254,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.169,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 29751
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.195,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.129,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance",
     "I am the Thunder...",
     "Elemental Damage"
    ],
-   "dps": 23957
+   "dps": 26483
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.191,
+    "CriticalWeakness": 0.268,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.15,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 21754
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.199,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.122,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 100408
   },
   "Frozen Locus": {
    "weapon": "Quarterstaff",
@@ -52,6 +1111,87 @@
     "Elemental Damage"
    ],
    "dps": 4077
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.092,
+    "CriticalWeakness": 0.134,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.28,
+    "Shocked": 0.28
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 43941
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.133,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.095,
+    "OnShockedGround": 0.28,
+    "Shocked": 0.28
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 21062
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.07,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 15667
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 6946
   },
   "Gathering Storm": {
    "weapon": "Quarterstaff",
@@ -73,13 +1213,13 @@
    ],
    "dps": 23853
   },
-  "Falling Thunder": {
-   "weapon": "Quarterstaff",
+  "Gas Grenade": {
+   "weapon": "Crossbow",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.101,
+    "CoveredInAsh": 0.093,
+    "CriticalWeakness": 0.107,
     "Intimidated": 0.1,
     "OnShockedGround": 0.23,
     "Shocked": 0.23
@@ -88,9 +1228,193 @@
     "I am the Thunder...",
     "I am the Blizzard...",
     "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 10595
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.057,
+    "CoveredInFrost": 0.119,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
     "Elemental Damage"
    ],
-   "dps": 73036
+   "dps": 23957
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.089,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 18120
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.199,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.122,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 62631
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.138,
+    "CriticalWeakness": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 34797
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 32135
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.144,
+    "CriticalWeakness": 0.11,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 115582
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.051,
+    "CriticalWeakness": 0.294,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.113,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Critical Chance",
+    "Elemental Damage"
+   ],
+   "dps": 55693
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.223,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "Moving": 0.202,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 12621
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.196,
+    "CriticalWeakness": 0.199,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.122,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 51515
   },
   "Ice Strike": {
    "weapon": "Quarterstaff",
@@ -112,6 +1436,85 @@
    ],
    "dps": 67083
   },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 38320
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.066,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 56595
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.192,
+    "CriticalWeakness": 0.191,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Critical Chance"
+   ],
+   "dps": 134174
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 4668
+  },
   "Killing Palm": {
    "weapon": "Quarterstaff",
    "class": "Monk",
@@ -132,6 +1535,994 @@
    ],
    "dps": 54070
   },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.275,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.141,
+    "OnShockedGround": 0.722,
+    "Shocked": 0.722,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 13762
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.066,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 37391
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.107,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 87582
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 25211
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.133,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.095,
+    "OnShockedGround": 0.28,
+    "Shocked": 0.28
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 32590
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 32438
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.093,
+    "CriticalWeakness": 0.19,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.13,
+    "OnShockedGround": 0.28,
+    "Shocked": 0.28
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 33351
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.066,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 12928
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.131,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.108,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 36313
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.158,
+    "CriticalWeakness": 0.199,
+    "Crushed": 0.079,
+    "Intimidated": 0.1,
+    "Moving": 0.212,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Sunder my Enemies..."
+   ],
+   "dps": 6843
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.207,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.105,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 53290
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 105323
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.33,
+    "Shocked": 0.33
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 135625
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 85474
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 5464
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.156,
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.217,
+    "Crushed": 0.068,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 22021
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.091,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 23633
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 145738
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.258,
+    "CriticalWeakness": 0.122,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 15197
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.223,
+    "CriticalWeakness": 0.261,
+    "Crushed": 0.091,
+    "Intimidated": 0.1,
+    "Moving": 0.345,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 7507
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 4238
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.263,
+    "CriticalWeakness": 0.123,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 17840
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 194671
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Critical Chance"
+   ],
+   "dps": 33628
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.192,
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.11,
+    "Intimidated": 0.1,
+    "Moving": 0.129,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Thunder..."
+   ],
+   "dps": 375
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 8022
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 19636
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.119,
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.145,
+    "Crushed": 0.056,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 17528
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 34280
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 25961
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 4364
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 3136
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.09,
+    "CriticalWeakness": 0.13,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 57850
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.095,
+    "CriticalWeakness": 0.106,
+    "Electrocuted": 1.005,
+    "Frozen": 1.005,
+    "HeavyStunned": 1.005,
+    "Immobilised": 1.005,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Pinned": 1.005,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 13473
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.165,
+    "CriticalWeakness": 0.254,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.169,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 146845
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.139,
+    "CriticalWeakness": 0.151,
+    "Intimidated": 0.1,
+    "Moving": 0.075,
+    "OnProfaneGround": 0.151,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.093
+   },
+   "ascendancy_nodes": [
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance",
+    "I am the Thunder...",
+    "Elemental Damage"
+   ],
+   "dps": 76722
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.183,
+    "CriticalWeakness": 0.25,
+    "Crushed": 0.082,
+    "Intimidated": 0.1,
+    "Moving": 0.167,
+    "OnProfaneGround": 0.093,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Sunder my Enemies...",
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 6768
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.183,
+    "CriticalWeakness": 0.3,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 37110
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance",
+    "I am the Blizzard...",
+    "Elemental Damage"
+   ],
+   "dps": 50713
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.092,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 7381
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.167,
+    "CriticalWeakness": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Critical Chance"
+   ],
+   "dps": 25181
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.07,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 18446
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.1,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 42831
+  },
   "Storm Wave": {
    "weapon": "Quarterstaff",
    "class": "Monk",
@@ -150,6 +2541,154 @@
     "Elemental Damage"
    ],
    "dps": 67965
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 14515
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Blinded": 0.087,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.253,
+    "Intimidated": 0.1,
+    "Maimed": 0.058,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.328,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Sunder my Enemies...",
+    "Critical Chance"
+   ],
+   "dps": 1
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 8102
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.068,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 14864
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.23,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 51407
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.053,
+    "CoveredInAsh": 0.139,
+    "CriticalWeakness": 0.109,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 59292
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Blinded": 0.087,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.253,
+    "Intimidated": 0.1,
+    "Maimed": 0.058,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.328,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Sunder my Enemies...",
+    "Critical Chance"
+   ],
+   "dps": 1
   },
   "Tempest Bell": {
    "weapon": "Quarterstaff",
@@ -172,44 +2711,6 @@
    ],
    "dps": 18499
   },
-  "Siphoning Strike": {
-   "weapon": "Quarterstaff",
-   "class": "Monk",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.09,
-    "CriticalWeakness": 0.13,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.116,
-    "OnShockedGround": 0.23,
-    "Shocked": 0.23
-   },
-   "ascendancy_nodes": [
-    "Elemental Damage",
-    "I am the Thunder...",
-    "Elemental Damage",
-    "Critical Chance"
-   ],
-   "dps": 57850
-  },
-  "Shattering Palm": {
-   "weapon": "Quarterstaff",
-   "class": "Monk",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.086,
-    "CriticalWeakness": 0.1,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.23,
-    "Shocked": 0.23
-   },
-   "ascendancy_nodes": [
-    "Elemental Damage",
-    "I am the Thunder...",
-    "Elemental Damage"
-   ],
-   "dps": 19636
-  },
   "Tempest Flurry": {
    "weapon": "Quarterstaff",
    "class": "Monk",
@@ -229,6 +2730,140 @@
    ],
    "dps": 48494
   },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.24,
+    "CriticalWeakness": 0.224,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.108,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 38133
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 16691
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.283,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.13,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 45970
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.068,
+    "CriticalWeakness": 0.107,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 23361
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.067,
+    "CriticalWeakness": 0.168,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 9897
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.071,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 31464
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.152,
+    "Crushed": 0.077,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.068,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 11350
+  },
   "Vaulting Impact": {
    "weapon": "Quarterstaff",
    "class": "Monk",
@@ -243,6 +2878,127 @@
     "Shocked": 0.2
    },
    "dps": 9376
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 33547
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.191,
+    "CriticalWeakness": 0.216,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 82089
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "I am the Thunder...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 20209
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.494,
+    "CriticalWeakness": 0.194,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.141,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 24160
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 8513
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.067,
+    "CriticalWeakness": 0.106,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "Elemental Damage",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 17968
   },
   "Wave of Frost": {
    "weapon": "Quarterstaff",
@@ -284,6 +3040,40 @@
    ],
    "dps": 15073
   },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.356,
+    "CriticalWeakness": 0.171,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 6474
+  },
   "Wind Blast": {
    "weapon": "Quarterstaff",
    "class": "Monk",
@@ -303,7 +3093,85 @@
     "Critical Chance"
    ],
    "dps": 49176
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.199,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.083,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 11155
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.227,
+    "CriticalWeakness": 0.199,
+    "Crushed": 0.116,
+    "Intimidated": 0.1,
+    "Moving": 0.189,
+    "OnProfaneGround": 0.085,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Critical Chance",
+    "Critical Chance"
+   ],
+   "dps": 10888
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.135,
+    "CriticalWeakness": 0.112,
+    "Crushed": 0.07,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.23,
+    "Shocked": 0.23
+   },
+   "ascendancy_nodes": [
+    "I am the Thunder...",
+    "I am the Blizzard...",
+    "Elemental Damage",
+    "Elemental Damage",
+    "Critical Chance"
+   ],
+   "dps": 16827
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.058,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 04:49"
+ "updated": "2026-11-25 15:10"
 }

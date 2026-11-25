@@ -1,11 +1,57 @@
 {
  "skills": {
-  "Electrocuting Arrow": {
-   "weapon": "Bow",
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Arc": {
+   "weapon": "Wand",
    "class": "Ranger",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 67640
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -15,7 +61,318 @@
     "Skill Speed",
     "Skill Speed"
    ],
-   "dps": 24643
+   "dps": 1515
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 59084
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 91069
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.212,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 133240
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.053,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 1
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.271,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 205568
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.289,
+    "CriticalWeakness": 0.134,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 11901
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 52260
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.09,
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.129,
+    "Intimidated": 0.1,
+    "Moving": 0.206,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 4036
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10672
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.222,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 71222
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 124040
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.223,
+    "CriticalWeakness": 0.198,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.213,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10462
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CoveredInFrost": 0.065,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 3718
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.322,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 9720
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CriticalWeakness": 0.185,
+    "Intimidated": 0.1,
+    "Moving": 0.317,
+    "OnProfaneGround": 0.087,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Overwhelming Toxicity",
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 58301
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 29160
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.464,
+    "CriticalWeakness": 0.264,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 6223
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.135,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 10095
   },
   "Detonating Arrow": {
    "weapon": "Bow",
@@ -23,8 +380,9 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.168,
-    "CriticalWeakness": 0.095,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -32,81 +390,32 @@
     "Skill Speed",
     "Skill Speed"
    ],
-   "dps": 18889
+   "dps": 29488
   },
-  "Gas Arrow": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.091,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 7909
-  },
-  "Freezing Salvo": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.099,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 13919
-  },
-  "Escape Shot": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.082,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 11928
-  },
-  "Fragments Of The Past": {
-   "weapon": "Bow",
+  "Devour": {
+   "weapon": "Talisman",
    "class": "Ranger",
    "error": null,
    "gains": {
     "CoveredInAsh": 0.112,
-    "CriticalWeakness": 0.096,
+    "CriticalWeakness": 0.121,
     "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
    },
    "ascendancy_nodes": [
     "Skill Speed",
     "Skill Speed"
    ],
-   "dps": 10593
+   "dps": 78374
   },
-  "Lightning Rod": {
-   "weapon": "Bow",
+  "Earthquake": {
+   "weapon": "One Hand Mace",
    "class": "Ranger",
    "error": null,
    "gains": {
+    "CoveredInAsh": 0.121,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -116,154 +425,37 @@
     "Skill Speed",
     "Skill Speed"
    ],
-   "dps": 13500
+   "dps": 26149
   },
-  "Lightning Arrow": {
-   "weapon": "Bow",
+  "Disengage": {
+   "weapon": "Spear",
    "class": "Ranger",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
+    "ArmourBroken": 0.234,
+    "CriticalWeakness": 0.201,
+    "Crushed": 0.103,
     "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 20163
-  },
-  "Ice Shot": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.099,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 28758
-  },
-  "Magnetic Salvo": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 7027
-  },
-  "Rain of Arrows": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.107,
-    "CriticalWeakness": 0.096,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 85842
-  },
-  "Poisonburst Arrow": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.233,
-    "CriticalWeakness": 0.138,
-    "Crushed": 0.081,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.069,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 10119
-  },
-  "Shockchain Arrow": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 13793
-  },
-  "Shockwave Totem": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.109,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 2236
-  },
-  "Snipe": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.223,
-    "CriticalWeakness": 0.162,
-    "Crushed": 0.076,
-    "Intimidated": 0.1,
-    "Moving": 0.143,
+    "Moving": 0.144,
     "OnProfaneGround": 0.082,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Skill Speed",
-    "Poison Effect",
     "Skill Speed"
    ],
-   "dps": 3460
+   "dps": 7637
   },
-  "Spiral Volley": {
+  "Electrocuting Arrow": {
    "weapon": "Bow",
    "class": "Ranger",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.089,
-    "CriticalWeakness": 0.096,
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -271,81 +463,14 @@
     "Skill Speed",
     "Skill Speed"
    ],
-   "dps": 9432
+   "dps": 37561
   },
-  "Stormcaller Arrow": {
-   "weapon": "Bow",
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
    "class": "Ranger",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 4520
-  },
-  "Tornado Shot": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.079,
-    "CriticalWeakness": 0.096,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 15868
-  },
-  "Vine Arrow": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.09,
-    "CriticalWeakness": 0.096,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 16648
-  },
-  "Toxic Growth": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.109,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Skill Speed",
-    "Skill Speed"
-   ],
-   "dps": 5110
-  },
-  "Voltaic Barrier": {
-   "weapon": "Bow",
-   "class": "Ranger",
-   "error": null,
-   "gains": {
+    "CoveredInAsh": 0.13,
     "CriticalWeakness": 0.125,
     "Intimidated": 0.1,
     "OnProfaneGround": 0.062,
@@ -356,8 +481,2328 @@
     "Skill Speed",
     "Skill Speed"
    ],
-   "dps": 4699
+   "dps": 13660
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 2744
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.213,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 129708
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.206,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 35243
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 67565
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 18753
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 29532
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 25403
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.182,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 1592
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 13499
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 57038
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 33608
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 70611
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.185,
+    "CriticalWeakness": 0.183
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 139817
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.06,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 67857
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.311,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.135,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.083
+   },
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.157,
+    "CriticalWeakness": 0.151,
+    "Crushed": 0.074,
+    "Intimidated": 0.1,
+    "Moving": 0.224,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Poison Effect"
+   ],
+   "dps": 4766
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 64072
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.122,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 6826
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 16833
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 22284
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 23412
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.256,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 19368
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 88757
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 3247
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 34829
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 17088
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 12778
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 5520
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 7974
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.124,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.067,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 19500
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 19037
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 14632
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 55380
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.145,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 27226
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 26014
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.282,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.12,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Poison Effect",
+    "Skill Speed"
+   ],
+   "dps": 56623
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.158,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 99367
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.227,
+    "CriticalWeakness": 0.174,
+    "Crushed": 0.116,
+    "Intimidated": 0.1,
+    "Moving": 0.189,
+    "OnProfaneGround": 0.092,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 13081
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 45512
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 46701
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 53308
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 31765
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 3811
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 126106
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.151,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 42949
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.263,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.1
+   },
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 30731
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 69502
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 21122
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 26227
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 25493
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 10564
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.133,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 26336
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 29760
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.176,
+    "CriticalWeakness": 0.16,
+    "Crushed": 0.088,
+    "Intimidated": 0.1,
+    "Moving": 0.234,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Poison Effect"
+   ],
+   "dps": 6100
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.197,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 47216
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 86488
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.188,
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.205,
+    "Crushed": 0.082,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 19433
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 4425
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 106675
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 18670
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.23,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.072,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 107761
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.258,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 15852
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.228,
+    "CriticalWeakness": 0.237,
+    "Crushed": 0.092,
+    "Intimidated": 0.1,
+    "Moving": 0.333,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 7541
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.263,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 18608
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 3264
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 162649
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.193,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.115,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 30265
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 6276
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.216,
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.111,
+    "Intimidated": 0.1,
+    "Moving": 0.145,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 333
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 15853
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.149,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.07,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 14686
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 20603
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 28198
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.153,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 3419
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 2544
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 45914
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.096,
+    "Electrocuted": 1.006,
+    "Frozen": 1.006,
+    "HeavyStunned": 1.006,
+    "Immobilised": 1.006,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.006,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 10758
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.171,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 122153
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CoveredInFrost": 0.135,
+    "CriticalWeakness": 0.142,
+    "Intimidated": 0.1,
+    "Moving": 0.086,
+    "OnProfaneGround": 0.155,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 65129
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.203,
+    "CriticalWeakness": 0.199,
+    "Crushed": 0.091,
+    "Intimidated": 0.1,
+    "Moving": 0.174,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Poison Effect",
+    "Skill Speed"
+   ],
+   "dps": 6483
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 32034
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 45009
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 14695
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 21502
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 5771
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 34866
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 11431
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 54238
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.053,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 1
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 6751
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 11801
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.098,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 53635
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.065,
+    "CoveredInAsh": 0.152,
+    "CriticalWeakness": 0.098,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 51206
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.053,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13633
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.241,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 38411
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 38616
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 16691
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 38471
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 17601
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 25672
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 8444
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.314,
+    "CriticalWeakness": 0.143,
+    "Crushed": 0.115,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 8051
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 27284
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.208,
+    "CriticalWeakness": 0.147,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.216,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 9566
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.205,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 76743
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 16335
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.196,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 6897
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.496,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.146,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 24219
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13571
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 29936
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 11614
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 39037
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.358,
+    "CriticalWeakness": 0.14,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 6721
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.282,
+    "CriticalWeakness": 0.139,
+    "Crushed": 0.117,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 8277
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.17,
+    "Crushed": 0.118,
+    "Intimidated": 0.1,
+    "Moving": 0.179,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Skill Speed"
+   ],
+   "dps": 11145
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.185,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.095,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.052,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Skill Speed",
+    "Poison Effect",
+    "Skill Speed"
+   ],
+   "dps": 12965
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Ranger",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.058,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 03:57"
+ "updated": "2026-11-25 09:01"
 }

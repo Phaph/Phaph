@@ -1,6 +1,1463 @@
 {
  "skills": {
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 60052
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
+   },
+   "dps": 65374
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.118,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 1491
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 60851
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 87311
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.212,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.271,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 199413
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.274,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 13625
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 54342
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.073,
+    "Intimidated": 0.1,
+    "Maimed": 0.068,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.084,
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.129,
+    "Intimidated": 0.1,
+    "Moving": 0.193,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 4314
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.222,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 68837
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10672
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 122367
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.216,
+    "CriticalWeakness": 0.171,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "Moving": 0.205,
+    "OnProfaneGround": 0.122,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 12189
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.074,
+    "CoveredInFrost": 0.055,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 3802
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.302,
+    "CriticalWeakness": 0.176,
+    "Crushed": 0.142,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 11218
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.065,
+    "CriticalWeakness": 0.204,
+    "Intimidated": 0.1,
+    "Moving": 0.362,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 50891
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.464,
+    "CriticalWeakness": 0.264,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.137,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 10351
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.17,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 29537
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 82957
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 27140
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.211,
+    "CriticalWeakness": 0.198,
+    "Crushed": 0.099,
+    "Intimidated": 0.1,
+    "Moving": 0.144,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 9015
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 36336
+  },
   "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 14742
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 2715
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.213,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 131103
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.206,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 18706
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 30833
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 25034
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.182,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 1592
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 13400
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 60088
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 36077
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 70569
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 133299
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.186,
+    "CriticalWeakness": 0.183
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 139056
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.06,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 68115
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.309,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.134,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.083
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 91688
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.156,
+    "CriticalWeakness": 0.151,
+    "Crushed": 0.073,
+    "Intimidated": 0.1,
+    "Moving": 0.222,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 4810
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.246,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 73223
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 19436
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.118,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 6716
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 16600
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 24778
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 21556
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.256,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18158
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.076,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 3195
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 36866
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 18089
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 12382
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.087,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 5408
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.122,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.069,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 22035
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 8292
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CoveredInFrost": 0.119,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 18543
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 14359
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.142,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 26202
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 25491
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.051,
+    "CriticalWeakness": 0.28,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.119,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 53241
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.159,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 111350
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.225,
+    "CriticalWeakness": 0.175,
+    "Crushed": 0.115,
+    "Intimidated": 0.1,
+    "Moving": 0.196,
+    "OnProfaneGround": 0.092,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 12339
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 44056
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CoveredInFrost": 0.118,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 55805
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 45177
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 30299
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 126544
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 3763
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.151,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 45401
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.263,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.1
+   },
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 29730
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 74238
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 27632
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 20107
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 25077
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.116,
+    "CriticalWeakness": 0.176,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.133,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 25726
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 10319
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 29145
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.197,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.178,
+    "CriticalWeakness": 0.16,
+    "Crushed": 0.088,
+    "Intimidated": 0.1,
+    "Moving": 0.236,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 6053
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Perfect Strike": {
    "weapon": "One Hand Mace",
    "class": "Warrior",
    "error": null,
@@ -15,62 +1472,79 @@
     "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 14512
+   "dps": 89942
   },
-  "Boneshatter": {
-   "weapon": "One Hand Mace",
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.134,
-    "CriticalWeakness": 0.096,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Melee Damage",
-    "Fire Damage"
-   ],
-   "dps": 24182
-  },
-  "Armour Breaker": {
-   "weapon": "One Hand Mace",
-   "class": "Warrior",
-   "error": null,
-   "gains": {},
-   "ascendancy_nodes": [
-    "Melee Damage",
-    "Fire Damage"
-   ],
-   "dps": 25423
-  },
-  "Earthquake": {
-   "weapon": "One Hand Mace",
-   "class": "Warrior",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.134,
+    "CoveredInAsh": 0.106,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
    "ascendancy_nodes": [
-    "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 12055
+   "dps": 4336
   },
-  "Forge Hammer": {
-   "weapon": "One Hand Mace",
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.13,
-    "CriticalWeakness": 0.119,
+    "ArmourBroken": 0.178,
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.205,
+    "Crushed": 0.078,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.11,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 19146
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 108145
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -78,18 +1552,70 @@
     "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 8600
+   "dps": 20080
   },
-  "Hammer of the Gods": {
-   "weapon": "One Hand Mace",
+  "Rain of Arrows": {
+   "weapon": "Bow",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.101,
-    "CoveredInAsh": 0.118,
-    "CriticalWeakness": 0.098,
-    "Crushed": 0.062,
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.23,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.072,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 111823
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.249,
+    "CriticalWeakness": 0.099,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 18160
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.236,
+    "Crushed": 0.093,
+    "Intimidated": 0.1,
+    "Moving": 0.335,
+    "OnProfaneGround": 0.101,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 8884
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -97,48 +1623,98 @@
     "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 50513
+   "dps": 3530
   },
-  "Leap Slam": {
-   "weapon": "One Hand Mace",
+  "Rend": {
+   "weapon": "Talisman",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.127,
-    "CriticalWeakness": 0.096,
+    "ArmourBroken": 0.252,
+    "CriticalWeakness": 0.13,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 21680
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
    "ascendancy_nodes": [
-    "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 26507
+   "dps": 155993
   },
-  "Molten Blast": {
-   "weapon": "One Hand Mace",
+  "Raise Zombie": {
+   "weapon": "Sceptre",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.135,
-    "CriticalWeakness": 0.119,
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.109,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.193,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Fire Damage"
    ],
-   "dps": 24633
+   "dps": 30602
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.208,
+    "CoveredInAsh": 0.138,
+    "CriticalWeakness": 0.11,
+    "Intimidated": 0.1,
+    "Moving": 0.14,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 346
   },
   "Rolling Slam": {
    "weapon": "One Hand Mace",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.127,
+    "CoveredInAsh": 0.123,
     "CriticalWeakness": 0.157,
     "Intimidated": 0.1,
     "OnProfaneGround": 0.109,
@@ -149,15 +1725,15 @@
     "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 3529
+   "dps": 6732
   },
-  "Perfect Strike": {
-   "weapon": "One Hand Mace",
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.138,
-    "CriticalWeakness": 0.096,
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.1,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
@@ -166,24 +1742,7 @@
     "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 39962
-  },
-  "Stampede": {
-   "weapon": "One Hand Mace",
-   "class": "Warrior",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.134,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "ascendancy_nodes": [
-    "Melee Damage",
-    "Fire Damage"
-   ],
-   "dps": 16073
+   "dps": 16717
   },
   "Shield Wall": {
    "weapon": "One Hand Mace",
@@ -205,35 +1764,48 @@
    ],
    "dps": 16528
   },
-  "Supercharged Slam": {
-   "weapon": "Two Hand Mace",
+  "Shockchain Arrow": {
+   "weapon": "Bow",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.199,
-    "CriticalWeakness": 0.158,
-    "Crushed": 0.124,
+    "CoveredInAsh": 0.098,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
-    "Moving": 0.158,
-    "OnProfaneGround": 0.113,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
    "ascendancy_nodes": [
-    "Melee Damage"
+    "Fire Damage"
    ],
-   "dps": 43885
+   "dps": 20242
   },
-  "Sunder": {
-   "weapon": "One Hand Mace",
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.171,
-    "CoveredInAsh": 0.068,
-    "CriticalWeakness": 0.099,
-    "Crushed": 0.098,
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 27017
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -241,14 +1813,303 @@
     "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 19075
+   "dps": 3616
   },
-  "Volcanic Fissure": {
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 2510
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 48530
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.118,
+    "CriticalWeakness": 0.096,
+    "Electrocuted": 1.006,
+    "Frozen": 1.006,
+    "HeavyStunned": 1.006,
+    "Immobilised": 1.006,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.006,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 10587
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.17,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 123098
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CoveredInFrost": 0.135,
+    "CriticalWeakness": 0.142,
+    "Intimidated": 0.1,
+    "Moving": 0.087,
+    "OnProfaneGround": 0.156,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "dps": 64098
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.201,
+    "CriticalWeakness": 0.238,
+    "Crushed": 0.091,
+    "Intimidated": 0.1,
+    "Moving": 0.188,
+    "OnProfaneGround": 0.078,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 6187
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 33197
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 22627
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 6212
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.087,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 13401
+  },
+  "Stampede": {
    "weapon": "One Hand Mace",
    "class": "Warrior",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.136,
+    "CoveredInAsh": 0.123,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -258,8 +2119,577 @@
     "Melee Damage",
     "Fire Damage"
    ],
-   "dps": 17337
+   "dps": 36187
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 56665
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 11288
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 11553
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.073,
+    "Intimidated": 0.1,
+    "Maimed": 0.068,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 1
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.098,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 6633
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.062,
+    "CoveredInAsh": 0.152,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 58029
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.226,
+    "CriticalWeakness": 0.097,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 61227
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.073,
+    "Intimidated": 0.1,
+    "Maimed": 0.068,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.181,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.136,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 14631
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.241,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 37149
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 40631
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 38471
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 16691
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.087,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 19476
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 24891
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 8191
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.302,
+    "CriticalWeakness": 0.142,
+    "Crushed": 0.11,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 7922
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.199,
+    "CriticalWeakness": 0.145,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "Moving": 0.218,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 11326
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 26466
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.205,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 76942
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 17610
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.497,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.146,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.198,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 6596
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 14037
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CoveredInFrost": 0.118,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 31345
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 11594
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.333,
+    "CriticalWeakness": 0.138,
+    "Crushed": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 7787
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 41263
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.272,
+    "CriticalWeakness": 0.139,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Fire Damage"
+   ],
+   "dps": 8119
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.219,
+    "CriticalWeakness": 0.169,
+    "Crushed": 0.118,
+    "Intimidated": 0.1,
+    "Moving": 0.183,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage"
+   ],
+   "dps": 12894
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.171,
+    "CriticalWeakness": 0.101,
+    "Crushed": 0.092,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.051,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Melee Damage",
+    "Fire Damage"
+   ],
+   "dps": 15151
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Warrior",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.058,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 04:03"
+ "updated": "2026-11-25 10:09"
 }

@@ -1,5 +1,260 @@
 {
  "skills": {
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 61909
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 66798
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 1625
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 61367
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 94960
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.212,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128861
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.289,
+    "CriticalWeakness": 0.134,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 11225
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.271,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 199413
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.073,
+    "Intimidated": 0.1,
+    "Maimed": 0.068,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons"
+   ],
+   "dps": 1
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 54877
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.081,
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.13,
+    "Intimidated": 0.1,
+    "Moving": 0.187,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 4454
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10672
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.222,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 68837
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 125031
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.057,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 4111
+  },
   "Cross Slash": {
    "weapon": "Talisman",
    "class": "Druid",
@@ -16,73 +271,110 @@
    },
    "dps": 10069
   },
-  "Flame Breath": {
-   "weapon": "Talisman",
+  "Cull The Weak": {
+   "weapon": "Spear",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.177,
-    "CriticalWeakness": 0.183
-   },
-   "ascendancy_nodes": [
-    "Elemental Damage",
-    "Elemental Damage"
-   ],
-   "dps": 141398
-  },
-  "Fury of the Mountain": {
-   "weapon": "Talisman",
-   "class": "Druid",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.121,
-    "CriticalWeakness": 0.12,
+    "ArmourBroken": 0.322,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.14,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.096,
-    "OnShockedGround": 0.25,
-    "Shocked": 0.25
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
    },
-   "ascendancy_nodes": [
-    "Elemental Damage",
-    "Elemental Damage"
-   ],
-   "dps": 18054
+   "dps": 9208
   },
-  "Lunar Assault": {
-   "weapon": "Talisman",
+  "Detonate Living": {
+   "weapon": "Wand",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.098,
-    "CriticalWeakness": 0.12,
+    "ArmourBroken": 0.464,
+    "CriticalWeakness": 0.264,
+    "Crushed": 0.148,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.096,
-    "OnShockedGround": 0.25,
-    "Shocked": 0.25
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
    },
-   "ascendancy_nodes": [
-    "Elemental Damage",
-    "Elemental Damage"
-   ],
-   "dps": 27866
+   "dps": 5989
   },
-  "Furious Slam": {
-   "weapon": "Talisman",
+  "Detonate Dead": {
+   "weapon": "Wand",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.108,
-    "CriticalWeakness": 0.121,
+    "ArmourBroken": 0.064,
+    "CriticalWeakness": 0.205,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.097,
-    "OnShockedGround": 0.25,
-    "Shocked": 0.25
+    "Moving": 0.357,
+    "OnProfaneGround": 0.105,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 51611
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 28543
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
    },
    "ascendancy_nodes": [
     "Elemental Damage",
     "Elemental Damage"
    ],
-   "dps": 37320
+   "dps": 10625
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.164,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 29521
   },
   "Devour": {
    "weapon": "Talisman",
@@ -102,15 +394,1062 @@
    ],
    "dps": 83984
   },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 39297
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.116,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 27464
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 14736
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.2,
+    "CriticalWeakness": 0.195,
+    "Crushed": 0.088,
+    "Intimidated": 0.1,
+    "Moving": 0.128,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 8399
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CoveredInFrost": 0.051,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 3006
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.213,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 129235
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.206,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 66072
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.122,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 32985
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.076,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 20190
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.116,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 27027
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.119,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 14503
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.177,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 1637
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.074,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 61386
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 69666
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 36215
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.177,
+    "CriticalWeakness": 0.183
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 141398
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.194,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 132597
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.06,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 67153
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.179,
+    "CriticalWeakness": 0.314,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.136,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.08
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 95263
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 60581
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.139,
+    "CriticalWeakness": 0.148,
+    "Crushed": 0.065,
+    "Intimidated": 0.1,
+    "Moving": 0.198,
+    "OnProfaneGround": 0.075,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 5382
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 19583
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 7306
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.1,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 18241
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 23260
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.194,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 27367
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 23122
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.194,
+    "CriticalWeakness": 0.256,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 18720
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 87741
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 37320
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CoveredInFrost": 0.051,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 3500
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 18054
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 13427
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 5867
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 9043
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.117,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 20280
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.111,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.06,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 21037
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 15563
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 54728
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.137,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 29261
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.059,
+    "CriticalWeakness": 0.282,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.12,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 56689
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 27633
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.155,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 105491
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.229,
+    "CriticalWeakness": 0.135,
+    "Crushed": 0.116,
+    "Intimidated": 0.1,
+    "Moving": 0.189,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 12025
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 45014
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 48745
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 32904
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.117,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 56786
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 124768
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.122,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 4026
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.151,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 45914
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.263,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 12133
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 32152
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 74904
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 21659
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.098,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 27866
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 27399
+  },
   "Oil Barrage": {
    "weapon": "Talisman",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.105,
-    "CriticalWeakness": 0.115,
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.176,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.141,
+    "OnProfaneGround": 0.133,
     "OnShockedGround": 0.25,
     "Shocked": 0.25
    },
@@ -118,7 +1457,233 @@
     "Turning of the Seasons",
     "Elemental Damage"
    ],
-   "dps": 128073
+   "dps": 30004
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 11133
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 30979
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.197,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 46659
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.168,
+    "CriticalWeakness": 0.158,
+    "Crushed": 0.084,
+    "Intimidated": 0.1,
+    "Moving": 0.223,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 6401
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 90354
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 4699
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.168,
+    "CoveredInAsh": 0.092,
+    "CriticalWeakness": 0.204,
+    "Crushed": 0.073,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 20290
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.1,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 116541
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 85474
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.095,
+    "CriticalWeakness": 0.229,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.072,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 123057
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 21664
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.258,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 15018
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.226,
+    "CriticalWeakness": 0.238,
+    "Crushed": 0.091,
+    "Intimidated": 0.1,
+    "Moving": 0.339,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 7319
   },
   "Rend": {
    "weapon": "Talisman",
@@ -135,35 +1700,55 @@
    },
    "dps": 17628
   },
-  "Wing Blast": {
-   "weapon": "Talisman",
+  "Rapid Assault": {
+   "weapon": "Spear",
    "class": "Druid",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.229,
-    "CriticalWeakness": 0.17,
-    "Crushed": 0.117,
+    "CoveredInAsh": 0.096,
+    "CriticalWeakness": 0.125,
     "Intimidated": 0.1,
-    "Moving": 0.185,
-    "OnProfaneGround": 0.089,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 10654
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 3586
   },
-  "Rampage": {
-   "weapon": "Talisman",
+  "Raise Zombie": {
+   "weapon": "Sceptre",
    "class": "Druid",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.258,
-    "CriticalWeakness": 0.1,
-    "Crushed": 0.145,
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 15018
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 167480
   },
   "Rolling Magma": {
    "weapon": "Talisman",
@@ -182,7 +1767,1023 @@
     "Elemental Damage"
    ],
    "dps": 30849
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.116,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 6810
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.203,
+    "CoveredInAsh": 0.135,
+    "CriticalWeakness": 0.11,
+    "Intimidated": 0.1,
+    "Moving": 0.136,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 354
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 16923
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.131,
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.131,
+    "Crushed": 0.061,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 15600
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 29377
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.092,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 22070
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 3684
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.119,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 2697
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 49088
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.096,
+    "Electrocuted": 1.005,
+    "Frozen": 1.005,
+    "HeavyStunned": 1.005,
+    "Immobilised": 1.005,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.005,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 11515
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 11924
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16024
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8345
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.166,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 127155
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.054,
+    "CoveredInFrost": 0.134,
+    "CriticalWeakness": 0.142,
+    "Intimidated": 0.1,
+    "Moving": 0.083,
+    "OnProfaneGround": 0.155,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 67230
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.188,
+    "CriticalWeakness": 0.235,
+    "Crushed": 0.085,
+    "Intimidated": 0.1,
+    "Moving": 0.175,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 6634
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.194,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 33023
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 44450
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.177,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 22924
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 14520
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 6193
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 57620
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.116,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 36618
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 12410
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.073,
+    "Intimidated": 0.1,
+    "Maimed": 0.068,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons"
+   ],
+   "dps": 1
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.092,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 7231
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 12551
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.098,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 50812
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.058,
+    "CoveredInAsh": 0.149,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 54677
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.073,
+    "Intimidated": 0.1,
+    "Maimed": 0.068,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons"
+   ],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.181,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.136,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 14842
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.241,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 37149
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 41118
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 39655
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 16691
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 19645
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 26967
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 8909
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.253,
+    "CriticalWeakness": 0.139,
+    "Crushed": 0.092,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 9456
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.207,
+    "CriticalWeakness": 0.146,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.219,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 28777
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.205,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage"
+   ],
+   "dps": 75864
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 17445
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.497,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.146,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.198,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 7207
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 15210
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.117,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 31884
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 11722
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.358,
+    "CriticalWeakness": 0.14,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 6367
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.233,
+    "CriticalWeakness": 0.137,
+    "Crushed": 0.097,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.068,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 9462
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Elemental Damage",
+    "Elemental Damage"
+   ],
+   "dps": 41732
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.229,
+    "CriticalWeakness": 0.17,
+    "Crushed": 0.117,
+    "Intimidated": 0.1,
+    "Moving": 0.185,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.157,
+    "CriticalWeakness": 0.101,
+    "Crushed": 0.081,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.051,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Turning of the Seasons",
+    "Elemental Damage"
+   ],
+   "dps": 14447
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.058,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 04:53"
+ "updated": "2026-11-25 17:06"
 }
