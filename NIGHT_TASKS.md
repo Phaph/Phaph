@@ -155,6 +155,13 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **17:40 A/B main half so far: Gemling Rapid Shot 5.21M boss / 3.74M map on main vs 4.42M / 4.03M on the branch (-15% boss, +8% map).** Same supports, other uniques (main Hyrri's Ire + Mageblood, branch Grip of Kulemak +
   The Coming Calamity): maybe slot-order luck (22% on this skill), not shown. ~/asc_ab2.sh (starts after asc_ab.sh): Gemling and Titan, reversed and rotated, branch then main -> ~/asc_out/orders_*.json. Judge best of 3 and
   all three signs; don't merge before. Deadeye main 4.76M = path_luck_7, branch +21%: that is about Point Blank's 20%, which PoB counts by the enemy distance (49).
+- **18:15, A/B 4 of 5 (boss main -> branch, single order): Deadeye +21%, Titan +25%, Gemling -15%, Abyssal Lich Bonestorm 6.93M -> 5.80M (-16%, map -20%).** Abyssal's new passives cost it nothing (dropping any or all from the
+  branch build: 0% damage, -10% EHP); it ended on other uniques. So full rebuilds mix the fix with gear luck (Bonestorm's orders spread 50%).
+  **Paired test (respend only the ascendancy of 37 finished builds with the branch; ~/asc_pair.log, ~/asc_pair_rest.log, script ~/asc_out/pair2.py):** 1 loses damage (Wind Serpent's baseline -65%; the old code
+  does the same there: greedy's blind spot). EHP falls on 3 (Gemling -8, Titan -11, Amazon Earthquake -4%) where damage rose +35 / +48 / +2%. Old code respent on 10 of them (~/asc_pair_old.log + 2 by hand): the fix
+  itself is worth Deadeye +20% (Point Blank at 2 m), Gemling about +13% (+35 vs +19%), Abyssal Lich +12% EHP, Titan 0. The rest is respending late (50). Gate kept: best of 3 orders (asc_ab2) before merging.
+- My probe's PoB grew to 12.8 GB over ~30 loaded builds and was OOM-killed at 18:11 (that process only; the other containers are up). Long probes: a new PoB per build, --memory 4g.
+- 37's condition scans finished; matrix_asc runs (old code). Conditions: Infernalist is redone by ~/infernalist.sh after it.
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
@@ -555,8 +562,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     is never taken and its condition reads 0. Per skill, also try each notable (path included) with each condition (override addNodes), or take the passives again under the condition. Then the blind
     test (unlocked) again: Gemling is 32% of the ladder and was scored without its implants.
 
-49. [ ] (added 2026-11-25) Enemy distance: PoB's default is what every ranged build is scored at (Point Blank at full value, ranged accuracy penalty small). Find the default, decide a fair one per
+49. [ ] (2026-11-25 measured: PoB's default is 2 m. Saved builds not re-optimised, at 4 / 6 / 8 m: bow and crossbow -14 to -28 / -14 to -41 / -31 to -64%, spear -15 to -17 / -24 to -31 / -50 to -58%,
+    Bonestorm 0 at all. So attacks are flattered against spells. Script ~/asc_out/dist.py) (added 2026-11-25) Enemy distance: PoB's default is what every ranged build is scored at (Point Blank at full value, ranged accuracy penalty small). Find the default, decide a fair one per
     skill kind (melee / projectile) for boss and map, measure what it moves on 5 saved builds. Wide effect: A/B before any merge.
+
+50. [ ] (added 2026-11-25) Respend the ascendancy at the end of a build, keep it only if the score rises (it must compare: greedy alone lost 65% on one). On finished builds, respending with the old code:
+    Titan Earthquake +48% (EHP -11%), Gemling Rapid Shot +19% (EHP -18%), wand Bonestorm Infernalist +19%; most others 0. The points are chosen before gear, tree and supports are final. After 47.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
