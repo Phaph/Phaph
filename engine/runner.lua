@@ -1903,6 +1903,35 @@ function handlers.optimise_tree(cmd)
 	local shortlist = { [true] = nil, [false] = nil }
 	local sinceFull = { [true] = math.huge, [false] = math.huge }
 
+	-- Points a path costs: options of a choice passive (Gemling's implants, Deadeye's Point Blank / Far Shot) are free
+	-- once the choice itself is taken, as in PoB's CountAllocNodes.
+	local function pathCost(path)
+		local n = 0
+		for _, p in ipairs(path) do
+			if not p.isMultipleChoiceOption and p.isFreeAllocate == nil then n = n + 1 end
+		end
+		return n
+	end
+	-- The option of this choice that is already taken (only one can be).
+	local function choiceMade(node)
+		for _, parent in ipairs(node.linked or {}) do
+			if parent.isMultipleChoice then
+				for _, opt in ipairs(parent.linked) do
+					if opt.isMultipleChoiceOption and opt.alloc then return true end
+				end
+			end
+		end
+		return false
+	end
+
+	-- The names this ascendancy's passives carry: Abyssal Lich has its own name and id, but its passives say "Lich".
+	local ascNames = {}
+	for _, n in pairs(build.spec.allocNodes) do
+		if n.type == "AscendClassStart" and n.ascendancyName then ascNames[n.ascendancyName] = true end
+	end
+	if build.spec.curAscendClassBaseName then ascNames[build.spec.curAscendClassBaseName] = true end
+	if build.spec.curAscendClassName then ascNames[build.spec.curAscendClassName] = true end
+
 	local function eligible(node, ascend)
 		local isAsc = node.ascendancyName ~= nil
 		local reach = (node.type == "Normal" or ascend) and maxDist or farDist
@@ -1912,10 +1941,10 @@ function handlers.optimise_tree(cmd)
 		end
 		return not node.alloc and node.path and node.modKey and node.modKey ~= ""
 			and (node.type == "Normal" or node.type == "Notable" or node.type == "Keystone")
-			and #node.path <= reach
+			and pathCost(node.path) <= reach
 			and isAsc == ascend
-			and (not ascend or node.ascendancyName == build.spec.curAscendClassBaseName or node.ascendancyName == build.spec.curAscendClassName)
-			and not node.isMultipleChoiceOption
+			and (not ascend or ascNames[node.ascendancyName])
+			and (not node.isMultipleChoiceOption or (ascend and not choiceMade(node)))
 	end
 
 	local lastScan = { n = 0, top = {} }
@@ -1945,7 +1974,7 @@ function handlers.optimise_tree(cmd)
 			local out = calcFunc(override, useFullDPS)
 			evals = evals + 1
 			local gain = (dps(out) - d0) / d0 + defWeight * (ehp(out) - e0) / e0 + goalTerms(out, base)
-			table.insert(scored, { node = node, eff = gain / #node.path })
+			table.insert(scored, { node = node, eff = gain / math.max(pathCost(node.path), 1) })
 		end
 		table.sort(scored, function(a, b)
 			if a.eff ~= b.eff then return a.eff > b.eff end
@@ -1979,7 +2008,7 @@ function handlers.optimise_tree(cmd)
 			if have >= limit then break end
 			local node, eff = bestStep(ascend)
 			if not node then break end
-			if have + #node.path > limit then
+			if have + pathCost(node.path) > limit then
 				-- Path too long for the points left: try only short paths.
 				capDist = limit - have
 				sinceFull[ascend] = math.huge
@@ -1988,7 +2017,7 @@ function handlers.optimise_tree(cmd)
 				sinceFull[ascend] = math.huge
 				if not node then break end
 			end
-			local cost = #node.path
+			local cost = pathCost(node.path)
 			local pathIds = {}
 			for _, n in ipairs(node.path) do table.insert(pathIds, n.id) end   -- PoB clears node.path once allocated
 			build.spec:AllocNode(node)
@@ -2008,7 +2037,49 @@ function handlers.optimise_tree(cmd)
 		end
 	end
 
+	-- Ascendancy points left over: PoB calculates no gain for what is left (Tailwind, Mirage Deadeye, heavy stun
+	-- bonuses...), but no player leaves them unspent. Take whole passives that cost the build nothing, the toughest
+	-- first, notables before their small passives. Marked filler, so nobody reads them as a calculated gain.
+	local function fillAscendancy(limit)
+		while true do
+			local _, have = build.spec:CountAllocNodes()
+			if have >= limit then return end
+			local calcFunc, base = build.calcsTab:GetMiscCalculator()
+			local useFullDPS = useFull()
+			local d0, e0 = math.max(dps(base), 1), math.max(ehp(base), 1)
+			local best, bestKey
+			for _, node in pairs(build.spec.nodes) do
+				if eligible(node, true) and have + pathCost(node.path) <= limit then
+					local pathNodes = {}
+					for _, n in ipairs(node.path) do pathNodes[n] = true end
+					local out = calcFunc({ addNodes = pathNodes }, useFullDPS)
+					evals = evals + 1
+					local d, e = (dps(out) - dps(base)) / d0, (ehp(out) - ehp(base)) / e0   -- a build with no damage yet loses none
+					if d >= -0.005 and e >= -0.005 then
+						local key = { node.type ~= "Normal" and 1 or 0, (d + e) / math.max(pathCost(node.path), 1), -pathCost(node.path), -node.id }
+						local better = not best
+						for i = 1, 4 do
+							if better or key[i] < bestKey[i] - 1e-9 then break end
+							if key[i] > bestKey[i] + 1e-9 then better = true end
+						end
+						if better then best, bestKey = node, key end
+					end
+				end
+			end
+			if not best then return end
+			local cost, pathIds = pathCost(best.path), {}
+			for _, n in ipairs(best.path) do table.insert(pathIds, n.id) end
+			build.spec:AllocNode(best)
+			build.spec:AddUndoState()
+			build.buildFlag = true
+			frame()
+			table.insert(steps, { node = best.dn, id = best.id, path = pathIds, type = best.type, cost = cost,
+				gain_per_point = 0, ascendancy = true, filler = true })
+		end
+	end
+
 	spend(true, ascBudget)
+	if cmd.fill_ascendancy ~= false then fillAscendancy(ascBudget) end
 	spend(false, budget)
 	local buildSeconds = os.clock() - t0
 
@@ -2128,6 +2199,11 @@ function handlers.optimise_tree(cmd)
 
 	-- The order to take passives, after swaps: steps whose target was swapped out are dropped,
 	-- and any of their path passives still in the tree move to the next step that needs them.
+	local function idCost(ids)
+		local path = {}
+		for _, id in ipairs(ids) do table.insert(path, build.spec.nodes[id]) end
+		return pathCost(path)
+	end
 	local finalOrder = {}
 	if #swaps > 0 then
 		local carry = {}
@@ -2145,7 +2221,7 @@ function handlers.optimise_tree(cmd)
 				for _, id in ipairs(live) do covered[id] = true end
 				covered[st.id] = true
 				st.path = live
-				st.cost = #live
+				st.cost = idCost(live)
 				table.insert(finalOrder, st)
 			else
 				for _, id in ipairs(live) do
@@ -2157,7 +2233,7 @@ function handlers.optimise_tree(cmd)
 		if #carry > 0 and #finalOrder > 0 then
 			local last = finalOrder[#finalOrder]
 			for _, id in ipairs(carry) do table.insert(last.path, id) end
-			last.cost = #last.path
+			last.cost = idCost(last.path)
 		end
 		steps = finalOrder
 	end

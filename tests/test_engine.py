@@ -154,6 +154,25 @@ def test_tree_swap_phase_only_keeps_improvements(pob, monk):
     assert len(main) == res["used"]
 
 
+@pytest.mark.parametrize("cls,asc,skill", [("Mercenary", "Gemling Legionnaire", "Fireball"), ("Ranger", "Deadeye", "Lightning Arrow"),
+                                           ("Warrior", "Titan", "Earthquake"),
+                                           ("Witch", "Abyssal Lich", "Comet")])
+def test_ascendancy_points_are_spent(pob, cls, asc, skill):
+    """Regression (2026-11-25): options of choice passives were never tried (Gemling's +2 skill levels) and points PoB
+    sees no gain for stayed unspent (a Deadeye guide took 1-2 of 8). Abyssal Lich took none: its passives carry Lich's name."""
+    pob.new()
+    pob.set_class(cls, asc)
+    pob.set_level(90)
+    pob.add_skill([skill])
+    res = pob.optimise_tree(points=0, ascendancy_points=8, refine=False)
+    assert 7 <= res["ascendancy_used"] <= 8          # a lone small passive that costs the build something may be left
+    assert sum(s["cost"] for s in res["steps"]) == res["ascendancy_used"]
+    if asc == "Gemling Legionnaire":
+        names = [s["node"] for s in res["steps"]]
+        assert "Neurological Implants" in names
+        assert "Bolstering Implants" not in names    # one option per choice
+
+
 def test_tree_long_reach_never_scores_lower(pob, monk):
     xml = pob.save_xml()
     pob.optimise_tree(points=40, far_dist=6, refine=False)
