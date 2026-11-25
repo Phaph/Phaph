@@ -137,13 +137,15 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   ahead ~25-40% on many spells, no outlier over x1.45 outside Infernalist's mixed minion rows. Too few to conclude. rank8: still in its first search.
 - **09:30:** rank8: 59 min into its first search (earlier runs took ~28-32 min each; now 2 workers on a full server), both workers at full CPU. Expect roughly 6 h of searches, then
   the builds. No results before the afternoon. If still no first line in ~/rank8.log by 10:30, suspect a hang. 37 is on 5 of 23.
-- **15:45 TASK 47, live bug: ascendancy points.** (1) options of choice passives never tried (Gemling +2 skill levels, Deadeye Point Blank / Far Shot); (2) Abyssal Lich takes 0 of 8 in
+- **15:10 TASK 47, live bug: ascendancy points.** (1) options of choice passives never tried (Gemling +2 skill levels, Deadeye Point Blank / Far Shot); (2) Abyssal Lich takes 0 of 8 in
   every build (its passives carry Lich's name); (3) points PoB sees no gain for stay unspent: saved Uber builds: Deadeye 1-2 of 8, Oracle 4, Tactician 4, Ritualist 5. Branch `ascpoints`
   (worktree ~/phaph_asc, 2026-11-25.1, not merged): all three fixed, 4 new test cases. Running: full suite ~/asc_tests.log; A/B ~/asc_ab.sh (5 full builds, branch then main, ~/asc_out/*.json,
   ~/asc_ab_*.log). Don't edit engine code in ~/phaph until the main half is done. Merge + deploy if the suite is green and no build loses (Invoker Ice Shot is the control).
 - **Hit by it:** every per-ascendancy comparison: blind tests (Titan, Warbringer, Smith score identically, so do Tactician and Witchhunter), finalists, rank8's search, and task 37's scans (no ascendancy
   passive on any of 158 skills for Titan and Abyssal Lich, on 155 Warbringer, 144 Tactician, 130 Disciple). 37's condition scans are nearly done and stay as a "before"; after the merge
   they and matrix_asc need a redo (48). breaker_queue copies engine code per job from ~/breaker and pulls at each push: after a merge mid-queue, later scans mix code: check dates.
+- 15:35: first suite run: 2 fails, probably task 47's own cases (zero-damage builds read as a 100% loss in the filler check; fixed on the branch, uncommitted until the cases pass). The suite
+  must run again (~/asc_tests.sh) after that commit. The A/B isn't affected (its builds have damage).
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
