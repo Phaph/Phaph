@@ -178,6 +178,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **23:05: task 50 A/B, 4 of 5 (without -> with respend, single order; only the respend step differs):** Gemling Rapid Shot boss 4.42M -> 5.12M, map 4.03M -> 4.71M, EHP same; Deadeye, Titan identical;
   Abyssal Lich damage same, EHP +1.6%, chaos res 75 -> 69. No damage or EHP loss. When the Invoker control lands (~/respend_ab.log) unchanged: bump ENGINE_VERSION to 2026-11-25.2, merge `respend`, deploy, push (suite green: 247). Then `distance` (49).
 - **23:30: task 50 live as 2026-11-25.2** (A/B 5 of 5, control identical). Next: 49 (branch `distance`: merge main into it, suite, search-vs-ladder, 5 builds), then merge `asccond`, 48.
+- 23:40: main merged into `distance`; suite (container distance-tests, ~/distance_tests.log) and, at the same time, ~/distance_ab4.sh: 5 specs (~/distance_ab.log, ~/asc_out/distance.json vs respend.json). Scores of ranged builds must drop (the model changed), so judge the search vs the ladder, not the size of the drop. The 23:30 deploy cancelled one generate job someone was watching (30bb3936).
+- **matrix_asc stopped with Kyle's OK ("whatever you think is best"), and ~/infernalist.sh cancelled with it.** Old-code results kept in ~/asc_before47/matrix_asc (Infernalist, Blood Mage complete, Lich partial).
+  ~/breaker cleaned 2026-11-26 00:00 (its uncommitted diff in ~/asc_before47/breaker_wip) and pulled to main. Start 48 after 49 is settled.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -517,7 +520,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     already shows stages; a stage's own skill name has to show there (check before deploying; page work is paused,
     so ask Kyle if it needs more than the skill name).
 
-37. [ ] (queued 2026-11-23: ~/after_unlock.sh runs conditions_asc + matrix_asc after the unlocked blind run; the scans
+37. [x] (2026-11-25: conditions done, matrix stopped with Kyle's OK; superseded by 48) (queued 2026-11-23: ~/after_unlock.sh runs conditions_asc + matrix_asc after the unlocked blind run; the scans
     resume, so only skills the rule skipped get scanned; ~16-20 h; then read for cross-class payoffs) Re-run the per-ascendancy condition and matrix scans without the class-weapon rule (Kyle 2026-11-22:
     Lodestone has none; the 11-20 runs skipped skills outside each class's weapons). Queue `conditions_asc matrix_asc`
     after the unlocked blind run.
@@ -585,8 +588,6 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Titan Earthquake +48% (EHP -11%), Gemling Rapid Shot +19% (EHP -18%), wand Bonestorm Infernalist +19%; most others 0. The points are chosen before gear, tree and supports are final. After 47.
 
 ## Waiting for Kyle
-- **matrix_asc queue on old code (2026-11-25, pinged):** ~21 ascendancies left at ~2 h each on 6 cores, with the task 47 bug in them, and task 48 redoes them all. Recommendation: stop it and the Infernalist redo
-  behind it (~/infernalist.sh), and start 48 on fixed code after 50 and 49. Your rule is never stop or touch the queue, so it keeps running until you say so.
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
