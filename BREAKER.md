@@ -953,4 +953,5 @@ part), and the ~12 h blind search. Still missing: a gem's number change shows no
 scanned with the same engine code: all three shown, nothing else (text diff 2 lines; damage diff 1 of 158 skills, Earthquake 24,736 -> 29,682). 8 of 166 skills have no damage
 to compare. One easy patch: no new skills, no changes smaller than 5%, and the two lines were worded to match a text rule. Runtime with a stale baseline: 86 min on 3 cores (two scans).
 conditions.json is now this run's unpatched scan (it was Nov 18), so a same-code patch run needs only one scan. Keystones: 32 of 33 change the numbers when patched (Chaos Inoculation
-pins life at 1). The Nov 18 -> now moves are our engine fixes, not the game's.
+pins life at 1). 87 of 158 skills moved 5%+ since the Nov 18 scan (Flameblast x11.4, Bonestorm x6.9,
+Wolf Pack x4.9): the old scan has no engine or PoB stamp, so the causes aren't known; not checked yet (task 46).

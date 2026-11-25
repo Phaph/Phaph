@@ -506,6 +506,10 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     leads-orders); (b) breaker_day.sh: dps per skill vs the baseline, moves over 5% listed in SUMMARY.md; (c) detection test: a made-up patch (gem, unique, passive, one buff big
     enough to matter) must show all of them. Needs the same engine on both sides, else the diff is ours, not the patch's.
 
+46. [ ] (added 2026-11-25) Biggest moves of the fresh condition baseline vs Nov 18 (Flameblast 7.7k -> 88.6k, Bonestorm 28.7k -> 199k, Wolf Pack 3.5k -> 17.2k): explain the
+    top 10 one by one (old file: git show 8031dcb:engine/data/breaker/conditions.json). Flameblast first: its stages / channel time may be counted as free. A wrong
+    one is a live ranking bug.
+
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
