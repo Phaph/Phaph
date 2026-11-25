@@ -506,7 +506,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     leads-orders); (b) breaker_day.sh: dps per skill vs the baseline, moves over 5% listed in SUMMARY.md; (c) detection test: a made-up patch (gem, unique, passive, one buff big
     enough to matter) must show all of them. Needs the same engine on both sides, else the diff is ours, not the patch's.
 
-46. [ ] (added 2026-11-25) Biggest moves of the fresh condition baseline vs Nov 18 (Flameblast 7.7k -> 88.6k, Bonestorm 28.7k -> 199k, Wolf Pack 3.5k -> 17.2k): explain the
+46. [ ] (03:50: Flameblast explained, no change: x5.45 full stages (Nov 21 rule) x 2.0 Atziri's Impatience (cooldown 10 s -> 5 s); PoB times it by the cooldown only, so up to ~x1.6 high if the cooldown starts on release (unknown). The rest: ~/hist.sh re-scores 18 skills on each day's engine Nov 18-24, ~/hist.log, results in the session scratchpad hist/) (added 2026-11-25) Biggest moves of the fresh condition baseline vs Nov 18 (Flameblast 7.7k -> 88.6k, Bonestorm 28.7k -> 199k, Wolf Pack 3.5k -> 17.2k): explain the
     top 10 one by one (old file: git show 8031dcb:engine/data/breaker/conditions.json). Flameblast first: its stages / channel time may be counted as free. A wrong
     one is a live ranking bug.
 
