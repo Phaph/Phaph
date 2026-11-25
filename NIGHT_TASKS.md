@@ -180,7 +180,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **23:30: task 50 live as 2026-11-25.2** (A/B 5 of 5, control identical). Next: 49 (branch `distance`: merge main into it, suite, search-vs-ladder, 5 builds), then merge `asccond`, 48.
 - 23:40: main merged into `distance`; suite (container distance-tests, ~/distance_tests.log) and, at the same time, ~/distance_ab4.sh: 5 specs (~/distance_ab.log, ~/asc_out/distance.json vs respend.json). Scores of ranged builds must drop (the model changed), so judge the search vs the ladder, not the size of the drop. The 23:30 deploy cancelled one generate job someone was watching (30bb3936).
 - **matrix_asc stopped with Kyle's OK ("whatever you think is best"), and ~/infernalist.sh cancelled with it.** Old-code results kept in ~/asc_before47/matrix_asc (Infernalist, Blood Mage complete, Lich partial).
-  Not saved from the queue: its commit step, so ~/breaker still has uncommitted matrix_asc changes (and deletions, files moved to ~/asc_nov20): clean that up before the 48 run. Start 48 after 49 is settled.
+  ~/breaker cleaned 2026-11-26 00:00 (its uncommitted diff in ~/asc_before47/breaker_wip) and pulled to main. Start 48 after 49 is settled.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
