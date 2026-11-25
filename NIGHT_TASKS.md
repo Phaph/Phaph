@@ -168,7 +168,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **20:00: asc_ab2 branch half done (boss / map): Gemling as is 4.42M / 4.03M, reversed 4.63M / 4.25M, rotated 5.42M / 5.04M; Titan as is 4.12M / 2.20M, reversed 4.29M / 2.16M, rotated 4.15M / 2.22M.** Main half running
   since 19:45 (main as is: Gemling 5.21M / 3.74M, Titan 3.30M / 1.83M). Merge ascpoints if best of 3 isn't lower.
   Task 49 code on branch `distance` (on top of respend, worktree ~/phaph_distance, no suite, no builds yet): auto_config sets 4 m for projectile skills (an estimate; ice spears and spells like Spark included),
-  2 m for melee and minions; 15 skills checked to land on the right side. Changes every ranged score, so test after 47 and 50 are in: suite, then search-vs-ladder and 5 builds.
+  2 m for melee and minions; 15 skills checked: projectile ones get 4 m; Comet, Unearth (spells, not projectile) and Fangs of Frost stay at 2 m. Changes every ranged score, so test after 47 and 50 are in: suite, then search-vs-ladder and 5 builds.
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
