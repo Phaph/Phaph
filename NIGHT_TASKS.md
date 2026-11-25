@@ -129,6 +129,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   json moved to ~/asc_nov20 (also in git), so 22 ascendancies + the matrix scan fresh; Infernalist had started and is mixed: ~/infernalist.sh redoes it after the queue (it walks all 23
   again but finished ones are skipped). autoStash set in ~/breaker so its push survives. Expect much longer than 16-20 h. Engine code there is 203271a (before .7 / .8; round-1
   builds use neither). Don't read Infernalist or the group before both are done.
+- **08:35: task 39, rank_check on the current engine running** (container rank8, 2 cores, ~/rank8.sh, ~/rank8.log): fresh search of 6 ascendancies on the live image
+  (class weapons, as on Nov 22) -> blind_8.json, then top 3 each in 3 slot orders (new `rank_check.py --orders`) -> rank_check_8.json (54 builds, resumable). Then: search's #1
+  vs full-build #1, read against each skill's spread between orders; write to BREAKER.md, close 39. 41(f) is covered by leads-orders.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -480,7 +483,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     6.3M). Find what the search's quick build gives spells and not attacks (crafted weapon, +levels, supports, the
     quick tree) and calibrate, so a no-class-rule Lodestone search can compare a Gemling Spark with a Titan slam.
 
-39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; 2026-11-24: per-source breakdown done, on-death explosions out, engine 2026-11-24.1; skeletons counted 0 since 11-17: fixed; Cast on X settled; left: re-run leads (queued), rank_check, combos) Full DPS fix
+39. [ ] (2026-11-23: suite green, 219 passed; engine 2026-11-23.5 live, finalists restarted; 2026-11-24: per-source breakdown done, on-death explosions out, engine 2026-11-24.1; skeletons counted 0 since 11-17: fixed; Cast on X settled; leads and combos re-run done 2026-11-25; left: rank_check (rank8 running)) Full DPS fix
     (BREAKER.md last section): suite green -> commit, deploy engine 2026-11-23.5, clear finalists.json and restart
     ~/after_sweep.sh (its results are from the buggy engine). Then a per-source damage breakdown check on every build,
     and re-run leads, rank_check and combos before quoting any older full-build number.
@@ -491,7 +494,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     false alarm per real find; if missed, narrow what Lodestone claims. Then time a launch-day rehearsal (notes ->
     ranked leads); label each lead's nerf risk (bug / extreme outlier = first hit) and re-run on every hotfix.
 
-41. [ ] Off-hands: (c) done 2026-11-24 (Sceptre redone), left: (f). Was: (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
+41. [x] (2026-11-25: (f) done by leads-orders on 2026-11-24.8, which has the off-hands) Off-hands: (c) done 2026-11-24 (Sceptre redone). Was: (see START HERE): (c) running since 09:05: ~/finalists_offhand.sh (Bow, Spear, Quarterstaff, Wand, Sceptre, One Hand Mace) -> data/breaker/finalists_offhand.json, then it starts task 37 (after_sweep.sh stopped: its remaining weapons, claws to flails, have no skills in PoB yet). (a) read the A/B and the suite on branch `offhand`; (b) ~/merge_offhand.sh does it (version bumped on the branch); (c) re-run finalists for Bow, Spear, Quarterstaff, Wand,
     Sceptre and every other one-handed weapon (the rest of today's run is comparable only within itself); (d) done on the branch 2026-11-24: one-handed martial weapons try a second weapon and a shield by score (spear,
     flail: shield only; damage effect not measured yet); (e) done on branch `offhand2` (on top of offhand, worktree ~/phaph_offhand, not pushed): gear.craft_swap fills both hands of set 2; new test passes, full suite
     running (~/offhand3_tests.log). suite green (227 passed); ~/merge_offhand.sh now merges offhand2 (holds both) as 2026-11-24.3; (f) lead re-run (~/after_leads.sh)

@@ -7,6 +7,7 @@ the search's order vs the full-build order and how much the search's #1 gives aw
   python tools/rank_check.py run data/breaker/blind_2026-11-21.5.json --only Deadeye,Lich,Titan --top 3 \
       [--stage end] [--out data/breaker/rank_check.json]
   python tools/rank_check.py report data/breaker/rank_check.json
+  --orders N: each skill built in N gear slot orders (path_luck.best_of), best kept, all reported: one order per build is luck (task 42)
   --light: a light build of the stage (one tree pass, no jewels, no boss setups): is it enough to rank finalists?
 """
 from __future__ import annotations
@@ -21,8 +22,10 @@ sys.path.insert(0, str(ENGINE))
 OUT = ENGINE / "data" / "breaker" / "rank_check.json"
 
 
-def run(blind: Path, only: set[str] | None, top: int, stage: str, out: Path, light: bool = False) -> None:
+def run(blind: Path, only: set[str] | None, top: int, stage: str, out: Path, light: bool = False, orders: int = 1,
+        workers: int = 1) -> None:
     from guide import build_stage
+    from path_luck import best_of
     d = json.loads(blind.read_text(encoding="utf-8"))
     done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"stage": stage, "ascendancies": {}}
     for asc, rec in d["ascendancies"].items():
@@ -44,6 +47,14 @@ def run(blind: Path, only: set[str] | None, top: int, stage: str, out: Path, lig
                     **({"_light": True} if light else {})}
             t0 = time.time()
             try:
+                if orders > 1:
+                    b = best_of(spec, orders, stage, workers)
+                    res["skills"][r["skill"]] = {"search_rank": i, "search_score": r["score"], "boss_dps": b["boss_dps"],
+                                                 "dps": b["dps"], "seconds": b["seconds"], "orders": b["orders"],
+                                                 "boss_sources": b["boss_sources"], "code": b["code"]}
+                    out.write_text(json.dumps(done, indent=1, ensure_ascii=False), encoding="utf-8")
+                    print(f"{asc} #{i} {r['skill']}: {b['boss_dps']} {b['orders']}", flush=True)
+                    continue
                 g = build_stage(spec, stage)
                 res["skills"][r["skill"]] = {"search_rank": i, "search_score": r["score"], "boss_dps": round(g.boss_dps),
                                              "dps": round(g.dps), "seconds": round(time.time() - t0)}
@@ -77,7 +88,9 @@ if __name__ == "__main__":
     if a and a[0] == "run":
         run(Path(a[1]), set(a[a.index("--only") + 1].split(",")) if "--only" in a else None,
             int(a[a.index("--top") + 1]) if "--top" in a else 3, a[a.index("--stage") + 1] if "--stage" in a else "end",
-            Path(a[a.index("--out") + 1]) if "--out" in a else OUT, light="--light" in a)
+            Path(a[a.index("--out") + 1]) if "--out" in a else OUT, light="--light" in a,
+            orders=int(a[a.index("--orders") + 1]) if "--orders" in a else 1,
+            workers=int(a[a.index("--workers") + 1]) if "--workers" in a else 1)
     elif a and a[0] == "report":
         print(report(json.loads(Path(a[1] if len(a) > 1 else OUT).read_text(encoding="utf-8"))))
     else:
