@@ -152,6 +152,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - 17:00: task 47 suite green (245 passed). A/B branch half done (boss / map / EHP): Deadeye Rapid Shot 5.76M / 4.94M / 12.7k (on .7, path_luck_7: 4.76M / 4.03M / 12.6k = +21%), Gemling Rapid Shot 4.42M / 4.03M / 17.4k,
   Titan Earthquake 4.12M / 2.20M / 48.7k, Abyssal Lich Bonestorm 5.80M / 4.57M / 12.0k, control Invoker Ice Shot identical to .7. Main half running since 16:52 (it copied its code: engine edits in ~/phaph are fine now).
   Then merge ascpoints, deploy, merge asccond (no deploy). rank8 5 of 6 searches; 37 on 22 of 23.
+- **17:40 A/B main half so far: Gemling Rapid Shot 5.21M boss / 3.74M map on main vs 4.42M / 4.03M on the branch (-15% boss, +8% map).** Same supports, other uniques (main Hyrri's Ire + Mageblood, branch Grip of Kulemak +
+  The Coming Calamity): maybe slot-order luck (22% on this skill), not shown. ~/asc_ab2.sh (starts after asc_ab.sh): Gemling and Titan, reversed and rotated, branch then main -> ~/asc_out/orders_*.json. Judge best of 3 and
+  all three signs; don't merge before. Deadeye main 4.76M = path_luck_7, branch +21%: that is about Point Blank's 20%, which PoB counts by the enemy distance (49).
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
@@ -551,6 +554,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 48. [ ] (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
     is never taken and its condition reads 0. Per skill, also try each notable (path included) with each condition (override addNodes), or take the passives again under the condition. Then the blind
     test (unlocked) again: Gemling is 32% of the ladder and was scored without its implants.
+
+49. [ ] (added 2026-11-25) Enemy distance: PoB's default is what every ranged build is scored at (Point Blank at full value, ranged accuracy penalty small). Find the default, decide a fair one per
+    skill kind (melee / projectile) for boss and map, measure what it moves on 5 saved builds. Wide effect: A/B before any merge.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
