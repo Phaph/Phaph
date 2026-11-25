@@ -152,7 +152,7 @@ def test_patch_gem_add_remove_rename_stats(pob):
 
 def test_patch_node_rewords_a_passive(pob):
     """Patch-notes mode: a notable's line reworded changes the numbers (re-parsed like PoB's load), then put back.
-    (Keystones apply through PoB's keystone table, not their own lines: not covered yet.)"""
+    (Keystones: test_patched_keystone_changes_the_numbers.)"""
     pob.new()
     pob.set_class("Sorceress", None)
     pob.set_level(70)
@@ -259,3 +259,19 @@ def test_patch_lines_the_game_already_has_are_not_added_twice(pob):
     r = pob.send("patch_unique", name="Leopold's Applause", add=["A new line"])
     assert r["changed"] == ["already there: A new line"]
     pob.send("patch_reset")
+
+
+def test_patched_keystone_changes_the_numbers(pob):
+    """A keystone granted by an item line (PoB's keystone table) uses the patched lines, and the reset undoes it."""
+    pob.new()
+    pob.set_class("Sorceress", None)
+    pob.set_level(70)
+    pob.send("set_custom_mods", text="Pain Attunement")
+    life0 = pob.calc(["Life"])["Life"]
+    pob.send("patch_node", name="Pain Attunement", add=["50% more maximum Life"])
+    pob.send("set_custom_mods", text="Pain Attunement")
+    assert pob.calc(["Life"])["Life"] > life0 * 1.4
+    pob.send("patch_reset")
+    pob.send("set_custom_mods", text="Pain Attunement")
+    assert pob.calc(["Life"])["Life"] == life0
+    pob.send("set_custom_mods", text="")

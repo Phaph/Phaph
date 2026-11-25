@@ -115,6 +115,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   (ailment combos done on .8: same picture.)   leads with 3 orders per side (3 cores, ~/leads_orders.log -> lead_builds_orders). Then update leads.json. Dark Effigy is the one to look at.
 - **01:50: rehearsal done and timed (24 min, 6 cores; BREAKER.md, playbook).** It found that patched passives never reached the text diff: fixed (text_scan.py, runner.lua,
   breaker_day.sh), full suite green before 45(b) (unit-tested only, scan tool); pushed, not deployed. leads-orders still running, 0 leads finished. Next: task 45.
+- **02:40:** patch-notes mode on keystones checked: 32 of 33 change the numbers (Chaos Inoculation pins life, untestable that way); test added, pushed. Detection run (45c): the wording
+  half passes (both lines, nothing else); damage half scanning (~/detect.log, 2 scans on 3 cores).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
