@@ -74,10 +74,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 30433,
+   "dps": 65374,
    "ailments": {
     "Shock": {
-     "dps_on": 39563,
+     "dps_on": 84986,
      "gain": 0.3,
      "per_s": 0.0,
      "duration": 4,
@@ -90,13 +90,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0982,
+      "per_s": 0.2004,
       "duration": 8,
-      "dps": 24346
+      "dps": 52299
      }
     },
     "Poison": {
-     "dps_on": 30433,
+     "dps_on": 65374,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -109,13 +109,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.1509,
+      "per_s": 1.2982,
       "duration": 2,
-      "dps": 26573
+      "dps": 57055
      }
     },
     "Ignite": {
-     "dps_on": 30433,
+     "dps_on": 65374,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -130,17 +130,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 30433
+      "dps": 65374
      }
     },
     "Chill": {
-     "dps_on": 30433,
+     "dps_on": 65374,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 30433,
+     "dps_on": 65374,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -155,7 +155,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 30433
+      "dps": 65374
      }
     }
    }
@@ -164,13 +164,13 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 22265,
+   "dps": 55305,
    "ailments": {
     "Shock": {
-     "dps_on": 26698,
+     "dps_on": 66330,
      "gain": 0.199,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Armour Breaker",
@@ -180,13 +180,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0273,
+      "per_s": 0.0736,
       "duration": 8,
-      "dps": 18001
+      "dps": 44713
      }
     },
     "Poison": {
-     "dps_on": 22265,
+     "dps_on": 55305,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -199,13 +199,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 0.9936,
+      "per_s": 1.391,
       "duration": 2,
-      "dps": 17179
+      "dps": 42615
      }
     },
     "Ignite": {
-     "dps_on": 22265,
+     "dps_on": 55305,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -218,19 +218,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.06,
+      "per_s": 0.1503,
       "duration": 3.48,
-      "dps": 18080
+      "dps": 45068
      }
     },
     "Chill": {
-     "dps_on": 22265,
+     "dps_on": 55305,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 22265,
+     "dps_on": 55305,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -245,7 +245,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 22265
+      "dps": 55305
      }
     }
    }
@@ -430,96 +430,6 @@
     }
    }
   },
-  "Ball Lightning": {
-   "weapon": "Wand",
-   "minion": false,
-   "error": null,
-   "dps": 31220,
-   "ailments": {
-    "Shock": {
-     "dps_on": 37464,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Ball Lightning",
-       "Concentrated Area",
-       "Considered Casting",
-       "Rakiata's Flow",
-       "Shock",
-       "Overcharge"
-      ],
-      "per_s": 0.0628,
-      "duration": 8,
-      "dps": 19279
-     }
-    },
-    "Poison": {
-     "dps_on": 31220,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Ball Lightning",
-       "Concentrated Area",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Poison III",
-       "Deadly Poison II"
-      ],
-      "per_s": 0.6,
-      "duration": 2,
-      "dps": 12459
-     }
-    },
-    "Ignite": {
-     "dps_on": 31220,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Ball Lightning",
-       "Concentrated Area",
-       "Considered Casting",
-       "Elemental Focus",
-       "Hourglass",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 31220
-     }
-    },
-    "Chill": {
-     "dps_on": 31220,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 31220,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Ball Lightning",
-       "Concentrated Area",
-       "Considered Casting",
-       "Elemental Focus",
-       "Hourglass",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 31220
-     }
-    }
-   }
-  },
   "Bitter Dead": {
    "weapon": "Wand",
    "minion": false,
@@ -591,14 +501,104 @@
     }
    }
   },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "minion": false,
+   "error": null,
+   "dps": 60052,
+   "ailments": {
+    "Shock": {
+     "dps_on": 72062,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Ball Lightning",
+       "Concentrated Area",
+       "Considered Casting",
+       "Rakiata's Flow",
+       "Shock",
+       "Overcharge"
+      ],
+      "per_s": 0.1105,
+      "duration": 8,
+      "dps": 37087
+     }
+    },
+    "Poison": {
+     "dps_on": 60052,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Ball Lightning",
+       "Concentrated Area",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Poison III",
+       "Deadly Poison II"
+      ],
+      "per_s": 0.6,
+      "duration": 2,
+      "dps": 23972
+     }
+    },
+    "Ignite": {
+     "dps_on": 60052,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Ball Lightning",
+       "Concentrated Area",
+       "Considered Casting",
+       "Elemental Focus",
+       "Hourglass",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 60052
+     }
+    },
+    "Chill": {
+     "dps_on": 60052,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 60052,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Ball Lightning",
+       "Concentrated Area",
+       "Considered Casting",
+       "Elemental Focus",
+       "Hourglass",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 60052
+     }
+    }
+   }
+  },
   "Bone Cage": {
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 47928,
+   "dps": 128861,
    "ailments": {
     "Shock": {
-     "dps_on": 57514,
+     "dps_on": 154634,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -608,35 +608,35 @@
        "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
-       "Deliberation",
+       "Considered Casting",
        "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 47928
+      "dps": 128861
      }
     },
     "Poison": {
-     "dps_on": 47928,
+     "dps_on": 128861,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Bone Cage",
+       "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
-       "Deliberation",
        "Heft",
        "Poison III"
       ],
-      "per_s": 1.29,
+      "per_s": 1.452,
       "duration": 2,
-      "dps": 37166
+      "dps": 111422
      }
     },
     "Ignite": {
-     "dps_on": 47928,
+     "dps_on": 128861,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -646,22 +646,22 @@
        "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
-       "Deliberation",
+       "Considered Casting",
        "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 47928
+      "dps": 128861
      }
     },
     "Chill": {
-     "dps_on": 47928,
+     "dps_on": 128861,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 47928,
+     "dps_on": 128861,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -671,12 +671,12 @@
        "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
-       "Deliberation",
+       "Considered Casting",
        "Heft"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 47928
+      "dps": 128861
      }
     }
    }
@@ -771,107 +771,17 @@
     }
    }
   },
-  "Bonestorm": {
-   "weapon": "Wand",
-   "minion": false,
-   "error": null,
-   "dps": 28749,
-   "ailments": {
-    "Shock": {
-     "dps_on": 34498,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Bonestorm",
-       "Brutality III",
-       "Considered Casting",
-       "Deliberation",
-       "Heft",
-       "Inexorable Critical I"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 28749
-     }
-    },
-    "Poison": {
-     "dps_on": 28749,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Bonestorm",
-       "Brutality III",
-       "Deliberation",
-       "Heft",
-       "Inexorable Critical I",
-       "Poison III"
-      ],
-      "per_s": 4.8,
-      "duration": 2,
-      "dps": 20847
-     }
-    },
-    "Ignite": {
-     "dps_on": 28749,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Bonestorm",
-       "Brutality III",
-       "Considered Casting",
-       "Deliberation",
-       "Heft",
-       "Inexorable Critical I"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 28749
-     }
-    },
-    "Chill": {
-     "dps_on": 28749,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 28749,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Bonestorm",
-       "Brutality III",
-       "Considered Casting",
-       "Deliberation",
-       "Heft",
-       "Inexorable Critical I"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 28749
-     }
-    }
-   }
-  },
   "Boneshatter": {
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 21196,
+   "dps": 49435,
    "ailments": {
     "Shock": {
-     "dps_on": 25435,
+     "dps_on": 59322,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Boneshatter",
@@ -881,13 +791,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0253,
+      "per_s": 0.032,
       "duration": 8,
-      "dps": 17055
+      "dps": 39771
      }
     },
     "Poison": {
-     "dps_on": 21196,
+     "dps_on": 49435,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -902,11 +812,11 @@
       ],
       "per_s": 0.9072,
       "duration": 2,
-      "dps": 16348
+      "dps": 38076
      }
     },
     "Ignite": {
-     "dps_on": 21196,
+     "dps_on": 49435,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -919,19 +829,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0598,
+      "per_s": 0.07,
       "duration": 3.48,
-      "dps": 17141
+      "dps": 40007
      }
     },
     "Chill": {
-     "dps_on": 21196,
+     "dps_on": 49435,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 21196,
+     "dps_on": 49435,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -946,7 +856,97 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 21196
+      "dps": 49435
+     }
+    }
+   }
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "minion": false,
+   "error": null,
+   "dps": 199413,
+   "ailments": {
+    "Shock": {
+     "dps_on": 239296,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Bonestorm",
+       "Brutality III",
+       "Considered Casting",
+       "Deliberation",
+       "Heft",
+       "Multishot II"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 199413
+     }
+    },
+    "Poison": {
+     "dps_on": 199413,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Bonestorm",
+       "Brutality III",
+       "Deliberation",
+       "Heft",
+       "Poison III",
+       "Deadly Poison II"
+      ],
+      "per_s": 11.424,
+      "duration": 2,
+      "dps": 98459
+     }
+    },
+    "Ignite": {
+     "dps_on": 199413,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Bonestorm",
+       "Brutality III",
+       "Considered Casting",
+       "Deliberation",
+       "Heft",
+       "Multishot II"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 199413
+     }
+    },
+    "Chill": {
+     "dps_on": 199413,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 199413,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Bonestorm",
+       "Brutality III",
+       "Considered Casting",
+       "Deliberation",
+       "Heft",
+       "Multishot II"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 199413
      }
     }
    }
@@ -955,72 +955,72 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 1795,
+   "dps": 1,
    "ailments": {
     "Shock": {
-     "dps_on": 2154,
+     "dps_on": 1,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Poison": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Ignite": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Chill": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 1795
+      "dps": 1
      }
     }
    }
@@ -1119,10 +1119,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 28458,
+   "dps": 68837,
    "ailments": {
     "Shock": {
-     "dps_on": 34150,
+     "dps_on": 82604,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -1137,11 +1137,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 28458
+      "dps": 68837
      }
     },
     "Poison": {
-     "dps_on": 28458,
+     "dps_on": 68837,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -1154,13 +1154,13 @@
        "Heft",
        "Poison III"
       ],
-      "per_s": 1.266,
+      "per_s": 1.428,
       "duration": 2,
-      "dps": 24535
+      "dps": 59701
      }
     },
     "Ignite": {
-     "dps_on": 28458,
+     "dps_on": 68837,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -1175,17 +1175,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 28458
+      "dps": 68837
      }
     },
     "Chill": {
-     "dps_on": 28458,
+     "dps_on": 68837,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 28458,
+     "dps_on": 68837,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -1200,7 +1200,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 28458
+      "dps": 68837
      }
     }
    }
@@ -1209,10 +1209,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 58612,
+   "dps": 122367,
    "ailments": {
     "Shock": {
-     "dps_on": 70334,
+     "dps_on": 146840,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -1227,11 +1227,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 58612
+      "dps": 122367
      }
     },
     "Poison": {
-     "dps_on": 58612,
+     "dps_on": 122367,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -1244,13 +1244,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 0.3887,
+      "per_s": 0.4071,
       "duration": 2,
-      "dps": 46028
+      "dps": 95580
      }
     },
     "Ignite": {
-     "dps_on": 58612,
+     "dps_on": 122367,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -1265,17 +1265,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 58612
+      "dps": 122367
      }
     },
     "Chill": {
-     "dps_on": 58612,
+     "dps_on": 122367,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 58612,
+     "dps_on": 122367,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -1290,7 +1290,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 58612
+      "dps": 122367
      }
     }
    }
@@ -1299,10 +1299,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 2150,
+   "dps": 3650,
    "ailments": {
     "Shock": {
-     "dps_on": 2580,
+     "dps_on": 4380,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -1315,13 +1315,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0025,
+      "per_s": 0.0045,
       "duration": 8,
-      "dps": 1725
+      "dps": 2927
      }
     },
     "Poison": {
-     "dps_on": 2150,
+     "dps_on": 3650,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -1336,11 +1336,11 @@
       ],
       "per_s": 0.75,
       "duration": 2,
-      "dps": 1828
+      "dps": 3099
      }
     },
     "Ignite": {
-     "dps_on": 2150,
+     "dps_on": 3650,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -1353,19 +1353,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.007,
+      "per_s": 0.0099,
       "duration": 3.48,
-      "dps": 1726
+      "dps": 2929
      }
     },
     "Chill": {
-     "dps_on": 2150,
+     "dps_on": 3650,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 2150,
+     "dps_on": 3650,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -1380,7 +1380,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 2150
+      "dps": 3650
      }
     }
    }
@@ -1389,10 +1389,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 5853,
+   "dps": 10672,
    "ailments": {
     "Shock": {
-     "dps_on": 7024,
+     "dps_on": 12807,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -1407,11 +1407,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 5853
+      "dps": 10672
      }
     },
     "Poison": {
-     "dps_on": 5853,
+     "dps_on": 10672,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -1426,11 +1426,11 @@
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 5853
+      "dps": 10672
      }
     },
     "Ignite": {
-     "dps_on": 5853,
+     "dps_on": 10672,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -1445,17 +1445,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 5853
+      "dps": 10672
      }
     },
     "Chill": {
-     "dps_on": 5853,
+     "dps_on": 10672,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 5853,
+     "dps_on": 10672,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -1470,7 +1470,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 5853
+      "dps": 10672
      }
     }
    }
@@ -1659,10 +1659,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 13233,
+   "dps": 28212,
    "ailments": {
     "Shock": {
-     "dps_on": 15879,
+     "dps_on": 33854,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -1677,11 +1677,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 13233
+      "dps": 28212
      }
     },
     "Poison": {
-     "dps_on": 26466,
+     "dps_on": 56423,
      "gain": 1.0,
      "per_s": 0.0,
      "duration": 2,
@@ -1694,13 +1694,13 @@
        "Extraction",
        "Poison III"
       ],
-      "per_s": 1.266,
+      "per_s": 1.428,
       "duration": 2,
-      "dps": 11165
+      "dps": 23803
      }
     },
     "Ignite": {
-     "dps_on": 13233,
+     "dps_on": 28212,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -1715,17 +1715,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 13233
+      "dps": 28212
      }
     },
     "Chill": {
-     "dps_on": 13233,
+     "dps_on": 28212,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 13233,
+     "dps_on": 28212,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -1740,7 +1740,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 13233
+      "dps": 28212
      }
     }
    }
@@ -1749,10 +1749,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 31178,
+   "dps": 50873,
    "ailments": {
     "Shock": {
-     "dps_on": 37414,
+     "dps_on": 61047,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -1767,11 +1767,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 31178
+      "dps": 50873
      }
     },
     "Poison": {
-     "dps_on": 31178,
+     "dps_on": 50873,
      "gain": 0.0,
      "per_s": 0.15,
      "duration": 2,
@@ -1786,13 +1786,13 @@
       ],
       "per_s": 0.15,
       "duration": 2,
-      "dps": 31178
+      "dps": 50873
      }
     },
     "Ignite": {
-     "dps_on": 31178,
+     "dps_on": 50873,
      "gain": 0.0,
-     "per_s": 0.0014,
+     "per_s": 0.0019,
      "duration": 4,
      "applier": {
       "gems": [
@@ -1803,19 +1803,19 @@
        "Atalui's Bloodletting",
        "Ignite III"
       ],
-      "per_s": 0.0042,
+      "per_s": 0.0057,
       "duration": 3.48,
-      "dps": 21045
+      "dps": 33633
      }
     },
     "Chill": {
-     "dps_on": 31178,
+     "dps_on": 50873,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 31178,
+     "dps_on": 50873,
      "gain": 0.0,
      "per_s": 0.25,
      "duration": 5,
@@ -1830,7 +1830,7 @@
       ],
       "per_s": 0.25,
       "duration": 5,
-      "dps": 31178
+      "dps": 50873
      }
     }
    }
@@ -1839,88 +1839,88 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 2577,
+   "dps": 5989,
    "ailments": {
     "Shock": {
-     "dps_on": 3092,
+     "dps_on": 7187,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Detonate Living",
+       "Brutality III",
        "Considered Casting",
        "Deliberation",
-       "Extraction",
-       "Fire Attunement",
-       "Rakiata's Flow"
+       "Dialla's Desire",
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 2577
+      "dps": 5989
      }
     },
     "Poison": {
-     "dps_on": 2577,
+     "dps_on": 5989,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Detonate Living",
+       "Brutality III",
        "Deliberation",
-       "Extraction",
-       "Fire Attunement",
-       "Rakiata's Flow",
+       "Dialla's Desire",
+       "Heft",
        "Poison III"
       ],
-      "per_s": 1.6985,
+      "per_s": 1.9477,
       "duration": 2,
-      "dps": 2342
+      "dps": 4954
      }
     },
     "Ignite": {
-     "dps_on": 2577,
+     "dps_on": 5989,
      "gain": 0.0,
-     "per_s": 0.0023,
+     "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Detonate Living",
        "Considered Casting",
        "Deliberation",
-       "Fire Attunement",
-       "Rakiata's Flow",
+       "Dialla's Desire",
+       "Heft",
        "Ignite III"
       ],
-      "per_s": 0.0068,
+      "per_s": 0.0079,
       "duration": 3.48,
-      "dps": 2128
+      "dps": 4560
      }
     },
     "Chill": {
-     "dps_on": 2577,
+     "dps_on": 5989,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 2577,
+     "dps_on": 5989,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Detonate Living",
+       "Brutality III",
        "Considered Casting",
        "Deliberation",
-       "Extraction",
-       "Fire Attunement",
-       "Rakiata's Flow"
+       "Dialla's Desire",
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 2577
+      "dps": 5989
      }
     }
    }
@@ -1929,10 +1929,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 7112,
+   "dps": 10095,
    "ailments": {
     "Shock": {
-     "dps_on": 8535,
+     "dps_on": 12114,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -1945,13 +1945,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0065,
+      "per_s": 0.0087,
       "duration": 8,
-      "dps": 5719
+      "dps": 8132
      }
     },
     "Poison": {
-     "dps_on": 7112,
+     "dps_on": 10095,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -1966,11 +1966,11 @@
       ],
       "per_s": 0.3953,
       "duration": 2,
-      "dps": 5472
+      "dps": 7766
      }
     },
     "Ignite": {
-     "dps_on": 7112,
+     "dps_on": 10095,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -1983,19 +1983,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0393,
+      "per_s": 0.0574,
       "duration": 3.48,
-      "dps": 5758
+      "dps": 8217
      }
     },
     "Chill": {
-     "dps_on": 7112,
+     "dps_on": 10095,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 7112,
+     "dps_on": 10095,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -2010,7 +2010,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 7112
+      "dps": 10095
      }
     }
    }
@@ -2019,10 +2019,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 17868,
+   "dps": 28014,
    "ailments": {
     "Shock": {
-     "dps_on": 21441,
+     "dps_on": 33617,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -2035,13 +2035,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0084,
+      "per_s": 0.0125,
       "duration": 8,
-      "dps": 14441
+      "dps": 22730
      }
     },
     "Poison": {
-     "dps_on": 17868,
+     "dps_on": 28014,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -2054,13 +2054,13 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.5216,
+      "per_s": 0.5664,
       "duration": 2,
-      "dps": 15209
+      "dps": 23849
      }
     },
     "Ignite": {
-     "dps_on": 17868,
+     "dps_on": 28014,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -2073,19 +2073,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0643,
+      "per_s": 0.0976,
       "duration": 3.48,
-      "dps": 14614
+      "dps": 23139
      }
     },
     "Chill": {
-     "dps_on": 17868,
+     "dps_on": 28014,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 17868,
+     "dps_on": 28014,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -2100,7 +2100,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 17868
+      "dps": 28014
      }
     }
    }
@@ -2289,13 +2289,13 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 10576,
+   "dps": 24736,
    "ailments": {
     "Shock": {
-     "dps_on": 12691,
+     "dps_on": 29683,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Earthquake",
@@ -2305,13 +2305,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0126,
+      "per_s": 0.0153,
       "duration": 8,
-      "dps": 8494
+      "dps": 19864
      }
     },
     "Poison": {
-     "dps_on": 10576,
+     "dps_on": 24736,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -2326,11 +2326,11 @@
       ],
       "per_s": 1.134,
       "duration": 2,
-      "dps": 8158
+      "dps": 19049
      }
     },
     "Ignite": {
-     "dps_on": 10576,
+     "dps_on": 24736,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -2343,19 +2343,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0299,
+      "per_s": 0.0334,
       "duration": 3.48,
-      "dps": 8511
+      "dps": 19907
      }
     },
     "Chill": {
-     "dps_on": 10576,
+     "dps_on": 24736,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 10576,
+     "dps_on": 24736,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -2370,7 +2370,97 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 10576
+      "dps": 24736
+     }
+    }
+   }
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "minion": false,
+   "error": null,
+   "dps": 35335,
+   "ailments": {
+    "Shock": {
+     "dps_on": 42402,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Electrocuting Arrow",
+       "Charged Shots II",
+       "Deliberation",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Shock"
+      ],
+      "per_s": 0.0637,
+      "duration": 8,
+      "dps": 28495
+     }
+    },
+    "Poison": {
+     "dps_on": 35335,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Electrocuting Arrow",
+       "Deliberation",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Poison III"
+      ],
+      "per_s": 1.1567,
+      "duration": 2,
+      "dps": 29234
+     }
+    },
+    "Ignite": {
+     "dps_on": 35335,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Electrocuting Arrow",
+       "Charged Shots II",
+       "Deliberation",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Ignite III"
+      ],
+      "per_s": 0.0573,
+      "duration": 3.48,
+      "dps": 28564
+     }
+    },
+    "Chill": {
+     "dps_on": 35335,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 35335,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Electrocuting Arrow",
+       "Charged Shots II",
+       "Deliberation",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 35335
      }
     }
    }
@@ -2379,10 +2469,10 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 12720,
+   "dps": 12921,
    "ailments": {
     "Shock": {
-     "dps_on": 15264,
+     "dps_on": 15505,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -2397,11 +2487,11 @@
       ],
       "per_s": 0.0157,
       "duration": 8,
-      "dps": 10218
+      "dps": 10380
      }
     },
     "Poison": {
-     "dps_on": 12720,
+     "dps_on": 12921,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -2416,11 +2506,11 @@
       ],
       "per_s": 1.2096,
       "duration": 2,
-      "dps": 9809
+      "dps": 9964
      }
     },
     "Ignite": {
-     "dps_on": 12720,
+     "dps_on": 12921,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -2435,17 +2525,17 @@
       ],
       "per_s": 0.0353,
       "duration": 3.48,
-      "dps": 10241
+      "dps": 10404
      }
     },
     "Chill": {
-     "dps_on": 12720,
+     "dps_on": 12921,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 12720,
+     "dps_on": 12921,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -2460,97 +2550,97 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 12720
+      "dps": 12921
      }
     }
    }
   },
-  "Electrocuting Arrow": {
-   "weapon": "Bow",
+  "Ember Fusillade": {
+   "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 23311,
+   "dps": 126430,
    "ailments": {
     "Shock": {
-     "dps_on": 27973,
+     "dps_on": 151716,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
-       "Electrocuting Arrow",
-       "Charged Shots II",
-       "Elemental Armament II",
+       "Ember Fusillade",
+       "Considered Casting",
+       "Deliberation",
+       "Fire Attunement",
        "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Shock"
+       "Swift Affliction III"
       ],
-      "per_s": 0.0535,
-      "duration": 8,
-      "dps": 18764
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 126430
      }
     },
     "Poison": {
-     "dps_on": 23311,
+     "dps_on": 126430,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
-       "Electrocuting Arrow",
-       "Elemental Armament II",
-       "Elemental Focus",
+       "Ember Fusillade",
+       "Deliberation",
+       "Fire Attunement",
        "Rakiata's Flow",
-       "Rapid Attacks II",
+       "Swift Affliction III",
        "Poison III"
       ],
-      "per_s": 1.2751,
-      "duration": 2,
-      "dps": 18620
+      "per_s": 2.5634,
+      "duration": 1.4,
+      "dps": 105226
      }
     },
     "Ignite": {
-     "dps_on": 23311,
+     "dps_on": 126430,
      "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
+     "per_s": 0.2324,
+     "duration": 2.8,
      "applier": {
       "gems": [
-       "Electrocuting Arrow",
-       "Charged Shots II",
-       "Elemental Armament II",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
+       "Ember Fusillade",
+       "Considered Casting",
+       "Deliberation",
+       "Fire Attunement",
+       "Swift Affliction III",
        "Ignite III"
       ],
-      "per_s": 0.0306,
-      "duration": 3.48,
-      "dps": 18780
+      "per_s": 0.6971,
+      "duration": 2.43,
+      "dps": 45150
      }
     },
     "Chill": {
-     "dps_on": 23311,
+     "dps_on": 126430,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 23311,
+     "dps_on": 126430,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
-       "Electrocuting Arrow",
-       "Charged Shots II",
-       "Elemental Armament II",
-       "Elemental Focus",
+       "Ember Fusillade",
+       "Considered Casting",
+       "Deliberation",
+       "Fire Attunement",
        "Rakiata's Flow",
-       "Rapid Attacks II"
+       "Swift Affliction III"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 23311
+      "dps": 126430
      }
     }
    }
@@ -2645,104 +2735,14 @@
     }
    }
   },
-  "Ember Fusillade": {
-   "weapon": "Wand",
-   "minion": false,
-   "error": null,
-   "dps": 97392,
-   "ailments": {
-    "Shock": {
-     "dps_on": 116871,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Ember Fusillade",
-       "Considered Casting",
-       "Deliberation",
-       "Elemental Focus",
-       "Fire Attunement",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 97392
-     }
-    },
-    "Poison": {
-     "dps_on": 97392,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Ember Fusillade",
-       "Deliberation",
-       "Elemental Focus",
-       "Fire Attunement",
-       "Rakiata's Flow",
-       "Poison III"
-      ],
-      "per_s": 3.165,
-      "duration": 2,
-      "dps": 85041
-     }
-    },
-    "Ignite": {
-     "dps_on": 97392,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Ember Fusillade",
-       "Considered Casting",
-       "Deliberation",
-       "Fire Attunement",
-       "Rakiata's Flow",
-       "Ignite III"
-      ],
-      "per_s": 0.4371,
-      "duration": 3.48,
-      "dps": 79599
-     }
-    },
-    "Chill": {
-     "dps_on": 97392,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 97392,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Ember Fusillade",
-       "Considered Casting",
-       "Deliberation",
-       "Elemental Focus",
-       "Fire Attunement",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 97392
-     }
-    }
-   }
-  },
   "Entangle": {
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 14095,
+   "dps": 34115,
    "ailments": {
     "Shock": {
-     "dps_on": 16914,
+     "dps_on": 40938,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -2752,35 +2752,35 @@
        "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
-       "Considered Casting",
+       "Deliberation",
        "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 14095
+      "dps": 34115
      }
     },
     "Poison": {
-     "dps_on": 14095,
+     "dps_on": 34115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Entangle",
-       "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
+       "Deliberation",
        "Heft",
        "Poison III"
       ],
-      "per_s": 1.4333,
+      "per_s": 1.6133,
       "duration": 2,
-      "dps": 11919
+      "dps": 23943
      }
     },
     "Ignite": {
-     "dps_on": 14095,
+     "dps_on": 34115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -2790,22 +2790,22 @@
        "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
-       "Considered Casting",
+       "Deliberation",
        "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 14095
+      "dps": 34115
      }
     },
     "Chill": {
-     "dps_on": 14095,
+     "dps_on": 34115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 14095,
+     "dps_on": 34115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -2815,12 +2815,12 @@
        "Atalui's Bloodletting",
        "Brutality III",
        "Concentrated Area",
-       "Considered Casting",
+       "Deliberation",
        "Heft"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 14095
+      "dps": 34115
      }
     }
    }
@@ -2829,10 +2829,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 11519,
+   "dps": 18196,
    "ailments": {
     "Shock": {
-     "dps_on": 13822,
+     "dps_on": 21835,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -2845,13 +2845,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0186,
+      "per_s": 0.0281,
       "duration": 8,
-      "dps": 9277
+      "dps": 14670
      }
     },
     "Poison": {
-     "dps_on": 11519,
+     "dps_on": 18196,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -2864,13 +2864,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 0.4155,
+      "per_s": 0.4373,
       "duration": 2,
-      "dps": 9674
+      "dps": 15167
      }
     },
     "Ignite": {
-     "dps_on": 11519,
+     "dps_on": 18196,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -2883,19 +2883,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0202,
+      "per_s": 0.0292,
       "duration": 3.48,
-      "dps": 9298
+      "dps": 14717
      }
     },
     "Chill": {
-     "dps_on": 11519,
+     "dps_on": 18196,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 11519,
+     "dps_on": 18196,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -2910,7 +2910,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 11519
+      "dps": 18196
      }
     }
    }
@@ -2989,10 +2989,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 30675,
+   "dps": 65303,
    "ailments": {
     "Shock": {
-     "dps_on": 36810,
+     "dps_on": 78363,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -3007,11 +3007,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 30675
+      "dps": 65303
      }
     },
     "Poison": {
-     "dps_on": 30675,
+     "dps_on": 65303,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -3024,13 +3024,13 @@
        "Extraction",
        "Poison III"
       ],
-      "per_s": 1.5825,
+      "per_s": 1.785,
       "duration": 2,
-      "dps": 29613
+      "dps": 62793
      }
     },
     "Ignite": {
-     "dps_on": 30675,
+     "dps_on": 65303,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -3045,17 +3045,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 30675
+      "dps": 65303
      }
     },
     "Chill": {
-     "dps_on": 30675,
+     "dps_on": 65303,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 30675,
+     "dps_on": 65303,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -3070,7 +3070,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 30675
+      "dps": 65303
      }
     }
    }
@@ -3255,104 +3255,14 @@
     }
    }
   },
-  "Explosive Spear": {
-   "weapon": "Spear",
-   "minion": false,
-   "error": null,
-   "dps": 12572,
-   "ailments": {
-    "Shock": {
-     "dps_on": 15086,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Explosive Spear",
-       "Deliberation",
-       "Elemental Armament II",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Shock"
-      ],
-      "per_s": 0.0148,
-      "duration": 8,
-      "dps": 10091
-     }
-    },
-    "Poison": {
-     "dps_on": 12572,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Explosive Spear",
-       "Elemental Armament II",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Poison III"
-      ],
-      "per_s": 1.1693,
-      "duration": 2,
-      "dps": 10492
-     }
-    },
-    "Ignite": {
-     "dps_on": 12572,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Explosive Spear",
-       "Deliberation",
-       "Elemental Armament II",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Ignite III"
-      ],
-      "per_s": 0.0335,
-      "duration": 3.48,
-      "dps": 10112
-     }
-    },
-    "Chill": {
-     "dps_on": 12572,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 12572,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Explosive Spear",
-       "Deliberation",
-       "Elemental Armament II",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 12572
-     }
-    }
-   }
-  },
   "Eye of Winter": {
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 804,
+   "dps": 1592,
    "ailments": {
     "Shock": {
-     "dps_on": 965,
+     "dps_on": 1911,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -3367,11 +3277,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 804
+      "dps": 1592
      }
     },
     "Poison": {
-     "dps_on": 804,
+     "dps_on": 1592,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -3386,11 +3296,11 @@
       ],
       "per_s": 0.1196,
       "duration": 2,
-      "dps": 609
+      "dps": 1205
      }
     },
     "Ignite": {
-     "dps_on": 804,
+     "dps_on": 1592,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -3405,17 +3315,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 804
+      "dps": 1592
      }
     },
     "Chill": {
-     "dps_on": 804,
+     "dps_on": 1592,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 804,
+     "dps_on": 1592,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -3430,7 +3340,97 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 804
+      "dps": 1592
+     }
+    }
+   }
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "minion": false,
+   "error": null,
+   "dps": 12769,
+   "ailments": {
+    "Shock": {
+     "dps_on": 15323,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Explosive Spear",
+       "Deliberation",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Shock"
+      ],
+      "per_s": 0.0148,
+      "duration": 8,
+      "dps": 10250
+     }
+    },
+    "Poison": {
+     "dps_on": 12769,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Explosive Spear",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Poison III"
+      ],
+      "per_s": 1.1693,
+      "duration": 2,
+      "dps": 10657
+     }
+    },
+    "Ignite": {
+     "dps_on": 12769,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Explosive Spear",
+       "Deliberation",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Ignite III"
+      ],
+      "per_s": 0.0335,
+      "duration": 3.48,
+      "dps": 10273
+     }
+    },
+    "Chill": {
+     "dps_on": 12769,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 12769,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Explosive Spear",
+       "Deliberation",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Rapid Attacks II"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 12769
      }
     }
    }
@@ -3529,10 +3529,10 @@
    "weapon": "Spear",
    "minion": false,
    "error": null,
-   "dps": 31299,
+   "dps": 31791,
    "ailments": {
     "Shock": {
-     "dps_on": 37559,
+     "dps_on": 38149,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -3547,11 +3547,11 @@
       ],
       "per_s": 0.0401,
       "duration": 8,
-      "dps": 25128
+      "dps": 25525
      }
     },
     "Poison": {
-     "dps_on": 31299,
+     "dps_on": 31791,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -3566,11 +3566,11 @@
       ],
       "per_s": 1.4137,
       "duration": 2,
-      "dps": 24087
+      "dps": 24466
      }
     },
     "Ignite": {
-     "dps_on": 31299,
+     "dps_on": 31791,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -3585,17 +3585,17 @@
       ],
       "per_s": 0.071,
       "duration": 3.48,
-      "dps": 25206
+      "dps": 25607
      }
     },
     "Chill": {
-     "dps_on": 31299,
+     "dps_on": 31791,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 31299,
+     "dps_on": 31791,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -3610,7 +3610,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 31299
+      "dps": 31791
      }
     }
    }
@@ -3619,10 +3619,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 32759,
+   "dps": 68314,
    "ailments": {
     "Shock": {
-     "dps_on": 39311,
+     "dps_on": 81977,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -3637,11 +3637,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 32759
+      "dps": 68314
      }
     },
     "Poison": {
-     "dps_on": 32759,
+     "dps_on": 68314,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -3654,13 +3654,13 @@
        "Xoph's Pyre",
        "Poison III"
       ],
-      "per_s": 1.055,
+      "per_s": 1.19,
       "duration": 2,
-      "dps": 27646
+      "dps": 57589
      }
     },
     "Ignite": {
-     "dps_on": 32759,
+     "dps_on": 68314,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -3673,19 +3673,19 @@
        "Xoph's Pyre",
        "Ignite III"
       ],
-      "per_s": 0.159,
+      "per_s": 0.331,
       "duration": 3.48,
-      "dps": 27584
+      "dps": 58621
      }
     },
     "Chill": {
-     "dps_on": 32759,
+     "dps_on": 68314,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 32759,
+     "dps_on": 68314,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -3700,7 +3700,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 32759
+      "dps": 68314
      }
     }
    }
@@ -3709,10 +3709,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 65736,
+   "dps": 128626,
    "ailments": {
     "Shock": {
-     "dps_on": 78883,
+     "dps_on": 154351,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -3727,11 +3727,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 65736
+      "dps": 128626
      }
     },
     "Poison": {
-     "dps_on": 65736,
+     "dps_on": 128626,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -3746,11 +3746,11 @@
       ],
       "per_s": 0.4286,
       "duration": 2,
-      "dps": 26237
+      "dps": 51337
      }
     },
     "Ignite": {
-     "dps_on": 65736,
+     "dps_on": 128626,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -3763,19 +3763,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0059,
+      "per_s": 0.0115,
       "duration": 3.48,
-      "dps": 52606
+      "dps": 102984
      }
     },
     "Chill": {
-     "dps_on": 65736,
+     "dps_on": 128626,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 65736,
+     "dps_on": 128626,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -3790,7 +3790,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 65736
+      "dps": 128626
      }
     }
    }
@@ -3889,10 +3889,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 30667,
+   "dps": 65713,
    "ailments": {
     "Shock": {
-     "dps_on": 36801,
+     "dps_on": 78855,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -3907,11 +3907,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 30667
+      "dps": 65713
      }
     },
     "Poison": {
-     "dps_on": 30667,
+     "dps_on": 65713,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -3924,13 +3924,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.29,
+      "per_s": 1.452,
       "duration": 2,
-      "dps": 23704
+      "dps": 50745
      }
     },
     "Ignite": {
-     "dps_on": 30667,
+     "dps_on": 65713,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -3943,19 +3943,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.1354,
+      "per_s": 0.2911,
       "duration": 3.48,
-      "dps": 24970
+      "dps": 54387
      }
     },
     "Chill": {
-     "dps_on": 30667,
+     "dps_on": 65713,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 30667,
+     "dps_on": 65713,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -3970,7 +3970,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 30667
+      "dps": 65713
      }
     }
    }
@@ -3979,10 +3979,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 7747,
+   "dps": 88628,
    "ailments": {
     "Shock": {
-     "dps_on": 9297,
+     "dps_on": 106354,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -3997,11 +3997,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 7747
+      "dps": 88628
      }
     },
     "Poison": {
-     "dps_on": 7747,
+     "dps_on": 88628,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -4016,36 +4016,36 @@
       ],
       "per_s": 0.1196,
       "duration": 2,
-      "dps": 6081
+      "dps": 68315
      }
     },
     "Ignite": {
-     "dps_on": 7747,
+     "dps_on": 88628,
      "gain": 0.0,
-     "per_s": 0.0149,
+     "per_s": 0.126,
      "duration": 4,
      "applier": {
       "gems": [
        "Flameblast",
        "Atziri's Impatience",
-       "Concentrated Area",
        "Considered Casting",
+       "Rakiata's Flow",
        "Xoph's Pyre",
        "Ignite III"
       ],
-      "per_s": 0.0448,
+      "per_s": 0.1994,
       "duration": 3.48,
-      "dps": 3662
+      "dps": 72770
      }
     },
     "Chill": {
-     "dps_on": 7747,
+     "dps_on": 88628,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 7747,
+     "dps_on": 88628,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -4060,7 +4060,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 7747
+      "dps": 88628
      }
     }
    }
@@ -4249,13 +4249,13 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 7549,
+   "dps": 17700,
    "ailments": {
     "Shock": {
-     "dps_on": 9059,
+     "dps_on": 21240,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Forge Hammer",
@@ -4265,13 +4265,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.008,
+      "per_s": 0.0101,
       "duration": 8,
-      "dps": 6090
+      "dps": 14286
      }
     },
     "Poison": {
-     "dps_on": 7549,
+     "dps_on": 17700,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -4286,11 +4286,11 @@
       ],
       "per_s": 0.149,
       "duration": 2,
-      "dps": 5823
+      "dps": 13643
      }
     },
     "Ignite": {
-     "dps_on": 7549,
+     "dps_on": 17700,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -4303,19 +4303,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0193,
+      "per_s": 0.0226,
       "duration": 3.48,
-      "dps": 6157
+      "dps": 14469
      }
     },
     "Chill": {
-     "dps_on": 7549,
+     "dps_on": 17700,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 7549,
+     "dps_on": 17700,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -4330,7 +4330,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 7549
+      "dps": 17700
      }
     }
    }
@@ -4500,10 +4500,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 10020,
+   "dps": 15995,
    "ailments": {
     "Shock": {
-     "dps_on": 12024,
+     "dps_on": 19194,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -4516,13 +4516,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0145,
+      "per_s": 0.0219,
       "duration": 8,
-      "dps": 8104
+      "dps": 12993
      }
     },
     "Poison": {
-     "dps_on": 10020,
+     "dps_on": 15995,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -4535,13 +4535,13 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.6955,
+      "per_s": 0.7551,
       "duration": 2,
-      "dps": 8431
+      "dps": 13462
      }
     },
     "Ignite": {
-     "dps_on": 10020,
+     "dps_on": 15995,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -4554,21 +4554,21 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.024,
+      "per_s": 0.0357,
       "duration": 3.48,
-      "dps": 8122
+      "dps": 13030
      }
     },
     "Chill": {
-     "dps_on": 10020,
+     "dps_on": 15995,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 10020,
+     "dps_on": 15995,
      "gain": 0.0,
-     "per_s": 0.0,
+     "per_s": 0.3272,
      "duration": 5,
      "applier": {
       "gems": [
@@ -4579,99 +4579,9 @@
        "Rakiata's Flow",
        "Rapid Attacks II"
       ],
-      "per_s": 0.0,
+      "per_s": 0.3272,
       "duration": 5,
-      "dps": 10020
-     }
-    }
-   }
-  },
-  "Freezing Salvo": {
-   "weapon": "Bow",
-   "minion": false,
-   "error": null,
-   "dps": 13167,
-   "ailments": {
-    "Shock": {
-     "dps_on": 15800,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Freezing Salvo",
-       "Concentrated Area",
-       "Elemental Armament II",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Shock"
-      ],
-      "per_s": 0.0158,
-      "duration": 8,
-      "dps": 10608
-     }
-    },
-    "Poison": {
-     "dps_on": 13167,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Freezing Salvo",
-       "Elemental Armament II",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Poison III"
-      ],
-      "per_s": 1.1592,
-      "duration": 2,
-      "dps": 10158
-     }
-    },
-    "Ignite": {
-     "dps_on": 13167,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Freezing Salvo",
-       "Concentrated Area",
-       "Elemental Armament II",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Ignite III"
-      ],
-      "per_s": 0.028,
-      "duration": 3.48,
-      "dps": 10622
-     }
-    },
-    "Chill": {
-     "dps_on": 13167,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 13167,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Freezing Salvo",
-       "Concentrated Area",
-       "Elemental Armament II",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 13167
+      "dps": 15995
      }
     }
    }
@@ -4680,10 +4590,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 12055,
+   "dps": 24778,
    "ailments": {
     "Shock": {
-     "dps_on": 14466,
+     "dps_on": 29733,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -4698,11 +4608,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 12055
+      "dps": 24778
      }
     },
     "Poison": {
-     "dps_on": 12055,
+     "dps_on": 24778,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -4717,11 +4627,11 @@
       ],
       "per_s": 0.3996,
       "duration": 2,
-      "dps": 9247
+      "dps": 19006
      }
     },
     "Ignite": {
-     "dps_on": 12055,
+     "dps_on": 24778,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -4736,17 +4646,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 12055
+      "dps": 24778
      }
     },
     "Chill": {
-     "dps_on": 12055,
+     "dps_on": 24778,
      "gain": 0.0,
      "per_s": 0.666,
      "duration": 8
     },
     "Bleed": {
-     "dps_on": 12055,
+     "dps_on": 24778,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -4761,7 +4671,97 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 12055
+      "dps": 24778
+     }
+    }
+   }
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "minion": false,
+   "error": null,
+   "dps": 20964,
+   "ailments": {
+    "Shock": {
+     "dps_on": 25156,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Freezing Salvo",
+       "Charged Shots II",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Shock"
+      ],
+      "per_s": 0.0319,
+      "duration": 8,
+      "dps": 16890
+     }
+    },
+    "Poison": {
+     "dps_on": 20964,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Freezing Salvo",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Poison III"
+      ],
+      "per_s": 1.0516,
+      "duration": 2,
+      "dps": 17426
+     }
+    },
+    "Ignite": {
+     "dps_on": 20964,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Freezing Salvo",
+       "Charged Shots II",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Ignite III"
+      ],
+      "per_s": 0.034,
+      "duration": 3.48,
+      "dps": 16916
+     }
+    },
+    "Chill": {
+     "dps_on": 20964,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 20964,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Freezing Salvo",
+       "Charged Shots II",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 20964
      }
     }
    }
@@ -4770,10 +4770,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 10654,
+   "dps": 22628,
    "ailments": {
     "Shock": {
-     "dps_on": 12785,
+     "dps_on": 27154,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -4788,11 +4788,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 10654
+      "dps": 22628
      }
     },
     "Poison": {
-     "dps_on": 10654,
+     "dps_on": 22628,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -4805,13 +4805,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.5825,
+      "per_s": 1.785,
       "duration": 2,
-      "dps": 9304
+      "dps": 19749
      }
     },
     "Ignite": {
-     "dps_on": 10654,
+     "dps_on": 22628,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -4826,17 +4826,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 10654
+      "dps": 22628
      }
     },
     "Chill": {
-     "dps_on": 10654,
+     "dps_on": 22628,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 10654,
+     "dps_on": 22628,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -4851,7 +4851,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 10654
+      "dps": 22628
      }
     }
    }
@@ -4860,10 +4860,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 9321,
+   "dps": 18158,
    "ailments": {
     "Shock": {
-     "dps_on": 11185,
+     "dps_on": 21789,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -4878,11 +4878,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 9321
+      "dps": 18158
      }
     },
     "Poison": {
-     "dps_on": 9321,
+     "dps_on": 18158,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -4897,11 +4897,11 @@
       ],
       "per_s": 0.48,
       "duration": 2,
-      "dps": 7344
+      "dps": 14306
      }
     },
     "Ignite": {
-     "dps_on": 9321,
+     "dps_on": 18158,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -4916,17 +4916,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 9321
+      "dps": 18158
      }
     },
     "Chill": {
-     "dps_on": 9321,
+     "dps_on": 18158,
      "gain": 0.0,
      "per_s": 0.75,
      "duration": 8
     },
     "Bleed": {
-     "dps_on": 9321,
+     "dps_on": 18158,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -4941,7 +4941,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 9321
+      "dps": 18158
      }
     }
    }
@@ -5021,10 +5021,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 40114,
+   "dps": 85870,
    "ailments": {
     "Shock": {
-     "dps_on": 48137,
+     "dps_on": 103044,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -5039,11 +5039,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 40114
+      "dps": 85870
      }
     },
     "Poison": {
-     "dps_on": 40114,
+     "dps_on": 85870,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -5056,13 +5056,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.5825,
+      "per_s": 1.785,
       "duration": 2,
-      "dps": 32090
+      "dps": 68696
      }
     },
     "Ignite": {
-     "dps_on": 40114,
+     "dps_on": 85870,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -5077,17 +5077,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 40114
+      "dps": 85870
      }
     },
     "Chill": {
-     "dps_on": 40114,
+     "dps_on": 85870,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 40114,
+     "dps_on": 85870,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -5102,97 +5102,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 40114
-     }
-    }
-   }
-  },
-  "Furious Slam": {
-   "weapon": "Talisman",
-   "minion": false,
-   "error": null,
-   "dps": 32946,
-   "ailments": {
-    "Shock": {
-     "dps_on": 41183,
-     "gain": 0.25,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Furious Slam",
-       "Concentrated Area",
-       "Elemental Armament II",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Shock"
-      ],
-      "per_s": 0.0478,
-      "duration": 8,
-      "dps": 26551
-     }
-    },
-    "Poison": {
-     "dps_on": 32946,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Furious Slam",
-       "Elemental Armament II",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Poison III"
-      ],
-      "per_s": 0.9467,
-      "duration": 2,
-      "dps": 25414
-     }
-    },
-    "Ignite": {
-     "dps_on": 32946,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Furious Slam",
-       "Concentrated Area",
-       "Elemental Armament II",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Ignite III"
-      ],
-      "per_s": 0.075,
-      "duration": 3.48,
-      "dps": 26704
-     }
-    },
-    "Chill": {
-     "dps_on": 32946,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 32946,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Furious Slam",
-       "Concentrated Area",
-       "Elemental Armament II",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 32946
+      "dps": 85870
      }
     }
    }
@@ -5283,6 +5193,96 @@
       "per_s": 0.0,
       "duration": 5,
       "dps": 3099
+     }
+    }
+   }
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "minion": false,
+   "error": null,
+   "dps": 32946,
+   "ailments": {
+    "Shock": {
+     "dps_on": 41183,
+     "gain": 0.25,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Furious Slam",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Shock"
+      ],
+      "per_s": 0.0478,
+      "duration": 8,
+      "dps": 26551
+     }
+    },
+    "Poison": {
+     "dps_on": 32946,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Furious Slam",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Poison III"
+      ],
+      "per_s": 0.9467,
+      "duration": 2,
+      "dps": 25414
+     }
+    },
+    "Ignite": {
+     "dps_on": 32946,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Furious Slam",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Ignite III"
+      ],
+      "per_s": 0.075,
+      "duration": 3.48,
+      "dps": 26704
+     }
+    },
+    "Chill": {
+     "dps_on": 32946,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 32946,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Furious Slam",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Rapid Attacks II"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 32946
      }
     }
    }
@@ -5471,10 +5471,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 7394,
+   "dps": 12020,
    "ailments": {
     "Shock": {
-     "dps_on": 8873,
+     "dps_on": 14425,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -5487,13 +5487,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0128,
+      "per_s": 0.0202,
       "duration": 8,
-      "dps": 5961
+      "dps": 9699
      }
     },
     "Poison": {
-     "dps_on": 7394,
+     "dps_on": 12020,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -5506,13 +5506,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 0.9522,
+      "per_s": 1.0516,
       "duration": 2,
-      "dps": 6111
+      "dps": 9858
      }
     },
     "Ignite": {
-     "dps_on": 7394,
+     "dps_on": 12020,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -5525,19 +5525,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0143,
+      "per_s": 0.0206,
       "duration": 3.48,
-      "dps": 5966
+      "dps": 9709
      }
     },
     "Chill": {
-     "dps_on": 7394,
+     "dps_on": 12020,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 7394,
+     "dps_on": 12020,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -5552,7 +5552,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 7394
+      "dps": 12020
      }
     }
    }
@@ -5917,14 +5917,104 @@
     }
    }
   },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "minion": false,
+   "error": null,
+   "dps": 53560,
+   "ailments": {
+    "Shock": {
+     "dps_on": 64272,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Grim Pillars",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Considered Casting",
+       "Elemental Focus",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 53560
+     }
+    },
+    "Poison": {
+     "dps_on": 53560,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Grim Pillars",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Elemental Focus",
+       "Rakiata's Flow",
+       "Poison III"
+      ],
+      "per_s": 2.0743,
+      "duration": 2,
+      "dps": 46477
+     }
+    },
+    "Ignite": {
+     "dps_on": 53560,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Grim Pillars",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Considered Casting",
+       "Elemental Focus",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 53560
+     }
+    },
+    "Chill": {
+     "dps_on": 53560,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 53560,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Grim Pillars",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Considered Casting",
+       "Elemental Focus",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 53560
+     }
+    }
+   }
+  },
   "Glacial Lance": {
    "weapon": "Spear",
    "minion": false,
    "error": null,
-   "dps": 25352,
+   "dps": 25754,
    "ailments": {
     "Shock": {
-     "dps_on": 30422,
+     "dps_on": 30905,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -5939,11 +6029,11 @@
       ],
       "per_s": 0.0088,
       "duration": 8,
-      "dps": 20365
+      "dps": 20690
      }
     },
     "Poison": {
-     "dps_on": 25352,
+     "dps_on": 25754,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -5958,11 +6048,11 @@
       ],
       "per_s": 0.877,
       "duration": 2,
-      "dps": 21186
+      "dps": 21523
      }
     },
     "Ignite": {
-     "dps_on": 25352,
+     "dps_on": 25754,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -5977,17 +6067,17 @@
       ],
       "per_s": 0.0184,
       "duration": 3.48,
-      "dps": 20374
+      "dps": 20699
      }
     },
     "Chill": {
-     "dps_on": 25352,
+     "dps_on": 25754,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 25352,
+     "dps_on": 25754,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -6002,187 +6092,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 25352
-     }
-    }
-   }
-  },
-  "Grim Pillars": {
-   "weapon": "Wand",
-   "minion": false,
-   "error": null,
-   "dps": 24411,
-   "ailments": {
-    "Shock": {
-     "dps_on": 29293,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Grim Pillars",
-       "Cold Attunement",
-       "Concentrated Area",
-       "Considered Casting",
-       "Elemental Focus",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 24411
-     }
-    },
-    "Poison": {
-     "dps_on": 24411,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Grim Pillars",
-       "Cold Attunement",
-       "Concentrated Area",
-       "Elemental Focus",
-       "Rakiata's Flow",
-       "Poison III"
-      ],
-      "per_s": 1.8429,
-      "duration": 2,
-      "dps": 21181
-     }
-    },
-    "Ignite": {
-     "dps_on": 24411,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Grim Pillars",
-       "Cold Attunement",
-       "Concentrated Area",
-       "Considered Casting",
-       "Elemental Focus",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 24411
-     }
-    },
-    "Chill": {
-     "dps_on": 24411,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 24411,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Grim Pillars",
-       "Cold Attunement",
-       "Concentrated Area",
-       "Considered Casting",
-       "Elemental Focus",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 24411
-     }
-    }
-   }
-  },
-  "Hammer of the Gods": {
-   "weapon": "One Hand Mace",
-   "minion": false,
-   "error": null,
-   "dps": 39629,
-   "ailments": {
-    "Shock": {
-     "dps_on": 47554,
-     "gain": 0.2,
-     "per_s": 0.0019,
-     "duration": 8,
-     "applier": {
-      "gems": [
-       "Hammer of the Gods",
-       "Concentrated Area",
-       "Deliberation",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Shock"
-      ],
-      "per_s": 0.0075,
-      "duration": 8,
-      "dps": 28961
-     }
-    },
-    "Poison": {
-     "dps_on": 39629,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Hammer of the Gods",
-       "Deliberation",
-       "Fire Attunement",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Poison III"
-      ],
-      "per_s": 0.756,
-      "duration": 2,
-      "dps": 32519
-     }
-    },
-    "Ignite": {
-     "dps_on": 39629,
-     "gain": 0.0,
-     "per_s": 0.0396,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Hammer of the Gods",
-       "Concentrated Area",
-       "Deliberation",
-       "Fire Attunement",
-       "Rapid Attacks II",
-       "Ignite III"
-      ],
-      "per_s": 0.1187,
-      "duration": 3.48,
-      "dps": 24658
-     }
-    },
-    "Chill": {
-     "dps_on": 39629,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 39629,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Hammer of the Gods",
-       "Concentrated Area",
-       "Deliberation",
-       "Fire Attunement",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 39629
+      "dps": 25754
      }
     }
    }
@@ -6277,14 +6187,104 @@
     }
    }
   },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "minion": false,
+   "error": null,
+   "dps": 93996,
+   "ailments": {
+    "Shock": {
+     "dps_on": 112795,
+     "gain": 0.2,
+     "per_s": 0.003,
+     "duration": 8,
+     "applier": {
+      "gems": [
+       "Hammer of the Gods",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Shock"
+      ],
+      "per_s": 0.0118,
+      "duration": 8,
+      "dps": 70795
+     }
+    },
+    "Poison": {
+     "dps_on": 93996,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Hammer of the Gods",
+       "Elemental Armament II",
+       "Fire Attunement",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Poison III"
+      ],
+      "per_s": 0.756,
+      "duration": 2,
+      "dps": 73410
+     }
+    },
+    "Ignite": {
+     "dps_on": 93996,
+     "gain": 0.0,
+     "per_s": 0.056,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Hammer of the Gods",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Fire Attunement",
+       "Rapid Attacks II",
+       "Ignite III"
+      ],
+      "per_s": 0.168,
+      "duration": 3.48,
+      "dps": 42132
+     }
+    },
+    "Chill": {
+     "dps_on": 93996,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 0
+    },
+    "Bleed": {
+     "dps_on": 93996,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Hammer of the Gods",
+       "Concentrated Area",
+       "Elemental Armament II",
+       "Fire Attunement",
+       "Rakiata's Flow",
+       "Rapid Attacks II"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 93996
+     }
+    }
+   }
+  },
   "Hexblast": {
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 25586,
+   "dps": 53241,
    "ailments": {
     "Shock": {
-     "dps_on": 30704,
+     "dps_on": 63890,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -6299,11 +6299,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 25586
+      "dps": 53241
      }
     },
     "Poison": {
-     "dps_on": 25586,
+     "dps_on": 53241,
      "gain": 0.0,
      "per_s": 0.1017,
      "duration": 2,
@@ -6318,13 +6318,13 @@
       ],
       "per_s": 0.1017,
       "duration": 2,
-      "dps": 25586
+      "dps": 53241
      }
     },
     "Ignite": {
-     "dps_on": 25586,
+     "dps_on": 53241,
      "gain": 0.0,
-     "per_s": 0.023,
+     "per_s": 0.0432,
      "duration": 4,
      "applier": {
       "gems": [
@@ -6335,19 +6335,19 @@
        "Xoph's Pyre",
        "Ignite III"
       ],
-      "per_s": 0.0689,
+      "per_s": 0.1183,
       "duration": 3.48,
-      "dps": 16790
+      "dps": 34717
      }
     },
     "Chill": {
-     "dps_on": 25586,
+     "dps_on": 53241,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 25586,
+     "dps_on": 53241,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -6362,7 +6362,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 25586
+      "dps": 53241
      }
     }
    }
@@ -6461,10 +6461,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 20680,
+   "dps": 44056,
    "ailments": {
     "Shock": {
-     "dps_on": 24816,
+     "dps_on": 52867,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -6479,11 +6479,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 20680
+      "dps": 44056
      }
     },
     "Poison": {
-     "dps_on": 20680,
+     "dps_on": 44056,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -6496,13 +6496,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.29,
+      "per_s": 1.452,
       "duration": 2,
-      "dps": 16543
+      "dps": 35243
      }
     },
     "Ignite": {
-     "dps_on": 20680,
+     "dps_on": 44056,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -6517,17 +6517,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 20680
+      "dps": 44056
      }
     },
     "Chill": {
-     "dps_on": 20680,
+     "dps_on": 44056,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 20680,
+     "dps_on": 44056,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -6542,7 +6542,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 20680
+      "dps": 44056
      }
     }
    }
@@ -6641,88 +6641,88 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 27204,
+   "dps": 43933,
    "ailments": {
     "Shock": {
-     "dps_on": 32644,
+     "dps_on": 52720,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Ice Shot",
+       "Charged Shots II",
        "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0327,
+      "per_s": 0.0668,
       "duration": 8,
-      "dps": 21937
+      "dps": 35430
      }
     },
     "Poison": {
-     "dps_on": 27204,
+     "dps_on": 43933,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Ice Shot",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 1.0433,
+      "per_s": 0.9464,
       "duration": 2,
-      "dps": 22742
+      "dps": 36531
      }
     },
     "Ignite": {
-     "dps_on": 27204,
+     "dps_on": 43933,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Ice Shot",
+       "Charged Shots II",
        "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0579,
+      "per_s": 0.0712,
       "duration": 3.48,
-      "dps": 22007
+      "dps": 35560
      }
     },
     "Chill": {
-     "dps_on": 27204,
+     "dps_on": 43933,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 27204,
+     "dps_on": 43933,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Ice Shot",
+       "Charged Shots II",
        "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 27204
+      "dps": 43933
      }
     }
    }
@@ -6911,10 +6911,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 56608,
+   "dps": 122097,
    "ailments": {
     "Shock": {
-     "dps_on": 67930,
+     "dps_on": 146516,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -6929,11 +6929,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 56608
+      "dps": 122097
      }
     },
     "Poison": {
-     "dps_on": 56608,
+     "dps_on": 122097,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -6946,13 +6946,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 5.16,
+      "per_s": 5.808,
       "duration": 2,
-      "dps": 43654
+      "dps": 94113
      }
     },
     "Ignite": {
-     "dps_on": 56608,
+     "dps_on": 122097,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -6965,19 +6965,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.2519,
+      "per_s": 0.5443,
       "duration": 3.48,
-      "dps": 45667
+      "dps": 98715
      }
     },
     "Chill": {
-     "dps_on": 56608,
+     "dps_on": 122097,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 56608,
+     "dps_on": 122097,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -6992,7 +6992,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 56608
+      "dps": 122097
      }
     }
    }
@@ -7091,88 +7091,88 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 23177,
+   "dps": 67497,
    "ailments": {
     "Shock": {
-     "dps_on": 27812,
+     "dps_on": 80996,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Leap Slam",
+       "Close Combat II",
        "Concentrated Area",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Xoph's Pyre",
        "Shock"
       ],
-      "per_s": 0.0264,
+      "per_s": 0.0435,
       "duration": 8,
-      "dps": 18912
+      "dps": 54565
      }
     },
     "Poison": {
-     "dps_on": 23177,
+     "dps_on": 67497,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Leap Slam",
+       "Concentrated Area",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
-       "Xoph's Pyre",
        "Poison III"
       ],
       "per_s": 0.5235,
       "duration": 2,
-      "dps": 18069
+      "dps": 57492
      }
     },
     "Ignite": {
-     "dps_on": 23177,
+     "dps_on": 67497,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Leap Slam",
+       "Close Combat II",
        "Concentrated Area",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Xoph's Pyre",
        "Ignite III"
       ],
-      "per_s": 0.0703,
+      "per_s": 0.0952,
       "duration": 3.48,
-      "dps": 19119
+      "dps": 55322
      }
     },
     "Chill": {
-     "dps_on": 23177,
+     "dps_on": 67497,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 23177,
+     "dps_on": 67497,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Leap Slam",
+       "Close Combat II",
        "Concentrated Area",
        "Elemental Armament II",
        "Elemental Focus",
-       "Rakiata's Flow",
-       "Xoph's Pyre"
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 23177
+      "dps": 67497
      }
     }
    }
@@ -7181,10 +7181,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 19073,
+   "dps": 28910,
    "ailments": {
     "Shock": {
-     "dps_on": 22887,
+     "dps_on": 34692,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -7192,37 +7192,37 @@
       "gems": [
        "Lightning Arrow",
        "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0438,
+      "per_s": 0.0521,
       "duration": 8,
-      "dps": 15352
+      "dps": 23314
      }
     },
     "Poison": {
-     "dps_on": 19073,
+     "dps_on": 28910,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Lightning Arrow",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 1.0433,
+      "per_s": 0.9464,
       "duration": 2,
-      "dps": 15244
+      "dps": 23937
      }
     },
     "Ignite": {
-     "dps_on": 19073,
+     "dps_on": 28910,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -7230,24 +7230,24 @@
       "gems": [
        "Lightning Arrow",
        "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.025,
+      "per_s": 0.0469,
       "duration": 3.48,
-      "dps": 15365
+      "dps": 23370
      }
     },
     "Chill": {
-     "dps_on": 19073,
+     "dps_on": 28910,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 19073,
+     "dps_on": 28910,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -7255,14 +7255,14 @@
       "gems": [
        "Lightning Arrow",
        "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 19073
+      "dps": 28910
      }
     }
    }
@@ -7271,10 +7271,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 5853,
+   "dps": 11836,
    "ailments": {
     "Shock": {
-     "dps_on": 9834,
+     "dps_on": 19885,
      "gain": 0.68,
      "per_s": 0.0,
      "duration": 4,
@@ -7289,11 +7289,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 5853
+      "dps": 11836
      }
     },
     "Poison": {
-     "dps_on": 5853,
+     "dps_on": 11836,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -7308,11 +7308,11 @@
       ],
       "per_s": 0.149,
       "duration": 2,
-      "dps": 4538
+      "dps": 9165
      }
     },
     "Ignite": {
-     "dps_on": 5853,
+     "dps_on": 11836,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -7327,17 +7327,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 5853
+      "dps": 11836
      }
     },
     "Chill": {
-     "dps_on": 5853,
+     "dps_on": 11836,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 5853,
+     "dps_on": 11836,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -7352,7 +7352,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 5853
+      "dps": 11836
      }
     }
    }
@@ -7361,10 +7361,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 12622,
+   "dps": 19871,
    "ailments": {
     "Shock": {
-     "dps_on": 15147,
+     "dps_on": 23845,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -7377,13 +7377,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.038,
+      "per_s": 0.0555,
       "duration": 8,
-      "dps": 10143
+      "dps": 15983
      }
     },
     "Poison": {
-     "dps_on": 12622,
+     "dps_on": 19871,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -7396,13 +7396,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.1426,
+      "per_s": 1.2619,
       "duration": 2,
-      "dps": 10322
+      "dps": 16281
      }
     },
     "Ignite": {
-     "dps_on": 12622,
+     "dps_on": 19871,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -7415,19 +7415,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0061,
+      "per_s": 0.0122,
       "duration": 3.48,
-      "dps": 10144
+      "dps": 15986
      }
     },
     "Chill": {
-     "dps_on": 12622,
+     "dps_on": 19871,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 12622,
+     "dps_on": 19871,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -7442,7 +7442,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 12622
+      "dps": 19871
      }
     }
    }
@@ -7451,10 +7451,10 @@
    "weapon": "Spear",
    "minion": false,
    "error": null,
-   "dps": 23742,
+   "dps": 24115,
    "ailments": {
     "Shock": {
-     "dps_on": 28490,
+     "dps_on": 28938,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -7469,11 +7469,11 @@
       ],
       "per_s": 0.0961,
       "duration": 8,
-      "dps": 19047
+      "dps": 19347
      }
     },
     "Poison": {
-     "dps_on": 23742,
+     "dps_on": 24115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -7488,11 +7488,11 @@
       ],
       "per_s": 0.9979,
       "duration": 2,
-      "dps": 19799
+      "dps": 20110
      }
     },
     "Ignite": {
-     "dps_on": 23742,
+     "dps_on": 24115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -7507,17 +7507,17 @@
       ],
       "per_s": 0.0395,
       "duration": 3.48,
-      "dps": 19081
+      "dps": 19383
      }
     },
     "Chill": {
-     "dps_on": 23742,
+     "dps_on": 24115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 23742,
+     "dps_on": 24115,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -7532,7 +7532,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 23742
+      "dps": 24115
      }
     }
    }
@@ -7631,10 +7631,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 6647,
+   "dps": 10036,
    "ailments": {
     "Shock": {
-     "dps_on": 7977,
+     "dps_on": 12043,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -7647,13 +7647,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0153,
+      "per_s": 0.0182,
       "duration": 8,
-      "dps": 5348
+      "dps": 8082
      }
     },
     "Poison": {
-     "dps_on": 6647,
+     "dps_on": 10036,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -7666,13 +7666,13 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.5796,
+      "per_s": 0.6293,
       "duration": 2,
-      "dps": 5358
+      "dps": 8357
      }
     },
     "Ignite": {
-     "dps_on": 6647,
+     "dps_on": 10036,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -7685,19 +7685,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0087,
+      "per_s": 0.0163,
       "duration": 3.48,
-      "dps": 5351
+      "dps": 8092
      }
     },
     "Chill": {
-     "dps_on": 6647,
+     "dps_on": 10036,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 6647,
+     "dps_on": 10036,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -7712,7 +7712,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 6647
+      "dps": 10036
      }
     }
    }
@@ -7721,13 +7721,13 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 23411,
+   "dps": 28107,
    "ailments": {
     "Shock": {
-     "dps_on": 28093,
+     "dps_on": 33728,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Molten Blast",
@@ -7737,13 +7737,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0233,
+      "per_s": 0.0294,
       "duration": 8,
-      "dps": 19040
+      "dps": 22969
      }
     },
     "Poison": {
-     "dps_on": 23411,
+     "dps_on": 28107,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -7756,13 +7756,13 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 1.134,
+      "per_s": 0.9639,
       "duration": 2,
-      "dps": 18029
+      "dps": 21639
      }
     },
     "Ignite": {
-     "dps_on": 23411,
+     "dps_on": 28107,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -7775,19 +7775,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.1857,
+      "per_s": 0.2172,
       "duration": 6.96,
-      "dps": 19395
+      "dps": 23436
      }
     },
     "Chill": {
-     "dps_on": 23411,
+     "dps_on": 28107,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 23411,
+     "dps_on": 28107,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -7802,7 +7802,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 23411
+      "dps": 28107
      }
     }
    }
@@ -7811,10 +7811,10 @@
    "weapon": "Talisman",
    "minion": false,
    "error": null,
-   "dps": 105595,
+   "dps": 24912,
    "ailments": {
     "Shock": {
-     "dps_on": 131993,
+     "dps_on": 31141,
      "gain": 0.25,
      "per_s": 0.0,
      "duration": 4,
@@ -7827,13 +7827,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.1489,
+      "per_s": 0.0331,
       "duration": 8,
-      "dps": 85062
+      "dps": 20328
      }
     },
     "Poison": {
-     "dps_on": 105595,
+     "dps_on": 24912,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -7846,13 +7846,13 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 4.0572,
+      "per_s": 0.9016,
       "duration": 2,
-      "dps": 81255
+      "dps": 19320
      }
     },
     "Ignite": {
-     "dps_on": 105595,
+     "dps_on": 24912,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -7865,19 +7865,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.2386,
+      "per_s": 0.053,
       "duration": 3.48,
-      "dps": 85555
+      "dps": 20914
      }
     },
     "Chill": {
-     "dps_on": 105595,
+     "dps_on": 24912,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 105595,
+     "dps_on": 24912,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -7892,7 +7892,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 105595
+      "dps": 24912
      }
     }
    }
@@ -7991,10 +7991,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 21007,
+   "dps": 45664,
    "ailments": {
     "Shock": {
-     "dps_on": 25208,
+     "dps_on": 54797,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -8007,13 +8007,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0668,
+      "per_s": 0.1372,
       "duration": 8,
-      "dps": 16807
+      "dps": 36532
      }
     },
     "Poison": {
-     "dps_on": 21007,
+     "dps_on": 45664,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -8026,13 +8026,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.6125,
+      "per_s": 1.815,
       "duration": 2,
-      "dps": 18282
+      "dps": 39739
      }
     },
     "Ignite": {
-     "dps_on": 21007,
+     "dps_on": 45664,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -8047,17 +8047,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 21007
+      "dps": 45664
      }
     },
     "Chill": {
-     "dps_on": 21007,
+     "dps_on": 45664,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 21007,
+     "dps_on": 45664,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -8072,7 +8072,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 21007
+      "dps": 45664
      }
     }
    }
@@ -8081,13 +8081,13 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 35032,
+   "dps": 81813,
    "ailments": {
     "Shock": {
-     "dps_on": 42038,
+     "dps_on": 98176,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Perfect Strike",
@@ -8097,13 +8097,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0139,
+      "per_s": 0.0176,
       "duration": 8,
-      "dps": 28183
+      "dps": 65835
      }
     },
     "Poison": {
-     "dps_on": 35032,
+     "dps_on": 81813,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -8118,11 +8118,11 @@
       ],
       "per_s": 0.4536,
       "duration": 2,
-      "dps": 26986
+      "dps": 62968
      }
     },
     "Ignite": {
-     "dps_on": 35032,
+     "dps_on": 81813,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -8135,19 +8135,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0356,
+      "per_s": 0.0417,
       "duration": 3.48,
-      "dps": 28357
+      "dps": 66314
      }
     },
     "Chill": {
-     "dps_on": 35032,
+     "dps_on": 81813,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 35032,
+     "dps_on": 81813,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -8162,7 +8162,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 35032
+      "dps": 81813
      }
     }
    }
@@ -8347,6 +8347,96 @@
     }
    }
   },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "minion": false,
+   "error": null,
+   "dps": 18122,
+   "ailments": {
+    "Shock": {
+     "dps_on": 21746,
+     "gain": 0.2,
+     "per_s": 0.0017,
+     "duration": 8,
+     "applier": {
+      "gems": [
+       "Poisonburst Arrow",
+       "Close Combat II",
+       "Deliberation",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Shock"
+      ],
+      "per_s": 0.0068,
+      "duration": 8,
+      "dps": 13771
+     }
+    },
+    "Poison": {
+     "dps_on": 18122,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Poisonburst Arrow",
+       "Deliberation",
+       "Fire Attunement",
+       "Rakiata's Flow",
+       "Rapid Attacks II",
+       "Poison III"
+      ],
+      "per_s": 1.2586,
+      "duration": 2,
+      "dps": 16227
+     }
+    },
+    "Ignite": {
+     "dps_on": 18122,
+     "gain": 0.0,
+     "per_s": 0.0135,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Poisonburst Arrow",
+       "Close Combat II",
+       "Deliberation",
+       "Fire Attunement",
+       "Rapid Attacks II",
+       "Ignite III"
+      ],
+      "per_s": 0.0404,
+      "duration": 3.48,
+      "dps": 12314
+     }
+    },
+    "Chill": {
+     "dps_on": 18122,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 18122,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Poisonburst Arrow",
+       "Close Combat II",
+       "Deliberation",
+       "Fire Attunement",
+       "Rakiata's Flow",
+       "Rapid Attacks II"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 18122
+     }
+    }
+   }
+  },
   "Powered by Verisium": {
    "weapon": "Wand",
    "minion": false,
@@ -8417,104 +8507,14 @@
     }
    }
   },
-  "Poisonburst Arrow": {
-   "weapon": "Bow",
-   "minion": false,
-   "error": null,
-   "dps": 9572,
-   "ailments": {
-    "Shock": {
-     "dps_on": 11486,
-     "gain": 0.2,
-     "per_s": 0.0081,
-     "duration": 8,
-     "applier": {
-      "gems": [
-       "Poisonburst Arrow",
-       "Charged Shots II",
-       "Close Combat II",
-       "Deliberation",
-       "Rapid Attacks II",
-       "Shock"
-      ],
-      "per_s": 0.0161,
-      "duration": 8,
-      "dps": 6167
-     }
-    },
-    "Poison": {
-     "dps_on": 9572,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Poisonburst Arrow",
-       "Close Combat II",
-       "Deliberation",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Poison III"
-      ],
-      "per_s": 1.1592,
-      "duration": 2,
-      "dps": 8005
-     }
-    },
-    "Ignite": {
-     "dps_on": 9572,
-     "gain": 0.0,
-     "per_s": 0.0025,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Poisonburst Arrow",
-       "Close Combat II",
-       "Deliberation",
-       "Rakiata's Flow",
-       "Rapid Attacks II",
-       "Ignite III"
-      ],
-      "per_s": 0.0075,
-      "duration": 3.48,
-      "dps": 7309
-     }
-    },
-    "Chill": {
-     "dps_on": 9572,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 9572,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Poisonburst Arrow",
-       "Charged Shots II",
-       "Close Combat II",
-       "Deliberation",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 9572
-     }
-    }
-   }
-  },
   "Profane Ritual": {
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 46876,
+   "dps": 85474,
    "ailments": {
     "Shock": {
-     "dps_on": 56252,
+     "dps_on": 102569,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -8529,11 +8529,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 46876
+      "dps": 85474
      }
     },
     "Poison": {
-     "dps_on": 46876,
+     "dps_on": 85474,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -8548,11 +8548,11 @@
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 46876
+      "dps": 85474
      }
     },
     "Ignite": {
-     "dps_on": 46876,
+     "dps_on": 85474,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -8567,17 +8567,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 46876
+      "dps": 85474
      }
     },
     "Chill": {
-     "dps_on": 46876,
+     "dps_on": 85474,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 46876,
+     "dps_on": 85474,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -8592,7 +8592,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 46876
+      "dps": 85474
      }
     }
    }
@@ -8601,10 +8601,10 @@
    "weapon": "Spear",
    "minion": false,
    "error": null,
-   "dps": 17385,
+   "dps": 17661,
    "ailments": {
     "Shock": {
-     "dps_on": 20862,
+     "dps_on": 21193,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -8619,11 +8619,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 17385
+      "dps": 17661
      }
     },
     "Poison": {
-     "dps_on": 17385,
+     "dps_on": 17661,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -8638,11 +8638,11 @@
       ],
       "per_s": 1.1693,
       "duration": 2,
-      "dps": 13413
+      "dps": 13626
      }
     },
     "Ignite": {
-     "dps_on": 17385,
+     "dps_on": 17661,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -8657,17 +8657,17 @@
       ],
       "per_s": 0.0494,
       "duration": 3.48,
-      "dps": 14057
+      "dps": 14285
      }
     },
     "Chill": {
-     "dps_on": 17385,
+     "dps_on": 17661,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 17385,
+     "dps_on": 17661,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -8682,7 +8682,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 17385
+      "dps": 17661
      }
     }
    }
@@ -8691,10 +8691,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 85842,
+   "dps": 107761,
    "ailments": {
     "Shock": {
-     "dps_on": 103010,
+     "dps_on": 129313,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -8702,25 +8702,25 @@
       "gems": [
        "Rain of Arrows",
        "Concentrated Area",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Shock",
-       "Overcharge"
+       "Shock"
       ],
-      "per_s": 0.0106,
+      "per_s": 0.0183,
       "duration": 8,
-      "dps": 53267
+      "dps": 87337
      }
     },
     "Poison": {
-     "dps_on": 85842,
+     "dps_on": 107761,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Rain of Arrows",
-       "Concentrated Area",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
@@ -8728,11 +8728,11 @@
       ],
       "per_s": 0.576,
       "duration": 2,
-      "dps": 66099
+      "dps": 53766
      }
     },
     "Ignite": {
-     "dps_on": 85842,
+     "dps_on": 107761,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -8740,24 +8740,24 @@
       "gems": [
        "Rain of Arrows",
        "Concentrated Area",
+       "Deliberation",
        "Elemental Armament II",
-       "Hourglass",
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0024,
+      "per_s": 0.0282,
       "duration": 3.48,
-      "dps": 69288
+      "dps": 87669
      }
     },
     "Chill": {
-     "dps_on": 85842,
+     "dps_on": 107761,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 85842,
+     "dps_on": 107761,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -8765,14 +8765,14 @@
       "gems": [
        "Rain of Arrows",
        "Concentrated Area",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
-       "Hourglass",
        "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 85842
+      "dps": 107761
      }
     }
    }
@@ -8781,10 +8781,10 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 6468,
+   "dps": 1856,
    "ailments": {
     "Shock": {
-     "dps_on": 7762,
+     "dps_on": 2228,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -8792,18 +8792,18 @@
       "gems": [
        "Raise Zombie",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heavy Swing",
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 6468
+      "dps": 1856
      }
     },
     "Poison": {
-     "dps_on": 6468,
+     "dps_on": 1856,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -8811,18 +8811,18 @@
       "gems": [
        "Raise Zombie",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heavy Swing",
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 6468
+      "dps": 1856
      }
     },
     "Ignite": {
-     "dps_on": 6468,
+     "dps_on": 1856,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -8830,24 +8830,24 @@
       "gems": [
        "Raise Zombie",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heavy Swing",
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 6468
+      "dps": 1856
      }
     },
     "Chill": {
-     "dps_on": 6468,
+     "dps_on": 1856,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 6468,
+     "dps_on": 1856,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -8855,14 +8855,14 @@
       "gems": [
        "Raise Zombie",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heavy Swing",
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 6468
+      "dps": 1856
      }
     }
    }
@@ -9051,10 +9051,10 @@
    "weapon": "Spear",
    "minion": false,
    "error": null,
-   "dps": 3040,
+   "dps": 3087,
    "ailments": {
     "Shock": {
-     "dps_on": 3648,
+     "dps_on": 3705,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -9069,11 +9069,11 @@
       ],
       "per_s": 0.0043,
       "duration": 8,
-      "dps": 2443
+      "dps": 2481
      }
     },
     "Poison": {
-     "dps_on": 3040,
+     "dps_on": 3087,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -9088,11 +9088,11 @@
       ],
       "per_s": 0.5846,
       "duration": 2,
-      "dps": 2357
+      "dps": 2394
      }
     },
     "Ignite": {
-     "dps_on": 3040,
+     "dps_on": 3087,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -9107,17 +9107,17 @@
       ],
       "per_s": 0.0065,
       "duration": 3.48,
-      "dps": 2444
+      "dps": 2483
      }
     },
     "Chill": {
-     "dps_on": 3040,
+     "dps_on": 3087,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 3040,
+     "dps_on": 3087,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -9132,97 +9132,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 3040
-     }
-    }
-   }
-  },
-  "Rend": {
-   "weapon": "Talisman",
-   "minion": false,
-   "error": null,
-   "dps": 17628,
-   "ailments": {
-    "Shock": {
-     "dps_on": 21154,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Rend",
-       "Concentrated Area",
-       "Heft",
-       "Rapid Attacks II",
-       "Shock",
-       "Overcharge"
-      ],
-      "per_s": 0.0045,
-      "duration": 8,
-      "dps": 11410
-     }
-    },
-    "Poison": {
-     "dps_on": 17628,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Rend",
-       "Brutality III",
-       "Concentrated Area",
-       "Heft",
-       "Rapid Attacks II",
-       "Poison III"
-      ],
-      "per_s": 1.0282,
-      "duration": 2,
-      "dps": 14220
-     }
-    },
-    "Ignite": {
-     "dps_on": 17628,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Rend",
-       "Concentrated Area",
-       "Heavy Swing",
-       "Heft",
-       "Rapid Attacks II",
-       "Ignite III"
-      ],
-      "per_s": 0.0085,
-      "duration": 3.48,
-      "dps": 13930
-     }
-    },
-    "Chill": {
-     "dps_on": 17628,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 17628,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Rend",
-       "Brutality III",
-       "Concentrated Area",
-       "Heavy Swing",
-       "Heft",
-       "Rapid Attacks II"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 17628
+      "dps": 3087
      }
     }
    }
@@ -9313,6 +9223,96 @@
       "per_s": 0.0,
       "duration": 5,
       "dps": 149481
+     }
+    }
+   }
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "minion": false,
+   "error": null,
+   "dps": 17628,
+   "ailments": {
+    "Shock": {
+     "dps_on": 21154,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Rend",
+       "Concentrated Area",
+       "Heft",
+       "Rapid Attacks II",
+       "Shock",
+       "Overcharge"
+      ],
+      "per_s": 0.0045,
+      "duration": 8,
+      "dps": 11410
+     }
+    },
+    "Poison": {
+     "dps_on": 17628,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Rend",
+       "Brutality III",
+       "Concentrated Area",
+       "Heft",
+       "Rapid Attacks II",
+       "Poison III"
+      ],
+      "per_s": 1.0282,
+      "duration": 2,
+      "dps": 14220
+     }
+    },
+    "Ignite": {
+     "dps_on": 17628,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Rend",
+       "Concentrated Area",
+       "Heavy Swing",
+       "Heft",
+       "Rapid Attacks II",
+       "Ignite III"
+      ],
+      "per_s": 0.0085,
+      "duration": 3.48,
+      "dps": 13930
+     }
+    },
+    "Chill": {
+     "dps_on": 17628,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 17628,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Rend",
+       "Brutality III",
+       "Concentrated Area",
+       "Heavy Swing",
+       "Heft",
+       "Rapid Attacks II"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 17628
      }
     }
    }
@@ -9411,13 +9411,13 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 3100,
+   "dps": 6137,
    "ailments": {
     "Shock": {
-     "dps_on": 3721,
+     "dps_on": 7364,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Rolling Slam",
@@ -9427,13 +9427,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0033,
+      "per_s": 0.0034,
       "duration": 8,
-      "dps": 2490
+      "dps": 4924
      }
     },
     "Poison": {
-     "dps_on": 3100,
+     "dps_on": 6137,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -9448,11 +9448,11 @@
       ],
       "per_s": 0.4011,
       "duration": 2,
-      "dps": 2648
+      "dps": 5232
      }
     },
     "Ignite": {
-     "dps_on": 3100,
+     "dps_on": 6137,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -9465,19 +9465,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0074,
+      "per_s": 0.0072,
       "duration": 3.48,
-      "dps": 2494
+      "dps": 4932
      }
     },
     "Chill": {
-     "dps_on": 3100,
+     "dps_on": 6137,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 3100,
+     "dps_on": 6137,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -9492,7 +9492,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 3100
+      "dps": 6137
      }
     }
    }
@@ -9501,10 +9501,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 230,
+   "dps": 333,
    "ailments": {
     "Shock": {
-     "dps_on": 276,
+     "dps_on": 400,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -9514,60 +9514,60 @@
        "Atziri's Impatience",
        "Bleed III",
        "Concentrated Area",
-       "Poison II",
-       "Rakiata's Flow"
+       "Rakiata's Flow",
+       "Fire Attunement"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 230
+      "dps": 333
      }
     },
     "Poison": {
-     "dps_on": 230,
+     "dps_on": 333,
      "gain": 0.0,
-     "per_s": 0.149,
+     "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Seismic Cry",
        "Atziri's Impatience",
-       "Bleed III",
        "Concentrated Area",
-       "Poison II",
-       "Rakiata's Flow"
+       "Rakiata's Flow",
+       "Fire Attunement",
+       "Poison III"
       ],
       "per_s": 0.149,
       "duration": 2,
-      "dps": 230
+      "dps": 304
      }
     },
     "Ignite": {
-     "dps_on": 230,
+     "dps_on": 333,
      "gain": 0.0,
-     "per_s": 0.0003,
+     "per_s": 0.0008,
      "duration": 4,
      "applier": {
       "gems": [
        "Seismic Cry",
        "Atziri's Impatience",
        "Concentrated Area",
-       "Poison II",
        "Rakiata's Flow",
+       "Fire Attunement",
        "Ignite III"
       ],
-      "per_s": 0.001,
+      "per_s": 0.0024,
       "duration": 3.48,
-      "dps": 182
+      "dps": 285
      }
     },
     "Chill": {
-     "dps_on": 230,
+     "dps_on": 333,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 230,
+     "dps_on": 333,
      "gain": 0.0,
      "per_s": 0.2484,
      "duration": 5,
@@ -9577,12 +9577,12 @@
        "Atziri's Impatience",
        "Bleed III",
        "Concentrated Area",
-       "Poison II",
-       "Rakiata's Flow"
+       "Rakiata's Flow",
+       "Fire Attunement"
       ],
       "per_s": 0.2484,
       "duration": 5,
-      "dps": 230
+      "dps": 333
      }
     }
    }
@@ -9861,17 +9861,17 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 13048,
+   "dps": 19573,
    "ailments": {
     "Shock": {
-     "dps_on": 15657,
+     "dps_on": 23487,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Shockchain Arrow",
-       "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
@@ -9879,11 +9879,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 13048
+      "dps": 19573
      }
     },
     "Poison": {
-     "dps_on": 13048,
+     "dps_on": 19573,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -9896,45 +9896,45 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.8114,
+      "per_s": 0.881,
       "duration": 2,
-      "dps": 10506
+      "dps": 16380
      }
     },
     "Ignite": {
-     "dps_on": 13048,
+     "dps_on": 19573,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Shockchain Arrow",
-       "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0171,
+      "per_s": 0.0383,
       "duration": 3.48,
-      "dps": 10506
+      "dps": 15830
      }
     },
     "Chill": {
-     "dps_on": 13048,
+     "dps_on": 19573,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 13048,
+     "dps_on": 19573,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Shockchain Arrow",
-       "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
@@ -9942,7 +9942,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 13048
+      "dps": 19573
      }
     }
    }
@@ -9951,10 +9951,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 2115,
+   "dps": 3223,
    "ailments": {
     "Shock": {
-     "dps_on": 2538,
+     "dps_on": 3868,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -9967,13 +9967,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0029,
+      "per_s": 0.0044,
       "duration": 8,
-      "dps": 1706
+      "dps": 2604
      }
     },
     "Poison": {
-     "dps_on": 2115,
+     "dps_on": 3223,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -9986,13 +9986,13 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.5796,
+      "per_s": 0.6293,
       "duration": 2,
-      "dps": 1628
+      "dps": 2479
      }
     },
     "Ignite": {
-     "dps_on": 2115,
+     "dps_on": 3223,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -10005,19 +10005,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0049,
+      "per_s": 0.007,
       "duration": 3.48,
-      "dps": 1706
+      "dps": 2604
      }
     },
     "Chill": {
-     "dps_on": 2115,
+     "dps_on": 3223,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 2115,
+     "dps_on": 3223,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -10032,7 +10032,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 2115
+      "dps": 3223
      }
     }
    }
@@ -10311,10 +10311,10 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 12750,
+   "dps": 14648,
    "ailments": {
     "Shock": {
-     "dps_on": 15300,
+     "dps_on": 17578,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -10322,18 +10322,18 @@
       "gems": [
        "Skeletal Arsonist",
        "Concentrated Area",
-       "Fiery Death",
+       "Feeding Frenzy I",
        "Fire Attunement",
        "Rakiata's Flow",
-       "Xoph's Pyre"
+       "Rapid Attacks II"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 12750
+      "dps": 14648
      }
     },
     "Poison": {
-     "dps_on": 12750,
+     "dps_on": 14648,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -10341,18 +10341,18 @@
       "gems": [
        "Skeletal Arsonist",
        "Concentrated Area",
-       "Fiery Death",
+       "Feeding Frenzy I",
        "Fire Attunement",
        "Rakiata's Flow",
-       "Xoph's Pyre"
+       "Rapid Attacks II"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 12750
+      "dps": 14648
      }
     },
     "Ignite": {
-     "dps_on": 12750,
+     "dps_on": 14648,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -10360,24 +10360,24 @@
       "gems": [
        "Skeletal Arsonist",
        "Concentrated Area",
-       "Fiery Death",
+       "Feeding Frenzy I",
        "Fire Attunement",
        "Rakiata's Flow",
-       "Xoph's Pyre"
+       "Rapid Attacks II"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 12750
+      "dps": 14648
      }
     },
     "Chill": {
-     "dps_on": 12750,
+     "dps_on": 14648,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 12750,
+     "dps_on": 14648,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -10385,14 +10385,104 @@
       "gems": [
        "Skeletal Arsonist",
        "Concentrated Area",
-       "Fiery Death",
+       "Feeding Frenzy I",
        "Fire Attunement",
        "Rakiata's Flow",
-       "Xoph's Pyre"
+       "Rapid Attacks II"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 12750
+      "dps": 14648
+     }
+    }
+   }
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "minion": true,
+   "error": null,
+   "dps": 13844,
+   "ailments": {
+    "Shock": {
+     "dps_on": 16613,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Skeletal Brute",
+       "Bleed III",
+       "Brutality III",
+       "Feeding Frenzy I",
+       "Heavy Swing",
+       "Heft"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 13844
+     }
+    },
+    "Poison": {
+     "dps_on": 13844,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Skeletal Brute",
+       "Bleed III",
+       "Brutality III",
+       "Feeding Frenzy I",
+       "Heavy Swing",
+       "Heft"
+      ],
+      "per_s": 0.0,
+      "duration": 2,
+      "dps": 13844
+     }
+    },
+    "Ignite": {
+     "dps_on": 13844,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Skeletal Brute",
+       "Bleed III",
+       "Brutality III",
+       "Feeding Frenzy I",
+       "Heavy Swing",
+       "Heft"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 13844
+     }
+    },
+    "Chill": {
+     "dps_on": 13844,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 13844,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Skeletal Brute",
+       "Bleed III",
+       "Brutality III",
+       "Feeding Frenzy I",
+       "Heavy Swing",
+       "Heft"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 13844
      }
     }
    }
@@ -10467,182 +10557,92 @@
     }
    }
   },
-  "Skeletal Brute": {
-   "weapon": "Sceptre",
-   "minion": true,
-   "error": null,
-   "dps": 7939,
-   "ailments": {
-    "Shock": {
-     "dps_on": 9526,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Skeletal Brute",
-       "Bleed III",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 7939
-     }
-    },
-    "Poison": {
-     "dps_on": 7939,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Skeletal Brute",
-       "Bleed III",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 2,
-      "dps": 7939
-     }
-    },
-    "Ignite": {
-     "dps_on": 7939,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Skeletal Brute",
-       "Bleed III",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 7939
-     }
-    },
-    "Chill": {
-     "dps_on": 7939,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 7939,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Skeletal Brute",
-       "Bleed III",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 7939
-     }
-    }
-   }
-  },
   "Skeletal Frost Mage": {
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 9086,
+   "dps": 11924,
    "ailments": {
     "Shock": {
-     "dps_on": 10903,
+     "dps_on": 14309,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Skeletal Frost Mage",
+       "Cold Attunement",
        "Elemental Focus",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow",
-       "Tul's Stillness"
+       "Hulking Minions",
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 9086
+      "dps": 11924
      }
     },
     "Poison": {
-     "dps_on": 9086,
+     "dps_on": 11924,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Skeletal Frost Mage",
+       "Cold Attunement",
        "Elemental Focus",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow",
-       "Tul's Stillness"
+       "Hulking Minions",
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 9086
+      "dps": 11924
      }
     },
     "Ignite": {
-     "dps_on": 9086,
+     "dps_on": 11924,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Skeletal Frost Mage",
+       "Cold Attunement",
        "Elemental Focus",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow",
-       "Tul's Stillness"
+       "Hulking Minions",
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 9086
+      "dps": 11924
      }
     },
     "Chill": {
-     "dps_on": 9086,
+     "dps_on": 11924,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 9086,
+     "dps_on": 11924,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Skeletal Frost Mage",
+       "Cold Attunement",
        "Elemental Focus",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow",
-       "Tul's Stillness"
+       "Hulking Minions",
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 9086
+      "dps": 11924
      }
     }
    }
@@ -10651,10 +10651,10 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 2761,
+   "dps": 8345,
    "ailments": {
     "Shock": {
-     "dps_on": 3313,
+     "dps_on": 10014,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -10662,18 +10662,18 @@
       "gems": [
        "Skeletal Reaver",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 2761
+      "dps": 8345
      }
     },
     "Poison": {
-     "dps_on": 2761,
+     "dps_on": 8345,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -10681,18 +10681,18 @@
       "gems": [
        "Skeletal Reaver",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 2761
+      "dps": 8345
      }
     },
     "Ignite": {
-     "dps_on": 2761,
+     "dps_on": 8345,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -10700,24 +10700,24 @@
       "gems": [
        "Skeletal Reaver",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 2761
+      "dps": 8345
      }
     },
     "Chill": {
-     "dps_on": 2761,
+     "dps_on": 8345,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 2761,
+     "dps_on": 8345,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -10725,14 +10725,14 @@
       "gems": [
        "Skeletal Reaver",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 2761
+      "dps": 8345
      }
     }
    }
@@ -10741,10 +10741,10 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 6955,
+   "dps": 9859,
    "ailments": {
     "Shock": {
-     "dps_on": 8345,
+     "dps_on": 11831,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -10752,18 +10752,18 @@
       "gems": [
        "Skeletal Sniper",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heft",
+       "Hulking Minions"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 6955
+      "dps": 9859
      }
     },
     "Poison": {
-     "dps_on": 6955,
+     "dps_on": 9859,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -10771,18 +10771,18 @@
       "gems": [
        "Skeletal Sniper",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heft",
+       "Hulking Minions"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 6955
+      "dps": 9859
      }
     },
     "Ignite": {
-     "dps_on": 6955,
+     "dps_on": 9859,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -10790,24 +10790,24 @@
       "gems": [
        "Skeletal Sniper",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heft",
+       "Hulking Minions"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 6955
+      "dps": 9859
      }
     },
     "Chill": {
-     "dps_on": 6955,
+     "dps_on": 9859,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 6955,
+     "dps_on": 9859,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -10815,14 +10815,14 @@
       "gems": [
        "Skeletal Sniper",
        "Bleed III",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
-       "Poison II",
-       "Rakiata's Flow"
+       "Heft",
+       "Hulking Minions"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 6955
+      "dps": 9859
      }
     }
    }
@@ -10831,10 +10831,10 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 9914,
+   "dps": 16024,
    "ailments": {
     "Shock": {
-     "dps_on": 11897,
+     "dps_on": 19228,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -10842,18 +10842,18 @@
       "gems": [
        "Skeletal Storm Mage",
        "Elemental Focus",
-       "Esh's Radiance",
        "Feeding Frenzy I",
-       "Fiery Death",
+       "Hulking Minions",
+       "Lightning Attunement",
        "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 9914
+      "dps": 16024
      }
     },
     "Poison": {
-     "dps_on": 9914,
+     "dps_on": 16024,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -10861,18 +10861,18 @@
       "gems": [
        "Skeletal Storm Mage",
        "Elemental Focus",
-       "Esh's Radiance",
        "Feeding Frenzy I",
-       "Fiery Death",
+       "Hulking Minions",
+       "Lightning Attunement",
        "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 9914
+      "dps": 16024
      }
     },
     "Ignite": {
-     "dps_on": 9914,
+     "dps_on": 16024,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -10880,24 +10880,24 @@
       "gems": [
        "Skeletal Storm Mage",
        "Elemental Focus",
-       "Esh's Radiance",
        "Feeding Frenzy I",
-       "Fiery Death",
+       "Hulking Minions",
+       "Lightning Attunement",
        "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 9914
+      "dps": 16024
      }
     },
     "Chill": {
-     "dps_on": 9914,
+     "dps_on": 16024,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 9914,
+     "dps_on": 16024,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -10905,14 +10905,14 @@
       "gems": [
        "Skeletal Storm Mage",
        "Elemental Focus",
-       "Esh's Radiance",
        "Feeding Frenzy I",
-       "Fiery Death",
+       "Hulking Minions",
+       "Lightning Attunement",
        "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 9914
+      "dps": 16024
      }
     }
    }
@@ -10921,10 +10921,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 54929,
+   "dps": 122153,
    "ailments": {
     "Shock": {
-     "dps_on": 65915,
+     "dps_on": 146584,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -10939,11 +10939,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 54929
+      "dps": 122153
      }
     },
     "Poison": {
-     "dps_on": 54929,
+     "dps_on": 122153,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -10958,11 +10958,11 @@
       ],
       "per_s": 0.5961,
       "duration": 2,
-      "dps": 42398
+      "dps": 94285
      }
     },
     "Ignite": {
-     "dps_on": 54929,
+     "dps_on": 122153,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -10977,17 +10977,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 54929
+      "dps": 122153
      }
     },
     "Chill": {
-     "dps_on": 54929,
+     "dps_on": 122153,
      "gain": 0.0,
      "per_s": 0.9935,
      "duration": 8
     },
     "Bleed": {
-     "dps_on": 54929,
+     "dps_on": 122153,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -11002,7 +11002,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 54929
+      "dps": 122153
      }
     }
    }
@@ -11011,88 +11011,88 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 33416,
+   "dps": 64098,
    "ailments": {
     "Shock": {
-     "dps_on": 40099,
+     "dps_on": 76917,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Skyfall",
+       "Bleed III",
        "Cold Attunement",
        "Concentrated Area",
        "Considered Casting",
-       "Fiery Death",
        "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 33416
+      "dps": 64098
      }
     },
     "Poison": {
-     "dps_on": 33416,
+     "dps_on": 64098,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Skyfall",
+       "Bleed III",
        "Cold Attunement",
        "Concentrated Area",
-       "Fiery Death",
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 0.3665,
+      "per_s": 0.3887,
       "duration": 2,
-      "dps": 29862
+      "dps": 53030
      }
     },
     "Ignite": {
-     "dps_on": 33416,
+     "dps_on": 64098,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Skyfall",
+       "Bleed III",
        "Cold Attunement",
        "Concentrated Area",
        "Considered Casting",
-       "Fiery Death",
        "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 33416
+      "dps": 64098
      }
     },
     "Chill": {
-     "dps_on": 33416,
+     "dps_on": 64098,
      "gain": 0.0,
-     "per_s": 0.5708,
+     "per_s": 0.6094,
      "duration": 8
     },
     "Bleed": {
-     "dps_on": 33416,
+     "dps_on": 64098,
      "gain": 0.0,
-     "per_s": 0.0,
+     "per_s": 0.6094,
      "duration": 5,
      "applier": {
       "gems": [
        "Skyfall",
+       "Bleed III",
        "Cold Attunement",
        "Concentrated Area",
        "Considered Casting",
-       "Fiery Death",
        "Rakiata's Flow"
       ],
-      "per_s": 0.0,
+      "per_s": 0.6094,
       "duration": 5,
-      "dps": 33416
+      "dps": 64098
      }
     }
    }
@@ -11101,88 +11101,88 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 3241,
+   "dps": 6149,
    "ailments": {
     "Shock": {
-     "dps_on": 3889,
+     "dps_on": 7378,
      "gain": 0.2,
-     "per_s": 0.0013,
+     "per_s": 0.0015,
      "duration": 8,
      "applier": {
       "gems": [
        "Snipe",
        "Close Combat II",
+       "Heft",
        "Poison II",
-       "Rakiata's Flow",
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0026,
+      "per_s": 0.0029,
       "duration": 8,
-      "dps": 2753
+      "dps": 4985
      }
     },
     "Poison": {
-     "dps_on": 3241,
+     "dps_on": 6149,
      "gain": 0.0,
-     "per_s": 0.5216,
+     "per_s": 0.5664,
      "duration": 2,
      "applier": {
       "gems": [
        "Snipe",
        "Bleed III",
        "Close Combat II",
+       "Heft",
        "Poison II",
-       "Rakiata's Flow",
        "Rapid Attacks II"
       ],
-      "per_s": 0.5216,
+      "per_s": 0.5664,
       "duration": 2,
-      "dps": 3241
+      "dps": 6149
      }
     },
     "Ignite": {
-     "dps_on": 3241,
+     "dps_on": 6149,
      "gain": 0.0,
-     "per_s": 0.0011,
+     "per_s": 0.002,
      "duration": 4,
      "applier": {
       "gems": [
        "Snipe",
        "Close Combat II",
+       "Heft",
        "Poison II",
-       "Rakiata's Flow",
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0032,
+      "per_s": 0.0061,
       "duration": 3.48,
-      "dps": 2754
+      "dps": 4986
      }
     },
     "Chill": {
-     "dps_on": 3241,
+     "dps_on": 6149,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 3241,
+     "dps_on": 6149,
      "gain": 0.0,
-     "per_s": 0.8694,
+     "per_s": 0.9439,
      "duration": 5,
      "applier": {
       "gems": [
        "Snipe",
        "Bleed III",
        "Close Combat II",
+       "Heft",
        "Poison II",
-       "Rakiata's Flow",
        "Rapid Attacks II"
       ],
-      "per_s": 0.8694,
+      "per_s": 0.9439,
       "duration": 5,
-      "dps": 3241
+      "dps": 6149
      }
     }
    }
@@ -11191,10 +11191,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 16152,
+   "dps": 32034,
    "ailments": {
     "Shock": {
-     "dps_on": 19382,
+     "dps_on": 38441,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -11209,11 +11209,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 16152
+      "dps": 32034
      }
     },
     "Poison": {
-     "dps_on": 16152,
+     "dps_on": 32034,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -11228,11 +11228,11 @@
       ],
       "per_s": 0.75,
       "duration": 2,
-      "dps": 6447
+      "dps": 12786
      }
     },
     "Ignite": {
-     "dps_on": 16152,
+     "dps_on": 32034,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -11245,19 +11245,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0101,
+      "per_s": 0.0201,
       "duration": 3.48,
-      "dps": 12979
+      "dps": 25872
      }
     },
     "Chill": {
-     "dps_on": 16152,
+     "dps_on": 32034,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 16152,
+     "dps_on": 32034,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -11272,7 +11272,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 16152
+      "dps": 32034
      }
     }
    }
@@ -11281,10 +11281,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 21147,
+   "dps": 43502,
    "ailments": {
     "Shock": {
-     "dps_on": 25376,
+     "dps_on": 52202,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -11297,13 +11297,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0682,
+      "per_s": 0.1333,
       "duration": 8,
-      "dps": 16918
+      "dps": 34800
      }
     },
     "Poison": {
-     "dps_on": 21147,
+     "dps_on": 43502,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -11316,13 +11316,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.8086,
+      "per_s": 2.04,
       "duration": 2,
-      "dps": 18465
+      "dps": 37968
      }
     },
     "Ignite": {
-     "dps_on": 21147,
+     "dps_on": 43502,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -11337,17 +11337,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 21147
+      "dps": 43502
      }
     },
     "Chill": {
-     "dps_on": 21147,
+     "dps_on": 43502,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 21147,
+     "dps_on": 43502,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -11362,7 +11362,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 21147
+      "dps": 43502
      }
     }
    }
@@ -11371,10 +11371,10 @@
    "weapon": "Spear",
    "minion": false,
    "error": null,
-   "dps": 20788,
+   "dps": 21117,
    "ailments": {
     "Shock": {
-     "dps_on": 24945,
+     "dps_on": 25341,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -11389,11 +11389,11 @@
       ],
       "per_s": 0.0095,
       "duration": 8,
-      "dps": 13956
+      "dps": 14183
      }
     },
     "Poison": {
-     "dps_on": 20788,
+     "dps_on": 21117,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -11408,11 +11408,11 @@
       ],
       "per_s": 0.3136,
       "duration": 2,
-      "dps": 16063
+      "dps": 16318
      }
     },
     "Ignite": {
-     "dps_on": 20788,
+     "dps_on": 21117,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -11427,17 +11427,17 @@
       ],
       "per_s": 0.0805,
       "duration": 3.48,
-      "dps": 17395
+      "dps": 17703
      }
     },
     "Chill": {
-     "dps_on": 20788,
+     "dps_on": 21117,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 20788,
+     "dps_on": 21117,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -11452,7 +11452,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 20788
+      "dps": 21117
      }
     }
    }
@@ -11551,10 +11551,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 9043,
+   "dps": 14166,
    "ailments": {
     "Shock": {
-     "dps_on": 10852,
+     "dps_on": 16999,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -11567,13 +11567,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0159,
+      "per_s": 0.0236,
       "duration": 8,
-      "dps": 7293
+      "dps": 11442
      }
     },
     "Poison": {
-     "dps_on": 9043,
+     "dps_on": 14166,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -11586,13 +11586,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 0.5731,
+      "per_s": 0.6095,
       "duration": 2,
-      "dps": 7502
+      "dps": 11675
      }
     },
     "Ignite": {
-     "dps_on": 9043,
+     "dps_on": 14166,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -11605,19 +11605,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0173,
+      "per_s": 0.0245,
       "duration": 3.48,
-      "dps": 7304
+      "dps": 11466
      }
     },
     "Chill": {
-     "dps_on": 9043,
+     "dps_on": 14166,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 9043,
+     "dps_on": 14166,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -11632,7 +11632,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 9043
+      "dps": 14166
      }
     }
    }
@@ -11641,13 +11641,13 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 14102,
+   "dps": 32981,
    "ailments": {
     "Shock": {
-     "dps_on": 16922,
+     "dps_on": 39577,
      "gain": 0.2,
      "per_s": 0.0,
-     "duration": 4,
+     "duration": 0,
      "applier": {
       "gems": [
        "Stampede",
@@ -11657,13 +11657,13 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0168,
+      "per_s": 0.0204,
       "duration": 8,
-      "dps": 11325
+      "dps": 26485
      }
     },
     "Poison": {
-     "dps_on": 14102,
+     "dps_on": 32981,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -11678,11 +11678,11 @@
       ],
       "per_s": 1.512,
       "duration": 2,
-      "dps": 10871
+      "dps": 25393
      }
     },
     "Ignite": {
-     "dps_on": 14102,
+     "dps_on": 32981,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -11695,19 +11695,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0398,
+      "per_s": 0.0445,
       "duration": 3.48,
-      "dps": 11348
+      "dps": 26542
      }
     },
     "Chill": {
-     "dps_on": 14102,
+     "dps_on": 32981,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 14102,
+     "dps_on": 32981,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -11722,7 +11722,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 14102
+      "dps": 32981
      }
     }
    }
@@ -11731,10 +11731,10 @@
    "weapon": "Spear",
    "minion": false,
    "error": null,
-   "dps": 10645,
+   "dps": 10813,
    "ailments": {
     "Shock": {
-     "dps_on": 12774,
+     "dps_on": 12976,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -11749,11 +11749,11 @@
       ],
       "per_s": 0.0156,
       "duration": 8,
-      "dps": 8551
+      "dps": 8686
      }
     },
     "Poison": {
-     "dps_on": 10645,
+     "dps_on": 10813,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -11768,11 +11768,11 @@
       ],
       "per_s": 0.877,
       "duration": 2,
-      "dps": 8903
+      "dps": 9044
      }
     },
     "Ignite": {
-     "dps_on": 10645,
+     "dps_on": 10813,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -11787,17 +11787,17 @@
       ],
       "per_s": 0.0245,
       "duration": 3.48,
-      "dps": 8566
+      "dps": 8702
      }
     },
     "Chill": {
-     "dps_on": 10645,
+     "dps_on": 10813,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 10645,
+     "dps_on": 10813,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -11812,7 +11812,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 10645
+      "dps": 10813
      }
     }
    }
@@ -12001,29 +12001,29 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 4275,
+   "dps": 6107,
    "ailments": {
     "Shock": {
-     "dps_on": 5131,
+     "dps_on": 7329,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Stormcaller Arrow",
-       "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0099,
+      "per_s": 0.009,
       "duration": 8,
-      "dps": 3440
+      "dps": 4921
      }
     },
     "Poison": {
-     "dps_on": 4275,
+     "dps_on": 6107,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -12036,45 +12036,45 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.9274,
+      "per_s": 1.0068,
       "duration": 2,
-      "dps": 3441
+      "dps": 5109
      }
     },
     "Ignite": {
-     "dps_on": 4275,
+     "dps_on": 6107,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Stormcaller Arrow",
-       "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0056,
+      "per_s": 0.0119,
       "duration": 3.48,
-      "dps": 3440
+      "dps": 4924
      }
     },
     "Chill": {
-     "dps_on": 4275,
+     "dps_on": 6107,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 4275,
+     "dps_on": 6107,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Stormcaller Arrow",
-       "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
@@ -12082,7 +12082,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 4275
+      "dps": 6107
      }
     }
    }
@@ -12091,72 +12091,72 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 1795,
+   "dps": 1,
    "ailments": {
     "Shock": {
-     "dps_on": 2154,
+     "dps_on": 1,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Summon Spectre",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Poison": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Summon Spectre",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Ignite": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Summon Spectre",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Chill": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Summon Spectre",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 1795
+      "dps": 1
      }
     }
    }
@@ -12165,12 +12165,12 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 15285,
+   "dps": 48439,
    "ailments": {
     "Shock": {
-     "dps_on": 18342,
+     "dps_on": 58126,
      "gain": 0.2,
-     "per_s": 0.0017,
+     "per_s": 0.0015,
      "duration": 8,
      "applier": {
       "gems": [
@@ -12181,72 +12181,72 @@
        "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0034,
+      "per_s": 0.0062,
       "duration": 8,
-      "dps": 12692
+      "dps": 36809
      }
     },
     "Poison": {
-     "dps_on": 15285,
+     "dps_on": 48439,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Sunder",
-       "Close Combat II",
        "Concentrated Area",
+       "Fire Attunement",
        "Rakiata's Flow",
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.6048,
+      "per_s": 0.5988,
       "duration": 2,
-      "dps": 14288
+      "dps": 42444
      }
     },
     "Ignite": {
-     "dps_on": 15285,
+     "dps_on": 48439,
      "gain": 0.0,
-     "per_s": 0.0087,
+     "per_s": 0.0292,
      "duration": 4,
      "applier": {
       "gems": [
        "Sunder",
        "Close Combat II",
        "Concentrated Area",
-       "Rakiata's Flow",
+       "Fire Attunement",
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0261,
+      "per_s": 0.0875,
       "duration": 3.48,
-      "dps": 12716
+      "dps": 22580
      }
     },
     "Chill": {
-     "dps_on": 15285,
+     "dps_on": 48439,
      "gain": 0.0,
      "per_s": 0.0,
-     "duration": 2
+     "duration": 0
     },
     "Bleed": {
-     "dps_on": 15285,
+     "dps_on": 48439,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Sunder",
-       "Atalui's Bloodletting",
        "Close Combat II",
        "Concentrated Area",
+       "Fire Attunement",
        "Rakiata's Flow",
        "Rapid Attacks II"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 15285
+      "dps": 48439
      }
     }
    }
@@ -12255,88 +12255,88 @@
    "weapon": "Two Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 37616,
+   "dps": 50812,
    "ailments": {
     "Shock": {
-     "dps_on": 45139,
+     "dps_on": 60974,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Supercharged Slam",
-       "Bleed III",
        "Concentrated Area",
        "Heft",
+       "Rapid Attacks II",
        "Shock",
        "Overcharge"
       ],
-      "per_s": 0.0034,
+      "per_s": 0.0084,
       "duration": 8,
-      "dps": 23860
+      "dps": 33014
      }
     },
     "Poison": {
-     "dps_on": 37616,
+     "dps_on": 50812,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Supercharged Slam",
-       "Bleed III",
        "Brutality III",
        "Concentrated Area",
        "Heft",
+       "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 0.6,
+      "per_s": 1.0416,
       "duration": 2,
-      "dps": 30201
+      "dps": 41340
      }
     },
     "Ignite": {
-     "dps_on": 37616,
+     "dps_on": 50812,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Supercharged Slam",
-       "Bleed III",
        "Concentrated Area",
        "Heavy Swing",
        "Heft",
+       "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0037,
+      "per_s": 0.0112,
       "duration": 3.48,
-      "dps": 29402
+      "dps": 40057
      }
     },
     "Chill": {
-     "dps_on": 37616,
+     "dps_on": 50812,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 37616,
+     "dps_on": 50812,
      "gain": 0.0,
-     "per_s": 0.9,
+     "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Supercharged Slam",
-       "Bleed III",
        "Brutality III",
        "Concentrated Area",
        "Heavy Swing",
-       "Heft"
+       "Heft",
+       "Rapid Attacks II"
       ],
-      "per_s": 0.9,
+      "per_s": 0.0,
       "duration": 5,
-      "dps": 37616
+      "dps": 50812
      }
     }
    }
@@ -12415,72 +12415,72 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 1795,
+   "dps": 1,
    "ailments": {
     "Shock": {
-     "dps_on": 2154,
+     "dps_on": 1,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Poison": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Ignite": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 1795
+      "dps": 1
      }
     },
     "Chill": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 1795,
+     "dps_on": 1,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Tamed Companion",
-       "Fiery Death"
+       "Armour Explosion"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 1795
+      "dps": 1
      }
     }
    }
@@ -12669,10 +12669,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 16281,
+   "dps": 37149,
    "ailments": {
     "Shock": {
-     "dps_on": 19537,
+     "dps_on": 44579,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -12687,11 +12687,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 16281
+      "dps": 37149
      }
     },
     "Poison": {
-     "dps_on": 16281,
+     "dps_on": 37149,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -12704,13 +12704,13 @@
        "Heft",
        "Poison III"
       ],
-      "per_s": 1.29,
+      "per_s": 1.452,
       "duration": 2,
-      "dps": 13833
+      "dps": 31869
      }
     },
     "Ignite": {
-     "dps_on": 16281,
+     "dps_on": 37149,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -12725,17 +12725,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 16281
+      "dps": 37149
      }
     },
     "Chill": {
-     "dps_on": 16281,
+     "dps_on": 37149,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 16281,
+     "dps_on": 37149,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -12750,7 +12750,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 16281
+      "dps": 37149
      }
     }
    }
@@ -12849,10 +12849,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 19036,
+   "dps": 38471,
    "ailments": {
     "Shock": {
-     "dps_on": 22843,
+     "dps_on": 46165,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -12865,13 +12865,13 @@
        "Shock",
        "Overcharge"
       ],
-      "per_s": 0.0325,
+      "per_s": 0.0595,
       "duration": 8,
-      "dps": 11756
+      "dps": 23755
      }
     },
     "Poison": {
-     "dps_on": 19036,
+     "dps_on": 38471,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -12886,11 +12886,11 @@
       ],
       "per_s": 0.6667,
       "duration": 2,
-      "dps": 7597
+      "dps": 15354
      }
     },
     "Ignite": {
-     "dps_on": 19036,
+     "dps_on": 38471,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -12905,17 +12905,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 19036
+      "dps": 38471
      }
     },
     "Chill": {
-     "dps_on": 19036,
+     "dps_on": 38471,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 19036,
+     "dps_on": 38471,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -12930,7 +12930,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 19036
+      "dps": 38471
      }
     }
    }
@@ -12939,10 +12939,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 8835,
+   "dps": 16691,
    "ailments": {
     "Shock": {
-     "dps_on": 10602,
+     "dps_on": 20029,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -12957,11 +12957,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 8835
+      "dps": 16691
      }
     },
     "Poison": {
-     "dps_on": 8835,
+     "dps_on": 16691,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -12976,11 +12976,11 @@
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 8835
+      "dps": 16691
      }
     },
     "Ignite": {
-     "dps_on": 8835,
+     "dps_on": 16691,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -12995,17 +12995,17 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 8835
+      "dps": 16691
      }
     },
     "Chill": {
-     "dps_on": 8835,
+     "dps_on": 16691,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 8835,
+     "dps_on": 16691,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -13020,7 +13020,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 8835
+      "dps": 16691
      }
     }
    }
@@ -13029,10 +13029,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 14836,
+   "dps": 24151,
    "ailments": {
     "Shock": {
-     "dps_on": 17804,
+     "dps_on": 28981,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -13045,13 +13045,13 @@
        "Rakiata's Flow",
        "Shock"
       ],
-      "per_s": 0.0267,
+      "per_s": 0.0398,
       "duration": 8,
-      "dps": 11961
+      "dps": 19503
      }
     },
     "Poison": {
-     "dps_on": 14836,
+     "dps_on": 24151,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -13064,13 +13064,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.1426,
+      "per_s": 1.2619,
       "duration": 2,
-      "dps": 12131
+      "dps": 19797
      }
     },
     "Ignite": {
-     "dps_on": 14836,
+     "dps_on": 24151,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -13083,19 +13083,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.0251,
+      "per_s": 0.0424,
       "duration": 3.48,
-      "dps": 11973
+      "dps": 19538
      }
     },
     "Chill": {
-     "dps_on": 14836,
+     "dps_on": 24151,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 14836,
+     "dps_on": 24151,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -13110,7 +13110,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 14836
+      "dps": 24151
      }
     }
    }
@@ -13119,88 +13119,88 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 4834,
+   "dps": 7565,
    "ailments": {
     "Shock": {
-     "dps_on": 5801,
+     "dps_on": 9078,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Toxic Growth",
+       "Charged Shots II",
        "Concentrated Area",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0066,
+      "per_s": 0.0132,
       "duration": 8,
-      "dps": 3901
+      "dps": 6102
      }
     },
     "Poison": {
-     "dps_on": 4834,
+     "dps_on": 7565,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Toxic Growth",
+       "Concentrated Area",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 1.1592,
+      "per_s": 1.0516,
       "duration": 2,
-      "dps": 3744
+      "dps": 6213
      }
     },
     "Ignite": {
-     "dps_on": 4834,
+     "dps_on": 7565,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Toxic Growth",
+       "Charged Shots II",
        "Concentrated Area",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0113,
+      "per_s": 0.0125,
       "duration": 3.48,
-      "dps": 3903
+      "dps": 6106
      }
     },
     "Chill": {
-     "dps_on": 4834,
+     "dps_on": 7565,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 4834,
+     "dps_on": 7565,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Toxic Growth",
+       "Charged Shots II",
        "Concentrated Area",
        "Elemental Armament II",
        "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 4834
+      "dps": 7565
      }
     }
    }
@@ -13389,88 +13389,88 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 7169,
+   "dps": 23370,
    "ailments": {
     "Shock": {
-     "dps_on": 8602,
+     "dps_on": 28044,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Unearth",
+       "Brutality III",
+       "Concentrated Area",
        "Considered Casting",
-       "Deliberation",
-       "Fiery Death",
-       "Living Lightning II",
-       "Minion Pact II"
+       "Minion Pact II",
+       "Atalui's Bloodletting"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 7169
+      "dps": 23370
      }
     },
     "Poison": {
-     "dps_on": 7169,
+     "dps_on": 23370,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Unearth",
-       "Deliberation",
-       "Fiery Death",
-       "Living Lightning II",
+       "Brutality III",
+       "Concentrated Area",
        "Minion Pact II",
+       "Atalui's Bloodletting",
        "Poison III"
       ],
-      "per_s": 0.9916,
+      "per_s": 1.3074,
       "duration": 2,
-      "dps": 6666
+      "dps": 20038
      }
     },
     "Ignite": {
-     "dps_on": 7169,
+     "dps_on": 23370,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Unearth",
+       "Brutality III",
+       "Concentrated Area",
        "Considered Casting",
-       "Deliberation",
-       "Fiery Death",
-       "Living Lightning II",
-       "Minion Pact II"
+       "Minion Pact II",
+       "Atalui's Bloodletting"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 7169
+      "dps": 23370
      }
     },
     "Chill": {
-     "dps_on": 7169,
+     "dps_on": 23370,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 7169,
+     "dps_on": 23370,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Unearth",
+       "Brutality III",
+       "Concentrated Area",
        "Considered Casting",
-       "Deliberation",
-       "Fiery Death",
-       "Living Lightning II",
-       "Minion Pact II"
+       "Minion Pact II",
+       "Atalui's Bloodletting"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 7169
+      "dps": 23370
      }
     }
    }
@@ -13479,10 +13479,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 15749,
+   "dps": 25667,
    "ailments": {
     "Shock": {
-     "dps_on": 18898,
+     "dps_on": 30801,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -13490,37 +13490,37 @@
       "gems": [
        "Vine Arrow",
        "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Shock"
       ],
-      "per_s": 0.0277,
+      "per_s": 0.0438,
       "duration": 8,
-      "dps": 12701
+      "dps": 20741
      }
     },
     "Poison": {
-     "dps_on": 15749,
+     "dps_on": 25667,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Vine Arrow",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 1.1592,
+      "per_s": 1.0516,
       "duration": 2,
-      "dps": 13054
+      "dps": 21106
      }
     },
     "Ignite": {
-     "dps_on": 15749,
+     "dps_on": 25667,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -13528,24 +13528,24 @@
       "gems": [
        "Vine Arrow",
        "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Rakiata's Flow",
-       "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0302,
+      "per_s": 0.0434,
       "duration": 3.48,
-      "dps": 12718
+      "dps": 20785
      }
     },
     "Chill": {
-     "dps_on": 15749,
+     "dps_on": 25667,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 15749,
+     "dps_on": 25667,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -13553,14 +13553,14 @@
       "gems": [
        "Vine Arrow",
        "Charged Shots II",
+       "Deliberation",
        "Elemental Armament II",
        "Elemental Focus",
-       "Rakiata's Flow",
-       "Rapid Attacks II"
+       "Rakiata's Flow"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 15749
+      "dps": 25667
      }
     }
    }
@@ -13569,10 +13569,10 @@
    "weapon": "One Hand Mace",
    "minion": false,
    "error": null,
-   "dps": 15213,
+   "dps": 15452,
    "ailments": {
     "Shock": {
-     "dps_on": 18256,
+     "dps_on": 18543,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -13587,11 +13587,11 @@
       ],
       "per_s": 0.0158,
       "duration": 8,
-      "dps": 12209
+      "dps": 12402
      }
     },
     "Poison": {
-     "dps_on": 15213,
+     "dps_on": 15452,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -13606,11 +13606,11 @@
       ],
       "per_s": 1.2096,
       "duration": 2,
-      "dps": 11708
+      "dps": 11892
      }
     },
     "Ignite": {
-     "dps_on": 15213,
+     "dps_on": 15452,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -13625,17 +13625,17 @@
       ],
       "per_s": 0.0436,
       "duration": 3.48,
-      "dps": 12243
+      "dps": 12438
      }
     },
     "Chill": {
-     "dps_on": 15213,
+     "dps_on": 15452,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 15213,
+     "dps_on": 15452,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -13650,7 +13650,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 15213
+      "dps": 15452
      }
     }
    }
@@ -13659,10 +13659,10 @@
    "weapon": "Wand",
    "minion": false,
    "error": null,
-   "dps": 34763,
+   "dps": 74247,
    "ailments": {
     "Shock": {
-     "dps_on": 41715,
+     "dps_on": 89097,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -13677,11 +13677,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 34763
+      "dps": 74247
      }
     },
     "Poison": {
-     "dps_on": 34763,
+     "dps_on": 74247,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -13694,13 +13694,13 @@
        "Rakiata's Flow",
        "Poison III"
       ],
-      "per_s": 1.5825,
+      "per_s": 1.785,
       "duration": 2,
-      "dps": 26742
+      "dps": 57115
      }
     },
     "Ignite": {
-     "dps_on": 34763,
+     "dps_on": 74247,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -13713,19 +13713,19 @@
        "Rakiata's Flow",
        "Ignite III"
       ],
-      "per_s": 0.156,
+      "per_s": 0.3332,
       "duration": 3.48,
-      "dps": 28308
+      "dps": 61250
      }
     },
     "Chill": {
-     "dps_on": 34763,
+     "dps_on": 74247,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 34763,
+     "dps_on": 74247,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -13740,7 +13740,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 34763
+      "dps": 74247
      }
     }
    }
@@ -13749,10 +13749,10 @@
    "weapon": "Bow",
    "minion": false,
    "error": null,
-   "dps": 4376,
+   "dps": 6503,
    "ailments": {
     "Shock": {
-     "dps_on": 5251,
+     "dps_on": 7804,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
@@ -13767,11 +13767,11 @@
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 4376
+      "dps": 6503
      }
     },
     "Poison": {
-     "dps_on": 4376,
+     "dps_on": 6503,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
@@ -13784,13 +13784,13 @@
        "Rapid Attacks II",
        "Poison III"
       ],
-      "per_s": 1.1592,
+      "per_s": 1.2586,
       "duration": 2,
-      "dps": 3656
+      "dps": 5431
      }
     },
     "Ignite": {
-     "dps_on": 4376,
+     "dps_on": 6503,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
@@ -13803,19 +13803,19 @@
        "Rapid Attacks II",
        "Ignite III"
       ],
-      "per_s": 0.0026,
+      "per_s": 0.0048,
       "duration": 3.48,
-      "dps": 3523
+      "dps": 5233
      }
     },
     "Chill": {
-     "dps_on": 4376,
+     "dps_on": 6503,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 4376,
+     "dps_on": 6503,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
@@ -13830,7 +13830,7 @@
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 4376
+      "dps": 6503
      }
     }
    }
@@ -13925,96 +13925,6 @@
     }
    }
   },
-  "Wardbound Minions": {
-   "weapon": "Sceptre",
-   "minion": true,
-   "error": null,
-   "dps": 20633,
-   "ailments": {
-    "Shock": {
-     "dps_on": 24759,
-     "gain": 0.2,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Wardbound Minions",
-       "Concentrated Area",
-       "Elemental Focus",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 20633
-     }
-    },
-    "Poison": {
-     "dps_on": 20633,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2,
-     "applier": {
-      "gems": [
-       "Wardbound Minions",
-       "Concentrated Area",
-       "Elemental Focus",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 2,
-      "dps": 20633
-     }
-    },
-    "Ignite": {
-     "dps_on": 20633,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 4,
-     "applier": {
-      "gems": [
-       "Wardbound Minions",
-       "Concentrated Area",
-       "Elemental Focus",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 4,
-      "dps": 20633
-     }
-    },
-    "Chill": {
-     "dps_on": 20633,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 2
-    },
-    "Bleed": {
-     "dps_on": 20633,
-     "gain": 0.0,
-     "per_s": 0.0,
-     "duration": 5,
-     "applier": {
-      "gems": [
-       "Wardbound Minions",
-       "Concentrated Area",
-       "Elemental Focus",
-       "Feeding Frenzy I",
-       "Fiery Death",
-       "Rakiata's Flow"
-      ],
-      "per_s": 0.0,
-      "duration": 5,
-      "dps": 20633
-     }
-    }
-   }
-  },
   "Wave of Frost": {
    "weapon": "Quarterstaff",
    "minion": false,
@@ -14101,6 +14011,96 @@
       "per_s": 0.0,
       "duration": 5,
       "dps": 28318
+     }
+    }
+   }
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "minion": true,
+   "error": null,
+   "dps": 18667,
+   "ailments": {
+    "Shock": {
+     "dps_on": 22401,
+     "gain": 0.2,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Wardbound Minions",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Elemental Focus",
+       "Feeding Frenzy I",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 18667
+     }
+    },
+    "Poison": {
+     "dps_on": 18667,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2,
+     "applier": {
+      "gems": [
+       "Wardbound Minions",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Elemental Focus",
+       "Feeding Frenzy I",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 2,
+      "dps": 18667
+     }
+    },
+    "Ignite": {
+     "dps_on": 18667,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 4,
+     "applier": {
+      "gems": [
+       "Wardbound Minions",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Elemental Focus",
+       "Feeding Frenzy I",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 4,
+      "dps": 18667
+     }
+    },
+    "Chill": {
+     "dps_on": 18667,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 2
+    },
+    "Bleed": {
+     "dps_on": 18667,
+     "gain": 0.0,
+     "per_s": 0.0,
+     "duration": 5,
+     "applier": {
+      "gems": [
+       "Wardbound Minions",
+       "Cold Attunement",
+       "Concentrated Area",
+       "Elemental Focus",
+       "Feeding Frenzy I",
+       "Rakiata's Flow"
+      ],
+      "per_s": 0.0,
+      "duration": 5,
+      "dps": 18667
      }
     }
    }
@@ -14649,92 +14649,92 @@
    "weapon": "Sceptre",
    "minion": true,
    "error": null,
-   "dps": 3534,
+   "dps": 17165,
    "ailments": {
     "Shock": {
-     "dps_on": 4241,
+     "dps_on": 20598,
      "gain": 0.2,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Wolf Pack",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
        "Hulking Minions",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 3534
+      "dps": 17165
      }
     },
     "Poison": {
-     "dps_on": 3534,
+     "dps_on": 17165,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2,
      "applier": {
       "gems": [
        "Wolf Pack",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
        "Hulking Minions",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 2,
-      "dps": 3534
+      "dps": 17165
      }
     },
     "Ignite": {
-     "dps_on": 3534,
+     "dps_on": 17165,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 4,
      "applier": {
       "gems": [
        "Wolf Pack",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
        "Hulking Minions",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 4,
-      "dps": 3534
+      "dps": 17165
      }
     },
     "Chill": {
-     "dps_on": 3534,
+     "dps_on": 17165,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 2
     },
     "Bleed": {
-     "dps_on": 3534,
+     "dps_on": 17165,
      "gain": 0.0,
      "per_s": 0.0,
      "duration": 5,
      "applier": {
       "gems": [
        "Wolf Pack",
+       "Brutality III",
        "Feeding Frenzy I",
-       "Fiery Death",
        "Heavy Swing",
        "Hulking Minions",
-       "Poison II"
+       "Heft"
       ],
       "per_s": 0.0,
       "duration": 5,
-      "dps": 3534
+      "dps": 17165
      }
     }
    }
   }
  },
- "updated": "2026-11-19 03:19"
+ "updated": "2026-11-25 00:01"
 }

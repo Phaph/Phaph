@@ -939,3 +939,5 @@ the finalists report now flags builds whose skill deals under half.
 
 **Lead re-run, single order (2026-11-24.8, stopped after 2):** Leopold's + Fire Penetration 1.38M vs 1.40M without (-1%: stays dead). Dark Effigy + Frost Darts 834k vs
 591k plain (+41%; it was +1% on 2026-11-22, and both numbers fell). One order per side can't judge it. Re-run with 3 orders per side: lead_builds_orders.
+
+**Ailment combos on 2026-11-24.8:** as on Nov 19: Dark Effigy + Frost Darts poison +72% (was +69%), Flame Breath +3% (+6%), Lightning Conduit no combo. Full-build check running.
