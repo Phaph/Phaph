@@ -955,3 +955,16 @@ to compare. One easy patch: no new skills, no changes smaller than 5%, and the t
 conditions.json is now this run's unpatched scan (it was Nov 18), so a same-code patch run needs only one scan. Keystones: 32 of 33 change the numbers when patched (Chaos Inoculation
 pins life at 1). 87 of 158 skills moved 5%+ since the Nov 18 scan (Flameblast x11.4, Bonestorm x6.9,
 Wolf Pack x4.9): the old scan has no engine or PoB stamp, so the causes aren't known; not checked yet (task 46).
+
+**Why the condition baseline moved since Nov 18 (task 46, 2026-11-25):** 18 skills (top 15 movers + Arc, Spark, Ice Shot) re-scored on the last engine of each day Nov 18-24, today's
+PoB: all 18 equal the Nov 18 file on the Nov 18 engine, and Nov 24 equals the fresh baseline, so these 18 moves are ours, not PoB's. By change:
+- Nov 21 full stages (c0b0214): Flameblast 7.7k -> 41k, Bonestorm 28.7k -> 156k (landed the same day; not split by commit). Nov 23 release limit: Bonestorm -> 83k (other Nov 23 fixes not split out).
+- Nov 21 minions counted: Wolf Pack 3.5k -> 12.0k, Unearth 7k -> 97.6k (the temporary-minion error, gone on the 22nd).
+- 6f1e272 on-death explosions out: Wolf Pack 12.0k -> 17.2k: the search stopped picking Fiery Death and took Brutality / Heft (likely it had misled the search; not tested).
+- c3c2541 skeleton copies: Skeletal Reaver 316 -> 8,345.
+- 390aa1e off-hands (41): Bonestorm 83k -> 199k, Unearth 6.4k -> 23.4k. On today's engine, emptying Weapon 2 of the finished build: focus x2.1-2.6 (Unearth x3.5), quiver x1.8, second mace x2.4-2.8.
+  That is larger than the +64-79% / +43-46% of task 41's A/B: not reconciled (removal from a finished build is not a rebuild; the supports and the weapon's affixes suit the off-hand).
+- The other mace / spell movers jumped on Nov 24 too; only 11 skills had the removal test.
+Flameblast: PoB times it by cooldown only (Atziri's Impatience halves it: x2, and its 25% life cost isn't counted); up to ~x1.6 high if the cooldown starts on release (unknown).
+Dual-wield slams: PoB hits with both weapons, each -30% (the -30% is the game's stat), so two bare maces are x1.3-1.4. That both hit one boss is PoB's reading, unchecked.
+Not a ranking bug found; the remaining open point is Flameblast's cycle.
