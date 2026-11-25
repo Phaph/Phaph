@@ -178,6 +178,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **23:05: task 50 A/B, 4 of 5 (without -> with respend, single order; only the respend step differs):** Gemling Rapid Shot boss 4.42M -> 5.12M, map 4.03M -> 4.71M, EHP same; Deadeye, Titan identical;
   Abyssal Lich damage same, EHP +1.6%, chaos res 75 -> 69. No damage or EHP loss. When the Invoker control lands (~/respend_ab.log) unchanged: bump ENGINE_VERSION to 2026-11-25.2, merge `respend`, deploy, push (suite green: 247). Then `distance` (49).
 - **23:30: task 50 live as 2026-11-25.2** (A/B 5 of 5, control identical). Next: 49 (branch `distance`: merge main into it, suite, search-vs-ladder, 5 builds), then merge `asccond`, 48.
+- 23:40: main merged into `distance`; ~/distance_ab.sh running: suite (~/distance_tests.log), then 5 specs (~/distance_ab.log, ~/asc_out/distance.json vs respend.json). Scores of ranged builds must drop (the model changed), so judge the search vs the ladder, not the size of the drop. The 23:30 deploy cancelled one generate job someone was watching (30bb3936).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
