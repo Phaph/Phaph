@@ -162,6 +162,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   itself is worth Deadeye +20% (Point Blank at 2 m), Gemling about +13% (+35 vs +19%), Abyssal Lich +12% EHP, Titan 0. The rest is respending late (50). Gate kept: best of 3 orders (asc_ab2) before merging.
 - My probe's PoB grew to 12.8 GB over ~30 loaded builds and was OOM-killed at 18:11 (that process only; the other containers are up). Long probes: a new PoB per build, --memory 4g.
 - 37's condition scans finished; matrix_asc runs (old code). Conditions: Infernalist is redone by ~/infernalist.sh after it.
+- **19:00: A/B complete, control Invoker identical on both sides.** asc_ab2 running since 18:29 (branch half first; nothing finished yet at 19:00). Task 50 written: branch `respend` (worktree ~/phaph_respend, on ascpoints):
+  engine/ascendancy.py, called after the final gear pass, kept only if the score rises, EHP stays over 90%, no attribute falls short and spirit fits; 2 tests pass. ~/respend_ab.sh waits for asc_ab2, then the full suite
+  (~/respend_tests.log) and the 5 specs (~/respend_ab.log, ~/asc_out/respend.json; compare with asc.json). rank8: all 6 searches done, building (1 of 18 skills at 19:00).
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
