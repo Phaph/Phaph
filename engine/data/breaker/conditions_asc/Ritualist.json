@@ -1,27 +1,59 @@
 {
  "skills": {
-  "Elemental Sundering": {
-   "weapon": "Spear",
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Arc": {
+   "weapon": "Wand",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.072,
-    "CriticalWeakness": 0.1,
+    "CriticalWeakness": 0.201,
     "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
    },
    "ascendancy_nodes": [
     "Mystic Attunement"
    ],
-   "dps": 3317
+   "dps": 72107
   },
-  "Fangs of Frost": {
-   "weapon": "Spear",
+  "Ball Lightning": {
+   "weapon": "Wand",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 62232
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -31,7 +63,232 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 34355
+   "dps": 1555
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 60657
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 91421
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.218,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.178,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 145072
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.276,
+    "CriticalWeakness": 0.14,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 13365
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.053,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "dps": 1
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.268,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 221232
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 54155
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.085,
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.136,
+    "Intimidated": 0.1,
+    "Moving": 0.207,
+    "OnProfaneGround": 0.068,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 4703
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 11032
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.221,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 76850
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 130193
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.214,
+    "CriticalWeakness": 0.202,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.213,
+    "OnProfaneGround": 0.115,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 12400
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CoveredInFrost": 0.064,
+    "CriticalWeakness": 0.181,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 4086
   },
   "Cull The Weak": {
    "weapon": "Spear",
@@ -52,16 +309,54 @@
    ],
    "dps": 11014
   },
-  "Blood Hunt": {
-   "weapon": "Spear",
+  "Dark Effigy": {
+   "weapon": "Wand",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.276,
-    "CriticalWeakness": 0.14,
-    "Crushed": 0.144,
+    "CriticalWeakness": 0.209,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.07,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 31079
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.45,
+    "CriticalWeakness": 0.271,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.177,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 6884
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.064,
+    "CriticalWeakness": 0.198,
+    "Intimidated": 0.1,
+    "Moving": 0.361,
+    "OnProfaneGround": 0.102,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -69,7 +364,95 @@
     "Physical Damage",
     "Mystic Attunement"
    ],
-   "dps": 13365
+   "dps": 53499
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.137,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 11903
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.169,
+    "CriticalWeakness": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 30876
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 80992
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 26979
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 38205
   },
   "Disengage": {
    "weapon": "Spear",
@@ -91,12 +474,126 @@
    ],
    "dps": 8642
   },
-  "Explosive Spear": {
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 14321
+  },
+  "Elemental Sundering": {
    "weapon": "Spear",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.127,
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 3317
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.212,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 137370
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.205,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 37990
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 72028
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 19653
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -106,7 +603,549 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 13821
+   "dps": 31889
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 26062
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 14091
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.182,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 1647
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 58657
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 75139
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 35025
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.201
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 144454
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.295,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 134398
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.06,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 72545
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.318,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.138,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.083
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 92992
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.151,
+    "CriticalWeakness": 0.159,
+    "Crushed": 0.074,
+    "Intimidated": 0.1,
+    "Moving": 0.226,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 5549
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.247,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 71071
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.115,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 19386
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 7008
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 17479
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 22657
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.251,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.177,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 26013
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 24961
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.264,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.158,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 19036
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 94593
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 3928
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 35993
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.127,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.101,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 17553
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 13076
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 5628
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.116,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 8658
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.12,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.067,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 21893
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.068,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 19315
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 14932
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 59010
   },
   "Glacial Lance": {
    "weapon": "Spear",
@@ -114,8 +1153,9 @@
    "error": null,
    "gains": {
     "CoveredInFrost": 0.142,
-    "CriticalWeakness": 0.096,
+    "CriticalWeakness": 0.133,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -123,14 +1163,14 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 27746
+   "dps": 28294
   },
-  "Lightning Spear": {
-   "weapon": "Spear",
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.076,
+    "CoveredInAsh": 0.106,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -140,14 +1180,227 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 25977
+   "dps": 26464
   },
-  "Primal Strikes": {
-   "weapon": "Spear",
+  "Hexblast": {
+   "weapon": "Wand",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.113,
+    "CoveredInAsh": 0.052,
+    "CriticalWeakness": 0.279,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.12,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 57066
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.156,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 105133
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.216,
+    "CriticalWeakness": 0.183,
+    "Crushed": 0.116,
+    "Intimidated": 0.1,
+    "Moving": 0.196,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 14609
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 48670
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 31511
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 47485
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.068,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 54108
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 3897
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 134839
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.159,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.12,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 44411
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.271,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.147,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 12359
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 31259
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
     "CriticalWeakness": 0.096,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -157,7 +1410,296 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 19175
+   "dps": 73971
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 21691
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.127,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.101,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 26839
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.076,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 26484
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 10846
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.197,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.138,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 27741
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.115,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 30716
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.197,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 50309
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.17,
+    "CriticalWeakness": 0.168,
+    "Crushed": 0.089,
+    "Intimidated": 0.1,
+    "Moving": 0.237,
+    "OnProfaneGround": 0.085,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 7092
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.132,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 89352
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 4506
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 112560
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.181,
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.215,
+    "Crushed": 0.082,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.068,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 20767
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 88352
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.133,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 19553
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.24,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.075,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 117577
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.25,
+    "CriticalWeakness": 0.099,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 17612
   },
   "Rake": {
    "weapon": "Spear",
@@ -185,6 +1727,57 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.1,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 3400
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.099,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 20687
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -194,10 +1787,81 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 3335
+   "dps": 161677
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.192,
+    "CriticalWeakness": 0.133,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.122,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 31251
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.174,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 6803
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.224,
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.112,
+    "Intimidated": 0.1,
+    "Moving": 0.155,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 358
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 16171
   },
   "Shield Wall": {
-   "weapon": "Spear",
+   "weapon": "One Hand Mace",
    "class": "Huntress",
    "error": null,
    "gains": {
@@ -216,13 +1880,13 @@
    ],
    "dps": 15711
   },
-  "Spear of Solaris": {
-   "weapon": "Spear",
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.181,
-    "CriticalWeakness": 0.096,
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
@@ -231,7 +1895,308 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 23054
+   "dps": 28119
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.095,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 21208
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.162,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 3555
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 2598
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.096,
+    "Electrocuted": 1.008,
+    "Frozen": 1.008,
+    "HeavyStunned": 1.008,
+    "Immobilised": 1.008,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.008,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 11046
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.124,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.124,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 47377
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.171,
+    "CriticalWeakness": 0.251,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.177,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 129527
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CoveredInFrost": 0.134,
+    "CriticalWeakness": 0.142,
+    "Intimidated": 0.1,
+    "Moving": 0.087,
+    "OnProfaneGround": 0.155,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 69657
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.196,
+    "CriticalWeakness": 0.209,
+    "Crushed": 0.092,
+    "Intimidated": 0.1,
+    "Moving": 0.183,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 6904
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.295,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 33471
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 47983
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.133,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 23508
   },
   "Spearfield": {
    "weapon": "Spear",
@@ -251,6 +2216,273 @@
    ],
    "dps": 6056
   },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.165,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 15407
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 35972
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.063,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 55425
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 11938
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.095,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 6950
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 12026
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.053,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "dps": 1
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.226,
+    "CriticalWeakness": 0.097,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 59327
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.065,
+    "CoveredInAsh": 0.15,
+    "CriticalWeakness": 0.098,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 54483
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.053,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.229,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.135,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 15026
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 39426
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.239,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 41231
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 17344
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.279,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.136,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 40266
+  },
   "Thunderous Leap": {
    "weapon": "Spear",
    "class": "Huntress",
@@ -268,14 +2500,15 @@
    ],
    "dps": 18902
   },
-  "Storm Lance": {
-   "weapon": "Spear",
+  "Tornado Shot": {
+   "weapon": "Bow",
    "class": "Huntress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.11,
-    "CriticalWeakness": 0.096,
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.165,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -283,7 +2516,25 @@
     "Mystic Attunement",
     "Physical Damage"
    ],
-   "dps": 11708
+   "dps": 26291
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 8621
   },
   "Twister": {
    "weapon": "Spear",
@@ -304,6 +2555,183 @@
    ],
    "dps": 9108
   },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.2,
+    "CriticalWeakness": 0.146,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "Moving": 0.218,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 10996
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.165,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 27876
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.205,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 81791
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.132,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 16997
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.489,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.147,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 26749
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.217,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement"
+   ],
+   "dps": 7196
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 14596
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.068,
+    "CoveredInFrost": 0.121,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 30392
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.124,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.124,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 12347
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
   "Whirling Slash": {
    "weapon": "Spear",
    "class": "Huntress",
@@ -322,6 +2750,24 @@
     "Mystic Attunement"
    ],
    "dps": 7634
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.124,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.124,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Mystic Attunement",
+    "Physical Damage"
+   ],
+   "dps": 40281
   },
   "Whirlwind Lance": {
    "weapon": "Spear",
@@ -342,6 +2788,26 @@
    ],
    "dps": 9346
   },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.219,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.118,
+    "Intimidated": 0.1,
+    "Moving": 0.185,
+    "OnProfaneGround": 0.093,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Physical Damage",
+    "Mystic Attunement"
+   ],
+   "dps": 12577
+  },
   "Wind Serpent's Fury": {
    "weapon": "Spear",
    "class": "Huntress",
@@ -360,7 +2826,22 @@
     "Mystic Attunement"
    ],
    "dps": 14442
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Huntress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.058,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 04:32"
+ "updated": "2026-11-25 12:32"
 }

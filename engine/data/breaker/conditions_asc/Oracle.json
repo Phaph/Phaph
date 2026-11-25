@@ -1,17 +1,259 @@
 {
  "skills": {
-  "Flame Breath": {
-   "weapon": "Talisman",
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.185,
-    "CriticalWeakness": 0.266
+    "CriticalWeakness": 0.271,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.135,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 75092
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.241,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.124,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 79375
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Totem Cast and Attack Speed",
+    "Forced Outcome"
+   ],
+   "dps": 1583
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 56176
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 89640
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.209,
+    "CriticalWeakness": 0.191,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 167854
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.282,
+    "CriticalWeakness": 0.248,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Forced Outcome"
    ],
-   "dps": 155367
+   "dps": 12274
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.174,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.137,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 253785
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 50210
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Blinded": 0.102,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.147,
+    "Intimidated": 0.1,
+    "Maimed": 0.076,
+    "OnProfaneGround": 0.073,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.352,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.087,
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.24,
+    "Intimidated": 0.1,
+    "Moving": 0.206,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 4400
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.219,
+    "CriticalWeakness": 0.284,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 82358
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Spell Damage"
+   ],
+   "dps": 10888
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.2,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.138,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 151767
   },
   "Cross Slash": {
    "weapon": "Talisman",
@@ -32,39 +274,135 @@
    ],
    "dps": 10985
   },
-  "Fury of the Mountain": {
-   "weapon": "Talisman",
+  "Conductive Runes": {
+   "weapon": "Wand",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.127,
-    "CriticalWeakness": 0.218,
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.057,
+    "CriticalWeakness": 0.248,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.153,
-    "OnShockedGround": 0.25,
-    "Shocked": 0.25
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Forced Outcome"
    ],
-   "dps": 18117
+   "dps": 4173
   },
-  "Furious Slam": {
-   "weapon": "Talisman",
+  "Cull The Weak": {
+   "weapon": "Spear",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.112,
-    "CriticalWeakness": 0.219,
+    "ArmourBroken": 0.311,
+    "CriticalWeakness": 0.298,
+    "Crushed": 0.141,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.154,
-    "OnShockedGround": 0.25,
-    "Shocked": 0.25
+    "OnProfaneGround": 0.108,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Forced Outcome"
    ],
-   "dps": 36941
+   "dps": 10233
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.279,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage",
+    "Totem Cast and Attack Speed"
+   ],
+   "dps": 34173
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.087,
+    "CriticalWeakness": 0.306,
+    "Crushed": 0.062,
+    "Intimidated": 0.1,
+    "Moving": 0.249,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 45874
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.417,
+    "CriticalWeakness": 0.269,
+    "Crushed": 0.142,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.168,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 7930
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.135,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Spell Damage"
+   ],
+   "dps": 10369
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.168,
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 30765
   },
   "Devour": {
    "weapon": "Talisman",
@@ -83,6 +421,987 @@
    ],
    "dps": 83127
   },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.288,
+    "Crushed": 0.105,
+    "Intimidated": 0.1,
+    "Moving": 0.12,
+    "OnProfaneGround": 0.108,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 7815
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 38790
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.137,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 25124
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.233,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 14053
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 2619
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.28,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 150024
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.247,
+    "CriticalWeakness": 0.244,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 42172
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.279,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 77474
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 19979
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 31502
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 25636
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.233,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 13889
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.182,
+    "CriticalWeakness": 0.231,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.142,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 2031
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 53955
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.279,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 81158
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.233,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 34578
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.375,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.145,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 159839
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.185,
+    "CriticalWeakness": 0.266
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 155367
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.289,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 74929
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.372,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.179,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.079
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 116858
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.157,
+    "CriticalWeakness": 0.245,
+    "Crushed": 0.075,
+    "Intimidated": 0.1,
+    "Moving": 0.216,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 5067
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.177,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.151,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 18418
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 6888
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 23018
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.181,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 17068
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.251,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.176,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 32337
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.2,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.137,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 28067
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.163,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 23714
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.204,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.127,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 106483
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 36941
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.218,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 18117
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 13193
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 5570
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 8508
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.124,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.067,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 18945
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 14764
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.204,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.127,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 66418
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.145,
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 28021
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 26248
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.287,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.113,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 54696
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.158,
+    "CriticalWeakness": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.056,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 94840
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.232,
+    "CriticalWeakness": 0.188,
+    "Crushed": 0.12,
+    "Intimidated": 0.1,
+    "Moving": 0.163,
+    "OnProfaneGround": 0.084,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 12480
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.204,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.127,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 54629
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 31181
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 48237
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 50426
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 3845
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.266,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 141274
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.22,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.161,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 47312
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 68560
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.291,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.157,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 15373
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 31737
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 21818
+  },
   "Lunar Assault": {
    "weapon": "Talisman",
    "class": "Druid",
@@ -100,40 +1419,235 @@
    ],
    "dps": 27805
   },
-  "Rend": {
-   "weapon": "Talisman",
+  "Lightning Spear": {
+   "weapon": "Spear",
    "class": "Druid",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.26,
-    "CriticalWeakness": 0.187,
-    "Crushed": 0.145,
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.233,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.084,
+    "OnProfaneGround": 0.103,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Forced Outcome"
    ],
-   "dps": 18861
+   "dps": 26229
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 11020
   },
   "Oil Barrage": {
    "weapon": "Talisman",
    "class": "Druid",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.109,
-    "CriticalWeakness": 0.178,
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.209,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.185,
+    "OnProfaneGround": 0.15,
     "OnShockedGround": 0.25,
     "Shocked": 0.25
    },
    "ascendancy_nodes": [
     "Forced Outcome"
    ],
-   "dps": 123629
+   "dps": 30004
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.176,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.15,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 29174
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.235,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.128,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 55853
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.178,
+    "CriticalWeakness": 0.245,
+    "Crushed": 0.091,
+    "Intimidated": 0.1,
+    "Moving": 0.222,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 6425
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.137,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 83094
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 4465
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 111412
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.18,
+    "CoveredInAsh": 0.087,
+    "CriticalWeakness": 0.318,
+    "Crushed": 0.081,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 20463
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Spell Damage"
+   ],
+   "dps": 87201
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 19202
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.353,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 123321
   },
   "Rampage": {
    "weapon": "Talisman",
@@ -153,6 +1667,92 @@
    ],
    "dps": 16064
   },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.236,
+    "CriticalWeakness": 0.285,
+    "Crushed": 0.1,
+    "Intimidated": 0.1,
+    "Moving": 0.284,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 7551
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.26,
+    "CriticalWeakness": 0.187,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.084,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 18861
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.233,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 3358
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 159446
+  },
   "Rolling Magma": {
    "weapon": "Talisman",
    "class": "Druid",
@@ -169,6 +1769,957 @@
     "Forced Outcome"
    ],
    "dps": 32673
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.224,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.138,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 6458
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.216,
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.111,
+    "Intimidated": 0.1,
+    "Moving": 0.145,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 333
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.145,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.245,
+    "Crushed": 0.069,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 14925
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 21491
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 27767
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Totem Cast and Attack Speed",
+    "Forced Outcome"
+   ],
+   "dps": 2659
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Totem Cast and Attack Speed",
+    "Forced Outcome"
+   ],
+   "dps": 3656
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.179,
+    "Electrocuted": 1.007,
+    "Frozen": 1.007,
+    "HeavyStunned": 1.007,
+    "Immobilised": 1.007,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.007,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 10852
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.203,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.179,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 49465
+  },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 11924
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16024
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8345
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.171,
+    "CriticalWeakness": 0.251,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.176,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 160257
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CoveredInFrost": 0.137,
+    "CriticalWeakness": 0.169,
+    "Intimidated": 0.1,
+    "Moving": 0.069,
+    "OnProfaneGround": 0.169,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.093
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 78582
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.201,
+    "CriticalWeakness": 0.319,
+    "Crushed": 0.094,
+    "Intimidated": 0.1,
+    "Moving": 0.16,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 6717
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.375,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.145,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 39806
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.241,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.124,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 52819
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 22978
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 5733
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.271,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 14287
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.137,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 33499
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.233,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 11759
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 7042
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Blinded": 0.102,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.147,
+    "Intimidated": 0.1,
+    "Maimed": 0.076,
+    "OnProfaneGround": 0.073,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.352,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 1
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 11907
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.229,
+    "CriticalWeakness": 0.183,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 54283
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.066,
+    "CoveredInAsh": 0.151,
+    "CriticalWeakness": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 49590
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Blinded": 0.102,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.147,
+    "Intimidated": 0.1,
+    "Maimed": 0.076,
+    "OnProfaneGround": 0.073,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.352,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.253,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.185,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 15705
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 36529
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.234,
+    "CriticalWeakness": 0.241,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 45823
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.301,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.151,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 49384
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Spell Damage"
+   ],
+   "dps": 17064
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 18321
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.271,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 26526
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.269,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 8721
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.207,
+    "CriticalWeakness": 0.146,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.219,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9376
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.302,
+    "CriticalWeakness": 0.262,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 8362
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.271,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 28193
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.264,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.121,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 88821
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.233,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.103,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 16807
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.477,
+    "CriticalWeakness": 0.164,
+    "Crushed": 0.146,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.093
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome",
+    "Spell Damage"
+   ],
+   "dps": 29704
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.304,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 7325
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.179,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 14475
+  },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.203,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.179,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 11815
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.203,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.179,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 42057
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.347,
+    "CriticalWeakness": 0.258,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.115,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 6985
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.272,
+    "CriticalWeakness": 0.257,
+    "Crushed": 0.117,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 8584
   },
   "Wing Blast": {
    "weapon": "Talisman",
@@ -188,7 +2739,40 @@
     "Forced Outcome"
    ],
    "dps": 11253
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.183,
+    "CriticalWeakness": 0.188,
+    "Crushed": 0.096,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.084,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Forced Outcome"
+   ],
+   "dps": 12989
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Druid",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.058,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 04:52"
+ "updated": "2026-11-25 16:25"
 }

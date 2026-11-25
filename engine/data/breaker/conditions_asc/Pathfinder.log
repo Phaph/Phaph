@@ -1,36 +1,215 @@
 166 skills, 166 to scan, 56 conditions, 6 workers
-  Electrocuting Arrow              24,643  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Detonating Arrow                 18,889  OnShockedGround +20%, Shocked +20%, CoveredInAsh +17%
-  Gas Arrow                         7,909  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Freezing Salvo                   13,919  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Escape Shot                      11,928  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Fragments Of The Past            10,593  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
-  Lightning Rod                    13,500  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Lightning Arrow                  20,163  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Ice Shot                         28,758  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Magnetic Salvo                    7,027  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Rain of Arrows                   85,842  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
-  Poisonburst Arrow                10,119  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
-  Shockchain Arrow                 13,793  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Shockwave Totem                   2,236  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
-  Snipe                             3,460  ArmourBroken +22%, OnShockedGround +20%, Shocked +20%
-  Spiral Volley                     9,432  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Stormcaller Arrow                 4,520  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Tornado Shot                     15,868  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Vine Arrow                       16,648  OnShockedGround +20%, Shocked +20%, Intimidated +10%
-  Toxic Growth                      5,110  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
-  Voltaic Barrier                   4,699  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
-21 skills scanned; 109 skill x condition gains of 5%+
+  Animus Exchange                       0  
+  Bitter Dead                           0  
+  Arc                              67,640  OnShockedGround +30%, Shocked +30%, CriticalWeakness +20%
+  Ball Lightning                   60,052  CriticalWeakness +23%, OnShockedGround +20%, Shocked +20%
+  Artillery Ballista                1,515  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Armour Breaker                   59,084  
+  Armour Piercing Rounds           91,069  
+  Bone Cage                       133,240  ArmourBroken +21%, CriticalWeakness +21%, OnShockedGround +20%
+  Cackling Companions                   1  Pinned +28%, CoveredInAsh +20%, OnShockedGround +20%
+  Bonestorm                       205,568  ArmourBroken +27%, OnShockedGround +20%, Shocked +20%
+  Blood Hunt                       11,901  ArmourBroken +29%, OnShockedGround +20%, Shocked +20%
+  Boneshatter                      52,260  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Cluster Grenade                   4,036  Moving +21%, OnShockedGround +20%, Shocked +20%
+  Contagion                        10,672  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Coiling Bolts                    71,222  ArmourBroken +22%, CriticalWeakness +21%, OnShockedGround +20%
+  Comet                           124,040  CoveredInFrost +20%, OnShockedGround +20%, Shocked +20%
+  Cross Slash                      10,462  ArmourBroken +22%, Moving +21%, OnShockedGround +20%
+  Conductive Runes                  3,718  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Cull The Weak                     9,720  ArmourBroken +32%, OnShockedGround +20%, Shocked +20%
+  Detonate Dead                    58,301  Moving +32%, OnShockedGround +20%, Shocked +20%
+  Dark Effigy                      29,160  Poisoned +100%, CriticalWeakness +21%, OnShockedGround +20%
+  Detonate Living                   6,223  ArmourBroken +46%, CriticalWeakness +26%, OnShockedGround +20%
+  Detonate Minion                  10,095  OnShockedGround +20%, Shocked +20%, CoveredInAsh +14%
+  Detonating Arrow                 29,488  OnShockedGround +20%, Shocked +20%, CoveredInAsh +17%
+  Devour                           78,374  OnShockedGround +25%, Shocked +25%, CriticalWeakness +12%
+  Earthquake                       26,149  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Disengage                         7,637  ArmourBroken +23%, CriticalWeakness +20%, OnShockedGround +20%
+  Electrocuting Arrow              37,561  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Earthshatter                     13,660  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Eternal March                         0  
+  Elemental Sundering               2,744  OnShockedGround +20%, Shocked +20%, CriticalWeakness +10%
+  Ember Fusillade                 129,708  CriticalWeakness +21%, CoveredInAsh +20%, OnShockedGround +20%
+  Entangle                         35,243  ArmourBroken +26%, CriticalWeakness +21%, OnShockedGround +20%
+  Essence Drain                    67,565  CriticalWeakness +21%, OnShockedGround +20%, Shocked +20%
+  Escape Shot                      18,753  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Explosive Grenade                29,532  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Explosive Shot                   25,403  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Eye of Winter                     1,592  CriticalWeakness +22%, OnShockedGround +20%, Shocked +20%
+  Explosive Spear                  13,499  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Falling Thunder                  57,038  OnShockedGround +20%, Shocked +20%, CriticalWeakness +10%
+  Fangs of Frost                   33,608  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Fireball                         70,611  CriticalWeakness +21%, OnShockedGround +20%, Shocked +20%
+  Firestorm                       128,626  CriticalWeakness +29%, CoveredInAsh +20%, OnShockedGround +20%
+  Flame Breath                    139,817  CoveredInAsh +18%, CriticalWeakness +18%
+  Flame Wall                       67,857  CoveredInAsh +20%, OnShockedGround +20%, Shocked +20%
+  Flameblast                       88,628  CriticalWeakness +31%, OnShockedGround +20%, Shocked +20%
+  Fortifying Cry                        0  
+  Flash Grenade                     4,766  Moving +22%, OnShockedGround +20%, Shocked +20%
+  Flicker Strike                   64,072  ArmourBroken +26%, OnShockedGround +20%, Shocked +20%
+  Forge Hammer                     17,700  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Fragmentation Rounds              6,826  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Fragments Of The Past            16,833  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Freezing Salvo                   22,284  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Frost Bomb                       24,778  CriticalWeakness +24%, CoveredInFrost +20%, OnShockedGround +20%
+  Frost Darts                      23,412  CoveredInFrost +20%, OnShockedGround +20%, Shocked +20%
+  Frostflame Nova                       0  
+  Frost Wall                       19,368  CriticalWeakness +26%, CoveredInFrost +20%, OnShockedGround +20%
+  Frostbolt                        88,757  CoveredInFrost +20%, OnShockedGround +20%, Shocked +20%
+  Frozen Locus                      3,247  OnShockedGround +20%, Shocked +20%, CriticalWeakness +10%
+  Furious Slam                     34,829  OnShockedGround +25%, Shocked +25%, CriticalWeakness +12%
+  Fury of the Mountain             17,088  OnShockedGround +25%, Shocked +25%, CoveredInAsh +13%
+  Gas Arrow                        12,778  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Galvanic Shards                   5,520  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Gas Grenade                       7,974  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Gathering Storm                  19,500  OnShockedGround +20%, Shocked +20%, ArmourBroken +12%
+  Glacial Cascade                  19,037  OnShockedGround +20%, Shocked +20%, CoveredInFrost +12%
+  Glacial Bolt                     14,632  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Grim Pillars                     55,380  CoveredInFrost +20%, OnShockedGround +20%, Shocked +20%
+  Glacial Lance                    27,226  OnShockedGround +20%, Shocked +20%, CoveredInFrost +14%
+  Hailstorm Rounds                 26,014  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Hexblast                         56,623  CriticalWeakness +28%, OnShockedGround +20%, Shocked +20%
+  Hammer of the Gods               99,367  OnShockedGround +20%, Shocked +20%, CoveredInAsh +16%
+  High Velocity Rounds             13,081  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Ice Nova                         45,512  CoveredInFrost +20%, OnShockedGround +20%, Shocked +20%
+  Ice Shot                         46,701  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Ice Strike                       53,308  OnShockedGround +20%, Shocked +20%, CoveredInFrost +12%
+  Ice Shards                       31,765  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Incendiary Shot                   3,811  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Incinerate                      126,106  CoveredInAsh +20%, OnShockedGround +20%, Shocked +20%
+  Killing Palm                     42,949  OnShockedGround +20%, Shocked +20%, CriticalWeakness +15%
+  Lightning Conduit                11,836  OnShockedGround +68%, Shocked +68%, CriticalWeakness +26%
+  Lightning Arrow                  30,731  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Leap Slam                        69,502  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Lightning Rod                    21,122  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Lunar Assault                    26,227  OnShockedGround +25%, Shocked +25%, CriticalWeakness +12%
+  Lightning Spear                  25,493  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Magnetic Salvo                   10,564  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Oil Barrage                      26,336  OnShockedGround +25%, Shocked +25%, CriticalWeakness +18%
+  Molten Blast                     29,760  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Oil Grenade                       6,100  Moving +23%, OnShockedGround +20%, Shocked +20%
+  Orb of Storms                    47,216  OnShockedGround +20%, Shocked +20%, CriticalWeakness +20%
+  Powered by Verisium                   0  
+  Perfect Strike                   86,488  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Poisonburst Arrow                19,433  CriticalWeakness +20%, OnShockedGround +20%, Shocked +20%
+  Permafrost Bolts                  4,425  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Plasma Blast                    106,675  OnShockedGround +30%, Shocked +30%, CoveredInAsh +10%
+  Profane Ritual                   85,474  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Primal Strikes                   18,670  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Rain of Arrows                  107,761  CriticalWeakness +23%, OnShockedGround +20%, Shocked +20%
+  Rampage                          15,852  ArmourBroken +26%, OnShockedGround +20%, Shocked +20%
+  Rake                              7,541  Moving +33%, CriticalWeakness +24%, ArmourBroken +23%
+  Rend                             18,608  ArmourBroken +26%, OnShockedGround +20%, Shocked +20%
+  Rapid Assault                     3,264  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Raise Zombie                      1,856  ArmourBroken +59%, OnShockedGround +20%, Shocked +20%
+  Rapid Shot                      162,649  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Rolling Magma                    30,265  OnShockedGround +20%, Shocked +20%, CoveredInAsh +19%
+  Rolling Slam                      6,276  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Seismic Cry                         333  ArmourBroken +22%, OnShockedGround +20%, Shocked +20%
+  Shattering Palm                  15,853  OnShockedGround +20%, Shocked +20%, CoveredInAsh +10%
+  Shield Wall                      14,686  OnShockedGround +20%, Shocked +20%, ArmourBroken +15%
+  Shockchain Arrow                 20,603  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Shockburst Rounds                28,198  OnShockedGround +20%, Shocked +20%, CoveredInAsh +11%
+  Shockwave Totem                   3,419  OnShockedGround +20%, Shocked +20%, CriticalWeakness +15%
+  Siege Ballista                    2,544  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Siphoning Strike                 45,914  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Skeletal Cleric                       0  
+  Siege Cascade                    10,758  Electrocuted +101%, Frozen +101%, HeavyStunned +101%
+  Skeletal Arsonist                14,648  OnShockedGround +20%, Shocked +20%, ArmourBroken +19%
+  Skeletal Brute                   13,844  ArmourBroken +50%, OnShockedGround +20%, Shocked +20%
+  Skeletal Frost Mage              11,924  CoveredInFrost +20%, OnShockedGround +20%, Shocked +20%
+  Skeletal Reaver                   8,345  ArmourBroken +96%, OnShockedGround +20%, Shocked +20%
+  Skeletal Storm Mage              16,024  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Skeletal Sniper                   9,859  ArmourBroken +64%, OnShockedGround +20%, Shocked +20%
+  Snap                            122,153  CriticalWeakness +24%, OnShockedGround +20%, Shocked +20%
+  Skyfall                          65,129  OnShockedGround +20%, Shocked +20%, OnProfaneGround +16%
+  Snipe                             6,483  ArmourBroken +20%, OnShockedGround +20%, Shocked +20%
+  Solar Orb                        32,034  CriticalWeakness +29%, CoveredInAsh +20%, OnShockedGround +20%
+  Spark                            45,009  CriticalWeakness +20%, OnShockedGround +20%, Shocked +20%
+  Spiral Volley                    14,695  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Spear of Solaris                 21,502  OnShockedGround +20%, Shocked +20%, CoveredInAsh +18%
+  Spearfield                        5,771  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Stampede                         34,866  OnShockedGround +20%, Shocked +20%, CoveredInAsh +12%
+  Storm Lance                      11,431  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Storm Wave                       54,238  OnShockedGround +20%, Shocked +20%, CriticalWeakness +10%
+  Tame Beast                            0  
+  Summon Spectre                        1  Pinned +28%, CoveredInAsh +20%, OnShockedGround +20%
+  Stormcaller Arrow                 6,751  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Stormblast Bolts                 11,801  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Supercharged Slam                53,635  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Sunder                           51,206  OnShockedGround +20%, Shocked +20%, CoveredInAsh +15%
+  Tamed Companion                       1  Pinned +28%, CoveredInAsh +20%, OnShockedGround +20%
+  Tempest Bell                     13,633  CriticalWeakness +21%, OnShockedGround +20%, Shocked +20%
+  Thrashing Vines                  38,411  ArmourBroken +24%, CriticalWeakness +20%, OnShockedGround +20%
+  Tempest Flurry                   38,616  OnShockedGround +20%, Shocked +20%, CriticalWeakness +10%
+  Tornado                          16,691  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Thunderstorm                     38,471  CriticalWeakness +27%, OnShockedGround +20%, Shocked +20%
+  Thunderous Leap                  17,601  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Tornado Shot                     25,672  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Toxic Growth                      8,444  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Twister                           8,051  ArmourBroken +31%, OnShockedGround +20%, Shocked +20%
+  Vine Arrow                       27,284  OnShockedGround +20%, Shocked +20%, CriticalWeakness +16%
+  Vaulting Impact                   9,566  Moving +22%, ArmourBroken +21%, OnShockedGround +20%
+  Volcano                          76,743  CriticalWeakness +20%, CoveredInAsh +20%, OnShockedGround +20%
+  Volcanic Fissure                 16,335  OnShockedGround +20%, Shocked +20%, CoveredInAsh +13%
+  Voltaic Barrier                   6,897  OnShockedGround +20%, Shocked +20%, CriticalWeakness +20%
+  Unearth                          24,219  ArmourBroken +50%, OnShockedGround +20%, Shocked +20%
+  Voltaic Grenade                  13,571  OnShockedGround +20%, Shocked +20%, Intimidated +10%
+  Wave of Frost                    29,936  OnShockedGround +20%, Shocked +20%, CoveredInFrost +12%
+  Wardbound Minions                18,667  CoveredInFrost +20%, OnShockedGround +20%, Shocked +20%
+  Whirling Assault                 11,614  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Wind Blast                       39,037  OnShockedGround +20%, Shocked +20%, CriticalWeakness +12%
+  Whirling Slash                    6,721  ArmourBroken +36%, OnShockedGround +20%, Shocked +20%
+  Whirlwind Lance                   8,277  ArmourBroken +28%, OnShockedGround +20%, Shocked +20%
+  Wing Blast                       11,145  ArmourBroken +23%, OnShockedGround +20%, Shocked +20%
+  Wind Serpent's Fury              12,965  OnShockedGround +20%, Shocked +20%, ArmourBroken +18%
+  Wolf Pack                        17,165  ArmourBroken +75%, OnShockedGround +20%, Shocked +20%
+166 skills scanned; 975 skill x condition gains of 5%+
 Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
-  +   23% (+23% above usual)  Poisonburst Arrow            when enemy is ArmourBroken
-  +   22% (+22% above usual)  Snipe                        when enemy is ArmourBroken
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +  100% (+100% above usual)  Dark Effigy                  when enemy is Poisoned
+  +   96% (+96% above usual)  Skeletal Reaver              when enemy is ArmourBroken
+  +   75% (+75% above usual)  Wolf Pack                    when enemy is ArmourBroken
+  +   64% (+64% above usual)  Skeletal Sniper              when enemy is ArmourBroken
+  +   59% (+59% above usual)  Raise Zombie                 when enemy is ArmourBroken
+  +   50% (+50% above usual)  Skeletal Brute               when enemy is ArmourBroken
+  +   50% (+50% above usual)  Unearth                      when enemy is ArmourBroken
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is OnShockedGround
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is Shocked
+  +   46% (+46% above usual)  Detonate Living              when enemy is ArmourBroken
+  +   36% (+36% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   33% (+33% above usual)  Rake                         when enemy is Moving
+  +   32% (+32% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   32% (+32% above usual)  Detonate Dead                when enemy is Moving
+  +   31% (+31% above usual)  Twister                      when enemy is ArmourBroken
+  +   29% (+29% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   28% (+28% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   28% (+28% above usual)  Cackling Companions          when enemy is Pinned
+  +   28% (+28% above usual)  Summon Spectre               when enemy is Pinned
+  +   28% (+28% above usual)  Tamed Companion              when enemy is Pinned
+  +   27% (+27% above usual)  Bonestorm                    when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rend                         when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rampage                      when enemy is ArmourBroken
+  +   26% (+26% above usual)  Entangle                     when enemy is ArmourBroken
+  +   26% (+26% above usual)  Flicker Strike               when enemy is ArmourBroken
 Conditions that matter to the most skills:
-  OnShockedGround             21 skills, best: Electrocuting Arrow +20%, Detonating Arrow +20%, Gas Arrow +20%
-  Shocked                     21 skills, best: Electrocuting Arrow +20%, Detonating Arrow +20%, Gas Arrow +20%
-  CriticalWeakness            21 skills, best: Snipe +16%, Poisonburst Arrow +14%, Voltaic Barrier +12%
-  Intimidated                 21 skills, best: Electrocuting Arrow +10%, Detonating Arrow +10%, Gas Arrow +10%
-  CoveredInAsh                17 skills, best: Detonating Arrow +17%, Fragments Of The Past +11%, Shockwave Totem +11%
-  OnProfaneGround              3 skills, best: Snipe +8%, Poisonburst Arrow +7%, Voltaic Barrier +6%
-  ArmourBroken                 2 skills, best: Poisonburst Arrow +23%, Snipe +22%
-  Crushed                      2 skills, best: Poisonburst Arrow +8%, Snipe +8%
-  Moving                       1 skills, best: Snipe +14%
+  OnShockedGround            155 skills, best: Lightning Conduit +68%, Arc +30%, Plasma Blast +30%
+  Shocked                    155 skills, best: Lightning Conduit +68%, Arc +30%, Plasma Blast +30%
+  Intimidated                155 skills, best: Arc +10%, Ball Lightning +10%, Artillery Ballista +10%
+  CriticalWeakness           153 skills, best: Flameblast +31%, Firestorm +29%, Solar Orb +29%
+  OnProfaneGround            106 skills, best: Bone Cage +17%, Detonate Living +17%, Frost Bomb +17%
+  CoveredInAsh                95 skills, best: Cackling Companions +20%, Ember Fusillade +20%, Firestorm +20%
+  ArmourBroken                40 skills, best: Skeletal Reaver +96%, Wolf Pack +75%, Skeletal Sniper +64%
+  Unnerved                    37 skills, best: Arc +10%, Ball Lightning +10%, Bone Cage +10%
+  Crushed                     34 skills, best: Skeletal Reaver +16%, Wolf Pack +15%, Bone Cage +15%
+  CoveredInFrost              17 skills, best: Comet +20%, Frost Bomb +20%, Frost Darts +20%
+  Moving                      13 skills, best: Rake +33%, Detonate Dead +32%, Oil Grenade +23%
+  Pinned                       4 skills, best: Siege Cascade +101%, Cackling Companions +28%, Summon Spectre +28%
+  Blinded                      3 skills, best: Cackling Companions +8%, Summon Spectre +8%, Tamed Companion +8%
+  Maimed                       3 skills, best: Cackling Companions +5%, Summon Spectre +5%, Tamed Companion +5%
+  Electrocuted                 1 skills, best: Siege Cascade +101%

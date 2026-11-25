@@ -14,64 +14,14 @@
    "gains": {},
    "dps": 0
   },
-  "Bone Cage": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.233,
-    "CriticalWeakness": 0.144,
-    "Crushed": 0.147,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.162,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 47928
-  },
-  "Bonestorm": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.281,
-    "CriticalWeakness": 0.225,
-    "Crushed": 0.143,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.145,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 28749
-  },
-  "Ball Lightning": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CriticalWeakness": 0.153,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.103,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 33994
-  },
   "Arc": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.153,
+    "CriticalWeakness": 0.201,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.103,
+    "OnProfaneGround": 0.098,
     "OnShockedGround": 0.3,
     "Shocked": 0.3,
     "Unnerved": 0.1
@@ -80,17 +30,16 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 33159
+   "dps": 71065
   },
-  "Cackling Companions": {
-   "weapon": "Sceptre",
+  "Ball Lightning": {
+   "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.118,
-    "CriticalWeakness": 0.093,
+    "CriticalWeakness": 0.234,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.075,
+    "OnProfaneGround": 0.114,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -99,23 +48,184 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 3034
+   "dps": 65239
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 1529
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 58135
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 90789
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.289,
+    "CriticalWeakness": 0.134,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.212,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.271,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 199413
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 51981
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.073,
+    "Intimidated": 0.1,
+    "Maimed": 0.068,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Blackened Heart"
+   ],
+   "dps": 2
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.078,
+    "CoveredInAsh": 0.095,
+    "CriticalWeakness": 0.129,
+    "Intimidated": 0.1,
+    "Moving": 0.18,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 4617
   },
   "Coiling Bolts": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.246,
-    "CriticalWeakness": 0.163,
-    "Crushed": 0.146,
+    "ArmourBroken": 0.222,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.148,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.086,
+    "OnProfaneGround": 0.081,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 28458
+   "dps": 68837
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.187,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 131184
   },
   "Contagion": {
    "weapon": "Wand",
@@ -126,33 +236,31 @@
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 5853
+   "dps": 10672
   },
-  "Comet": {
-   "weapon": "Wand",
+  "Cross Slash": {
+   "weapon": "Talisman",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.186,
-    "CriticalWeakness": 0.144,
+    "ArmourBroken": 0.227,
+    "CriticalWeakness": 0.173,
+    "Crushed": 0.113,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.141,
+    "Moving": 0.207,
+    "OnProfaneGround": 0.123,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 62960
+   "dps": 10069
   },
   "Conductive Runes": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.117,
+    "CoveredInAsh": 0.107,
+    "CoveredInFrost": 0.061,
     "CriticalWeakness": 0.163,
     "Intimidated": 0.1,
     "OnProfaneGround": 0.086,
@@ -163,16 +271,31 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 2722
+   "dps": 3678
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.322,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9208
   },
   "Dark Effigy": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.157,
+    "CriticalWeakness": 0.209,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
+    "OnProfaneGround": 0.079,
     "OnShockedGround": 0.2,
     "Poisoned": 1.0,
     "Shocked": 0.2,
@@ -182,39 +305,18 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 16110
-  },
-  "Detonate Living": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.42,
-    "CoveredInAsh": 0.081,
-    "CriticalWeakness": 0.172,
-    "Crushed": 0.09,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.155,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 3024
+   "dps": 34347
   },
   "Detonate Dead": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.064,
-    "CriticalWeakness": 0.189,
+    "ArmourBroken": 0.058,
+    "CriticalWeakness": 0.212,
     "Intimidated": 0.1,
-    "Moving": 0.306,
-    "OnProfaneGround": 0.125,
+    "Moving": 0.321,
+    "OnProfaneGround": 0.108,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -222,21 +324,30 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 35469
+   "dps": 57256
   },
-  "Eternal March": {
-   "weapon": "Sceptre",
+  "Detonate Living": {
+   "weapon": "Wand",
    "class": "Witch",
    "error": null,
-   "gains": {},
-   "dps": 0
+   "gains": {
+    "ArmourBroken": 0.464,
+    "CriticalWeakness": 0.264,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 5989
   },
   "Detonate Minion": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.121,
+    "CoveredInAsh": 0.125,
     "CriticalWeakness": 0.1,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -247,51 +358,184 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 7750
+   "dps": 10953
   },
-  "Entangle": {
-   "weapon": "Wand",
+  "Detonating Arrow": {
+   "weapon": "Bow",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.3,
-    "CriticalWeakness": 0.162,
-    "Crushed": 0.142,
+    "CoveredInAsh": 0.162,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.122,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
-   "dps": 14095
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 29092
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 79030
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.188,
+    "CriticalWeakness": 0.193,
+    "Crushed": 0.083,
+    "Intimidated": 0.1,
+    "Moving": 0.12,
+    "OnProfaneGround": 0.078,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 8959
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 26010
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 13865
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 38219
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.067,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 2812
   },
   "Ember Fusillade": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.184,
-    "CriticalWeakness": 0.157,
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.213,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
+    "OnProfaneGround": 0.081,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Unnerved": 0.098
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 106120
+   "dps": 139948
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.206,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 34115
   },
   "Essence Drain": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.157,
+    "CriticalWeakness": 0.209,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
+    "OnProfaneGround": 0.079,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -300,17 +544,87 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 37347
+   "dps": 79505
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 19641
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 31231
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 25513
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 13659
   },
   "Eye of Winter": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.168,
-    "CriticalWeakness": 0.146,
+    "CoveredInFrost": 0.169,
+    "CriticalWeakness": 0.219,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
+    "OnProfaneGround": 0.143,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -319,7 +633,132 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 869
+   "dps": 1717
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.07,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 57706
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 34016
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.168,
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 73719
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 139731
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.185,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.06,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 70870
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.178,
+    "CriticalWeakness": 0.183
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 135985
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.169,
+    "CriticalWeakness": 0.305,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.133,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.082
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 99000
   },
   "Fortifying Cry": {
    "weapon": "Wand",
@@ -328,81 +767,166 @@
    "gains": {},
    "dps": 0
   },
-  "Fireball": {
-   "weapon": "Wand",
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.168,
-    "CriticalWeakness": 0.157,
+    "ArmourBroken": 0.255,
+    "CriticalWeakness": 0.104,
+    "Crushed": 0.145,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
+   },
+   "dps": 60581
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.125,
+    "CriticalWeakness": 0.146,
+    "Crushed": 0.059,
+    "Intimidated": 0.1,
+    "Moving": 0.178,
+    "OnProfaneGround": 0.073,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 35421
+   "dps": 6000
   },
-  "Firestorm": {
-   "weapon": "Wand",
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.184,
-    "CriticalWeakness": 0.191,
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.119,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.101,
+    "OnProfaneGround": 0.109,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 71618
+   "dps": 18577
   },
-  "Flame Wall": {
-   "weapon": "Wand",
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.185,
-    "CriticalWeakness": 0.123,
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 6879
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
     "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.099
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 33202
+   "dps": 22628
   },
-  "Flameblast": {
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 17725
+  },
+  "Frost Bomb": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.162,
-    "CriticalWeakness": 0.196,
+    "CoveredInFrost": 0.179,
+    "CriticalWeakness": 0.244,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.118,
+    "OnProfaneGround": 0.172,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
-    "Unnerved": 0.097
+    "Unnerved": 0.1
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 8553
+   "dps": 27643
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.184,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 24597
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.181,
+    "CriticalWeakness": 0.256,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 20118
   },
   "Frostflame Nova": {
    "weapon": "Wand",
@@ -411,72 +935,15 @@
    "gains": {},
    "dps": 0
   },
-  "Frost Bomb": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInFrost": 0.179,
-    "CriticalWeakness": 0.172,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.134,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 13500
-  },
-  "Frost Wall": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInFrost": 0.18,
-    "CriticalWeakness": 0.178,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.118,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 10363
-  },
-  "Frost Darts": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInFrost": 0.184,
-    "CriticalWeakness": 0.144,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.141,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 11609
-  },
   "Frostbolt": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
     "CoveredInFrost": 0.184,
-    "CriticalWeakness": 0.146,
+    "CriticalWeakness": 0.189,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
+    "OnProfaneGround": 0.123,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -485,35 +952,16 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 43708
+   "dps": 93344
   },
-  "Grim Pillars": {
-   "weapon": "Wand",
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.184,
-    "CriticalWeakness": 0.146,
+    "CoveredInAsh": 0.068,
+    "CriticalWeakness": 0.1,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 26599
-  },
-  "Hexblast": {
-   "weapon": "Wand",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CriticalWeakness": 0.235,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.128,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -521,32 +969,342 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 32748
+   "dps": 3292
   },
-  "Powered by Verisium": {
-   "weapon": "Wand",
+  "Furious Slam": {
+   "weapon": "Talisman",
    "class": "Witch",
    "error": null,
-   "gains": {},
-   "dps": 0
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 35120
   },
-  "Lightning Conduit": {
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 17094
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.076,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 13057
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 8506
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 5537
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.107,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.057,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 21994
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CoveredInFrost": 0.115,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 19135
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 14681
+  },
+  "Grim Pillars": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.181,
+    "CoveredInFrost": 0.184,
+    "CriticalWeakness": 0.189,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.109,
-    "OnShockedGround": 0.68,
-    "Shocked": 0.68,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
     "Unnerved": 0.1
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 6381
+   "dps": 58221
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.135,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 27604
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.097,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 26075
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.054,
+    "CriticalWeakness": 0.274,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 68397
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.143,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 103949
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.184,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 47889
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.225,
+    "CriticalWeakness": 0.175,
+    "Crushed": 0.115,
+    "Intimidated": 0.1,
+    "Moving": 0.196,
+    "OnProfaneGround": 0.092,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 12339
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 31026
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CoveredInFrost": 0.115,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 53583
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 47423
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 3812
   },
   "Incinerate": {
    "weapon": "Wand",
@@ -554,9 +1312,9 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.185,
-    "CriticalWeakness": 0.122,
+    "CriticalWeakness": 0.178,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.073,
+    "OnProfaneGround": 0.071,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.099
@@ -565,35 +1323,194 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 61321
+   "dps": 131739
   },
-  "Ice Nova": {
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.151,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 43235
+  },
+  "Lightning Conduit": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.184,
-    "CriticalWeakness": 0.146,
+    "CriticalWeakness": 0.263,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
     "Unnerved": 0.1
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 22533
+   "dps": 12873
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 70961
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 31270
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 21234
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.096,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 26288
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 25773
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 10833
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.176,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.133,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 26492
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.123,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 29448
   },
   "Orb of Storms": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.15,
+    "CriticalWeakness": 0.197,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.113,
+    "OnProfaneGround": 0.107,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -602,7 +1519,105 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 22890
+   "dps": 49638
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.141,
+    "CriticalWeakness": 0.153,
+    "Crushed": 0.07,
+    "Intimidated": 0.1,
+    "Moving": 0.187,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 7629
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 85814
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.097,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 110321
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.097,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 4435
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.149,
+    "CoveredInAsh": 0.07,
+    "CriticalWeakness": 0.202,
+    "Crushed": 0.065,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 22900
   },
   "Profane Ritual": {
    "weapon": "Wand",
@@ -616,7 +1631,318 @@
    "ascendancy_nodes": [
     "Price of Power"
    ],
-   "dps": 65627
+   "dps": 119664
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 19243
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.089,
+    "CriticalWeakness": 0.23,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.072,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 119647
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.258,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 15018
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.226,
+    "CriticalWeakness": 0.238,
+    "Crushed": 0.091,
+    "Intimidated": 0.1,
+    "Moving": 0.339,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.092,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 3347
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.263,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17628
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.183,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.115,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 30126
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.119,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 158372
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 6452
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.2,
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.11,
+    "Intimidated": 0.1,
+    "Moving": 0.134,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 360
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.126,
+    "CoveredInAsh": 0.093,
+    "CriticalWeakness": 0.131,
+    "Crushed": 0.058,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 16254
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.098,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 15938
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 27672
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 21450
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 3584
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.117,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 2550
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 46222
   },
   "Skeletal Cleric": {
    "weapon": "Sceptre",
@@ -625,16 +1951,37 @@
    "gains": {},
    "dps": 0
   },
-  "Seismic Cry": {
-   "weapon": "Wand",
+  "Siege Cascade": {
+   "weapon": "Crossbow",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.273,
-    "CoveredInAsh": 0.07,
-    "CriticalWeakness": 0.114,
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.096,
+    "Electrocuted": 1.006,
+    "Frozen": 1.006,
+    "HeavyStunned": 1.006,
+    "Immobilised": 1.006,
     "Intimidated": 0.1,
-    "Moving": 0.183,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.006,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 10842
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.154,
+    "CoveredInAsh": 0.148,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -642,74 +1989,48 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 264
-  },
-  "Raise Zombie": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.095,
-    "CoveredInAsh": 0.133,
-    "CriticalWeakness": 0.101,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.073,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.081
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 8151
-  },
-  "Skeletal Arsonist": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.141,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.071,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.082
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 14814
+   "dps": 18115
   },
   "Skeletal Brute": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.114,
-    "CoveredInAsh": 0.11,
-    "CriticalWeakness": 0.104,
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.071,
+    "OnProfaneGround": 0.057,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.066
+    "Shocked": 0.2
    },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 10016
+   "dps": 13844
   },
   "Skeletal Frost Mage": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.125,
-    "CriticalWeakness": 0.099,
+    "CoveredInFrost": 0.173,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 13757
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
     "Intimidated": 0.1,
     "OnProfaneGround": 0.08,
     "OnShockedGround": 0.2,
@@ -720,47 +2041,97 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 10694
+   "dps": 18484
   },
   "Skeletal Reaver": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.211,
-    "CoveredInAsh": 0.083,
-    "CriticalWeakness": 0.11,
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.077,
+    "OnProfaneGround": 0.067,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.069
+    "Shocked": 0.2
    },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 4365
+   "dps": 8345
   },
   "Skeletal Sniper": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.1,
-    "CoveredInAsh": 0.125,
-    "CriticalWeakness": 0.102,
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.072,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.154,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
-    "Unnerved": 0.075
+    "Unnerved": 0.1
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 8767
+   "dps": 135932
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.05,
+    "CoveredInFrost": 0.119,
+    "CriticalWeakness": 0.142,
+    "Intimidated": 0.1,
+    "Moving": 0.077,
+    "OnProfaneGround": 0.155,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.092
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 72347
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.157,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.071,
+    "Intimidated": 0.1,
+    "Moving": 0.141,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 7839
   },
   "Solar Orb": {
    "weapon": "Wand",
@@ -768,9 +2139,9 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.184,
-    "CriticalWeakness": 0.191,
+    "CriticalWeakness": 0.286,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.101,
+    "OnProfaneGround": 0.109,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -779,17 +2150,16 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 17597
+   "dps": 34801
   },
-  "Snap": {
+  "Spark": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.148,
-    "CriticalWeakness": 0.172,
+    "CriticalWeakness": 0.201,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.134,
+    "OnProfaneGround": 0.098,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -798,26 +2168,132 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 61698
+   "dps": 47287
   },
-  "Skyfall": {
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.171,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 22376
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 5893
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 14124
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.061,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 54463
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 34680
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.1,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 11634
+  },
+  "Summon Spectre": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.108,
-    "CriticalWeakness": 0.144,
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.073,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.13,
+    "Maimed": 0.068,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Pinned": 0.331,
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
-    "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 40210
+   "dps": 2
   },
   "Tame Beast": {
    "weapon": "Sceptre",
@@ -826,77 +2302,142 @@
    "gains": {},
    "dps": 0
   },
-  "Spark": {
-   "weapon": "Wand",
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.153,
+    "CoveredInAsh": 0.086,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.103,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 23041
+   "dps": 7028
   },
-  "Skeletal Storm Mage": {
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 11843
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.098,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 50812
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.098,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 55376
+  },
+  "Tamed Companion": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.115,
-    "CriticalWeakness": 0.101,
+    "Blinded": 0.096,
+    "CoveredInAsh": 0.12,
+    "CriticalWeakness": 0.073,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.076,
+    "Maimed": 0.068,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Pinned": 0.331,
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
-    "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 11649
+   "dps": 2
   },
-  "Summon Spectre": {
-   "weapon": "Sceptre",
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.118,
-    "CriticalWeakness": 0.093,
+    "CoveredInAsh": 0.079,
+    "CriticalWeakness": 0.181,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.075,
+    "OnProfaneGround": 0.136,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 3034
+   "dps": 13973
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 38793
   },
   "Thrashing Vines": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.28,
-    "CriticalWeakness": 0.16,
-    "Crushed": 0.143,
+    "ArmourBroken": 0.241,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.147,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.12,
+    "OnProfaneGround": 0.11,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 16281
+   "dps": 37149
   },
   "Tornado": {
    "weapon": "Wand",
@@ -907,35 +2448,16 @@
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 8835
-  },
-  "Tamed Companion": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.118,
-    "CriticalWeakness": 0.093,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.075,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 3034
+   "dps": 16691
   },
   "Thunderstorm": {
    "weapon": "Wand",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.184,
+    "CriticalWeakness": 0.27,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.1,
+    "OnProfaneGround": 0.132,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -944,7 +2466,112 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 20739
+   "dps": 41792
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.076,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 18451
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 26229
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 8663
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.138,
+    "Crushed": 0.084,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 10344
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.207,
+    "CriticalWeakness": 0.146,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.219,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 27984
   },
   "Volcano": {
    "weapon": "Wand",
@@ -952,9 +2579,9 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.184,
-    "CriticalWeakness": 0.155,
+    "CriticalWeakness": 0.205,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.093,
+    "OnProfaneGround": 0.089,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -963,39 +2590,121 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 37879
+   "dps": 80711
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 16470
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.198,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 7048
   },
   "Unearth": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.281,
-    "CoveredInAsh": 0.065,
-    "CriticalWeakness": 0.123,
-    "Crushed": 0.061,
+    "ArmourBroken": 0.497,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.145,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.116,
+    "OnProfaneGround": 0.146,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
-    "Unnerved": 0.078
+    "Unnerved": 0.091
+   },
+   "dps": 23370
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
    },
    "ascendancy_nodes": [
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 11467
+   "dps": 14370
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CoveredInFrost": 0.115,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 30088
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 11039
   },
   "Wardbound Minions": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.071,
-    "CoveredInFrost": 0.098,
-    "CriticalWeakness": 0.109,
+    "CoveredInFrost": 0.173,
+    "CriticalWeakness": 0.122,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.068,
+    "OnProfaneGround": 0.064,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
@@ -1004,29 +2713,110 @@
     "Necromantic Conduit",
     "Blackened Heart"
    ],
-   "dps": 24462
+   "dps": 21535
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.358,
+    "CriticalWeakness": 0.14,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 6367
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.215,
+    "CriticalWeakness": 0.136,
+    "Crushed": 0.09,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.068,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 10253
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 39298
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.229,
+    "CriticalWeakness": 0.17,
+    "Crushed": 0.117,
+    "Intimidated": 0.1,
+    "Moving": 0.185,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.138,
+    "CriticalWeakness": 0.101,
+    "Crushed": 0.071,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.051,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Necromantic Conduit",
+    "Blackened Heart"
+   ],
+   "dps": 16399
   },
   "Wolf Pack": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.269,
-    "CoveredInAsh": 0.068,
-    "CriticalWeakness": 0.106,
-    "Crushed": 0.055,
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.069,
+    "OnProfaneGround": 0.058,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.055
+    "Shocked": 0.2
    },
-   "ascendancy_nodes": [
-    "Necromantic Conduit",
-    "Blackened Heart"
-   ],
-   "dps": 5441
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 03:45"
+ "updated": "2026-11-25 07:53"
 }

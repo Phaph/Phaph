@@ -1,17 +1,733 @@
 {
  "skills": {
-  "Frozen Locus": {
-   "weapon": "Quarterstaff",
+  "Animus Exchange": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 60052
+  },
+  "Arc": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3,
+    "Unnerved": 0.1
+   },
+   "dps": 65374
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 1515
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 59084
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 91069
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.212,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128861
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.289,
+    "CriticalWeakness": 0.134,
+    "Crushed": 0.143,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 11901
+  },
+  "Cackling Companions": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.066,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed",
+    "Attributes"
+   ],
+   "dps": 1
+  },
+  "Bonestorm": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.271,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.144,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.154,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 199413
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 52260
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.09,
+    "CoveredInAsh": 0.108,
+    "CriticalWeakness": 0.129,
+    "Intimidated": 0.1,
+    "Moving": 0.206,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 4036
+  },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.222,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 68837
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 122367
+  },
+  "Contagion": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.223,
+    "CriticalWeakness": 0.198,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "Moving": 0.213,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10462
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CoveredInFrost": 0.065,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 3718
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.322,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.14,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 9720
+  },
+  "Dark Effigy": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.065,
+    "CriticalWeakness": 0.204,
+    "Intimidated": 0.1,
+    "Moving": 0.362,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 50873
+  },
+  "Detonate Living": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.464,
+    "CriticalWeakness": 0.264,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.135,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.168,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 29488
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 78374
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 26149
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.234,
+    "CriticalWeakness": 0.201,
+    "Crushed": 0.103,
+    "Intimidated": 0.1,
+    "Moving": 0.144,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 7637
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 13660
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 37561
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
     "CriticalWeakness": 0.1,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 3099
+   "dps": 2619
+  },
+  "Eternal March": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.213,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "dps": 126430
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.206,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 18753
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 29532
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 25403
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 13499
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.182,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 57038
+  },
+  "Fireball": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.209,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.079,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 68314
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 33608
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.185,
+    "CriticalWeakness": 0.183
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 139817
+  },
+  "Flame Wall": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.06,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "dps": 65713
+  },
+  "Flameblast": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.311,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.135,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.083
+   },
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.16,
+    "CriticalWeakness": 0.151,
+    "Crushed": 0.075,
+    "Intimidated": 0.1,
+    "Moving": 0.227,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 4699
   },
   "Flicker Strike": {
    "weapon": "Quarterstaff",
@@ -31,32 +747,213 @@
    ],
    "dps": 64072
   },
-  "Glacial Cascade": {
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.122,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 6826
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 22284
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 16833
+  },
+  "Frost Bomb": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.256,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18158
+  },
+  "Frostflame Nova": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Frostbolt": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 85870
+  },
+  "Frozen Locus": {
    "weapon": "Quarterstaff",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.069,
-    "CoveredInFrost": 0.122,
+    "CoveredInAsh": 0.073,
     "CriticalWeakness": 0.1,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.121,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.097,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
    "ascendancy_nodes": [
     "Attack Speed",
     "Attack Speed"
    ],
-   "dps": 19037
+   "dps": 34829
   },
-  "Ice Strike": {
-   "weapon": "Quarterstaff",
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.069,
-    "CoveredInFrost": 0.122,
-    "CriticalWeakness": 0.101,
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 17088
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 12778
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
@@ -65,7 +962,20 @@
     "Attack Speed",
     "Attack Speed"
    ],
-   "dps": 53308
+   "dps": 5520
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 7974
   },
   "Gathering Storm": {
    "weapon": "Quarterstaff",
@@ -85,12 +995,181 @@
    ],
    "dps": 19500
   },
-  "Falling Thunder": {
+  "Glacial Cascade": {
    "weapon": "Quarterstaff",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.075,
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 19037
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 14632
+  },
+  "Grim Pillars": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.145,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 27226
+  },
+  "Hexblast": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.051,
+    "CriticalWeakness": 0.28,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.119,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 53241
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 26014
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.158,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 99367
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 44056
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.227,
+    "CriticalWeakness": 0.174,
+    "Crushed": 0.116,
+    "Intimidated": 0.1,
+    "Moving": 0.189,
+    "OnProfaneGround": 0.092,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 13081
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 31765
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
     "CriticalWeakness": 0.101,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
@@ -100,7 +1179,40 @@
     "Attack Speed",
     "Attack Speed"
    ],
-   "dps": 57038
+   "dps": 53308
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 46701
+  },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "dps": 122097
   },
   "Killing Palm": {
    "weapon": "Quarterstaff",
@@ -120,19 +1232,594 @@
    ],
    "dps": 42949
   },
-  "Tempest Bell": {
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 3811
+  },
+  "Lightning Conduit": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.263,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.68,
+    "Shocked": 0.68,
+    "Unnerved": 0.1
+   },
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 30731
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 69502
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.12,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 26227
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 21122
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 25493
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.133,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 26336
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 10564
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 29760
+  },
+  "Orb of Storms": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.197,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.107,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.179,
+    "CriticalWeakness": 0.16,
+    "Crushed": 0.089,
+    "Intimidated": 0.1,
+    "Moving": 0.238,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 5997
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 86488
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 4425
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 106675
+  },
+  "Profane Ritual": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 85474
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.188,
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.205,
+    "Crushed": 0.082,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 19076
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.23,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.072,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 107761
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 18670
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.258,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 15852
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.228,
+    "CriticalWeakness": 0.237,
+    "Crushed": 0.092,
+    "Intimidated": 0.1,
+    "Moving": 0.333,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 7541
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 3264
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.263,
+    "CriticalWeakness": 0.1,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 18608
+  },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 162649
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.193,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.115,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 30265
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.157,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 6276
+  },
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.216,
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.111,
+    "Intimidated": 0.1,
+    "Moving": 0.145,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 333
+  },
+  "Shattering Palm": {
    "weapon": "Quarterstaff",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.084,
-    "CriticalWeakness": 0.211,
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.1,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.131,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 13633
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 15853
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.149,
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.07,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.066,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 14686
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 20603
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 28198
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 3393
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 2544
   },
   "Siphoning Strike": {
    "weapon": "Quarterstaff",
@@ -152,6 +1839,276 @@
    ],
    "dps": 45914
   },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.096,
+    "Electrocuted": 1.006,
+    "Frozen": 1.006,
+    "HeavyStunned": 1.006,
+    "Immobilised": 1.006,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.006,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 10758
+  },
+  "Skeletal Arsonist": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.05,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.057,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.067,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 16024
+  },
+  "Snap": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.171,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 122153
+  },
+  "Skeletal Sniper": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CoveredInFrost": 0.135,
+    "CriticalWeakness": 0.142,
+    "Intimidated": 0.1,
+    "Moving": 0.087,
+    "OnProfaneGround": 0.156,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "dps": 64098
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.207,
+    "CriticalWeakness": 0.199,
+    "Crushed": 0.093,
+    "Intimidated": 0.1,
+    "Moving": 0.18,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 6258
+  },
+  "Solar Orb": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 32034
+  },
+  "Spark": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.126,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 21502
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 14695
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 5771
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 34866
+  },
   "Storm Wave": {
    "weapon": "Quarterstaff",
    "class": "Monk",
@@ -169,13 +2126,70 @@
    ],
    "dps": 54238
   },
-  "Shattering Palm": {
-   "weapon": "Quarterstaff",
+  "Storm Lance": {
+   "weapon": "Spear",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.104,
-    "CriticalWeakness": 0.1,
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 11431
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 6429
+  },
+  "Summon Spectre": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.066,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed",
+    "Attributes"
+   ],
+   "dps": 1
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
@@ -184,7 +2198,87 @@
     "Attack Speed",
     "Attack Speed"
    ],
-   "dps": 15853
+   "dps": 11801
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.098,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 53635
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.065,
+    "CoveredInAsh": 0.152,
+    "CriticalWeakness": 0.098,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 51206
+  },
+  "Tamed Companion": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Blinded": 0.079,
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.076,
+    "Intimidated": 0.1,
+    "Maimed": 0.066,
+    "OnShockedGround": 0.2,
+    "Pinned": 0.279,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed",
+    "Attributes"
+   ],
+   "dps": 1
+  },
+  "Thrashing Vines": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.241,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.147,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 37149
   },
   "Tempest Flurry": {
    "weapon": "Quarterstaff",
@@ -202,6 +2296,117 @@
     "Attack Speed"
    ],
    "dps": 38616
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.211,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13633
+  },
+  "Tornado": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 16691
+  },
+  "Thunderstorm": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.27,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 38471
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 25672
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 8042
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.096,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 17601
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.314,
+    "CriticalWeakness": 0.143,
+    "Crushed": 0.115,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 8051
   },
   "Vaulting Impact": {
    "weapon": "Quarterstaff",
@@ -222,15 +2427,15 @@
    ],
    "dps": 9566
   },
-  "Wind Blast": {
-   "weapon": "Quarterstaff",
+  "Vine Arrow": {
+   "weapon": "Bow",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.109,
-    "CriticalWeakness": 0.118,
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.156,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.118,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -238,7 +2443,104 @@
     "Attack Speed",
     "Attack Speed"
    ],
-   "dps": 39037
+   "dps": 27284
+  },
+  "Volcano": {
+   "weapon": "Wand",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.205,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 16335
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.198,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 6845
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.497,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.146,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "dps": 23370
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 13571
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 29936
   },
   "Whirling Assault": {
    "weapon": "Quarterstaff",
@@ -258,15 +2560,31 @@
    ],
    "dps": 11614
   },
-  "Wave of Frost": {
-   "weapon": "Quarterstaff",
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
    "class": "Monk",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.069,
-    "CoveredInFrost": 0.122,
-    "CriticalWeakness": 0.101,
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.358,
+    "CriticalWeakness": 0.14,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
@@ -274,8 +2592,99 @@
     "Attack Speed",
     "Attack Speed"
    ],
-   "dps": 29936
+   "dps": 6721
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.118,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 39037
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.282,
+    "CriticalWeakness": 0.139,
+    "Crushed": 0.117,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 8277
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.17,
+    "Crushed": 0.118,
+    "Intimidated": 0.1,
+    "Moving": 0.179,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 11145
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.188,
+    "CriticalWeakness": 0.103,
+    "Crushed": 0.097,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.052,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Attack Speed",
+    "Attack Speed"
+   ],
+   "dps": 12767
+  },
+  "Wolf Pack": {
+   "weapon": "Sceptre",
+   "class": "Monk",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.058,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 17165
   }
  },
- "updated": "2026-11-20 04:46"
+ "updated": "2026-11-25 14:16"
 }
