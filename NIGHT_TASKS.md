@@ -135,6 +135,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **09:10:** 37's condition scans are at 4 of 23 (~23 min each). Reader written: `python3 engine/tools/asc_read.py ~/breaker/engine/data/breaker/conditions_asc --skip Infernalist`
   (one ascendancy vs the median one; skip Infernalist until ~/infernalist.sh redoes it, and whichever file is still being written). First look, 3 files: Blood Mage
   ahead ~25-40% on many spells, no outlier over x1.45 outside Infernalist's mixed minion rows. Too few to conclude. rank8: still in its first search.
+- **09:30:** rank8: 59 min into its first search (earlier runs took ~28-32 min each; now 2 workers on a full server), both workers at full CPU. Expect roughly 6 h of searches, then
+  the builds. No results before the afternoon. If still no first line in ~/rank8.log by 10:30, suspect a hang. 37 is on 5 of 23.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
