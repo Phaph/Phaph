@@ -987,3 +987,5 @@ the log prints a lead once both sides are built.)
 - Rain of Arrows vs Ice Shot (Deadeye): 3.25M vs 1.64M boss; +60 / +75 / +193% by order (Nov 22, one build each: -43%). Not a result yet: the hit rate is our estimate and the build's rain is
   shrunk to 2.6 m, so a 1.5 m boss is hit by 59% of the arrows (x0.56 at 1.0 m = 1.8M, +11%). Holding the build fixed; a re-optimised one could differ. Mapping 0.69M vs 1.45M. Back to unconfirmed.
 - nerf_risk added to the 11 live leads in leads.json, by the mechanism groups of research/broken_builds.md (Claude's judgement; not shown on the page).
+- Wind Serpent's Fury vs Lightning Spear (Amazon): 1.03M vs 1.43M (-28%; -28 / -11 / -27% by order). Dead. All 8 leads are done: ahead in every order: Dark Effigy + poison (weak build), Bonestorm vs Comet
+  (known), Rain of Arrows vs Ice Shot (our estimate); nothing new to announce. Results: data/breaker/lead_builds_orders.
