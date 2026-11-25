@@ -146,6 +146,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   they and matrix_asc need a redo (48). breaker_queue copies engine code per job from ~/breaker and pulls at each push: after a merge mid-queue, later scans mix code: check dates.
 - 15:35: first suite run: 2 fails, probably task 47's own cases (zero-damage builds read as a 100% loss in the filler check; fixed, cases pass, committed; all 23 ascendancies spend 8 of 8). The suite
   was restarted at 15:36 (~/asc_tests.log). The A/B isn't affected (its builds have damage).
+- 16:10: task 48's scan written: engine/tools/asc_cond.py on branch `asccond` (on top of ascpoints, worktree ~/phaph_asccond; 3 unit tests pass). Probe on Titan, 3 skills: finds Crushing Impacts / Heavy
+  Stunned +25%, which the old scan can't see (a notable on another's path shows the same row: Mountain Splitter). ~40 min per ascendancy on 6 cores estimated, ~15 h for 23. Merge after ascpoints; don't
+  start it before 37's queue is done. A/B, branch half so far: Deadeye Rapid Shot 5.76M, Gemling Rapid Shot 4.42M; main half not started.
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
