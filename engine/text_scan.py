@@ -16,6 +16,7 @@ It runs from PoB's data only, so it works on patch day as soon as PoB (or our ow
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -76,6 +77,21 @@ def _clean(s: str) -> str:
     return re.sub(r"\{[^}]*\}", "", s).strip()
 
 
+def patched_nodes(pob) -> dict[str, list[str]]:
+    """Patch-notes mode: the lines of every passive the changes file rewrote, by node id. The tree file on disk is the
+    unpatched game, so without this a patched passive never shows up in the diff."""
+    path = os.environ.get("PATCH_FILE")
+    if not path:
+        return {}
+    out = {}
+    for c in json.loads(Path(path).read_text(encoding="utf-8")).get("changes") or []:
+        if c.get("passive"):
+            for d in pob.send("node_debug", name=c["passive"])["nodes"]:
+                if d["where"].startswith("tree "):
+                    out[d["where"][5:]] = list(d.get("sd") or [])
+    return out
+
+
 def collect(pob) -> list[dict]:
     """Every text line worth reading: gem stat lines (with PoB's 'not supported' flag), unique mods, passive stats."""
     lines: list[dict] = []
@@ -90,17 +106,18 @@ def collect(pob) -> list[dict]:
     seen = set()
     for u in pob.list_uniques():
         name = u["name"].split(",")[0]
-        if name in seen:
-            continue
-        seen.add(name)
         for ln in (u.get("raw") or "").split("\n")[2:]:
             if re.match(r"^[A-Za-z ]+:\s", ln) or not ln.strip():
                 continue
+            if (name, _clean(ln)) in seen:   # several uniques can share a name (Grand Spectrum): keep every line once
+                continue
+            seen.add((name, _clean(ln)))
             lines.append({"source": "unique", "name": name, "line": _clean(ln), "pob_blind": False})
     from tree import compact
     tree = compact(None)
-    for n in (tree.get("nodes") or {}).values():
-        kind, name, stats, asc = n[2], n[3], n[4] or [], n[5]
+    patched = patched_nodes(pob)
+    for key, n in (tree.get("nodes") or {}).items():
+        kind, name, stats, asc = n[2], n[3], patched.get(str(key), n[4] or []), n[5]
         if kind not in ("n", "k") and not asc:   # notables, keystones and every ascendancy node
             continue
         for s in stats:

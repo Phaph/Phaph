@@ -24,6 +24,8 @@ publishing). Times assume the server (8 cores); heavy runs go through the Breake
 ## 2. Scan the patched game (no Claude, ~1-12 h)
 - `PATCH=engine/data/patches/1_0.json engine/tools/breaker_day.sh` (text scan + diff vs the baseline, condition scan,
   unsupported lines; `SCALER=1` adds the scaler scan): writes `engine/data/breaker/day/<date>/` + SUMMARY.md.
+  Timed 2026-11-25: 24 min on 6 cores (text diff in the first 10 s), other jobs running. Check patch_applied.txt first:
+  "already there" lines mean PoB has the change already.
 - Blind-style search per ascendancy on the patched game: `PATCH_FILE=... python tools/blind_test.py run` (no
   class-weapon rule: Lodestone mixes any class and weapon), ~12 h on 6 cores.
 - The 1.0-new things (new skills / uniques PoB doesn't have yet) can't be scanned: Claude reads them as theory

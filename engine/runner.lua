@@ -1214,7 +1214,14 @@ function handlers.patch_unique(cmd)
 					table.insert(done, pair[1] .. " -> " .. pair[2])
 				end
 			end
-			for _, line in ipairs(cmd.add or {}) do raw = raw .. "\n" .. line; table.insert(done, "+ " .. line) end
+			for _, line in ipairs(cmd.add or {}) do
+				-- A line the game already has (the patch is already in PoB) must not count twice.
+				if (raw:lower() .. "\n"):gsub("{[^}]*}", ""):find("\n" .. line:lower() .. "\n", 1, true) then
+					table.insert(done, "already there: " .. line)
+				else
+					raw = raw .. "\n" .. line; table.insert(done, "+ " .. line)
+				end
+			end
 			item.raw = raw:gsub("\n\n+", "\n")
 		end
 	end
@@ -1296,7 +1303,12 @@ function handlers.patch_node(cmd)
 					end
 					if line ~= "" then table.insert(sd, line) end
 				end
-				for _, line in ipairs(cmd.add or {}) do table.insert(sd, line); table.insert(done, "+ " .. line) end
+				for _, line in ipairs(cmd.add or {}) do
+					local there = false
+					for _, old in ipairs(sd) do if old:lower() == line:lower() then there = true end end
+					if there then table.insert(done, "already there: " .. line)
+					else table.insert(sd, line); table.insert(done, "+ " .. line) end
+				end
 				rawset(node, "sd", sd)
 			end
 		end

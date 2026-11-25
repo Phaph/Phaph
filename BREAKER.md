@@ -941,3 +941,10 @@ the finalists report now flags builds whose skill deals under half.
 591k plain (+41%; it was +1% on 2026-11-22, and both numbers fell). One order per side can't judge it. Re-run with 3 orders per side: lead_builds_orders.
 
 **Ailment combos on 2026-11-24.8:** as on Nov 19: Dark Effigy + Frost Darts poison +72% (was +69%), Flame Breath +3% (+6%), Lightning Conduit no combo. Full-build check running.
+
+**Launch-day rehearsal (task 40, 2026-11-25):** `breaker_day.sh` with PATCH=0_5_2.json: 24 min 14 s (1,454 s) on 6 of 8 cores, with the lead re-run on 3 others: text scan and diff
+under 10 s, condition scan (166 skills, 0 errors) nearly all the rest. It did NOT test detection: this PoB (0.23.1) already has 0.5.2, and the file's lines were added a second time
+to Ice Storm and Lightning Storm. A made-up patch then showed a real gap: a patched passive never reached the text diff (it read the tree file on disk). Fixed, with tests: passives
+show in the diff; a line the game already has is reported "already there" and not added; uniques sharing a name (Grand Spectrum) are all read (the scan was random there,
+so a diff could show false news); SUMMARY.md lists the changes applied; the run no longer stops at `git pull` with uncommitted files. Not tested: notes -> changes file (Claude's
+part), and the ~12 h blind search. Still missing: a gem's number change shows nowhere but the raw dps, and conditions.json's dps is from Nov 18 (87 of 166 moved over 2%).

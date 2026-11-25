@@ -113,6 +113,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   1.38M, Dark Effigy 0.83M (single order each; not verdicts).
 - **01:20:** lead_builds.py and weapon_finalists.py share path_luck.best_of (3 orders, best kept). after-leads stopped after 2 leads (BREAKER.md); ~/leads_orders.sh runs all
   (ailment combos done on .8: same picture.)   leads with 3 orders per side (3 cores, ~/leads_orders.log -> lead_builds_orders). Then update leads.json. Dark Effigy is the one to look at.
+- **01:50: rehearsal done and timed (24 min, 6 cores; BREAKER.md, playbook).** It found that patched passives never reached the text diff: fixed (text_scan.py, runner.lua,
+  breaker_day.sh), full suite green before 45(b) (unit-tested only, scan tool); pushed, not deployed. leads-orders still running, 0 leads finished. Next: task 45.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -496,6 +498,10 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     swapping to Extraction and re-running auto_config gives +35% (4.37M -> 5.92M mapping score). Extraction is better in
     the saved mapping setup; how often this happens elsewhere isn't measured. Try: auto_config + search again until stable,
     or re-score the top few sets with auto_config run on each. After 42's A/B (so it measures one change).
+
+45. [ ] (2026-11-25 02:10: (b) written (condition_scan diff + code stamp; a stale baseline is re-scanned in PATCH mode); (c) end-to-end running: ~/detect.sh, ~/detect.log, clone ~/detect, its day/2026-11-25/SUMMARY.md must show Earthquake +~20%, Leopold and Ice Storm lines; (a) after leads-orders) (added 2026-11-25, from the rehearsal) Launch day: show gem number changes. (a) fresh conditions.json baseline on the current engine (~25 min on 6 cores, after
+    leads-orders); (b) breaker_day.sh: dps per skill vs the baseline, moves over 5% listed in SUMMARY.md; (c) detection test: a made-up patch (gem, unique, passive, one buff big
+    enough to matter) must show all of them. Needs the same engine on both sides, else the diff is ours, not the patch's.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber

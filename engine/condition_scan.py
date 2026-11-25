@@ -12,9 +12,12 @@ something the skill needs from elsewhere.
   python condition_scan.py run [--workers 6] [--out data/breaker/conditions.json]   (resumable)
   python condition_scan.py run --class Ranger --ascendancy Deadeye --out ...   (that class's weapons and ascendancy)
   python condition_scan.py report data/breaker/conditions.json
+  python condition_scan.py diff OLD.json NEW.json   (damage per skill; launch day: what the patch moved)
+  python condition_scan.py stamp   (the engine code this would scan with)
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -33,6 +36,14 @@ def conditions(pob_src: Path) -> list[str]:
     return sorted(set(re.findall(r'var = "(conditionEnemy[A-Za-z]+)"', text)) - {"conditionEnemyRareOrUnique"})
 
 
+def code_stamp() -> str:
+    """Hash of the engine code. Two scans compare the game only if this is the same; otherwise the diff is ours."""
+    h = hashlib.sha256()
+    for f in sorted(ENGINE.glob("*.py")) + [ENGINE / "runner.lua"]:
+        h.update(f.name.encode() + f.read_bytes().replace(b"\r\n", b"\n"))
+    return h.hexdigest()[:12]
+
+
 def run(workers: int, out: Path, cls: str | None = None, asc: str | None = None) -> None:
     import generate as g
     from gear import make_stage
@@ -43,9 +54,10 @@ def run(workers: int, out: Path, cls: str | None = None, asc: str | None = None)
     with PoB() as p:
         catalog = p.send("skill_catalog")["skills"]
         classes = p.list_classes()
+        pob_version = getattr(p, "version", None)
     g._ALL_ASCS[:] = [(c["name"], a) for c in classes for a in c["ascendancies"]]
     skills = g.main_skills(catalog, {})
-    done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"skills": {}}
+    done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"code": code_stamp(), "pob": pob_version, "skills": {}}
     todo = [s for s in skills if s["name"] not in done["skills"]]
     print(f"{len(skills)} skills, {len(todo)} to scan, {len(conds)} conditions, {workers} workers", flush=True)
     stage = make_stage("mid")
@@ -131,6 +143,29 @@ def report(d: dict, top: int = 30) -> str:
     return "\n".join(out)
 
 
+def diff(old: dict, new: dict, margin: float = 0.05) -> str:
+    """Skills whose damage moved, biggest first: a patch's number changes show here (the text diff reads wording only)."""
+    a, b = old["skills"], new["skills"]
+    out = []
+    if not old.get("code") or old.get("code") != new.get("code"):
+        out.append("WARNING: scanned with different engine code: some or all of these moves are ours, not the game's")
+    if old.get("pob") != new.get("pob"):
+        out.append(f"PoB {old.get('pob')} -> {new.get('pob')}")
+    ok = lambda r: bool(r) and not r.get("error") and (r.get("dps") or 0) > 0
+    both = [n for n in b if ok(a.get(n)) and ok(b[n])]
+    moved = sorted(((b[n]["dps"] / a[n]["dps"] - 1, n) for n in both), key=lambda x: -abs(x[0]))
+    moved = [(m, n) for m, n in moved if abs(m) >= margin]
+    gone = sorted(n for n in a if ok(a[n]) and not ok(b.get(n)))
+    fresh = sorted(n for n in b if ok(b[n]) and not ok(a.get(n)))
+    out.append(f"{len(moved)} of {len(both)} skills moved {margin:.0%}+ (round-1 builds, no passive tree: passive changes don't show)")
+    out += [f"  {m:+7.0%}  {n:<28} {a[n]['dps']:>10,} -> {b[n]['dps']:>10,}" for m, n in moved]
+    if fresh:
+        out.append("New (or worked only now): " + ", ".join(fresh))
+    if gone:
+        out.append("Gone (or broken now): " + ", ".join(gone))
+    return "\n".join(out)
+
+
 if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "run":
@@ -140,5 +175,9 @@ if __name__ == "__main__":
         run(workers, out, arg("--class"), arg("--ascendancy"))
     elif cmd == "report":
         print(report(json.loads(Path(sys.argv[2]).read_text(encoding="utf-8"))))
+    elif cmd == "diff":
+        print(diff(*(json.loads(Path(x).read_text(encoding="utf-8")) for x in sys.argv[2:4])))
+    elif cmd == "stamp":
+        print(code_stamp())
     else:
         print(__doc__)

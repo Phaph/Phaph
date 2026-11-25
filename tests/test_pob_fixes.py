@@ -227,3 +227,35 @@ def test_inexorable_critical_uses_time_between_crits(pob):
     applied = {a["var"]: a["why"] for a in pob.auto_config("bossing")}
     assert pob.calc(["CritChance"])["CritChance"] <= at_cap
     assert "SecondsSinceInevitableCrit" in applied or at_cap == pob.calc(["CritChance"])["CritChance"]
+
+
+def test_patched_passive_and_unique_show_in_the_text_scan(pob, tmp_path, monkeypatch):
+    """The launch-day diff reads patched passives too (the tree file on disk is the unpatched game), and every unique
+    that shares a name is read in full, so two scans of one game never differ."""
+    import json
+    import text_scan
+    from pob import PoB
+    f = tmp_path / "p.json"
+    line = "10% more Damage per Power Charge"
+    f.write_text(json.dumps({"patch": "t", "changes": [{"passive": "Ice Storm", "add": [line]},
+                                                       {"unique": "Leopold's Applause", "add": [line]}]}))
+    key = lambda p: {(x["source"], x["name"], x["line"]) for x in text_scan.collect(p)}
+    monkeypatch.delenv("PATCH_FILE", raising=False)
+    pob.new()
+    before = key(pob)
+    monkeypatch.setenv("PATCH_FILE", str(f))
+    with PoB() as p:
+        after = key(p)
+    assert after - before == {("notable", "Ice Storm", line), ("unique", "Leopold's Applause", line)}
+    assert not before - after
+
+
+def test_patch_lines_the_game_already_has_are_not_added_twice(pob):
+    pob.new()
+    r = pob.send("patch_node", name="Ice Storm", add=["15% REDUCED Effect of Chill on you"])
+    assert r["changed"] and all(c.startswith("already there") for c in r["changed"])
+    r = pob.send("patch_unique", name="Leopold's Applause", add=["A new line"])
+    assert r["changed"] == ["+ A new line"]
+    r = pob.send("patch_unique", name="Leopold's Applause", add=["A new line"])
+    assert r["changed"] == ["already there: A new line"]
+    pob.send("patch_reset")

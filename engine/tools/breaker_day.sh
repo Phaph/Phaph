@@ -32,6 +32,10 @@ run() {   # run a command in the engine image with the repo's engine code
 }
 echo "$(date -u +%FT%TZ) Breaker day run -> $DAY"
 
+# 0. Patch-notes mode: what the changes file did ("already there" = this PoB has the line already, so it isn't a test).
+[ -n "${PATCH:-}" ] && run "python -c 'from pob import PoB
+with PoB() as p: print(chr(10).join(p.patched))'" > "$DAY/patch_applied.txt" 2>&1
+
 # 1. Text scan, and what's new since the last one.
 B=engine/data/breaker
 [ -f $B/text_scan.json ] && cp $B/text_scan.json "$DAY/text_scan_before.json"
@@ -51,6 +55,18 @@ fi
 # 2. Condition scan, fresh.
 run "python condition_scan.py run --workers $CPUS --out /app/engine_src/${DAY#engine/}/conditions.json" > "$DAY/conditions_run.log" 2>&1
 run "python condition_scan.py report /app/engine_src/${DAY#engine/}/conditions.json" > "$DAY/conditions.txt" 2>&1
+
+# 2b. Damage per skill against the unpatched game. Patch-notes mode: only a baseline from this same engine code counts,
+# so a stale one is scanned again here (about 25 min more); conditions.json itself is left alone.
+BASE=$B/conditions.json
+if [ -n "${PATCH:-}" ]; then
+  STAMP=$(run "python condition_scan.py stamp" | tail -1)
+  if ! grep -q "\"code\": \"$STAMP\"" $BASE 2>/dev/null; then
+    BASE=$DAY/conditions_base.json
+    ( PATCH_ENV=(); run "python condition_scan.py run --workers $CPUS --out /app/engine_src/${DAY#engine/}/conditions_base.json" ) > "$DAY/conditions_base_run.log" 2>&1
+  fi
+fi
+run "python condition_scan.py diff /app/engine_src/${BASE#engine/} /app/engine_src/${DAY#engine/}/conditions.json" > "$DAY/dps_moved.txt" 2>&1
 
 # 3. Scaler scan on every saved build (optional: slower).
 if [ "${SCALER:-0}" = 1 ]; then
@@ -78,8 +94,16 @@ fi
   echo
   echo "Game data: $(head -1 "$DAY/text_all.txt")"
   echo
+  if [ -n "${PATCH:-}" ]; then
+    echo "## Patch changes applied (a number change to a gem shows here and in the condition scan's dps, not in the wording)"
+    echo '```'; cat "$DAY/patch_applied.txt"; echo '```'
+    echo
+  fi
   echo "## New or changed risky wording (read first)"
   echo '```'; head -40 "$DAY/text_new.txt"; echo '```'
+  echo
+  echo "## Skills whose damage moved"
+  echo '```'; head -40 "$DAY/dps_moved.txt"; echo '```'
   echo
   echo "## Payoffs (skills that jump under one enemy condition)"
   echo '```'; head -25 "$DAY/conditions.txt"; echo '```'
@@ -91,5 +115,5 @@ fi
 git add "$DAY" $B/text_scan.json $B/unsupported.json $B/unsupported.txt 2>/dev/null
 git -c user.name=Claude -c user.email=noreply@anthropic.com commit -q -m "Breaker day run $(date +%F)
 
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -- "$DAY" $B/text_scan.json $B/unsupported.json $B/unsupported.txt && git pull -q --rebase && git push -q
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>" -- "$DAY" $B/text_scan.json $B/unsupported.json $B/unsupported.txt && git pull -q --rebase --autostash && git push -q
 echo "$(date -u +%FT%TZ) Breaker day run finished: $DAY/SUMMARY.md"
