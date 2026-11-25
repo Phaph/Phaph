@@ -149,6 +149,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - 16:10: task 48's scan written: engine/tools/asc_cond.py on branch `asccond` (on top of ascpoints, worktree ~/phaph_asccond; 3 unit tests pass). Probe on Titan, 3 skills: finds Crushing Impacts / Heavy
   Stunned +25%, which the old scan can't see (a notable on another's path shows the same row: Mountain Splitter). ~40 min per ascendancy on 6 cores estimated, ~15 h for 23. Merge after ascpoints; don't
   start it before 37's queue is done. A/B, branch half so far: Deadeye Rapid Shot 5.76M, Gemling Rapid Shot 4.42M; main half not started.
+- 17:00: task 47 suite green (245 passed). A/B branch half done (boss / map / EHP): Deadeye Rapid Shot 5.76M / 4.94M / 12.7k (on .7, path_luck_7: 4.76M / 4.03M / 12.6k = +21%), Gemling Rapid Shot 4.42M / 4.03M / 17.4k,
+  Titan Earthquake 4.12M / 2.20M / 48.7k, Abyssal Lich Bonestorm 5.80M / 4.57M / 12.0k, control Invoker Ice Shot identical to .7. Main half running since 16:52 (it copied its code: engine edits in ~/phaph are fine now).
+  Then merge ascpoints, deploy, merge asccond (no deploy). rank8 5 of 6 searches; 37 on 22 of 23.
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
