@@ -997,3 +997,10 @@ the log prints a lead once both sides are built.)
 - Why it can't find more: 5 of 19 scans took an ascendancy passive on few or no skills (Titan 0 of 158, Abyssal Lich 0, Warbringer 3, Tactician 14, Disciple 28). Passives are taken on plain gain, so one that needs
   a condition is never in. And three real bugs under it (task 47), also in guides: choice options were never tried, Abyssal Lich could take nothing, points PoB sees no gain for stayed unspent.
 - So "no cross-class lead" is not shown: earlier per-ascendancy numbers (blind tests included) compare ascendancies with missing passives.
+
+**Ascendancy points fix (task 47, live as 2026-11-25.1).** Choice options are tried (Gemling implants, Point Blank), Abyssal Lich can spend points, leftovers go to passives that cost nothing (marked filler).
+- Full builds, boss main -> branch, orders as is / reversed / rotated: Gemling Rapid Shot 5.21 / 4.14 / 4.78M -> 4.42 / 4.63 / 5.42M (map up in all three); Titan Earthquake 3.30 / 4.29 / 4.42M -> 4.12 / 4.29 / 4.15M;
+  one order only: Deadeye Rapid Shot 4.76 -> 5.76M, Abyssal Lich Bonestorm 6.93 -> 5.80M, control Invoker Ice Shot identical.
+- Paired (only the ascendancy respent on 37 finished builds): 1 loses damage, with the old code too. The fix itself: Deadeye +20% (Point Blank, at PoB's 2 m), Gemling about +13%, Abyssal Lich 0% damage and +12% EHP.
+- The lower full builds are gear luck: Abyssal's passives cost 0%; Titan rotated, passives swapped: +45% on main's build, -35% on the branch's. Merged with Titan 3% under the gate for that reason.
+- Not measured: how much the blind tests move (48).

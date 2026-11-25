@@ -169,6 +169,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   since 19:45 (main as is: Gemling 5.21M / 3.74M, Titan 3.30M / 1.83M). Merge ascpoints if best of 3 isn't lower.
   Task 49 code on branch `distance` (on top of respend, worktree ~/phaph_distance, no suite, no builds yet): auto_config sets 4 m for projectile skills (an estimate; ice spears and spells like Spark included),
   2 m for melee and minions; 15 skills checked: projectile ones get 4 m; Comet, Unearth (spells, not projectile) and Fangs of Frost stay at 2 m. Changes every ranged score, so test after 47 and 50 are in: suite, then search-vs-ladder and 5 builds.
+- **21:00: engine 2026-11-25.1 live (task 47).** Gate (branch's best of 3 not lower): Gemling met (5.21M -> 5.42M), Titan missed by 3% (4.42M -> 4.29M), overridden: swapping only the passives between the two rotated Titan
+  builds, main's gains 45% and the branch's loses 35%, and the branch's has 64k EHP vs 14k. Details in BREAKER.md. respend suite + builds running (~/respend_ab.sh). Next: 50, then 49, then merge `asccond` and start 48 (matrix_asc
+  running in ~/breaker is old code: its result is a "before").
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
@@ -562,7 +565,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     top 10 one by one (old file: git show 8031dcb:engine/data/breaker/conditions.json). Flameblast first: its stages / channel time may be counted as free. A wrong
     one is a live ranking bug.
 
-47. [ ] (2026-11-25: found from asc_read; branch `ascpoints`, suite + A/B running, see START HERE) Ascendancy points: choice options never tried, Abyssal Lich none, leftovers unspent. Left after the
+47. [x] (2026-11-25 21:00: merged, live as 2026-11-25.1, 245 passed; A/B in BREAKER.md) Ascendancy points: choice options never tried, Abyssal Lich none, leftovers unspent. Left after the
     merge: cached guides on older engine versions; a guide line saying filler passives aren't in the numbers (steps carry `filler`; page work is paused).
 
 48. [ ] (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
