@@ -1477,6 +1477,14 @@ function handlers.ailment_rates(cmd)
 	return res
 end
 
+-- Is the main skill one the player fires from range (projectiles, not a melee strike that also throws one, not minions)?
+local function isRangedSkill()
+	local env = build.calcsTab.mainEnv
+	local skill = env and env.player and env.player.mainSkill
+	local t = skill and skill.skillTypes
+	return t and (t[SkillType.Projectile] or t[SkillType.RangedAttack]) and not t[SkillType.Melee] and not t[SkillType.Minion] and not skill.minion or false
+end
+
 function handlers.auto_config(cmd)
 	local mode = cmd.mode or "bossing"
 	local input = build.configTab.input
@@ -1495,6 +1503,12 @@ function handlers.auto_config(cmd)
 	-- it. Measured with the support's bonus off, the time between crits T = 1 / (crit chance x hits per second);
 	-- seconds used = min(10, T), refined once with the raised crit chance (2026-11-23).
 	input.SecondsSinceInevitableCrit = 0
+	-- Distance to the enemy: PoB's own default is 2 m for everything, so a bow got Point Blank and every close range
+	-- bonus in full and no accuracy falloff (task 49, 2026-11-25: saved bow / crossbow builds lose 14-28% at 4 m). Melee
+	-- and minions stay at 2 m; anything that fires projectiles is played from about 4 m (an estimate).
+	local rangedSkill = isRangedSkill()
+	input.enemyDistance = rangedSkill and 40 or nil
+	if rangedSkill then table.insert(applied, { var = "enemyDistance", value = 40, why = "projectile skill: played from about 4 m" }) end
 	-- Two passes: turning conditions on changes chances and speed.
 	for _ = 1, 2 do
 		build.configTab:BuildModList()
