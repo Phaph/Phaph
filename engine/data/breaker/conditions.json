@@ -1,4 +1,6 @@
 {
+ "code": "cd98fbb3f46c",
+ "pob": "0.23.1",
  "skills": {
   "Animus Exchange": {
    "weapon": "Wand",
@@ -7,47 +9,33 @@
    "gains": {},
    "dps": 0
   },
-  "Bitter Dead": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {},
-   "dps": 0
-  },
-  "Ball Lightning": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "CriticalWeakness": 0.153,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.103,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 31220
-  },
   "Arc": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.153,
+    "CriticalWeakness": 0.201,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.103,
+    "OnProfaneGround": 0.098,
     "OnShockedGround": 0.3,
     "Shocked": 0.3,
     "Unnerved": 0.1
    },
-   "dps": 30433
+   "dps": 65374
   },
   "Armour Breaker": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {},
-   "dps": 22265
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {},
+   "dps": 84035
   },
   "Artillery Ballista": {
    "weapon": "Crossbow",
@@ -62,12 +50,42 @@
    },
    "dps": 1433
   },
-  "Armour Piercing Rounds": {
-   "weapon": "Crossbow",
-   "class": "Mercenary",
+  "Bitter Dead": {
+   "weapon": "Wand",
+   "class": "Sorceress",
    "error": null,
    "gains": {},
-   "dps": 84035
+   "dps": 0
+  },
+  "Ball Lightning": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.234,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.114,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 60052
+  },
+  "Bone Cage": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.212,
+    "CriticalWeakness": 0.212,
+    "Crushed": 0.149,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.172,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128861
   },
   "Blood Hunt": {
    "weapon": "Spear",
@@ -84,65 +102,50 @@
    },
    "dps": 11225
   },
-  "Bone Cage": {
-   "weapon": "Wand",
-   "class": "Sorceress",
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.233,
-    "CriticalWeakness": 0.144,
-    "Crushed": 0.147,
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.096,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.162,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
-   "dps": 47928
+   "dps": 49435
   },
   "Bonestorm": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.281,
-    "CriticalWeakness": 0.225,
-    "Crushed": 0.143,
+    "ArmourBroken": 0.271,
+    "CriticalWeakness": 0.189,
+    "Crushed": 0.144,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.145,
+    "OnProfaneGround": 0.154,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 28749
+   "dps": 199413
   },
   "Cackling Companions": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
+    "Blinded": 0.096,
     "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.094,
+    "CriticalWeakness": 0.073,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.075,
+    "Maimed": 0.068,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.099
-   },
-   "dps": 1795
-  },
-  "Boneshatter": {
-   "weapon": "One Hand Mace",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.132,
-    "CriticalWeakness": 0.096,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
+    "Pinned": 0.331,
     "Shocked": 0.2
    },
-   "dps": 21196
+   "dps": 1
   },
   "Cluster Grenade": {
    "weapon": "Crossbow",
@@ -160,6 +163,52 @@
    },
    "dps": 4036
   },
+  "Coiling Bolts": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.222,
+    "CriticalWeakness": 0.213,
+    "Crushed": 0.148,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.081,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 68837
+  },
+  "Comet": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.131,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 122367
+  },
+  "Conductive Runes": {
+   "weapon": "Wand",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.057,
+    "CriticalWeakness": 0.163,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.086,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3650
+  },
   "Contagion": {
    "weapon": "Wand",
    "class": "Sorceress",
@@ -169,38 +218,7 @@
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 5853
-  },
-  "Coiling Bolts": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.246,
-    "CriticalWeakness": 0.163,
-    "Crushed": 0.146,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.086,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 28458
-  },
-  "Comet": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "CoveredInFrost": 0.2,
-    "CriticalWeakness": 0.144,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.141,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 58612
+   "dps": 10672
   },
   "Cross Slash": {
    "weapon": "Talisman",
@@ -218,20 +236,6 @@
    },
    "dps": 10462
   },
-  "Conductive Runes": {
-   "weapon": "Wand",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.083,
-    "CriticalWeakness": 0.163,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.086,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 2150
-  },
   "Cull The Weak": {
    "weapon": "Spear",
    "class": "Mercenary",
@@ -247,67 +251,65 @@
    },
    "dps": 9208
   },
-  "Detonate Living": {
+  "Dark Effigy": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.493,
-    "CoveredInAsh": 0.095,
-    "CriticalWeakness": 0.177,
-    "Crushed": 0.106,
+    "CriticalWeakness": 0.209,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.159,
+    "OnProfaneGround": 0.079,
     "OnShockedGround": 0.2,
+    "Poisoned": 1.0,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 2577
+   "dps": 28212
   },
   "Detonate Dead": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.212,
-    "CriticalWeakness": 0.157,
-    "Crushed": 0.149,
+    "ArmourBroken": 0.065,
+    "CriticalWeakness": 0.204,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.094,
+    "Moving": 0.362,
+    "OnProfaneGround": 0.104,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
-   "dps": 145439
+   "dps": 50873
   },
-  "Dark Effigy": {
+  "Detonate Living": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.157,
+    "ArmourBroken": 0.464,
+    "CriticalWeakness": 0.264,
+    "Crushed": 0.148,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
+    "OnProfaneGround": 0.172,
     "OnShockedGround": 0.2,
-    "Poisoned": 1.0,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 13233
+   "dps": 5989
   },
   "Detonate Minion": {
    "weapon": "Wand",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.132,
+    "CoveredInAsh": 0.135,
     "CriticalWeakness": 0.1,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 7112
+   "dps": 10095
   },
   "Detonating Arrow": {
    "weapon": "Bow",
@@ -315,12 +317,13 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.168,
-    "CriticalWeakness": 0.095,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 17868
+   "dps": 28014
   },
   "Devour": {
    "weapon": "Talisman",
@@ -335,32 +338,6 @@
     "Shocked": 0.25
    },
    "dps": 74138
-  },
-  "Earthquake": {
-   "weapon": "One Hand Mace",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.132,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 10576
-  },
-  "Earthshatter": {
-   "weapon": "One Hand Mace",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.13,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 12720
   },
   "Disengage": {
    "weapon": "Spear",
@@ -378,18 +355,46 @@
    },
    "dps": 7241
   },
-  "Electrocuting Arrow": {
-   "weapon": "Bow",
+  "Earthquake": {
+   "weapon": "One Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
+    "CoveredInAsh": 0.121,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 23311
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 12921
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 35335
   },
   "Elemental Sundering": {
    "weapon": "Spear",
@@ -404,6 +409,37 @@
    },
    "dps": 2619
   },
+  "Ember Fusillade": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.213,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.098
+   },
+   "dps": 126430
+  },
+  "Entangle": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.257,
+    "CriticalWeakness": 0.206,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.112,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 34115
+  },
   "Eternal March": {
    "weapon": "Sceptre",
    "class": "Witch",
@@ -411,63 +447,33 @@
    "gains": {},
    "dps": 0
   },
-  "Ember Fusillade": {
-   "weapon": "Wand",
-   "class": "Sorceress",
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.157,
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
-   "dps": 97392
-  },
-  "Entangle": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.3,
-    "CriticalWeakness": 0.162,
-    "Crushed": 0.142,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.122,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 14095
+   "dps": 18196
   },
   "Essence Drain": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.157,
+    "CriticalWeakness": 0.209,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
+    "OnProfaneGround": 0.079,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 30675
-  },
-  "Escape Shot": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.082,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 11519
+   "dps": 65303
   },
   "Explosive Grenade": {
    "weapon": "Crossbow",
@@ -482,34 +488,6 @@
    },
    "dps": 29532
   },
-  "Explosive Spear": {
-   "weapon": "Spear",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.125,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 12572
-  },
-  "Eye of Winter": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "CoveredInFrost": 0.181,
-    "CriticalWeakness": 0.146,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 804
-  },
   "Explosive Shot": {
    "weapon": "Crossbow",
    "class": "Mercenary",
@@ -522,6 +500,35 @@
     "Shocked": 0.2
    },
    "dps": 24030
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 12769
+  },
+  "Eye of Winter": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.182,
+    "CriticalWeakness": 0.219,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.143,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 1592
   },
   "Falling Thunder": {
    "weapon": "Quarterstaff",
@@ -542,27 +549,43 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.106,
-    "CriticalWeakness": 0.095,
+    "CriticalWeakness": 0.125,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 31299
+   "dps": 31791
   },
   "Fireball": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.181,
-    "CriticalWeakness": 0.157,
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.209,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.083,
+    "OnProfaneGround": 0.079,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 32759
+   "dps": 68314
+  },
+  "Firestorm": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.286,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.109,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 128626
   },
   "Flame Breath": {
    "weapon": "Talisman",
@@ -574,57 +597,35 @@
    },
    "dps": 130723
   },
-  "Firestorm": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.191,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.101,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 65736
-  },
   "Flame Wall": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
     "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.123,
+    "CriticalWeakness": 0.18,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.061,
+    "OnProfaneGround": 0.06,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
-    "Unnerved": 0.098
+    "Unnerved": 0.099
    },
-   "dps": 30667
+   "dps": 65713
   },
   "Flameblast": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.178,
-    "CriticalWeakness": 0.195,
+    "CoveredInAsh": 0.182,
+    "CriticalWeakness": 0.311,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.117,
+    "OnProfaneGround": 0.135,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
-    "Unnerved": 0.098
+    "Unnerved": 0.083
    },
-   "dps": 7747
-  },
-  "Fortifying Cry": {
-   "weapon": "Wand",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {},
-   "dps": 0
+   "dps": 88628
   },
   "Flash Grenade": {
    "weapon": "Crossbow",
@@ -656,19 +657,39 @@
    },
    "dps": 60581
   },
+  "Fortifying Cry": {
+   "weapon": "Wand",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
   "Forge Hammer": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.128,
+    "CoveredInAsh": 0.122,
     "CriticalWeakness": 0.119,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.11,
+    "OnProfaneGround": 0.109,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 7549
+   "dps": 17700
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.097,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 15995
   },
   "Fragmentation Rounds": {
    "weapon": "Crossbow",
@@ -688,26 +709,14 @@
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.099,
-    "CriticalWeakness": 0.095,
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 13167
-  },
-  "Fragments Of The Past": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.112,
-    "CriticalWeakness": 0.096,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 10020
+   "dps": 20964
   },
   "Frost Bomb": {
    "weapon": "Wand",
@@ -715,14 +724,14 @@
    "error": null,
    "gains": {
     "CoveredInFrost": 0.2,
-    "CriticalWeakness": 0.172,
+    "CriticalWeakness": 0.244,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.134,
+    "OnProfaneGround": 0.172,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 12055
+   "dps": 24778
   },
   "Frost Darts": {
    "weapon": "Wand",
@@ -730,14 +739,14 @@
    "error": null,
    "gains": {
     "CoveredInFrost": 0.2,
-    "CriticalWeakness": 0.144,
+    "CriticalWeakness": 0.186,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.141,
+    "OnProfaneGround": 0.131,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 10654
+   "dps": 22628
   },
   "Frost Wall": {
    "weapon": "Wand",
@@ -745,14 +754,14 @@
    "error": null,
    "gains": {
     "CoveredInFrost": 0.2,
-    "CriticalWeakness": 0.178,
+    "CriticalWeakness": 0.256,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.118,
+    "OnProfaneGround": 0.153,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 9321
+   "dps": 18158
   },
   "Frostflame Nova": {
    "weapon": "Wand",
@@ -767,14 +776,14 @@
    "error": null,
    "gains": {
     "CoveredInFrost": 0.2,
-    "CriticalWeakness": 0.146,
+    "CriticalWeakness": 0.189,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
+    "OnProfaneGround": 0.123,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 40114
+   "dps": 85870
   },
   "Frozen Locus": {
    "weapon": "Quarterstaff",
@@ -835,13 +844,14 @@
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.091,
-    "CriticalWeakness": 0.095,
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 7394
+   "dps": 12020
   },
   "Gas Grenade": {
    "weapon": "Crossbow",
@@ -897,61 +907,34 @@
    },
    "dps": 13841
   },
-  "Grim Pillars": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "CoveredInFrost": 0.2,
-    "CriticalWeakness": 0.146,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 24411
-  },
   "Glacial Lance": {
    "weapon": "Spear",
    "class": "Mercenary",
    "error": null,
    "gains": {
     "CoveredInFrost": 0.145,
-    "CriticalWeakness": 0.096,
+    "CriticalWeakness": 0.126,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 25352
+   "dps": 25754
   },
-  "Hammer of the Gods": {
-   "weapon": "One Hand Mace",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.112,
-    "CoveredInAsh": 0.113,
-    "CriticalWeakness": 0.098,
-    "Crushed": 0.066,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 39629
-  },
-  "Hexblast": {
+  "Grim Pillars": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.232,
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.126,
+    "OnProfaneGround": 0.123,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2
+    "Shocked": 0.2,
+    "Unnerved": 0.1
    },
-   "dps": 25586
+   "dps": 53560
   },
   "Hailstorm Rounds": {
    "weapon": "Crossbow",
@@ -966,20 +949,32 @@
    },
    "dps": 24608
   },
-  "Ice Nova": {
+  "Hexblast": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.2,
-    "CriticalWeakness": 0.146,
+    "CoveredInAsh": 0.051,
+    "CriticalWeakness": 0.28,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.132,
+    "OnProfaneGround": 0.119,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
+    "Shocked": 0.2
    },
-   "dps": 20680
+   "dps": 53241
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.158,
+    "CriticalWeakness": 0.099,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 93996
   },
   "High Velocity Rounds": {
    "weapon": "Crossbow",
@@ -996,6 +991,21 @@
     "Shocked": 0.2
    },
    "dps": 12025
+  },
+  "Ice Nova": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.189,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.123,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 44056
   },
   "Ice Shards": {
    "weapon": "Crossbow",
@@ -1015,13 +1025,14 @@
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.099,
-    "CriticalWeakness": 0.095,
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 27204
+   "dps": 43933
   },
   "Ice Strike": {
    "weapon": "Quarterstaff",
@@ -1036,21 +1047,6 @@
     "Shocked": 0.2
    },
    "dps": 50426
-  },
-  "Incinerate": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.122,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.073,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.099
-   },
-   "dps": 56608
   },
   "Incendiary Shot": {
    "weapon": "Crossbow",
@@ -1079,6 +1075,21 @@
    },
    "dps": 40627
   },
+  "Incinerate": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.2,
+    "CriticalWeakness": 0.178,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.099
+   },
+   "dps": 122097
+  },
   "Leap Slam": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
@@ -1090,46 +1101,35 @@
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 23177
+   "dps": 67497
   },
   "Lightning Conduit": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.181,
+    "CriticalWeakness": 0.263,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.109,
+    "OnProfaneGround": 0.143,
     "OnShockedGround": 0.68,
     "Shocked": 0.68,
     "Unnerved": 0.1
    },
-   "dps": 5853
+   "dps": 11836
   },
   "Lightning Arrow": {
    "weapon": "Bow",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 19073
-  },
-  "Lightning Rod": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 12622
+   "dps": 28910
   },
   "Lunar Assault": {
    "weapon": "Talisman",
@@ -1145,73 +1145,88 @@
    },
    "dps": 24810
   },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 19871
+  },
   "Lightning Spear": {
    "weapon": "Spear",
    "class": "Mercenary",
    "error": null,
    "gains": {
     "CoveredInAsh": 0.078,
-    "CriticalWeakness": 0.095,
+    "CriticalWeakness": 0.125,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 23742
+   "dps": 24115
   },
   "Magnetic Salvo": {
    "weapon": "Bow",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 6647
-  },
-  "Oil Barrage": {
-   "weapon": "Talisman",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.109,
-    "CriticalWeakness": 0.115,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.141,
-    "OnShockedGround": 0.25,
-    "Shocked": 0.25
-   },
-   "dps": 105595
+   "dps": 10036
   },
   "Molten Blast": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.132,
+    "CoveredInAsh": 0.129,
     "CriticalWeakness": 0.119,
     "Intimidated": 0.1,
     "OnProfaneGround": 0.109,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 23411
+   "dps": 28107
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.18,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.133,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "dps": 24912
   },
   "Orb of Storms": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.15,
+    "CriticalWeakness": 0.197,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.113,
+    "OnProfaneGround": 0.107,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 21007
+   "dps": 45664
   },
   "Oil Grenade": {
    "weapon": "Crossbow",
@@ -1234,48 +1249,13 @@
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.136,
+    "CoveredInAsh": 0.131,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 35032
-  },
-  "Powered by Verisium": {
-   "weapon": "Wand",
-   "class": "Sorceress",
-   "error": null,
-   "gains": {},
-   "dps": 0
-  },
-  "Poisonburst Arrow": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.233,
-    "CriticalWeakness": 0.138,
-    "Crushed": 0.081,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.069,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 9572
-  },
-  "Permafrost Bolts": {
-   "weapon": "Crossbow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.102,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 4186
+   "dps": 81813
   },
   "Plasma Blast": {
    "weapon": "Crossbow",
@@ -1290,6 +1270,42 @@
    },
    "dps": 104442
   },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.095,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 4186
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.188,
+    "CoveredInAsh": 0.088,
+    "CriticalWeakness": 0.205,
+    "Crushed": 0.082,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.065,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 18122
+  },
+  "Powered by Verisium": {
+   "weapon": "Wand",
+   "class": "Sorceress",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
   "Profane Ritual": {
    "weapon": "Wand",
    "class": "Sorceress",
@@ -1299,20 +1315,21 @@
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 46876
+   "dps": 85474
   },
   "Rain of Arrows": {
    "weapon": "Bow",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.107,
-    "CriticalWeakness": 0.096,
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.23,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.072,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 85842
+   "dps": 107761
   },
   "Primal Strikes": {
    "weapon": "Spear",
@@ -1320,12 +1337,13 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.111,
-    "CriticalWeakness": 0.096,
+    "CriticalWeakness": 0.125,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 17385
+   "dps": 17661
   },
   "Rampage": {
    "weapon": "Talisman",
@@ -1357,18 +1375,47 @@
    },
    "dps": 7319
   },
+  "Raise Zombie": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.586,
+    "CriticalWeakness": 0.15,
+    "Crushed": 0.114,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.077,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 1856
+  },
   "Rapid Assault": {
    "weapon": "Spear",
    "class": "Mercenary",
    "error": null,
    "gains": {
     "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3087
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 3040
+   "dps": 149481
   },
   "Rend": {
    "weapon": "Talisman",
@@ -1385,19 +1432,6 @@
    },
    "dps": 17628
   },
-  "Rapid Shot": {
-   "weapon": "Crossbow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.126,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 149481
-  },
   "Rolling Magma": {
    "weapon": "Talisman",
    "class": "Mercenary",
@@ -1412,51 +1446,34 @@
    },
    "dps": 28629
   },
-  "Raise Zombie": {
-   "weapon": "Sceptre",
-   "class": "Witch",
+  "Seismic Cry": {
+   "weapon": "Wand",
+   "class": "Mercenary",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.12,
-    "CoveredInAsh": 0.168,
-    "CriticalWeakness": 0.103,
+    "ArmourBroken": 0.216,
+    "CoveredInAsh": 0.136,
+    "CriticalWeakness": 0.111,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.075,
+    "Moving": 0.145,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.083
+    "Shocked": 0.2
    },
-   "dps": 6468
+   "dps": 333
   },
   "Rolling Slam": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.125,
+    "CoveredInAsh": 0.121,
     "CriticalWeakness": 0.157,
     "Intimidated": 0.1,
     "OnProfaneGround": 0.109,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 3100
-  },
-  "Seismic Cry": {
-   "weapon": "Wand",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.313,
-    "CoveredInAsh": 0.081,
-    "CriticalWeakness": 0.116,
-    "Crushed": 0.051,
-    "Intimidated": 0.1,
-    "Moving": 0.21,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 230
+   "dps": 6137
   },
   "Shattering Palm": {
    "weapon": "Quarterstaff",
@@ -1487,32 +1504,6 @@
    },
    "dps": 13892
   },
-  "Shockchain Arrow": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 13048
-  },
-  "Shockwave Totem": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.109,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 2115
-  },
   "Shockburst Rounds": {
    "weapon": "Crossbow",
    "class": "Mercenary",
@@ -1525,6 +1516,20 @@
     "Shocked": 0.2
    },
    "dps": 26032
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 19573
   },
   "Siege Ballista": {
    "weapon": "Crossbow",
@@ -1539,12 +1544,19 @@
    },
    "dps": 2407
   },
-  "Skeletal Cleric": {
-   "weapon": "Sceptre",
-   "class": "Witch",
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Mercenary",
    "error": null,
-   "gains": {},
-   "dps": 0
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3223
   },
   "Siege Cascade": {
    "weapon": "Crossbow",
@@ -1578,114 +1590,149 @@
    },
    "dps": 43432
   },
+  "Skeletal Cleric": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
+  },
   "Skeletal Arsonist": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.164,
-    "CriticalWeakness": 0.095,
+    "ArmourBroken": 0.19,
+    "CoveredInAsh": 0.184,
+    "CriticalWeakness": 0.101,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.071,
+    "OnProfaneGround": 0.05,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.083
+    "Shocked": 0.2
    },
-   "dps": 12750
+   "dps": 14648
   },
   "Skeletal Brute": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.143,
-    "CoveredInAsh": 0.139,
-    "CriticalWeakness": 0.107,
+    "ArmourBroken": 0.498,
+    "CriticalWeakness": 0.113,
+    "Crushed": 0.128,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.073,
+    "OnProfaneGround": 0.057,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.067
+    "Shocked": 0.2
    },
-   "dps": 7939
+   "dps": 13844
   },
   "Skeletal Frost Mage": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.147,
-    "CriticalWeakness": 0.099,
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.116,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.08,
+    "OnProfaneGround": 0.096,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 9086
+   "dps": 11924
   },
   "Skeletal Reaver": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.334,
-    "CoveredInAsh": 0.132,
-    "CriticalWeakness": 0.121,
-    "Crushed": 0.057,
+    "ArmourBroken": 0.957,
+    "CriticalWeakness": 0.132,
+    "Crushed": 0.164,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.08,
+    "OnProfaneGround": 0.067,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.064
+    "Shocked": 0.2
    },
-   "dps": 2761
-  },
-  "Skeletal Storm Mage": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.135,
-    "CriticalWeakness": 0.101,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.076,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 9914
+   "dps": 8345
   },
   "Skeletal Sniper": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.126,
-    "CoveredInAsh": 0.157,
-    "CriticalWeakness": 0.104,
+    "ArmourBroken": 0.643,
+    "CriticalWeakness": 0.12,
+    "Crushed": 0.136,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.074,
+    "OnProfaneGround": 0.061,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 9859
+  },
+  "Skeletal Storm Mage": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.119,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.08,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
-    "Unnerved": 0.077
+    "Unnerved": 0.1
    },
-   "dps": 6955
+   "dps": 16024
+  },
+  "Skyfall": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.057,
+    "CoveredInFrost": 0.135,
+    "CriticalWeakness": 0.142,
+    "Intimidated": 0.1,
+    "Moving": 0.087,
+    "OnProfaneGround": 0.156,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "dps": 64098
   },
   "Snap": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CoveredInFrost": 0.166,
-    "CriticalWeakness": 0.172,
+    "CoveredInFrost": 0.171,
+    "CriticalWeakness": 0.244,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.134,
+    "OnProfaneGround": 0.172,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 54929
+   "dps": 122153
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.203,
+    "CriticalWeakness": 0.238,
+    "Crushed": 0.092,
+    "Intimidated": 0.1,
+    "Moving": 0.189,
+    "OnProfaneGround": 0.078,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 6149
   },
   "Solar Orb": {
    "weapon": "Wand",
@@ -1693,59 +1740,28 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.191,
+    "CriticalWeakness": 0.286,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.101,
+    "OnProfaneGround": 0.109,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 16152
-  },
-  "Snipe": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.225,
-    "CriticalWeakness": 0.162,
-    "Crushed": 0.077,
-    "Intimidated": 0.1,
-    "Moving": 0.151,
-    "OnProfaneGround": 0.082,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 3241
-  },
-  "Skyfall": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInFrost": 0.13,
-    "CriticalWeakness": 0.144,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.131,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 33416
+   "dps": 32034
   },
   "Spark": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.153,
+    "CriticalWeakness": 0.201,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.103,
+    "OnProfaneGround": 0.098,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 21147
+   "dps": 43502
   },
   "Spear of Solaris": {
    "weapon": "Spear",
@@ -1753,12 +1769,27 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.181,
-    "CriticalWeakness": 0.096,
+    "CriticalWeakness": 0.126,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 20788
+   "dps": 21117
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Mercenary",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14166
   },
   "Spearfield": {
    "weapon": "Spear",
@@ -1773,44 +1804,18 @@
    },
    "dps": 5375
   },
-  "Spiral Volley": {
-   "weapon": "Bow",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.089,
-    "CriticalWeakness": 0.096,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 9043
-  },
   "Stampede": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.132,
+    "CoveredInAsh": 0.121,
     "CriticalWeakness": 0.095,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 14102
-  },
-  "Storm Lance": {
-   "weapon": "Spear",
-   "class": "Mercenary",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.107,
-    "CriticalWeakness": 0.095,
-    "Intimidated": 0.1,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2
-   },
-   "dps": 10645
+   "dps": 32981
   },
   "Storm Wave": {
    "weapon": "Quarterstaff",
@@ -1825,12 +1830,19 @@
    },
    "dps": 51306
   },
-  "Tame Beast": {
-   "weapon": "Sceptre",
-   "class": "Witch",
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Mercenary",
    "error": null,
-   "gains": {},
-   "dps": 0
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.125,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.063,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 10813
   },
   "Stormblast Bolts": {
    "weapon": "Crossbow",
@@ -1850,74 +1862,81 @@
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.061,
-    "CriticalWeakness": 0.095,
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 4275
+   "dps": 6107
   },
   "Summon Spectre": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
+    "Blinded": 0.096,
     "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.094,
+    "CriticalWeakness": 0.073,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.075,
+    "Maimed": 0.068,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.099
+    "Pinned": 0.331,
+    "Shocked": 0.2
    },
-   "dps": 1795
+   "dps": 1
+  },
+  "Tame Beast": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "dps": 0
   },
   "Sunder": {
    "weapon": "One Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.185,
-    "CoveredInAsh": 0.064,
-    "CriticalWeakness": 0.1,
-    "Crushed": 0.102,
+    "ArmourBroken": 0.065,
+    "CoveredInAsh": 0.152,
+    "CriticalWeakness": 0.098,
     "Intimidated": 0.1,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 15285
+   "dps": 48439
   },
   "Supercharged Slam": {
    "weapon": "Two Hand Mace",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.203,
-    "CriticalWeakness": 0.177,
-    "Crushed": 0.123,
+    "ArmourBroken": 0.231,
+    "CriticalWeakness": 0.098,
+    "Crushed": 0.147,
     "Intimidated": 0.1,
-    "Moving": 0.161,
-    "OnProfaneGround": 0.105,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 37616
+   "dps": 50812
   },
   "Tamed Companion": {
    "weapon": "Sceptre",
    "class": "Witch",
    "error": null,
    "gains": {
+    "Blinded": 0.096,
     "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.094,
+    "CriticalWeakness": 0.073,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.075,
+    "Maimed": 0.068,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.099
+    "Pinned": 0.331,
+    "Shocked": 0.2
    },
-   "dps": 1795
+   "dps": 1
   },
   "Tempest Bell": {
    "weapon": "Quarterstaff",
@@ -1951,16 +1970,16 @@
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.28,
-    "CriticalWeakness": 0.16,
-    "Crushed": 0.143,
+    "ArmourBroken": 0.241,
+    "CriticalWeakness": 0.203,
+    "Crushed": 0.147,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.12,
+    "OnProfaneGround": 0.11,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 16281
+   "dps": 37149
   },
   "Tornado": {
    "weapon": "Wand",
@@ -1971,21 +1990,21 @@
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 8835
+   "dps": 16691
   },
   "Thunderstorm": {
    "weapon": "Wand",
    "class": "Sorceress",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.184,
+    "CriticalWeakness": 0.27,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.1,
+    "OnProfaneGround": 0.132,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 19036
+   "dps": 38471
   },
   "Thunderous Leap": {
    "weapon": "Spear",
@@ -2005,26 +2024,28 @@
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.079,
-    "CriticalWeakness": 0.096,
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.156,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 14836
+   "dps": 24151
   },
   "Toxic Growth": {
    "weapon": "Bow",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.109,
-    "CriticalWeakness": 0.095,
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.155,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.061,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 4834
+   "dps": 7565
   },
   "Twister": {
    "weapon": "Spear",
@@ -2061,13 +2082,30 @@
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CoveredInAsh": 0.09,
-    "CriticalWeakness": 0.096,
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.156,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 15749
+   "dps": 25667
+  },
+  "Unearth": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.497,
+    "CriticalWeakness": 0.178,
+    "Crushed": 0.145,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.146,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.091
+   },
+   "dps": 23370
   },
   "Volcanic Fissure": {
    "weapon": "One Hand Mace",
@@ -2075,12 +2113,13 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.134,
-    "CriticalWeakness": 0.095,
+    "CriticalWeakness": 0.125,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 15213
+   "dps": 15452
   },
   "Volcano": {
    "weapon": "Wand",
@@ -2088,43 +2127,27 @@
    "error": null,
    "gains": {
     "CoveredInAsh": 0.2,
-    "CriticalWeakness": 0.155,
+    "CriticalWeakness": 0.205,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.093,
+    "OnProfaneGround": 0.089,
     "OnShockedGround": 0.2,
     "Shocked": 0.2,
     "Unnerved": 0.1
    },
-   "dps": 34763
+   "dps": 74247
   },
   "Voltaic Barrier": {
    "weapon": "Bow",
    "class": "Mercenary",
    "error": null,
    "gains": {
-    "CriticalWeakness": 0.095,
+    "CriticalWeakness": 0.198,
     "Intimidated": 0.1,
+    "OnProfaneGround": 0.062,
     "OnShockedGround": 0.2,
     "Shocked": 0.2
    },
-   "dps": 4376
-  },
-  "Unearth": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "ArmourBroken": 0.449,
-    "CoveredInAsh": 0.104,
-    "CriticalWeakness": 0.129,
-    "Crushed": 0.097,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.124,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.077
-   },
-   "dps": 7169
+   "dps": 6503
   },
   "Voltaic Grenade": {
    "weapon": "Crossbow",
@@ -2153,6 +2176,21 @@
    },
    "dps": 28318
   },
+  "Wardbound Minions": {
+   "weapon": "Sceptre",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.2,
+    "CriticalWeakness": 0.122,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.064,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2,
+    "Unnerved": 0.1
+   },
+   "dps": 18667
+  },
   "Whirling Assault": {
    "weapon": "Quarterstaff",
    "class": "Mercenary",
@@ -2166,22 +2204,6 @@
     "Shocked": 0.2
    },
    "dps": 11322
-  },
-  "Wardbound Minions": {
-   "weapon": "Sceptre",
-   "class": "Witch",
-   "error": null,
-   "gains": {
-    "CoveredInAsh": 0.084,
-    "CoveredInFrost": 0.116,
-    "CriticalWeakness": 0.109,
-    "Intimidated": 0.1,
-    "OnProfaneGround": 0.068,
-    "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.1
-   },
-   "dps": 20633
   },
   "Whirling Slash": {
    "weapon": "Spear",
@@ -2263,18 +2285,16 @@
    "class": "Witch",
    "error": null,
    "gains": {
-    "ArmourBroken": 0.414,
-    "CoveredInAsh": 0.104,
-    "CriticalWeakness": 0.112,
-    "Crushed": 0.084,
+    "ArmourBroken": 0.747,
+    "CriticalWeakness": 0.115,
+    "Crushed": 0.15,
     "Intimidated": 0.1,
-    "OnProfaneGround": 0.071,
+    "OnProfaneGround": 0.058,
     "OnShockedGround": 0.2,
-    "Shocked": 0.2,
-    "Unnerved": 0.05
+    "Shocked": 0.2
    },
-   "dps": 3534
+   "dps": 17165
   }
  },
- "updated": "2026-11-18 16:18"
+ "updated": "2026-11-25 02:29"
 }

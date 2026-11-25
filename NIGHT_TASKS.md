@@ -117,6 +117,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   breaker_day.sh), full suite green before 45(b) (unit-tested only, scan tool); pushed, not deployed. leads-orders still running, 0 leads finished. Next: task 45.
 - **02:40:** patch-notes mode on keystones checked: 32 of 33 change the numbers (Chaos Inoculation pins life, untestable that way); test added, pushed. Detection run (45c): the wording
   half passes (both lines, nothing else); damage half scanning (~/detect.log, 2 scans on 3 cores).
+- **03:35: task 45 done** (BREAKER.md). leads-orders: 3 leads have their first side, no plain builds yet, no verdicts. Left in 40: nerf-risk labels (after the leads).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -501,7 +502,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     the saved mapping setup; how often this happens elsewhere isn't measured. Try: auto_config + search again until stable,
     or re-score the top few sets with auto_config run on each. After 42's A/B (so it measures one change).
 
-45. [ ] (2026-11-25 02:10: (b) written (condition_scan diff + code stamp; a stale baseline is re-scanned in PATCH mode); (c) end-to-end running: ~/detect.sh, ~/detect.log, clone ~/detect, its day/2026-11-25/SUMMARY.md must show Earthquake +~20%, Leopold and Ice Storm lines; (a) after leads-orders) (added 2026-11-25, from the rehearsal) Launch day: show gem number changes. (a) fresh conditions.json baseline on the current engine (~25 min on 6 cores, after
+45. [x] (2026-11-25 03:35: done; all 3 made-up changes found, no false alarms, fresh baseline in conditions.json; BREAKER.md) (2026-11-25 02:10: (b) written (condition_scan diff + code stamp; a stale baseline is re-scanned in PATCH mode); (c) end-to-end running: ~/detect.sh, ~/detect.log, clone ~/detect, its day/2026-11-25/SUMMARY.md must show Earthquake +~20%, Leopold and Ice Storm lines; (a) after leads-orders) (added 2026-11-25, from the rehearsal) Launch day: show gem number changes. (a) fresh conditions.json baseline on the current engine (~25 min on 6 cores, after
     leads-orders); (b) breaker_day.sh: dps per skill vs the baseline, moves over 5% listed in SUMMARY.md; (c) detection test: a made-up patch (gem, unique, passive, one buff big
     enough to matter) must show all of them. Needs the same engine on both sides, else the diff is ours, not the patch's.
 

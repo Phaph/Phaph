@@ -948,3 +948,9 @@ to Ice Storm and Lightning Storm. A made-up patch then showed a real gap: a patc
 show in the diff; a line the game already has is reported "already there" and not added; uniques sharing a name (Grand Spectrum) are all read (the scan was random there,
 so a diff could show false news); SUMMARY.md lists the changes applied; the run no longer stops at `git pull` with uncommitted files. Not tested: notes -> changes file (Claude's
 part), and the ~12 h blind search. Still missing: a gem's number change shows nowhere but the raw dps, and conditions.json's dps is from Nov 18 (87 of 166 moved over 2%).
+
+**Launch-day detection test (task 45, 2026-11-25):** a made-up patch (Earthquake +20%, a line on Leopold's Applause, a line on Ice Storm) through the whole breaker_day.sh, both games
+scanned with the same engine code: all three shown, nothing else (text diff 2 lines; damage diff 1 of 158 skills, Earthquake 24,736 -> 29,682). 8 of 166 skills have no damage
+to compare. One easy patch: no new skills, no changes smaller than 5%, and the two lines were worded to match a text rule. Runtime with a stale baseline: 86 min on 3 cores (two scans).
+conditions.json is now this run's unpatched scan (it was Nov 18), so a same-code patch run needs only one scan. Keystones: 32 of 33 change the numbers when patched (Chaos Inoculation
+pins life at 1). The Nov 18 -> now moves are our engine fixes, not the game's.
