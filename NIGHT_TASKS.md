@@ -173,6 +173,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   builds, main's gains 45% and the branch's loses 35%, and the branch's has 64k EHP vs 14k. Details in BREAKER.md. respend suite + builds running (~/respend_ab.sh). Next: 50, then 49, then merge `asccond` and start 48 (matrix_asc
   running in ~/breaker is old code: its result is a "before").
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
+- **21:35:** respend suite at 87%+, no failures so far; the 5 builds follow on their own (~/respend_ab.log). Task 50's code read: its put-back goes through load_xml, which guide.build_stage already uses mid-build
+  in two places; no fault found. matrix_asc: Infernalist done, Blood Mage 143 skills in, ~2 h each, so ~40 h for the rest (see Waiting for Kyle). rank8: Deadeye's 3 skills done, ~1.5 h per skill with 2 workers.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -580,6 +582,8 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Titan Earthquake +48% (EHP -11%), Gemling Rapid Shot +19% (EHP -18%), wand Bonestorm Infernalist +19%; most others 0. The points are chosen before gear, tree and supports are final. After 47.
 
 ## Waiting for Kyle
+- **matrix_asc queue on old code (2026-11-25, pinged):** ~21 ascendancies left at ~2 h each on 6 cores, with the task 47 bug in them, and task 48 redoes them all. Recommendation: stop it and the Infernalist redo
+  behind it (~/infernalist.sh), and start 48 on fixed code after 50 and 49. Your rule is never stop or touch the queue, so it keeps running until you say so.
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
