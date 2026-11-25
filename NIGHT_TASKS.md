@@ -175,6 +175,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - **21:35:** respend suite green (247 passed, 1 warning in 2364.33s (0:39:24)); the 5 builds follow on their own (~/respend_ab.log). Task 50's code read: its put-back goes through load_xml, which guide.build_stage already uses mid-build
   in two places; no fault found. matrix_asc: Infernalist done, Blood Mage 143 skills in, ~2 h each, so ~40 h for the rest (see Waiting for Kyle). rank8: Deadeye's 3 skills done, ~1.5 h per skill with 2 workers.
+- **23:05: task 50 A/B, 4 of 5 (without -> with respend, single order; only the respend step differs):** Gemling Rapid Shot boss 4.42M -> 5.12M, map 4.03M -> 4.71M, EHP same; Deadeye, Titan identical;
+  Abyssal Lich damage same, EHP +1.6%, chaos res 75 -> 69. No damage or EHP loss. When the Invoker control lands (~/respend_ab.log) unchanged: bump ENGINE_VERSION to 2026-11-25.2, merge `respend`, deploy, push (suite green: 247). Then `distance` (49).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
