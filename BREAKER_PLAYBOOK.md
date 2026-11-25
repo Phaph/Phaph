@@ -58,6 +58,10 @@ publishing). Times assume the server (8 cores); heavy runs go through the Breake
 - Lodestone page stays unlisted (Kyle 2026-11-22); results live there and in BREAKER.md.
 - Publishing anything (a build page, Mobalytics, a post): Kyle decides, case by case.
 
+## 7. Every hotfix
+- Note lines -> a changes file (step 1), then `PATCH=... breaker_day.sh` (about 25 min; twice that if the baseline is from other engine code), then every live lead again through
+  `lead_builds.py --orders 3`: a lead counts only if it wins in all three slot orders. Update status and `nerf_risk` in leads.json (bugs and free casts go first).
+
 ## Who does what
 | Step | Runs | Kyle |
 |---|---|---|
