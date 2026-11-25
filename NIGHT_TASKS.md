@@ -125,6 +125,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **06:40:** Rain of Arrows: wins all 3 orders but on our 1.5 m boss-radius estimate: unconfirmed. nerf_risk labels in leads.json (40's last item but 'every hotfix'). Left: Wind Serpent's Fury.
 - **07:55: leads-orders done, 8 of 8** (BREAKER.md, leads.json). Closes 39's leads and combos; left in 39: rank_check on the current engine. 37's scans should have started: check
   ~/after_unlock_queue.log.
+- **08:05: task 37 running (conditions_asc 1 of 23 since 07:52).** Its scans resume, and the files were from Nov 20 (no off-hands, wrong minion counts): old rows would mix with new. Old
+  json moved to ~/asc_nov20 (also in git), so 22 ascendancies + the matrix scan fresh; Infernalist had started and is mixed: ~/infernalist.sh redoes it after the queue (it walks all 23
+  again but finished ones are skipped). autoStash set in ~/breaker so its push survives. Expect much longer than 16-20 h. Engine code there is 203271a (before .7 / .8; round-1
+  builds use neither). Don't read Infernalist or the group before both are done.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
