@@ -702,7 +702,12 @@ function handlers.allocated(cmd)
 	local ids = {}
 	for id in pairs(build.spec.allocNodes) do table.insert(ids, id) end
 	table.sort(ids)
-	return { nodes = ids, version = build.spec.treeVersion }
+	local asc = {}   -- ascendancy points spent (not its start, nor the passives it gets for free)
+	for _, id in ipairs(ids) do
+		local n = build.spec.nodes[id]
+		if n and n.ascendancyName and n.type ~= "AscendClassStart" and n.isFreeAllocate == nil then table.insert(asc, id) end
+	end
+	return { nodes = ids, ascendancy = asc, version = build.spec.treeVersion }
 end
 
 -- Jewel sockets on the passive tree. A plain socket takes any jewel; special ones (charm sockets,
