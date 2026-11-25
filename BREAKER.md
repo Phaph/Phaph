@@ -972,3 +972,13 @@ Not a ranking bug found; the remaining open point is Flameblast's cycle.
 **Web check (2026-11-25):** dual wield: the wiki's mace skill list and Game8 (search snippets, pages not read) say "While Dual Wielding, both weapons hit with 30% less damage" for Rolling Slam,
 the same -30% for Earthquake: PoB's reading fits; Sunder's own line not found. Flameblast: 10 s cooldown (15 s before 0.4) confirmed, no source says whether it starts on use or
 release: stays open, no usage limit added.
+
+**Lead re-run, 3 slot orders per side (leads-orders, engine 2026-11-24.8, 5 done; best / then each order with vs without the pieces):**
+- Leopold's + Fire Penetration: 1.38M vs 1.40M (-1%); per order -1% / +24% / +48%: orders spread about 2x on both sides. Stays dead.
+- Maligaro's + Pinpoint (Sniper): 41.5k vs 43.2k (-4%). Dead, and 41k is no build at all.
+- Dark Effigy + Frost Darts poison: 1.03M vs 727k (+42%); per order +41% / +40% / +42%: steady, so a real synergy on this model (it was +1% on 2026-11-22: not reconciled). Mapping
+  is identical (1.18M). But 1.03M is far under the 5-7M other full builds reach: not a broken build. Poison uptime (76%) and time are the combo finder's estimates.
+- Armour Piercing Rounds breaks armour: 3.19M vs 2.46M (+30% best vs best), but +144% / 0% / 0% by order: two of three orders end the same, so the +30% is order luck, not shown to be real.
+- Bonestorm + armour break: 7.20M vs 6.59M (+9%); +9% / +5% / -43%: inside the luck. Not a lead.
+Best-of-3 against best-of-3 still has luck in it when one side's spread is 2x: ask for the same sign in all three orders. (Until now I called these "one side done": wrong,
+the log prints a lead once both sides are built.)
