@@ -989,3 +989,11 @@ the log prints a lead once both sides are built.)
 - nerf_risk added to the 11 live leads in leads.json, by the mechanism groups of research/broken_builds.md (Claude's judgement; not shown on the page).
 - Wind Serpent's Fury vs Lightning Spear (Amazon): 1.03M vs 1.43M (-28%; -28 / -11 / -27% by order). Dead. All 8 leads are done: ahead in every order: Dark Effigy + poison (weak build), Bonestorm vs Comet
   (known), Rain of Arrows vs Ice Shot (our estimate); nothing new to announce. Results: data/breaker/lead_builds_orders.
+
+**Per-ascendancy condition scans without class rules (task 37, read 2026-11-25 at 18 of 23, engine 203271a): no cross-class lead, and the scan is partly blind.**
+- New view in tools/asc_read.py takes out what an ascendancy does for every skill. What is left is under x1.6: Blood Mage on spells (Gore Spike and friends, x1.3-1.6), Gemling on attacks
+  (Integrated Efficiency, x1.3-1.5), Lich on Profane Ritual (x1.33), Tactician on Dark Effigy (x1.39; Cannons, Ready!, a totem passive). Amazon's open weakness is +50% on
+  nearly everything, its usual effect. Nothing over the search's own noise.
+- Why it can't find more: 5 of 19 scans took an ascendancy passive on few or no skills (Titan 0 of 158, Abyssal Lich 0, Warbringer 3, Tactician 14, Disciple 28). Passives are taken on plain gain, so one that needs
+  a condition is never in. And three real bugs under it (task 47), also in guides: choice options were never tried, Abyssal Lich could take nothing, points PoB sees no gain for stayed unspent.
+- So "no cross-class lead" is not shown: earlier per-ascendancy numbers (blind tests included) compare ascendancies with missing passives.

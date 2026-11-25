@@ -137,6 +137,14 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   ahead ~25-40% on many spells, no outlier over x1.45 outside Infernalist's mixed minion rows. Too few to conclude. rank8: still in its first search.
 - **09:30:** rank8: 59 min into its first search (earlier runs took ~28-32 min each; now 2 workers on a full server), both workers at full CPU. Expect roughly 6 h of searches, then
   the builds. No results before the afternoon. If still no first line in ~/rank8.log by 10:30, suspect a hang. 37 is on 5 of 23.
+- **15:45 TASK 47, live bug: ascendancy points.** (1) options of choice passives never tried (Gemling +2 skill levels, Deadeye Point Blank / Far Shot); (2) Abyssal Lich takes 0 of 8 in
+  every build (its passives carry Lich's name); (3) points PoB sees no gain for stay unspent: saved Uber builds: Deadeye 1-2 of 8, Oracle 4, Tactician 4, Ritualist 5. Branch `ascpoints`
+  (worktree ~/phaph_asc, 2026-11-25.1, not merged): all three fixed, 4 new test cases. Running: full suite ~/asc_tests.log; A/B ~/asc_ab.sh (5 full builds, branch then main, ~/asc_out/*.json,
+  ~/asc_ab_*.log). Don't edit engine code in ~/phaph until the main half is done. Merge + deploy if the suite is green and no build loses (Invoker Ice Shot is the control).
+- **Hit by it:** every per-ascendancy comparison: blind tests (Titan, Warbringer, Smith score identically, so do Tactician and Witchhunter), finalists, rank8's search, and task 37's scans (no ascendancy
+  passive on any of 158 skills for Titan and Abyssal Lich, on 155 Warbringer, 144 Tactician, 130 Disciple). 37's condition scans are nearly done and stay as a "before"; after the merge
+  they and matrix_asc need a redo (48). breaker_queue copies engine code per job from ~/breaker and pulls at each push: after a merge mid-queue, later scans mix code: check dates.
+- rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -528,6 +536,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 46. [x] (04:45: done, BREAKER.md: every top mover traced to our own fixes, no ranking bug found; open: Flameblast's cooldown start, off-hand x2+ vs the A/B's +64-79%) (03:50: Flameblast explained, no change: x5.45 full stages (Nov 21 rule) x 2.0 Atziri's Impatience (cooldown 10 s -> 5 s); PoB times it by the cooldown only, so up to ~x1.6 high if the cooldown starts on release (unknown). The rest: ~/hist.sh re-scores 18 skills on each day's engine Nov 18-24, ~/hist.log, results in the session scratchpad hist/) (added 2026-11-25) Biggest moves of the fresh condition baseline vs Nov 18 (Flameblast 7.7k -> 88.6k, Bonestorm 28.7k -> 199k, Wolf Pack 3.5k -> 17.2k): explain the
     top 10 one by one (old file: git show 8031dcb:engine/data/breaker/conditions.json). Flameblast first: its stages / channel time may be counted as free. A wrong
     one is a live ranking bug.
+
+47. [ ] (2026-11-25: found from asc_read; branch `ascpoints`, suite + A/B running, see START HERE) Ascendancy points: choice options never tried, Abyssal Lich none, leftovers unspent. Left after the
+    merge: cached guides on older engine versions; a guide line saying filler passives aren't in the numbers (steps carry `filler`; page work is paused).
+
+48. [ ] (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
+    is never taken and its condition reads 0. Per skill, also try each notable (path included) with each condition (override addNodes), or take the passives again under the condition. Then the blind
+    test (unlocked) again: Gemling is 32% of the ladder and was scored without its implants.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
