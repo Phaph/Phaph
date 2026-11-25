@@ -111,6 +111,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   to AB3), then the rehearsal.
 - **01:05: path-luck-7 done (BREAKER.md).** Rehearsal running since 00:54 (~/rehearsal.log). Next for 42: lead_builds.py in 3 orders per side. after-leads so far: Leopold's
   1.38M, Dark Effigy 0.83M (single order each; not verdicts).
+- **01:20:** lead_builds.py and weapon_finalists.py share path_luck.best_of (3 orders, best kept). after-leads stopped after 2 leads (BREAKER.md); ~/leads_orders.sh runs all
+  leads with 3 orders per side (3 cores, ~/leads_orders.log -> lead_builds_orders). Then update leads.json. Dark Effigy is the one to look at.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or

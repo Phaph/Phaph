@@ -936,3 +936,6 @@ the finalists report now flags builds whose skill deals under half.
 320 / 68). Every boss number equals AB3's (2026-11-24.3 base), so .4 to .6 moved no boss damage on these 4 specs. Best of 3 over the default order: Ice Shot +5%, Rapid Shot
 +22%, Rain of Arrows +39%, Bonestorm 0%: 4 hand-picked specs, at 3x the Uber stage's time. Still over the 10% bar for 3 of 4: a lead needs best-of-3 on both sides
 (finalists do this; lead_builds.py doesn't yet).
+
+**Lead re-run, single order (2026-11-24.8, stopped after 2):** Leopold's + Fire Penetration 1.38M vs 1.40M without (-1%: stays dead). Dark Effigy + Frost Darts 834k vs
+591k plain (+41%; it was +1% on 2026-11-22, and both numbers fell). One order per side can't judge it. Re-run with 3 orders per side: lead_builds_orders.

@@ -10,7 +10,7 @@ wear the unique / take the keystone / keep the support at every stage that can (
 stage was the first baseline, but it ran on an older engine: each lead is also built without its pieces on today's
 engine (baseline.now), and the report compares with that.
 
-  python tools/lead_builds.py run --jobs /data/jobs.sqlite3 [--out data/breaker/lead_builds] [--only "Leopold"]
+  python tools/lead_builds.py run --jobs /data/jobs.sqlite3 [--out data/breaker/lead_builds] [--only "Leopold"] [--orders 3] [--workers 3]
   python tools/lead_builds.py report data/breaker/lead_builds
 """
 from __future__ import annotations
@@ -24,6 +24,7 @@ from pathlib import Path
 
 ENGINE = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ENGINE))
+sys.path.insert(0, str(ENGINE / "tools"))
 LEADS = ENGINE / "data" / "breaker" / "leads.json"
 OUT = ENGINE / "data" / "breaker" / "lead_builds"
 
@@ -32,8 +33,8 @@ def slug(name: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", name.lower()).strip("_")[:60]
 
 
-def run(db: str, out: Path, only: str | None) -> None:
-    from guide import build_stage
+def run(db: str, out: Path, only: str | None, orders: int = 3, workers: int = 1) -> None:
+    from path_luck import best_of
     out.mkdir(parents=True, exist_ok=True)
     leads = [l for l in json.loads(LEADS.read_text(encoding="utf-8"))["leads"] if l.get("build")]
     if only:
@@ -50,9 +51,9 @@ def run(db: str, out: Path, only: str | None) -> None:
             for key, s in rec["stages"].items():
                 if s.get("error") or "now" in s["baseline"]:
                     continue
-                g = build_stage(plain, key)   # the same build without the pieces, on today's engine
-                s["baseline"]["now"] = {"dps": round(g.dps), "boss_dps": round(g.boss_dps)}
-                print(f"{lead['name']} [{key}] baseline now: {g.boss_dps:,.0f}", flush=True)
+                g = best_of(plain, orders, key, workers)   # the same build without the pieces, on today's engine
+                s["baseline"]["now"] = {k: g[k] for k in ("dps", "boss_dps", "orders")}
+                print(f"{lead['name']} [{key}] baseline now: {g['boss_dps']:,.0f}", flush=True)
             path.write_text(json.dumps(rec, indent=1, ensure_ascii=False), encoding="utf-8")
             continue
         if b.get("spec"):   # written out in the lead (no saved job)
@@ -81,16 +82,16 @@ def run(db: str, out: Path, only: str | None) -> None:
             t0 = time.time()
             base = next((s for s in job["stages"] if s.get("stage") == key), {})
             try:
-                g = build_stage(spec, key)
+                g = best_of(spec, orders, key, workers)
                 plain = {k: v for k, v in spec.items() if not k.startswith("anchor_") and k != "combo"}
                 if b.get("vs_spec"):   # a skill lead: the baseline is a popular skill's full build, not the same one
                     plain = dict(b["vs_spec"])
-                g0 = build_stage(plain, key)   # the same build without the pieces, on today's engine
-                rec["stages"][key] = {"dps": round(g.dps), "boss_dps": round(g.boss_dps), "code": g.code,
-                                      "supports": g.supports, "notes": g.notes,
+                g0 = best_of(plain, orders, key, workers)   # the same build without the pieces, on today's engine
+                rec["stages"][key] = {"dps": g["dps"], "boss_dps": g["boss_dps"], "code": g["code"], "orders": g["orders"],
+                                      "supports": g["supports"], "notes": g["notes"],
                                       "baseline": {"dps": round(base.get("dps") or 0),
                                                    "boss_dps": round(base.get("boss_dps") or 0),
-                                                   "now": {"dps": round(g0.dps), "boss_dps": round(g0.boss_dps)}},
+                                                   "now": {k: g0[k] for k in ("dps", "boss_dps", "orders", "code")}},
                                       "seconds": round(time.time() - t0)}
             except Exception as e:  # noqa: BLE001 - one lead must not stop the rest
                 rec["stages"][key] = {"error": f"{type(e).__name__}: {e}"}
@@ -114,7 +115,7 @@ def report(out: Path) -> str:
             if r.get("vs"):
                 when = f"vs {r['vs']}, same engine"
             lines.append(f"  {r['lead']} [{key}]: boss {s['boss_dps']:,} vs {base:,} without the pieces ({when}: {gain:+.0%}); "
-                         f"mapping {s['dps']:,}; supports {', '.join(s['supports'])}")
+                         f"mapping {s['dps']:,}; orders {s.get('orders') or 'ONE'} vs {(s['baseline'].get('now') or {}).get('orders') or 'ONE'}; supports {', '.join(s['supports'])}")
     return "\n".join(lines)
 
 
@@ -122,7 +123,9 @@ if __name__ == "__main__":
     a = sys.argv[1:]
     if a and a[0] == "run":
         run(a[a.index("--jobs") + 1], Path(a[a.index("--out") + 1]) if "--out" in a else OUT,
-            a[a.index("--only") + 1] if "--only" in a else None)
+            a[a.index("--only") + 1] if "--only" in a else None,
+            int(a[a.index("--orders") + 1]) if "--orders" in a else 3,
+            int(a[a.index("--workers") + 1]) if "--workers" in a else 1)
     elif a and a[0] == "report":
         print(report(Path(a[1]) if len(a) > 1 else OUT))
     else:

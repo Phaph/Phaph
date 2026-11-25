@@ -9,6 +9,7 @@ else changed. The spread between them is optimiser luck: a lead smaller than tha
 from __future__ import annotations
 
 import json
+import multiprocessing as mp
 import sys
 import time
 from concurrent.futures import ProcessPoolExecutor, as_completed
@@ -20,7 +21,7 @@ PICKS = [("Bow", "Rain of Arrows"), ("Bow", "Ice Shot"), ("Staff", "Bonestorm"),
 ORDERS = ("as is", "reversed", "rotated")
 
 
-def build(spec: dict, order: str) -> dict:
+def build(spec: dict, order: str, stage: str = "end") -> dict:
     import gear
     for d in (gear.ARMOUR_SLOTS, gear.JEWELLERY_SLOTS):
         items = list(d.items())
@@ -29,9 +30,28 @@ def build(spec: dict, order: str) -> dict:
         d.update(items)
     from guide import build_stage
     t0 = time.time()
-    g = build_stage(spec, "end")
+    g = build_stage(spec, stage)
     return {"boss_dps": round(g.boss_dps), "dps": round(g.dps), "code": g.code, "sources": g.sources, "boss_sources": g.boss_sources,
-            "seconds": round(time.time() - t0)}
+            "seconds": round(time.time() - t0),
+            "supports": g.supports, "notes": g.notes}
+
+
+def best_of(spec: dict, orders: int = 3, stage: str = "end", workers: int = 1) -> dict:
+    """The spec built in several slot orders, each in its own process (an order changes module state): the best boss
+    damage, plus {"orders": {order: boss dps or error}}. All failed: RuntimeError."""
+    got = {}
+    with ProcessPoolExecutor(workers, mp_context=mp.get_context("spawn"), max_tasks_per_child=1) as pool:
+        jobs = {o: pool.submit(build, spec, o, stage) for o in ORDERS[:orders]}
+        for o, j in jobs.items():
+            try:
+                got[o] = j.result()
+            except Exception as e:  # noqa: BLE001
+                got[o] = {"error": f"{type(e).__name__}: {e}"}
+    ok = [r for r in got.values() if r.get("boss_dps")]
+    if not ok:
+        raise RuntimeError("; ".join(r.get("error", "no boss dps") for r in got.values()))
+    return {**max(ok, key=lambda r: r["boss_dps"]), "seconds": sum(r["seconds"] for r in ok),
+            "orders": {o: r.get("boss_dps") or r.get("error") for o, r in got.items()}}
 
 
 def run(workers: int, files: list[Path], out: Path) -> None:

@@ -25,11 +25,10 @@ WEAPONS = ["Bow", "Crossbow", "Spear", "Quarterstaff", "Staff", "Wand", "Sceptre
 def run(only: set[str] | None, top: int, workers: int, out: Path, builds: int = 3, orders: int = 3) -> None:
     """Each weapon's search uses `workers` processes; its finalists' full builds (one process each, the slow part) go to
     a pool of `builds` and run beside the next weapon's search."""
-    import multiprocessing as mp
     import threading
-    from concurrent.futures import ProcessPoolExecutor, ThreadPoolExecutor
+    from concurrent.futures import ThreadPoolExecutor
     from generate import generate, plan_build
-    from path_luck import ORDERS, build as path_build
+    from path_luck import best_of
     done = json.loads(out.read_text(encoding="utf-8")) if out.exists() else {"weapons": {}}
     lock = threading.Lock()
 
@@ -38,19 +37,10 @@ def run(only: set[str] | None, top: int, workers: int, out: Path, builds: int = 
 
     def build(w, rec, key, spec):
         """The same spec in several gear slot orders, the best kept: one order is luck (task 42, up to x4 between them)."""
-        with ProcessPoolExecutor(1, mp_context=mp.get_context("spawn"), max_tasks_per_child=1) as one:   # an order changes module state: its own process
-            got = {}
-            for o in ORDERS[:orders]:
-                try:
-                    got[o] = one.submit(path_build, spec, o).result()
-                except Exception as e:  # noqa: BLE001
-                    got[o] = {"error": f"{type(e).__name__}: {e}"}
-        ok = [r for r in got.values() if r.get("boss_dps")]
-        if ok:
-            res = {**max(ok, key=lambda r: r["boss_dps"]), "orders": {o: r.get("boss_dps") or r["error"] for o, r in got.items()},
-                   "seconds": sum(r["seconds"] for r in ok)}
-        else:
-            res = next(iter(got.values()))
+        try:
+            res = best_of(spec, orders)
+        except Exception as e:  # noqa: BLE001
+            res = {"error": f"{type(e).__name__}: {e}"}
         with lock:
             rec["finalists"][key] = res
             save()
