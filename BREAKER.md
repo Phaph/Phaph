@@ -968,3 +968,7 @@ PoB: all 18 equal the Nov 18 file on the Nov 18 engine, and Nov 24 equals the fr
 Flameblast: PoB times it by cooldown only (Atziri's Impatience halves it: x2, and its 25% life cost isn't counted); up to ~x1.6 high if the cooldown starts on release (unknown).
 Dual-wield slams: PoB hits with both weapons, each -30% (the -30% is the game's stat), so two bare maces are x1.3-1.4. That both hit one boss is PoB's reading, unchecked.
 Not a ranking bug found; the remaining open point is Flameblast's cycle.
+
+**Web check (2026-11-25):** dual wield: the wiki's mace skill list and Game8 (search snippets, pages not read) say "While Dual Wielding, both weapons hit with 30% less damage" for Rolling Slam,
+the same -30% for Earthquake: PoB's reading fits; Sunder's own line not found. Flameblast: 10 s cooldown (15 s before 0.4) confirmed, no source says whether it starts on use or
+release: stays open, no usage limit added.

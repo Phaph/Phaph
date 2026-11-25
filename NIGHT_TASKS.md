@@ -118,6 +118,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **02:40:** patch-notes mode on keystones checked: 32 of 33 change the numbers (Chaos Inoculation pins life, untestable that way); test added, pushed. Detection run (45c): the wording
   half passes (both lines, nothing else); damage half scanning (~/detect.log, 2 scans on 3 cores).
 - **03:35: task 45 done** (BREAKER.md). leads-orders: 3 leads have their first side, no plain builds yet, no verdicts. Left in 40: nerf-risk labels (after the leads).
+- **05:10:** 45, 46 done. Waiting on leads-orders (5 leads have one side, no plain builds): then verdicts in leads.json, nerf-risk labels (40), 39 closes. 37 starts by itself after it.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -496,7 +497,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     damage search for spirit skills (kit_out -> optimise_supports) still ignores toughness: a life-reserving support picked
     there for damage isn't checked; (c) EHP of finished builds in finalists / path_luck (13 of 18, 7 of 9 hold it) and in guides
     cached before the fix is wrong; boss DPS is computed before the fillers, so it isn't affected.
-44. [ ] Support search vs conditions (found 2026-11-24): conditions (enemy chilled, ignited...) are set from the supports in place
+44. [x] (2026-11-24: `settle` merged, live as 2026-11-24.5, 231 passed; 2 of 24 saved-build rows gain, none lose) Support search vs conditions (found 2026-11-24): conditions (enemy chilled, ignited...) are set from the supports in place
     and held fixed while the search swaps supports. Bonestorm Lich: from Elemental Focus the full search finds nothing better;
     swapping to Extraction and re-running auto_config gives +35% (4.37M -> 5.92M mapping score). Extraction is better in
     the saved mapping setup; how often this happens elsewhere isn't measured. Try: auto_config + search again until stable,
