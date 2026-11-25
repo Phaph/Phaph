@@ -177,6 +177,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   in two places; no fault found. matrix_asc: Infernalist done, Blood Mage 143 skills in, ~2 h each, so ~40 h for the rest (see Waiting for Kyle). rank8: Deadeye's 3 skills done, ~1.5 h per skill with 2 workers.
 - **23:05: task 50 A/B, 4 of 5 (without -> with respend, single order; only the respend step differs):** Gemling Rapid Shot boss 4.42M -> 5.12M, map 4.03M -> 4.71M, EHP same; Deadeye, Titan identical;
   Abyssal Lich damage same, EHP +1.6%, chaos res 75 -> 69. No damage or EHP loss. When the Invoker control lands (~/respend_ab.log) unchanged: bump ENGINE_VERSION to 2026-11-25.2, merge `respend`, deploy, push (suite green: 247). Then `distance` (49).
+- **23:30: task 50 live as 2026-11-25.2** (A/B 5 of 5, control identical). Next: 49 (branch `distance`: merge main into it, suite, search-vs-ladder, 5 builds), then merge `asccond`, 48.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -580,7 +581,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Bonestorm 0 at all. So attacks are flattered against spells. Script ~/asc_out/dist.py) (added 2026-11-25) Enemy distance: PoB's default is what every ranged build is scored at (Point Blank at full value, ranged accuracy penalty small). Find the default, decide a fair one per
     skill kind (melee / projectile) for boss and map, measure what it moves on 5 saved builds. Wide effect: A/B before any merge.
 
-50. [ ] (added 2026-11-25) Respend the ascendancy at the end of a build, keep it only if the score rises (it must compare: greedy alone lost 65% on one). On finished builds, respending with the old code:
+50. [x] (2026-11-25: merged; Gemling Rapid Shot +16% boss / +17% map, 4 others no damage change, live as 2026-11-25.2) (added 2026-11-25) Respend the ascendancy at the end of a build, keep it only if the score rises (it must compare: greedy alone lost 65% on one). On finished builds, respending with the old code:
     Titan Earthquake +48% (EHP -11%), Gemling Rapid Shot +19% (EHP -18%), wand Bonestorm Infernalist +19%; most others 0. The points are chosen before gear, tree and supports are final. After 47.
 
 ## Waiting for Kyle

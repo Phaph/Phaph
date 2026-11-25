@@ -1004,3 +1004,7 @@ the log prints a lead once both sides are built.)
 - Paired (only the ascendancy respent on 37 finished builds): 1 loses damage, with the old code too. The fix itself: Deadeye +20% (Point Blank, at PoB's 2 m), Gemling about +13%, Abyssal Lich 0% damage and +12% EHP.
 - The lower full builds are gear luck: Abyssal's passives cost 0%; Titan rotated, passives swapped: +45% on main's build, -35% on the branch's. Merged with Titan 3% under the gate for that reason.
 - Not measured: how much the blind tests move (48).
+
+**Ascendancy points spent again on the finished build (task 50, live as 2026-11-25.2).** Kept only if the score rises, EHP stays over 90%, no attribute falls short and spirit fits. 5 full Uber builds, same slot order,
+only this step differs: Gemling Rapid Shot 4.42M -> 5.12M boss (+16%), 4.03M -> 4.71M map (+17%), EHP same; Deadeye Rapid Shot, Titan Earthquake, Invoker Ice Shot no change in damage or EHP; Abyssal Lich Bonestorm
+damage same, EHP +1.6%, chaos resistance 75 -> 69. One build per side: it shows no loss on these five; the typical gain isn't measured.
