@@ -173,7 +173,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   builds, main's gains 45% and the branch's loses 35%, and the branch's has 64k EHP vs 14k. Details in BREAKER.md. respend suite + builds running (~/respend_ab.sh). Next: 50, then 49, then merge `asccond` and start 48 (matrix_asc
   running in ~/breaker is old code: its result is a "before").
 - rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
-- **21:35:** respend suite at 87%+, no failures so far; the 5 builds follow on their own (~/respend_ab.log). Task 50's code read: its put-back goes through load_xml, which guide.build_stage already uses mid-build
+- **21:35:** respend suite green (247 passed, 1 warning in 2364.33s (0:39:24)); the 5 builds follow on their own (~/respend_ab.log). Task 50's code read: its put-back goes through load_xml, which guide.build_stage already uses mid-build
   in two places; no fault found. matrix_asc: Infernalist done, Blood Mage 143 skills in, ~2 h each, so ~40 h for the rest (see Waiting for Kyle). rank8: Deadeye's 3 skills done, ~1.5 h per skill with 2 workers.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
