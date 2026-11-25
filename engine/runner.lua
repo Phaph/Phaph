@@ -2054,7 +2054,7 @@ function handlers.optimise_tree(cmd)
 					for _, n in ipairs(node.path) do pathNodes[n] = true end
 					local out = calcFunc({ addNodes = pathNodes }, useFullDPS)
 					evals = evals + 1
-					local d, e = dps(out) / d0 - 1, ehp(out) / e0 - 1
+					local d, e = (dps(out) - dps(base)) / d0, (ehp(out) - ehp(base)) / e0   -- a build with no damage yet loses none
 					if d >= -0.005 and e >= -0.005 then
 						local key = { node.type ~= "Normal" and 1 or 0, (d + e) / math.max(pathCost(node.path), 1), -pathCost(node.path), -node.id }
 						local better = not best
