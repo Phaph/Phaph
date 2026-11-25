@@ -984,3 +984,6 @@ Best-of-3 against best-of-3 still has luck in it when one side's spread is 2x: a
 the log prints a lead once both sides are built.)
 - Bonestorm Lich vs Comet Lich (both Staff): 10.54M vs 5.78M best vs best; +18 / +82 / +69% by order: ahead in all three, size unknown (Bonestorm's own orders spread x2). Rests on the
   release-time estimate (6 casts a volley) and PoB's 20 spikes + explosion on one boss. "Known" stays (36% of Abyssal Liches). leads.json updated for these six.
+- Rain of Arrows vs Ice Shot (Deadeye): 3.25M vs 1.64M boss; +60 / +75 / +193% by order (Nov 22, one build each: -43%). Not a result yet: the hit rate is our estimate and the build's rain is
+  shrunk to 2.6 m, so a 1.5 m boss is hit by 59% of the arrows (x0.56 at 1.0 m = 1.8M, +11%). Holding the build fixed; a re-optimised one could differ. Mapping 0.69M vs 1.45M. Back to unconfirmed.
+- nerf_risk added to the 11 live leads in leads.json, by the mechanism groups of research/broken_builds.md (Claude's judgement; not shown on the page).

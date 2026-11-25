@@ -9,7 +9,8 @@
    "detector": "scaler scan",
    "what": "Fresh Clip II gives more damage per bolt reloaded in the last 8 seconds, and Rapid Shot reloads about 100 bolts a clip. Attack speed buys both more bolts per second and more damage per bolt, so damage grows with roughly speed squared, with no cap in the gem data.",
    "check": "Does Fresh Clip have a hidden cap, and does Rapid Shot's clip count bolt by bolt? (TESTS.md #1)",
-   "evidence": "Evidence 2026-11-21: the game data (PoB's copy) has only the 1%-per-bolt stat, no maximum; poe2wiki: Fresh Clip is not capped by the skill's bolt count and several reloads in the window all count; public builds already run Fresh Clip crossbows (Mobalytics 'fresh clip gemling', 'fresh clip witch hunter'). A real, known strategy, rediscovered. Not checked: the exact stacks at very high attack speed."
+   "evidence": "Evidence 2026-11-21: the game data (PoB's copy) has only the 1%-per-bolt stat, no maximum; poe2wiki: Fresh Clip is not capped by the skill's bolt count and several reloads in the window all count; public builds already run Fresh Clip crossbows (Mobalytics 'fresh clip gemling', 'fresh clip witch hunter'). A real, known strategy, rediscovered. Not checked: the exact stacks at very high attack speed.",
+   "nerf_risk": "medium: uncapped speed-squared scaling (groups A/E; usually lasts until the next patch)"
   },
   {
    "name": "Rapid Shot + Rampart Raptor: firing without spending bolts",
@@ -18,7 +19,8 @@
    "detector": "text scanner",
    "what": "Rampart Raptor: crossbow bolts have 100% chance to not expend ammunition if you've reloaded recently. Path of Building doesn't model ammunition, so with Rapid Shot this could be seconds of free fire after every reload.",
    "check": "Does the ammo counter stay put for ~4 s after a reload? (TESTS.md #2)",
-   "evidence": "Evidence 2026-11-21: wording confirmed (poe2db, poe2wiki); 'recently' = 4 s; poe2wiki: Auto Reload counts as a reload. Anti-synergy found: bolts not spent means no reloads, so Fresh Clip II gets no stacks (PoB itself assumes 0 bolts reloaded when none are consumed). Pick one, not both; the ammo uptime needs modelling (task)."
+   "evidence": "Evidence 2026-11-21: wording confirmed (poe2db, poe2wiki); 'recently' = 4 s; poe2wiki: Auto Reload counts as a reload. Anti-synergy found: bolts not spent means no reloads, so Fresh Clip II gets no stacks (PoB itself assumes 0 bolts reloaded when none are consumed). Pick one, not both; the ammo uptime needs modelling (task).",
+   "nerf_risk": "high: a resource cost that stops being paid (group D; hotfixed in days)"
   },
   {
    "name": "Leopold's Applause: penetration below 0%",
@@ -51,7 +53,8 @@
    "found": "2026-11-18",
    "detector": "condition scan",
    "what": "+101% damage against an enemy that is frozen, pinned, electrocuted or heavy stunned: it doubles. A combo with a skill that keeps the boss immobilised.",
-   "check": "How often can a build keep a pinnacle boss immobilised?"
+   "check": "How often can a build keep a pinnacle boss immobilised?",
+   "nerf_risk": "low: an intended combo payoff (3.6, Tactician immobilise bossing, was a popular case)"
   },
   {
    "name": "Dark Effigy vs Poisoned",
@@ -95,14 +98,16 @@
    "status": "known",
    "found": "2026-11-18",
    "detector": "condition scan",
-   "what": "+68% vs shocked enemies (most skills get +20%). Lightning Conduit per 5% Shock was a broken build in patch 0.1: Lodestone found it again without being told, which shows the detector works. Against a pinnacle boss nothing in the game shocks often enough to use it (bosses' ailment threshold): a mapping combo, not a boss one."
+   "what": "+68% vs shocked enemies (most skills get +20%). Lightning Conduit per 5% Shock was a broken build in patch 0.1: Lodestone found it again without being told, which shows the detector works. Against a pinnacle boss nothing in the game shocks often enough to use it (bosses' ailment threshold): a mapping combo, not a boss one.",
+   "nerf_risk": "low: already cut in several patches"
   },
   {
    "name": "Armour Broken combos",
    "status": "unconfirmed",
    "found": "2026-11-18",
    "detector": "combo finder",
-   "what": "39 physical skills gain +20-45% when the boss's armour is broken. With our time-to-break estimate the best combos are Armour Piercing Rounds or Armour Breaker breaking for themselves (+41-42%), Bonestorm with Coiling Bolts (+20-23%) and Flicker Strike with Armour Piercing Rounds on weapon set 2 (+20%). Measured on quick builds only: as a full build, Armour Piercing Rounds breaking for itself was +1%."
+   "what": "39 physical skills gain +20-45% when the boss's armour is broken. With our time-to-break estimate the best combos are Armour Piercing Rounds or Armour Breaker breaking for themselves (+41-42%), Bonestorm with Coiling Bolts (+20-23%) and Flicker Strike with Armour Piercing Rounds on weapon set 2 (+20%). Measured on quick builds only: as a full build, Armour Piercing Rounds breaking for itself was +1%.",
+   "nerf_risk": "low: an intended combo payoff, small in full builds"
   },
   {
    "name": "Whirling Assault speed scaling",
@@ -133,7 +138,8 @@
    "detector": "A-to-Z sweep",
    "what": "Wins several searches. Path of Building ignores both its 10-ember cap with a 1.3 s delay (about x0.7) and its 5% more damage per ember fired (up to x1.5); they roughly cancel.",
    "check": "Real damage over 30 s on a target dummy vs the build's PoB number. (TESTS.md #5)",
-   "evidence": "Evidence 2026-11-21: poe2wiki: up to 6-10 embers by gem level, 5% more damage per previous ember, released after 1.3 s without a new ember (recasting resets it). Matches the engine's cap and delay; how close PoB's total is stays unconfirmed."
+   "evidence": "Evidence 2026-11-21: poe2wiki: up to 6-10 embers by gem level, 5% more damage per previous ember, released after 1.3 s without a new ember (recasting resets it). Matches the engine's cap and delay; how close PoB's total is stays unconfirmed.",
+   "nerf_risk": "low: no outlier in full builds"
   },
   {
    "name": "Oracle Forced Outcome + Maligaro's Virtuosity",
@@ -149,7 +155,8 @@
    "found": "2026-11-21",
    "detector": "trigger loop graph (text scan group D)",
    "what": "The gem says '25% chance to Trigger this Skill on Kill': each kill from its explosion can set off another. A chain keeps going on its own when 25% x kills per explosion >= 1, i.e. 4+ kills per explosion: a dense pack. Mapping only (a boss doesn't die repeatedly).",
-   "check": "Web evidence of chain clears; then model the chain length from pack density (expected explosions = 1 / (1 - 0.25 x kills per explosion))."
+   "check": "Web evidence of chain clears; then model the chain length from pack density (expected explosions = 1 / (1 - 0.25 x kills per explosion)).",
+   "nerf_risk": "medium: a self-feeding chain (group D/F), but maps only"
   },
   {
    "name": "Earthbound: Spark on killing a Shocked enemy",
@@ -157,7 +164,8 @@
    "found": "2026-11-21",
    "detector": "trigger loop graph (text scan group D)",
    "what": "The unique triggers Spark on killing a Shocked enemy, and Spark shocks: kills feed more Sparks. A mapping chain like the toad's; no boss value.",
-   "check": "Can triggered Spark kills re-trigger Earthbound (some triggers exclude triggered skills)? Web evidence first."
+   "check": "Can triggered Spark kills re-trigger Earthbound (some triggers exclude triggered skills)? Web evidence first.",
+   "nerf_risk": "medium: a self-feeding chain (group D/F), but maps only"
   },
   {
    "name": "Maligaro's Virtuosity + Pinpoint Critical (Skeletal Sniper Lich)",
@@ -254,15 +262,16 @@
     ]
    },
    "full_build": "2026-11-25, 3 slot orders per side, both on a Staff: 10.54M vs Comet Lich 5.78M boss DPS best vs best; +18 / +82 / +69% by order (its own orders spread x2). Ahead of Comet in all three, so stronger than Comet in our model by an unknown amount; it rests on our release-time estimate and on PoB's 20 hits plus explosion on one boss. Known build on Abyssal Lich. | Earlier: 2026-11-23, fair comparison (both on a Staff), release time counted (usage limit: 6 casts per volley): full Uber Endgame Bonestorm Lich 6.03M boss DPS vs Comet Lich 4.45M (+35%). (Earlier numbers: 8.82M on a Wand without the release time; 2.72M on a Wand with it: the Wand was the mistake.) Depends on the release estimate: at 9 casts per volley the edge would shrink to roughly +10-15%.",
-   "ladder": "poe.ninja per ascendancy (2026-11-22): 36% of Abyssal Liches use Bonestorm (0.85% overall). A known build on Abyssal Lich; under-played on the other Witch/Sorceress ascendancies."
+   "ladder": "poe.ninja per ascendancy (2026-11-22): 36% of Abyssal Liches use Bonestorm (0.85% overall). A known build on Abyssal Lich; under-played on the other Witch/Sorceress ascendancies.",
+   "nerf_risk": "medium: overlapping hits (group E) and, if our release estimate holds, an outlier"
   },
   {
    "name": "Rain of Arrows (Deadeye)",
-   "status": "dead",
+   "status": "unconfirmed",
    "found": "2026-11-22",
    "detector": "blind test (top 3, under 1% of the ladder)",
    "what": "Our #1 on Deadeye (after its usage limit), 0.08% of the ladder; Ice Shot (7.1%) is what the ladder plays.",
-   "check": "Full-build bar vs the popular skill on the same ascendancy (task 34).",
+   "check": "How many arrows land on one boss (video or guide): the whole lead is our 1.5 m boss-radius estimate.",
    "build": {
     "spec": {
      "name": "Rain of Arrows Deadeye",
@@ -284,7 +293,8 @@
      "end"
     ]
    },
-   "full_build": "2026-11-22, full Uber Endgame Deadeye, same engine: Rain of Arrows 657k vs Ice Shot 1.15M (-43%). The search's round 1 ranks it first; a full build doesn't."
+   "full_build": "2026-11-25, 3 slot orders per side, engine 2026-11-24.8: 3.25M vs Ice Shot 1.64M boss DPS best vs best; +60 / +75 / +193% by order. But the hit rate is our estimate: with a 1.0 m boss radius instead of 1.5 m it is about 1.8M (+11%), and the build shrinks its rain with Concentrated Area, which our formula rewards. Mapping is half of Ice Shot's (0.69M vs 1.45M). | Earlier: 2026-11-22, full Uber Endgame Deadeye, same engine: Rain of Arrows 657k vs Ice Shot 1.15M (-43%). The search's round 1 ranks it first; a full build doesn't.",
+   "nerf_risk": "low: nobody plays it (0.08%), no bug; overlapping hits (group E) if it turns out real"
   },
   {
    "name": "Wind Serpent's Fury (Amazon)",
@@ -332,7 +342,8 @@
    "detector": "cross-class finalists (weapon_finalists.py)",
    "what": "With no class rule the search picks Invoker (a Monk ascendancy) for bow, crossbow and spear skills. Invoker's 'Sunder my Enemies...' makes critical hits ignore non-negative enemy elemental resistances (big vs pinnacle bosses), plus 10% of damage as extra lightning / cold. Armour Piercing Rounds on Invoker: 7.06M full Uber build (Tactician earlier: 3.47M). ~0.3% of the ladder plays Invoker. Physical/chaos skills don't gain (Poisonburst Arrow did better on Deadeye).",
    "check": "The finalists run (engine 2026-11-23.4) per weapon; then the same elemental crit skill as a full build on Invoker vs its usual ascendancy; evidence: does the resistance bypass apply to pinnacle bosses in game (guides, patch notes).",
-   "evidence": "2026-11-23: Maxroll Invoker guides confirm crits ignore elemental resistances ('does not need Penetration or Exposure'); players already run it cross-class: Mobalytics crossbow Invoker builds (bigdaddy-xbow-monk, imexile-lightning-crossbow-invoker), Lightning Arrow Invoker. Lodestone rediscovered a known cross-class build blind (no class rule, no poe.ninja input): validation, not a new break."
+   "evidence": "2026-11-23: Maxroll Invoker guides confirm crits ignore elemental resistances ('does not need Penetration or Exposure'); players already run it cross-class: Mobalytics crossbow Invoker builds (bigdaddy-xbow-monk, imexile-lightning-crossbow-invoker), Lightning Arrow Invoker. Lodestone rediscovered a known cross-class build blind (no class rule, no poe.ninja input): validation, not a new break.",
+   "nerf_risk": "medium: one ascendancy node ahead on many skills (no bug)"
   }
  ]
 }
