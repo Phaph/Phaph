@@ -600,6 +600,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 51. [ ] (added 2026-11-26, after Kyle: no overselling Lodestone) Re-grade Lodestone on the old patches (task 40's answer key, tools/grade_old.py) after 47, 49 and 48 are in, frozen engine.
     Until then every fix is unproven as far as finding broken builds goes. Report the hit rate and false alarms as they are, against the same bar.
 
+52. [ ] (added 2026-11-26) How long did PoB take on past launches? From the PoB PoE 2 repo history (releases, data commits) for 0.2, 0.3, 0.4, 0.5: hours from patch to the first
+    release with the new data, and how many fix releases followed in the first week. Gives the real wait instead of "usually within days".
+53. [ ] (added 2026-11-26, needs Kyle's PC with PoE 2 installed, after ~11-27) Our own export: PoB ships its exporter (src/Export, bun_extract_file.exe reads Content.ggpk, Windows).
+    Dry run on the 0.5 client: export, load into our runner, compare with PoB's own data. On 1.0 day this gives new gems, uniques and tree from the game files before PoB's release;
+    lines PoB's parser doesn't know stay unsupported (tools/unsupported_lines.py counts them). Also: notes -> changes file on a real past patch's notes (never tried).
+
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
