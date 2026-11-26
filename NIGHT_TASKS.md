@@ -566,7 +566,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     starts right after old_all.sh: make it wait for the merge. Saved builds and earlier A-to-Z / blind rankings of
     bow / wand / sceptre skills read low.
 
-42. [ ] (2026-11-24 12:40: unique re-check on branch `revisit`, A/B queued, see START HERE) (running since 11:05: tools/path_luck.py, 4 specs x 3 slot orders, 3 cores, ~/path_luck.log -> data/breaker/path_luck.json) (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
+42. [x] (2026-11-26: closed. Measured: spread on 2026-11-24.7 Ice Shot 5%, Rapid Shot 22%, Rain of Arrows 39%, Bonestorm 50% (was 5 / 22 / 320 / 68 before the final-pass unique re-check, live .7). Still over the 10% bar for 3 of 4, so not fixed at the root: Lodestone works around it with best of 3 orders (path_luck.best_of in weapon_finalists, lead_builds, rank_check --orders). Whetstone guides stay single-order: question under Waiting for Kyle.) (2026-11-24 12:40: unique re-check on branch `revisit`, A/B queued, see START HERE) (running since 11:05: tools/path_luck.py, 4 specs x 3 slot orders, 3 cores, ~/path_luck.log -> data/breaker/path_luck.json) (found 2026-11-24, after 41) Full builds land in different local optima: Rain of Arrows Invoker lost 10% by gaining
     a quiver (BREAKER.md). Measure: the same spec built 3 times with small starting differences (gear slot order, first
     supports), 3 skills; if the spread is > 10%, try best-of-two starts for the Uber stage or a final pass that retries
     each unique slot with a rare and the next-best uniques once everything else is set. Needs free cores.

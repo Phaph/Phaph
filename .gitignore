@@ -4,3 +4,8 @@ __pycache__/
 .venv/
 *.sqlite3
 .env
+
+# old run logs (Nov 18-19)
+engine/_t_combo.log
+engine/data/breaker/combos_ailments.log
+engine/data/breaker/combos_run.log
