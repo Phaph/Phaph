@@ -53,6 +53,7 @@ First message for the local session: "Read CLAUDE.md, PC_TODO.md and RESEARCH_BR
 
 11. **Patch-notes practice: ladder side** (Breaker task 31): fetch poe.ninja's ladder from just before and after 0.5.1
     / 0.5.2 (or 0.4 -> 0.5), so we can check whether our scans on the patched game called the right builds broken or nerfed.
+    Done from the server 2026-11-26 (task 54): Wayback Machine copies of poe.ninja's API, engine/tools/ninja_archive.py. Usable for 0.4 and 0.5 only.
 
 ## Engine gaps to work through
 - Jewels and attribute requirements aren't handled.

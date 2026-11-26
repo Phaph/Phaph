@@ -1041,3 +1041,23 @@ engine 11-21.11, one order each: 2 of 6). The same 5 of 6 holds in each order ta
   Several #2 / #3 places swap by order; only the #1 is stable.
 - Not measured: whether this holds without class rules (Lodestone's case: weapon_finalists, task 38), and on engine 2026-11-25+ (47, 49,
   50 changed ascendancy points and ranged scores after this search ran).
+
+### Ladder history from the Wayback Machine (2026-11-26, task 54)
+poe.ninja keeps no old PoE 2 build leagues (`oldBuildLeagues: []`), but the Wayback Machine archived its build-search API answers
+(gzipped protobuf) and the dictionaries they point to. `engine/tools/ninja_archive.py` decodes them without a schema (list / fetch /
+compare / track) into data/ninja_archive/<league>/<timestamp>.json: % of all indexed characters per class, skill (`skills` = active skills,
+heralds and curses included; `allskills` adds supports and lineage gems), item, anoint, key passive.
+- **Coverage:** archive only from Sep 2025. Dense for 0.4 (fate-of-the-vaal: Dec 15, 17, 20, 21, 24, 26, 28, 29, Jan 18) and 0.5
+  (runes-of-aldur: May 30 (launch night, 25k characters), Jun 7, 15, 17, 27). 0.2 / 0.3: 1-3 late-league snapshots, nothing near a patch.
+  The 0.4 snapshots have no key-passive dimension (keystone cases like Ancestral Bond can't be read there).
+- **0.4.0c (Dec 18 2025), % of the ladder using the skill (allskills), Dec 17 -> Dec 29 -> Jan 18:** Walking Calamity 12.02 -> 8.23 -> 6.30
+  (flat to rising before: 11.65 on Dec 15); Shaman class 18.02 -> 12.20 -> 9.37; Lunar Blessing 10.16 -> 9.87 -> 7.83 (no drop in the 11 days
+  after its nerf); Amanamu's Tithe 1.79 -> 5.64 -> 5.68 (kept rising after its immunity fix).
+- **0.4.0d (Jan 14 2026):** Fury of the Mountain fell all along (8.05 Dec 15 -> 2.27 Dec 29 -> 1.72 Jan 18: before its fix too); Uhtred's Augury
+  0.97 -> 2.99, Omen 1.25 -> 3.50 (rose across the fix). One snapshot after it, 4 days later: too few to read.
+- **0.5.1 (Jun 4 2026):** no usable "before": the only earlier snapshot is launch night (campaign characters). 0.5.1 had 2 number changes.
+- **Reading these:** early in a league everything moves as characters reach endgame (Comet 7.53 -> 17.74% Dec 17 -> 29 with no patch reason),
+  so a fall after a nerf is consistent with the nerf, not proof. Walking Calamity / Shaman is the one case here whose turn lines up with its
+  patch date. The rest show no ladder reaction (Lunar Blessing, Amanamu's Tithe, Uhtred) or a fall that started before (Fury of the Mountain).
+- **Use for Lodestone:** gives the answer key (research/broken_builds.md, task 40 / 51) a measured "how much it was played" for 0.4 and 0.5 cases
+  where it says "Unconfirmed", and lets a 1.0 lead be checked against how a similar build did on the ladder. Not used in any grade yet.

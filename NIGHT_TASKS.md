@@ -199,6 +199,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **05:55 rank8 partial (4 of 6 ascendancies, 10 of 18 skills; not a verdict):** search's #1 = best full build (best of 3 orders) in Deadeye and Titan, not Amazon (Wind Serpent's Fury 1.03M vs Fangs of Frost 1.64M, but Fangs wins only its 'as is' order: reversed it is 0.96M, below both). Order spreads 6-85% per skill (median ~33%), so a #1 flip within that spread is luck, not the search. Finish after Tactician 2-3, Martial Artist, Oracle; write to BREAKER.md, close 39.
 - **12:30 (11-26):** nightly sweep running (sweep-0-6, started 10:38); ~/task48.sh starts task 48's scan when it ends. Task 42 ticked (Lodestone uses best of 3; spread not fixed at the root). Task 53 prepared: engine/EXPORT_DRYRUN.md (exporter needs the live game, not the pre-launch torrent). Next: 48 runs ~15 h, then 48's blind re-run, 51, 38.
 - **17:00 (11-26): task 48's scan started 16:39** (container asc48, 6 cores, ~7 GB of 18; code 42515a9 in ~/phaph_48), Infernalist first -> ~/asc48_out. Sweep finished 15:35 (0 failed). ~15 h estimate, so ~08:00 11-27.
+- **19:20 (11-26):** task 48's scan 4 of 23 (Infernalist, Blood Mage, Lich, Abyssal Lich running; ~34 min each, so ~05:30 11-27). Meanwhile task 54 done: ladder history from the Wayback Machine (engine/tools/ninja_archive.py, data/ninja_archive; BREAKER.md 'Ladder history'). 0.4.0c: Walking Calamity 12.0 -> 8.2% in 11 days, the only case whose turn lines up with its patch.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -613,6 +614,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 53. [ ] (2026-11-26 12:30: step list in engine/EXPORT_DRYRUN.md. PoB's docs: the exporter does NOT work on the pre-launch torrent (no Data section), so it only helps from launch until PoB's first 1.0 release; Windows GUI only) (added 2026-11-26, needs Kyle's PC with PoE 2 installed, after ~11-27) Our own export: PoB ships its exporter (src/Export, bun_extract_file.exe reads Content.ggpk, Windows).
     Dry run on the 0.5 client: export, load into our runner, compare with PoB's own data. On 1.0 day this gives new gems, uniques and tree from the game files before PoB's release;
     lines PoB's parser doesn't know stay unsupported (tools/unsupported_lines.py counts them). Also: notes -> changes file on a real past patch's notes (never tried).
+
+54. [x] (2026-11-26: done, BREAKER.md 'Ladder history from the Wayback Machine'; dense for 0.4 and 0.5 only, not used in a grade yet) (added 2026-11-26) Ladder side of the patch practice (PC_TODO 11) without the PC: poe.ninja keeps no old leagues, the Wayback Machine has its API answers.
+    Next use: add measured ladder shares to the 0.4 / 0.5 answer-key cases in research/broken_builds.md before task 51's re-grade.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
