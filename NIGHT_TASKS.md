@@ -186,6 +186,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   same ascendancy (Point Blank), the new build is simply better at every distance (7.11M vs 4.94M at 2 m): rebuild luck. Invoker Ice Shot (bow, so not a control here) 2.56 -> 2.34M boss, 1.56 -> 1.13M map. So the A/B can't judge 49. Same build 2 m -> 4 m: -16%. Running: ~/distance_blind.sh,
   blind search Deadeye + Tactician, class weapons, main vs distance side by side (~/dist_blind/{main,distance}.json, 3 cores each, a few hours). Judge: ladder skills' ranks (Ice Shot, Tornado Shot, Snipe; Galvanic Shards,
   Wolf Pack, Stormblast Bolts) better or not. Merge if not worse; 4 m stays an estimate (note it on the lead page later).
+- 01:35: main merged into `asccond` (clean; it only adds runner handlers get_config / asc_tries + tools/asc_cond.py + 1 test file); pushed. After 49 lands: suite on it, merge, then 48 from ~/breaker via the queue (asc_cond.py has no queue job yet: add one, or a script like rank8.sh).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
