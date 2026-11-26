@@ -241,8 +241,8 @@ def test_patched_passive_and_unique_show_in_the_text_scan(pob, tmp_path, monkeyp
                                                        {"unique": "Leopold's Applause", "add": [line]}]}))
     key = lambda p: {(x["source"], x["name"], x["line"]) for x in text_scan.collect(p)}
     monkeypatch.delenv("PATCH_FILE", raising=False)
-    pob.new()
-    before = key(pob)
+    with PoB() as p:   # a fresh PoB: the shared one may carry other tests' patches (seen 2026-11-26: Mace Strike)
+        before = key(p)
     monkeypatch.setenv("PATCH_FILE", str(f))
     with PoB() as p:
         after = key(p)
