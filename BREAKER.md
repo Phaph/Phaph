@@ -1013,3 +1013,12 @@ damage same, EHP +1.6%, chaos resistance 75 -> 69. One build per side: it shows 
 melee, minions and non-projectile spells stay at 2 m. Same saved build, 2 m -> 4 m: Deadeye Rapid Shot -16%. Blind search (class weapons, Deadeye + Tactician) main vs distance: top 3 unchanged on both,
 search scores of bow / crossbow skills -6 to -18% (Explosive Grenade 0%), Tornado Shot enters Deadeye's top 10 at 8th; ladder skills found 1 of 6 on both sides. Not shown to bring the search closer to the ladder; it was merged as a fairer
 model, and its effect across weapon kinds (where Lodestone compares bows with maces) is not measured.
+
+**How long PoB takes after a patch (task 52, 2026-11-26, from PoB PoE 2's GitHub releases; launch dates from research/broken_builds.md, launch hours not checked):**
+- 0.2 (Apr 4 2025): v0.6.0 on Apr 6, about 2 days: 0.2 tree, all new active gems, "some new 0.2 Uniques (mods are not supported yet)". Then v0.7.0 Apr 9, v0.8.0 Apr 16.
+- 0.3 (Aug 29 2025): v0.10.0 on Aug 30 01:09 UTC, the same night: 0.3 tree, changes from the patch notes. v0.9.0 came 6 days before launch. Then Sep 2 (2 releases), Sep 14-16 (3).
+- 0.4 (Dec 12 2025): v0.13.0 on Dec 15, about 3 days: new 0.4 skills, tree, unique values from the patch notes. Then Dec 19.
+- 0.5 (May 29 2026): v0.16.0 on May 29 15:32 UTC, launch day: 0.5 tree, some new passives and unique mods. Then Jun 2 (incl. "Fix Zarokh's Revolt granting infinite DPS"), Jun 4, 5, 11, 13, 23, 30.
+- 0.1 (Dec 6 2024) is not comparable: PoB PoE 2's first release was Jan 17 2025.
+So: a first release with the new tree and gems 0-3 days after launch, with new uniques' mods and mechanics filled in over the following 2-4 weeks, and PoB's own early bugs among them
+(an infinite-DPS unique 4 days after 0.5). For Lodestone on 1.0: early flags on new content are likely to include PoB's unfinished or buggy support; re-check every lead against each PoB release that first month.
