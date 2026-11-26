@@ -1405,6 +1405,12 @@ function handlers.set_custom_mods(cmd)
 	return {}
 end
 
+function handlers.get_config(cmd)
+	local out = {}
+	for _, k in ipairs(cmd.keys or {}) do out[k] = build.configTab.input[k] end
+	return { values = out }
+end
+
 function handlers.set_config(cmd)
 	for k, v in pairs(cmd.values or {}) do
 		build.configTab.input[k] = v
@@ -1800,6 +1806,37 @@ function handlers.fit_gems(cmd)
 		::continue::
 	end
 	return { lowered = lowered, short = short, removed = removed }
+end
+
+-- What each ascendancy notable or choice option (with its path, nothing else of the ascendancy) does to the main
+-- skill under the config as it is now. `ids`: only these; `all`: also every notable at once (options left out, they
+-- exclude each other). For the conditional ascendancy scan (tools/asc_cond.py).
+function handlers.asc_tries(cmd)
+	local names, only = {}, nil
+	for _, n in pairs(build.spec.allocNodes) do
+		if n.type == "AscendClassStart" and n.ascendancyName then names[n.ascendancyName] = true end
+	end
+	if cmd.ids then only = {}; for _, id in ipairs(cmd.ids) do only[id] = true end end
+	local calcFunc, base = build.calcsTab:GetMiscCalculator()
+	local full = useFull()
+	local rows, everything = {}, {}
+	for id, node in pairs(build.spec.nodes) do
+		if node.ascendancyName and names[node.ascendancyName] and not node.alloc and node.path
+			and (node.type == "Notable" or node.type == "Keystone" or node.isMultipleChoiceOption)
+			and (not only or only[id]) then
+			local add = {}
+			for _, n in ipairs(node.path) do
+				add[n] = true
+				if cmd.all and not node.isMultipleChoiceOption then everything[n] = true end
+			end
+			if not cmd.only_all then
+				table.insert(rows, { id = id, name = node.dn, output = pick(calcFunc({ addNodes = add }, full), cmd.fields) })
+			end
+		end
+	end
+	table.sort(rows, function(a, b) return a.id < b.id end)
+	return { base = pick(base, cmd.fields), rows = rows,
+		all = cmd.all and pick(calcFunc({ addNodes = everything }, full), cmd.fields) or nil }
 end
 
 function handlers.points(cmd)
