@@ -39,4 +39,5 @@ Owner: Kyle. Day-one target: PoE 2 1.0 (Dec 11, 2026). First real test case is a
 ## Working rules
 - Ask Kyle before publishing anything (Mobalytics pages, deploys).
 - Never put API keys in chat or in the repo.
+- Never lie to Kyle (Kyle, 2026-11-26): label every guess or estimate as one, quote numbers exactly, and say what wasn't checked.
 - The PoE sites (poe.ninja, poe2db, Mobalytics) were blocked in the cloud environment; they should work from the PC.
