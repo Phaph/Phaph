@@ -188,8 +188,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   Wolf Pack, Stormblast Bolts) better or not. Merge if not worse; 4 m stays an estimate (note it on the lead page later).
 - 01:35: main merged into `asccond` (clean; it only adds runner handlers get_config / asc_tries + tools/asc_cond.py + 1 test file); pushed. After 49 lands: suite on it, merge, then 48 from ~/breaker via the queue (asc_cond.py has no queue job yet: add one, or a script like rank8.sh).
 - 02:30 task 49 blind check, Deadeye (main vs distance): top 3 same (Rain of Arrows 1.80 -> 1.59M search score, Ice Shot 2nd both, 440k -> 391k); Tornado Shot enters at 8 of 10 (was out); all bow skills fall ~10-17% alike, so within one class it hardly reorders. Its real effect is across weapon kinds (Lodestone, no class rules). Tactician pending.
-- **03:55: task 49 live as 2026-11-26.1.** Blind check, class weapons, main vs distance: Deadeye top 3 same, Tornado Shot 8th (was out of 10); Tactician top 4 same, every crossbow skill
-  -8 to -17% except Explosive Grenade (+0%, not a projectile in PoB's types); ladder skills found 1 of 6 on both. So within a class it barely reorders; its effect is across weapon kinds (Lodestone), unmeasured.
+- **03:55: task 49 live as 2026-11-26.1.** Blind check, class weapons, main vs distance: Deadeye top 3 same, Tornado Shot 8th (was out of 10); Tactician top 4 same, crossbow skills
+  -6 to -17% except Explosive Grenade (+0%, not a projectile in PoB's types); ladder skills found 1 of 6 on both. So within a class it barely reorders; its effect is across weapon kinds (Lodestone), unmeasured.
   Next: suite on `asccond` (2 cores), merge, then task 48 (needs a run script); then 51 (re-grade).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
