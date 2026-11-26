@@ -1,24 +1,24 @@
 {
  "pob_version": "0.23.1",
  "results": {
-  "Abyssal Lich build": {
-   "prompt": "Abyssal Lich build",
+  "Infernalist build": {
+   "prompt": "Infernalist build",
    "read_as": [
-    "Ascendancy: Abyssal Lich (Witch)"
+    "Ascendancy: Infernalist (Witch)"
    ],
    "unused": [],
    "relaxed": [],
    "skill": "Bonestorm",
-   "ascendancy": "Abyssal Lich",
+   "ascendancy": "Infernalist",
    "weapon": "Staff",
    "fails": [
     "early made-up gem: Fire Spell on Melee Hit",
     "mid made-up gem: Fire Spell on Melee Hit",
-    "end readable: Jewel 61419 Megalomaniac, Diamond: Path of Building reads no mods",
+    "end readable: Jewel 32763 Megalomaniac, Diamond: Path of Building reads no mods",
     "end made-up gem: Fire Spell on Melee Hit",
-    "slow: 48 minutes"
+    "slow: 72 minutes"
    ],
-   "seconds": 2888,
+   "seconds": 4345,
    "stages": {
     "act1": {
      "dps": 1105,
@@ -29,24 +29,24 @@
      ]
     },
     "act2": {
-     "dps": 3705,
-     "items": 9,
-     "uniques": [
-      "Erian's Cobble, Guarded Helm",
-      "Blackbraid, Fur Plate"
-     ]
-    },
-    "act34": {
-     "dps": 59174,
+     "dps": 9913,
      "items": 9,
      "uniques": [
       "Sire of Shards, Chiming Staff",
-      "The Vertex, Tribal Mask",
+      "Erian's Cobble, Guarded Helm"
+     ]
+    },
+    "act34": {
+     "dps": 71573,
+     "items": 9,
+     "uniques": [
+      "Sire of Shards, Chiming Staff",
+      "Atsak's Sight, Veiled Mask",
       "Deathblow, Doubled Gauntlets"
      ]
     },
     "interludes": {
-     "dps": 106239,
+     "dps": 136406,
      "items": 9,
      "uniques": [
       "Sire of Shards, Chiming Staff",
@@ -55,69 +55,56 @@
      ]
     },
     "early": {
-     "dps": 213917,
-     "items": 11,
+     "dps": 311418,
+     "items": 10,
      "uniques": [
       "Sire of Shards, Chiming Staff",
-      "Crown of the Victor, Iron Crown",
-      "Briskwrap, Rhoahide Coat",
-      "Valako's Vice, Plate Gauntlets",
-      "Birth of Fury, Stone Greaves",
       "Astramentis, Stellar Amulet",
-      "Berek's Pass, Two-Stone Ring",
-      "Snakepit, Pearl Ring",
-      "Byrnabas, Wide Belt",
       "Heart of the Well, Diamond"
      ]
     },
     "mid": {
-     "dps": 975064,
+     "dps": 1708097,
      "items": 12,
      "uniques": [
-      "Crown of the Victor, Iron Crown",
       "Loreweave, Ornate Ringmail",
-      "Valako's Vice, Plate Gauntlets",
       "Astramentis, Stellar Amulet",
-      "Kalandra's Touch, Ring",
-      "Berek's Pass, Two-Stone Ring",
-      "Byrnabas, Wide Belt",
-      "Grand Spectrum, Sapphire",
+      "Heart of the Well, Diamond",
       "Against the Darkness, Time-Lost Diamond",
       "Grand Spectrum, Ruby"
      ]
     },
     "end": {
-     "dps": 3774194,
+     "dps": 8835987,
      "items": 13,
      "uniques": [
-      "Atsak's Sight, Veiled Mask",
+      "The Vertex, Tribal Mask",
       "The Coming Calamity, Heroic Armour",
-      "Kalandra's Touch, Ring",
-      "The Taming, Prismatic Ring",
+      "Maligaro's Virtuosity, Fine Bracers",
       "Mageblood, Utility Belt",
       "Flesh Crucible, Diamond",
-      "Heart of the Well, Diamond",
       "Megalomaniac, Diamond",
-      "Against the Darkness, Time-Lost Diamond"
+      "Heart of the Well, Diamond",
+      "Grand Spectrum, Ruby"
      ]
     }
    },
    "setups": [
     "Sniper's Mark + Uhtred's Exodus",
     "Freezing Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Overabundance II",
-    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Expand, Rapid Casting III",
-    "Herald of Ash + "
+    "Demon Form + Helbrym's Hide, Second Wind III, Cooldown Recovery II, Uhtred's Rite",
+    "Feast of Flesh + Corpse Conservation, Gorge, Astral Projection, Expand, Rapid Casting III"
    ],
    "main_supports": [
     "Considered Casting",
     "Deliberation",
     "Dialla's Desire",
-    "Extraction",
-    "Multishot II"
+    "Multishot II",
+    "Pinpoint Critical"
    ],
-   "total_dps": 3774194,
-   "boss_dps": 6521365,
-   "skills": 9,
+   "total_dps": 8835987,
+   "boss_dps": 11307158,
+   "skills": 10,
    "boss_skill": null,
    "weapon_sets": false,
    "triggers": [
@@ -126,129 +113,148 @@
    "focus": {},
    "off_theme": []
   },
-  "Smith of Kitava build": {
-   "prompt": "Smith of Kitava build",
+  "Pathfinder build": {
+   "prompt": "Pathfinder build",
    "read_as": [
-    "Ascendancy: Smith of Kitava (Warrior)"
+    "Ascendancy: Pathfinder (Ranger)"
    ],
    "unused": [],
    "relaxed": [],
-   "skill": "Supercharged Slam",
-   "ascendancy": "Smith of Kitava",
-   "weapon": "Two Hand Mace",
+   "skill": "Rain of Arrows",
+   "ascendancy": "Pathfinder",
+   "weapon": "Bow",
    "fails": [
-    "slow: 50 minutes"
+    "early made-up gem: Fire Spell on Melee Hit",
+    "mid made-up gem: Fire Spell on Melee Hit",
+    "end readable: Jewel 32763 Megalomaniac, Diamond: Path of Building reads no mods",
+    "end made-up gem: Fire Spell on Melee Hit",
+    "slow: 69 minutes"
    ],
-   "seconds": 3014,
+   "seconds": 4121,
    "stages": {
     "act1": {
-     "dps": 1583,
-     "items": 9,
+     "dps": 531,
+     "items": 10,
      "uniques": [
-      "Greymake, Brimmed Helm",
-      "Blackbraid, Fur Plate"
+      "Ironbound, Warden Bow",
+      "Greymake, Brimmed Helm"
      ]
     },
     "act2": {
-     "dps": 5365,
-     "items": 9,
+     "dps": 1732,
+     "items": 10,
      "uniques": [
-      "Greymake, Brimmed Helm",
-      "Sands of Silk, Shrouded Vest"
+      "Doomfletch, Composite Bow",
+      "Mask of the Sanguimancer, Face Mask"
      ]
     },
     "act34": {
-     "dps": 51535,
-     "items": 9,
+     "dps": 16658,
+     "items": 10,
      "uniques": [
-      "Tidebreaker, Pointed Maul",
-      "Deathblow, Doubled Gauntlets",
-      "Berek's Respite, Two-Stone Ring"
+      "Fairgraves' Curse, Artillery Bow",
+      "Atsak's Sight, Veiled Mask",
+      "Deathblow, Doubled Gauntlets"
      ]
     },
     "interludes": {
-     "dps": 47405,
-     "items": 9,
+     "dps": 33141,
+     "items": 10,
      "uniques": [
-      "Quecholli, Crumbling Maul",
-      "Loreweave, Ornate Ringmail"
+      "The Vertex, Tribal Mask",
+      "Loreweave, Ornate Ringmail",
+      "Deathblow, Doubled Gauntlets"
      ]
     },
     "early": {
-     "dps": 499616,
-     "items": 10,
+     "dps": 55408,
+     "items": 11,
      "uniques": [
-      "Loreweave, Ornate Ringmail"
+      "Mind of the Council, Death Mask",
+      "Loreweave, Ornate Ringmail",
+      "Berek's Grip, Two-Stone Ring",
+      "Heart of the Well, Diamond"
      ]
     },
     "mid": {
-     "dps": 611764,
+     "dps": 391567,
      "items": 12,
      "uniques": [
-      "Tidebreaker, Pointed Maul",
       "The Vertex, Tribal Mask",
-      "Loreweave, Ornate Ringmail",
       "Deathblow, Doubled Gauntlets",
-      "Choir of the Storm, Jade Amulet"
+      "Kalandra's Touch, Ring",
+      "Berek's Respite, Two-Stone Ring",
+      "Heart of the Well, Diamond",
+      "Grand Spectrum, Ruby"
      ]
     },
     "end": {
-     "dps": 3377941,
+     "dps": 973359,
      "items": 13,
      "uniques": [
-      "Hyrri's Ire, Armoured Vest",
-      "Mageblood, Utility Belt"
+      "The Vertex, Tribal Mask",
+      "Loreweave, Ornate Ringmail",
+      "Mageblood, Utility Belt",
+      "Megalomaniac, Diamond",
+      "Flesh Crucible, Diamond",
+      "Heart of the Well, Diamond"
      ]
     }
    },
    "setups": [
     "Wind Dancer + Uhtred's Exodus",
-    "Elemental Conflux + Dialla's Desire, Cold Mastery, Cannibalism I, Atziri's Communion, Healing Runes",
-    "Sniper's Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Charge Profusion II",
-    "Voltaic Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Overabundance II"
+    "Ghost Dance + Second Wind III, Cooldown Recovery II, Clarity I",
+    "Time of Need + Second Wind III, Cooldown Recovery II",
+    "Despair + Dialla's Desire, Heightened Curse, Burning Inscription, Cursed Ground, Decaying Hex"
    ],
    "main_supports": [
-    "Bleed IV",
-    "Bloodlust",
-    "Close Combat II",
+    "Deadly Poison II",
+    "Deliberation",
     "Magnified Area II",
-    "Overextend"
+    "Overextend",
+    "Poison II"
    ],
-   "total_dps": 3377941,
-   "boss_dps": 4905493,
-   "skills": 7,
+   "total_dps": 973359,
+   "boss_dps": 1450278,
+   "skills": 10,
    "boss_skill": null,
    "weapon_sets": false,
-   "triggers": [],
+   "triggers": [
+    "Thundergod's Wrath: Detonate Dead, Snap",
+    "Fire Spell on Melee Hit: Detonate Dead"
+   ],
    "focus": {},
    "off_theme": []
   },
-  "Spirit Walker build": {
-   "prompt": "Spirit Walker build",
+  "Chronomancer build": {
+   "prompt": "Chronomancer build",
    "read_as": [
-    "Ascendancy: Spirit Walker (Huntress)"
+    "Ascendancy: Chronomancer (Sorceress)"
    ],
    "unused": [],
    "relaxed": [],
-   "skill": "Lightning Spear",
-   "ascendancy": "Spirit Walker",
-   "weapon": "Spear",
+   "skill": "Bonestorm",
+   "ascendancy": "Chronomancer",
+   "weapon": "Staff",
    "fails": [
-    "main skill has 0 of 2 supports at act1",
-    "slow: 72 minutes"
+    "early made-up gem: Fire Spell on Melee Hit",
+    "mid made-up gem: Fire Spell on Melee Hit",
+    "end readable: Jewel 61419 Megalomaniac, Diamond: Path of Building reads no mods",
+    "end made-up gem: Fire Spell on Melee Hit",
+    "slow: 68 minutes"
    ],
-   "seconds": 4330,
+   "seconds": 4080,
    "stages": {
     "act1": {
-     "dps": 21,
+     "dps": 1028,
      "items": 9,
      "uniques": [
-      "Tyranny's Grip, Ironhead Spear",
+      "Greymake, Brimmed Helm",
       "Blackbraid, Fur Plate"
      ]
     },
     "act2": {
-     "dps": 1065,
+     "dps": 4896,
      "items": 9,
      "uniques": [
       "Mask of the Sanguimancer, Face Mask",
@@ -256,81 +262,186 @@
      ]
     },
     "act34": {
-     "dps": 7511,
+     "dps": 60153,
      "items": 9,
      "uniques": [
-      "Saitha's Spear, Barbed Spear",
-      "Briskwrap, Rhoahide Coat",
+      "Sire of Shards, Chiming Staff",
+      "Atsak's Sight, Veiled Mask",
       "Deathblow, Doubled Gauntlets"
      ]
     },
     "interludes": {
-     "dps": 18671,
+     "dps": 60648,
+     "items": 9,
+     "uniques": [
+      "Sire of Shards, Chiming Staff",
+      "The Bringer of Rain, Decorated Helm",
+      "Byrnabas, Wide Belt"
+     ]
+    },
+    "early": {
+     "dps": 298002,
+     "items": 12,
+     "uniques": [
+      "Sire of Shards, Chiming Staff",
+      "Maligaro's Virtuosity, Fine Bracers",
+      "Astramentis, Stellar Amulet",
+      "Snakepit, Pearl Ring",
+      "Heart of the Well, Diamond"
+     ]
+    },
+    "mid": {
+     "dps": 1125674,
+     "items": 12,
+     "uniques": [
+      "Loreweave, Ornate Ringmail",
+      "Astramentis, Stellar Amulet",
+      "Heart of the Well, Diamond",
+      "Against the Darkness, Time-Lost Diamond",
+      "Grand Spectrum, Ruby"
+     ]
+    },
+    "end": {
+     "dps": 3531106,
+     "items": 13,
+     "uniques": [
+      "The Coming Calamity, Heroic Armour",
+      "Astramentis, Stellar Amulet",
+      "Mageblood, Utility Belt",
+      "Heart of the Well, Diamond",
+      "Flesh Crucible, Diamond",
+      "Megalomaniac, Diamond",
+      "Against the Darkness, Time-Lost Diamond"
+     ]
+    }
+   },
+   "setups": [
+    "Sniper's Mark + Uhtred's Exodus",
+    "Freezing Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Overabundance II",
+    "Time Snap + Second Wind III, Cooldown Recovery II, Uhtred's Rite, Rapid Casting III, Considered Casting",
+    "Temporal Rift + Second Wind III, Cooldown Recovery II, Potent Exposure, Slow Potency, Oisin's Oath"
+   ],
+   "main_supports": [
+    "Considered Casting",
+    "Deliberation",
+    "Dialla's Desire",
+    "Extraction",
+    "Physical Mastery"
+   ],
+   "total_dps": 3531106,
+   "boss_dps": 3443823,
+   "skills": 11,
+   "boss_skill": null,
+   "weapon_sets": false,
+   "triggers": [
+    "Fire Spell on Melee Hit: Bone Cage, Detonate Dead"
+   ],
+   "focus": {},
+   "off_theme": []
+  },
+  "Tactician build": {
+   "prompt": "Tactician build",
+   "read_as": [
+    "Ascendancy: Tactician (Mercenary)"
+   ],
+   "unused": [],
+   "relaxed": [],
+   "skill": "Rapid Shot",
+   "ascendancy": "Tactician",
+   "weapon": "Crossbow",
+   "fails": [
+    "slow: 85 minutes"
+   ],
+   "seconds": 5076,
+   "stages": {
+    "act1": {
+     "dps": 588,
+     "items": 9,
+     "uniques": [
+      "Mask of the Sanguimancer, Face Mask",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act2": {
+     "dps": 2366,
+     "items": 9,
+     "uniques": [
+      "Mask of the Sanguimancer, Face Mask",
+      "Blackbraid, Fur Plate"
+     ]
+    },
+    "act34": {
+     "dps": 19798,
      "items": 9,
      "uniques": [
       "Deathblow, Doubled Gauntlets"
      ]
     },
+    "interludes": {
+     "dps": 81308,
+     "items": 9,
+     "uniques": [
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
+     ]
+    },
     "early": {
-     "dps": 383244,
+     "dps": 882324,
      "items": 11,
      "uniques": [
-      "Atziri's Contempt, Pronged Spear",
-      "Deathblow, Doubled Gauntlets",
-      "Ingenuity, Utility Belt"
+      "Deathblow, Doubled Gauntlets"
      ]
     },
     "mid": {
-     "dps": 439081,
-     "items": 11,
+     "dps": 1768427,
+     "items": 13,
      "uniques": []
     },
     "end": {
-     "dps": 1152762,
-     "items": 14,
+     "dps": 2671130,
+     "items": 13,
      "uniques": [
       "The Coming Calamity, Heroic Armour",
-      "Grip of Kulemak, Abyssal Signet",
-      "Mageblood, Utility Belt"
+      "Grip of Kulemak, Abyssal Signet"
      ]
     }
    },
    "setups": [
-    "Voltaic Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Overabundance II",
-    "Freezing Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Overabundance II",
-    "Spear Stab + Blazing Critical, Ancestral Call II, Barbs II, Behead II, Practiced Combo",
-    "Spear Throw + Projectile Acceleration III, Spectral Volley, Caltrops, Heightened Charges, Perpetual Charge"
+    "Elemental Conflux + Dialla's Desire, Cold Mastery, Clarity I, Compressed Duration II, Prolonged Duration II",
+    "Wind Dancer + ",
+    "Ghost Dance + Second Wind III, Cooldown Recovery II",
+    "Voltaic Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Overabundance II"
    ],
    "main_supports": [
-    "Caltrops",
-    "Close Combat II",
+    "Deliberation",
     "Elemental Armament II",
     "Elemental Focus",
-    "Magnified Area II"
+    "Fresh Clip II",
+    "Rapid Attacks II"
    ],
-   "total_dps": 1152762,
-   "boss_dps": 1096201,
-   "skills": 11,
-   "boss_skill": "Wind Serpent's Fury",
+   "total_dps": 2671130,
+   "boss_dps": 2897696,
+   "skills": 12,
+   "boss_skill": null,
    "weapon_sets": false,
    "triggers": [],
    "focus": {},
    "off_theme": []
   },
-  "Martial Artist build": {
-   "prompt": "Martial Artist build",
+  "Acolyte of Chayula build": {
+   "prompt": "Acolyte of Chayula build",
    "read_as": [
-    "Ascendancy: Martial Artist (Monk)"
+    "Ascendancy: Acolyte of Chayula (Monk)"
    ],
    "unused": [],
    "relaxed": [],
    "skill": "Flicker Strike",
-   "ascendancy": "Martial Artist",
+   "ascendancy": "Acolyte of Chayula",
    "weapon": "Staff",
    "fails": [
-    "slow: 59 minutes"
+    "slow: 61 minutes"
    ],
-   "seconds": 3550,
+   "seconds": 3683,
    "stages": {
     "act1": {
      "dps": 685,
@@ -341,7 +452,7 @@
      ]
     },
     "act2": {
-     "dps": 846,
+     "dps": 848,
      "items": 9,
      "uniques": [
       "The Blood Thorn, Wrapped Quarterstaff",
@@ -349,15 +460,15 @@
      ]
     },
     "act34": {
-     "dps": 14901,
+     "dps": 20915,
      "items": 9,
      "uniques": [
       "Loreweave, Ornate Ringmail",
-      "Maligaro's Virtuosity, Fine Bracers"
+      "Deathblow, Doubled Gauntlets"
      ]
     },
     "interludes": {
-     "dps": 52687,
+     "dps": 45937,
      "items": 9,
      "uniques": [
       "Loreweave, Ornate Ringmail",
@@ -365,19 +476,20 @@
      ]
     },
     "early": {
-     "dps": 399325,
+     "dps": 411264,
      "items": 11,
      "uniques": [
-      "Perfidy, Knight Armour"
+      "Perfidy, Knight Armour",
+      "Deathblow, Doubled Gauntlets"
      ]
     },
     "mid": {
-     "dps": 2927253,
+     "dps": 2924821,
      "items": 12,
      "uniques": []
     },
     "end": {
-     "dps": 1930234,
+     "dps": 2056075,
      "items": 14,
      "uniques": [
       "Mageblood, Utility Belt"
@@ -386,8 +498,8 @@
    },
    "setups": [
     "Wind Dancer + Uhtred's Exodus",
-    "Ghost Dance + Second Wind III, Cooldown Recovery II, Clarity I, Atziri's Communion, Healing Runes",
-    "Time of Need + Second Wind III, Cooldown Recovery II, Cannibalism II, Clarity I",
+    "Ghost Dance + Second Wind III, Cooldown Recovery II, Clarity I",
+    "Time of Need + Second Wind III, Cooldown Recovery II",
     "Freezing Mark + Charged Mark, Mark for Death II, Mark of Siphoning II, Eternal Mark, Overabundance II"
    ],
    "main_supports": [
@@ -397,9 +509,9 @@
     "Hourglass",
     "Magnified Area II"
    ],
-   "total_dps": 1930234,
-   "boss_dps": 2473377,
-   "skills": 8,
+   "total_dps": 2056075,
+   "boss_dps": 2621316,
+   "skills": 10,
    "boss_skill": null,
    "weapon_sets": false,
    "triggers": [],
@@ -407,5 +519,5 @@
    "off_theme": []
   }
  },
- "updated": "2026-11-24 13:09"
+ "updated": "2026-11-26 15:34"
 }

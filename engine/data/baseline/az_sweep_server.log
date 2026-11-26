@@ -1,41 +1,54 @@
-2026-11-24T09:18:35Z sweep lane 3 of 5: 23 builds in all, 7200s limit each, 6 cpus, -> engine/data/baseline/az_sweep_server.json
-#4 Abyssal Lich build ...
-   Bonestorm Abyssal Lich Staff  3,774,194 dps  2888s  5 issues
+2026-11-26T09:38:44Z sweep lane 0 of 5: 23 builds in all, 7200s limit each, 6 cpus, -> engine/data/baseline/az_sweep_server.json
+#1 Infernalist build ...
+   Bonestorm Infernalist Staff  8,835,987 dps  4345s  5 issues
      - early made-up gem: Fire Spell on Melee Hit
      - mid made-up gem: Fire Spell on Melee Hit
-     - end readable: Jewel 61419 Megalomaniac, Diamond: Path of Building reads no mods
+     - end readable: Jewel 32763 Megalomaniac, Diamond: Path of Building reads no mods
      - end made-up gem: Fire Spell on Melee Hit
-     - slow: 48 minutes
+     - slow: 72 minutes
 
 0 of 1 prompts pass every check (PoB 0.23.1)
     3  made-up gem
     1  readable
     1  slow
-#9 Smith of Kitava build ...
-   Supercharged Slam Smith of Kitava Two Hand Mace  3,377,941 dps  3014s  1 issues
-     - slow: 50 minutes
+#6 Pathfinder build ...
+   Rain of Arrows Pathfinder Bow  973,359 dps  4121s  5 issues
+     - early made-up gem: Fire Spell on Melee Hit
+     - mid made-up gem: Fire Spell on Melee Hit
+     - end readable: Jewel 32763 Megalomaniac, Diamond: Path of Building reads no mods
+     - end made-up gem: Fire Spell on Melee Hit
+     - slow: 69 minutes
 
 0 of 2 prompts pass every check (PoB 0.23.1)
-    3  made-up gem
+    6  made-up gem
+    2  readable
     2  slow
-    1  readable
-#14 Spirit Walker build ...
-   Lightning Spear Spirit Walker Spear  1,152,762 dps  4330s  2 issues
-     - main skill has 0 of 2 supports at act1
-     - slow: 72 minutes
+#11 Chronomancer build ...
+   Bonestorm Chronomancer Staff  3,531,106 dps  4080s  5 issues
+     - early made-up gem: Fire Spell on Melee Hit
+     - mid made-up gem: Fire Spell on Melee Hit
+     - end readable: Jewel 61419 Megalomaniac, Diamond: Path of Building reads no mods
+     - end made-up gem: Fire Spell on Melee Hit
+     - slow: 68 minutes
 
 0 of 3 prompts pass every check (PoB 0.23.1)
-    3  made-up gem
+    9  made-up gem
+    3  readable
     3  slow
-    1  readable
-    1  main skill has 0 of 2 supports at act1
-#19 Martial Artist build ...
-   Flicker Strike Martial Artist Staff  1,930,234 dps  3550s  1 issues
-     - slow: 59 minutes
+#16 Tactician build ...
+   Rapid Shot Tactician Crossbow  2,671,130 dps  5076s  1 issues
+     - slow: 85 minutes
 
 0 of 4 prompts pass every check (PoB 0.23.1)
+    9  made-up gem
     4  slow
-    3  made-up gem
-    1  readable
-    1  main skill has 0 of 2 supports at act1
-2026-11-24T13:09:05Z sweep lane 3 finished
+    3  readable
+#21 Acolyte of Chayula build ...
+   Flicker Strike Acolyte of Chayula Staff  2,056,075 dps  3683s  1 issues
+     - slow: 61 minutes
+
+0 of 5 prompts pass every check (PoB 0.23.1)
+    9  made-up gem
+    5  slow
+    3  readable
+2026-11-26T15:34:57Z sweep lane 0 finished
