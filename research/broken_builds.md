@@ -107,6 +107,32 @@ Week 1 research for the Breaker roadmap (`BREAKER_ROADMAP.md`). Written by the o
 | 5.6 | **Refutation** | Refutation buff | Unconfirmed | **Uptime:** the cooldown recovered while the buff was active | Unknown | **0.5.1:** fixed | https://www.pathofexile.com/forum/view-thread/3949197 | Confirmed |
 | 5.7 | **Twister Spirit Walker, Ice Shot Deadeye** | Twister; Ice Shot | Top of 0.5 starter lists ("untouched by the nerfs") | Not explained | Unknown | None found yet | https://www.mmopixel.com/news/poe-2-0-5-strongest-league-starter-builds-right-now | Unconfirmed |
 
+### How much the 0.4 and 0.5 cases were played (ladder, added 2026-11-26)
+Measured from Wayback Machine copies of poe.ninja's build API (`engine/tools/ninja_archive.py`, data in `engine/data/ninja_archive/`):
+% of all characters poe.ninja indexed that use the piece (`allskills`, unless marked). One snapshot every 1-7 days, so these are
+points, not curves. Early in a league every endgame skill rises as characters level (Comet 4.8% -> 17.7% in Dec 2025 with no patch
+reason), so a fall after a nerf fits the nerf but doesn't prove it. 0.4's snapshots have no key-passive data (4.7 Ancestral Bond,
+4.9 Vaal Pact can't be read there).
+
+| # | Piece | Before the fix | After the fix | Reading |
+|---|---|---|---|---|
+| 4.1 | Walking Calamity (Shaman class) | 11.65 / 12.02% Dec 15 / 17 (Shaman 20.0 / 18.0%) | 8.23% Dec 29, 6.30% Jan 18 (Shaman 12.2 / 9.4%) | Widely played; the only case that turns at its patch date (0.4.0c, Dec 18) |
+| 4.2 | Lunar Blessing | 10.16% Dec 17 | 9.87% Dec 29, 7.83% Jan 18 | Widely played; no fall in the 11 days after its nerf |
+| 4.3 | Amanamu's Tithe | 1.79% Dec 17 | 5.65% Dec 29, 5.68% Jan 18 | Kept rising after the immunity fix: used for something else too |
+| 4.4 | Fury of the Mountain | 8.05% Dec 15, 2.27% Dec 29 | 1.72% Jan 18 (fix Jan 14) | Fell before its fix: likely a campaign skill people left (guess) |
+| 4.5 | Uhtred's Augury / Omen | 0.97 / 1.25% Dec 29 | 2.99 / 3.50% Jan 18 (fix Jan 14) | Niche, and rose across the fix |
+| 4.6 | Cast on Critical / Comet | 15.3 / 7.5% Dec 17 | 35.2 / 28.1% Jan 18 | The league's main build; the Vitality Siphon loop itself isn't in the data |
+| 4.7 | Archmage (keystone not readable) | 1.59% Dec 17 | 11.19% Jan 18 | Rose all league |
+| 4.8 | Arjun's Medal | 2.68% Dec 17 | 2.87% Jan 18 (fix was 0.5) | Niche, steady |
+| 5.1 | Hollow Form / Martial Artist class | fix 0.5.0b May 30: no snapshot before it | 15.45% Jun 7, 12.38% Jun 27 (class 24.8 -> 23.4%) | The most played piece of 0.5 after the fix; Whirling Assault 21.3% Jun 7 |
+| 5.2 | Flicker Strike | - | 3.17% Jun 7 -> 4.40% Jun 27 | Niche, rising |
+| 5.3 | Olroth's Resolve (item) | fix 0.5.1 Jun 4: none before | 0.82% Jun 7 -> 3.98% Jun 27 | Rose after its fix |
+| 5.4 | Sorcery Ward | 2.90% Jun 7, 2.26% Jun 17 | 1.75% Jun 27 (fix 0.5.3, Jun 18) | Already falling before; -23% after |
+| 5.6 | Refutation | fix 0.5.1 Jun 4: none before | 15.20% Jun 7 -> 12.00% Jun 27 | Widely played even after the fix |
+| 5.7 | Twister / Ice Shot (Spirit Walker / Deadeye class) | - | Twister 12.6%, Ice Shot 13.6% Jun 7 (classes 18.2 / 13.6%) | Matches "top of the starter lists" |
+So "broken" by the ladder's measure: 4.1 and 5.1 (plus the meta 4.6, 5.7), played by 10%+ of characters, while 4.3, 4.5, 4.8, 5.2 were
+niche (under ~5%). Most fixes left no visible mark on how much a piece was played.
+
 ---
 
 ## Part 2: grouped by why they broke

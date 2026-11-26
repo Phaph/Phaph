@@ -616,7 +616,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     lines PoB's parser doesn't know stay unsupported (tools/unsupported_lines.py counts them). Also: notes -> changes file on a real past patch's notes (never tried).
 
 54. [x] (2026-11-26: done, BREAKER.md 'Ladder history from the Wayback Machine'; dense for 0.4 and 0.5 only, not used in a grade yet) (added 2026-11-26) Ladder side of the patch practice (PC_TODO 11) without the PC: poe.ninja keeps no old leagues, the Wayback Machine has its API answers.
-    Next use: add measured ladder shares to the 0.4 / 0.5 answer-key cases in research/broken_builds.md before task 51's re-grade.
+    Follow-up done 19:45: research/broken_builds.md 'How much the 0.4 and 0.5 cases were played': 4.1 and 5.1 at 10%+ of the ladder; 4.3, 4.5, 4.8, 5.2 under ~5%. The answer key has no 0.4 / 0.5 cases yet (0.4 scans committed ungraded): a 0.4 case set for task 51 must be written before anyone reads those scans.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
