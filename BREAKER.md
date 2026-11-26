@@ -1022,3 +1022,22 @@ model, and its effect across weapon kinds (where Lodestone compares bows with ma
 - 0.1 (Dec 6 2024) is not comparable: PoB PoE 2's first release was Jan 17 2025.
 So: a first release with the new tree and gems 0-3 days after launch, with new uniques' mods and mechanics filled in over the following 2-4 weeks, and PoB's own early bugs among them
 (an infinite-DPS unique 4 days after 0.5). For Lodestone on 1.0: early flags on new content are likely to include PoB's unfinished or buggy support; re-check every lead against each PoB release that first month.
+
+### Search vs full builds on the current engine (2026-11-26, task 39's last item)
+rank8: fresh class-weapon search of 6 ascendancies on engine 2026-11-24.8 (data/breaker/blind_8.json), then each one's top 3 as full Uber
+builds in 3 slot orders (data/breaker/rank_check_8.json, 54 builds). **The search's #1 is the best full build in 5 of 6 ascendancies** (Nov 22,
+engine 11-21.11, one order each: 2 of 6). The same 5 of 6 holds in each order taken alone (as is, reversed, rotated).
+| Ascendancy | Search #1 | Best full build (best of 3 orders, boss) |
+|---|---|---|
+| Deadeye | Rain of Arrows | Rain of Arrows 3.25M (Ice Shot 1.64M) |
+| Titan | Earthquake | Earthquake 9.60M (Supercharged Slam 4.93M) |
+| Amazon | Wind Serpent's Fury 1.03M | **Fangs of Frost 1.64M** (Lightning Spear 1.43M) |
+| Tactician | Rapid Shot | Rapid Shot 6.32M (Plasma Blast 5.47M) |
+| Martial Artist | Flicker Strike | Flicker Strike 2.59M (Siphoning Strike 1.71M) |
+| Oracle | Flame Breath | Flame Breath 4.95M (Devour 4.53M) |
+- Amazon's miss is real, not order luck: Wind Serpent's Fury is last or second-last in every order (1.03M / 1.03M / 0.97M); the winner
+  changes by order (Fangs of Frost as is, Lightning Spear reversed and rotated). (The 05:55 handoff note called it luck: wrong.)
+- Slot-order spread per skill (max / min - 1) over the 18: 6% to 151%, median 40% (Plasma Blast 151%, Hammer of the Gods 85%).
+  Several #2 / #3 places swap by order; only the #1 is stable.
+- Not measured: whether this holds without class rules (Lodestone's case: weapon_finalists, task 38), and on engine 2026-11-25+ (47, 49,
+  50 changed ascendancy points and ranged scores after this search ran).
