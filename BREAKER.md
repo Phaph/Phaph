@@ -1061,3 +1061,13 @@ heralds and curses included; `allskills` adds supports and lineage gems), item, 
   patch date. The rest show no ladder reaction (Lunar Blessing, Amanamu's Tithe, Uhtred) or a fall that started before (Fury of the Mountain).
 - **Use for Lodestone:** gives the answer key (research/broken_builds.md, task 40 / 51) a measured "how much it was played" for 0.4 and 0.5 cases
   where it says "Unconfirmed", and lets a 1.0 lead be checked against how a similar build did on the ladder. Not used in any grade yet.
+
+### 0.4 cases in the answer key, first grade (2026-11-26, toward task 51)
+Written into data/breaker/answer_key.json (commit before the grade; amendment dated 19:55) before the 0.4 scans (PoB v0.15.0, committed ungraded
+on 11-24/25) were read in this session. Most 0.4 cases are not calculable by PoB: 4.2, 4.4, 4.8 (triggers / free casts, D), 4.3, 4.9 (immunity,
+leech, G), 4.1, 4.6 already listed. Two cases went in: **4.7 Totem Archmage (Ancestral Bond), testable, and 4.5 Uhtred, untestable** (lineage
+supports aren't scanned). Grade on the frozen task-40 engine: **4.7 missed.** The matrix keeps gains of +5% or more, and Ancestral Bond is in no
+skill's row (0 of 155 skills), so it gave under +5% everywhere or wasn't applied; whether v0.15.0's tree has it was not checked (that PoB isn't in
+~/pob_versions). Expected from the case itself: the break was a cost going to zero, which a DPS gain doesn't show.
+**Total now: 2 of 13 graded cases found** (was 2 of 11; same 2: 1.3 by the stack column, 2.2). 0.4's 81 flagged condition / matrix pieces are
+unjudged (verdicts need 0.4 -> 0.5 PoB data: tools/old_verdicts.py). Task 51 re-grades all of it on the engine after 48.

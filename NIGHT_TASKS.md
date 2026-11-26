@@ -606,7 +606,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 50. [x] (2026-11-25: merged; Gemling Rapid Shot +16% boss / +17% map, 4 others no damage change, live as 2026-11-25.2) (added 2026-11-25) Respend the ascendancy at the end of a build, keep it only if the score rises (it must compare: greedy alone lost 65% on one). On finished builds, respending with the old code:
     Titan Earthquake +48% (EHP -11%), Gemling Rapid Shot +19% (EHP -18%), wand Bonestorm Infernalist +19%; most others 0. The points are chosen before gear, tree and supports are final. After 47.
 
-51. [ ] (added 2026-11-26, after Kyle: no overselling Lodestone) Re-grade Lodestone on the old patches (task 40's answer key, tools/grade_old.py) after 47, 49 and 48 are in, frozen engine.
+51. [ ] (2026-11-26 20:15: 0.4 cases added to the key before grading; 4.7 missed on the task-40 engine, now 2 of 13; 0.4 false alarms unjudged: run old_verdicts.py v0.15.0 as part of this) (added 2026-11-26, after Kyle: no overselling Lodestone) Re-grade Lodestone on the old patches (task 40's answer key, tools/grade_old.py) after 47, 49 and 48 are in, frozen engine.
     Until then every fix is unproven as far as finding broken builds goes. Report the hit rate and false alarms as they are, against the same bar.
 
 52. [x] (2026-11-26: done, BREAKER.md 'How long PoB takes'; first release 0-3 days after each patch, fixes for 2-4 weeks) (added 2026-11-26) How long did PoB take on past launches? From the PoB PoE 2 repo history (releases, data commits) for 0.2, 0.3, 0.4, 0.5: hours from patch to the first
