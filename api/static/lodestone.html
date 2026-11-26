@@ -83,6 +83,7 @@ footer { color: var(--faint); font-size: 14px; }
       Building doesn't calculate (copies, charge loops, bugs). Expect it to miss most of what breaks the game.</p>
     <p class="lede">Numbers are from Path of Building. Anything marked <span class="chip s-unconfirmed">unconfirmed</span> is an idea, not a result:
       nobody has checked it in the game.</p>
+    <p class="lede"><a href="/lodestone/how-it-works" style="color:var(--brass)">How Lodestone works: the steps, the checks and its track record →</a></p>
     <p class="small" id="stamp">Loading…</p>
   </header>
 
@@ -127,7 +128,7 @@ footer { color: var(--faint); font-size: 14px; }
 </div>
 <script>
 (() => {
-  const PAGE_VERSION = "2026-11-24.1";
+  const PAGE_VERSION = "2026-11-26.1";
   const API = /(^|\.)phaphofbuilding\.com$|\.pages\.dev$/.test(location.hostname) && !location.hostname.startsWith("api.")
     ? "https://api.phaphofbuilding.com" : "";
   const STATUS = { unconfirmed: "unconfirmed", to_test: "to test", confirmed: "confirmed", known: "rediscovered", dead: "explained away", fixed: "bug fixed" };
