@@ -1,0 +1,377 @@
+<title>How Lodestone Hunts</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a long field manual. Hero with a live sieve (sparks fed through gates), then the hunt as a numbered
+   sequence of stations, worked cases, the iteration log, the self-test, and the limits. Lodestone = magnetite:
+   iron-blue accent, brass for numbers, ember for what failed. */
+:root {
+  --ground: #f2f0eb; --slate: #e6e3dc; --rule: #c9c4b8; --ink: #1f2124; --muted: #636259;
+  --iron: #2f5d78; --brass: #94691c; --ember: #a8462a; --moss: #4b7a3b; --spark: #2f7fa8;
+  --display: "IM Fell English SC", "Iowan Old Style", Georgia, serif;
+  --body: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --ground: #101315; --slate: #181c20; --rule: #2d343b; --ink: #e4e2dc; --muted: #9a9890;
+  --iron: #7fb4d2; --brass: #d0a55a; --ember: #df7d5a; --moss: #93c27f; --spark: #8fd0f2; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --ground: #101315; --slate: #181c20; --rule: #2d343b; --ink: #e4e2dc; --muted: #9a9890;
+  --iron: #7fb4d2; --brass: #d0a55a; --ember: #df7d5a; --moss: #93c27f; --spark: #8fd0f2; color-scheme: dark }
+
+body { background: var(--ground); color: var(--ink); font-family: var(--body); font-size: 15.5px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.page { max-width: 1060px; margin: 0 auto; padding-block: 36px 72px; display: grid; gap: 72px; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1; }
+h2 { font-size: clamp(1.6rem, 3.4vw, 2.2rem); line-height: 1.1; }
+h3 { font-size: 1.25rem; }
+p { margin: 0; max-width: 66ch; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--iron); }
+.muted { color: var(--muted); }
+section { display: grid; gap: 22px; }
+.head { display: grid; gap: 8px; }
+code, .mono { font-family: var(--mono); font-size: .82em; }
+
+/* hero */
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: center; }
+.hero .copy { display: grid; gap: 16px; }
+.hero .lede { font-size: 1.1rem; }
+.sieve { background: var(--slate); border: 1px solid var(--rule); border-radius: 6px; padding: 14px; display: grid; gap: 8px; }
+.sieve canvas { width: 100%; height: 260px; display: block; }
+.sieve .labels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; font-family: var(--mono); font-size: 10.5px; color: var(--muted); text-align: center; }
+.sieve small { font-size: 12px; color: var(--muted); }
+
+/* shapes */
+.shapes { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.shape { border: 1px solid var(--rule); border-radius: 4px; padding: 12px 14px; display: grid; gap: 4px; background: var(--slate); }
+.shape b { font-size: .95rem; }
+.shape span { font-size: .84rem; color: var(--muted); }
+.tag { justify-self: start; font-family: var(--mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; padding: 1px 7px; border-radius: 999px; border: 1px solid currentColor; }
+.tag.y { color: var(--moss); } .tag.p { color: var(--brass); } .tag.n { color: var(--ember); }
+
+/* the hunt */
+.rail { display: grid; gap: 0; position: relative; }
+.station { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 18px; position: relative; padding-bottom: 30px; }
+.station:last-child { padding-bottom: 0; }
+.station::before { content: ""; position: absolute; left: 27px; top: 50px; bottom: 0; width: 2px; background: var(--rule); }
+.station:last-child::before { display: none; }
+.station::after { content: ""; position: absolute; left: 24px; top: 50px; width: 8px; height: 8px; border-radius: 50%; background: var(--spark);
+  box-shadow: 0 0 10px var(--spark); animation: fall 3.2s linear infinite; animation-delay: var(--d, 0s); }
+.station:last-child::after { display: none; }
+@keyframes fall { from { top: 50px; opacity: 0 } 15% { opacity: 1 } 85% { opacity: 1 } to { top: calc(100% - 6px); opacity: 0 } }
+.num { width: 56px; height: 50px; display: grid; place-items: center; font-family: var(--display); font-size: 1.7rem; color: var(--iron);
+  border: 1px solid var(--rule); border-radius: 4px; background: var(--slate); }
+.body { display: grid; gap: 10px; min-width: 0; }
+.probes { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.probe { border: 1px solid var(--rule); border-radius: 4px; padding: 12px; display: grid; gap: 6px; background: var(--slate); min-width: 0; }
+.probe b { font-size: .92rem; }
+.probe p { font-size: .85rem; color: var(--muted); }
+.formula { font-family: var(--mono); font-size: .78rem; background: var(--ground); border: 1px solid var(--rule); border-radius: 3px; padding: 6px 8px; overflow-x: auto; white-space: nowrap; color: var(--iron); }
+.whet { border-left: 3px solid var(--brass); padding: 8px 12px; background: var(--slate); font-size: .88rem; }
+.whet b { color: var(--brass); }
+.verdicts { display: flex; flex-wrap: wrap; gap: 8px; }
+.v { display: grid; gap: 0; border: 1px solid var(--rule); border-radius: 4px; padding: 8px 12px; background: var(--slate); min-width: 120px; }
+.v strong { font-family: var(--display); font-weight: 400; font-size: 1.8rem; line-height: 1.1; color: var(--c); font-variant-numeric: tabular-nums; }
+.v span { font-size: .8rem; color: var(--muted); }
+
+/* cases */
+.cases { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 14px; }
+.case { border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; display: grid; background: var(--slate); }
+.case header { padding: 12px 14px; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; border-bottom: 1px solid var(--rule); }
+.case header b { font-size: 1rem; }
+.case ol { margin: 0; padding: 12px 14px 14px 32px; display: grid; gap: 6px; font-size: .86rem; }
+.case ol li::marker { font-family: var(--mono); color: var(--iron); }
+.case .end { padding: 10px 14px; font-size: .84rem; border-top: 1px solid var(--rule); color: var(--muted); }
+
+/* iteration log */
+.log { display: grid; gap: 0; border-top: 1px solid var(--rule); }
+.log .row { display: grid; grid-template-columns: 88px minmax(0, 1fr) minmax(0, 1.25fr); gap: 16px; padding: 12px 0; border-bottom: 1px solid var(--rule); font-size: .88rem; }
+.log .date { font-family: var(--mono); font-size: .78rem; color: var(--iron); padding-top: 2px; }
+.log .looked { font-weight: 600; }
+.log .was { color: var(--muted); }
+
+/* self test */
+.grade { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1px; background: var(--rule); border: 1px solid var(--rule); border-radius: 6px; overflow: hidden; }
+.cell { background: var(--slate); padding: 16px; display: grid; gap: 4px; align-content: start; }
+.cell strong { font-family: var(--display); font-weight: 400; font-size: 2.3rem; line-height: 1; color: var(--c, var(--brass)); font-variant-numeric: tabular-nums; }
+.cell b { font-size: .9rem; }
+.cell span { font-size: .82rem; color: var(--muted); }
+.bar { height: 8px; border-radius: 999px; background: var(--ground); border: 1px solid var(--rule); overflow: hidden; }
+.bar i { display: block; height: 100%; background: var(--c, var(--brass)); width: var(--w); }
+
+/* launch */
+.launch { display: flex; flex-wrap: wrap; gap: 0; row-gap: 12px; align-items: stretch; }
+.lstep { flex: 1 1 150px; min-width: 0; border: 1px solid var(--rule); border-top: 3px solid var(--iron); border-radius: 4px; padding: 10px 12px; background: var(--slate); display: grid; gap: 3px; align-content: start; }
+.lstep b { font-size: .9rem; } .lstep span { font-size: .8rem; color: var(--muted); }
+.wire { flex: 0 0 26px; align-self: center; height: 2px; background: var(--rule); position: relative; }
+.wire::after { content: ""; position: absolute; top: -3px; width: 8px; height: 8px; border-radius: 50%; background: var(--spark); box-shadow: 0 0 8px var(--spark); animation: run 2.2s linear infinite; animation-delay: var(--d, 0s); }
+@keyframes run { from { left: -4px; opacity: 0 } 15% { opacity: 1 } 85% { opacity: 1 } to { left: calc(100% - 4px); opacity: 0 } }
+
+/* limits */
+.tbl { overflow-x: auto; border: 1px solid var(--rule); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .88rem; }
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; background: var(--slate); }
+tr:last-child td { border-bottom: 0; }
+footer { font-size: .8rem; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; }
+
+@media (max-width: 780px) {
+  .hero { grid-template-columns: minmax(0, 1fr); }
+  .log .row { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .station { grid-template-columns: 44px minmax(0, 1fr); gap: 12px; }
+  .num { width: 44px; height: 44px; font-size: 1.4rem; }
+  .station::before { left: 21px; top: 44px; } .station::after { left: 18px; }
+  .launch { flex-direction: column; }
+  .wire { flex: 0 0 22px; width: 2px; height: auto; }
+  .wire::after { left: -3px; animation-name: drop; }
+  @keyframes drop { from { top: -4px; opacity: 0 } 15% { opacity: 1 } 85% { opacity: 1 } to { top: calc(100% - 4px); opacity: 0 } }
+}
+@media (prefers-reduced-motion: reduce) { .station::after, .wire::after { animation: none; display: none; } }
+</style>
+
+<div class="page">
+
+<section class="hero">
+  <div class="copy">
+    <div class="eyebrow">Path of Exile 2 · Lodestone</div>
+    <h1>How Lodestone hunts for broken builds</h1>
+    <p class="lede">Most build tools find the best version of a build people already play. Lodestone looks for the places where the game's maths breaks: two pieces that multiply instead of add, a stat that feeds damage without a ceiling, a condition that is always true against a boss.</p>
+    <p class="muted">It tests every skill against every condition, unique and keystone it can, keeps only what is far out of line, then builds each suspect for real with Whetstone, our build optimiser, and tries to explain it away.</p>
+  </div>
+  <figure class="sieve" style="margin:0">
+    <canvas id="sieve" aria-label="Animation: many tries enter on the left, each gate lets fewer through, and few reach the end"></canvas>
+    <div class="labels"><span>every try</span><span>far out of line</span><span>beats its family</span><span>holds in a full build</span><span>survives the checks</span></div>
+    <small>Illustration of the sieve, not real counts. The real counts are further down.</small>
+  </figure>
+</section>
+
+<section>
+  <div class="head">
+    <div class="eyebrow">What it looks for</div>
+    <h2>Every broken build so far had one of these shapes</h2>
+    <p class="muted">We sorted every broken build from PoE 2's patches 0.1 to 0.5 by why it broke. The common thread: something multiplies instead of adds. Lodestone is built around these ten shapes. The tag says whether Path of Building (PoB), the build calculator everything runs on, can work it out.</p>
+  </div>
+  <div class="shapes">
+    <div class="shape"><span class="tag y">PoB calculates it</span><b>A "more" per unit of something</b><span>Lightning Conduit per 5% Shock, Frenzy consumed for more damage</span></div>
+    <div class="shape"><span class="tag y">PoB calculates it</span><b>One stat feeds damage and stacks</b><span>Archmage and mana, Gemling attributes, life stacking</span></div>
+    <div class="shape"><span class="tag y">PoB calculates it</span><b>One stat feeds damage and defence</b><span>The most-nerfed shape: mana, life, evasion paying twice</span></div>
+    <div class="shape"><span class="tag p">Our estimate</span><b>Trigger loops, free casts</b><span>Cast on Freeze, Cast on Shock, cooldown bypasses</span></div>
+    <div class="shape"><span class="tag p">Our estimate</span><b>Counts without a cap</b><span>Spirits per cast, Spark projectiles, overlapping explosions</span></div>
+    <div class="shape"><span class="tag n">PoB can't</span><b>Chain reactions</b><span>A kill or ailment that sets off more of the same</span></div>
+    <div class="shape"><span class="tag p">Partly</span><b>A defence reaching 100%</b><span>Block doubling, evade everything, immunity</span></div>
+    <div class="shape"><span class="tag y">PoB calculates it</span><b>A condition that's always on vs bosses</b><span>Tactician vs Immobilised, "after 0.5 s" against a standing boss</span></div>
+    <div class="shape"><span class="tag y">PoB calculates it</span><b>Two pieces together</b><span>Tangletongue with Amazon, Rathpith with life uniques</span></div>
+    <div class="shape"><span class="tag n">PoB can't</span><b>Plain game bugs</b><span>Damage counted twice, supports applying where they shouldn't</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <div class="eyebrow">The hunt, in order</div>
+    <h2>Seven steps from game data to a verdict</h2>
+  </div>
+  <div class="rail">
+    <div class="station" style="--d:0s"><div class="num">1</div><div class="body">
+      <h3>Read the text</h3>
+      <p>Every gem, unique and passive is read for wording that has broken the game before: a "more" per unit, a count with no maximum, a cost that can reach zero, a trigger, "instead of". On patch day the scan compares the new text with the old and lists only what changed, because new content breaks first.</p>
+      <div class="formula">text_scan.py scan · text_scan.py diff OLD NEW</div>
+    </div></div>
+
+    <div class="station" style="--d:.4s"><div class="num">2</div><div class="body">
+      <h3>Build every skill, quickly</h3>
+      <p>All 166 skills that can be a main skill get a quick build: crafted gear and the best supports, no passive tree. This is the same quick build Whetstone's search uses to compare candidates. It is done once for the whole game and again per ascendancy, with any class allowed to use any weapon.</p>
+      <div class="whet"><b>From Whetstone:</b> the gear crafting, support search and Path of Building calculations. Each recalculation takes about 20 ms, so a scan is hundreds of thousands of them.</div>
+    </div></div>
+
+    <div class="station" style="--d:.8s"><div class="num">3</div><div class="body">
+      <h3>Poke each build, one change at a time</h3>
+      <p>Each probe changes one thing and measures damage against a pinnacle boss. A big jump on its own means little. What matters is a jump far bigger than the same change gives other skills.</p>
+      <div class="probes">
+        <div class="probe"><b>Conditions</b><p>Each of the 56 enemy states PoB knows (Shocked, Frozen, Armour Broken, Poisoned...) switched on alone.</p></div>
+        <div class="probe"><b>Unique and keystone matrix</b><p>Every unique (best rolls) and keystone worn alone on every skill. Weapon uniques go in the hand that holds them.</p></div>
+        <div class="probe"><b>Stacks</b><p>Each piece tried again on top of a pile of one stat, because stacking pieces pay nothing until the stat is piled up.</p><div class="formula">synergy = D(piece+pile)·D(base) / (D(piece)·D(pile))</div></div>
+        <div class="probe"><b>Scalers</b><p>One stat at 1x, 2x, 4x. Damage that grows faster than the stat is a red flag.</p><div class="formula">elasticity &gt; 1</div></div>
+        <div class="probe"><b>Pairs</b><p>Two pieces together against each alone.</p><div class="formula">synergy = (1+g(a+b)) / ((1+g(a))·(1+g(b)))</div></div>
+        <div class="probe"><b>Combos</b><p>A setup skill puts the boss in a state, a payoff skill cashes it in. Scored as it plays: time to set up, then the window.</p><div class="formula">DPS = (T·setup + 12·payoff) / (T + 12)</div></div>
+      </div>
+    </div></div>
+
+    <div class="station" style="--d:1.2s"><div class="num">4</div><div class="body">
+      <h3>Compare with the skill's own family</h3>
+      <p>A crossbow unique that helps every crossbow skill is best-in-slot, not broken. So each gain is compared with skills of the same kind: same weapon for attacks, a shared damage type. Pieces strong on 6 or more skills go on a separate best-in-slot list. On one run this cut 141 flags to 17 one-skill interactions.</p>
+    </div></div>
+
+    <div class="station" style="--d:1.6s"><div class="num">5</div><div class="body">
+      <h3>Build the suspect for real</h3>
+      <p>A lead becomes two full Uber Endgame builds: one locked to the piece, one without it. Each is a complete Whetstone build with passive tree, gear, jewels, spirit and boss setup, and every damage source counted. Each side is built three times with the gear slots in a different order, because the same build can land up to about 2x apart on luck alone. The lead has to win in all three.</p>
+      <div class="whet"><b>From Whetstone:</b> the whole Uber Endgame stage, so the damage number is the same one a player's guide shows.</div>
+    </div></div>
+
+    <div class="station" style="--d:2s"><div class="num">6</div><div class="body">
+      <h3>Try to explain it away</h3>
+      <p>Most leads so far were our own mistakes, so this step comes before anyone hears about one.</p>
+      <div class="probes">
+        <div class="probe"><b>Is it our model?</b><p>Does the number rest on something PoB doesn't limit, like a corpse a boss never leaves, a cast rate, or minions counted twice? If so, the model gets fixed and the lead dies.</p></div>
+        <div class="probe"><b>Is it already known?</b><p>How many players on the poe.ninja ladder already run it. A known build is a rediscovery, not a find.</p></div>
+        <div class="probe"><b>Outside evidence</b><p>Game data, the wiki, guides and forum posts. We can't test in game, so what none of these settles stays "PoB says, not confirmed".</p></div>
+        <div class="probe"><b>Nerf risk</b><p>Bugs and extreme outliers get hotfixed in days; a multiplier usually lasts until the next patch.</p></div>
+      </div>
+    </div></div>
+
+    <div class="station"><div class="num">7</div><div class="body">
+      <h3>A verdict for every lead</h3>
+      <p>The 23 leads Lodestone has raised so far, by verdict:</p>
+      <div class="verdicts">
+        <div class="v" style="--c:var(--ember)"><strong>8</strong><span>dead in a full build</span></div>
+        <div class="v" style="--c:var(--brass)"><strong>7</strong><span>unconfirmed</span></div>
+        <div class="v" style="--c:var(--iron)"><strong>4</strong><span>already known</span></div>
+        <div class="v" style="--c:var(--moss)"><strong>4</strong><span>our bugs, fixed</span></div>
+        <div class="v" style="--c:var(--muted)"><strong>0</strong><span>new, confirmed</span></div>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <div class="eyebrow">Four real cases</div>
+    <h2>How leads actually went</h2>
+  </div>
+  <div class="cases">
+    <article class="case"><header><b>Lightning Conduit vs Shocked</b><span class="tag p">known</span></header>
+      <ol><li>Condition scan: every skill gains about +20% against a Shocked enemy.</li><li>Lightning Conduit gains +68%, far above the rest.</li><li>That was a real broken build in patch 0.1, nerfed since.</li></ol>
+      <div class="end">Found blind, with no hint. It showed the detector's shape works.</div></article>
+    <article class="case"><header><b>Hexblast winning every search</b><span class="tag y">fixed</span></header>
+      <ol><li>Hexblast topped search after search.</li><li>Cause: PoB counted it cast back to back (2.1 casts a second), but it can only detonate a curse that is half expired: about once every 6 seconds per target.</li><li>We added a usage limit for how often it can really go off. A saved Hexblast build fell from 4.34M to 352K.</li></ol>
+      <div class="end">Not a find. The model was wrong, and now every Hexblast score is fairer.</div></article>
+    <article class="case"><header><b>Leopold's Applause, penetration below 0</b><span class="tag n">dead</span></header>
+      <ol><li>Pair scan: +38%.</li><li>Worn for real in place of the slot's item: +4%.</li><li>Full builds, 3 orders each side: -1% best against best.</li></ol>
+      <div class="end">The early number stacked the unique on top of the slot's own item. Fixing that killed the lead.</div></article>
+    <article class="case"><header><b>Bonestorm Lich vs Comet Lich</b><span class="tag p">known</span></header>
+      <ol><li>Search: Bonestorm well ahead.</li><li>Fixed first: Bonestorm's release time (it can't fire every frame).</li><li>Full builds: 10.5M vs 5.8M boss DPS, ahead in all 3 orders (+18%, +82%, +69%).</li></ol>
+      <div class="end">Real on our model, but about a third of Abyssal Liches on the ladder already play it.</div></article>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <div class="eyebrow">Iterations</div>
+    <h2>Each false lead taught the model something</h2>
+    <p class="muted">Lodestone hunts for numbers that are too big, so it finds its own mistakes first. Each fix below came from a lead that looked broken.</p>
+  </div>
+  <div class="log">
+    <div class="row"><span class="date">Nov 18</span><span class="looked">Hexblast wins everything</span><span class="was">PoB let it go off back to back; it needs a half-expired curse: usage limit added</span></div>
+    <div class="row"><span class="date">Nov 19</span><span class="looked">Detonate Dead wins boss searches</span><span class="was">It needs corpses a boss doesn't leave: capped against bosses</span></div>
+    <div class="row"><span class="date">Nov 22</span><span class="looked">Minion skills far ahead</span><span class="was">Temporary minions counted at 30 at once: counted as they really are</span></div>
+    <div class="row"><span class="date">Nov 23</span><span class="looked">Bonestorm far ahead</span><span class="was">Fired with no release time: real volley rate used</span></div>
+    <div class="row"><span class="date">Nov 23</span><span class="looked">Several builds' totals too high</span><span class="was">Full DPS added up skills never used together: fixed, every source listed</span></div>
+    <div class="row"><span class="date">Nov 24</span><span class="looked">Bows and one-handers read low</span><span class="was">Nothing filled the off-hand (no quiver, focus or shield): filled now</span></div>
+    <div class="row"><span class="date">Nov 24</span><span class="looked">Same build, up to 4x apart</span><span class="was">Gear order luck: uniques re-checked at the end, and leads need all three orders</span></div>
+    <div class="row"><span class="date">Nov 25</span><span class="looked">Some ascendancies score identically</span><span class="was">Choice passives never tried, one ascendancy took none, leftover points unspent: fixed</span></div>
+    <div class="row"><span class="date">Nov 26</span><span class="looked">Ranged attacks flattered</span><span class="was">Every enemy scored at 2 m: projectile skills now at 4 m (an estimate)</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="head">
+    <div class="eyebrow">Checking the checker</div>
+    <h2>Does it find broken builds we already know about?</h2>
+    <p class="muted">We loaded Path of Building as it was for patches 0.1 to 0.4, wrote down the broken builds each patch really had, and ran the scans blind. The bar, set before the run: find at least half, with at most one false alarm per real find.</p>
+  </div>
+  <div class="grade">
+    <div class="cell" style="--c:var(--ember)"><strong>2 of 11</strong><b>known broken builds found</b><span>Bar: at least half.</span><div class="bar"><i style="--w:18%"></i></div></div>
+    <div class="cell" style="--c:var(--ember)"><strong>~12</strong><b>false alarms per real find</b><span>11 real against 129 false over 0.1-0.3. Bar: 1.</span></div>
+    <div class="cell" style="--c:var(--brass)"><strong>3 of 20</strong><b>ladder skills found blind</b><span>poe.ninja's 20 most played main skills, found in some ascendancy's top 5 without seeing the ladder (Nov 21).</span></div>
+    <div class="cell" style="--c:var(--brass)"><strong>up to ~2x</strong><b>build-to-build noise</b><span>The same build with gear placed in a different order. Edges smaller than that are hard to see.</span></div>
+  </div>
+  <p>It failed the bar, so what Lodestone claims was narrowed the same day. The fixes since then have not been graded yet. A re-grade on the same answer key will show whether they help.</p>
+</section>
+
+<section>
+  <div class="head">
+    <div class="eyebrow">Launch day, PoE 2 1.0 on Dec 11</div>
+    <h2>From patch notes to ranked leads</h2>
+  </div>
+  <div class="launch">
+    <div class="lstep"><b>Patch notes</b><span>GGG posts them a few days before</span></div>
+    <div class="wire" style="--d:0s"></div>
+    <div class="lstep"><b>Changes file</b><span>Every number and line change written as data</span></div>
+    <div class="wire" style="--d:.4s"></div>
+    <div class="lstep"><b>Patched game</b><span>Applied to today's data, scanned again</span></div>
+    <div class="wire" style="--d:.8s"></div>
+    <div class="lstep"><b>Diff</b><span>What moved, new content first</span></div>
+    <div class="wire" style="--d:1.2s"></div>
+    <div class="lstep"><b>Full-build bar</b><span>Steps 5 and 6 on the movers</span></div>
+    <div class="wire" style="--d:1.6s"></div>
+    <div class="lstep"><b>Real 1.0 data</b><span>Re-checked once PoB adds 1.0</span></div>
+  </div>
+  <p class="muted">Rehearsal: 24 minutes from changes file to scan results on 6 cores. A made-up patch (Earthquake +20%, a line on a unique, a line on a skill) came out with all three changes and nothing else. New 1.0 mechanics that PoB doesn't model yet need our own theory until it does.</p>
+</section>
+
+<section>
+  <div class="head">
+    <div class="eyebrow">Limits</div>
+    <h2>What it can and can't find</h2>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Kind of broken</th><th>Can Lodestone find it?</th></tr></thead>
+    <tbody>
+      <tr><td>Multipliers stacking, penetration below 0, one stat scaling without limit</td><td>Yes, on its own. PoB calculates these exactly.</td></tr>
+      <tr><td>Trigger loops, free casts</td><td>With our own trigger-rate estimates. Rough.</td></tr>
+      <tr><td>Chain reactions, overlapping hits</td><td>Likely ones, with our own estimates.</td></tr>
+      <tr><td>Combos of 3 or more pieces</td><td>Some, through wider overnight searches. It can't try everything.</td></tr>
+      <tr><td>Game bugs</td><td>Mostly no. It can only flag suspicious spots.</td></tr>
+      <tr><td>Brand-new mechanics</td><td>Not until PoB supports them.</td></tr>
+      <tr><td>Anything in game</td><td>Nothing here is tested in game. Every number is Path of Building's model.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<footer>Numbers from Lodestone's own records (BREAKER.md, leads.json, the Nov 24 old-patch grade), as of Nov 26, 2026. Lodestone runs on the same engine as Whetstone.</footer>
+</div>
+
+<script>
+(function () {
+  const cv = document.getElementById('sieve'); if (!cv) return;
+  const ctx = cv.getContext('2d');
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let W = 0, H = 0, dpr = 1;
+  function size() { dpr = window.devicePixelRatio || 1; W = cv.clientWidth; H = cv.clientHeight; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0); }
+  size(); addEventListener('resize', size);
+  const col = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+  // gates at fifths; the share that passes each gate (illustrative)
+  const pass = [1, 0.22, 0.35, 0.35, 0.3];
+  const ps = [];
+  function spawn() { ps.push({ x: 0, y: 20 + Math.random() * (H - 40), vy: 0, gate: 0, out: false, a: 1, keep: Math.random() }); }
+  function gx(i) { return W * (i + 0.5) / 5; }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    const rule = col('--rule'), spark = col('--spark'), ember = col('--ember'), brass = col('--brass');
+    for (let i = 1; i < 5; i++) { ctx.fillStyle = rule; ctx.fillRect(gx(i) - 1, 8, 2, H - 16); }
+    for (const p of ps) {
+      ctx.globalAlpha = p.a; ctx.beginPath(); ctx.arc(p.x, p.y, p.gate >= 4 && !p.out ? 4.5 : 2.6, 0, 7);
+      ctx.fillStyle = p.out ? ember : (p.gate >= 4 ? brass : spark); ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+  }
+  function step() {
+    if (Math.random() < 0.55) spawn();
+    for (const p of ps) {
+      if (p.out) { p.y += p.vy; p.vy += 0.12; p.a -= 0.025; continue; }
+      p.x += 1.6;
+      const next = p.gate + 1;
+      if (next < 5 && p.x >= gx(next)) {
+        const share = pass.slice(1, next + 1).reduce((a, b) => a * b, 1);
+        if (p.keep > share) { p.out = true; p.vy = -0.6; } else p.gate = next;
+      }
+      if (p.x > W - 6) p.a -= 0.04;
+    }
+    for (let i = ps.length - 1; i >= 0; i--) if (ps[i].a <= 0 || ps[i].y > H + 10) ps.splice(i, 1);
+    draw(); requestAnimationFrame(step);
+  }
+  if (reduce) { for (let k = 0; k < 400; k++) { if (Math.random() < 0.55) spawn(); for (const p of ps) { if (!p.out) { p.x += 1.6; const n = p.gate + 1; if (n < 5 && p.x >= gx(n)) { const s = pass.slice(1, n + 1).reduce((a, b) => a * b, 1); if (p.keep > s) p.out = true; else p.gate = n; } } } } for (let i = ps.length - 1; i >= 0; i--) if (ps[i].out || ps[i].x > W) ps.splice(i, 1); draw(); }
+  else step();
+})();
+</script>
