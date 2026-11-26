@@ -37,6 +37,7 @@ from optimize import (CLEAR_FIELDS, MINION_AILMENT_FIELDS, MODE_CONFIG, clear_sc
 from goals import GOAL_FIELDS, GOAL_LABELS, mobility_skills
 from pob import PoB, PoBError
 from rating import rate
+from ascendancy import respend
 from defence import fill_spare_spirit, optimise_defence
 from goals import weights as goal_weights
 from spirit import optimise_spirit
@@ -325,6 +326,10 @@ def build_stage(spec: dict, stage_key: str, log=lambda *a: None, progress=None) 
             pob.auto_config(focus)
         gear = craft_gear(pob, stage, **weapon, def_weight=dw_gear, mode=focus, metric=focus_metric, goals=goals,
                           log=quiet, attr_weight=0.25)   # a point short costs like 25% damage: usable first
+        # The ascendancy was chosen before gear, supports and buffs: spend it again, kept only if the build is better.
+        if not light and respend(pob, tree, stage.ascendancy_points, STAT_FIELDS + CLEAR_FIELDS + SPLIT_FIELDS
+                                 + ["BleedDPS", "PoisonDPS", "IgniteDPS"] + MINION_AILMENT_FIELDS, focus_metric, dw_tree, goals, log=quiet):
+            report("tree", "Ascendancy points spent again for the finished build")
         if focus != "mapping":
             pob.set_config(**MODE_CONFIG["mapping"])
             pob.auto_config("mapping")

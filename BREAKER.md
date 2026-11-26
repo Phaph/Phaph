@@ -989,3 +989,22 @@ the log prints a lead once both sides are built.)
 - nerf_risk added to the 11 live leads in leads.json, by the mechanism groups of research/broken_builds.md (Claude's judgement; not shown on the page).
 - Wind Serpent's Fury vs Lightning Spear (Amazon): 1.03M vs 1.43M (-28%; -28 / -11 / -27% by order). Dead. All 8 leads are done: ahead in every order: Dark Effigy + poison (weak build), Bonestorm vs Comet
   (known), Rain of Arrows vs Ice Shot (our estimate); nothing new to announce. Results: data/breaker/lead_builds_orders.
+
+**Per-ascendancy condition scans without class rules (task 37, read 2026-11-25 at 18 of 23, engine 203271a): no cross-class lead, and the scan is partly blind.**
+- New view in tools/asc_read.py takes out what an ascendancy does for every skill. What is left is under x1.6: Blood Mage on spells (Gore Spike and friends, x1.3-1.6), Gemling on attacks
+  (Integrated Efficiency, x1.3-1.5), Lich on Profane Ritual (x1.33), Tactician on Dark Effigy (x1.39; Cannons, Ready!, a totem passive). Amazon's open weakness is +50% on
+  nearly everything, its usual effect. Nothing over the search's own noise.
+- Why it can't find more: 5 of 19 scans took an ascendancy passive on few or no skills (Titan 0 of 158, Abyssal Lich 0, Warbringer 3, Tactician 14, Disciple 28). Passives are taken on plain gain, so one that needs
+  a condition is never in. And three real bugs under it (task 47), also in guides: choice options were never tried, Abyssal Lich could take nothing, points PoB sees no gain for stayed unspent.
+- So "no cross-class lead" is not shown: earlier per-ascendancy numbers (blind tests included) compare ascendancies with missing passives.
+
+**Ascendancy points fix (task 47, live as 2026-11-25.1).** Choice options are tried (Gemling implants, Point Blank), Abyssal Lich can spend points, leftovers go to passives that cost nothing (marked filler).
+- Full builds, boss main -> branch, orders as is / reversed / rotated: Gemling Rapid Shot 5.21 / 4.14 / 4.78M -> 4.42 / 4.63 / 5.42M (map up in all three); Titan Earthquake 3.30 / 4.29 / 4.42M -> 4.12 / 4.29 / 4.15M;
+  one order only: Deadeye Rapid Shot 4.76 -> 5.76M, Abyssal Lich Bonestorm 6.93 -> 5.80M, control Invoker Ice Shot identical.
+- Paired (only the ascendancy respent on 37 finished builds): 1 loses damage, with the old code too. The fix itself: Deadeye +20% (Point Blank, at PoB's 2 m), Gemling about +13%, Abyssal Lich 0% damage and +12% EHP.
+- The lower full builds are gear luck: Abyssal's passives cost 0%; Titan rotated, passives swapped: +45% on main's build, -35% on the branch's. Merged with Titan 3% under the gate for that reason.
+- Not measured: how much the blind tests move (48).
+
+**Ascendancy points spent again on the finished build (task 50, live as 2026-11-25.2).** Kept only if the score rises, EHP stays over 90%, no attribute falls short and spirit fits. 5 full Uber builds, same slot order,
+only this step differs: Gemling Rapid Shot 4.42M -> 5.12M boss (+16%), 4.03M -> 4.71M map (+17%), EHP same; Deadeye Rapid Shot, Titan Earthquake, Invoker Ice Shot no change in damage or EHP; Abyssal Lich Bonestorm
+damage same, EHP +1.6%, chaos resistance 75 -> 69. One build per side: it shows no loss on these five; the typical gain isn't measured.

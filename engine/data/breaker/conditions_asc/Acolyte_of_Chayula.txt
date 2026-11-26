@@ -1,16 +1,48 @@
-16 skills scanned; 91 skill x condition gains of 5%+
+166 skills scanned; 976 skill x condition gains of 5%+
 Payoffs (gain well above what that condition gives every skill): combo halves, and Breaker leads if huge:
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Electrocuted
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Frozen
+  +  101% (+101% above usual)  Siege Cascade                when enemy is HeavyStunned
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Immobilised
+  +  101% (+101% above usual)  Siege Cascade                when enemy is Pinned
+  +  100% (+100% above usual)  Dark Effigy                  when enemy is Poisoned
+  +   96% (+96% above usual)  Skeletal Reaver              when enemy is ArmourBroken
+  +   75% (+75% above usual)  Wolf Pack                    when enemy is ArmourBroken
+  +   64% (+64% above usual)  Skeletal Sniper              when enemy is ArmourBroken
+  +   59% (+59% above usual)  Raise Zombie                 when enemy is ArmourBroken
+  +   50% (+50% above usual)  Skeletal Brute               when enemy is ArmourBroken
+  +   50% (+50% above usual)  Unearth                      when enemy is ArmourBroken
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is OnShockedGround
+  +   68% (+48% above usual)  Lightning Conduit            when enemy is Shocked
+  +   46% (+46% above usual)  Detonate Living              when enemy is ArmourBroken
+  +   36% (+36% above usual)  Whirling Slash               when enemy is ArmourBroken
+  +   36% (+36% above usual)  Detonate Dead                when enemy is Moving
+  +   33% (+33% above usual)  Rake                         when enemy is Moving
+  +   32% (+32% above usual)  Cull The Weak                when enemy is ArmourBroken
+  +   30% (+30% above usual)  Twister                      when enemy is ArmourBroken
+  +   30% (+30% above usual)  Cackling Companions          when enemy is Pinned
+  +   30% (+30% above usual)  Summon Spectre               when enemy is Pinned
+  +   30% (+30% above usual)  Tamed Companion              when enemy is Pinned
+  +   29% (+29% above usual)  Blood Hunt                   when enemy is ArmourBroken
+  +   27% (+27% above usual)  Bonestorm                    when enemy is ArmourBroken
+  +   27% (+27% above usual)  Whirlwind Lance              when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rend                         when enemy is ArmourBroken
+  +   26% (+26% above usual)  Rampage                      when enemy is ArmourBroken
+  +   26% (+26% above usual)  Entangle                     when enemy is ArmourBroken
   +   26% (+26% above usual)  Flicker Strike               when enemy is ArmourBroken
-  +   22% (+22% above usual)  Vaulting Impact              when enemy is Moving
-  +   21% (+21% above usual)  Vaulting Impact              when enemy is ArmourBroken
 Conditions that matter to the most skills:
-  CriticalWeakness            16 skills, best: Tempest Bell +21%, Killing Palm +15%, Vaulting Impact +15%
-  OnShockedGround             16 skills, best: Glacial Cascade +20%, Frozen Locus +20%, Ice Strike +20%
-  Shocked                     16 skills, best: Glacial Cascade +20%, Frozen Locus +20%, Ice Strike +20%
-  Intimidated                 16 skills, best: Glacial Cascade +10%, Frozen Locus +10%, Ice Strike +10%
-  CoveredInAsh                13 skills, best: Whirling Assault +9%, Siphoning Strike +9%, Killing Palm +9%
-  OnProfaneGround              5 skills, best: Tempest Bell +13%, Siphoning Strike +12%, Wind Blast +12%
-  ArmourBroken                 3 skills, best: Flicker Strike +26%, Vaulting Impact +21%, Gathering Storm +8%
-  CoveredInFrost               3 skills, best: Glacial Cascade +10%, Ice Strike +10%, Wave of Frost +10%
-  Crushed                      2 skills, best: Flicker Strike +14%, Vaulting Impact +11%
-  Moving                       1 skills, best: Vaulting Impact +22%
+  OnShockedGround            155 skills, best: Lightning Conduit +68%, Arc +30%, Plasma Blast +30%
+  Shocked                    155 skills, best: Lightning Conduit +68%, Arc +30%, Plasma Blast +30%
+  Intimidated                155 skills, best: Ball Lightning +10%, Arc +10%, Artillery Ballista +10%
+  CriticalWeakness           153 skills, best: Flameblast +31%, Firestorm +29%, Solar Orb +29%
+  OnProfaneGround            106 skills, best: Bone Cage +17%, Detonate Living +17%, Frost Bomb +17%
+  CoveredInAsh                96 skills, best: Cackling Companions +20%, Summon Spectre +20%, Tamed Companion +20%
+  ArmourBroken                40 skills, best: Skeletal Reaver +96%, Wolf Pack +75%, Skeletal Sniper +64%
+  Unnerved                    37 skills, best: Ball Lightning +10%, Arc +10%, Bone Cage +10%
+  Crushed                     34 skills, best: Skeletal Reaver +16%, Wolf Pack +15%, Bone Cage +15%
+  CoveredInFrost              17 skills, best: Skeletal Frost Mage +20%, Wardbound Minions +20%, Comet +20%
+  Moving                      13 skills, best: Detonate Dead +36%, Rake +33%, Oil Grenade +23%
+  Pinned                       4 skills, best: Siege Cascade +101%, Cackling Companions +30%, Summon Spectre +30%
+  Blinded                      3 skills, best: Cackling Companions +8%, Summon Spectre +8%, Tamed Companion +8%
+  Maimed                       3 skills, best: Cackling Companions +5%, Summon Spectre +5%, Tamed Companion +5%
+  Electrocuted                 1 skills, best: Siege Cascade +101%

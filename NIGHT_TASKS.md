@@ -137,6 +137,55 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   ahead ~25-40% on many spells, no outlier over x1.45 outside Infernalist's mixed minion rows. Too few to conclude. rank8: still in its first search.
 - **09:30:** rank8: 59 min into its first search (earlier runs took ~28-32 min each; now 2 workers on a full server), both workers at full CPU. Expect roughly 6 h of searches, then
   the builds. No results before the afternoon. If still no first line in ~/rank8.log by 10:30, suspect a hang. 37 is on 5 of 23.
+- **15:10 TASK 47, live bug: ascendancy points.** (1) options of choice passives never tried (Gemling +2 skill levels, Deadeye Point Blank / Far Shot); (2) Abyssal Lich takes 0 of 8 in
+  every build (its passives carry Lich's name); (3) points PoB sees no gain for stay unspent: saved Uber builds: Deadeye 1-2 of 8, Oracle 4, Tactician 4, Ritualist 5. Branch `ascpoints`
+  (worktree ~/phaph_asc, 2026-11-25.1, not merged): all three fixed, 4 new test cases. Running: full suite ~/asc_tests.log; A/B ~/asc_ab.sh (5 full builds, branch then main, ~/asc_out/*.json,
+  ~/asc_ab_*.log). Don't edit engine code in ~/phaph until the main half is done. Merge + deploy if the suite is green and no build loses (Invoker Ice Shot is the control).
+- **Hit by it:** every per-ascendancy comparison: blind tests (Titan, Warbringer, Smith score identically, so do Tactician and Witchhunter), finalists, rank8's search, and task 37's scans (no ascendancy
+  passive on any of 158 skills for Titan and Abyssal Lich, on 155 Warbringer, 144 Tactician, 130 Disciple). 37's condition scans are nearly done and stay as a "before"; after the merge
+  they and matrix_asc need a redo (48). breaker_queue copies engine code per job from ~/breaker and pulls at each push: after a merge mid-queue, later scans mix code: check dates.
+- 15:35: first suite run: 2 fails, probably task 47's own cases (zero-damage builds read as a 100% loss in the filler check; fixed, cases pass, committed; all 23 ascendancies spend 8 of 8). The suite
+  was restarted at 15:36 (~/asc_tests.log). The A/B isn't affected (its builds have damage).
+- 16:10: task 48's scan written: engine/tools/asc_cond.py on branch `asccond` (on top of ascpoints, worktree ~/phaph_asccond; 3 unit tests pass). Probe on Titan, 3 skills: finds Crushing Impacts / Heavy
+  Stunned +25%, which the old scan can't see (a notable on another's path shows the same row: Mountain Splitter). ~40 min per ascendancy on 6 cores estimated, ~15 h for 23. Merge after ascpoints; don't
+  start it before 37's queue is done. A/B, branch half so far: Deadeye Rapid Shot 5.76M, Gemling Rapid Shot 4.42M; main half not started.
+- 17:00: task 47 suite green (245 passed). A/B branch half done (boss / map / EHP): Deadeye Rapid Shot 5.76M / 4.94M / 12.7k (on .7, path_luck_7: 4.76M / 4.03M / 12.6k = +21%), Gemling Rapid Shot 4.42M / 4.03M / 17.4k,
+  Titan Earthquake 4.12M / 2.20M / 48.7k, Abyssal Lich Bonestorm 5.80M / 4.57M / 12.0k, control Invoker Ice Shot identical to .7. Main half running since 16:52 (it copied its code: engine edits in ~/phaph are fine now).
+  Then merge ascpoints, deploy, merge asccond (no deploy). rank8 5 of 6 searches; 37 on 22 of 23.
+- **17:40 A/B main half so far: Gemling Rapid Shot 5.21M boss / 3.74M map on main vs 4.42M / 4.03M on the branch (-15% boss, +8% map).** Same supports, other uniques (main Hyrri's Ire + Mageblood, branch Grip of Kulemak +
+  The Coming Calamity): maybe slot-order luck (22% on this skill), not shown. ~/asc_ab2.sh (starts after asc_ab.sh): Gemling and Titan, reversed and rotated, branch then main -> ~/asc_out/orders_*.json. Judge best of 3 and
+  all three signs; don't merge before. Deadeye main 4.76M = path_luck_7, branch +21%: that is about Point Blank's 20%, which PoB counts by the enemy distance (49).
+- **18:15, A/B 4 of 5 (boss main -> branch, single order): Deadeye +21%, Titan +25%, Gemling -15%, Abyssal Lich Bonestorm 6.93M -> 5.80M (-16%, map -20%).** Abyssal's new passives cost it nothing (dropping any or all from the
+  branch build: 0% damage, -10% EHP); it ended on other uniques. So full rebuilds mix the fix with gear luck (Bonestorm's orders spread 50%).
+  **Paired test (respend only the ascendancy of 37 finished builds with the branch; ~/asc_pair.log, ~/asc_pair_rest.log, script ~/asc_out/pair2.py):** 1 loses damage (Wind Serpent's baseline -65%; the old code
+  does the same there: greedy's blind spot). EHP falls on 3 (Gemling -8, Titan -11, Amazon Earthquake -4%) where damage rose +35 / +48 / +2%. Old code respent on 10 of them (~/asc_pair_old.log + 2 by hand): the fix
+  itself is worth Deadeye +20% (Point Blank at 2 m), Gemling about +13% (+35 vs +19%), Abyssal Lich +12% EHP, Titan 0. The rest is respending late (50). Gate kept: best of 3 orders (asc_ab2) before merging.
+- My probe's PoB grew to 12.8 GB over ~30 loaded builds and was OOM-killed at 18:11 (that process only; the other containers are up). Long probes: a new PoB per build, --memory 4g.
+- 37's condition scans finished; matrix_asc runs (old code). Conditions: Infernalist is redone by ~/infernalist.sh after it.
+- **19:00: A/B complete, control Invoker identical on both sides.** asc_ab2 running since 18:29 (branch half first; nothing finished yet at 19:00). Task 50 written: branch `respend` (worktree ~/phaph_respend, on ascpoints):
+  engine/ascendancy.py, called after the final gear pass, kept only if the score rises, EHP stays over 90%, no attribute falls short and spirit fits; 2 tests pass. ~/respend_ab.sh waits for asc_ab2, then the full suite
+  (~/respend_tests.log) and the 5 specs (~/respend_ab.log, ~/asc_out/respend.json; compare with asc.json). rank8: all 6 searches done, building (1 of 18 skills at 19:00).
+- **20:00: asc_ab2 branch half done (boss / map): Gemling as is 4.42M / 4.03M, reversed 4.63M / 4.25M, rotated 5.42M / 5.04M; Titan as is 4.12M / 2.20M, reversed 4.29M / 2.16M, rotated 4.15M / 2.22M.** Main half running
+  since 19:45 (main as is: Gemling 5.21M / 3.74M, Titan 3.30M / 1.83M). Merge ascpoints if best of 3 isn't lower.
+  Task 49 code on branch `distance` (on top of respend, worktree ~/phaph_distance, no suite, no builds yet): auto_config sets 4 m for projectile skills (an estimate; ice spears and spells like Spark included),
+  2 m for melee and minions; 15 skills checked: projectile ones get 4 m; Comet, Unearth (spells, not projectile) and Fangs of Frost stay at 2 m. Changes every ranged score, so test after 47 and 50 are in: suite, then search-vs-ladder and 5 builds.
+- **21:00: engine 2026-11-25.1 live (task 47).** Gate (branch's best of 3 not lower): Gemling met (5.21M -> 5.42M), Titan missed by 3% (4.42M -> 4.29M), overridden: swapping only the passives between the two rotated Titan
+  builds, main's gains 45% and the branch's loses 35%, and the branch's has 64k EHP vs 14k. Details in BREAKER.md. respend suite + builds running (~/respend_ab.sh). Next: 50, then 49, then merge `asccond` and start 48 (matrix_asc
+  running in ~/breaker is old code: its result is a "before").
+- rank8: 4 of 6 searches done 15:00 (~1.5 h each), builds next.
+- **21:35:** respend suite green (247 passed, 1 warning in 2364.33s (0:39:24)); the 5 builds follow on their own (~/respend_ab.log). Task 50's code read: its put-back goes through load_xml, which guide.build_stage already uses mid-build
+  in two places; no fault found. matrix_asc: Infernalist done, Blood Mage 143 skills in, ~2 h each, so ~40 h for the rest (see Waiting for Kyle). rank8: Deadeye's 3 skills done, ~1.5 h per skill with 2 workers.
+- **23:05: task 50 A/B, 4 of 5 (without -> with respend, single order; only the respend step differs):** Gemling Rapid Shot boss 4.42M -> 5.12M, map 4.03M -> 4.71M, EHP same; Deadeye, Titan identical;
+  Abyssal Lich damage same, EHP +1.6%, chaos res 75 -> 69. No damage or EHP loss. When the Invoker control lands (~/respend_ab.log) unchanged: bump ENGINE_VERSION to 2026-11-25.2, merge `respend`, deploy, push (suite green: 247). Then `distance` (49).
+- **23:30: task 50 live as 2026-11-25.2** (A/B 5 of 5, control identical). Next: 49 (branch `distance`: merge main into it, suite, search-vs-ladder, 5 builds), then merge `asccond`, 48.
+- 23:40: main merged into `distance`; suite (container distance-tests, ~/distance_tests.log) and, at the same time, ~/distance_ab4.sh: 5 specs (~/distance_ab.log, ~/asc_out/distance.json vs respend.json). Scores of ranged builds must drop (the model changed), so judge the search vs the ladder, not the size of the drop. The 23:30 deploy cancelled one generate job someone was watching (30bb3936).
+- **matrix_asc stopped with Kyle's OK ("whatever you think is best"), and ~/infernalist.sh cancelled with it.** Old-code results kept in ~/asc_before47/matrix_asc (Infernalist, Blood Mage complete, Lich partial).
+  ~/breaker cleaned 2026-11-26 00:00 (its uncommitted diff in ~/asc_before47/breaker_wip) and pulled to main. Start 48 after 49 is settled.
+- **00:55 task 49:** suite 247 + 1 failed: test_style's combo test, failing on main too (the 11-25 combo re-run moved Rend's setups to Talisman / Bow / Spear); test fixed on main (picks any combo a Titan can use),
+  merged into `distance`. A/B single order (respend -> distance, boss): Bonestorm, Earthquake identical (melee / spells untouched, as meant); Gemling Rapid Shot 5.12 -> 4.04M; Deadeye Rapid Shot 5.76 -> 8.12M, but
+  same ascendancy (Point Blank), the new build is simply better at every distance (7.11M vs 4.94M at 2 m): rebuild luck. Invoker Ice Shot (bow, so not a control here) 2.56 -> 2.34M boss, 1.56 -> 1.13M map. So the A/B can't judge 49. Same build 2 m -> 4 m: -16%. Running: ~/distance_blind.sh,
+  blind search Deadeye + Tactician, class weapons, main vs distance side by side (~/dist_blind/{main,distance}.json, 3 cores each, a few hours). Judge: ladder skills' ranks (Ice Shot, Tornado Shot, Snipe; Galvanic Shards,
+  Wolf Pack, Stormblast Bolts) better or not. Merge if not worse; 4 m stays an estimate (note it on the lead page later).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -476,7 +525,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     already shows stages; a stage's own skill name has to show there (check before deploying; page work is paused,
     so ask Kyle if it needs more than the skill name).
 
-37. [ ] (queued 2026-11-23: ~/after_unlock.sh runs conditions_asc + matrix_asc after the unlocked blind run; the scans
+37. [x] (2026-11-25: conditions done, matrix stopped with Kyle's OK; superseded by 48) (queued 2026-11-23: ~/after_unlock.sh runs conditions_asc + matrix_asc after the unlocked blind run; the scans
     resume, so only skills the rule skipped get scanned; ~16-20 h; then read for cross-class payoffs) Re-run the per-ascendancy condition and matrix scans without the class-weapon rule (Kyle 2026-11-22:
     Lodestone has none; the 11-20 runs skipped skills outside each class's weapons). Queue `conditions_asc matrix_asc`
     after the unlocked blind run.
@@ -528,6 +577,20 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 46. [x] (04:45: done, BREAKER.md: every top mover traced to our own fixes, no ranking bug found; open: Flameblast's cooldown start, off-hand x2+ vs the A/B's +64-79%) (03:50: Flameblast explained, no change: x5.45 full stages (Nov 21 rule) x 2.0 Atziri's Impatience (cooldown 10 s -> 5 s); PoB times it by the cooldown only, so up to ~x1.6 high if the cooldown starts on release (unknown). The rest: ~/hist.sh re-scores 18 skills on each day's engine Nov 18-24, ~/hist.log, results in the session scratchpad hist/) (added 2026-11-25) Biggest moves of the fresh condition baseline vs Nov 18 (Flameblast 7.7k -> 88.6k, Bonestorm 28.7k -> 199k, Wolf Pack 3.5k -> 17.2k): explain the
     top 10 one by one (old file: git show 8031dcb:engine/data/breaker/conditions.json). Flameblast first: its stages / channel time may be counted as free. A wrong
     one is a live ranking bug.
+
+47. [x] (2026-11-25 21:00: merged, live as 2026-11-25.1, 245 passed; A/B in BREAKER.md) Ascendancy points: choice options never tried, Abyssal Lich none, leftovers unspent. Left after the
+    merge: cached guides on older engine versions; a guide line saying filler passives aren't in the numbers (steps carry `filler`; page work is paused).
+
+48. [ ] (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
+    is never taken and its condition reads 0. Per skill, also try each notable (path included) with each condition (override addNodes), or take the passives again under the condition. Then the blind
+    test (unlocked) again: Gemling is 32% of the ladder and was scored without its implants.
+
+49. [ ] (2026-11-25 measured: PoB's default is 2 m. Saved builds not re-optimised, at 4 / 6 / 8 m: bow and crossbow -14 to -28 / -14 to -41 / -31 to -64%, spear -15 to -17 / -24 to -31 / -50 to -58%,
+    Bonestorm 0 at all. So attacks are flattered against spells. Script ~/asc_out/dist.py) (added 2026-11-25) Enemy distance: PoB's default is what every ranged build is scored at (Point Blank at full value, ranged accuracy penalty small). Find the default, decide a fair one per
+    skill kind (melee / projectile) for boss and map, measure what it moves on 5 saved builds. Wide effect: A/B before any merge.
+
+50. [x] (2026-11-25: merged; Gemling Rapid Shot +16% boss / +17% map, 4 others no damage change, live as 2026-11-25.2) (added 2026-11-25) Respend the ascendancy at the end of a build, keep it only if the score rises (it must compare: greedy alone lost 65% on one). On finished builds, respending with the old code:
+    Titan Earthquake +48% (EHP -11%), Gemling Rapid Shot +19% (EHP -18%), wand Bonestorm Infernalist +19%; most others 0. The points are chosen before gear, tree and supports are final. After 47.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber

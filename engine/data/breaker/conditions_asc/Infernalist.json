@@ -1127,7 +1127,1802 @@
     "Flammability Magnitude"
    ],
    "dps": 5557
+  },
+  "Cluster Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.087,
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.214,
+    "Intimidated": 0.1,
+    "Moving": 0.203,
+    "OnProfaneGround": 0.096,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 4268
+  },
+  "Artillery Ballista": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 1479
+  },
+  "Armour Breaker": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 57096
+  },
+  "Boneshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 51046
+  },
+  "Armour Piercing Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {},
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 87286
+  },
+  "Blood Hunt": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.275,
+    "CriticalWeakness": 0.229,
+    "Crushed": 0.138,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 12150
+  },
+  "Cross Slash": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.209,
+    "CriticalWeakness": 0.256,
+    "Crushed": 0.108,
+    "Intimidated": 0.1,
+    "Moving": 0.22,
+    "OnProfaneGround": 0.168,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 11628
+  },
+  "Devour": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.192,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.137,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 79072
+  },
+  "Detonating Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.168,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 29424
+  },
+  "Cull The Weak": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.307,
+    "CriticalWeakness": 0.288,
+    "Crushed": 0.137,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.099,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 9996
+  },
+  "Earthquake": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 25537
+  },
+  "Disengage": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.221,
+    "CriticalWeakness": 0.309,
+    "Crushed": 0.099,
+    "Intimidated": 0.1,
+    "Moving": 0.161,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 7851
+  },
+  "Earthshatter": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.13,
+    "CriticalWeakness": 0.202,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 13475
+  },
+  "Electrocuting Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 37112
+  },
+  "Elemental Sundering": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.072,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 2619
+  },
+  "Escape Shot": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.077,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 19107
+  },
+  "Explosive Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.128,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 30490
+  },
+  "Explosive Shot": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 24813
+  },
+  "Falling Thunder": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.075,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 53955
+  },
+  "Flame Breath": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.185,
+    "CriticalWeakness": 0.271
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 144737
+  },
+  "Explosive Spear": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.125,
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 13314
+  },
+  "Fangs of Frost": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 33147
+  },
+  "Flicker Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.243,
+    "CriticalWeakness": 0.109,
+    "Crushed": 0.139,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Bringer of Flame"
+   ],
+   "dps": 63370
+  },
+  "Flash Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.154,
+    "CriticalWeakness": 0.245,
+    "Crushed": 0.073,
+    "Intimidated": 0.1,
+    "Moving": 0.23,
+    "OnProfaneGround": 0.11,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 4994
+  },
+  "Forge Hammer": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.122,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 19025
+  },
+  "Fragments Of The Past": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.158,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.071,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 16525
+  },
+  "Fragmentation Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 6666
+  },
+  "Frozen Locus": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.073,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 3099
+  },
+  "Freezing Salvo": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 22012
+  },
+  "Furious Slam": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.192,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.137,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 35138
+  },
+  "Fury of the Mountain": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.19,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.136,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 17228
+  },
+  "Gas Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.244,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 12628
+  },
+  "Gathering Storm": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.121,
+    "CriticalWeakness": 0.108,
+    "Crushed": 0.065,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Bringer of Flame"
+   ],
+   "dps": 19390
+  },
+  "Galvanic Shards": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 5391
+  },
+  "Gas Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.114,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 8236
+  },
+  "Glacial Bolt": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 14289
+  },
+  "Glacial Cascade": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 18008
+  },
+  "Hammer of the Gods": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.159,
+    "CriticalWeakness": 0.164,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.073,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 98856
+  },
+  "Hailstorm Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 25405
+  },
+  "Glacial Lance": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInFrost": 0.145,
+    "CriticalWeakness": 0.203,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.091,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 26866
+  },
+  "High Velocity Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.211,
+    "CriticalWeakness": 0.28,
+    "Crushed": 0.11,
+    "Intimidated": 0.1,
+    "Moving": 0.207,
+    "OnProfaneGround": 0.132,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 13588
+  },
+  "Ice Shards": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.106,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 30179
+  },
+  "Ice Shot": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 46134
+  },
+  "Killing Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.226,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.156,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 44565
+  },
+  "Ice Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 50426
+  },
+  "Incendiary Shot": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.127,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 3722
+  },
+  "Leap Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 69697
+  },
+  "Lightning Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 30364
+  },
+  "Lightning Rod": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 20865
+  },
+  "Lunar Assault": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.101,
+    "CriticalWeakness": 0.19,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.136,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 26442
+  },
+  "Lightning Spear": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 25144
+  },
+  "Magnetic Salvo": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.078,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 10538
+  },
+  "Oil Barrage": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.113,
+    "CriticalWeakness": 0.251,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.177,
+    "OnShockedGround": 0.25,
+    "Shocked": 0.25
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 28015
+  },
+  "Molten Blast": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.129,
+    "CriticalWeakness": 0.186,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.153,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 30201
+  },
+  "Oil Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.172,
+    "CriticalWeakness": 0.259,
+    "Crushed": 0.087,
+    "Intimidated": 0.1,
+    "Moving": 0.243,
+    "OnProfaneGround": 0.118,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 6433
+  },
+  "Perfect Strike": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.131,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 84469
+  },
+  "Poisonburst Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.181,
+    "CoveredInAsh": 0.089,
+    "CriticalWeakness": 0.32,
+    "Crushed": 0.081,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.093,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 19540
+  },
+  "Permafrost Bolts": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.102,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 4322
+  },
+  "Plasma Blast": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.103,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.3,
+    "Shocked": 0.3
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 107830
+  },
+  "Rain of Arrows": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.347,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 115423
+  },
+  "Primal Strikes": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.111,
+    "CriticalWeakness": 0.203,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.091,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 18422
+  },
+  "Rake": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.21,
+    "CriticalWeakness": 0.353,
+    "Crushed": 0.087,
+    "Intimidated": 0.1,
+    "Moving": 0.357,
+    "OnProfaneGround": 0.14,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 8140
+  },
+  "Rampage": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.244,
+    "CriticalWeakness": 0.176,
+    "Crushed": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.078,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Bringer of Flame",
+    "Grinning Immolation"
+   ],
+   "dps": 16289
+  },
+  "Rend": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.25,
+    "CriticalWeakness": 0.175,
+    "Crushed": 0.139,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.078,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Bringer of Flame",
+    "Grinning Immolation"
+   ],
+   "dps": 19052
+  },
+  "Rapid Shot": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.126,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 154323
+  },
+  "Rapid Assault": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.099,
+    "CriticalWeakness": 0.202,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 3220
+  },
+  "Rolling Magma": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.193,
+    "CriticalWeakness": 0.204,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.168,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Flammability Magnitude",
+    "Bringer of Flame"
+   ],
+   "dps": 31627
+  },
+  "Shattering Palm": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.104,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 14996
+  },
+  "Rolling Slam": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.235,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.149,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 6700
+  },
+  "Shockchain Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 20552
+  },
+  "Shockwave Totem": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.105,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 3386
+  },
+  "Shield Wall": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.145,
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.219,
+    "Crushed": 0.068,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.098,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 14502
+  },
+  "Shockburst Rounds": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 26875
+  },
+  "Siege Ballista": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.124,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 2485
+  },
+  "Siege Cascade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.115,
+    "CriticalWeakness": 0.156,
+    "Electrocuted": 1.006,
+    "Frozen": 1.006,
+    "HeavyStunned": 1.006,
+    "Immobilised": 1.006,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Pinned": 1.006,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 10509
+  },
+  "Siphoning Strike": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.184,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.164,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 46950
+  },
+  "Snipe": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.196,
+    "CriticalWeakness": 0.308,
+    "Crushed": 0.09,
+    "Intimidated": 0.1,
+    "Moving": 0.194,
+    "OnProfaneGround": 0.116,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 6472
+  },
+  "Spear of Solaris": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.181,
+    "CriticalWeakness": 0.203,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.091,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 22027
+  },
+  "Spearfield": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.112,
+    "CriticalWeakness": 0.202,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 5693
+  },
+  "Spiral Volley": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.083,
+    "CriticalWeakness": 0.245,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 13667
+  },
+  "Stampede": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.121,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 34049
+  },
+  "Storm Wave": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.065,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.107,
+    "CriticalWeakness": 0.202,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 11278
+  },
+  "Stormcaller Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.094,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 6734
+  },
+  "Stormblast Bolts": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 11524
+  },
+  "Supercharged Slam": {
+   "weapon": "Two Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.21,
+    "CriticalWeakness": 0.184,
+    "Crushed": 0.135,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.082,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Bringer of Flame",
+    "Grinning Immolation"
+   ],
+   "dps": 57306
+  },
+  "Sunder": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.063,
+    "CoveredInAsh": 0.153,
+    "CriticalWeakness": 0.166,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.074,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 51450
+  },
+  "Tempest Bell": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.084,
+    "CriticalWeakness": 0.266,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.183,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 14648
+  },
+  "Tempest Flurry": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.1,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 36529
+  },
+  "Tornado Shot": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.085,
+    "CriticalWeakness": 0.245,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 25375
+  },
+  "Thunderous Leap": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.156,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.07,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 17732
+  },
+  "Toxic Growth": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.082,
+    "CriticalWeakness": 0.243,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 8344
+  },
+  "Vaulting Impact": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.201,
+    "CriticalWeakness": 0.151,
+    "Crushed": 0.11,
+    "Intimidated": 0.1,
+    "Moving": 0.213,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Bringer of Flame"
+   ],
+   "dps": 9661
+  },
+  "Twister": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.304,
+    "CriticalWeakness": 0.233,
+    "Crushed": 0.113,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 8053
+  },
+  "Vine Arrow": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.081,
+    "CriticalWeakness": 0.245,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.089,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 26968
+  },
+  "Voltaic Barrier": {
+   "weapon": "Bow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CriticalWeakness": 0.301,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.088,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 6897
+  },
+  "Volcanic Fissure": {
+   "weapon": "One Hand Mace",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.134,
+    "CriticalWeakness": 0.201,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.09,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 16111
+  },
+  "Voltaic Grenade": {
+   "weapon": "Crossbow",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.08,
+    "CriticalWeakness": 0.155,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.069,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 14010
+  },
+  "Wave of Frost": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.069,
+    "CoveredInFrost": 0.122,
+    "CriticalWeakness": 0.101,
+    "Intimidated": 0.1,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.11,
+    "CriticalWeakness": 0.184,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.164,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 11214
+  },
+  "Whirling Slash": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.344,
+    "CriticalWeakness": 0.233,
+    "Crushed": 0.136,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.104,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 6809
+  },
+  "Wind Blast": {
+   "weapon": "Quarterstaff",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "CoveredInAsh": 0.109,
+    "CriticalWeakness": 0.184,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.164,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation"
+   ],
+   "dps": 39918
+  },
+  "Whirlwind Lance": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.273,
+    "CriticalWeakness": 0.228,
+    "Crushed": 0.116,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.102,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 8289
+  },
+  "Wing Blast": {
+   "weapon": "Talisman",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.215,
+    "CriticalWeakness": 0.275,
+    "Crushed": 0.111,
+    "Intimidated": 0.1,
+    "Moving": 0.194,
+    "OnProfaneGround": 0.128,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 11697
+  },
+  "Wind Serpent's Fury": {
+   "weapon": "Spear",
+   "class": "Witch",
+   "error": null,
+   "gains": {
+    "ArmourBroken": 0.182,
+    "CriticalWeakness": 0.17,
+    "Crushed": 0.094,
+    "Intimidated": 0.1,
+    "OnProfaneGround": 0.076,
+    "OnShockedGround": 0.2,
+    "Shocked": 0.2
+   },
+   "ascendancy_nodes": [
+    "Grinning Immolation",
+    "Bringer of Flame"
+   ],
+   "dps": 12765
   }
  },
- "updated": "2026-11-20 03:31"
+ "updated": "2026-11-25 07:07"
 }

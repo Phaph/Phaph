@@ -27,10 +27,22 @@ def test_one_button_is_one_skill():
     assert spec["skill"] == "Rend" and "boss_skill" not in spec and "clear_skill" not in spec
 
 
+def _with_combo():
+    """A payoff in the combo data that a Titan with a two-handed mace can set up (the data is re-run now and then:
+    on 2026-11-25 Rend's best setups became Talisman, Bow and Spear skills, so no fixed skill name here)."""
+    from generate import _combo_data
+    for r in _combo_data()["rows"]:
+        rows = [row(r["payoff"])] + RANKED[1:]
+        if combo_for(rows[0], {}):
+            return rows
+    raise AssertionError("no combo in data/breaker/combos.json a Titan can use")
+
+
 def test_combo_adds_a_setup_from_the_combo_finder():
-    c = combo_for(RANKED[0], {})
+    ranked = _with_combo()
+    c = combo_for(ranked[0], {})
     assert c and c["condition"] == "Armour Broken" and c["edge"] > 0 and 0 < c["uptime"] <= 1
-    spec = plan_build(result("combo", RANKED))["spec"]
+    spec = plan_build(result("combo", ranked))["spec"]
     assert spec.get("combo") and "boss_skill" not in spec   # the combo is the boss plan
 
 

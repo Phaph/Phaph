@@ -15,3 +15,16 @@ def test_outliers():
     assert not [r for r in base if r[1] == "Tiny"]          # under the damage floor
     assert gains[0] == (0.4, "Spark", "Cursed", "E", 0.4, 0)
     assert not asc_read.outliers({"A": scans["A"]})[0]      # too few ascendancies to have a median
+
+
+def test_specific_takes_out_the_usual_effect():
+    row = lambda dps, **g: {"dps": dps, "gains": g, "error": None}
+    skills = [f"S{i}" for i in range(9)]
+    scans = {a: {s: row(100_000) for s in skills} for a in "ABCD"}
+    scans["E"] = {s: row(150_000, Cursed=0.5) for s in skills}      # strong on everything: not a finding
+    scans["E"]["S0"] = row(300_000, Cursed=0.9)                     # this one is
+    base, gains = asc_read.specific(scans)
+    assert base[0] == (2.0, "S0", "E", 3.0)
+    assert all(abs(r[0] - 1) < 1e-9 for r in base[1:])
+    assert gains[0][1:4] == ("S0", "Cursed", "E") and abs(gains[0][0] - 0.4) < 1e-9
+    assert all(abs(g[0]) < 1e-9 for g in gains[1:])

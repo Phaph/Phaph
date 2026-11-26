@@ -38,12 +38,37 @@ def outliers(scans: dict[str, dict], min_asc: int = MIN_ASC) -> tuple[list[tuple
     return sorted(base, reverse=True), sorted(gains, reverse=True)
 
 
+def specific(scans: dict[str, dict], min_asc: int = MIN_ASC, min_skills: int = 8) -> tuple[list[tuple], list[tuple]]:
+    """What is left once the ascendancy's usual effect is taken out: a class that is strong on every skill, or whose
+    condition pays on every skill, drowns the one-skill payoffs. Attacks and spells aren't separated, so a class made
+    for one of the two still shows its whole half.
+    ([(ratio / the ascendancy's median ratio, skill, asc, ratio)], [(gain beyond its usual, skill, condition, asc, gain)])"""
+    base, gains = outliers(scans, min_asc)
+    by_asc: dict[str, list] = {}
+    for r, _, a, _, _ in base:
+        by_asc.setdefault(a, []).append(r)
+    by_cond: dict[tuple, dict] = {}
+    for x, s, c, a, *_ in gains:
+        by_cond.setdefault((c, a), {})[s] = x
+    n = {a: len(v) for a, v in by_asc.items()}
+    out_b = [(r / statistics.median(by_asc[a]), s, a, r) for r, s, a, _, _ in base if n[a] >= min_skills]
+    # skills whose damage the condition doesn't move count as 0 (gains holds only conditions some ascendancy gains from)
+    usual = {(c, a): statistics.median([*v.values(), *[0.0] * max(0, n[a] - len(v))]) for (c, a), v in by_cond.items()}
+    out_g = [(x - usual[c, a], s, c, a, g) for x, s, c, a, g, _ in gains if n[a] >= min_skills]
+    return sorted(out_b, reverse=True), sorted(out_g, reverse=True)
+
+
 def report(scans: dict[str, dict], top: int = 30, min_asc: int = MIN_ASC) -> str:
     base, gains = outliers(scans, min_asc)
     lines = [f"{len(scans)} ascendancies: {', '.join(scans)}", "", "Damage vs the median ascendancy, same skill:"]
     lines += [f"  x{r:5.2f}  {s:<26} {a:<22} {d:>10,.0f} (median {m:,.0f})" for r, s, a, d, m in base[:top]]
     lines += ["", "Gain from a condition vs the median ascendancy:"]
     lines += [f"  {x:+5.0%}  {s:<26} {c:<26} {a:<22} {g:+.0%} (median {m:+.0%})" for x, s, c, a, g, m in gains[:top]]
+    sb, sg = specific(scans, min_asc)
+    lines += ["", "Damage beyond what the ascendancy usually does:"]
+    lines += [f"  x{x:5.2f}  {s:<26} {a:<22} (x{r:.2f} vs the median ascendancy)" for x, s, a, r in sb[:top]]
+    lines += ["", "Gain from a condition beyond what the ascendancy usually gets from it:"]
+    lines += [f"  {x:+5.0%}  {s:<26} {c:<26} {a:<22} {g:+.0%}" for x, s, c, a, g in sg[:top]]
     return "\n".join(lines)
 
 
