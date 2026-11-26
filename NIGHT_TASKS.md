@@ -200,6 +200,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **12:30 (11-26):** nightly sweep running (sweep-0-6, started 10:38); ~/task48.sh starts task 48's scan when it ends. Task 42 ticked (Lodestone uses best of 3; spread not fixed at the root). Task 53 prepared: engine/EXPORT_DRYRUN.md (exporter needs the live game, not the pre-launch torrent). Next: 48 runs ~15 h, then 48's blind re-run, 51, 38.
 - **17:00 (11-26): task 48's scan started 16:39** (container asc48, 6 cores, ~7 GB of 18; code 42515a9 in ~/phaph_48), Infernalist first -> ~/asc48_out. Sweep finished 15:35 (0 failed). ~15 h estimate, so ~08:00 11-27.
 - **19:20 (11-26):** task 48's scan 4 of 23 (Infernalist, Blood Mage, Lich, Abyssal Lich running; ~34 min each, so ~05:30 11-27). Meanwhile task 54 done: ladder history from the Wayback Machine (engine/tools/ninja_archive.py, data/ninja_archive; BREAKER.md 'Ladder history'). 0.4.0c: Walking Calamity 12.0 -> 8.2% in 11 days, the only case whose turn lines up with its patch.
+- **21:05 (11-26):** task 48 at 7 of 23 (Warbringer running). Done since: 0.4 cases in the answer key + first 0.4 grade (4.7 missed, 2 of 13), 0.4 false alarms judged (1 real of 62 flagged). Next light task: 55 (needs the Wayback Machine back up).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -617,6 +618,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 
 54. [x] (2026-11-26: done, BREAKER.md 'Ladder history from the Wayback Machine'; dense for 0.4 and 0.5 only, not used in a grade yet) (added 2026-11-26) Ladder side of the patch practice (PC_TODO 11) without the PC: poe.ninja keeps no old leagues, the Wayback Machine has its API answers.
     Follow-up done 19:45: research/broken_builds.md 'How much the 0.4 and 0.5 cases were played': 4.1 and 5.1 at 10%+ of the ladder; 4.3, 4.5, 4.8, 5.2 under ~5%. The answer key has no 0.4 / 0.5 cases yet (0.4 scans committed ungraded): a 0.4 case set for task 51 must be written before anyone reads those scans.
+
+55. [ ] (added 2026-11-26 21:05, from the plan's Thu-Fri leftovers) Leveling-skill counts from real guides: leveling.MAX_SKILLS is 3, "4 if guides for the archetype do" (CLAUDE.md), never checked. From the server: Mobalytics pages 403 (Cloudflare); its GraphQL (mobalytics.gg/api/poe-2/v1/graphql/query) answers but has introspection off;
+    try Wayback copies of mobalytics.gg/poe-2/builds/* guide pages (archive was offline at 21:05). Count leveling skills per guide by archetype; change MAX_SKILLS per archetype only where most guides use 4.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
