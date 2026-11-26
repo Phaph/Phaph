@@ -594,6 +594,9 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 50. [x] (2026-11-25: merged; Gemling Rapid Shot +16% boss / +17% map, 4 others no damage change, live as 2026-11-25.2) (added 2026-11-25) Respend the ascendancy at the end of a build, keep it only if the score rises (it must compare: greedy alone lost 65% on one). On finished builds, respending with the old code:
     Titan Earthquake +48% (EHP -11%), Gemling Rapid Shot +19% (EHP -18%), wand Bonestorm Infernalist +19%; most others 0. The points are chosen before gear, tree and supports are final. After 47.
 
+51. [ ] (added 2026-11-26, after Kyle: no overselling Lodestone) Re-grade Lodestone on the old patches (task 40's answer key, tools/grade_old.py) after 47, 49 and 48 are in, frozen engine.
+    Until then every fix is unproven as far as finding broken builds goes. Report the hit rate and false alarms as they are, against the same bar.
+
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
