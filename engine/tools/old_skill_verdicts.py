@@ -14,14 +14,20 @@ from old_verdicts import NEXT, POB
 
 def skills(tag: str) -> dict[str, str]:
     out: dict[str, str] = {}
+    hidden: dict[str, str] = {}
     for f in (POB / tag / "src" / "Data" / "Skills").glob("*.lua"):
         if f.name in ("spectre.lua", "minion.lua"):
             continue
         for b in re.split(r"(?m)^(?=skills\[)", f.read_text(encoding="utf-8")):
             m = re.match(r'skills\["\w+"\] = \{\s*name = "([^"]+)"', b)
-            if m and "hidden = true" not in b[:300] and "support = true" not in b[:400]:
-                out.setdefault(m.group(1), b)
-    return out
+            if m and "support = true" not in b[:400]:
+                # hidden blocks are kept as a fallback: since 0.4 some player skills are hidden variants
+                # (skills["SiegeCascadePlayer"]); a visible block of the same name wins
+                if "hidden = true" not in b[:300]:
+                    out[m.group(1)] = b
+                else:
+                    hidden.setdefault(m.group(1), b)
+    return {**hidden, **out}
 
 
 def numbers(block: str) -> tuple[dict[str, float], dict[str, float]]:
@@ -55,7 +61,7 @@ def main() -> None:
     a, b = skills(tag), skills(NEXT[tag])
     for n in names:
         if n not in a or n not in b:
-            print(f"{n}: not found ({'gone' if n in a else 'not in this patch'})")
+            print(f"{n}: not found ({'gone next patch' if n in a else 'not in this patch' if n in b else 'in neither'})")
             continue
         (da, ca), (db, cb) = numbers(a[n]), numbers(b[n])
         ratio = {k: round(db[k] / da[k], 2) for k in da if k in db}

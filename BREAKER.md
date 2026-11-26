@@ -1071,3 +1071,9 @@ skill's row (0 of 155 skills), so it gave under +5% everywhere or wasn't applied
 ~/pob_versions). Expected from the case itself: the break was a cost going to zero, which a DPS gain doesn't show.
 **Total now: 2 of 13 graded cases found** (was 2 of 11; same 2: 1.3 by the stack column, 2.2). 0.4's 81 flagged condition / matrix pieces are
 unjudged (verdicts need 0.4 -> 0.5 PoB data: tools/old_verdicts.py). Task 51 re-grades all of it on the engine after 48.
+**0.4 false alarms judged (same day, 0.4 vs current PoB = 0.5, same rule as 0.1-0.3):** condition 45 pieces: **1 real (Cross Slash, first part
+471% -> 235% base; by the rule's letter), 34 false, 10 unjudged** (minions, spectres, companions). Matrix 17 pieces: **0 real, 16 false** (15 unchanged,
+Ming's Heart reworded only), Prism of Belief unjudged (not in 0.4's item data). Ancestral Bond is in 0.4's tree (checked in ~/oldpob/v0.15.0), so
+4.7's miss is a real miss, not untestable. Fixed on the way: tools/old_skill_verdicts.py dropped hidden player variants (SiegeCascadePlayer,
+High Velocity Rounds), so it called them "not in this patch"; earlier tags' verdicts unchanged by the fix (labels only). So on 0.4 Lodestone's scans
+flagged 62 pieces, of which 1 was cut next patch, and found 0 of 1 testable known case.
