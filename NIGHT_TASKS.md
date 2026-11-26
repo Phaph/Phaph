@@ -188,6 +188,9 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   Wolf Pack, Stormblast Bolts) better or not. Merge if not worse; 4 m stays an estimate (note it on the lead page later).
 - 01:35: main merged into `asccond` (clean; it only adds runner handlers get_config / asc_tries + tools/asc_cond.py + 1 test file); pushed. After 49 lands: suite on it, merge, then 48 from ~/breaker via the queue (asc_cond.py has no queue job yet: add one, or a script like rank8.sh).
 - 02:30 task 49 blind check, Deadeye (main vs distance): top 3 same (Rain of Arrows 1.80 -> 1.59M search score, Ice Shot 2nd both, 440k -> 391k); Tornado Shot enters at 8 of 10 (was out); all bow skills fall ~10-17% alike, so within one class it hardly reorders. Its real effect is across weapon kinds (Lodestone, no class rules). Tactician pending.
+- **03:55: task 49 live as 2026-11-26.1.** Blind check, class weapons, main vs distance: Deadeye top 3 same, Tornado Shot 8th (was out of 10); Tactician top 4 same, every crossbow skill
+  -8 to -17% except Explosive Grenade (+0%, not a projectile in PoB's types); ladder skills found 1 of 6 on both. So within a class it barely reorders; its effect is across weapon kinds (Lodestone), unmeasured.
+  Next: suite on `asccond` (2 cores), merge, then task 48 (needs a run script); then 51 (re-grade).
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -587,7 +590,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     is never taken and its condition reads 0. Per skill, also try each notable (path included) with each condition (override addNodes), or take the passives again under the condition. Then the blind
     test (unlocked) again: Gemling is 32% of the ladder and was scored without its implants.
 
-49. [ ] (2026-11-25 measured: PoB's default is 2 m. Saved builds not re-optimised, at 4 / 6 / 8 m: bow and crossbow -14 to -28 / -14 to -41 / -31 to -64%, spear -15 to -17 / -24 to -31 / -50 to -58%,
+49. [x] (2026-11-26: live as 2026-11-26.1; projectile skills at 4 m (an estimate), melee / minions / non-projectile spells at 2 m; blind check Deadeye + Tactician 1 of 6 ladder skills on both sides: not worse, not shown better) (2026-11-25 measured: PoB's default is 2 m. Saved builds not re-optimised, at 4 / 6 / 8 m: bow and crossbow -14 to -28 / -14 to -41 / -31 to -64%, spear -15 to -17 / -24 to -31 / -50 to -58%,
     Bonestorm 0 at all. So attacks are flattered against spells. Script ~/asc_out/dist.py) (added 2026-11-25) Enemy distance: PoB's default is what every ranged build is scored at (Point Blank at full value, ranged accuracy penalty small). Find the default, decide a fair one per
     skill kind (melee / projectile) for boss and map, measure what it moves on 5 saved builds. Wide effect: A/B before any merge.
 

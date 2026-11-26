@@ -1008,3 +1008,8 @@ the log prints a lead once both sides are built.)
 **Ascendancy points spent again on the finished build (task 50, live as 2026-11-25.2).** Kept only if the score rises, EHP stays over 90%, no attribute falls short and spirit fits. 5 full Uber builds, same slot order,
 only this step differs: Gemling Rapid Shot 4.42M -> 5.12M boss (+16%), 4.03M -> 4.71M map (+17%), EHP same; Deadeye Rapid Shot, Titan Earthquake, Invoker Ice Shot no change in damage or EHP; Abyssal Lich Bonestorm
 damage same, EHP +1.6%, chaos resistance 75 -> 69. One build per side: it shows no loss on these five; the typical gain isn't measured.
+
+**Enemy distance (task 49, live as 2026-11-26.1).** PoB scores every skill at 2 m. Now projectile skills are scored at 4 m (an estimate of where a ranged player stands; not checked against play),
+melee, minions and non-projectile spells stay at 2 m. Same saved build, 2 m -> 4 m: Deadeye Rapid Shot -16%. Blind search (class weapons, Deadeye + Tactician) main vs distance: top 3 unchanged on both,
+search scores of bow / crossbow skills -8 to -18%, Tornado Shot enters Deadeye's top 10 at 8th; ladder skills found 1 of 6 on both sides. Not shown to bring the search closer to the ladder; it was merged as a fairer
+model, and its effect across weapon kinds (where Lodestone compares bows with maces) is not measured.
