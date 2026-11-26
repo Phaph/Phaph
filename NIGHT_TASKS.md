@@ -193,6 +193,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   Next: suite on `asccond` (2 cores), merge, then task 48 (needs a run script); then 51 (re-grade).
 - 04:50: /lodestone/how-it-works live (api/static/lodestone/how-it-works.html, noindex, linked from /lodestone; source design/lodestone-explained.html, numbers as of 11-26). Cloudflare Pages has no branch previews (404), and serves the home page for unknown paths with 200: check the title, not the code.
 - **05:45 (11-26): task 48 queued: ~/task48.sh** (~/task48.log): waits for the asccond suite (2nd run, container asccond-tests2; the 1st failed only on the text-scan test fixed in 68b90bf), merges `asccond` + pushes if green (no deploy), freezes ~/phaph_48, waits for rank8 and the nightly sweep, then asc_cond.py on 23 ascendancies, 6 cores, --memory 18g -> ~/asc48_out/*.json (~15 h estimate; resumable). Read: `python3 engine/tools/asc_cond.py report ~/asc48_out`. Then 48's blind re-run, then 51. rank8 at Tactician (4 of 6 ascendancies built).
+- **05:55 rank8 partial (4 of 6 ascendancies, 10 of 18 skills; not a verdict):** search's #1 = best full build (best of 3 orders) in Deadeye and Titan, not Amazon (Wind Serpent's Fury 1.03M vs Fangs of Frost 1.64M, but Fangs wins only its 'as is' order: reversed it is 0.96M, below both). Order spreads 6-85% per skill (median ~33%), so a #1 flip within that spread is luck, not the search. Finish after Tactician 2-3, Martial Artist, Oracle; write to BREAKER.md, close 39.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -537,7 +538,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     Lodestone has none; the 11-20 runs skipped skills outside each class's weapons). Queue `conditions_asc matrix_asc`
     after the unlocked blind run.
 
-38. [ ] (2026-11-23: the error is per skill (x0.41 Rapid Shot to x1.83 Bonestorm), no single factor; plan: Lodestone
+38. [ ] (2026-11-26: the plan is built (tools/weapon_finalists.py, best of 3 orders); left: re-run all weapons on the engine after 47/49/50 (49 changes ranged vs melee across weapons, unmeasured), after 48's scan frees the server) (2026-11-23: the error is per skill (x0.41 Rapid Shot to x1.83 Bonestorm), no single factor; plan: Lodestone
     shortlists ~2 skills per weapon type by search score, ranks finalists by full Uber builds (tools/rank_check.py
     style), weekly) The search's scores across weapon kinds (from the unlocked blind test, 2026-11-23): staff spells score ~10x
     attacks in the search while full Uber builds have them level (Bonestorm 6.0M, Supercharged Slam 5.7M, Rapid Shot
