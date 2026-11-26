@@ -17561,6 +17561,8878 @@
      ]
     }
    ]
+  },
+  "imexile-lightning-crossbow-invoker": {
+   "snapshot": "20250910021918",
+   "name": "Lightning Crossbow Invoker",
+   "variants": [
+    {
+     "title": "Mid tier setup",
+     "main": "Galvanic Shards",
+     "skills": [
+      [
+       "Galvanic Shards",
+       5
+      ],
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Voltaic Mark",
+       1
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Tame Beast",
+       2
+      ],
+      [
+       "Plasma Blast",
+       3
+      ],
+      [
+       "Emergency Reload",
+       2
+      ],
+      [
+       "Ghost Dance",
+       0
+      ],
+      [
+       "Stormcaller Arrow",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "ben-deadeye-lightning-spear": {
+   "snapshot": "20250910021032",
+   "name": "Deadeye Lightning Spear HC",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Wind Serpent's Fury",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Cast on Critical",
+       2
+      ],
+      [
+       "Ghost Dance",
+       3
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Rhoa Mount",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Spear Stab",
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "ben-deadeye-lightning-crossbow": {
+   "snapshot": "20250910015932",
+   "name": "Deadeye Lightning Crossbow",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Galvanic Shards",
+     "skills": [
+      [
+       "Galvanic Shards",
+       5
+      ],
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Stormcaller Arrow",
+       5
+      ],
+      [
+       "Flash Grenade",
+       3
+      ],
+      [
+       "Emergency Reload",
+       3
+      ],
+      [
+       "Ghost Dance",
+       2
+      ],
+      [
+       "Wind Dancer",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "jungroan-tangletongue-lightning-javazon": {
+   "snapshot": "20250910015035",
+   "name": "Tangletongue Lightning Javazon",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Infuse Weapon",
+     "skills": [
+      [
+       "Spear Stab",
+       0
+      ],
+      [
+       "Spear Throw",
+       0
+      ],
+      [
+       "Infuse Weapon",
+       5
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Storm Lance",
+       5
+      ],
+      [
+       "Ghost Dance",
+       3
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Cast on Critical",
+       2
+      ],
+      [
+       "Rhoa Mount",
+       3
+      ],
+      [
+       "Conductivity",
+       4
+      ],
+      [
+       "Infuse Weapon",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "skadoosh-fire-armour-break-smith": {
+   "snapshot": "20250910010446",
+   "name": "Skadoosh's Fire Breaker Smith of Kitava [NERFED 0.3]",
+   "variants": [
+    {
+     "title": "Endgame",
+     "main": "Sunder",
+     "skills": [
+      [
+       "Sunder",
+       4
+      ],
+      [
+       "Resonating Shield",
+       4
+      ],
+      [
+       "Flammability",
+       2
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Scavenged Plating",
+       2
+      ],
+      [
+       "Overwhelming Presence",
+       1
+      ],
+      [
+       "Shield Charge",
+       2
+      ],
+      [
+       "Boneshatter",
+       4
+      ],
+      [
+       "Fire Spell on Hit",
+       3
+      ],
+      [
+       "Herald of Ash",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Leveling",
+     "main": "Sunder",
+     "skills": [
+      [
+       "Sunder",
+       3
+      ],
+      [
+       "Boneshatter",
+       2
+      ],
+      [
+       "Infernal Cry",
+       1
+      ],
+      [
+       "Resonating Shield",
+       3
+      ],
+      [
+       "Magma Barrier",
+       0
+      ],
+      [
+       "Herald of Ash",
+       1
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Fire Spell on Hit",
+       1
+      ],
+      [
+       "Flammability",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Uber Endgame",
+     "main": "Sunder",
+     "skills": [
+      [
+       "Sunder",
+       5
+      ],
+      [
+       "Resonating Shield",
+       5
+      ],
+      [
+       "Flammability",
+       2
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Scavenged Plating",
+       2
+      ],
+      [
+       "Overwhelming Presence",
+       3
+      ],
+      [
+       "Shield Charge",
+       2
+      ],
+      [
+       "Boneshatter",
+       5
+      ],
+      [
+       "Solar Orb",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "aceofspades-ranger-huntress-grenade-leveling": {
+   "snapshot": "20250909003406",
+   "name": null,
+   "variants": []
+  },
+  "0-3-forge-hammer-fissure-sunder-titan-ulfhednar": {
+   "snapshot": "20250908080605",
+   "name": null,
+   "variants": []
+  },
+  "ben-0-3-league-starter-live": {
+   "snapshot": "20250907000746",
+   "name": null,
+   "variants": []
+  },
+  "full-screen-exploding-windblast-titan-build-jorgen": {
+   "snapshot": "20250906224324",
+   "name": null,
+   "variants": []
+  },
+  "armour-breaker-warbringer": {
+   "snapshot": "20250904181238",
+   "name": "Armour Breaker Warbringer",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Stampede",
+     "skills": [
+      [
+       "Mace Strike",
+       0
+      ],
+      [
+       "Mace Strike",
+       3
+      ],
+      [
+       "Stampede",
+       4
+      ],
+      [
+       "Leap Slam",
+       3
+      ],
+      [
+       "Ancestral Warrior Totem",
+       3
+      ],
+      [
+       "Scavenged Plating",
+       2
+      ],
+      [
+       "Hammer of the Gods",
+       4
+      ],
+      [
+       "Seismic Cry",
+       1
+      ],
+      [
+       "Attrition",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "arc-stormweaver-leveling-vinidiction": {
+   "snapshot": "20250904014733",
+   "name": null,
+   "variants": []
+  },
+  "thorns-ritualist-leveling-kalltorak": {
+   "snapshot": "20250903214702",
+   "name": null,
+   "variants": []
+  },
+  "shattering-concoction-wilsunboxile": {
+   "snapshot": "20250903154937",
+   "name": "Shattering Concoction End Game Build",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Shattering Concoction",
+     "skills": [
+      [
+       "Shattering Concoction",
+       5
+      ],
+      [
+       "Hypothermia",
+       3
+      ],
+      [
+       "Eye of Winter",
+       4
+      ],
+      [
+       "Herald of Ice",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Alchemist's Boon",
+       1
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Cast on Critical",
+       4
+      ],
+      [
+       "Ghost Dance",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "ed-contagion-living-bomb-lich-league-starter-peuget2": {
+   "snapshot": "20250903124041",
+   "name": "[0.3] ED / Contagion / Living Bomb Lich League Starter",
+   "variants": [
+    {
+     "title": "Level 1 - 6",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       0
+      ],
+      [
+       "Flame Wall",
+       0
+      ],
+      [
+       "Contagion",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Level 6 - 65",
+     "main": "Essence Drain",
+     "skills": [
+      [
+       "Essence Drain",
+       3
+      ],
+      [
+       "Contagion",
+       3
+      ],
+      [
+       "Withering Presence",
+       1
+      ],
+      [
+       "Despair",
+       1
+      ],
+      [
+       "Dark Effigy",
+       2
+      ],
+      [
+       "Living Bomb",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Level 66+",
+     "main": "Essence Drain",
+     "skills": [
+      [
+       "Essence Drain",
+       4
+      ],
+      [
+       "Contagion",
+       4
+      ],
+      [
+       "Withering Presence",
+       1
+      ],
+      [
+       "Dark Effigy",
+       3
+      ],
+      [
+       "Living Bomb",
+       2
+      ],
+      [
+       "Sigil of Power",
+       0
+      ],
+      [
+       "Blasphemy",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "1-million-damage-arctic-armour-kalltorak": {
+   "snapshot": "20250903115245",
+   "name": "1 Million Damage Arctic Armour - End Game Reflect Build - KallTorak",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Arctic Armour",
+     "skills": [
+      [
+       "Arctic Armour",
+       5
+      ],
+      [
+       "Archmage",
+       2
+      ],
+      [
+       "Frost Bomb",
+       5
+      ],
+      [
+       "Frost Bomb",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Imported",
+     "main": "Arctic Armour",
+     "skills": [
+      [
+       "Life Remnants",
+       0
+      ],
+      [
+       "Power Siphon",
+       0
+      ],
+      [
+       "Archmage",
+       2
+      ],
+      [
+       "Frost Bomb",
+       2
+      ],
+      [
+       "Arctic Armour",
+       5
+      ],
+      [
+       "Frost Bomb",
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "deadrabbit-chaos-sorceress-leveling": {
+   "snapshot": "20250903115130",
+   "name": "[0.3] Chaos Stormweaver Levelling Guide (Level 1 to Endgame)",
+   "variants": [
+    {
+     "title": "Campaign",
+     "main": "Essence Drain",
+     "skills": [
+      [
+       "Essence Drain",
+       3
+      ],
+      [
+       "Contagion",
+       3
+      ],
+      [
+       "Withering Presence",
+       2
+      ],
+      [
+       "Bonestorm",
+       2
+      ],
+      [
+       "Unearth",
+       2
+      ],
+      [
+       "Despair",
+       3
+      ],
+      [
+       "Flame Wall",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "reflect-sunder-smith-endgame-kalltorak": {
+   "snapshot": "20250903112711",
+   "name": "Reflect Sunder Smith - Wind Dancer Leveling & End Game Guide - KallTorak",
+   "variants": [
+    {
+     "title": "Levels | 1 - 16",
+     "main": "Wind Dancer",
+     "skills": [
+      [
+       "Wind Dancer",
+       5
+      ],
+      [
+       "Mace Strike",
+       2
+      ],
+      [
+       "Infernal Cry",
+       5
+      ]
+     ]
+    },
+    {
+     "title": "Levels | 16 - 32",
+     "main": "Wind Dancer",
+     "skills": [
+      [
+       "Wind Dancer",
+       5
+      ],
+      [
+       "Mace Strike",
+       2
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Herald of Plague",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Levels | 32 - 65",
+     "main": "Wind Dancer",
+     "skills": [
+      [
+       "Wind Dancer",
+       5
+      ],
+      [
+       "Sunder",
+       5
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Herald of Plague",
+       1
+      ],
+      [
+       "Armour Breaker",
+       5
+      ],
+      [
+       "Herald of Ash",
+       3
+      ],
+      [
+       "Leap Slam",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Early End Game",
+     "main": "Wind Dancer",
+     "skills": [
+      [
+       "Wind Dancer",
+       5
+      ],
+      [
+       "Sunder",
+       5
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Herald of Plague",
+       1
+      ],
+      [
+       "Armour Breaker",
+       5
+      ],
+      [
+       "Herald of Ash",
+       3
+      ],
+      [
+       "Leap Slam",
+       3
+      ],
+      [
+       "Solar Orb",
+       5
+      ],
+      [
+       "Flammability",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "80+ End Game Block",
+     "main": "Wind Dancer",
+     "skills": [
+      [
+       "Wind Dancer",
+       5
+      ],
+      [
+       "Sunder",
+       5
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Herald of Plague",
+       1
+      ],
+      [
+       "Armour Breaker",
+       5
+      ],
+      [
+       "Herald of Blood",
+       5
+      ],
+      [
+       "Leap Slam",
+       3
+      ],
+      [
+       "Solar Orb",
+       5
+      ],
+      [
+       "Flammability",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "thorns-recoup-chronomancer-kalltorak": {
+   "snapshot": "20250903110227",
+   "name": "Thorns Recoup Chronomancer - End Game Build - KallTorak",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Armour Breaker",
+     "skills": [
+      [
+       "Armour Breaker",
+       5
+      ],
+      [
+       "Scavenged Plating",
+       3
+      ],
+      [
+       "Resonating Shield",
+       4
+      ],
+      [
+       "Leap Slam",
+       1
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Mana Remnants",
+       1
+      ],
+      [
+       "Time of Need",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "jungroan-0-3-league-starter-live": {
+   "snapshot": "20250903102440",
+   "name": "Jungroan 0.3 League Starter (Live)",
+   "variants": [
+    {
+     "title": "HC SSF Live",
+     "main": "Orb of Storms",
+     "skills": [
+      [
+       "Life Remnants",
+       0
+      ],
+      [
+       "Lightning Bolt",
+       0
+      ],
+      [
+       "Arc",
+       0
+      ],
+      [
+       "Snap",
+       1
+      ],
+      [
+       "Mana Tempest",
+       0
+      ],
+      [
+       "Elemental Weakness",
+       1
+      ],
+      [
+       "Orb of Storms",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Imported",
+     "main": "Essence Drain",
+     "skills": [
+      [
+       "Life Remnants",
+       1
+      ],
+      [
+       "Bone Blast",
+       0
+      ],
+      [
+       "Essence Drain",
+       2
+      ],
+      [
+       "Bonestorm",
+       2
+      ],
+      [
+       "Contagion",
+       0
+      ],
+      [
+       "Ravenous Swarm",
+       1
+      ],
+      [
+       "Withering Presence",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "woolie-self-cast-crit-ignite-bloodmage": {
+   "snapshot": "20250831093822",
+   "name": null,
+   "variants": []
+  },
+  "ultimate-shockwave-totem-xpgames": {
+   "snapshot": "20250831062844",
+   "name": null,
+   "variants": []
+  },
+  "earthquake-leveling-guide": {
+   "snapshot": "20250830201245",
+   "name": "Ulfhednar's EARTHQUAKE Leveling Guide",
+   "variants": [
+    {
+     "title": "1-40",
+     "main": "Earthquake",
+     "skills": [
+      [
+       "Earthquake",
+       2
+      ],
+      [
+       "Rolling Slam",
+       2
+      ],
+      [
+       "Boneshatter",
+       2
+      ],
+      [
+       "Infernal Cry",
+       2
+      ],
+      [
+       "Mace Strike",
+       1
+      ],
+      [
+       "Shield Charge",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "41-58 (Campaing Finish)",
+     "main": "Earthquake",
+     "skills": [
+      [
+       "Earthquake",
+       3
+      ],
+      [
+       "Rolling Slam",
+       3
+      ],
+      [
+       "Infernal Cry",
+       2
+      ],
+      [
+       "Leap Slam",
+       1
+      ],
+      [
+       "Seismic Cry",
+       0
+      ],
+      [
+       "Herald of Ash",
+       1
+      ],
+      [
+       "Time of Need",
+       2
+      ],
+      [
+       "Hammer of the Gods",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Endgame + Maps",
+     "main": "Earthquake",
+     "skills": [
+      [
+       "Earthquake",
+       4
+      ],
+      [
+       "Rolling Slam",
+       4
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Seismic Cry",
+       2
+      ],
+      [
+       "Herald of Ash",
+       1
+      ],
+      [
+       "Time of Need",
+       2
+      ],
+      [
+       "Hammer of the Gods",
+       3
+      ],
+      [
+       "Solar Orb",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "flicker-strike-gemling-ronarray": {
+   "snapshot": "20250830180407",
+   "name": null,
+   "variants": []
+  },
+  "dons-cold-monk": {
+   "snapshot": "20250830131823",
+   "name": null,
+   "variants": []
+  },
+  "wind-dancer-titan-kalltorak": {
+   "snapshot": "20250829025536",
+   "name": null,
+   "variants": []
+  },
+  "flicker-storm-monk": {
+   "snapshot": "20250827072000",
+   "name": "Flicker Storm Monk",
+   "variants": [
+    {
+     "title": "End Game - CI",
+     "main": "Quarterstaff Strike",
+     "skills": [
+      [
+       "Reaper's Invocation",
+       3
+      ],
+      [
+       "Lingering Illusion",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Flicker Strike",
+       4
+      ],
+      [
+       "Tempest Bell",
+       3
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Ghost Dance",
+       0
+      ],
+      [
+       "Quarterstaff Strike",
+       5
+      ],
+      [
+       "Charged Staff",
+       4
+      ],
+      [
+       "Grim Feast",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "League Starter - Mid Game",
+     "main": "Charged Staff",
+     "skills": [
+      [
+       "Reaper's Invocation",
+       2
+      ],
+      [
+       "Lingering Illusion",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Charged Staff",
+       5
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Flicker Strike",
+       4
+      ],
+      [
+       "Tempest Bell",
+       3
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Ghost Dance",
+       0
+      ],
+      [
+       "Quarterstaff Strike",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "fubgun-gas-arrow-amazon": {
+   "snapshot": "20250817222517",
+   "name": null,
+   "variants": []
+  },
+  "frozen-locus-shattering-palm-invoker-sargetwo": {
+   "snapshot": "20250817172717",
+   "name": "Feel like an actual monk with this Allrounder Frozen Locus/Shattering Palm Invoker",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Frozen Locus",
+     "skills": [
+      [
+       "Frozen Locus",
+       5
+      ],
+      [
+       "Shattering Palm",
+       5
+      ],
+      [
+       "Hand of Chayula",
+       3
+      ],
+      [
+       "Cast on Freeze",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Mana Remnants",
+       3
+      ],
+      [
+       "Wind Dancer",
+       5
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Charge Infusion",
+       0
+      ],
+      [
+       "Meditate",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "lightning-spear-huntress-perragaming": {
+   "snapshot": "20250817034707",
+   "name": "Lightning Spear",
+   "variants": [
+    {
+     "title": "Leveling/Starter",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Spear Stab",
+       0
+      ],
+      [
+       "Spear Throw",
+       0
+      ],
+      [
+       "Sniper's Mark",
+       1
+      ],
+      [
+       "Ghost Dance",
+       2
+      ],
+      [
+       "Primal Strikes",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Barrage",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Lightning Spear",
+       4
+      ]
+     ]
+    },
+    {
+     "title": "Bossing",
+     "main": "Wind Serpent's Fury",
+     "skills": [
+      [
+       "Spear Stab",
+       4
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Wind Serpent's Fury",
+       5
+      ],
+      [
+       "Voltaic Mark",
+       1
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Elemental Conflux",
+       3
+      ],
+      [
+       "Purity of Fire",
+       4
+      ],
+      [
+       "Rhoa Mount",
+       4
+      ]
+     ]
+    },
+    {
+     "title": "Mapping",
+     "main": "Wind Serpent's Fury",
+     "skills": [
+      [
+       "Spear Stab",
+       4
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Wind Serpent's Fury",
+       5
+      ],
+      [
+       "Voltaic Mark",
+       1
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Elemental Conflux",
+       3
+      ],
+      [
+       "Purity of Fire",
+       4
+      ],
+      [
+       "Rhoa Mount",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "speedy-thor-slammer-kingkongor": {
+   "snapshot": "20250817002124",
+   "name": "Speedy Thor Slammer - Fun is Back",
+   "variants": [
+    {
+     "title": "starter",
+     "main": "Earthquake",
+     "skills": [
+      [
+       "Lightning Spell on Hit",
+       3
+      ],
+      [
+       "Voltaic Mark",
+       3
+      ],
+      [
+       "Seismic Cry",
+       4
+      ],
+      [
+       "Time of Need",
+       1
+      ],
+      [
+       "Orb of Storms",
+       2
+      ],
+      [
+       "Earthquake",
+       5
+      ],
+      [
+       "Leap Slam",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Ancestral Warrior Totem",
+       4
+      ],
+      [
+       "Lightning Spell on Hit",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Endgame",
+     "main": "Infernal Cry",
+     "skills": [
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Herald of Ice",
+       3
+      ],
+      [
+       "Herald of Ash",
+       3
+      ],
+      [
+       "Time of Need",
+       2
+      ],
+      [
+       "Rolling Slam",
+       3
+      ],
+      [
+       "Orb of Storms",
+       2
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Earthquake",
+       5
+      ],
+      [
+       "Leap Slam",
+       0
+      ],
+      [
+       "Ancestral Warrior Totem",
+       4
+      ],
+      [
+       "Overwhelming Presence",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "100-million-damage-flicker-strike-korbyn": {
+   "snapshot": "20250816190612",
+   "name": null,
+   "variants": []
+  },
+  "fearlessdumbo-fresh-clip-witch-hunter": {
+   "snapshot": "20250805011119",
+   "name": "[BUFFED 0.2] Fresh Clip WitchHunter",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Shockburst Rounds",
+     "skills": [
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Galvanic Shards",
+       5
+      ],
+      [
+       "Stormcaller Arrow",
+       4
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Emergency Reload",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Ghost Dance",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Very Low Budget",
+     "main": "Shockburst Rounds",
+     "skills": [
+      [
+       "Shockburst Rounds",
+       4
+      ],
+      [
+       "Galvanic Shards",
+       4
+      ],
+      [
+       "Stormcaller Arrow",
+       4
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Emergency Reload",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Wind Dancer",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "stormweaver-league-starter-sanctum": {
+   "snapshot": "20250804120750",
+   "name": null,
+   "variants": []
+  },
+  "empyrian-attribute-stacker-gemling-leveling": {
+   "snapshot": "20250804035600",
+   "name": null,
+   "variants": []
+  },
+  "kripp-ghost-es-slammer-titan": {
+   "snapshot": "20250803185557",
+   "name": null,
+   "variants": []
+  },
+  "reaver-destruction-ruse": {
+   "snapshot": "20250802140017",
+   "name": null,
+   "variants": []
+  },
+  "sanctum-attribute-stacker": {
+   "snapshot": "20250801232502",
+   "name": null,
+   "variants": []
+  },
+  "kripp-toxic-rf": {
+   "snapshot": "20250731203709",
+   "name": null,
+   "variants": []
+  },
+  "alkaizer-stampede-hotg": {
+   "snapshot": "20250731062735",
+   "name": null,
+   "variants": []
+  },
+  "empyrians-attribute-stacker-gemling": {
+   "snapshot": "20250731040423",
+   "name": null,
+   "variants": []
+  },
+  "empyrian-temporalis-spark-sorc": {
+   "snapshot": "20250731040422",
+   "name": null,
+   "variants": []
+  },
+  "ronarray-immortal-whirling-slash-kitava": {
+   "snapshot": "20250731020316",
+   "name": null,
+   "variants": []
+  },
+  "rake-lightning-spear-bloodmage": {
+   "snapshot": "20250730184309",
+   "name": null,
+   "variants": []
+  },
+  "mrronit-lightning-spear-javazon-starter": {
+   "snapshot": "20250730180258",
+   "name": "MrRonit's Lightning Spear JAVAZON Levelling + Endgame",
+   "variants": [
+    {
+     "title": "ES/Evasion Tank Endgame (Pinnacles + T15s)",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Barrage",
+       2
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Storm Lance",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Infuse Weapon",
+       4
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       0
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Ghost Dance",
+       3
+      ],
+      [
+       "Trinity",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Speed Mapper T15+",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Barrage",
+       2
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Storm Lance",
+       4
+      ],
+      [
+       "Explosive Spear",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Infuse Weapon",
+       4
+      ],
+      [
+       "Sniper's Mark",
+       2
+      ],
+      [
+       "Combat Frenzy",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Tame Beast",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Budget Lightning Spear Mapping",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Barrage",
+       3
+      ],
+      [
+       "Lightning Spear",
+       4
+      ],
+      [
+       "Storm Lance",
+       4
+      ],
+      [
+       "Explosive Spear",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Infuse Weapon",
+       3
+      ],
+      [
+       "Sniper's Mark",
+       1
+      ],
+      [
+       "Combat Frenzy",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Tame Beast",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Lightning Spear NO PARRY (Lvl 25-70)",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Barrage",
+       2
+      ],
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Storm Lance",
+       3
+      ],
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       0
+      ],
+      [
+       "Infuse Weapon",
+       2
+      ],
+      [
+       "Sniper's Mark",
+       2
+      ],
+      [
+       "Combat Frenzy",
+       0
+      ],
+      [
+       "Wind Dancer",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Lightning Spear Setup (Lvl 10-25)",
+     "main": "Barrage",
+     "skills": [
+      [
+       "Barrage",
+       2
+      ],
+      [
+       "Lightning Spear",
+       2
+      ],
+      [
+       "Storm Lance",
+       2
+      ],
+      [
+       "Explosive Spear",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       0
+      ],
+      [
+       "Parry",
+       0
+      ],
+      [
+       "Disengage",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Early Game (Lvl 1-10)",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Spear Stab",
+       0
+      ],
+      [
+       "Spear Throw",
+       0
+      ],
+      [
+       "Whirling Slash",
+       0
+      ],
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Parry",
+       0
+      ],
+      [
+       "Disengage",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "magnetic-salvo-deadeye-fubgun": {
+   "snapshot": "20250730043019",
+   "name": null,
+   "variants": []
+  },
+  "hutch-cryoshock-stormweaver": {
+   "snapshot": "20250729232331",
+   "name": null,
+   "variants": []
+  },
+  "gas-arrow-ruetoo": {
+   "snapshot": "20250729230739",
+   "name": null,
+   "variants": []
+  },
+  "freezing-rapid-shot-kalltorak": {
+   "snapshot": "20250726181622",
+   "name": null,
+   "variants": []
+  },
+  "will-smith-of-kitava-tank-carnarius": {
+   "snapshot": "20250726034734",
+   "name": null,
+   "variants": []
+  },
+  "animeprincess-spark-conduit-hybrid": {
+   "snapshot": "20250726021040",
+   "name": "CI Spark Lightning Conduit Hybrid - T4 PINNACLE CONTENT FARMER",
+   "variants": [
+    {
+     "title": "BUDGET LEAGUESTART",
+     "main": "Spark",
+     "skills": [
+      [
+       "Sigil of Power",
+       1
+      ],
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Archmage",
+       0
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Soul Offering",
+       3
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Flame Wall",
+       3
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "BUDGET ENDGAME",
+     "main": "Spark",
+     "skills": [
+      [
+       "Sigil of Power",
+       1
+      ],
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Archmage",
+       0
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Soul Offering",
+       3
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Flame Wall",
+       3
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "BOSSING SETUP",
+     "main": "Spark",
+     "skills": [
+      [
+       "Sigil of Power",
+       1
+      ],
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Archmage",
+       0
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Soul Offering",
+       3
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Flame Wall",
+       3
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "MAPPING SETUP",
+     "main": "Spark",
+     "skills": [
+      [
+       "Sigil of Power",
+       1
+      ],
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Archmage",
+       0
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Soul Offering",
+       3
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Flame Wall",
+       3
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "asmodeus-lightning-spear-amazon": {
+   "snapshot": "20250725060906",
+   "name": "Clear Speed Monster - Amazon Lightning Spear by Asmodeus",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Primal Strikes",
+       5
+      ],
+      [
+       "Thunderous Leap",
+       2
+      ],
+      [
+       "Disengage",
+       1
+      ],
+      [
+       "Companion: {0}",
+       3
+      ],
+      [
+       "Cast on Shock",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Infuse Weapon",
+       4
+      ],
+      [
+       "Combat Frenzy",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "perra-flicker-strike": {
+   "snapshot": "20250724094353",
+   "name": null,
+   "variants": []
+  },
+  "molten-blast-deadeye-fastaf": {
+   "snapshot": "20250720191458",
+   "name": null,
+   "variants": []
+  },
+  "rake-stomping-ground-leveling-witch-lazyexile": {
+   "snapshot": "20250720164444",
+   "name": "Rake Stomping Ground Alt Leveling (Witch Variant)",
+   "variants": [
+    {
+     "title": "Rake Stomping Ground Leveling",
+     "main": "Rake",
+     "skills": [
+      [
+       "Whirling Slash",
+       0
+      ],
+      [
+       "Disengage",
+       1
+      ],
+      [
+       "Rake",
+       4
+      ],
+      [
+       "Herald of Ash",
+       1
+      ],
+      [
+       "Companion: {0}",
+       3
+      ],
+      [
+       "Thunderous Leap",
+       3
+      ],
+      [
+       "Overwhelming Presence",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "thyworms-ci-minion-infernalist": {
+   "snapshot": "20250720121800",
+   "name": null,
+   "variants": []
+  },
+  "storm-huntress-starter-build-sagittarian": {
+   "snapshot": "20250720074620",
+   "name": "[Starter & Pre-Ascendancy] Sagi’s Storm Huntress – Lightning Spear Build ⚡",
+   "variants": [
+    {
+     "title": "[Starter] Act I",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Spear Stab",
+       0
+      ],
+      [
+       "Raise Shield",
+       0
+      ],
+      [
+       "Whirling Slash",
+       0
+      ],
+      [
+       "Disengage",
+       0
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Herald of Thunder",
+       0
+      ],
+      [
+       "Lightning Spear",
+       2
+      ],
+      [
+       "Spearfield",
+       1
+      ],
+      [
+       "Storm Lance",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "[Starter] Act II | Pre-Ascendancy",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Spear Stab",
+       0
+      ],
+      [
+       "Raise Shield",
+       0
+      ],
+      [
+       "Whirling Slash",
+       0
+      ],
+      [
+       "Disengage",
+       0
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Herald of Thunder",
+       1
+      ],
+      [
+       "Lightning Spear",
+       2
+      ],
+      [
+       "Storm Lance",
+       2
+      ],
+      [
+       "Barrage",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "witchhunter-galvanic-fusiongaming": {
+   "snapshot": "20250720010525",
+   "name": "Witchhunter Galvanic Shards Explode Build",
+   "variants": [
+    {
+     "title": null,
+     "main": null,
+     "skills": []
+    },
+    {
+     "title": null,
+     "main": "Galvanic Shards",
+     "skills": [
+      [
+       "Galvanic Shards",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Herald of Ash",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Voltaic Mark",
+       4
+      ],
+      [
+       "Shockburst Rounds",
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "infinite-poison-ritualist-syncoh": {
+   "snapshot": "20250719174402",
+   "name": null,
+   "variants": []
+  },
+  "danger-close-deadeye-farham": {
+   "snapshot": "20250719165829",
+   "name": "Farhams Danger Close Deadeye (Endgame Variant)",
+   "variants": [
+    {
+     "title": "Bossing",
+     "main": "Storm Lance",
+     "skills": [
+      [
+       "Purity of Fire",
+       0
+      ],
+      [
+       "Trinity",
+       3
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       0
+      ],
+      [
+       "Storm Lance",
+       5
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Spear Throw",
+       0
+      ],
+      [
+       "Purity of Fire",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Mapping",
+     "main": "Storm Lance",
+     "skills": [
+      [
+       "Purity of Fire",
+       0
+      ],
+      [
+       "Trinity",
+       3
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       0
+      ],
+      [
+       "Storm Lance",
+       5
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Spear Throw",
+       0
+      ],
+      [
+       "Purity of Fire",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "overleech-reflect-titan-kalltorak": {
+   "snapshot": "20250719091336",
+   "name": "Overleech Reflect Titan - End Game Reflect Build - KallTorak",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Wind Dancer",
+     "skills": [
+      [
+       "Wind Dancer",
+       5
+      ],
+      [
+       "Sunder",
+       5
+      ],
+      [
+       "Herald of Blood",
+       5
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Solar Orb",
+       4
+      ],
+      [
+       "Herald of Plague",
+       1
+      ],
+      [
+       "Armour Breaker",
+       5
+      ],
+      [
+       "Flammability",
+       3
+      ],
+      [
+       "Leap Slam",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "juggernaughty-invoker-farham": {
+   "snapshot": "20250719083147",
+   "name": "Farhams Juggernaughty Invoker",
+   "variants": [
+    {
+     "title": "Juggernaughty",
+     "main": "Herald of Thunder",
+     "skills": [
+      [
+       "Sigil of Power",
+       2
+      ],
+      [
+       "Herald of Ash",
+       1
+      ],
+      [
+       "Cast on Critical",
+       4
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Herald of Ice",
+       5
+      ],
+      [
+       "Ghost Dance",
+       2
+      ],
+      [
+       "Tempest Bell",
+       5
+      ],
+      [
+       "Ice Strike",
+       5
+      ],
+      [
+       "Cast on Freeze",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "int-stacker-ls-serpents-fury-deadeye-fastaf": {
+   "snapshot": "20250719080335",
+   "name": "Literally 1-SHOT 32M DPS【The Vision Build】⚡ Min-Maxed INT-Stacker LS/Serpent's Fury Deadeye | DoTH",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Spear Stab",
+     "skills": [
+      [
+       "Purity of Fire",
+       4
+      ],
+      [
+       "Spear Stab",
+       5
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Wind Serpent's Fury",
+       5
+      ],
+      [
+       "Sniper's Mark",
+       1
+      ],
+      [
+       "Conductivity",
+       4
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Elemental Conflux",
+       5
+      ],
+      [
+       "Wind Dancer",
+       4
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Blink",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "glacial-lance-lightning-spear-deadeye-mrronit": {
+   "snapshot": "20250719053522",
+   "name": "MrRonit's Glacial Lance/LS Deadeye (Endgame)",
+   "variants": [
+    {
+     "title": "Standard (No Sacred Flame)",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Barrage",
+       4
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Glacial Lance",
+       5
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Malice",
+       0
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Ghost Dance",
+       0
+      ],
+      [
+       "Trinity",
+       3
+      ],
+      [
+       "Spear Stab",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Expensive (Sacred Flame)",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Barrage",
+       4
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Glacial Lance",
+       5
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       0
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Ghost Dance",
+       0
+      ],
+      [
+       "Trinity",
+       3
+      ],
+      [
+       "Spear Stab",
+       1
+      ],
+      [
+       "Purity of Fire",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "T4 Pinnacle Boss (Low Life Variant)",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Barrage",
+       4
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Glacial Lance",
+       5
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       0
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Ghost Dance",
+       0
+      ],
+      [
+       "Trinity",
+       3
+      ],
+      [
+       "Spear Stab",
+       1
+      ],
+      [
+       "Purity of Fire",
+       4
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "instant-earthquake-shatterquake-ulfhednar": {
+   "snapshot": "20250719043615",
+   "name": "Ulfhednar's INSTANT Earthquake & SHATTERQuake Titan",
+   "variants": [
+    {
+     "title": "Instant Earthquake",
+     "main": "Earthquake",
+     "skills": [
+      [
+       "Earthquake",
+       5
+      ],
+      [
+       "Rolling Slam",
+       5
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Seismic Cry",
+       1
+      ],
+      [
+       "Shield Charge",
+       2
+      ],
+      [
+       "Time of Need",
+       1
+      ],
+      [
+       "Berserk",
+       1
+      ],
+      [
+       "Herald of Ash",
+       1
+      ],
+      [
+       "Overwhelming Presence",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Low-life Shatterquake",
+     "main": "Earthquake",
+     "skills": [
+      [
+       "Earthquake",
+       5
+      ],
+      [
+       "Rolling Slam",
+       5
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Voltaic Mark",
+       4
+      ],
+      [
+       "Berserk",
+       3
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Time of Need",
+       1
+      ],
+      [
+       "Overwhelming Presence",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "fubgun-twink-ranger-amazon": {
+   "snapshot": "20250719042922",
+   "name": null,
+   "variants": []
+  },
+  "dslily-reroll-leveling-rake": {
+   "snapshot": "20250719025929",
+   "name": "Fastest Leveling Reroll Build (any class)",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Rake",
+     "skills": [
+      [
+       "Rake",
+       4
+      ],
+      [
+       "Blood Hunt",
+       4
+      ],
+      [
+       "Herald of Blood",
+       3
+      ],
+      [
+       "Bloodhound's Mark",
+       1
+      ],
+      [
+       "Wind Dancer",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "alkaizer-falling-thunder-invoker": {
+   "snapshot": "20250718223356",
+   "name": "Falling Thunder Invoker",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Falling Thunder",
+     "skills": [
+      [
+       "Falling Thunder",
+       5
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Tempest Flurry",
+       4
+      ],
+      [
+       "Profane Ritual",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Ghost Dance",
+       0
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Mana Remnants",
+       0
+      ],
+      [
+       "Skeletal Cleric",
+       0
+      ],
+      [
+       "Sacrifice",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "attribute-staking-whirling-slash-kingpinuwu": {
+   "snapshot": "20250718223300",
+   "name": "Attribute Stacking Speedy Whirling Slash Ritualist",
+   "variants": [
+    {
+     "title": "Endgame",
+     "main": "Whirling Slash",
+     "skills": [
+      [
+       "Whirling Slash",
+       5
+      ],
+      [
+       "Whirling Slash",
+       5
+      ],
+      [
+       "Whirling Slash",
+       0
+      ],
+      [
+       "Berserk",
+       3
+      ],
+      [
+       "Rapid Assault",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "all-mighty-thor-titan-ulfhednar": {
+   "snapshot": "20250718222508",
+   "name": "Ulfhednar's All-mighty THOR Titan",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Rolling Slam",
+     "skills": [
+      [
+       "Ancestral Warrior Totem",
+       4
+      ],
+      [
+       "Rolling Slam",
+       5
+      ],
+      [
+       "Earthquake",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Lightning Spell on Hit",
+       2
+      ],
+      [
+       "Voltaic Mark",
+       3
+      ],
+      [
+       "Time of Need",
+       3
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Berserk",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Low-life BIG Damage",
+     "main": "Earthquake",
+     "skills": [
+      [
+       "Lightning Spell on Hit",
+       3
+      ],
+      [
+       "Earthquake",
+       5
+      ],
+      [
+       "Rolling Slam",
+       5
+      ],
+      [
+       "Hammer of the Gods",
+       5
+      ],
+      [
+       "Infernal Cry",
+       5
+      ],
+      [
+       "Berserk",
+       0
+      ],
+      [
+       "Voltaic Mark",
+       4
+      ],
+      [
+       "Seismic Cry",
+       0
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Time of Need",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "spartan-spear-field-warrior-ulfhednar": {
+   "snapshot": "20250718205249",
+   "name": "Ulfhednar's SPARTAN Spearfield Warrior",
+   "variants": [
+    {
+     "title": "Spearfield",
+     "main": "Spearfield",
+     "skills": [
+      [
+       "Spearfield",
+       4
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Rapid Assault",
+       3
+      ],
+      [
+       "Bloodhound's Mark",
+       3
+      ],
+      [
+       "Herald of Ash",
+       2
+      ],
+      [
+       "Temper Weapon",
+       3
+      ],
+      [
+       "Thunderous Leap",
+       1
+      ],
+      [
+       "Attrition",
+       1
+      ],
+      [
+       "Berserk",
+       0
+      ],
+      [
+       "Shield Charge",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "leveling-amazon-huntress-mordarim": {
+   "snapshot": "20250716152352",
+   "name": null,
+   "variants": []
+  },
+  "rake-stomping-ground-leveling-warrior-lazyexile": {
+   "snapshot": "20250716082318",
+   "name": null,
+   "variants": []
+  },
+  "multiplayer-rarity-culler-snapow": {
+   "snapshot": "20250715173739",
+   "name": null,
+   "variants": []
+  },
+  "thor-mjolner-warp-titan-deadrabbit": {
+   "snapshot": "20250710183051",
+   "name": null,
+   "variants": []
+  },
+  "flame-god-smith-kalltrorak": {
+   "snapshot": "20250704110303",
+   "name": null,
+   "variants": []
+  },
+  "shield-charge-magma-barrier-chronomancer-kalltorak": {
+   "snapshot": "20250704110303",
+   "name": null,
+   "variants": []
+  },
+  "shatter-thorn-titan-kalltorak": {
+   "snapshot": "20250704110302",
+   "name": null,
+   "variants": []
+  },
+  "thorns-ritualist-endgame-kalltorak": {
+   "snapshot": "20250704110302",
+   "name": null,
+   "variants": []
+  },
+  "ronarray-flicker-amazon": {
+   "snapshot": "20250630173715",
+   "name": null,
+   "variants": []
+  },
+  "lighting-arrow-invoker-deadrabbit": {
+   "snapshot": "20250629202942",
+   "name": null,
+   "variants": []
+  },
+  "glacial-lance-double-herald-misoxshiru": {
+   "snapshot": "20250629141710",
+   "name": null,
+   "variants": []
+  },
+  "rake-stomping-ground-leveling-ranger-lazyexile": {
+   "snapshot": "20250629141710",
+   "name": null,
+   "variants": []
+  },
+  "kripp-frost-mage-lich": {
+   "snapshot": "20250620143441",
+   "name": null,
+   "variants": []
+  },
+  "optimized-leveling-huntress-asmodeus": {
+   "snapshot": "20250613111223",
+   "name": "Optimized Huntress Leveling Guide by Asmodeus",
+   "variants": [
+    {
+     "title": "Level 1-13",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Disengage",
+       0
+      ],
+      [
+       "Cull The Weak",
+       2
+      ],
+      [
+       "Lightning Spear",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Level 14-21",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Disengage",
+       0
+      ],
+      [
+       "Cull The Weak",
+       2
+      ],
+      [
+       "Storm Lance",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Level 22-65",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Primal Strikes",
+       5
+      ],
+      [
+       "Cull The Weak",
+       2
+      ],
+      [
+       "Disengage",
+       2
+      ],
+      [
+       "Thunderous Leap",
+       2
+      ],
+      [
+       "Companion: {0}",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Combat Frenzy",
+       2
+      ],
+      [
+       "Sniper's Mark",
+       1
+      ],
+      [
+       "Infuse Weapon",
+       4
+      ],
+      [
+       "Spear of Solaris",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "alkaizer-smith-of-kitava": {
+   "snapshot": "20250607165947",
+   "name": null,
+   "variants": []
+  },
+  "italian-spartacus-sub-zero-monk": {
+   "snapshot": "20250522184156",
+   "name": "ICE Sub-Zero Monk Leveling Build",
+   "variants": [
+    {
+     "title": "End Game",
+     "main": "Ice Strike",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Ice Strike",
+       3
+      ],
+      [
+       "Falling Thunder",
+       3
+      ],
+      [
+       "Tempest Bell",
+       3
+      ],
+      [
+       "Wave of Frost",
+       2
+      ],
+      [
+       "Glacial Cascade",
+       2
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Herald of Ice",
+       1
+      ],
+      [
+       "Hypothermia",
+       2
+      ],
+      [
+       "Charged Staff",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Act 1",
+     "main": "Falling Thunder",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Falling Thunder",
+       2
+      ],
+      [
+       "Frozen Locus",
+       2
+      ],
+      [
+       "Tempest Bell",
+       2
+      ],
+      [
+       "Glacial Cascade",
+       2
+      ],
+      [
+       "Killing Palm",
+       2
+      ],
+      [
+       "Quarterstaff Strike",
+       2
+      ],
+      [
+       "Herald of Ice",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Act 2",
+     "main": "Falling Thunder",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Falling Thunder",
+       2
+      ],
+      [
+       "Frozen Locus",
+       2
+      ],
+      [
+       "Tempest Bell",
+       2
+      ],
+      [
+       "Glacial Cascade",
+       2
+      ],
+      [
+       "Killing Palm",
+       2
+      ],
+      [
+       "Quarterstaff Strike",
+       2
+      ],
+      [
+       "Herald of Ice",
+       1
+      ],
+      [
+       "Ice Strike",
+       2
+      ],
+      [
+       "Wave of Frost",
+       2
+      ],
+      [
+       "Freezing Mark",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Act 3",
+     "main": "Falling Thunder",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Falling Thunder",
+       3
+      ],
+      [
+       "Tempest Bell",
+       3
+      ],
+      [
+       "Glacial Cascade",
+       2
+      ],
+      [
+       "Herald of Ice",
+       1
+      ],
+      [
+       "Ice Strike",
+       3
+      ],
+      [
+       "Wave of Frost",
+       2
+      ],
+      [
+       "Freezing Mark",
+       0
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Charged Staff",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "bigdaddys-auto-shock-witchhunter": {
+   "snapshot": "20250520160825",
+   "name": "[0.2] Xbow/Spear Witchhunter - Bigdaddies Witchhunter Xbow",
+   "variants": [
+    {
+     "title": "High Budget",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Emergency Reload",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Blink",
+       2
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Lightning Bolt",
+       4
+      ],
+      [
+       "Overwhelming Presence",
+       0
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Sorcery Ward",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Companion (cheaper)",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Emergency Reload",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Blink",
+       2
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Companion: {0}",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Sorcery Ward",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "jungroans-ember-fusillade-titan": {
+   "snapshot": "20250520151321",
+   "name": "Ember Fusillade Titan (SSFHC)",
+   "variants": [
+    {
+     "title": "Early Mapping (Non-Crit)",
+     "main": "Ember Fusillade",
+     "skills": [
+      [
+       "Ember Fusillade",
+       3
+      ],
+      [
+       "Ember Fusillade",
+       3
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Soul Offering",
+       2
+      ],
+      [
+       "Blasphemy",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Crit Endgame",
+     "main": "Ember Fusillade",
+     "skills": [
+      [
+       "Ember Fusillade",
+       5
+      ],
+      [
+       "Ember Fusillade",
+       5
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Raging Spirits",
+       3
+      ],
+      [
+       "Cast on Ignite",
+       2
+      ],
+      [
+       "Soul Offering",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Levelling",
+     "main": "Ember Fusillade",
+     "skills": [
+      [
+       "Ember Fusillade",
+       3
+      ],
+      [
+       "Ember Fusillade",
+       3
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Arctic Armour",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "starter-minions": {
+   "snapshot": "20250520140222",
+   "name": "Starter Minions",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Skeletal Sniper",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Skeletal Sniper",
+       2
+      ],
+      [
+       "Bonestorm",
+       1
+      ],
+      [
+       "Pain Offering",
+       1
+      ],
+      [
+       "Detonate Dead",
+       2
+      ],
+      [
+       "Raise Zombie",
+       0
+      ],
+      [
+       "Summon Infernal Hound",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "ulfhednars-warrior-starter": {
+   "snapshot": "20250520131521",
+   "name": "Ulfhednar's Warrior League Starter Leveling",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Mace Strike",
+     "skills": [
+      [
+       "Mace Strike",
+       3
+      ],
+      [
+       "Perfect Strike",
+       2
+      ],
+      [
+       "Rolling Slam",
+       2
+      ],
+      [
+       "Boneshatter",
+       2
+      ],
+      [
+       "Infernal Cry",
+       1
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Leap Slam",
+       1
+      ],
+      [
+       "Herald of Ash",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "ulfhednar-ritualist-build": {
+   "snapshot": "20250520122204",
+   "name": "Ulfhednar's RITUALIST Primal Strikes & LS",
+   "variants": [
+    {
+     "title": "Endgame",
+     "main": "Primal Strikes",
+     "skills": [
+      [
+       "Primal Strikes",
+       4
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Barrage",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Ghost Dance",
+       1
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Tame Beast",
+       3
+      ],
+      [
+       "Ritual Sacrifice",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Valkyrie Endgame",
+     "main": "Primal Strikes",
+     "skills": [
+      [
+       "Primal Strikes",
+       5
+      ],
+      [
+       "Ritual Sacrifice",
+       4
+      ],
+      [
+       "Lightning Spear",
+       4
+      ],
+      [
+       "Trinity",
+       3
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Barrage",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       1
+      ],
+      [
+       "Ghost Dance",
+       1
+      ],
+      [
+       "Wind Dancer",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "javason-lighting-spear-storm-lance-huntress-cyclondefinitiv": {
+   "snapshot": "20250520020517",
+   "name": "Javazon (Lightning Spear & Storm Lance) Huntress (Low & Mid Budget)",
+   "variants": [
+    {
+     "title": "Low Budget Starter",
+     "main": "Infuse Weapon",
+     "skills": [
+      [
+       "Infuse Weapon",
+       4
+      ],
+      [
+       "Lightning Spear",
+       4
+      ],
+      [
+       "Storm Lance",
+       4
+      ],
+      [
+       "Sniper's Mark",
+       3
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Thunderous Leap",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Mid Budget",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Storm Lance",
+       5
+      ],
+      [
+       "Infuse Weapon",
+       5
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Rhoa Mount",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       2
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Ghost Dance",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "bleeding-spearfield-titan-shwingy": {
+   "snapshot": "20250519122927",
+   "name": "The Bleed Spearfield Titan (Endgame Added!)",
+   "variants": [
+    {
+     "title": "Acts 1-2",
+     "main": "Spearfield",
+     "skills": [
+      [
+       "Spearfield",
+       2
+      ],
+      [
+       "Rapid Assault",
+       2
+      ],
+      [
+       "Parry",
+       1
+      ],
+      [
+       "Disengage",
+       2
+      ],
+      [
+       "Herald of Blood",
+       2
+      ],
+      [
+       "Blood Hunt",
+       2
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Infernal Cry",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Act 3",
+     "main": "Spearfield",
+     "skills": [
+      [
+       "Spearfield",
+       3
+      ],
+      [
+       "Rapid Assault",
+       3
+      ],
+      [
+       "Parry",
+       1
+      ],
+      [
+       "Disengage",
+       2
+      ],
+      [
+       "Herald of Blood",
+       2
+      ],
+      [
+       "Blood Hunt",
+       3
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Infernal Cry",
+       2
+      ],
+      [
+       "Bloodhound's Mark",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Acts 4-5",
+     "main": "Spearfield",
+     "skills": [
+      [
+       "Spearfield",
+       3
+      ],
+      [
+       "Rapid Assault",
+       3
+      ],
+      [
+       "Parry",
+       2
+      ],
+      [
+       "Disengage",
+       2
+      ],
+      [
+       "Herald of Blood",
+       3
+      ],
+      [
+       "Blood Hunt",
+       3
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Infernal Cry",
+       2
+      ],
+      [
+       "Bloodhound's Mark",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Endgame Start (T1+)",
+     "main": "Spearfield",
+     "skills": [
+      [
+       "Spearfield",
+       3
+      ],
+      [
+       "Rapid Assault",
+       3
+      ],
+      [
+       "Parry",
+       2
+      ],
+      [
+       "Disengage",
+       2
+      ],
+      [
+       "Herald of Blood",
+       3
+      ],
+      [
+       "Blood Hunt",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Infernal Cry",
+       2
+      ],
+      [
+       "Bloodhound's Mark",
+       2
+      ],
+      [
+       "Overwhelming Presence",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Mid Endgame (T10s)",
+     "main": "Spearfield",
+     "skills": [
+      [
+       "Spearfield",
+       4
+      ],
+      [
+       "Rapid Assault",
+       4
+      ],
+      [
+       "Disengage",
+       3
+      ],
+      [
+       "Herald of Blood",
+       3
+      ],
+      [
+       "Blood Hunt",
+       3
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Bloodhound's Mark",
+       3
+      ],
+      [
+       "Overwhelming Presence",
+       2
+      ],
+      [
+       "Raise Shield",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "5 Div Endgame (T15+)",
+     "main": "Rapid Assault",
+     "skills": [
+      [
+       "Spearfield",
+       4
+      ],
+      [
+       "Rapid Assault",
+       5
+      ],
+      [
+       "Disengage",
+       3
+      ],
+      [
+       "Herald of Blood",
+       3
+      ],
+      [
+       "Blood Hunt",
+       3
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Bloodhound's Mark",
+       3
+      ],
+      [
+       "Raise Shield",
+       3
+      ],
+      [
+       "Tame Beast",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "airbending-titan-fastaf": {
+   "snapshot": "20250519072212",
+   "name": "The Airbending Titan 0.2 (BOOM BOOM Build) DoH",
+   "variants": [
+    {
+     "title": "Current",
+     "main": "Whirling Assault",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Whirling Assault",
+       5
+      ],
+      [
+       "Wind Blast",
+       5
+      ],
+      [
+       "Tempest Bell",
+       5
+      ],
+      [
+       "Vulnerability",
+       3
+      ],
+      [
+       "Berserk",
+       0
+      ],
+      [
+       "Shockwave Totem",
+       4
+      ],
+      [
+       "Herald of Ash",
+       3
+      ],
+      [
+       "Scavenged Plating",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "unkillable-totem-summoner-mattjestic": {
+   "snapshot": "20250519070708",
+   "name": "0.2 Unkillable Totem Summoner (God Mode T17+ Clears )",
+   "variants": [
+    {
+     "title": "Mid Game Setep",
+     "main": "Ancestral Spirits",
+     "skills": [
+      [
+       "Ancestral Spirits",
+       3
+      ],
+      [
+       "Ancestral Warrior Totem",
+       3
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Leap Slam",
+       1
+      ],
+      [
+       "Time of Need",
+       1
+      ],
+      [
+       "Blasphemy",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Endgame Setep",
+     "main": "Ancestral Spirits",
+     "skills": [
+      [
+       "Ancestral Spirits",
+       5
+      ],
+      [
+       "Ancestral Warrior Totem",
+       4
+      ],
+      [
+       "Cast on Block",
+       3
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Leap Slam",
+       1
+      ],
+      [
+       "Time of Need",
+       3
+      ],
+      [
+       "Resonating Shield",
+       3
+      ],
+      [
+       "Scavenged Plating",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "jungroan-mjolner-amazon": {
+   "snapshot": "20250519064336",
+   "name": "Mjolner Chaos Arc Slammer (WIP)",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Mace Strike",
+     "skills": [
+      [
+       "Mace Strike",
+       5
+      ],
+      [
+       "Leap Slam",
+       5
+      ],
+      [
+       "Despair",
+       3
+      ],
+      [
+       "Overwhelming Presence",
+       2
+      ],
+      [
+       "Dark Effigy",
+       4
+      ],
+      [
+       "Firestorm",
+       3
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Lightning Spell on Hit",
+       3
+      ],
+      [
+       "Chaos Bolt",
+       0
+      ],
+      [
+       "Raise Shield",
+       0
+      ],
+      [
+       "Summon Companion",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "witchhunter-bleed-bow-jaytx": {
+   "snapshot": "20250519043117",
+   "name": "JayTX's Witch Hunter Bleed Bow Endgame Version",
+   "variants": [
+    {
+     "title": "Endgame",
+     "main": "Spiral Volley",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Spiral Volley",
+       5
+      ],
+      [
+       "Snipe",
+       5
+      ],
+      [
+       "Combat Frenzy",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Barrage",
+       3
+      ],
+      [
+       "Rain of Arrows",
+       3
+      ],
+      [
+       "Sniper's Mark",
+       2
+      ],
+      [
+       "Bow Shot",
+       3
+      ],
+      [
+       "Freezing Salvo",
+       2
+      ],
+      [
+       "Escape Shot",
+       1
+      ],
+      [
+       "Blink",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Leveling",
+     "main": "Bow Shot",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Bow Shot",
+       3
+      ],
+      [
+       "Freezing Salvo",
+       2
+      ],
+      [
+       "Gas Arrow",
+       2
+      ],
+      [
+       "Rain of Arrows",
+       3
+      ],
+      [
+       "Snipe",
+       2
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Spiral Volley",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Escape Shot",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "woolie-bleed-amazon": {
+   "snapshot": "20250519042138",
+   "name": "Woolie's Bleed Amazon [MORE CHANGES]",
+   "variants": [
+    {
+     "title": "Acts 1 & 2 (Stomping Ground)",
+     "main": "Rake",
+     "skills": [
+      [
+       "Rake",
+       3
+      ],
+      [
+       "Disengage",
+       1
+      ],
+      [
+       "Herald of Blood",
+       2
+      ],
+      [
+       "Blood Hunt",
+       2
+      ],
+      [
+       "Storm Lance",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "BLEED SWAP (mid Act 3)",
+     "main": "Rake",
+     "skills": [
+      [
+       "Rake",
+       3
+      ],
+      [
+       "Disengage",
+       2
+      ],
+      [
+       "Herald of Blood",
+       2
+      ],
+      [
+       "Blood Hunt",
+       2
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Bloodhound's Mark",
+       1
+      ],
+      [
+       "Spearfield",
+       3
+      ],
+      [
+       "Spearfield",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Bleed Endgame",
+     "main": "Rake",
+     "skills": [
+      [
+       "Rake",
+       4
+      ],
+      [
+       "Disengage",
+       4
+      ],
+      [
+       "Herald of Blood",
+       4
+      ],
+      [
+       "Blood Hunt",
+       4
+      ],
+      [
+       "Bloodhound's Mark",
+       3
+      ],
+      [
+       "Spearfield",
+       4
+      ],
+      [
+       "Spearfield",
+       4
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Time of Need",
+       1
+      ],
+      [
+       "Companion: {0}",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "hexblast-demon-form-starter-lazyexile": {
+   "snapshot": "20250519035944",
+   "name": "[NERFED-Patch Notes Update] Hexblast Demon Form League Starter | Act 1-6 Leveling Guide",
+   "variants": [
+    {
+     "title": "Act 1",
+     "main": "Essence Drain",
+     "skills": [
+      [
+       "Chaos Bolt",
+       0
+      ],
+      [
+       "Unearth",
+       0
+      ],
+      [
+       "Flame Wall",
+       0
+      ],
+      [
+       "Contagion",
+       1
+      ],
+      [
+       "Skeletal Sniper",
+       1
+      ],
+      [
+       "Essence Drain",
+       2
+      ],
+      [
+       "Bonestorm",
+       2
+      ],
+      [
+       "Raging Spirits",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Act 2",
+     "main": "Bonestorm",
+     "skills": [
+      [
+       "Contagion",
+       1
+      ],
+      [
+       "Essence Drain",
+       2
+      ],
+      [
+       "Bonestorm",
+       3
+      ],
+      [
+       "Detonate Dead",
+       2
+      ],
+      [
+       "Flame Wall",
+       0
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Demon Form",
+       1
+      ],
+      [
+       "Vulnerability",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Act 3",
+     "main": "Bonestorm",
+     "skills": [
+      [
+       "Bonestorm",
+       3
+      ],
+      [
+       "Detonate Dead",
+       3
+      ],
+      [
+       "Arctic Armour",
+       3
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Demon Form",
+       2
+      ],
+      [
+       "Vulnerability",
+       1
+      ],
+      [
+       "Mana Tempest",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Act 4 - 6 (Cruel)",
+     "main": "Hexblast",
+     "skills": [
+      [
+       "Demon Form",
+       2
+      ],
+      [
+       "Summon Infernal Hound",
+       3
+      ],
+      [
+       "Hexblast",
+       4
+      ],
+      [
+       "Essence Drain",
+       3
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Eye of Winter",
+       2
+      ],
+      [
+       "Blasphemy",
+       2
+      ],
+      [
+       "Contagion",
+       0
+      ],
+      [
+       "Arctic Armour",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "rake-stomping-ground-leveling-lazyexile": {
+   "snapshot": "20250519033741",
+   "name": "Rake Stomping Ground Alt Leveling (Mercenary Variant)",
+   "variants": [
+    {
+     "title": "Rake Stomping Ground Leveling",
+     "main": "Rake",
+     "skills": [
+      [
+       "Whirling Slash",
+       0
+      ],
+      [
+       "Disengage",
+       1
+      ],
+      [
+       "Rake",
+       4
+      ],
+      [
+       "Herald of Ash",
+       1
+      ],
+      [
+       "Companion: {0}",
+       3
+      ],
+      [
+       "Thunderous Leap",
+       3
+      ],
+      [
+       "Overwhelming Presence",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "giga-stampede-kitava-kingkongor": {
+   "snapshot": "20250519031032",
+   "name": "KingKongors GIGA Stampede Kitava Build",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Stampede",
+     "skills": [
+      [
+       "Stampede",
+       5
+      ],
+      [
+       "Hammer of the Gods",
+       5
+      ],
+      [
+       "Perfect Strike",
+       4
+      ],
+      [
+       "Leap Slam",
+       3
+      ],
+      [
+       "Boneshatter",
+       4
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Seismic Cry",
+       1
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Overwhelming Presence",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "peugets-javazon-leaguestarter": {
+   "snapshot": "20250519025632",
+   "name": null,
+   "variants": []
+  },
+  "archmage-lunatalli": {
+   "snapshot": "20250519020735",
+   "name": "100M DPS no crit Spark Archmage",
+   "variants": [
+    {
+     "title": "Max DPS - MAIN ( Balanced Budget )",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Flame Wall",
+       2
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Mana Tempest",
+       2
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Enfeeble",
+       3
+      ],
+      [
+       "Archmage",
+       1
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Sigil of Power",
+       2
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Cast on Shock",
+       4
+      ]
+     ]
+    },
+    {
+     "title": "Everlasting Gaze (ES Focus)",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Flame Wall",
+       2
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Mana Tempest",
+       3
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Enfeeble",
+       2
+      ],
+      [
+       "Grim Feast",
+       3
+      ],
+      [
+       "Archmage",
+       1
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Sigil of Power",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Early / Mid game passive tree",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Flame Wall",
+       2
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Mana Tempest",
+       3
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Enfeeble",
+       2
+      ],
+      [
+       "Mana Remnants",
+       3
+      ],
+      [
+       "Archmage",
+       1
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Cast on Shock",
+       3
+      ],
+      [
+       "Sigil of Power",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Lucky Everlasting Gaze (DPS Focus)",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Flame Wall",
+       2
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Mana Tempest",
+       3
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Enfeeble",
+       2
+      ],
+      [
+       "Grim Feast",
+       3
+      ],
+      [
+       "Archmage",
+       1
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Sigil of Power",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Infinite Budget",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Mana Tempest",
+       2
+      ],
+      [
+       "Conductivity",
+       4
+      ],
+      [
+       "Archmage",
+       1
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Sigil of Power",
+       2
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Skeletal Warrior",
+       1
+      ],
+      [
+       "Soul Offering",
+       4
+      ]
+     ]
+    },
+    {
+     "title": "Max DPS - High Budget ( I use )",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Orb of Storms",
+       5
+      ],
+      [
+       "Mana Tempest",
+       2
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Archmage",
+       1
+      ],
+      [
+       "Sigil of Power",
+       3
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Cast on Shock",
+       4
+      ],
+      [
+       "Soul Offering",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "lightning-spear-wind-serpent-deadeye-asmodeus": {
+   "snapshot": "20250519013125",
+   "name": "LS/WS Deadeye - The Strongest Build in 0.2",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Spear Stab",
+     "skills": [
+      [
+       "Purity of Fire",
+       4
+      ],
+      [
+       "Spear Stab",
+       5
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Wind Serpent's Fury",
+       5
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Barrage",
+       4
+      ],
+      [
+       "Rhoa Mount",
+       4
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Cast on Critical",
+       3
+      ],
+      [
+       "Ghost Dance",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "jungroan-chrono-frostbolt": {
+   "snapshot": "20250519005907",
+   "name": "Sire of Shards Frostbolt Recoup Chronomancer (WIP)",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Frostbolt",
+     "skills": [
+      [
+       "Blink",
+       2
+      ],
+      [
+       "Mana Tempest",
+       2
+      ],
+      [
+       "Hypothermia",
+       3
+      ],
+      [
+       "Cast on Critical",
+       4
+      ],
+      [
+       "Frostbolt",
+       5
+      ],
+      [
+       "Soul Offering",
+       3
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Eye of Winter",
+       2
+      ],
+      [
+       "Frost Bomb",
+       3
+      ],
+      [
+       "Time Snap",
+       1
+      ],
+      [
+       "Time Snap",
+       0
+      ],
+      [
+       "Sigil of Power",
+       0
+      ],
+      [
+       "Skeletal Warrior",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "ultimate-minion-build-storm-mages-medievalmarty": {
+   "snapshot": "20250519003211",
+   "name": "Ultimate MINION Endgame Build - 20 Storm Mages",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Skeletal Storm Mage",
+     "skills": [
+      [
+       "Skeletal Frost Mage",
+       4
+      ],
+      [
+       "Skeletal Storm Mage",
+       5
+      ],
+      [
+       "Skeletal Cleric",
+       2
+      ],
+      [
+       "Skeletal Sniper",
+       2
+      ],
+      [
+       "Bind Spectre",
+       0
+      ],
+      [
+       "Pain Offering",
+       2
+      ],
+      [
+       "Summon Infernal Hound",
+       2
+      ],
+      [
+       "Conductivity",
+       1
+      ],
+      [
+       "Shield Charge",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "siahz-critical-damage-magnetic-salvo": {
+   "snapshot": "20250518232427",
+   "name": " 170M DPS! + Budget Version Critical Damage Magnetic Salvo ",
+   "variants": [
+    {
+     "title": "140% Movespeed version",
+     "main": "Magnetic Salvo",
+     "skills": [
+      [
+       "Magnetic Salvo",
+       5
+      ],
+      [
+       "Lightning Arrow",
+       5
+      ],
+      [
+       "Bonestorm",
+       4
+      ],
+      [
+       "Lightning Rod",
+       4
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Conductivity",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "170M DPS! UPDATED version",
+     "main": "Magnetic Salvo",
+     "skills": [
+      [
+       "Magnetic Salvo",
+       5
+      ],
+      [
+       "Lightning Arrow",
+       5
+      ],
+      [
+       "Bonestorm",
+       4
+      ],
+      [
+       "Lightning Rod",
+       4
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Conductivity",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "34M+ DPS! BUDGET Version",
+     "main": "Magnetic Salvo",
+     "skills": [
+      [
+       "Magnetic Salvo",
+       5
+      ],
+      [
+       "Lightning Arrow",
+       5
+      ],
+      [
+       "Bonestorm",
+       4
+      ],
+      [
+       "Lightning Rod",
+       4
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Wind Dancer",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "120% Movespeed version",
+     "main": "Magnetic Salvo",
+     "skills": [
+      [
+       "Magnetic Salvo",
+       5
+      ],
+      [
+       "Lightning Arrow",
+       5
+      ],
+      [
+       "Bonestorm",
+       4
+      ],
+      [
+       "Lightning Rod",
+       4
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Conductivity",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "stat-stacker-ice-monk-mrronit": {
+   "snapshot": "20250518231602",
+   "name": "Stat Stacker Ice Strike Monk (1m+ DPS)",
+   "variants": [
+    {
+     "title": "Cheap Starter",
+     "main": "Ice Strike",
+     "skills": [
+      [
+       "Ice Strike",
+       5
+      ],
+      [
+       "Tempest Bell",
+       5
+      ],
+      [
+       "Herald of Ice",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Charged Staff",
+       2
+      ],
+      [
+       "Combat Frenzy",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Hand of Chayula",
+       1
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Ingenuity Added",
+     "main": "Ice Strike",
+     "skills": [
+      [
+       "Ice Strike",
+       5
+      ],
+      [
+       "Tempest Bell",
+       5
+      ],
+      [
+       "Herald of Ice",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Charged Staff",
+       2
+      ],
+      [
+       "Combat Frenzy",
+       3
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Hand of Chayula",
+       1
+      ],
+      [
+       "Cast on Shock",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "bannerlord-support-tactician-ulfhednar": {
+   "snapshot": "20250518230152",
+   "name": "Ulfhednar's The BANNERLORD Support Tactician",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Defiance Banner",
+     "skills": [
+      [
+       "Defiance Banner",
+       2
+      ],
+      [
+       "War Banner",
+       2
+      ],
+      [
+       "Ancestral Warrior Totem",
+       1
+      ],
+      [
+       "Blasphemy",
+       1
+      ],
+      [
+       "Overwhelming Presence",
+       0
+      ],
+      [
+       "Dread Banner",
+       0
+      ],
+      [
+       "Wind Dancer",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "monk-leveling-asmodeus": {
+   "snapshot": "20250518224507",
+   "name": "Optimized Monk Leveling Guide for League Start",
+   "variants": [
+    {
+     "title": "Level 1-13",
+     "main": "Quarterstaff Strike",
+     "skills": [
+      [
+       "Quarterstaff Strike",
+       2
+      ],
+      [
+       "Glacial Cascade",
+       2
+      ],
+      [
+       "Frozen Locus",
+       2
+      ],
+      [
+       "Frost Bomb",
+       0
+      ],
+      [
+       "Tempest Bell",
+       2
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Herald of Ice",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Level 14-35",
+     "main": "Ice Strike",
+     "skills": [
+      [
+       "Ice Strike",
+       3
+      ],
+      [
+       "Glacial Cascade",
+       1
+      ],
+      [
+       "Frozen Locus",
+       2
+      ],
+      [
+       "Frost Bomb",
+       0
+      ],
+      [
+       "Tempest Bell",
+       3
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Leap Slam",
+       2
+      ],
+      [
+       "Herald of Ice",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Level 36-65",
+     "main": "Ice Strike",
+     "skills": [
+      [
+       "Ice Strike",
+       4
+      ],
+      [
+       "Tempest Bell",
+       3
+      ],
+      [
+       "Charged Staff",
+       1
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Herald of Ice",
+       2
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Leap Slam",
+       2
+      ],
+      [
+       "Frost Bomb",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "rob2628-amazon-lightning-gas": {
+   "snapshot": "20250518220623",
+   "name": "Bow Amazon Draft Lightning Arrow into Gas",
+   "variants": [
+    {
+     "title": "Level 1-6",
+     "main": "Lightning Arrow",
+     "skills": [
+      [
+       "Bow Shot",
+       0
+      ],
+      [
+       "Lightning Arrow",
+       3
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Freezing Salvo",
+       2
+      ],
+      [
+       "Rhoa Mount",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       1
+      ],
+      [
+       "Lightning Rod",
+       2
+      ],
+      [
+       "Contagion",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Level 6-25",
+     "main": "Lightning Arrow",
+     "skills": [
+      [
+       "Bow Shot",
+       0
+      ],
+      [
+       "Lightning Arrow",
+       3
+      ],
+      [
+       "Shield Charge",
+       0
+      ],
+      [
+       "Freezing Salvo",
+       3
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Ghost Dance",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Gas Arrow",
+     "main": "Gas Arrow",
+     "skills": [
+      [
+       "Bow Shot",
+       0
+      ],
+      [
+       "Gas Arrow",
+       5
+      ],
+      [
+       "Flame Wall",
+       1
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Ghost Dance",
+       2
+      ],
+      [
+       "Eye of Winter",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "hyrbrid-lightning-bleed-spear-huntress-phaseshifter": {
+   "snapshot": "20250518220304",
+   "name": "PhaseShifter's Lightning/Bleed Amazon Starter Build",
+   "variants": [
+    {
+     "title": "Early to Mid Cruel 1 - 55",
+     "main": "Lightning Spear",
+     "skills": [
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Rake",
+       3
+      ],
+      [
+       "Disengage",
+       1
+      ],
+      [
+       "Thunderous Leap",
+       0
+      ],
+      [
+       "Storm Lance",
+       2
+      ],
+      [
+       "Primal Strikes",
+       1
+      ],
+      [
+       "Herald of Blood",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       2
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Parry",
+       0
+      ],
+      [
+       "Infuse Weapon",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "ulfhednar-ritualist-leveling": {
+   "snapshot": "20250518215623",
+   "name": "Ulfhednar's HUNTRESS Ritualist Leveling",
+   "variants": [
+    {
+     "title": "Leveling",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       3
+      ],
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Spear Stab",
+       3
+      ],
+      [
+       "Barrage",
+       2
+      ],
+      [
+       "Thunderous Leap",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       1
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Tame Beast",
+       2
+      ],
+      [
+       "Disengage",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Mid Game (Maps)",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       3
+      ],
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Barrage",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       2
+      ],
+      [
+       "Conductivity",
+       2
+      ],
+      [
+       "Thunderous Leap",
+       2
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Tame Beast",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "energy-shield-spectres-animeprincess": {
+   "snapshot": "20250518214719",
+   "name": "ENDGAME ENERGY SHIELD SPECTRES - BUILD GUIDE - @animeprincess",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Bind Spectre",
+     "skills": [
+      [
+       "Bind Spectre",
+       5
+      ],
+      [
+       "Skeletal Sniper",
+       5
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ],
+      [
+       "Skeletal Storm Mage",
+       3
+      ],
+      [
+       "Withering Presence",
+       1
+      ],
+      [
+       "Pain Offering",
+       3
+      ],
+      [
+       "Convalescence",
+       0
+      ],
+      [
+       "Despair",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "bleed-blood-mage-peuget2": {
+   "snapshot": "20250518211854",
+   "name": "Peuget2's Bleed Blood Mage",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Rake",
+     "skills": [
+      [
+       "Life Remnants",
+       4
+      ],
+      [
+       "Rake",
+       5
+      ],
+      [
+       "Blood Hunt",
+       3
+      ],
+      [
+       "Blasphemy",
+       2
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Lightning Spear",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "jungroan-poison-lightning-spear-amazon": {
+   "snapshot": "20250518211413",
+   "name": "Poison Lightning Spear Amazon",
+   "variants": [
+    {
+     "title": "Mapping",
+     "main": "Infuse Weapon",
+     "skills": [
+      [
+       "Infuse Weapon",
+       5
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Storm Lance",
+       5
+      ],
+      [
+       "Sniper's Mark",
+       3
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Herald of Plague",
+       1
+      ],
+      [
+       "Ghost Dance",
+       1
+      ],
+      [
+       "Rhoa Mount",
+       3
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Despair",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Lategame",
+     "main": "Infuse Weapon",
+     "skills": [
+      [
+       "Infuse Weapon",
+       5
+      ],
+      [
+       "Lightning Spear",
+       5
+      ],
+      [
+       "Storm Lance",
+       5
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Herald of Plague",
+       1
+      ],
+      [
+       "Ghost Dance",
+       1
+      ],
+      [
+       "Rhoa Mount",
+       3
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Despair",
+       3
+      ],
+      [
+       "Cast on Critical",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "lightning-spear-huntress-travic": {
+   "snapshot": "20250518205208",
+   "name": "Lightning Spear Huntress - Midgame Guide ",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Infuse Weapon",
+     "skills": [
+      [
+       "Infuse Weapon",
+       3
+      ],
+      [
+       "Whirling Slash",
+       2
+      ],
+      [
+       "Twister",
+       3
+      ],
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Combat Frenzy",
+       2
+      ],
+      [
+       "Wind Dancer",
+       1
+      ],
+      [
+       "Barrage",
+       3
+      ],
+      [
+       "Herald of Ice",
+       2
+      ],
+      [
+       "Sniper's Mark",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "frost-mage-lich-goldfarmingguide": {
+   "snapshot": "20250518202941",
+   "name": "Ice Bomb Frost Mage Lich goldfarmingGUIDE",
+   "variants": [
+    {
+     "title": "Level 93 T4 Pinnacle Bosses",
+     "main": "Skeletal Frost Mage",
+     "skills": [
+      [
+       "Skeletal Frost Mage",
+       5
+      ],
+      [
+       "Skeletal Storm Mage",
+       4
+      ],
+      [
+       "Frost Bomb",
+       4
+      ],
+      [
+       "Hypothermia",
+       5
+      ],
+      [
+       "Skeletal Sniper",
+       4
+      ],
+      [
+       "Convalescence",
+       1
+      ],
+      [
+       "Pain Offering",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ],
+      [
+       "Malice",
+       0
+      ],
+      [
+       "Sigil of Power",
+       0
+      ],
+      [
+       "Parry",
+       0
+      ],
+      [
+       "Spectre: {0}",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Level 90 Endgame",
+     "main": "Skeletal Frost Mage",
+     "skills": [
+      [
+       "Skeletal Frost Mage",
+       5
+      ],
+      [
+       "Frost Bomb",
+       3
+      ],
+      [
+       "Hypothermia",
+       3
+      ],
+      [
+       "Convalescence",
+       3
+      ],
+      [
+       "Pain Offering",
+       3
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ],
+      [
+       "Sigil of Power",
+       0
+      ],
+      [
+       "Malice",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Level 85 ES T15+",
+     "main": "Skeletal Frost Mage",
+     "skills": [
+      [
+       "Frost Bomb",
+       3
+      ],
+      [
+       "Hypothermia",
+       3
+      ],
+      [
+       "Convalescence",
+       3
+      ],
+      [
+       "Pain Offering",
+       3
+      ],
+      [
+       "Skeletal Frost Mage",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Level 75 T10-15",
+     "main": "Hypothermia",
+     "skills": [
+      [
+       "Frost Bomb",
+       2
+      ],
+      [
+       "Hypothermia",
+       3
+      ],
+      [
+       "Pain Offering",
+       3
+      ],
+      [
+       "Skeletal Frost Mage",
+       3
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Level 65 Map Starter",
+     "main": "Skeletal Frost Mage",
+     "skills": [
+      [
+       "Malice",
+       0
+      ],
+      [
+       "Skeletal Frost Mage",
+       3
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ],
+      [
+       "Frost Bomb",
+       2
+      ],
+      [
+       "Hypothermia",
+       3
+      ],
+      [
+       "Pain Offering",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "one-shot-titan-kingkongor": {
+   "snapshot": "20250518191619",
+   "name": "KingKongors Titan One Shot",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Mace Strike",
+     "skills": [
+      [
+       "Mace Strike",
+       5
+      ],
+      [
+       "Stampede",
+       5
+      ],
+      [
+       "Hammer of the Gods",
+       5
+      ],
+      [
+       "Herald of Ice",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ],
+      [
+       "Grim Feast",
+       2
+      ],
+      [
+       "Leap Slam",
+       1
+      ],
+      [
+       "Shield Wall",
+       2
+      ],
+      [
+       "Shield Charge",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "low-life-ritualist-ulfhednar": {
+   "snapshot": "20250518182435",
+   "name": "Ulfhednar's LOW LIFE Ritualist Primal & Lightning SPEAR",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Primal Strikes",
+     "skills": [
+      [
+       "Primal Strikes",
+       5
+      ],
+      [
+       "Ritual Sacrifice",
+       4
+      ],
+      [
+       "Lightning Spear",
+       4
+      ],
+      [
+       "Trinity",
+       3
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Conductivity",
+       3
+      ],
+      [
+       "Barrage",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       1
+      ],
+      [
+       "Ghost Dance",
+       1
+      ],
+      [
+       "Wind Dancer",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "campaign-huntress-travic": {
+   "snapshot": "20250518174123",
+   "name": "Travic Campaign Huntress POB",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Twister",
+     "skills": [
+      [
+       "Twister",
+       3
+      ],
+      [
+       "Whirling Slash",
+       2
+      ],
+      [
+       "Frostbolt",
+       2
+      ],
+      [
+       "Barrage",
+       1
+      ],
+      [
+       "Companion: {0}",
+       0
+      ],
+      [
+       "Combat Frenzy",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "chaos-totem-lich-endgame-imortilize": {
+   "snapshot": "20250518171523",
+   "name": "Chaos Totem Lich - T16+ Endgame",
+   "variants": [
+    {
+     "title": "T1 - T14",
+     "main": "Dark Effigy",
+     "skills": [
+      [
+       "Dark Effigy",
+       5
+      ],
+      [
+       "Essence Drain",
+       4
+      ],
+      [
+       "Contagion",
+       3
+      ],
+      [
+       "Profane Ritual",
+       3
+      ],
+      [
+       "Despair",
+       4
+      ],
+      [
+       "Blasphemy",
+       2
+      ],
+      [
+       "Withering Presence",
+       1
+      ],
+      [
+       "Convalescence",
+       2
+      ],
+      [
+       "Discipline",
+       2
+      ],
+      [
+       "Sigil of Power",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "T15",
+     "main": "Dark Effigy",
+     "skills": [
+      [
+       "Dark Effigy",
+       5
+      ],
+      [
+       "Essence Drain",
+       5
+      ],
+      [
+       "Contagion",
+       4
+      ],
+      [
+       "Profane Ritual",
+       4
+      ],
+      [
+       "Despair",
+       4
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Withering Presence",
+       1
+      ],
+      [
+       "Convalescence",
+       4
+      ],
+      [
+       "Discipline",
+       2
+      ],
+      [
+       "Sigil of Power",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "T16+",
+     "main": "Dark Effigy",
+     "skills": [
+      [
+       "Dark Effigy",
+       5
+      ],
+      [
+       "Essence Drain",
+       5
+      ],
+      [
+       "Contagion",
+       4
+      ],
+      [
+       "Profane Ritual",
+       4
+      ],
+      [
+       "Despair",
+       4
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Withering Presence",
+       1
+      ],
+      [
+       "Convalescence",
+       4
+      ],
+      [
+       "Discipline",
+       2
+      ],
+      [
+       "Sigil of Power",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "twink-ranger-amazon-leveling-peuget2": {
+   "snapshot": "20250430150713",
+   "name": null,
+   "variants": []
+  },
+  "rake-stomping-ground-leveling-sorcerer-lazyexile": {
+   "snapshot": "20250427141248",
+   "name": null,
+   "variants": []
+  },
+  "shockburst-endgame-wilsunboxile": {
+   "snapshot": "20250427044225",
+   "name": "Shockburst EndGame Build Guide",
+   "variants": [
+    {
+     "title": "Shockburst Build",
+     "main": "Galvanic Shards",
+     "skills": [
+      [
+       "Galvanic Shards",
+       5
+      ],
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Attrition",
+       0
+      ],
+      [
+       "Ball Lightning",
+       2
+      ],
+      [
+       "Lightning Warp",
+       2
+      ],
+      [
+       "Emergency Reload",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "explosion-concoction-wilsunboxile": {
+   "snapshot": "20250427032007",
+   "name": "Explosion Concoction End Game Build",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Explosive Concoction",
+     "skills": [
+      [
+       "Explosive Concoction",
+       5
+      ],
+      [
+       "Flammability",
+       3
+      ],
+      [
+       "Solar Orb",
+       4
+      ],
+      [
+       "Herald of Ash",
+       2
+      ],
+      [
+       "Cast on Ignite",
+       3
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Ghost Dance",
+       1
+      ],
+      [
+       "Alchemist's Boon",
+       0
+      ],
+      [
+       "Cast on Ignite",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "travic-autoattack-explode-titan": {
+   "snapshot": "20250419190721",
+   "name": "Travic Autoattack Explode Titan",
+   "variants": [
+    {
+     "title": "Default",
+     "main": null,
+     "skills": []
+    },
+    {
+     "title": "Default",
+     "main": "Herald of Ice",
+     "skills": [
+      [
+       "Herald of Ice",
+       5
+      ],
+      [
+       "Cast on Dodge",
+       4
+      ],
+      [
+       "Blink",
+       4
+      ],
+      [
+       "Infernal Cry",
+       4
+      ],
+      [
+       "Berserk",
+       1
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Mace Strike",
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "asmodeus-leveling-archemage": {
+   "snapshot": "20250419150738",
+   "name": "Spark Archmage Leveling Guide by Asmodeus",
+   "variants": [
+    {
+     "title": "Leveling Stage 1",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       2
+      ],
+      [
+       "Flame Wall",
+       1
+      ],
+      [
+       "Orb of Storms",
+       2
+      ],
+      [
+       "Raging Spirits",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Leveling Stage 2",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       3
+      ],
+      [
+       "Flame Wall",
+       2
+      ],
+      [
+       "Orb of Storms",
+       3
+      ],
+      [
+       "Blasphemy",
+       0
+      ],
+      [
+       "Mana Tempest",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Leveling Stage 3",
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Conductivity",
+       2
+      ],
+      [
+       "Archmage",
+       1
+      ],
+      [
+       "Mana Tempest",
+       2
+      ],
+      [
+       "Sigil of Power",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "ben-ev-es-hybrid-deadeye": {
+   "snapshot": "20250419141543",
+   "name": null,
+   "variants": []
+  },
+  "sparkmage-ben": {
+   "snapshot": "20250419072620",
+   "name": null,
+   "variants": []
+  },
+  "dante00151-hexblast-infernalist": {
+   "snapshot": "20250419011448",
+   "name": "Endgame - Hexblast Infernalist Demon Form",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Hexblast",
+     "skills": [
+      [
+       "Demon Form",
+       2
+      ],
+      [
+       "Summon Infernal Hound",
+       4
+      ],
+      [
+       "Hexblast",
+       5
+      ],
+      [
+       "Blasphemy",
+       2
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Ball Lightning",
+       3
+      ],
+      [
+       "Essence Drain",
+       3
+      ],
+      [
+       "Mana Tempest",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "lazy-exile-one-shot-bloodmage": {
+   "snapshot": "20250418212721",
+   "name": "One Shot Bosses on a Budget - Arc Blood Mage",
+   "variants": [
+    {
+     "title": "Tanky One Shot (Mid-High Budget)",
+     "main": "Spark",
+     "skills": [
+      [
+       "Greater Lightning Bolt",
+       4
+      ],
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Cast on Critical",
+       4
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Ghost Dance",
+       3
+      ],
+      [
+       "Blink",
+       2
+      ],
+      [
+       "Elemental Conflux",
+       3
+      ],
+      [
+       "Life Remnants",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Arc One-Shot (Level 78+)",
+     "main": "Arc",
+     "skills": [
+      [
+       "Greater Lightning Bolt",
+       4
+      ],
+      [
+       "Life Remnants",
+       0
+      ],
+      [
+       "Arc",
+       5
+      ],
+      [
+       "Cast on Critical",
+       4
+      ],
+      [
+       "Flammability",
+       3
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Elemental Conflux",
+       3
+      ],
+      [
+       "Eye of Winter",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "Pre-Choir (Level 65-78)",
+     "main": "Bone Cage",
+     "skills": [
+      [
+       "Life Remnants",
+       0
+      ],
+      [
+       "Bone Cage",
+       4
+      ],
+      [
+       "Cast on Critical",
+       4
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Eye of Winter",
+       2
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Bonestorm",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "lightning-spear-amazonian-huntress-velyna": {
+   "snapshot": "20250417233900",
+   "name": null,
+   "variants": []
+  },
+  "warbringer-totem-leveling-italianspartacus": {
+   "snapshot": "20250417054934",
+   "name": null,
+   "variants": []
+  },
+  "adorned-rarity-culler-empyrian": {
+   "snapshot": "20250416215716",
+   "name": "The Adorned Rarity stacking culler (party build)",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Ball Lightning",
+     "skills": [
+      [
+       "War Banner",
+       2
+      ],
+      [
+       "Charge Infusion",
+       0
+      ],
+      [
+       "Grim Feast",
+       2
+      ],
+      [
+       "Flame Wall",
+       1
+      ],
+      [
+       "Blink",
+       2
+      ],
+      [
+       "Ball Lightning",
+       4
+      ],
+      [
+       "Raging Spirits",
+       3
+      ],
+      [
+       "Dark Effigy",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "fireball-frost-wall-stormweaver-raychich": {
+   "snapshot": "20250416155329",
+   "name": "Fireball Frost Wall Elemental Storm Stormweaver | Level 70",
+   "variants": [
+    {
+     "title": null,
+     "main": null,
+     "skills": []
+    },
+    {
+     "title": null,
+     "main": "Elemental Storm",
+     "skills": [
+      [
+       "Elemental Storm",
+       4
+      ],
+      [
+       "Fireball",
+       4
+      ],
+      [
+       "Frost Wall",
+       4
+      ],
+      [
+       "Cast on Freeze",
+       2
+      ],
+      [
+       "Cast on Freeze",
+       3
+      ],
+      [
+       "Arctic Armour",
+       2
+      ],
+      [
+       "Frost Bomb",
+       2
+      ],
+      [
+       "Hypothermia",
+       2
+      ],
+      [
+       "Eye of Winter",
+       1
+      ],
+      [
+       "Flame Wall",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "alkaizer-default-attack-gemling": {
+   "snapshot": "20250416154728",
+   "name": "Alkaizer Default Attack Gemling",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Mace Strike",
+     "skills": [
+      [
+       "Mace Strike",
+       5
+      ],
+      [
+       "Hammer of the Gods",
+       5
+      ],
+      [
+       "Ancestral Warrior Totem",
+       3
+      ],
+      [
+       "Shield Charge",
+       2
+      ],
+      [
+       "Perfect Strike",
+       4
+      ],
+      [
+       "Temporal Chains",
+       3
+      ],
+      [
+       "Herald of Ice",
+       5
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Ghost Dance",
+       4
+      ],
+      [
+       "Infernal Cry",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "ruse-minions": {
+   "snapshot": "20250415203411",
+   "name": "Ultimate Minion (Map 15+)",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Skeletal Arsonist",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Raise Shield",
+       0
+      ],
+      [
+       "Pain Offering",
+       3
+      ],
+      [
+       "Skeletal Cleric",
+       2
+      ],
+      [
+       "Flame Wall",
+       2
+      ],
+      [
+       "Flammability",
+       2
+      ],
+      [
+       "Skeletal Arsonist",
+       5
+      ],
+      [
+       "Detonate Dead",
+       3
+      ],
+      [
+       "Grim Feast",
+       1
+      ],
+      [
+       "Summon Infernal Hound",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "bleed-stun-titan-innerblaze": {
+   "snapshot": "20250415005658",
+   "name": null,
+   "variants": []
+  },
+  "lightning-beasts-speed-leveling-medievalmarty": {
+   "snapshot": "20250414095507",
+   "name": null,
+   "variants": []
+  },
+  "crit-spiral-volley-deadeye-eravin": {
+   "snapshot": "20250411194222",
+   "name": null,
+   "variants": []
+  },
+  "lightning-spear-huntress-cliptis": {
+   "snapshot": "20250409052517",
+   "name": "Cliptis' Lightning Spear Huntress!",
+   "variants": [
+    {
+     "title": "Act 1",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Disengage",
+       0
+      ],
+      [
+       "Parry",
+       0
+      ],
+      [
+       "Lightning Spear",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Act 2",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       2
+      ],
+      [
+       "Disengage",
+       2
+      ],
+      [
+       "Lightning Spear",
+       1
+      ],
+      [
+       "Twister",
+       2
+      ],
+      [
+       "Frostbolt",
+       1
+      ],
+      [
+       "Whirling Slash",
+       0
+      ],
+      [
+       "Herald of Thunder",
+       1
+      ],
+      [
+       "Parry",
+       0
+      ],
+      [
+       "Barrage",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Act 3",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       3
+      ],
+      [
+       "Storm Lance",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       2
+      ],
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Cruel",
+     "main": "Explosive Spear",
+     "skills": [
+      [
+       "Explosive Spear",
+       3
+      ],
+      [
+       "Storm Lance",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       2
+      ],
+      [
+       "Lightning Spear",
+       3
+      ],
+      [
+       "Wind Dancer",
+       0
+      ],
+      [
+       "Combat Frenzy",
+       1
+      ],
+      [
+       "Sniper's Mark",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "gas-arrow-deadeye-perragaming": {
+   "snapshot": "20250408215701",
+   "name": null,
+   "variants": []
+  },
+  "schwingy-sniperking": {
+   "snapshot": "20250407184130",
+   "name": null,
+   "variants": []
+  },
+  "donthecrown-amazon-leveling": {
+   "snapshot": "20250405202222",
+   "name": null,
+   "variants": []
+  },
+  "hammer-of-the-gods": {
+   "snapshot": "20250404200031",
+   "name": null,
+   "variants": []
+  },
+  "sirgog-020-spear-amazon-starter": {
+   "snapshot": "20250404130541",
+   "name": "Sirgog's Amazon Crit/Accuracy Spear 0.2.0 Starter",
+   "variants": [
+    {
+     "title": null,
+     "main": null,
+     "skills": []
+    },
+    {
+     "title": null,
+     "main": null,
+     "skills": []
+    }
+   ]
+  },
+  "thyworms-gemling-minionaire": {
+   "snapshot": "20250403144356",
+   "name": null,
+   "variants": []
+  },
+  "tsukuyomu-cwdt-demon-infernalist": {
+   "snapshot": "20250403125635",
+   "name": null,
+   "variants": []
+  },
+  "bowa-int-stacker-jungroan": {
+   "snapshot": "20250401121040",
+   "name": null,
+   "variants": []
+  },
+  "lazy-exile-demon-form-impending-doom": {
+   "snapshot": "20250401001006",
+   "name": null,
+   "variants": []
+  },
+  "earthshatter-warbringer-imexile": {
+   "snapshot": "20250328091618",
+   "name": "Earthshatter Warbringer with Hammer of the Gods",
+   "variants": [
+    {
+     "title": null,
+     "main": null,
+     "skills": []
+    },
+    {
+     "title": null,
+     "main": "Earthshatter",
+     "skills": [
+      [
+       "Earthshatter",
+       5
+      ],
+      [
+       "Seismic Cry",
+       3
+      ],
+      [
+       "Hammer of the Gods",
+       4
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Shield Charge",
+       3
+      ],
+      [
+       "Leap Slam",
+       2
+      ],
+      [
+       "Berserk",
+       1
+      ],
+      [
+       "Overwhelming Presence",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "kripp-reaver-warbringer": {
+   "snapshot": "20250327173709",
+   "name": "Kripp's Reaver Warbringer",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Skeletal Reaver",
+     "skills": [
+      [
+       "Skeletal Reaver",
+       5
+      ],
+      [
+       "Skeletal Sniper",
+       4
+      ],
+      [
+       "Skeletal Warrior",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       4
+      ],
+      [
+       "Dark Effigy",
+       4
+      ],
+      [
+       "Ancestral Spirits",
+       4
+      ],
+      [
+       "Encase in Jade",
+       1
+      ],
+      [
+       "Pain Offering",
+       4
+      ],
+      [
+       "Seismic Cry",
+       4
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Raise Shield",
+       0
+      ],
+      [
+       "Enfeeble",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "detonate-dead-blood-mage-ds-lily": {
+   "snapshot": "20250327160303",
+   "name": "1M+ Dmg Per HIT! Detonate Dead Crit Blood Mage",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Detonate Dead",
+     "skills": [
+      [
+       "Detonate Dead",
+       5
+      ],
+      [
+       "Skeletal Brute",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       4
+      ],
+      [
+       "Soul Offering",
+       3
+      ],
+      [
+       "Mana Tempest",
+       3
+      ],
+      [
+       "Sacrifice",
+       0
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Archmage",
+       0
+      ],
+      [
+       "Fireball",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "monk--starter": {
+   "snapshot": "20250324072256",
+   "name": "Monk Level 15-55",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Tempest Flurry",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Quarterstaff Strike",
+       0
+      ],
+      [
+       "Herald of Thunder",
+       2
+      ],
+      [
+       "Tempest Flurry",
+       3
+      ],
+      [
+       "Vaulting Impact",
+       0
+      ],
+      [
+       "Storm Wave",
+       2
+      ],
+      [
+       "Siphoning Strike",
+       0
+      ],
+      [
+       "Charged Staff",
+       2
+      ],
+      [
+       "Tempest Bell",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "ronarray-demon-mom-hexblast-infernalist": {
+   "snapshot": "20250324061632",
+   "name": "PERMA Demon Mom - Hexblast Infernalist",
+   "variants": [
+    {
+     "title": "Maping Version",
+     "main": "Summon Infernal Hound",
+     "skills": [
+      [
+       "Demon Form",
+       2
+      ],
+      [
+       "Summon Infernal Hound",
+       5
+      ],
+      [
+       "Blasphemy",
+       1
+      ],
+      [
+       "Hexblast",
+       5
+      ],
+      [
+       "Contagion",
+       3
+      ],
+      [
+       "Dark Effigy",
+       3
+      ],
+      [
+       "Mana Tempest",
+       3
+      ],
+      [
+       "Ice Nova",
+       4
+      ],
+      [
+       "Grim Feast",
+       1
+      ]
+     ]
+    },
+    {
+     "title": "Bossing Version",
+     "main": "Summon Infernal Hound",
+     "skills": [
+      [
+       "Demon Form",
+       2
+      ],
+      [
+       "Summon Infernal Hound",
+       5
+      ],
+      [
+       "Blasphemy",
+       1
+      ],
+      [
+       "Hexblast",
+       5
+      ],
+      [
+       "Contagion",
+       3
+      ],
+      [
+       "Dark Effigy",
+       3
+      ],
+      [
+       "Withering Presence",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "kripp-sniper-explode-summoner": {
+   "snapshot": "20250324060659",
+   "name": "Kripp's Sniper Explode Summoner",
+   "variants": [
+    {
+     "title": "Default",
+     "main": "Pain Offering",
+     "skills": [
+      [
+       "Punch",
+       0
+      ],
+      [
+       "Raging Spirits",
+       4
+      ],
+      [
+       "Flame Wall",
+       3
+      ],
+      [
+       "Skeletal Arsonist",
+       4
+      ],
+      [
+       "Flammability",
+       3
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ],
+      [
+       "Pain Offering",
+       5
+      ],
+      [
+       "Summon Infernal Hound",
+       5
+      ],
+      [
+       "Skeletal Sniper",
+       4
+      ],
+      [
+       "Shield Charge",
+       1
+      ],
+      [
+       "Skeletal Warrior",
+       4
+      ],
+      [
+       "Raise Shield",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "connor-converse-mana-stacker-gemling": {
+   "snapshot": "20250320003737",
+   "name": null,
+   "variants": []
+  },
+  "hammer-ignite-titan-connor-converse": {
+   "snapshot": "20250319105529",
+   "name": null,
+   "variants": []
+  },
+  "wilsunboxile-leap-slam-leveling": {
+   "snapshot": "20250317054352",
+   "name": "Leap Slam + Mace Strike Leveling And End Game Build",
+   "variants": [
+    {
+     "title": "Act 1 - 3",
+     "main": "Leap Slam",
+     "skills": [
+      [
+       "Leap Slam",
+       3
+      ],
+      [
+       "Boneshatter",
+       3
+      ],
+      [
+       "Infernal Cry",
+       2
+      ],
+      [
+       "Herald of Ash",
+       2
+      ],
+      [
+       "Overwhelming Presence",
+       1
+      ],
+      [
+       "Earthshatter",
+       3
+      ],
+      [
+       "Shockwave Totem",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Cruel To End Game",
+     "main": "Mace Strike",
+     "skills": [
+      [
+       "Leap Slam",
+       3
+      ],
+      [
+       "Boneshatter",
+       3
+      ],
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Herald of Ash",
+       3
+      ],
+      [
+       "Mace Strike",
+       4
+      ],
+      [
+       "Ancestral Warrior Totem",
+       1
+      ],
+      [
+       "Hammer of the Gods",
+       3
+      ],
+      [
+       "Time of Need",
+       2
+      ],
+      [
+       "Sunder",
+       3
+      ],
+      [
+       "Seismic Cry",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "End Game ",
+     "main": "Mace Strike",
+     "skills": [
+      [
+       "Infernal Cry",
+       3
+      ],
+      [
+       "Herald of Ash",
+       3
+      ],
+      [
+       "Mace Strike",
+       4
+      ],
+      [
+       "Ancestral Warrior Totem",
+       1
+      ],
+      [
+       "Hammer of the Gods",
+       4
+      ],
+      [
+       "Time of Need",
+       2
+      ],
+      [
+       "Sunder",
+       4
+      ],
+      [
+       "Seismic Cry",
+       3
+      ],
+      [
+       "Attrition",
+       0
+      ],
+      [
+       "Scavenged Plating",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "lazy-exile-siege-cascade-chronomancer": {
+   "snapshot": "20250317052141",
+   "name": "Siege Cascade Crossbowmancer [Patch 0.1.1]",
+   "variants": [
+    {
+     "title": "NERFED (Early Game)",
+     "main": "Siege Cascade",
+     "skills": [
+      [
+       "Temporal Rift",
+       0
+      ],
+      [
+       "Time Freeze",
+       1
+      ],
+      [
+       "Siege Cascade",
+       4
+      ],
+      [
+       "Frost Wall",
+       3
+      ],
+      [
+       "Emergency Reload",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "War Banner",
+       0
+      ],
+      [
+       "Blink",
+       2
+      ]
+     ]
+    },
+    {
+     "title": "NERFED (Herald Setup)",
+     "main": "Siege Cascade",
+     "skills": [
+      [
+       "Temporal Rift",
+       0
+      ],
+      [
+       "Time Freeze",
+       2
+      ],
+      [
+       "Siege Cascade",
+       5
+      ],
+      [
+       "Frost Wall",
+       3
+      ],
+      [
+       "Emergency Reload",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Herald of Ice",
+       4
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "War Banner",
+       0
+      ],
+      [
+       "Vine Arrow",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Shockburst HoWA Setup (Patch 0.1.1)",
+     "main": "Siege Cascade",
+     "skills": [
+      [
+       "Temporal Rift",
+       0
+      ],
+      [
+       "Time Freeze",
+       2
+      ],
+      [
+       "Siege Cascade",
+       5
+      ],
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Ball Lightning",
+       3
+      ],
+      [
+       "Emergency Reload",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Lightning Warp",
+       2
+      ],
+      [
+       "Voltaic Mark",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ]
+     ]
+    },
+    {
+     "title": "CoS HoWA Setup (Patch 0.1.1)",
+     "main": "Siege Cascade",
+     "skills": [
+      [
+       "Temporal Rift",
+       0
+      ],
+      [
+       "Time Freeze",
+       2
+      ],
+      [
+       "Siege Cascade",
+       5
+      ],
+      [
+       "Lightning Rod",
+       4
+      ],
+      [
+       "Orb of Storms",
+       4
+      ],
+      [
+       "Emergency Reload",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Blasphemy",
+       3
+      ],
+      [
+       "Cast on Shock",
+       3
+      ],
+      [
+       "Voltaic Mark",
+       1
+      ],
+      [
+       "Herald of Thunder",
+       5
+      ]
+     ]
+    }
+   ]
+  },
+  "fearlessdumbo-fresh-clip-gemling": {
+   "snapshot": "20250316114950",
+   "name": "Fresh Clip Gemling Legionnairre - 12m+ Crossbow DPS Endgame",
+   "variants": [
+    {
+     "title": "Endgame",
+     "main": "Shockburst Rounds",
+     "skills": [
+      [
+       "Shockburst Rounds",
+       5
+      ],
+      [
+       "Galvanic Shards",
+       5
+      ],
+      [
+       "Herald of Thunder",
+       4
+      ],
+      [
+       "Grim Feast",
+       3
+      ],
+      [
+       "Conductivity",
+       4
+      ],
+      [
+       "Voltaic Mark",
+       0
+      ],
+      [
+       "Ripwire Ballista",
+       4
+      ],
+      [
+       "Stormcaller Arrow",
+       4
+      ],
+      [
+       "Emergency Reload",
+       3
+      ]
+     ]
+    }
+   ]
+  },
+  "fubgun-bow-shot-mf-adorn": {
+   "snapshot": "20250313190952",
+   "name": null,
+   "variants": []
+  },
+  "mattjestic-detonate-dead": {
+   "snapshot": "20250313010145",
+   "name": null,
+   "variants": []
+  },
+  "archmage-spark-ci-animeprincess": {
+   "snapshot": "20250310172750",
+   "name": null,
+   "variants": []
+  },
+  "peuget2-budget-poisonous-concoction-pathfinder": {
+   "snapshot": "20250302214125",
+   "name": null,
+   "variants": []
+  },
+  "don-cold-monk": {
+   "snapshot": "20250228091834",
+   "name": null,
+   "variants": []
+  },
+  "imexile-detonate-dead": {
+   "snapshot": "20250222113447",
+   "name": "Detonate Dead Blood Mage",
+   "variants": [
+    {
+     "title": "Endgame Life/ES",
+     "main": "Detonate Dead",
+     "skills": [
+      [
+       "Malice",
+       0
+      ],
+      [
+       "Life Remnants",
+       0
+      ],
+      [
+       "Detonate Dead",
+       5
+      ],
+      [
+       "Skeletal Brute",
+       4
+      ],
+      [
+       "Soul Offering",
+       3
+      ],
+      [
+       "Skeletal Cleric",
+       2
+      ],
+      [
+       "Mana Tempest",
+       3
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Sacrifice",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Endgame Heavy ES ",
+     "main": "Detonate Dead",
+     "skills": [
+      [
+       "Malice",
+       0
+      ],
+      [
+       "Life Remnants",
+       1
+      ],
+      [
+       "Detonate Dead",
+       5
+      ],
+      [
+       "Skeletal Brute",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       4
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Sacrifice",
+       0
+      ],
+      [
+       "Archmage",
+       0
+      ],
+      [
+       "Mana Tempest",
+       3
+      ],
+      [
+       "Soul Offering",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Act 2+",
+     "main": "Skeletal Arsonist",
+     "skills": [
+      [
+       "Unearth",
+       2
+      ],
+      [
+       "Skeletal Arsonist",
+       3
+      ],
+      [
+       "Flame Wall",
+       2
+      ],
+      [
+       "Raging Spirits",
+       3
+      ],
+      [
+       "Flammability",
+       3
+      ],
+      [
+       "Pain Offering",
+       1
+      ],
+      [
+       "Skeletal Warrior",
+       2
+      ],
+      [
+       "Grim Feast",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Act 1",
+     "main": "Skeletal Sniper",
+     "skills": [
+      [
+       "Unearth",
+       1
+      ],
+      [
+       "Skeletal Sniper",
+       2
+      ],
+      [
+       "Flame Wall",
+       0
+      ],
+      [
+       "Contagion",
+       0
+      ],
+      [
+       "Skeletal Warrior",
+       2
+      ],
+      [
+       "Essence Drain",
+       1
+      ]
+     ]
+    }
+   ]
+  },
+  "frozen-sentinel-lucky-stormweaver": {
+   "snapshot": "20250219061551",
+   "name": "\"Lucky\" Big DPS Full Mana (No ES) Spark Stormweaver",
+   "variants": [
+    {
+     "title": null,
+     "main": null,
+     "skills": []
+    },
+    {
+     "title": null,
+     "main": "Spark",
+     "skills": [
+      [
+       "Spark",
+       5
+      ],
+      [
+       "Sigil of Power",
+       0
+      ],
+      [
+       "Archmage",
+       2
+      ],
+      [
+       "Conductivity",
+       2
+      ],
+      [
+       "Blink",
+       1
+      ],
+      [
+       "Orb of Storms",
+       1
+      ],
+      [
+       "Ball Lightning",
+       1
+      ],
+      [
+       "Lightning Warp",
+       4
+      ]
+     ]
+    }
+   ]
+  },
+  "raychich-one-shot-machine-frost-wall-spark": {
+   "snapshot": "20250217020513",
+   "name": null,
+   "variants": []
+  },
+  "peuget2-walking-pathfinder": {
+   "snapshot": "20250208023010",
+   "name": "Decompose Pathfinder Full Guide and Leveling",
+   "variants": [
+    {
+     "title": "Starter Version",
+     "main": "Poisonous Concoction",
+     "skills": [
+      [
+       "Decompose",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ],
+      [
+       "Eye of Winter",
+       3
+      ],
+      [
+       "Despair",
+       2
+      ],
+      [
+       "Poisonous Concoction",
+       5
+      ],
+      [
+       "Sacrifice",
+       0
+      ],
+      [
+       "Grim Feast",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Advanced version",
+     "main": "Poisonous Concoction",
+     "skills": [
+      [
+       "Decompose",
+       4
+      ],
+      [
+       "Skeletal Cleric",
+       3
+      ],
+      [
+       "Eye of Winter",
+       3
+      ],
+      [
+       "Despair",
+       2
+      ],
+      [
+       "Poisonous Concoction",
+       5
+      ],
+      [
+       "Sacrifice",
+       0
+      ],
+      [
+       "Grim Feast",
+       0
+      ],
+      [
+       "Cast on Minion Death",
+       0
+      ]
+     ]
+    },
+    {
+     "title": "Level 1-22",
+     "main": "Lightning Arrow",
+     "skills": [
+      [
+       "Lightning Arrow",
+       3
+      ],
+      [
+       "Lightning Rod",
+       3
+      ]
+     ]
+    },
+    {
+     "title": "Level 22+",
+     "main": "Poisonous Concoction",
+     "skills": [
+      [
+       "Poisonous Concoction",
+       3
+      ],
+      [
+       "Eye of Winter",
+       3
+      ],
+      [
+       "Despair",
+       2
+      ],
+      [
+       "Wind Dancer",
+       2
+      ],
+      [
+       "Alchemist's Boon",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  "stat-stack-staff-iamjustacrazy": {
+   "snapshot": "20250121094915",
+   "name": "My Build",
+   "variants": [
+    {
+     "title": null,
+     "main": "Storm Wave",
+     "skills": [
+      [
+       "Blink",
+       3
+      ],
+      [
+       "Shield Charge",
+       2
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Tempest Bell",
+       4
+      ],
+      [
+       "Charged Staff",
+       4
+      ],
+      [
+       "Siphoning Strike",
+       3
+      ],
+      [
+       "Tempest Flurry",
+       4
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Storm Wave",
+       5
+      ]
+     ]
+    },
+    {
+     "title": null,
+     "main": "Storm Wave",
+     "skills": [
+      [
+       "Storm Wave",
+       5
+      ],
+      [
+       "Tempest Flurry",
+       5
+      ],
+      [
+       "Tempest Bell",
+       4
+      ],
+      [
+       "Herald of Thunder",
+       3
+      ],
+      [
+       "Wind Dancer",
+       3
+      ],
+      [
+       "Siphoning Strike",
+       3
+      ],
+      [
+       "Charged Staff",
+       4
+      ],
+      [
+       "Blink",
+       3
+      ],
+      [
+       "Cast on Shock",
+       2
+      ]
+     ]
+    }
+   ]
+  },
+  "herald-stacker-invoker-peuget2": {
+   "snapshot": "20250115225335",
+   "name": null,
+   "variants": []
+  },
+  "titan-hammer-peuget2": {
+   "snapshot": "20250115224451",
+   "name": null,
+   "variants": []
+  },
+  "boss-melter-mercenary-rondogz": {
+   "snapshot": "20250115082258",
+   "name": null,
+   "variants": []
+  },
+  "alkaizer-invoker-ice-strike%23build-overview-0": {
+   "snapshot": "20250114081032",
+   "name": null,
+   "variants": []
+  },
+  "alkaizer-invoker-ice-strike%23how-it-plays-1": {
+   "snapshot": "20250114073210",
+   "name": null,
+   "variants": []
+  },
+  "cold-sorc-leveling-shakcentral": {
+   "snapshot": "20250114061703",
+   "name": null,
+   "variants": []
+  },
+  "ruetoo-vine-arrow-titan": {
+   "snapshot": "20250113190440",
+   "name": null,
+   "variants": []
+  },
+  "hutch-cryoshock-stormweaver%23how-it-plays-1": {
+   "snapshot": "20250109015007",
+   "name": null,
+   "variants": []
+  },
+  "coc-balls-invoker-ronarray%23how-it-plays-1": {
+   "snapshot": "20250101184140",
+   "name": null,
+   "variants": []
   }
  }
 }

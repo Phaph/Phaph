@@ -1077,3 +1077,11 @@ Ming's Heart reworded only), Prism of Belief unjudged (not in 0.4's item data). 
 4.7's miss is a real miss, not untestable. Fixed on the way: tools/old_skill_verdicts.py dropped hidden player variants (SiegeCascadePlayer,
 High Velocity Rounds), so it called them "not in this patch"; earlier tags' verdicts unchanged by the fix (labels only). So on 0.4 Lodestone's scans
 flagged 62 pieces, of which 1 was cut next patch, and found 0 of 1 testable known case.
+
+### How many skills real guides level with (2026-11-26, task 55; for Whetstone's leveling.MAX_SKILLS = 3)
+engine/tools/moba_leveling.py read Wayback copies of 611 of 628 archived Mobalytics PoE 2 guide pages (0.3-0.5 era; data/moba_leveling.json). 48 have
+both act / leveling variants and an endgame variant. Main skill per variant = the active skill with the most supports (rough: ties go to the first slot).
+Parser counts, Act 1 -> endgame: 1 skill 10 guides, 2 skills 26, 3 skills 10, 4 skills 1, 5 skills 1. **Both over 3 are misreads by hand** (a Disciple
+guide offering 3 alternative Act 1 starts, real path 2; a Ballista guide whose "main" read as Purity of Fire, real path 3), and a look at the 10 "3"s finds
+more over-counts (Crossbow Shot / Barrage on ties; "Arc One-Shot (Level 78+)" read as leveling). **So 0 of 48 guides use more than 3; most use 2.** No
+archetype found that uses 4 (only 48 guides, mostly bow / crossbow / minion / caster; not per archetype at this size). MAX_SKILLS stays 3, no change.
