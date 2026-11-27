@@ -287,3 +287,17 @@ def test_patched_keystone_changes_the_numbers(pob):
     pob.send("set_custom_mods", text="Pain Attunement")
     assert pob.calc(["Life"])["Life"] == life0
     pob.send("set_custom_mods", text="")
+
+
+def test_mapping_culls_at_the_rare_threshold(pob):
+    """Mapping (normal monster) counts Culling Strike at 10%, not PoB's normal 35% (x1.54): Deathblow was worn in 8 of 9
+    Act 3-4 sweep builds for it (2026-11-27). Bosses keep the unique threshold (5%)."""
+    raw = "Rarity: UNIQUE\nDeathblow\nDoubled Gauntlets\nCulling Strike"
+    for boss, cull in [("None", 10), ("Pinnacle", 5)]:
+        pob.new()
+        pob.set_class("Sorceress", None)
+        pob.set_level(40)
+        pob.add_skill(["Spark"])
+        pob.set_config(enemyIsBoss=boss)
+        pob.add_item(raw)
+        assert pob.calc(["CullPercent"])["CullPercent"] == cull
