@@ -112,6 +112,15 @@ def run(workers: int, out: Path, cls: str, asc: str, only: set[str] | None = Non
         g._close_all(mine)
 
 
+def pays(plain: float, v: float, both: float) -> bool:
+    """Does notable + condition beat the better of the two alone? A condition that costs the build damage (player
+    Frozen / Chilled: about x0.2) times a notable that cancels it ("speed unaffected by Slows") reads as a big
+    interaction although both together are no better than the notable alone (Pathfinder, 2026-11-27)."""
+    d, bb = 1 + plain, 1 + both
+    c = bb / (d * (1 + v))   # the condition alone, from the interaction
+    return bb >= max(d, c, 1.0) * (1 + MIN_INTERACTION)
+
+
 def specific(scans: dict[str, dict]) -> list[tuple]:
     """(interaction beyond the pair's usual, skill, ascendancy, notable, condition, interaction, gain of both), and the
     pair's usual (median over the ascendancy's skills, skills it does nothing for count 0) in front of it."""
@@ -121,6 +130,8 @@ def specific(scans: dict[str, dict]) -> list[tuple]:
         pairs: dict[tuple, dict] = {}
         for s, r in ok.items():
             for n, c, v, both in r["inter"]:
+                if not pays(r.get("plain", {}).get(n, 0.0), v, both):
+                    continue
                 pairs.setdefault((n, c), {})[s] = (v, both)
         for (n, c), rows in pairs.items():
             usual = statistics.median([v for v, _ in rows.values()] + [0.0] * (len(ok) - len(rows)))
