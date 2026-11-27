@@ -205,7 +205,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **01:20 (11-27):** task 48's scan at 15 of 23 (~05:30 end). **~/after48.sh queued** (setsid, ~/after48.log): after 48's 'all done' and a free server (the 05:00 sweep runs first), freezes main in
   ~/phaph_51, runs task 51's old-patch scans there on 6 cores (0.1 + 0.3 condition/matrix/stack, 0.2 + 0.4 condition/matrix) into data/breaker/old51 (old/ kept; ~/old51_patch.log), grades
   (old51/grade.txt, verdicts shared from old/), commits; then 48's blind re-run (unlocked) -> blind_unlocked_51.json / .txt, commits. old_patch.sh / grade_old.py take ENGINE_DIR / OLD_DIR / OLD_LOG.
-  New pieces flagged by the re-grade are unjudged: judge with old_verdicts.py / old_skill_verdicts.py before quoting false alarms. Then 48's read (`asc_cond.py report ~/asc48_out`), 38.
+  Smoke test 01:03: current engine runs on 0.1's PoB (Arc scanned, no error; 1 skill only). New pieces flagged by the re-grade are unjudged: judge with old_verdicts.py / old_skill_verdicts.py before quoting false alarms. Then 48's read (`asc_cond.py report ~/asc48_out`), 38.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
