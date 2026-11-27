@@ -1092,5 +1092,8 @@ Frozen / Chilled cancelled by Pathfinder's "unaffected by Slows" read +233% whil
 - Amazon In for the Kill / Predatory Instinct vs Open Weakness +50% (76 skills); Titan Crushing Impacts vs Heavy Stunned +25% (76; Mountain Splitter shows the same row: it's on the path);
   Witchhunter Judge, Jury, and Executioner vs low life +24% (75), Pitiless Killer +12%; Warbringer Imploding Impacts vs Armour Broken +20% (70); Oracle Forced Outcome vs Critical Weakness +8%; the rest under +8%.
 - Gemling: nothing strong (best +4% on 46 skills); its implants pay without a condition (task 47).
-- Skill outliers: Flicker Strike and Supercharged Slam on Witchhunter vs low life +72-73% (usual +24%); not explained yet (why those two). Low life is only part of a fight: uptime not modelled.
+- Skill outliers: Flicker Strike and Supercharged Slam on Witchhunter vs low life +72-73% (usual +24%). Explained 2026-11-27: the gain is the PATH, not the notables: JJE's path crosses two
+  "35% increased Damage with Hits against Enemies that are on Low Life" nodes, Pitiless Killer's one (so exactly half). Increased damage is additive, so builds with little other increase and mostly hit
+  damage gain most: no special interaction. The notables themselves: Culling Strike vs a unique boss is 5% in PoB (x1.053); Decimating Strike is unsupported in PoB (ModCache parses it as nil), so
+  JJE's own effect is never counted: a PoB gap (what Decimating Strike does in game: not checked). Low life is only part of a fight: uptime not modelled.
 These are questions (can the build keep the condition up on a boss?), not finds. The old per-ascendancy condition scan read all of these as 0. Next: the blind re-run (after48.sh).
