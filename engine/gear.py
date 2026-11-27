@@ -576,12 +576,13 @@ def unique_lines(pob: PoB, raw: str) -> tuple[list[str], list[str]]:
     """A unique's mods and chosen variants, as the game shows them."""
     try:
         res = pob.send("item_lines", raw=raw)
-        mods, variants = list(res.get("implicits") or []) + list(res.get("explicits") or []), list(res.get("variants") or [])
+        mods = list(res.get("enchants") or []) + list(res.get("implicits") or []) + list(res.get("explicits") or [])
+        variants = list(res.get("variants") or [])
     except PoBError:
         mods, variants = [], []
     if not mods:
-        # Some uniques' mods are generated (Megalomaniac grants random notables), so PoB lists none: show the
-        # item text's own mod lines instead of an empty card.
+        # A unique whose lines PoB can't list: show the item text's own mod lines instead of an empty card.
+        # (Megalomaniac's chosen notables come back as enchants above.)
         import re
         lines = raw.split("\n")
         body = [ln for ln in lines[2:] if ln.strip() and not re.match(r"^[A-Za-z ]+:\s", ln) and not ln.startswith("Rarity")]

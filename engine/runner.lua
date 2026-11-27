@@ -511,15 +511,16 @@ function handlers.item_lines(cmd)
 	-- Lines PoB can't read (shown red in the PoB app): they do nothing in its maths, so a scan result on this item
 	-- may be wrong (Maligaro's "cannot be Rerolled", 2026-11-20).
 	local unsupported = {}
-	for _, list in ipairs({ item.implicitModLines, item.explicitModLines }) do
+	for _, list in ipairs({ item.implicitModLines, item.explicitModLines, item.enchantModLines }) do
 		for _, ml in ipairs(list or {}) do
 			if active(ml) and ml.extra and ml.line and ml.line ~= "" then
 				table.insert(unsupported, (ml.line:gsub("{[^}]*}", "")))
 			end
 		end
 	end
+	-- Enchants: Megalomaniac's chosen notables ("Allocates Abasement") are enchant lines, its only mods.
 	return { implicits = collect(item.implicitModLines), explicits = collect(item.explicitModLines), variants = variants,
-		unsupported = unsupported }
+		enchants = collect(item.enchantModLines), unsupported = unsupported }
 end
 
 -- Equip an item from raw text into a named slot, replacing (and deleting) what was there.

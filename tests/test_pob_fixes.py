@@ -24,6 +24,18 @@ def test_item_lines_lists_unreadable_lines(pob):
     assert not any("Intelligence" in l for l in lines["unsupported"])
 
 
+def test_megalomaniac_lists_its_chosen_notables(pob):
+    """Megalomaniac's only mods are "Allocates <notable>" enchants for its 3 chosen variants. item_lines left them
+    out, so the guide card showed the first 12 notables in the alphabet instead (sweep 2026-11-27)."""
+    import gear
+    u = next(x for x in pob.list_uniques() if x["name"].startswith("Megalomaniac"))
+    lines = pob.send("item_lines", raw=u["raw"])
+    assert len(lines["enchants"]) == 3
+    assert lines["enchants"] == ["Allocates " + v for v in lines["variants"]]
+    mods, _ = gear.unique_lines(pob, u["raw"])
+    assert mods == lines["enchants"]
+
+
 def test_stage_rules_channel_flameblast_full(pob):
     """Flameblast is used at its full stages (runner STAGE_RULES), also after try_skill swaps its supports; PoB's
     default of 1 stage read it at a fifth of its damage. Detonating Arrow keeps PoB's default."""
