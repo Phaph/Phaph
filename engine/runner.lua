@@ -32,6 +32,12 @@ end
 data.skillStatMap["skill_wolf_pack_size"] = data.skillStatMap["skill_wolf_pack_size"]
 	or { modLib.createMod("WolfLimit", "BASE", nil) }
 
+-- Modelling choice (not a PoB bug): mapping scores against a normal monster, where PoB counts Culling Strike at the
+-- normal threshold (35%) as x1.54 damage. Packs of normal monsters die to the hit anyway; culling saves time on rares,
+-- so the clear score counts it at the rare threshold (10%, x1.11). Deathblow (Culling Strike, nothing else for damage)
+-- was worn in 8 of 9 Act 3-4 sweep builds (2026-11-27). Bosses (Unique, 5%) are unchanged.
+data.gameConstants["CullingStrikeNormalThreshold"] = data.gameConstants["CullingStrikeRareThreshold"] or 10
+
 local function reply(t)
 	io.stdout:write("@@", json.encode(t), "\n")
 	io.stdout:flush()
