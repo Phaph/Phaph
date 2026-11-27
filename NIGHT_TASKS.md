@@ -210,6 +210,11 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   Chilled (the build's damage x~0.2) times a notable that cancels it (Pathfinder 'speed unaffected by Slows') topped the report at +233% on 68 skills with both together = the notable alone (+4%). 17 of 23 read
   (partial, not a verdict): top pairs Amazon Open Weakness +50%, Titan Heavy Stunned +25%, Warbringer Armour Broken +20%, Witchhunter low life +16%; skill outliers Flicker Strike Witchhunter +57% over the usual.
 - 03:00 (11-27): task 48 at 19 of 23. Gemling done: no strong conditional passive (best: Integrated Efficiency vs Critical Weakness +4% on 46 skills; others +4-8% on 1 skill). Its implants pay plainly (task 47's fix), so for Gemling the blind re-run in after48.sh is what counts.
+- **08:20 (11-27): task 56 (sweep findings, Whetstone).** 48's scan done 05:42; nightly sweep (sweep-1-7) running, after48.sh waits for it. (a) Culling: branch `cull`
+  (worktree ~/phaph_cull, engine 2026-11-27.1): mapping culls at 10% not 35%; ~/cull.sh = suite (cull-tests, 2 cores, ~/cull_tests.log) -> merge, deploy, push
+  (~/merge_cull.log). (b) 'made-up gem Fire Spell on Melee Hit' was the check's fault: fixed on main 92a2bfb. (c) Megalomaniac: branch `enchants` (~/phaph_ench,
+  test_pob_fixes 20 passed): after cull lands, merge main into it, add a cull unit test, full suite, deploy 2026-11-27.2.
+  08:15: PoB does apply Megalomaniac's notables (7 of 59 sample picks change a bare Spark build, e.g. Potent Incantation x1.213): only the card text was wrong.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
@@ -630,6 +635,12 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 
 55. [x] (2026-11-26 23:40: done, BREAKER.md 'How many skills real guides level with': 0 of 48 guides over 3 after hand checks, most use 2; MAX_SKILLS stays 3) (2026-11-26 22:55: 400 of 628 archived guides read: 30 have act + endgame variants; parser says 28 use <= 3 main skills, 2 over, both misreads by hand (3 alternative Act 1 starts; an aura with 4 supports as 'main'), so 0 of 30 over 3 so far. Rest fetching (~/moba_fetch2.log, unbuffered). Then report + hand-check every guide over 3, write up in BREAKER.md or PC_TODO, close) (2026-11-26 21:55: engine/tools/moba_leveling.py reads Wayback copies of Mobalytics guides (variants + skill gems from the page state); fetch running detached (~/moba_fetch.log, output buffered; progress = files in ~/.cache/moba_archive; data/moba_leveling.json saved every 10 guides; ~2-3 h for 400). Next: `moba_leveling.py report`, check a few guides' main-skill picks by hand (ties: first slot wins), then decide) (added 2026-11-26 21:05, from the plan's Thu-Fri leftovers) Leveling-skill counts from real guides: leveling.MAX_SKILLS is 3, "4 if guides for the archetype do" (CLAUDE.md), never checked. From the server: Mobalytics pages 403 (Cloudflare); its GraphQL (mobalytics.gg/api/poe-2/v1/graphql/query) answers but has introspection off;
     try Wayback copies of mobalytics.gg/poe-2/builds/* guide pages (archive was offline at 21:05). Count leveling skills per guide by archetype; change MAX_SKILLS per archetype only where most guides use 4.
+
+56. [ ] (added 2026-11-27, from the nightly sweep; see START HERE 08:20) Sweep findings: (a) Deathblow (Culling Strike only) in 8 of 9 Act 3-4 builds:
+    PoB counts culling vs a normal monster at 35% (x1.54) in the mapping score; count it at the rare threshold (10%). Bare-build check: Spark mapping
+    x1.538 -> x1.111, Bonestorm Full DPS x1.700 -> x1.144, bossing unchanged. (b) made-up gem flag: gem list name vs skill name, check fixed. (c) Megalomaniac
+    cards showed the wrong notables (enchants not read). Left after (c): re-read the next sweep for Deathblow's share; question for Kyle: Megalomaniac (and
+    Mageblood) take the best 3 of 438 notables, a roll almost nobody has.
 
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
