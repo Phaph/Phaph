@@ -1085,3 +1085,12 @@ Parser counts, Act 1 -> endgame: 1 skill 10 guides, 2 skills 26, 3 skills 10, 4 
 guide offering 3 alternative Act 1 starts, real path 2; a Ballista guide whose "main" read as Purity of Fire, real path 3), and a look at the 10 "3"s finds
 more over-counts (Crossbow Shot / Barrage on ties; "Arc One-Shot (Level 78+)" read as leveling). **So 0 of 48 guides use more than 3; most use 2.** No
 archetype found that uses 4 (only 48 guides, mostly bow / crossbow / minion / caster; not per archetype at this size). MAX_SKILLS stays 3, no change.
+
+**Conditional ascendancy passives (task 48, scan 2026-11-26 16:39 to 11-27 05:40, code 42515a9, 6 cores, 23 of 23, 3,818 skill rows, 0 errors):** every notable (with its path) on each skill's round-1
+build, under each PoB condition (data/breaker/asc_cond/*.json, report asc_cond_report.txt). Report fixed before reading: a pair counts only if notable + condition beat the better of the two alone (player-side
+Frozen / Chilled cancelled by Pathfinder's "unaffected by Slows" read +233% while paying nothing). Median over the skills a pair touches:
+- Amazon In for the Kill / Predatory Instinct vs Open Weakness +50% (76 skills); Titan Crushing Impacts vs Heavy Stunned +25% (76; Mountain Splitter shows the same row: it's on the path);
+  Witchhunter Judge, Jury, and Executioner vs low life +24% (75), Pitiless Killer +12%; Warbringer Imploding Impacts vs Armour Broken +20% (70); Oracle Forced Outcome vs Critical Weakness +8%; the rest under +8%.
+- Gemling: nothing strong (best +4% on 46 skills); its implants pay without a condition (task 47).
+- Skill outliers: Flicker Strike and Supercharged Slam on Witchhunter vs low life +72-73% (usual +24%); not explained yet (why those two). Low life is only part of a fight: uptime not modelled.
+These are questions (can the build keep the condition up on a boss?), not finds. The old per-ascendancy condition scan read all of these as 0. Next: the blind re-run (after48.sh).

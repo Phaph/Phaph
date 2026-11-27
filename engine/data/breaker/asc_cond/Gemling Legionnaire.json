@@ -1,0 +1,4019 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.304,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.122,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.266,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.092,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.06,
+     0.427
+    ]
+   ],
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.062,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.191,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.062
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.338
+    ]
+   ],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.001,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.139,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.209,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.367
+    ]
+   ],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.064,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.152,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.404,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.152
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.739,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.226
+   },
+   "inter": [],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.338,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.2,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.012,
+    "Advanced Thaumaturgy": 0.012,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.012,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.297,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.174,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.012,
+    "Motoric Implants": 0.012
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.014,
+    "Advanced Thaumaturgy": 0.029,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.134,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.029,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.176,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.029,
+    "Motoric Implants": 0.029
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.331
+    ]
+   ],
+   "dps": 49435
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.027,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.007,
+    "Advanced Thaumaturgy": 0.02,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.19,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.02,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.35,
+    "Enhanced Effectiveness": 0.023,
+    "Implanted Gems": 0.02,
+    "Motoric Implants": 0.19
+   },
+   "inter": [],
+   "dps": 3779
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.311,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.156,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.446
+    ]
+   ],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.335,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.116,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.047,
+     0.385
+    ]
+   ],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.366,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": -0.084,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.147,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.147,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.671,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Chilled",
+     0.046,
+     0.415
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.037,
+     -0.287
+    ],
+    [
+     "Integrated Efficiency",
+     "OnChilledGround",
+     0.046,
+     0.415
+    ]
+   ],
+   "dps": 10462
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.299,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.046,
+     0.0
+    ]
+   ],
+   "dps": 3650
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.744,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.11
+   },
+   "inter": [],
+   "dps": 9208
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.309,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.079,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.074,
+     0.402
+    ]
+   ],
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": -0.064,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.088,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.146,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 210740
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.202,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.045,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.191
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.12,
+     -0.467
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.243,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.138
+   },
+   "inter": [],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.141,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.141,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.218,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.046,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.417
+    ]
+   ],
+   "dps": 74138
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.582,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.148
+   },
+   "inter": [],
+   "dps": 7241
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.098,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.176,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.329
+    ]
+   ],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.101,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.212,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.041,
+     0.419
+    ]
+   ],
+   "dps": 12921
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.009,
+    "Advanced Thaumaturgy": 0.058,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.018,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.018,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.245,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.018,
+    "Motoric Implants": 0.124
+   },
+   "inter": [],
+   "dps": 33438
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.298,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 2619
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": -0.035,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.307,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.137,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 167846
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.31,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.31,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.181,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.306,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.09,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.06,
+     0.397
+    ]
+   ],
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.011,
+    "Integrated Efficiency": 0.153,
+    "Enhanced Effectiveness": 0.022,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.159
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.377
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyFrozen",
+     0.031,
+     0.031
+    ]
+   ],
+   "dps": 17609
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.01,
+    "Advanced Thaumaturgy": 0.02,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.184,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.02,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.095,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.02,
+    "Motoric Implants": 0.184
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.23
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.111,
+     0.095
+    ]
+   ],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.104,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.227,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.104
+   },
+   "inter": [],
+   "dps": 22523
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.282,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.057,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.095,
+     0.057
+    ]
+   ],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.103,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.174,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.103
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.042,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.341
+    ]
+   ],
+   "dps": 53955
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.243,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.101
+   },
+   "inter": [],
+   "dps": 11958
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.215,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.103
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.041,
+     0.422
+    ]
+   ],
+   "dps": 31791
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.281,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.15,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 68314
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.316,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.087,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.071,
+     0.497
+    ]
+   ],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.137,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.137,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.261,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.049,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.548
+    ]
+   ],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.08,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.335,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.113,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.361
+    ]
+   ],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.134,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.374,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.099,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.035,
+     0.491
+    ]
+   ],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.167,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.479,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.167
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.692
+    ]
+   ],
+   "dps": 60581
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.05,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.183,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.011,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.228,
+    "Enhanced Effectiveness": 0.019,
+    "Implanted Gems": 0.011,
+    "Motoric Implants": 0.183
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.088,
+     0.228
+    ]
+   ],
+   "dps": 4443
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.008,
+    "Advanced Thaumaturgy": 0.055,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.112,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.008,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.109,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.008,
+    "Motoric Implants": 0.008
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.046,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.286
+    ]
+   ],
+   "dps": 17700
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.207,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.099
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.436
+    ]
+   ],
+   "dps": 19838
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.218,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 15163
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.066,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.131,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.227,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.131
+   },
+   "inter": [],
+   "dps": 6052
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.316,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.103,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Chilled",
+     0.117,
+     -0.029
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.04,
+     0.427
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.117,
+     -0.584
+    ],
+    [
+     "Integrated Efficiency",
+     "OnChilledGround",
+     0.117,
+     -0.029
+    ]
+   ],
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.269,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.137,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.397
+    ]
+   ],
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.264,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.165,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Chilled",
+     0.047,
+     -0.146
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.044,
+     0.527
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.047,
+     -0.634
+    ],
+    [
+     "Integrated Efficiency",
+     "OnChilledGround",
+     0.047,
+     -0.146
+    ]
+   ],
+   "dps": 18158
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.281,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.128,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.392
+    ]
+   ],
+   "dps": 85870
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.137,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.137,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.218,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.046,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.417
+    ]
+   ],
+   "dps": 32946
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.264,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 3099
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.043,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.071,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.071,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.212,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.046,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.409
+    ]
+   ],
+   "dps": 16165
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.137,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.227,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.137
+   },
+   "inter": [],
+   "dps": 4894
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.017,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.208,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.104
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.439
+    ]
+   ],
+   "dps": 11375
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.004,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.142,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.232,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.142
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "HaveVulconus",
+     0.032,
+     -0.668
+    ]
+   ],
+   "dps": 18945
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.001,
+    "Advanced Thaumaturgy": 0.047,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.004,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.108,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.169,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.004,
+    "Motoric Implants": 0.108
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.042,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.333
+    ]
+   ],
+   "dps": 18008
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.01,
+    "Advanced Thaumaturgy": 0.043,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.185,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.02,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.099,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.02,
+    "Motoric Implants": 0.185
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.236
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.12,
+     -0.335
+    ]
+   ],
+   "dps": 7474
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.141,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.227,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.141
+   },
+   "inter": [],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.125,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.049,
+     0.403
+    ]
+   ],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.242,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.105
+   },
+   "inter": [],
+   "dps": 24118
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.013,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.343,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.114,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.417
+    ],
+    [
+     "Integrated Efficiency",
+     "HaveVulconus",
+     0.032,
+     -0.844
+    ]
+   ],
+   "dps": 225138
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.137,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.191,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.137
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.338
+    ]
+   ],
+   "dps": 23065
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.07,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.34,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 93996
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.019,
+    "Advanced Thaumaturgy": 0.038,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.038,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.325,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.127,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.038,
+    "Motoric Implants": 0.038
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.391
+    ]
+   ],
+   "dps": 44056
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.041,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.091,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.76,
+    "Enhanced Effectiveness": 0.02,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.091
+   },
+   "inter": [],
+   "dps": 11265
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.14,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.316,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.14
+   },
+   "inter": [],
+   "dps": 27400
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.245,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.136
+   },
+   "inter": [],
+   "dps": 41575
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.014,
+    "Advanced Thaumaturgy": 0.029,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.029,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.137,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.169,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.029,
+    "Motoric Implants": 0.137
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.042,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.334
+    ]
+   ],
+   "dps": 50426
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.102,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.225,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.102
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.032,
+     0.456
+    ]
+   ],
+   "dps": 40627
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.151,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.225,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.151
+   },
+   "inter": [],
+   "dps": 3379
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.333,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.118,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.035,
+     0.363
+    ]
+   ],
+   "dps": 122097
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.161,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.131,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.28
+    ]
+   ],
+   "dps": 67497
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.016,
+    "Advanced Thaumaturgy": 0.032,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.032,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.378,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.086,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.032,
+    "Motoric Implants": 0.032
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.046,
+     0.435
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.06,
+     -0.361
+    ]
+   ],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.005,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.245,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.105
+   },
+   "inter": [],
+   "dps": 27358
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.001,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.104,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.104,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.216,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.001,
+    "Motoric Implants": 0.001
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.046,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.413
+    ]
+   ],
+   "dps": 24810
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.039,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.197,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.137
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.424
+    ]
+   ],
+   "dps": 18804
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.245,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.103
+   },
+   "inter": [],
+   "dps": 22583
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.021,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.219,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.1
+   },
+   "inter": [],
+   "dps": 9498
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.104,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.104,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.231,
+    "Enhanced Effectiveness": 0.052,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 103988
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.159,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.199,
+    "Enhanced Effectiveness": 0.047,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.035,
+     0.379
+    ]
+   ],
+   "dps": 26247
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.316,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.119,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.008,
+    "Advanced Thaumaturgy": 0.018,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.19,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.017,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.444,
+    "Enhanced Effectiveness": 0.019,
+    "Implanted Gems": 0.017,
+    "Motoric Implants": 0.19
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.094,
+     0.209
+    ]
+   ],
+   "dps": 5668
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.079,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.102,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.175,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.329
+    ]
+   ],
+   "dps": 81813
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.066,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.095,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.227,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.095
+   },
+   "inter": [],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.161,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.203,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.161
+   },
+   "inter": [],
+   "dps": 85218
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.427,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.111
+   },
+   "inter": [],
+   "dps": 16119
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": -0.332,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.366,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.039,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.113,
+    "Enhanced Effectiveness": 0.047,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.136
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.039,
+     0.408
+    ]
+   ],
+   "dps": 116109
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.014,
+    "Advanced Thaumaturgy": 0.031,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.029,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.029,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.215,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.029,
+    "Motoric Implants": 0.136
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.041,
+     0.424
+    ]
+   ],
+   "dps": 17661
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.167,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.167,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.558,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.714,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.151
+   },
+   "inter": [],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.222,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.1
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.041,
+     0.431
+    ]
+   ],
+   "dps": 3087
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.712,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 17628
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.28,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.137,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.317,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.137
+   },
+   "inter": [],
+   "dps": 140111
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.103,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.103,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.27,
+    "Enhanced Effectiveness": 0.047,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 26725
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.05,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.341,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.203,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.126,
+     -0.367
+    ]
+   ],
+   "dps": 333
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.145,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.048,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.369
+    ]
+   ],
+   "dps": 6137
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.106,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.171,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.106
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.335
+    ]
+   ],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.055,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.171,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.318,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ]
+   ],
+   "dps": 13892
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.009,
+    "Advanced Thaumaturgy": 0.057,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.017,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.017,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.219,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.017,
+    "Motoric Implants": 0.121
+   },
+   "inter": [],
+   "dps": 18522
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.17,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.313,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.17
+   },
+   "inter": [],
+   "dps": 24400
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.068,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.196,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.045,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.434
+    ]
+   ],
+   "dps": 3223
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.075,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.249,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.075
+   },
+   "inter": [],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.102,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.227,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.102
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.047,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.421
+    ]
+   ],
+   "dps": 43432
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.141,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.192,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.141
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.34
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyElectrocuted",
+     0.039,
+     1.084
+    ],
+    [
+     "Bolstering Implants",
+     "EnemyElectrocuted",
+     0.039,
+     1.379
+    ],
+    [
+     "Neurological Implants",
+     "EnemyElectrocuted",
+     0.039,
+     1.084
+    ],
+    [
+     "Implanted Gems",
+     "EnemyElectrocuted",
+     0.039,
+     1.084
+    ],
+    [
+     "Motoric Implants",
+     "EnemyElectrocuted",
+     0.039,
+     1.379
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyFrozen",
+     0.039,
+     1.084
+    ],
+    [
+     "Bolstering Implants",
+     "EnemyFrozen",
+     0.039,
+     1.379
+    ],
+    [
+     "Neurological Implants",
+     "EnemyFrozen",
+     0.039,
+     1.084
+    ],
+    [
+     "Implanted Gems",
+     "EnemyFrozen",
+     0.039,
+     1.084
+    ],
+    [
+     "Motoric Implants",
+     "EnemyFrozen",
+     0.039,
+     1.379
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyHeavyStunned",
+     0.039,
+     1.084
+    ],
+    [
+     "Bolstering Implants",
+     "EnemyHeavyStunned",
+     0.039,
+     1.379
+    ],
+    [
+     "Neurological Implants",
+     "EnemyHeavyStunned",
+     0.039,
+     1.084
+    ],
+    [
+     "Implanted Gems",
+     "EnemyHeavyStunned",
+     0.039,
+     1.084
+    ],
+    [
+     "Motoric Implants",
+     "EnemyHeavyStunned",
+     0.039,
+     1.379
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyImmobilised",
+     0.039,
+     1.084
+    ],
+    [
+     "Bolstering Implants",
+     "EnemyImmobilised",
+     0.039,
+     1.379
+    ],
+    [
+     "Neurological Implants",
+     "EnemyImmobilised",
+     0.039,
+     1.084
+    ],
+    [
+     "Implanted Gems",
+     "EnemyImmobilised",
+     0.039,
+     1.084
+    ],
+    [
+     "Motoric Implants",
+     "EnemyImmobilised",
+     0.039,
+     1.379
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyPinned",
+     0.039,
+     1.223
+    ],
+    [
+     "Bolstering Implants",
+     "EnemyPinned",
+     0.039,
+     1.538
+    ],
+    [
+     "Neurological Implants",
+     "EnemyPinned",
+     0.039,
+     1.223
+    ],
+    [
+     "Implanted Gems",
+     "EnemyPinned",
+     0.039,
+     1.223
+    ],
+    [
+     "Motoric Implants",
+     "EnemyPinned",
+     0.039,
+     1.538
+    ]
+   ],
+   "dps": 9538
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.229,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.254,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.019,
+    "Advanced Thaumaturgy": 0.038,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.038,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.27,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.038,
+    "Motoric Implants": 0.038
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.309,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.052,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.241,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.089,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.335,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.103,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "Chilled",
+     0.117,
+     0.042
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.04,
+     0.427
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.117,
+     -0.554
+    ],
+    [
+     "Integrated Efficiency",
+     "OnChilledGround",
+     0.117,
+     0.042
+    ]
+   ],
+   "dps": 122153
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.022,
+    "Advanced Thaumaturgy": 0.044,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.044,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.335,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.044,
+    "Motoric Implants": 0.044
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.18,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.398
+    ],
+    [
+     "Integrated Efficiency",
+     "HaveVulconus",
+     0.03,
+     -0.744
+    ]
+   ],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.035,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.408,
+    "Enhanced Effectiveness": 0.01,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.11
+   },
+   "inter": [],
+   "dps": 5765
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.335,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.087,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Advanced Thaumaturgy",
+     "EnemyBurning",
+     0.039,
+     0.039
+    ],
+    [
+     "Bolstering Implants",
+     "EnemyBurning",
+     0.039,
+     0.039
+    ],
+    [
+     "Neurological Implants",
+     "EnemyBurning",
+     0.039,
+     0.387
+    ],
+    [
+     "Implanted Gems",
+     "EnemyBurning",
+     0.039,
+     0.039
+    ],
+    [
+     "Motoric Implants",
+     "EnemyBurning",
+     0.039,
+     0.039
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.071,
+     0.497
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyIgnited",
+     0.039,
+     0.039
+    ],
+    [
+     "Bolstering Implants",
+     "EnemyIgnited",
+     0.039,
+     0.039
+    ],
+    [
+     "Neurological Implants",
+     "EnemyIgnited",
+     0.039,
+     0.387
+    ],
+    [
+     "Implanted Gems",
+     "EnemyIgnited",
+     0.039,
+     0.039
+    ],
+    [
+     "Motoric Implants",
+     "EnemyIgnited",
+     0.039,
+     0.039
+    ]
+   ],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.246,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.122,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.036,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.214,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.161
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.041,
+     0.423
+    ]
+   ],
+   "dps": 21117
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.043,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.208,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.366
+    ]
+   ],
+   "dps": 5375
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.24,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.102
+   },
+   "inter": [],
+   "dps": 11806
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.098,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.176,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.329
+    ]
+   ],
+   "dps": 32981
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.103,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.169,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.103
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.042,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.333
+    ]
+   ],
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.247,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.1
+   },
+   "inter": [],
+   "dps": 10126
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.011,
+    "Integrated Efficiency": 0.219,
+    "Enhanced Effectiveness": 0.022,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.1
+   },
+   "inter": [],
+   "dps": 5910
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.131,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.191,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.131
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.338
+    ]
+   ],
+   "dps": 10463
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.027,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.14,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.695,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 50812
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.043,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.166,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.271,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 48439
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.027,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.135,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.051,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "Chilled",
+     0.12,
+     -0.019
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.419
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.12,
+     -0.58
+    ],
+    [
+     "Integrated Efficiency",
+     "OnChilledGround",
+     0.12,
+     -0.019
+    ]
+   ],
+   "dps": 13633
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.106,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.169,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.106
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.042,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.333
+    ]
+   ],
+   "dps": 36529
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.286,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.286,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.175,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 37149
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.334,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.334,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.106,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.063,
+     0.493
+    ]
+   ],
+   "dps": 38471
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.363,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.363,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.037,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.154,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.162
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.307
+    ]
+   ],
+   "dps": 17170
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.209,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.101
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.44
+    ]
+   ],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.011,
+    "Integrated Efficiency": 0.213,
+    "Enhanced Effectiveness": 0.022,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.1
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.448
+    ]
+   ],
+   "dps": 7321
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.404,
+    "Enhanced Effectiveness": 0.023,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.1
+   },
+   "inter": [],
+   "dps": 6717
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.07,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.833,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.07
+   },
+   "inter": [
+    [
+     "Advanced Thaumaturgy",
+     "EnemyHeavyStunned",
+     0.104,
+     0.104
+    ]
+   ],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.252,
+    "Enhanced Effectiveness": 0.011,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.103
+   },
+   "inter": [],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.303,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.303,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.127,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.027,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.066,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.209,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.044,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.041,
+     0.415
+    ]
+   ],
+   "dps": 15452
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.21,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.046,
+     0.0
+    ]
+   ],
+   "dps": 6503
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.009,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.367,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.234,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.032,
+     0.5
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "HaveVulconus",
+     0.089,
+     -0.905
+    ]
+   ],
+   "dps": 23370
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.01,
+    "Advanced Thaumaturgy": 0.043,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.184,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.02,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.096,
+    "Enhanced Effectiveness": 0.045,
+    "Implanted Gems": 0.02,
+    "Motoric Implants": 0.184
+   },
+   "inter": [
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.031,
+     0.232
+    ],
+    [
+     "Integrated Efficiency",
+     "Frozen",
+     0.12,
+     -0.116
+    ]
+   ],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.14,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.17,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.14
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.042,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.037,
+     0.335
+    ],
+    [
+     "Advanced Thaumaturgy",
+     "EnemyFrozen",
+     0.08,
+     0.08
+    ]
+   ],
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.007,
+    "Advanced Thaumaturgy": 0.014,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.013,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.178,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.173,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.013,
+    "Motoric Implants": 0.178
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.047,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.358
+    ]
+   ],
+   "dps": 11322
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.015,
+    "Advanced Thaumaturgy": 0.031,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.031,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.137,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.227,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.031,
+    "Motoric Implants": 0.137
+   },
+   "inter": [
+    [
+     "Enhanced Effectiveness",
+     "Blinded",
+     0.047,
+     0.0
+    ],
+    [
+     "Integrated Efficiency",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.421
+    ]
+   ],
+   "dps": 36927
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.0,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.614,
+    "Enhanced Effectiveness": 0.021,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.114
+   },
+   "inter": [],
+   "dps": 6940
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.024,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.761,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.116
+   },
+   "inter": [],
+   "dps": 6367
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.042,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.107,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.107,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.718,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.04,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.0,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.0,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.164,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.145
+   },
+   "inter": [],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Essence of Virtue": 0.0,
+    "Advanced Thaumaturgy": 0.04,
+    "Gem Studded": 0.0,
+    "Bolstering Implants": 0.29,
+    "Thaumaturgical Infusion": 0.0,
+    "Neurological Implants": 0.29,
+    "Adaptive Capability": 0.0,
+    "Integrated Efficiency": 0.0,
+    "Enhanced Effectiveness": 0.0,
+    "Implanted Gems": 0.0,
+    "Motoric Implants": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-27 01:53"
+}

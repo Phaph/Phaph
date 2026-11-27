@@ -1,0 +1,2580 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.031,
+     -0.816
+    ]
+   ],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.031,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.009
+   },
+   "inter": [],
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.134,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.086
+   },
+   "inter": [],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.072
+   },
+   "inter": [],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.13,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.084
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.072
+   },
+   "inter": [],
+   "dps": 49435
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.2,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.2
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.104,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.059
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.034,
+     -0.351
+    ]
+   ],
+   "dps": 3736
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.008,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.013
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.038,
+     -0.848
+    ]
+   ],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 10069
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.126,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.057
+   },
+   "inter": [],
+   "dps": 3650
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 9208
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.036,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.035
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.28,
+     -0.701
+    ],
+    [
+     "Turning of the Seasons",
+     "HaveVulconus",
+     0.247,
+     -0.709
+    ]
+   ],
+   "dps": 210740
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.012,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.011
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.331,
+     -0.908
+    ],
+    [
+     "Turning of the Seasons",
+     "HaveVulconus",
+     0.285,
+     -0.911
+    ]
+   ],
+   "dps": 28212
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.052,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.025
+   },
+   "inter": [],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.053,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.015
+   },
+   "inter": [],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.133,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.085
+   },
+   "inter": [],
+   "dps": 74138
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.072
+   },
+   "inter": [],
+   "dps": 24736
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.16,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.119
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.042,
+     -0.027
+    ]
+   ],
+   "dps": 7241
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.112,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.066
+   },
+   "inter": [],
+   "dps": 33438
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.14,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.086
+   },
+   "inter": [],
+   "dps": 12921
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.148,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.086
+   },
+   "inter": [],
+   "dps": 2619
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.02,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.002
+   },
+   "inter": [],
+   "dps": 167846
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 34115
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.063
+   },
+   "inter": [],
+   "dps": 17609
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.012,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.011
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.332,
+     -0.907
+    ],
+    [
+     "Turning of the Seasons",
+     "HaveVulconus",
+     0.286,
+     -0.91
+    ]
+   ],
+   "dps": 65303
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.117,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.071
+   },
+   "inter": [],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.125,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.078
+   },
+   "inter": [],
+   "dps": 22523
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.136,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.082
+   },
+   "inter": [],
+   "dps": 11958
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.028,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.008
+   },
+   "inter": [],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.138,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.091
+   },
+   "inter": [],
+   "dps": 53955
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.139,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.083
+   },
+   "inter": [],
+   "dps": 31791
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.014,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.005
+   },
+   "inter": [],
+   "dps": 68314
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.031,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.009
+   },
+   "inter": [],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.082,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.039
+   },
+   "inter": [],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.018,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.004
+   },
+   "inter": [],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.075,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.053
+   },
+   "inter": [],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.144,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.109
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.059,
+     -0.096
+    ]
+   ],
+   "dps": 4400
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.106,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.068
+   },
+   "inter": [],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.131,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.084
+   },
+   "inter": [],
+   "dps": 6052
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.064
+   },
+   "inter": [],
+   "dps": 19838
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.14,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.095
+   },
+   "inter": [],
+   "dps": 15163
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.105,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.081
+   },
+   "inter": [],
+   "dps": 24778
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.031,
+     -0.816
+    ]
+   ],
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.031,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.009
+   },
+   "inter": [],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.031,
+     -0.816
+    ]
+   ],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.129,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.078
+   },
+   "inter": [],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.133,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.085
+   },
+   "inter": [],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.117,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.07
+   },
+   "inter": [],
+   "dps": 16165
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.124,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.076
+   },
+   "inter": [],
+   "dps": 4894
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.117,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.071
+   },
+   "inter": [],
+   "dps": 11375
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.063
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.09,
+     -0.684
+    ]
+   ],
+   "dps": 18945
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.134,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.086
+   },
+   "inter": [],
+   "dps": 7474
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.126,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.079
+   },
+   "inter": [],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.124,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.077
+   },
+   "inter": [],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.031,
+     -0.816
+    ]
+   ],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.136,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.083
+   },
+   "inter": [],
+   "dps": 24118
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.035,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.035
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.311,
+     -0.816
+    ],
+    [
+     "Turning of the Seasons",
+     "HaveVulconus",
+     0.263,
+     -0.823
+    ]
+   ],
+   "dps": 225138
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.122,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.072
+   },
+   "inter": [],
+   "dps": 93996
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.123,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.075
+   },
+   "inter": [],
+   "dps": 23065
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 11152
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.031,
+     -0.816
+    ]
+   ],
+   "dps": 44056
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.126,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.077
+   },
+   "inter": [],
+   "dps": 27400
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.063
+   },
+   "inter": [],
+   "dps": 41575
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.126,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.079
+   },
+   "inter": [],
+   "dps": 50426
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.005
+   },
+   "inter": [],
+   "dps": 122097
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.117,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.07
+   },
+   "inter": [],
+   "dps": 3379
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.13,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.082
+   },
+   "inter": [],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.025,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.007
+   },
+   "inter": [],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.112,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.066
+   },
+   "inter": [],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.072
+   },
+   "inter": [],
+   "dps": 67497
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.123,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.075
+   },
+   "inter": [],
+   "dps": 24810
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.09,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.049
+   },
+   "inter": [],
+   "dps": 18804
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.136,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.081
+   },
+   "inter": [],
+   "dps": 22583
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.109,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.063
+   },
+   "inter": [],
+   "dps": 9498
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.212,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.161
+   },
+   "inter": [],
+   "dps": 103331
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.102,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.064
+   },
+   "inter": [],
+   "dps": 26247
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.031,
+     -0.816
+    ]
+   ],
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.067,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.052
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.217,
+     -0.615
+    ],
+    [
+     "Turning of the Seasons",
+     "HaveVulconus",
+     0.113,
+     -0.653
+    ]
+   ],
+   "dps": 5614
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.104,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.066
+   },
+   "inter": [],
+   "dps": 81813
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.073
+   },
+   "inter": [],
+   "dps": 16119
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.123,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.074
+   },
+   "inter": [],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.112,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.069
+   },
+   "inter": [],
+   "dps": 85218
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.227,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.166
+   },
+   "inter": [],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.142,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.093
+   },
+   "inter": [],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 7319
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 17628
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.162,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.101
+   },
+   "inter": [],
+   "dps": 3087
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.12,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.074
+   },
+   "inter": [],
+   "dps": 140111
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.077,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.034
+   },
+   "inter": [],
+   "dps": 26725
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.064,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.035
+   },
+   "inter": [],
+   "dps": 333
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.071
+   },
+   "inter": [],
+   "dps": 6137
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.128,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.08
+   },
+   "inter": [],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.141,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.101
+   },
+   "inter": [],
+   "dps": 13669
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.128,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.081
+   },
+   "inter": [],
+   "dps": 18522
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.129,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.08
+   },
+   "inter": [],
+   "dps": 24400
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.143,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.094
+   },
+   "inter": [],
+   "dps": 3223
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.121,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.074
+   },
+   "inter": [],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.13,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.082
+   },
+   "inter": [],
+   "dps": 43432
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.132,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.084
+   },
+   "inter": [],
+   "dps": 9538
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": -0.063,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.063
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": -0.067,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.067
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": -0.067,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.067
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.041,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.014
+   },
+   "inter": [],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.049,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.025
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.043,
+     -0.77
+    ]
+   ],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.116,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.095
+   },
+   "inter": [],
+   "dps": 5765
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [
+    [
+     "Bringer of the Apocalypse",
+     "HaveVulconus",
+     0.031,
+     -0.816
+    ]
+   ],
+   "dps": 43502
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.031,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.009
+   },
+   "inter": [],
+   "dps": 32034
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.086,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.038
+   },
+   "inter": [],
+   "dps": 21117
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.112,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.068
+   },
+   "inter": [],
+   "dps": 11086
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.152,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.096
+   },
+   "inter": [],
+   "dps": 5375
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.11,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.072
+   },
+   "inter": [],
+   "dps": 32981
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.123,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.077
+   },
+   "inter": [],
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.148,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.091
+   },
+   "inter": [],
+   "dps": 10126
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.124,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.077
+   },
+   "inter": [],
+   "dps": 10463
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.128,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.081
+   },
+   "inter": [],
+   "dps": 6069
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.2,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.2
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.117,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.068
+   },
+   "inter": [],
+   "dps": 48966
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 50812
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.2,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.2
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.13,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.082
+   },
+   "inter": [],
+   "dps": 13133
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 37149
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.126,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.078
+   },
+   "inter": [],
+   "dps": 36529
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.031,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.009
+   },
+   "inter": [],
+   "dps": 38471
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.144,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.089
+   },
+   "inter": [],
+   "dps": 17170
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.117,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.071
+   },
+   "inter": [],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.122,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.073
+   },
+   "inter": [],
+   "dps": 7517
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.217,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.161
+   },
+   "inter": [],
+   "dps": 6641
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.121,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.073
+   },
+   "inter": [],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.016,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.006
+   },
+   "inter": [],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.129,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.076
+   },
+   "inter": [],
+   "dps": 15452
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.108,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.067
+   },
+   "inter": [],
+   "dps": 6503
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.121,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.073
+   },
+   "inter": [],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.126,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.079
+   },
+   "inter": [],
+   "dps": 28318
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": -0.067,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": -0.067
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.13,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.082
+   },
+   "inter": [],
+   "dps": 10374
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.13,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.082
+   },
+   "inter": [],
+   "dps": 36927
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 6367
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.186,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.139
+   },
+   "inter": [],
+   "dps": 6866
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.189,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.143
+   },
+   "inter": [],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Sacred Flow": 0.0,
+    "Bringer of the Apocalypse": 0.0,
+    "Furious Wellspring": 0.0,
+    "Wisdom of the Maji": 0.0,
+    "Druidic Champion": 0.0,
+    "Reactive Growth": 0.0,
+    "Avatar of Evolution": 0.0,
+    "Turning of the Seasons": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-27 04:39"
+}

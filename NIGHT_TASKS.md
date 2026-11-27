@@ -605,7 +605,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 47. [x] (2026-11-25 21:00: merged, live as 2026-11-25.1, 245 passed; A/B in BREAKER.md) Ascendancy points: choice options never tried, Abyssal Lich none, leftovers unspent. Left after the
     merge: cached guides on older engine versions; a guide line saying filler passives aren't in the numbers (steps carry `filler`; page work is paused).
 
-48. [ ] (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
+48. [ ] (2026-11-27 05:40: scan done, 23 of 23, BREAKER.md 'Conditional ascendancy passives'; left: the blind re-run, queued in ~/after48.sh after task 51's scans) (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
     is never taken and its condition reads 0. Per skill, also try each notable (path included) with each condition (override addNodes), or take the passives again under the condition. Then the blind
     test (unlocked) again: Gemling is 32% of the ladder and was scored without its implants.
 

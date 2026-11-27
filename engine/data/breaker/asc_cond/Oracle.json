@@ -1,0 +1,3867 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.224
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.03,
+     0.555
+    ]
+   ],
+   "dps": 60052
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.188
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.034,
+     0.475
+    ]
+   ],
+   "dps": 65374
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.036,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.016
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.155
+    ]
+   ],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.252
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.093
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.101,
+     0.364
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.041,
+     0.214
+    ]
+   ],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.025,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.271
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.026,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.241
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.016
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.039,
+     0.156
+    ]
+   ],
+   "dps": 49435
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.05
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.069,
+     0.204
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.127
+    ]
+   ],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.085
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.092,
+     0.329
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.045,
+     0.202
+    ]
+   ],
+   "dps": 3736
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.028,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.164
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.059,
+     0.494
+    ]
+   ],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.214
+   },
+   "inter": [],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.02,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.091
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.055,
+     0.349
+    ],
+    [
+     "Forced Outcome",
+     "Frozen",
+     0.033,
+     -0.535
+    ]
+   ],
+   "dps": 10069
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.143
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.073,
+     0.427
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.294
+    ]
+   ],
+   "dps": 3650
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.111
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.102,
+     0.443
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.232
+    ]
+   ],
+   "dps": 9208
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.021,
+    "Forced Outcome": 0.161
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.058,
+     0.486
+    ]
+   ],
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.122
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.06,
+     0.467
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.034,
+     0.283
+    ],
+    [
+     "Forced Outcome",
+     "HaveVulconus",
+     0.053,
+     -0.734
+    ]
+   ],
+   "dps": 210740
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.029,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.288
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.027,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.22
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.381
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.214
+    ]
+   ],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.121
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.087,
+     0.367
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.052,
+     0.294
+    ]
+   ],
+   "dps": 74138
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.381
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.214
+    ]
+   ],
+   "dps": 33438
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.016
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.155
+    ]
+   ],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.088
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.096,
+     0.341
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.2
+    ]
+   ],
+   "dps": 12921
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.079
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.072,
+     0.39
+    ]
+   ],
+   "dps": 7241
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.22
+    ]
+   ],
+   "dps": 2619
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.161
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.056,
+     0.486
+    ]
+   ],
+   "dps": 167846
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.025,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.206
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.032,
+     0.5
+    ]
+   ],
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.161
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.058,
+     0.486
+    ]
+   ],
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.101
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.088,
+     0.378
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.212
+    ]
+   ],
+   "dps": 17609
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.252
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.147
+    ]
+   ],
+   "dps": 22523
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.082
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.097,
+     0.327
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.195
+    ]
+   ],
+   "dps": 11958
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.023,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.247
+   },
+   "inter": [],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.11,
+     0.222
+    ]
+   ],
+   "dps": 53955
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.088
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.096,
+     0.341
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.2
+    ]
+   ],
+   "dps": 31791
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.023,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.161
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.058,
+     0.486
+    ]
+   ],
+   "dps": 68314
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.189
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.069,
+     0.504
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.396
+    ]
+   ],
+   "dps": 130723
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.216
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.07,
+     0.672
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.033,
+     0.392
+    ]
+   ],
+   "dps": 128626
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.021,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.116
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.092,
+     0.439
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.224
+    ]
+   ],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.026,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.282
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.052,
+     0.768
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.044,
+     0.519
+    ]
+   ],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.076
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.077,
+     0.321
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.036,
+     0.193
+    ]
+   ],
+   "dps": 4400
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.113,
+     0.23
+    ]
+   ],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.041
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.052,
+     0.225
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.038,
+     0.198
+    ]
+   ],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 6052
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 19838
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.253
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.034,
+     0.147
+    ]
+   ],
+   "dps": 15163
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.277
+   },
+   "inter": [],
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.214
+   },
+   "inter": [],
+   "dps": 22628
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.278
+   },
+   "inter": [],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.214
+   },
+   "inter": [],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.22
+    ]
+   ],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.121
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.087,
+     0.367
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.052,
+     0.294
+    ]
+   ],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.121
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.087,
+     0.365
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.052,
+     0.292
+    ]
+   ],
+   "dps": 16165
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 4894
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 11375
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.253
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.147
+    ]
+   ],
+   "dps": 7474
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.112,
+     0.227
+    ]
+   ],
+   "dps": 18945
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.22
+    ]
+   ],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.214
+   },
+   "inter": [],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.083
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.097,
+     0.329
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.196
+    ]
+   ],
+   "dps": 24118
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 23065
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.021,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.124
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.045,
+     0.44
+    ],
+    [
+     "Forced Outcome",
+     "Frozen",
+     0.034,
+     -0.606
+    ],
+    [
+     "Forced Outcome",
+     "HaveVulconus",
+     0.034,
+     -0.842
+    ]
+   ],
+   "dps": 225138
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.009
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.033,
+     0.146
+    ]
+   ],
+   "dps": 93996
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.033
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.047,
+     0.22
+    ]
+   ],
+   "dps": 11152
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.214
+   },
+   "inter": [],
+   "dps": 44056
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 41575
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 27400
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.221
+    ]
+   ],
+   "dps": 50426
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.133
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.075,
+     0.434
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.036,
+     0.257
+    ]
+   ],
+   "dps": 122097
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 3379
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.165
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.06,
+     0.421
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.353
+    ]
+   ],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.025,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.268
+   },
+   "inter": [],
+   "dps": 11836
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.016
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.039,
+     0.156
+    ]
+   ],
+   "dps": 67497
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.381
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.214
+    ]
+   ],
+   "dps": 27358
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 18804
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.121
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.087,
+     0.365
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.052,
+     0.292
+    ]
+   ],
+   "dps": 24810
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.082
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.097,
+     0.327
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.195
+    ]
+   ],
+   "dps": 22583
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 9498
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.204
+   },
+   "inter": [],
+   "dps": 103331
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.04
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.046,
+     0.211
+    ]
+   ],
+   "dps": 26247
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.069
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.069,
+     0.314
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.032,
+     0.186
+    ]
+   ],
+   "dps": 5614
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.197
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.032,
+     0.478
+    ]
+   ],
+   "dps": 45664
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.016
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.155
+    ]
+   ],
+   "dps": 81813
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.124
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.101,
+     0.486
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.241
+    ]
+   ],
+   "dps": 16119
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 85218
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.02,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.087
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.096,
+     0.341
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.2
+    ]
+   ],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.134
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.531
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.033,
+     0.252
+    ]
+   ],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.07
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.079,
+     0.269
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.032,
+     0.159
+    ]
+   ],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.032
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.326
+    ],
+    [
+     "Forced Outcome",
+     "Frozen",
+     0.053,
+     -0.523
+    ]
+   ],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.088
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.096,
+     0.341
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.2
+    ]
+   ],
+   "dps": 3087
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.07
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.079,
+     0.27
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.032,
+     0.16
+    ]
+   ],
+   "dps": 17628
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 140111
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.14
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.07,
+     0.364
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.049,
+     0.327
+    ]
+   ],
+   "dps": 26725
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.232
+    ]
+   ],
+   "dps": 333
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.052
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.058,
+     0.288
+    ]
+   ],
+   "dps": 6137
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.22
+    ]
+   ],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.092
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.1,
+     0.359
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.211
+    ]
+   ],
+   "dps": 13669
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 24400
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 18522
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.033,
+    "Forced Outcome": 0.098
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.099,
+     0.393
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.045,
+     0.218
+    ]
+   ],
+   "dps": 3223
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.031,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.252
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 9538
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.139
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.076,
+     0.37
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.055,
+     0.343
+    ]
+   ],
+   "dps": 43432
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.027,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.277
+   },
+   "inter": [],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.038,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.181
+   },
+   "inter": [],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.092
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.075,
+     0.443
+    ]
+   ],
+   "dps": 5765
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.216
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.07,
+     0.672
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.033,
+     0.392
+    ]
+   ],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.188
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.034,
+     0.475
+    ]
+   ],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.088
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.096,
+     0.343
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.201
+    ]
+   ],
+   "dps": 21117
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.101
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.089,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.213
+    ]
+   ],
+   "dps": 11086
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.067
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.076,
+     0.257
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.031,
+     0.152
+    ]
+   ],
+   "dps": 5375
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.016
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.038,
+     0.155
+    ]
+   ],
+   "dps": 32981
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.221
+    ]
+   ],
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.082
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.097,
+     0.327
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.195
+    ]
+   ],
+   "dps": 10126
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 10463
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 6069
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.05
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.069,
+     0.204
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.127
+    ]
+   ],
+   "dps": 1
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.068
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.078,
+     0.264
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.032,
+     0.156
+    ]
+   ],
+   "dps": 50812
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.013
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.036,
+     0.154
+    ]
+   ],
+   "dps": 48966
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.05
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.069,
+     0.204
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.127
+    ]
+   ],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.196
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.061,
+     0.499
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.043,
+     0.417
+    ]
+   ],
+   "dps": 13133
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.025,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.203
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.032,
+     0.494
+    ]
+   ],
+   "dps": 37149
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.22
+    ]
+   ],
+   "dps": 36529
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.256
+   },
+   "inter": [],
+   "dps": 38471
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.067
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.076,
+     0.259
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.031,
+     0.153
+    ]
+   ],
+   "dps": 17170
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.103
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.092,
+     0.383
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.215
+    ]
+   ],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.102
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.091,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.213
+    ]
+   ],
+   "dps": 7517
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.093
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.099,
+     0.363
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.048,
+     0.222
+    ]
+   ],
+   "dps": 6641
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.072,
+     0.229
+    ]
+   ],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.103
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.092,
+     0.383
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.04,
+     0.215
+    ]
+   ],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.022,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.171
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.05,
+     0.48
+    ]
+   ],
+   "dps": 74247
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.041,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.221
+   },
+   "inter": [],
+   "dps": 23370
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.088
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.096,
+     0.341
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.039,
+     0.2
+    ]
+   ],
+   "dps": 15452
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.126
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.089,
+     0.469
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.032,
+     0.235
+    ]
+   ],
+   "dps": 6503
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.06
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.083,
+     0.251
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.035,
+     0.146
+    ]
+   ],
+   "dps": 12720
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.109,
+     0.221
+    ]
+   ],
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.139
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.076,
+     0.37
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.055,
+     0.343
+    ]
+   ],
+   "dps": 10374
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.139
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.076,
+     0.37
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.055,
+     0.343
+    ]
+   ],
+   "dps": 36927
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.097
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.104,
+     0.38
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.042,
+     0.223
+    ]
+   ],
+   "dps": 6367
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.061
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.07,
+     0.316
+    ]
+   ],
+   "dps": 6866
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.056
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.063,
+     0.314
+    ]
+   ],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.069
+   },
+   "inter": [
+    [
+     "Forced Outcome",
+     "EnemyCriticalWeakness",
+     0.077,
+     0.27
+    ],
+    [
+     "Forced Outcome",
+     "EnemyOnProfaneGround",
+     0.032,
+     0.159
+    ]
+   ],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Converging Paths": 0.0,
+    "The Unseen Path": 0.0,
+    "Harmony Within": 0.0,
+    "Entwined Realities": 0.0,
+    "The Lesser Harm": 0.0,
+    "Fateful Vision": 0.0,
+    "Unnamed Heartwood": 0.0,
+    "Forced Outcome": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-27 04:06"
+}

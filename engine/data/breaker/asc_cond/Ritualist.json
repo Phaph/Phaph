@@ -1,0 +1,2438 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.103,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.036,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.096,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.094,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.003,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.094,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.006,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.027,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.16,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.093,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.031,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.075,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.032,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.094,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 49435
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.092,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.072,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [
+    [
+     "Mystic Attunement",
+     "HaveVulconus",
+     0.037,
+     0.208
+    ]
+   ],
+   "dps": 3779
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.079,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.035,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.064,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.034,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.024,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.158,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 10462
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.169,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 3494
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.028,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.164,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 9208
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.102,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.086,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.027,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [
+    [
+     "Mystic Attunement",
+     "HaveVulconus",
+     0.043,
+     -0.745
+    ]
+   ],
+   "dps": 210740
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.111,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.036,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.179,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.101,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.09,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.003,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 74138
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.081,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 33438
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.067,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.123,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 7241
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.09,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.107,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 12921
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.266,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 2619
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.104,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 167846
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.08,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.032,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.103,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.08,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 17805
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.091,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.095,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 22523
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.115,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11958
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.035,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.082,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.005,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 53955
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.1,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 68314
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.102,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 31791
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.105,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 130723
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.045,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 128626
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.104,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 65713
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.049,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 88628
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.052,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.126,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 4443
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.014,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.156,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.094,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.096,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 6052
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.004,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 15163
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.08,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 19838
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.05,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.103,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 22628
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.048,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.102,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.268,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.09,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.003,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.086,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 16165
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.087,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11375
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 4894
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.095,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 7474
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.066,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 18945
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.072,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.09,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.102,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.108,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 24118
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.087,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 23065
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.111,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 225138
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.095,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.022,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 93996
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.023,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.159,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11550
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.105,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 44056
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 27400
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.08,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 41575
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.072,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 50426
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.093,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 3379
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.104,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 122097
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.091,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.044,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.081,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.094,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 67497
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.082,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 24810
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.091,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 18804
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.11,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 22583
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.124,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.003,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 103988
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.08,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 9498
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.105,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 26247
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.102,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.033,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.146,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 5668
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.092,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 81813
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.067,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.056,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 16251
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.088,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.088,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 85218
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.034,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.106,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.101,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.014,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.157,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.032,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.16,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.1,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 3087
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.014,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.157,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 17628
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.104,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 26725
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.093,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 140111
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.108,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 6137
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.034,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.04,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 333
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.078,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.061,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.069,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 13892
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.092,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 24400
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.083,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 18522
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.092,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 3252
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.091,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.096,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 9538
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 43432
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.06,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.068,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.018,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.063,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.079,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 5659
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.045,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.103,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.11,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.003,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 21117
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.108,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 5459
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.085,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11806
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.079,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 51306
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.09,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 32981
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.115,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 10126
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 10463
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.083,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 6069
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.012,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.154,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 50812
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.096,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.028,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 48439
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.079,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 36529
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.076,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.031,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 37149
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.101,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 13633
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.047,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 38471
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.011,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.028,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.098,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.003,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 17170
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.087,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.084,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.001,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 7517
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.078,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.117,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 6717
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.015,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.156,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.084,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.102,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.1,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 15452
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.09,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.051,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.097,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 6559
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.087,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.072,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 28318
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 11322
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.028,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.167,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 6367
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.089,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.002,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 36927
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.073,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.12,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 6940
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.02,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.158,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.071,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.116,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Intricate Sigils": 0.0,
+    "Mystic Attunement": 0.0,
+    "Mind Phylacteries": 0.0,
+    "As the Whispers Demand": 0.0,
+    "Unfurled Finger": 0.0,
+    "Corrupted Lifeforce": 0.0,
+    "Devotion to the King": 0.0,
+    "Wildwood Persistence": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-27 00:10"
+}

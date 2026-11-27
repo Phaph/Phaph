@@ -1,0 +1,3851 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.035,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.035,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.02,
+    "Lucid Dreaming": 0.035,
+    "Choice of Life": 0.035,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.068,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.068,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.037,
+    "Lucid Dreaming": 0.068,
+    "Choice of Life": 0.068,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.084,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.084,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.042,
+    "Lucid Dreaming": 0.084,
+    "Choice of Life": 0.084,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.06,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.06,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.03,
+    "Lucid Dreaming": 0.06,
+    "Choice of Life": 0.06,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.015,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.031,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.031,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.019,
+    "Lucid Dreaming": 0.031,
+    "Choice of Life": 0.031,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 49435
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.08,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.08,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.04,
+    "Lucid Dreaming": 0.08,
+    "Choice of Life": 0.08,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.017,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 3779
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.035,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.035,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.02,
+    "Lucid Dreaming": 0.035,
+    "Choice of Life": 0.035,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.014,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.014,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.008,
+    "Lucid Dreaming": 0.014,
+    "Choice of Life": 0.014,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.019,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.019,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.064,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.064,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.032,
+    "Lucid Dreaming": 0.064,
+    "Choice of Life": 0.064,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 3494
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Chilled",
+     0.065,
+     -0.138
+    ],
+    [
+     "Choice of Mana",
+     "Chilled",
+     0.065,
+     -0.138
+    ],
+    [
+     "Waking Dream",
+     "Chilled",
+     0.037,
+     -0.16
+    ],
+    [
+     "Lucid Dreaming",
+     "Chilled",
+     0.065,
+     -0.138
+    ],
+    [
+     "Choice of Life",
+     "Chilled",
+     0.065,
+     -0.138
+    ],
+    [
+     "Choice of Power",
+     "Frozen",
+     0.058,
+     -0.565
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.058,
+     -0.565
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.033,
+     -0.575
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.058,
+     -0.565
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.058,
+     -0.565
+    ],
+    [
+     "Choice of Power",
+     "OnChilledGround",
+     0.065,
+     -0.138
+    ],
+    [
+     "Choice of Mana",
+     "OnChilledGround",
+     0.065,
+     -0.138
+    ],
+    [
+     "Waking Dream",
+     "OnChilledGround",
+     0.037,
+     -0.16
+    ],
+    [
+     "Lucid Dreaming",
+     "OnChilledGround",
+     0.065,
+     -0.138
+    ],
+    [
+     "Choice of Life",
+     "OnChilledGround",
+     0.065,
+     -0.138
+    ]
+   ],
+   "dps": 10462
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.056,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.056,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.032,
+    "Lucid Dreaming": 0.056,
+    "Choice of Life": 0.056,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 9208
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.027,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.027,
+    "Grasp of the Void": 0.021,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.016,
+    "Lucid Dreaming": 0.027,
+    "Choice of Life": 0.027,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 210740
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.039,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.039,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.022,
+    "Lucid Dreaming": 0.039,
+    "Choice of Life": 0.039,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.02,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.025,
+    "Archon of Chayula": 0.02,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.017,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 28212
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.08,
+     -0.508
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.08,
+     -0.508
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.04,
+     -0.526
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.08,
+     -0.508
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.08,
+     -0.508
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.053,
+    "Unravelling": 0.002,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.053,
+    "Grasp of the Void": 0.004,
+    "Archon of Chayula": 0.002,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.053,
+    "Choice of Life": 0.053,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 74138
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 12921
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.055,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.055,
+    "Grasp of the Void": 0.027,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.055,
+    "Choice of Life": 0.055,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 7241
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 33438
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.048,
+    "Unravelling": 0.004,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.048,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.004,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.024,
+    "Lucid Dreaming": 0.048,
+    "Choice of Life": 0.048,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 2619
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.035,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.035,
+    "Grasp of the Void": 0.012,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.02,
+    "Lucid Dreaming": 0.035,
+    "Choice of Life": 0.035,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 167846
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.033,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.033,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.017,
+    "Lucid Dreaming": 0.033,
+    "Choice of Life": 0.033,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.035,
+    "Unravelling": 0.02,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.035,
+    "Grasp of the Void": 0.025,
+    "Archon of Chayula": 0.02,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.02,
+    "Lucid Dreaming": 0.035,
+    "Choice of Life": 0.035,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.031,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.031,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.016,
+    "Lucid Dreaming": 0.031,
+    "Choice of Life": 0.031,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 17609
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.08,
+     -0.028
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.08,
+     -0.028
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.04,
+     -0.064
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.08,
+     -0.028
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.08,
+     -0.028
+    ]
+   ],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 22523
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.003,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.003,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.082,
+     -0.011
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.082,
+     -0.011
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.035,
+     -0.054
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.082,
+     -0.011
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.082,
+     -0.011
+    ]
+   ],
+   "dps": 1592
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 11958
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 53955
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 31791
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.003,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.003,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.017,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 68314
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.07,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.07,
+    "Grasp of the Void": 0.005,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.035,
+    "Lucid Dreaming": 0.07,
+    "Choice of Life": 0.07,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.033,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.033,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.016,
+    "Lucid Dreaming": 0.033,
+    "Choice of Life": 0.033,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.004,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.013,
+    "Archon of Chayula": 0.004,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.032,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.065,
+     -0.021
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.065,
+     -0.021
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.033,
+     -0.051
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.065,
+     -0.021
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.065,
+     -0.021
+    ]
+   ],
+   "dps": 4443
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.058,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.058,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.058,
+    "Choice of Life": 0.058,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 6052
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.052,
+    "Unravelling": 0.002,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.052,
+    "Grasp of the Void": 0.012,
+    "Archon of Chayula": 0.002,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.052,
+    "Choice of Life": 0.052,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 15163
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 19838
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.013,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Chilled",
+     0.083,
+     -0.146
+    ],
+    [
+     "Choice of Mana",
+     "Chilled",
+     0.083,
+     -0.146
+    ],
+    [
+     "Waking Dream",
+     "Chilled",
+     0.033,
+     -0.185
+    ],
+    [
+     "Lucid Dreaming",
+     "Chilled",
+     0.083,
+     -0.146
+    ],
+    [
+     "Choice of Life",
+     "Chilled",
+     0.083,
+     -0.146
+    ],
+    [
+     "Choice of Power",
+     "Frozen",
+     0.083,
+     -0.634
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.083,
+     -0.634
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.033,
+     -0.651
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.083,
+     -0.634
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.083,
+     -0.634
+    ],
+    [
+     "Choice of Power",
+     "OnChilledGround",
+     0.083,
+     -0.146
+    ],
+    [
+     "Choice of Mana",
+     "OnChilledGround",
+     0.083,
+     -0.146
+    ],
+    [
+     "Waking Dream",
+     "OnChilledGround",
+     0.033,
+     -0.185
+    ],
+    [
+     "Lucid Dreaming",
+     "OnChilledGround",
+     0.083,
+     -0.146
+    ],
+    [
+     "Choice of Life",
+     "OnChilledGround",
+     0.083,
+     -0.146
+    ]
+   ],
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.035,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.035,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.02,
+    "Lucid Dreaming": 0.035,
+    "Choice of Life": 0.035,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.067,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.067,
+    "Grasp of the Void": 0.012,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.033,
+    "Lucid Dreaming": 0.067,
+    "Choice of Life": 0.067,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.017,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.048,
+    "Unravelling": 0.003,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.048,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.003,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.024,
+    "Lucid Dreaming": 0.048,
+    "Choice of Life": 0.048,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 16165
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 4894
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 11375
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.029,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.029,
+    "Grasp of the Void": 0.019,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.015,
+    "Lucid Dreaming": 0.029,
+    "Choice of Life": 0.029,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 18945
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.08,
+     -0.417
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.08,
+     -0.417
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.04,
+     -0.438
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.08,
+     -0.417
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.08,
+     -0.417
+    ]
+   ],
+   "dps": 7474
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.015,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 24118
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 23065
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.012,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 93996
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.03,
+    "Unravelling": 0.019,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.03,
+    "Grasp of the Void": 0.03,
+    "Archon of Chayula": 0.019,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.013,
+    "Lucid Dreaming": 0.03,
+    "Choice of Life": 0.03,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 225138
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.05,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.05,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.025,
+    "Lucid Dreaming": 0.05,
+    "Choice of Life": 0.05,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 11550
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.033,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.033,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.017,
+    "Lucid Dreaming": 0.033,
+    "Choice of Life": 0.033,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 44056
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 41575
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.087,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.087,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.04,
+    "Lucid Dreaming": 0.087,
+    "Choice of Life": 0.087,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 27400
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 50426
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.033,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.033,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.016,
+    "Lucid Dreaming": 0.033,
+    "Choice of Life": 0.033,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 122097
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 3379
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 40627
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.03,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.03,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.015,
+    "Lucid Dreaming": 0.03,
+    "Choice of Life": 0.03,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 67497
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.006,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.006,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.043,
+     -0.421
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.043,
+     -0.421
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.043,
+     -0.421
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.043,
+     -0.421
+    ]
+   ],
+   "dps": 11836
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 18804
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 24810
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 22583
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.053,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.053,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.053,
+    "Choice of Life": 0.053,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 9498
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 103988
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.059,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.059,
+    "Grasp of the Void": 0.005,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.025,
+    "Lucid Dreaming": 0.059,
+    "Choice of Life": 0.059,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 26247
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.015,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.031,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.064,
+     -0.186
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.064,
+     -0.186
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.032,
+     -0.21
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.064,
+     -0.186
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.064,
+     -0.186
+    ]
+   ],
+   "dps": 5668
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 81813
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 3924
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.053,
+    "Unravelling": 0.003,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.053,
+    "Grasp of the Void": 0.028,
+    "Archon of Chayula": 0.003,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.053,
+    "Choice of Life": 0.053,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 16119
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.021,
+    "Unravelling": 0.003,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.021,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.003,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.011,
+    "Lucid Dreaming": 0.021,
+    "Choice of Life": 0.021,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 85218
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.019,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.019,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.002,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.013,
+    "Archon of Chayula": 0.002,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.056,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.056,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.032,
+    "Lucid Dreaming": 0.056,
+    "Choice of Life": 0.056,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.03,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.03,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.013,
+    "Lucid Dreaming": 0.03,
+    "Choice of Life": 0.03,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 3087
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.056,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.056,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.032,
+    "Lucid Dreaming": 0.056,
+    "Choice of Life": 0.056,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 17628
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.088,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.088,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.044,
+    "Lucid Dreaming": 0.088,
+    "Choice of Life": 0.088,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 140111
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 26725
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.023,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.023,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.012,
+    "Lucid Dreaming": 0.023,
+    "Choice of Life": 0.023,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 6137
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.08,
+     -0.496
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.08,
+     -0.496
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.04,
+     -0.514
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.08,
+     -0.496
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.08,
+     -0.496
+    ]
+   ],
+   "dps": 333
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.022,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 13892
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.053,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.053,
+    "Grasp of the Void": 0.011,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.053,
+    "Choice of Life": 0.053,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 18522
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.083,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.083,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.041,
+    "Lucid Dreaming": 0.083,
+    "Choice of Life": 0.083,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 24400
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.053,
+    "Unravelling": 0.002,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.053,
+    "Grasp of the Void": 0.013,
+    "Archon of Chayula": 0.002,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.053,
+    "Choice of Life": 0.053,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 3223
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.05,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.05,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.025,
+    "Lucid Dreaming": 0.05,
+    "Choice of Life": 0.05,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 43432
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 9538
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.013,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Chilled",
+     0.083,
+     -0.084
+    ],
+    [
+     "Choice of Mana",
+     "Chilled",
+     0.083,
+     -0.084
+    ],
+    [
+     "Waking Dream",
+     "Chilled",
+     0.033,
+     -0.126
+    ],
+    [
+     "Lucid Dreaming",
+     "Chilled",
+     0.083,
+     -0.084
+    ],
+    [
+     "Choice of Life",
+     "Chilled",
+     0.083,
+     -0.084
+    ],
+    [
+     "Choice of Power",
+     "Frozen",
+     0.083,
+     -0.607
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.083,
+     -0.607
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.033,
+     -0.626
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.083,
+     -0.607
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.083,
+     -0.607
+    ],
+    [
+     "Choice of Power",
+     "OnChilledGround",
+     0.083,
+     -0.084
+    ],
+    [
+     "Choice of Mana",
+     "OnChilledGround",
+     0.083,
+     -0.084
+    ],
+    [
+     "Waking Dream",
+     "OnChilledGround",
+     0.033,
+     -0.126
+    ],
+    [
+     "Lucid Dreaming",
+     "OnChilledGround",
+     0.083,
+     -0.084
+    ],
+    [
+     "Choice of Life",
+     "OnChilledGround",
+     0.083,
+     -0.084
+    ]
+   ],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.016,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.016,
+    "Grasp of the Void": 0.015,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.009,
+    "Lucid Dreaming": 0.016,
+    "Choice of Life": 0.016,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.046,
+    "Unravelling": 0.003,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.046,
+    "Grasp of the Void": 0.031,
+    "Archon of Chayula": 0.003,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.023,
+    "Lucid Dreaming": 0.046,
+    "Choice of Life": 0.046,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 5619
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.035,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.035,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.02,
+    "Lucid Dreaming": 0.035,
+    "Choice of Life": 0.035,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.018,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.018,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.009,
+    "Lucid Dreaming": 0.018,
+    "Choice of Life": 0.018,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 21117
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.037,
+    "Unravelling": 0.004,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.037,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.004,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.019,
+    "Lucid Dreaming": 0.037,
+    "Choice of Life": 0.037,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 11806
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 5459
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.006,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 32981
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 10126
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 51306
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.053,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.053,
+    "Grasp of the Void": 0.011,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.053,
+    "Choice of Life": 0.053,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 5910
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.08,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.08,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.04,
+    "Lucid Dreaming": 0.08,
+    "Choice of Life": 0.08,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 10463
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.056,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.056,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.032,
+    "Lucid Dreaming": 0.056,
+    "Choice of Life": 0.056,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 50812
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.015,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 48439
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.08,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.08,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.04,
+    "Lucid Dreaming": 0.08,
+    "Choice of Life": 0.08,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Chilled",
+     0.08,
+     -0.167
+    ],
+    [
+     "Choice of Mana",
+     "Chilled",
+     0.08,
+     -0.167
+    ],
+    [
+     "Waking Dream",
+     "Chilled",
+     0.04,
+     -0.197
+    ],
+    [
+     "Lucid Dreaming",
+     "Chilled",
+     0.08,
+     -0.167
+    ],
+    [
+     "Choice of Life",
+     "Chilled",
+     0.08,
+     -0.167
+    ],
+    [
+     "Choice of Power",
+     "Frozen",
+     0.08,
+     -0.643
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.08,
+     -0.643
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.04,
+     -0.656
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.08,
+     -0.643
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.08,
+     -0.643
+    ],
+    [
+     "Choice of Power",
+     "OnChilledGround",
+     0.08,
+     -0.167
+    ],
+    [
+     "Choice of Mana",
+     "OnChilledGround",
+     0.08,
+     -0.167
+    ],
+    [
+     "Waking Dream",
+     "OnChilledGround",
+     0.04,
+     -0.197
+    ],
+    [
+     "Lucid Dreaming",
+     "OnChilledGround",
+     0.08,
+     -0.167
+    ],
+    [
+     "Choice of Life",
+     "OnChilledGround",
+     0.08,
+     -0.167
+    ]
+   ],
+   "dps": 13633
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.015,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 37149
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 36529
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 38471
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.025,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.025,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.013,
+    "Lucid Dreaming": 0.025,
+    "Choice of Life": 0.025,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 17170
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 7321
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 22854
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.037,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 6717
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.02,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.02,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.01,
+    "Lucid Dreaming": 0.02,
+    "Choice of Life": 0.02,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.063,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.063,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.031,
+    "Lucid Dreaming": 0.063,
+    "Choice of Life": 0.063,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.034,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.034,
+    "Grasp of the Void": 0.01,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.017,
+    "Lucid Dreaming": 0.034,
+    "Choice of Life": 0.034,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.008,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 15452
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.053,
+    "Unravelling": 0.001,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.053,
+    "Grasp of the Void": 0.009,
+    "Archon of Chayula": 0.001,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.053,
+    "Choice of Life": 0.053,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 6503
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.036,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.036,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.016,
+    "Lucid Dreaming": 0.036,
+    "Choice of Life": 0.036,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 23370
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [
+    [
+     "Choice of Power",
+     "Frozen",
+     0.08,
+     -0.222
+    ],
+    [
+     "Choice of Mana",
+     "Frozen",
+     0.08,
+     -0.222
+    ],
+    [
+     "Waking Dream",
+     "Frozen",
+     0.04,
+     -0.251
+    ],
+    [
+     "Lucid Dreaming",
+     "Frozen",
+     0.08,
+     -0.222
+    ],
+    [
+     "Choice of Life",
+     "Frozen",
+     0.08,
+     -0.222
+    ]
+   ],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.026,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.026,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.013,
+    "Lucid Dreaming": 0.026,
+    "Choice of Life": 0.026,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 11322
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.056,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.056,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.032,
+    "Lucid Dreaming": 0.056,
+    "Choice of Life": 0.056,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 6367
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.057,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.057,
+    "Grasp of the Void": 0.007,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.029,
+    "Lucid Dreaming": 0.057,
+    "Choice of Life": 0.057,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 36927
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.052,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.052,
+    "Grasp of the Void": 0.032,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.026,
+    "Lucid Dreaming": 0.052,
+    "Choice of Life": 0.052,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 6940
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.046,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.046,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.023,
+    "Lucid Dreaming": 0.046,
+    "Choice of Life": 0.046,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.051,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.051,
+    "Grasp of the Void": 0.04,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.025,
+    "Lucid Dreaming": 0.051,
+    "Choice of Life": 0.051,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Choice of Power": 0.0,
+    "Unravelling": 0.0,
+    "Inner Turmoil": 0.0,
+    "Sap of Nightmares": 0.0,
+    "Choice of Mana": 0.0,
+    "Grasp of the Void": 0.0,
+    "Archon of Chayula": 0.0,
+    "Deepening Shadows": 0.0,
+    "Embrace the Darkness": 0.0,
+    "Waking Dream": 0.0,
+    "Lucid Dreaming": 0.0,
+    "Choice of Life": 0.0,
+    "Chayula's Gift": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-27 03:33"
+}

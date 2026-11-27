@@ -1,0 +1,4304 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 60052
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 65374
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.228,
+     0.228
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.114,
+     0.114
+    ]
+   ],
+   "dps": 55305
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 1343
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.287,
+     0.287
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.144,
+     0.144
+    ]
+   ],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.749,
+     0.749
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.374,
+     0.374
+    ]
+   ],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.143,
+     0.143
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.072,
+     0.072
+    ]
+   ],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.15,
+     0.15
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.075,
+     0.075
+    ]
+   ],
+   "dps": 370339
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.221,
+     0.221
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.11,
+     0.11
+    ]
+   ],
+   "dps": 49435
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.333,
+     0.404
+    ]
+   ],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.027,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.027,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.063,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.585,
+     0.585
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.292,
+     0.292
+    ]
+   ],
+   "dps": 3779
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.163,
+     0.163
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.082,
+     0.082
+    ]
+   ],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.41,
+     0.41
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.205,
+     0.205
+    ]
+   ],
+   "dps": 3650
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.029,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.029,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.059,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.736,
+     0.736
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.368,
+     0.368
+    ]
+   ],
+   "dps": 10462
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.766,
+     0.766
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.382,
+     0.382
+    ]
+   ],
+   "dps": 9208
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.129,
+     0.129
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.065,
+     0.065
+    ]
+   ],
+   "dps": 210740
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.166,
+     0.166
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.083,
+     0.083
+    ]
+   ],
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.022,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.022,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.07,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.158,
+     0.158
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.079,
+     0.079
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.243,
+     0.243
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.121,
+     0.121
+    ]
+   ],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.28,
+     0.28
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.14,
+     0.14
+    ]
+   ],
+   "dps": 74138
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.761,
+     0.761
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.38,
+     0.38
+    ]
+   ],
+   "dps": 7241
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.274,
+     0.274
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.137,
+     0.137
+    ]
+   ],
+   "dps": 33438
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.219,
+     0.219
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.109,
+     0.109
+    ]
+   ],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.311,
+     0.311
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.155,
+     0.155
+    ]
+   ],
+   "dps": 12921
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.37,
+     0.37
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.184,
+     0.184
+    ]
+   ],
+   "dps": 2619
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.129,
+     0.129
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 167846
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.148,
+     0.148
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.074,
+     0.074
+    ]
+   ],
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 17609
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.03,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.03,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.06,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.265,
+     0.265
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.132,
+     0.132
+    ]
+   ],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.271,
+     0.271
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 22523
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.027,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.027,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.063,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.068,
+     0.068
+    ]
+   ],
+   "dps": 1592
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.309,
+     0.309
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.154,
+     0.154
+    ]
+   ],
+   "dps": 11958
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.286,
+     0.286
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.143,
+     0.143
+    ]
+   ],
+   "dps": 53955
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.321,
+     0.321
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.16,
+     0.16
+    ]
+   ],
+   "dps": 31791
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.068,
+     0.068
+    ]
+   ],
+   "dps": 68314
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.246,
+     0.246
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.123,
+     0.123
+    ]
+   ],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.125,
+     0.125
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.063,
+     0.063
+    ]
+   ],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.027,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.027,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.063,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.151,
+     0.151
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.075,
+     0.075
+    ]
+   ],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.022,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.022,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.046,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.738,
+     0.738
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.369,
+     0.369
+    ]
+   ],
+   "dps": 4443
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.731,
+     0.731
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.365,
+     0.365
+    ]
+   ],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.034,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.034,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.061,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.221,
+     0.221
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.11,
+     0.11
+    ]
+   ],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.271,
+     0.271
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 6052
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 19838
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.281,
+     0.281
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.14,
+     0.14
+    ]
+   ],
+   "dps": 15163
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.022,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.022,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.058,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 24778
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.063,
+     0.063
+    ]
+   ],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.312,
+     0.312
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.157,
+     0.157
+    ]
+   ],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.28,
+     0.28
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.14,
+     0.14
+    ]
+   ],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.264,
+     0.264
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.132,
+     0.132
+    ]
+   ],
+   "dps": 16165
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.271,
+     0.271
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 4894
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.274,
+     0.274
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.137,
+     0.137
+    ]
+   ],
+   "dps": 11375
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.571,
+     0.571
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.286,
+     0.286
+    ]
+   ],
+   "dps": 18945
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.03,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.03,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.06,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.279,
+     0.279
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.139,
+     0.139
+    ]
+   ],
+   "dps": 7474
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.268,
+     0.268
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.134,
+     0.134
+    ]
+   ],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.308,
+     0.308
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.154,
+     0.154
+    ]
+   ],
+   "dps": 24118
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.122,
+     0.122
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.061,
+     0.061
+    ]
+   ],
+   "dps": 225138
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.273,
+     0.273
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 23065
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.39,
+     0.39
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.194,
+     0.194
+    ]
+   ],
+   "dps": 93996
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.744,
+     0.744
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.372,
+     0.372
+    ]
+   ],
+   "dps": 11265
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 44056
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.27,
+     0.27
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 50426
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 41575
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 27400
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.126,
+     0.126
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.063,
+     0.063
+    ]
+   ],
+   "dps": 122097
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.264,
+     0.264
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.131,
+     0.131
+    ]
+   ],
+   "dps": 3379
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.278,
+     0.278
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.139,
+     0.139
+    ]
+   ],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.034,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.034,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.061,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.144,
+     0.144
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.072,
+     0.072
+    ]
+   ],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.274,
+     0.274
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.137,
+     0.137
+    ]
+   ],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.223,
+     0.223
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.111,
+     0.111
+    ]
+   ],
+   "dps": 67497
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.239,
+     0.239
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.12,
+     0.12
+    ]
+   ],
+   "dps": 18804
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.273,
+     0.273
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.137,
+     0.137
+    ]
+   ],
+   "dps": 24810
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.315,
+     0.315
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.158,
+     0.158
+    ]
+   ],
+   "dps": 22583
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 9498
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.28,
+     0.28
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.14,
+     0.14
+    ]
+   ],
+   "dps": 103988
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.216,
+     0.216
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.108,
+     0.108
+    ]
+   ],
+   "dps": 26247
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.025,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.025,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.05,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.739,
+     0.739
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.369,
+     0.369
+    ]
+   ],
+   "dps": 5668
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 45664
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.217,
+     0.217
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.108,
+     0.108
+    ]
+   ],
+   "dps": 81813
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.483,
+     0.483
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.241,
+     0.241
+    ]
+   ],
+   "dps": 16119
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.273,
+     0.273
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.273,
+     0.273
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 85218
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.324,
+     0.324
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.161,
+     0.161
+    ]
+   ],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.292,
+     0.292
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.146,
+     0.146
+    ]
+   ],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.733,
+     0.733
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.366,
+     0.366
+    ]
+   ],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.75,
+     0.75
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.375,
+     0.375
+    ]
+   ],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.342,
+     0.342
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.171,
+     0.171
+    ]
+   ],
+   "dps": 3087
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.736,
+     0.736
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.368,
+     0.368
+    ]
+   ],
+   "dps": 17628
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.254,
+     0.254
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.126,
+     0.126
+    ]
+   ],
+   "dps": 26725
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.265,
+     0.265
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.132,
+     0.132
+    ]
+   ],
+   "dps": 140111
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.029,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.029,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.053,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.36,
+     0.36
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.177,
+     0.177
+    ]
+   ],
+   "dps": 333
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.218,
+     0.218
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.109,
+     0.109
+    ]
+   ],
+   "dps": 6137
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.274,
+     0.274
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.137,
+     0.137
+    ]
+   ],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.535,
+     0.535
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.267,
+     0.267
+    ]
+   ],
+   "dps": 13892
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.271,
+     0.271
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 18522
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.272,
+     0.272
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.136,
+     0.136
+    ]
+   ],
+   "dps": 24400
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.286,
+     0.286
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.143,
+     0.143
+    ]
+   ],
+   "dps": 3223
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.265,
+     0.265
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.133,
+     0.133
+    ]
+   ],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.275,
+     0.275
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.137,
+     0.137
+    ]
+   ],
+   "dps": 9538
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.278,
+     0.278
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.139,
+     0.139
+    ]
+   ],
+   "dps": 43432
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.034,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.034,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.052,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.158,
+     0.158
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.079,
+     0.079
+    ]
+   ],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.223,
+     0.287
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.111,
+     0.17
+    ]
+   ],
+   "dps": 64098
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 32034
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.481,
+     0.481
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.24,
+     0.24
+    ]
+   ],
+   "dps": 5765
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.295,
+     0.295
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.147,
+     0.147
+    ]
+   ],
+   "dps": 21117
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.322,
+     0.322
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.161,
+     0.161
+    ]
+   ],
+   "dps": 5375
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.283,
+     0.283
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.141,
+     0.141
+    ]
+   ],
+   "dps": 11806
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.219,
+     0.219
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.109,
+     0.109
+    ]
+   ],
+   "dps": 32981
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.323,
+     0.323
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.161,
+     0.161
+    ]
+   ],
+   "dps": 10126
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.268,
+     0.268
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.134,
+     0.134
+    ]
+   ],
+   "dps": 51306
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.271,
+     0.271
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 10463
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.271,
+     0.271
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 5910
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.333,
+     0.404
+    ]
+   ],
+   "dps": 1
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.404,
+     0.404
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.202,
+     0.202
+    ]
+   ],
+   "dps": 48439
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.718,
+     0.718
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.359,
+     0.359
+    ]
+   ],
+   "dps": 50812
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.333,
+     0.404
+    ]
+   ],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.067,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.067,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.102,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.274,
+     0.274
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.137,
+     0.137
+    ]
+   ],
+   "dps": 13633
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.27,
+     0.27
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 36529
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.147,
+     0.147
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.073,
+     0.073
+    ]
+   ],
+   "dps": 37149
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.063,
+     0.063
+    ]
+   ],
+   "dps": 38471
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.324,
+     0.324
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.162,
+     0.162
+    ]
+   ],
+   "dps": 17170
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.277,
+     0.277
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.138,
+     0.138
+    ]
+   ],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.288,
+     0.288
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.144,
+     0.144
+    ]
+   ],
+   "dps": 7321
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.804,
+     0.804
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.4,
+     0.4
+    ]
+   ],
+   "dps": 6717
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.728,
+     0.728
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.364,
+     0.364
+    ]
+   ],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.292,
+     0.292
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.146,
+     0.146
+    ]
+   ],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.127,
+     0.127
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.064,
+     0.064
+    ]
+   ],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.304,
+     0.304
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.152,
+     0.152
+    ]
+   ],
+   "dps": 15452
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.24,
+     0.305
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.12,
+     0.179
+    ]
+   ],
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.241,
+     0.241
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.121,
+     0.121
+    ]
+   ],
+   "dps": 6503
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.03,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.03,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.06,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.27,
+     0.27
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.271,
+     0.271
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.135,
+     0.135
+    ]
+   ],
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.277,
+     0.277
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.138,
+     0.138
+    ]
+   ],
+   "dps": 11322
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.278,
+     0.278
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.139,
+     0.139
+    ]
+   ],
+   "dps": 36927
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.784,
+     0.784
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.391,
+     0.391
+    ]
+   ],
+   "dps": 6367
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.78,
+     0.78
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.389,
+     0.389
+    ]
+   ],
+   "dps": 6940
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.737,
+     0.737
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.368,
+     0.368
+    ]
+   ],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.0,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.0
+   },
+   "inter": [
+    [
+     "Judge, Jury, and Executioner",
+     "EnemyLowLife",
+     0.739,
+     0.739
+    ],
+    [
+     "Pitiless Killer",
+     "EnemyLowLife",
+     0.369,
+     0.369
+    ]
+   ],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Witchbane": 0.0,
+    "Ceremonial Ablution": 0.0,
+    "Weapon Master": 0.0,
+    "Judge, Jury, and Executioner": 0.053,
+    "Zealous Inquisition": 0.0,
+    "Obsessive Rituals": 0.0,
+    "No Mercy": 0.0,
+    "Pitiless Killer": 0.053
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-27 01:19"
+}

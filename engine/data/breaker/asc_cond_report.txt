@@ -1,0 +1,65 @@
+23 ascendancies: Abyssal Lich, Acolyte of Chayula, Amazon, Blood Mage, Chronomancer, Deadeye, Disciple of Varashta, Gemling Legionnaire, Infernalist, Invoker, Lich, Martial Artist, Oracle, Pathfinder, Ritualist, Shaman, Smith of Kitava, Spirit Walker, Stormweaver, Tactician, Titan, Warbringer, Witchhunter
+
+Notable x condition, per ascendancy (median interaction, skills it touches):
+   +50%   76 skills  Amazon               In for the Kill / EnemyHasOpenWeakness
+   +50%   76 skills  Amazon               Predatory Instinct / EnemyHasOpenWeakness
+   +27%   66 skills  Amazon               In for the Kill / OpenWeaknessEnemyPresence
+   +25%   76 skills  Titan                Crushing Impacts / EnemyHeavyStunned
+   +25%   76 skills  Titan                Mountain Splitter / EnemyHeavyStunned
+   +24%   75 skills  Witchhunter          Judge, Jury, and Executioner / EnemyLowLife
+   +20%   70 skills  Warbringer           Imploding Impacts / EnemyArmourBroken
+   +12%   75 skills  Witchhunter          Pitiless Killer / EnemyLowLife
+    +8%    1 skills  Gemling Legionnaire  Advanced Thaumaturgy / EnemyFrozen
+    +8%   62 skills  Oracle               Forced Outcome / EnemyCriticalWeakness
+    +7%   26 skills  Blood Mage           Gore Spike / EnemyOnProfaneGround
+    +6%   75 skills  Infernalist          Grinning Immolation / EnemyCriticalWeakness
+    +5%   20 skills  Blood Mage           Sunder the Flesh / EnemyOnProfaneGround
+    +4%    8 skills  Blood Mage           Blood Barbs / EnemyCursed
+    +4%   34 skills  Oracle               Forced Outcome / EnemyOnProfaneGround
+    +4%    7 skills  Blood Mage           Blood Barbs / BleedAggravated
+    +4%    7 skills  Blood Mage           Blood Barbs / EnemyMoving
+    +4%    1 skills  Gemling Legionnaire  Advanced Thaumaturgy / EnemyBurning
+    +4%    1 skills  Gemling Legionnaire  Bolstering Implants / EnemyBurning
+    +4%    1 skills  Gemling Legionnaire  Neurological Implants / EnemyBurning
+    +4%    1 skills  Gemling Legionnaire  Implanted Gems / EnemyBurning
+    +4%    1 skills  Gemling Legionnaire  Motoric Implants / EnemyBurning
+    +4%    1 skills  Gemling Legionnaire  Advanced Thaumaturgy / EnemyIgnited
+    +4%    1 skills  Gemling Legionnaire  Bolstering Implants / EnemyIgnited
+    +4%    1 skills  Gemling Legionnaire  Neurological Implants / EnemyIgnited
+    +4%    1 skills  Gemling Legionnaire  Implanted Gems / EnemyIgnited
+    +4%    1 skills  Gemling Legionnaire  Motoric Implants / EnemyIgnited
+    +4%   46 skills  Gemling Legionnaire  Integrated Efficiency / EnemyCriticalWeakness
+    +4%   32 skills  Infernalist          Grinning Immolation / EnemyOnProfaneGround
+    +4%   53 skills  Blood Mage           Gore Spike / EnemyCriticalWeakness
+
+Skills that gain beyond what the pair usually gives (both up vs neither in brackets):
+   +50%  Flicker Strike             Witchhunter          Judge, Jury, and Executioner / EnemyLowLife: +73% (+73%)
+   +48%  Supercharged Slam          Witchhunter          Judge, Jury, and Executioner / EnemyLowLife: +72% (+72%)
+   +25%  Flicker Strike             Witchhunter          Pitiless Killer / EnemyLowLife: +36% (+36%)
+   +24%  Supercharged Slam          Witchhunter          Pitiless Killer / EnemyLowLife: +36% (+36%)
+   +21%  Skyfall                    Blood Mage           Blood Barbs / EnemyCursed: +21% (+40%)
+   +20%  Rapid Shot                 Amazon               In for the Kill / OpenWeaknessEnemyPresence: +46% (+58%)
+   +17%  Sunder                     Witchhunter          Judge, Jury, and Executioner / EnemyLowLife: +40% (+40%)
+   +16%  Ice Shards                 Amazon               In for the Kill / OpenWeaknessEnemyPresence: +42% (+55%)
+   +16%  Armour Piercing Rounds     Amazon               In for the Kill / OpenWeaknessEnemyPresence: +42% (+53%)
+   +16%  Hammer of the Gods         Witchhunter          Judge, Jury, and Executioner / EnemyLowLife: +39% (+39%)
+   +15%  Shockburst Rounds          Amazon               In for the Kill / OpenWeaknessEnemyPresence: +41% (+52%)
+   +11%  Flame Wall                 Blood Mage           Gore Spike / EnemyOnProfaneGround: +11% (+57%)
+   +11%  Skyfall                    Blood Mage           Blood Barbs / BleedAggravated: +11% (+40%)
+   +11%  Skyfall                    Blood Mage           Blood Barbs / EnemyMoving: +11% (+40%)
+   +10%  Incinerate                 Blood Mage           Gore Spike / EnemyOnProfaneGround: +10% (+55%)
+    +9%  Detonate Dead              Blood Mage           Blood Barbs / EnemyCursed: +9% (+24%)
+    +9%  Firestorm                  Blood Mage           Gore Spike / EnemyOnProfaneGround: +9% (+70%)
+    +9%  Solar Orb                  Blood Mage           Gore Spike / EnemyOnProfaneGround: +9% (+70%)
+    +9%  Coiling Bolts              Blood Mage           Gore Spike / EnemyOnProfaneGround: +9% (+58%)
+    +9%  Fangs of Frost             Witchhunter          Judge, Jury, and Executioner / EnemyLowLife: +32% (+32%)
+    +9%  Dark Effigy                Blood Mage           Gore Spike / EnemyOnProfaneGround: +9% (+56%)
+    +9%  Essence Drain              Blood Mage           Gore Spike / EnemyOnProfaneGround: +9% (+56%)
+    +9%  Fireball                   Blood Mage           Gore Spike / EnemyOnProfaneGround: +9% (+56%)
+    +9%  Sunder                     Witchhunter          Pitiless Killer / EnemyLowLife: +20% (+20%)
+    +8%  Ember Fusillade            Blood Mage           Gore Spike / EnemyOnProfaneGround: +8% (+57%)
+    +8%  Flame Wall                 Blood Mage           Sunder the Flesh / EnemyOnProfaneGround: +8% (+38%)
+    +8%  Lightning Spear            Witchhunter          Judge, Jury, and Executioner / EnemyLowLife: +32% (+32%)
+    +8%  Wave of Frost              Gemling Legionnaire  Advanced Thaumaturgy / EnemyFrozen: +8% (+8%)
+    +8%  Flameblast                 Blood Mage           Gore Spike / EnemyOnProfaneGround: +8% (+72%)
+    +8%  Hammer of the Gods         Witchhunter          Pitiless Killer / EnemyLowLife: +19% (+19%)

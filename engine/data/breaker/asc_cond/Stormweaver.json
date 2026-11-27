@@ -1,0 +1,2890 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.064,
+    "Tempest Caller": 0.012,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.024,
+    "Force of Will": 0.064,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.014,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.027,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.058,
+    "Tempest Caller": 0.021,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.041,
+    "Force of Will": 0.058,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 49435
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.062,
+    "Tempest Caller": 0.018,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.037,
+    "Force of Will": 0.062,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.003,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 3736
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.064,
+    "Tempest Caller": 0.01,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.019,
+    "Force of Will": 0.064,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.025,
+    "Tempest Caller": 0.016,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.031,
+    "Force of Will": 0.025,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 10069
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 3494
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 9208
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.073,
+    "Tempest Caller": 0.021,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.041,
+    "Force of Will": 0.073,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.05,
+    "Tempest Caller": 0.013,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.026,
+    "Force of Will": 0.05,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 210740
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.063,
+    "Tempest Caller": 0.01,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.019,
+    "Force of Will": 0.063,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 28212
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.012,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [
+    [
+     "Constant Gale",
+     "Frozen",
+     0.15,
+     -0.476
+    ],
+    [
+     "Force of Will",
+     "Frozen",
+     0.15,
+     -0.476
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 74138
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 12921
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 7241
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 33438
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.064,
+    "Tempest Caller": 0.01,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.019,
+    "Force of Will": 0.064,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 167846
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.09,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.09,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 2619
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.062,
+    "Tempest Caller": 0.013,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.027,
+    "Force of Will": 0.062,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.064,
+    "Tempest Caller": 0.01,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.019,
+    "Force of Will": 0.064,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 17609
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 22523
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 11958
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.017,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.038,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [
+    [
+     "Constant Gale",
+     "Frozen",
+     0.095,
+     0.0
+    ],
+    [
+     "Force of Will",
+     "Frozen",
+     0.095,
+     0.0
+    ]
+   ],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 53955
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.063,
+    "Tempest Caller": 0.01,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.019,
+    "Force of Will": 0.063,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 68314
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 31791
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.013,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.026,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.061,
+    "Tempest Caller": 0.007,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.014,
+    "Force of Will": 0.061,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.016,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.036,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 4400
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.007,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 17700
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 15163
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 19838
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 6052
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.021,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.042,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [
+    [
+     "Constant Gale",
+     "Chilled",
+     0.15,
+     -0.093
+    ],
+    [
+     "Force of Will",
+     "Chilled",
+     0.15,
+     -0.093
+    ],
+    [
+     "Constant Gale",
+     "Frozen",
+     0.15,
+     -0.611
+    ],
+    [
+     "Force of Will",
+     "Frozen",
+     0.15,
+     -0.611
+    ],
+    [
+     "Constant Gale",
+     "OnChilledGround",
+     0.15,
+     -0.093
+    ],
+    [
+     "Force of Will",
+     "OnChilledGround",
+     0.15,
+     -0.093
+    ]
+   ],
+   "dps": 24778
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.064,
+    "Tempest Caller": 0.016,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.031,
+    "Force of Will": 0.064,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.067,
+    "Tempest Caller": 0.018,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.037,
+    "Force of Will": 0.067,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [
+    [
+     "Constant Gale",
+     "Chilled",
+     0.078,
+     -0.195
+    ],
+    [
+     "Force of Will",
+     "Chilled",
+     0.078,
+     -0.195
+    ],
+    [
+     "Constant Gale",
+     "Frozen",
+     0.078,
+     -0.655
+    ],
+    [
+     "Force of Will",
+     "Frozen",
+     0.078,
+     -0.655
+    ],
+    [
+     "Constant Gale",
+     "OnChilledGround",
+     0.078,
+     -0.195
+    ],
+    [
+     "Force of Will",
+     "OnChilledGround",
+     0.078,
+     -0.195
+    ]
+   ],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.063,
+    "Tempest Caller": 0.015,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.03,
+    "Force of Will": 0.063,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.09,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.09,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 16165
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 11375
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 4894
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 18945
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 7474
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.058,
+    "Tempest Caller": 0.015,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.03,
+    "Force of Will": 0.058,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 24118
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 23065
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 93996
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.052,
+    "Tempest Caller": 0.011,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.022,
+    "Force of Will": 0.052,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 225138
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.062,
+    "Tempest Caller": 0.015,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.03,
+    "Force of Will": 0.062,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 44056
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 11431
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 27400
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 50426
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 41575
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 3379
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.062,
+    "Tempest Caller": 0.008,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.017,
+    "Force of Will": 0.062,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 122097
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.017,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.041,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [
+    [
+     "Constant Gale",
+     "Frozen",
+     0.077,
+     -0.402
+    ],
+    [
+     "Force of Will",
+     "Frozen",
+     0.077,
+     -0.402
+    ]
+   ],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 67497
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 24810
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 18804
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 22583
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 9498
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 103331
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 26247
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.058,
+    "Tempest Caller": 0.013,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.026,
+    "Force of Will": 0.058,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 5614
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 81813
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 85218
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 16119
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 3087
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 17628
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 140111
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 26725
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 333
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 6137
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 13669
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 18522
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 24400
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 2185
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 3223
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 43432
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 9538
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.021,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.048,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [
+    [
+     "Constant Gale",
+     "Chilled",
+     0.15,
+     -0.028
+    ],
+    [
+     "Force of Will",
+     "Chilled",
+     0.15,
+     -0.028
+    ],
+    [
+     "Constant Gale",
+     "Frozen",
+     0.15,
+     -0.583
+    ],
+    [
+     "Force of Will",
+     "Frozen",
+     0.15,
+     -0.583
+    ],
+    [
+     "Constant Gale",
+     "OnChilledGround",
+     0.15,
+     -0.028
+    ],
+    [
+     "Force of Will",
+     "OnChilledGround",
+     0.15,
+     -0.028
+    ]
+   ],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.029,
+    "Tempest Caller": 0.019,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.038,
+    "Force of Will": 0.029,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 5619
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.013,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.026,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.064,
+    "Tempest Caller": 0.012,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.024,
+    "Force of Will": 0.064,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 43502
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 11086
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 5459
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 21117
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 32981
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 10126
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 6069
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 10463
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 50812
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 48966
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 13133
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.058,
+    "Tempest Caller": 0.013,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.026,
+    "Force of Will": 0.058,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 37149
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 36529
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.016,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.032,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 38471
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 17170
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 7517
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 22854
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 6641
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.063,
+    "Tempest Caller": 0.011,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.021,
+    "Force of Will": 0.063,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 15452
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 6503
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.067,
+    "Tempest Caller": 0.017,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.034,
+    "Force of Will": 0.067,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 23370
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 10374
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 36927
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 6367
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 6866
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Strike Twice": 0.0,
+    "Constant Gale": 0.0,
+    "Tempest Caller": 0.0,
+    "Shaper of Winter": 0.0,
+    "Multiplying Squalls": 0.0,
+    "Force of Will": 0.0,
+    "Shaper of Storms": 0.0,
+    "Refracted Infusion": 0.0,
+    "Storm's Recollection": 0.0,
+    "Heavy Snows": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-26 21:19"
+}

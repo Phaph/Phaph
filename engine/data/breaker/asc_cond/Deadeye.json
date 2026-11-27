@@ -1,0 +1,2872 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.02,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.046,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.037,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.042,
+    "Mirage Deadeye": 0.049,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.03,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.015,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.019,
+    "Mirage Deadeye": 0.026,
+    "Endless Munitions": 0.4,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.179,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.032,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.04,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 49435
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.1,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.176,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.031,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 3779
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.02,
+    "Mirage Deadeye": 0.028,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.173,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.031,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 68837
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.008,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 122367
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Chilled",
+     0.037,
+     -0.16
+    ],
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.033,
+     -0.575
+    ],
+    [
+     "Gathering Winds",
+     "OnChilledGround",
+     0.037,
+     -0.16
+    ]
+   ],
+   "dps": 10462
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.032,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 3494
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.032,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 9208
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.017,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 28212
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.022,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.016,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 210740
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.04,
+     -0.526
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.042,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 74138
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 12921
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 7241
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 33438
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.02,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.172,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 167846
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.024,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 2619
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.02,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 65303
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.017,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 34115
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.016,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 17805
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.045,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.04,
+     -0.064
+    ]
+   ],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.046,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 22523
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.053,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11958
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.023,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.035,
+     -0.054
+    ]
+   ],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 53955
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 31791
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.017,
+    "Mirage Deadeye": 0.023,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 68314
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.035,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.016,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.126,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.179,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.032,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.033,
+     -0.051
+    ]
+   ],
+   "dps": 4443
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 6052
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 19838
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 15163
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Chilled",
+     0.033,
+     -0.185
+    ],
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.033,
+     -0.651
+    ],
+    [
+     "Gathering Winds",
+     "OnChilledGround",
+     0.033,
+     -0.185
+    ]
+   ],
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.02,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 22628
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.033,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.017,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.024,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 16165
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11375
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.046,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 4894
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.048,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.04,
+     -0.438
+    ]
+   ],
+   "dps": 7474
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.015,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 18945
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.015,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.053,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 24118
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.013,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 225138
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 23065
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 93996
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.025,
+    "Mirage Deadeye": 0.127,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.18,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.032,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11550
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.017,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 44056
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.04,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 27400
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 41575
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 50426
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.016,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 122097
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.045,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 3379
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.015,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 67497
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.041,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 18804
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 24810
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.054,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 22583
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.048,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 103988
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 9498
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.025,
+    "Mirage Deadeye": 0.037,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 26247
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.126,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.179,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.032,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.032,
+     -0.21
+    ]
+   ],
+   "dps": 5668
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.015,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 45664
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 81813
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 3924
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.083,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.183,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.032,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 16251
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.011,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 85218
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.05,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.172,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.032,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.013,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 3087
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.032,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 17628
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.044,
+    "Mirage Deadeye": 0.045,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 140111
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.043,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.177,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.031,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 26725
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.04,
+     -0.514
+    ]
+   ],
+   "dps": 333
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.012,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 6137
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 13892
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.046,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 18522
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.041,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 24400
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 3252
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.025,
+    "Mirage Deadeye": 0.046,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 43432
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 9538
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Chilled",
+     0.033,
+     -0.126
+    ],
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.033,
+     -0.626
+    ],
+    [
+     "Gathering Winds",
+     "OnChilledGround",
+     0.033,
+     -0.126
+    ]
+   ],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.009,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.023,
+    "Mirage Deadeye": 0.082,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.182,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.032,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 5659
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.02,
+    "Mirage Deadeye": 0.022,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.009,
+    "Mirage Deadeye": 0.05,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 21117
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.019,
+    "Mirage Deadeye": 0.048,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11806
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 5459
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 32981
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.055,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 10126
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 51306
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 10463
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.046,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 6069
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.04,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 48439
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.032,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 50812
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.04,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Chilled",
+     0.04,
+     -0.197
+    ],
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.04,
+     -0.656
+    ],
+    [
+     "Gathering Winds",
+     "OnChilledGround",
+     0.04,
+     -0.197
+    ]
+   ],
+   "dps": 13633
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 36529
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.015,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 37149
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 38471
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.013,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 17170
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.047,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.05,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 7517
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.137,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.194,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.034,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 6717
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.01,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.031,
+    "Mirage Deadeye": 0.05,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.171,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.017,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 15452
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.016,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 6559
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.046,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.17,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.03,
+    "Called Shots": 0.0
+   },
+   "inter": [
+    [
+     "Gathering Winds",
+     "Frozen",
+     0.04,
+     -0.251
+    ]
+   ],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.013,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 11322
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.032,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 6367
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.029,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 36927
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.026,
+    "Mirage Deadeye": 0.133,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.189,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.033,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 6940
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.023,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.025,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Gathering Winds": 0.0,
+    "Mirage Deadeye": 0.0,
+    "Endless Munitions": 0.0,
+    "Thrilling Chase": 0.0,
+    "Bullseye": 0.0,
+    "Avidity": 0.0,
+    "Point Blank": 0.0,
+    "Projectile Proximity Specialisation": 0.0,
+    "Far Shot": 0.0,
+    "Called Shots": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-26 18:28"
+}

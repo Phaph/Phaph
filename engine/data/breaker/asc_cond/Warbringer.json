@@ -1,0 +1,3438 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 60052
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.209,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 55305
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.225,
+     0.259
+    ]
+   ],
+   "dps": 1343
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.221,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.086,
+     0.4
+    ]
+   ],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.07,
+     0.36
+    ]
+   ],
+   "dps": 370339
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.211,
+     0.23
+    ]
+   ],
+   "dps": 49435
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 1
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.139,
+     0.242
+    ]
+   ],
+   "dps": 3736
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.07,
+     0.312
+    ]
+   ],
+   "dps": 10069
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.211,
+     0.225
+    ]
+   ],
+   "dps": 3655
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.115,
+     0.474
+    ]
+   ],
+   "dps": 9208
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 210740
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.225,
+     0.794
+    ]
+   ],
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.208,
+     0.223
+    ]
+   ],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.213,
+     0.239
+    ]
+   ],
+   "dps": 74138
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.136,
+     0.4
+    ]
+   ],
+   "dps": 7241
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.213,
+     0.231
+    ]
+   ],
+   "dps": 24736
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.209,
+     0.225
+    ]
+   ],
+   "dps": 33438
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.217,
+     0.244
+    ]
+   ],
+   "dps": 12921
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 2619
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.197,
+     0.197
+    ]
+   ],
+   "dps": 167846
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.057,
+     0.329
+    ]
+   ],
+   "dps": 34115
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 65303
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.211
+    ]
+   ],
+   "dps": 17609
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.203,
+     0.208
+    ]
+   ],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.209,
+     0.226
+    ]
+   ],
+   "dps": 22523
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.211,
+     0.226
+    ]
+   ],
+   "dps": 11958
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.208,
+     0.236
+    ]
+   ],
+   "dps": 53955
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 68314
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.205,
+     0.212
+    ]
+   ],
+   "dps": 31791
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.197,
+     0.197
+    ]
+   ],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.167,
+     0.167
+    ]
+   ],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.054,
+     0.323
+    ]
+   ],
+   "dps": 60581
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.098,
+     0.272
+    ]
+   ],
+   "dps": 4400
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.206,
+     0.217
+    ]
+   ],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.22,
+     0.248
+    ]
+   ],
+   "dps": 6052
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.205,
+     0.211
+    ]
+   ],
+   "dps": 19838
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.219,
+     0.264
+    ]
+   ],
+   "dps": 15163
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 24778
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 22628
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.212,
+     0.237
+    ]
+   ],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.21
+    ]
+   ],
+   "dps": 16165
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.208,
+     0.219
+    ]
+   ],
+   "dps": 4894
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.221,
+     0.255
+    ]
+   ],
+   "dps": 11375
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.217,
+     0.248
+    ]
+   ],
+   "dps": 7474
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.142,
+     0.284
+    ]
+   ],
+   "dps": 18945
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.214,
+     0.236
+    ]
+   ],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.208,
+     0.218
+    ]
+   ],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.213,
+     0.239
+    ]
+   ],
+   "dps": 24118
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.21
+    ]
+   ],
+   "dps": 23065
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.166,
+     0.166
+    ]
+   ],
+   "dps": 225138
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.183,
+     0.24
+    ]
+   ],
+   "dps": 93996
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 44056
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.078,
+     0.339
+    ]
+   ],
+   "dps": 11431
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.21,
+     0.222
+    ]
+   ],
+   "dps": 27400
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.211
+    ]
+   ],
+   "dps": 41575
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.212,
+     0.234
+    ]
+   ],
+   "dps": 50426
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.199,
+     0.199
+    ]
+   ],
+   "dps": 122097
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.209
+    ]
+   ],
+   "dps": 3379
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.21,
+     0.231
+    ]
+   ],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.209,
+     0.225
+    ]
+   ],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.207,
+     0.222
+    ]
+   ],
+   "dps": 67497
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 18804
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.21
+    ]
+   ],
+   "dps": 24810
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.205,
+     0.211
+    ]
+   ],
+   "dps": 22583
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.214,
+     0.242
+    ]
+   ],
+   "dps": 103331
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.205,
+     0.211
+    ]
+   ],
+   "dps": 9498
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.205,
+     0.211
+    ]
+   ],
+   "dps": 26247
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.075,
+     0.266
+    ]
+   ],
+   "dps": 5614
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.207,
+     0.218
+    ]
+   ],
+   "dps": 81813
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.209
+    ]
+   ],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.201,
+     0.205
+    ]
+   ],
+   "dps": 85218
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.167,
+     0.407
+    ]
+   ],
+   "dps": 16119
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.217,
+     0.246
+    ]
+   ],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.216,
+     0.252
+    ]
+   ],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.058,
+     0.331
+    ]
+   ],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.096,
+     0.344
+    ]
+   ],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.228,
+     0.271
+    ]
+   ],
+   "dps": 3087
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.062,
+     0.34
+    ]
+   ],
+   "dps": 17920
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.208,
+     0.22
+    ]
+   ],
+   "dps": 140111
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.193,
+     0.193
+    ]
+   ],
+   "dps": 26725
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.213,
+     0.231
+    ]
+   ],
+   "dps": 6137
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 4.327,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.296,
+     0.576
+    ],
+    [
+     "Warcaller's Bellow",
+     "HaveVulconus",
+     0.134,
+     8.797
+    ]
+   ],
+   "dps": 333
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.212,
+     0.23
+    ]
+   ],
+   "dps": 14996
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.163,
+     0.338
+    ]
+   ],
+   "dps": 13669
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.214,
+     0.233
+    ]
+   ],
+   "dps": 24400
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.206,
+     0.213
+    ]
+   ],
+   "dps": 18522
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.23,
+     0.276
+    ]
+   ],
+   "dps": 3223
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.21,
+     0.222
+    ]
+   ],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.212,
+     0.233
+    ]
+   ],
+   "dps": 43432
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.216,
+     0.245
+    ]
+   ],
+   "dps": 9538
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 16024
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.136,
+     0.2
+    ]
+   ],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.122,
+     0.333
+    ]
+   ],
+   "dps": 5765
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.207,
+     0.227
+    ]
+   ],
+   "dps": 21117
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.228,
+     0.27
+    ]
+   ],
+   "dps": 5459
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.216,
+     0.247
+    ]
+   ],
+   "dps": 11086
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.213,
+     0.231
+    ]
+   ],
+   "dps": 32981
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.209,
+     0.228
+    ]
+   ],
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.217,
+     0.245
+    ]
+   ],
+   "dps": 10126
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.209,
+     0.221
+    ]
+   ],
+   "dps": 10463
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.206,
+     0.214
+    ]
+   ],
+   "dps": 6069
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 1
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.031,
+     0.269
+    ]
+   ],
+   "dps": 50812
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.185,
+     0.262
+    ]
+   ],
+   "dps": 48966
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 1
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.041,
+     0.292
+    ]
+   ],
+   "dps": 37149
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.211,
+     0.229
+    ]
+   ],
+   "dps": 36529
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.215,
+     0.237
+    ]
+   ],
+   "dps": 13133
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 38471
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.209,
+     0.231
+    ]
+   ],
+   "dps": 17170
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.217,
+     0.25
+    ]
+   ],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.223,
+     0.259
+    ]
+   ],
+   "dps": 7517
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.208,
+     0.613
+    ]
+   ],
+   "dps": 6641
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.053,
+     0.27
+    ]
+   ],
+   "dps": 9376
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.216,
+     0.247
+    ]
+   ],
+   "dps": 24289
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.208
+    ]
+   ],
+   "dps": 15452
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.081,
+     0.618
+    ]
+   ],
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 6503
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.204,
+     0.21
+    ]
+   ],
+   "dps": 12720
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.211,
+     0.233
+    ]
+   ],
+   "dps": 10374
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.211,
+     0.231
+    ]
+   ],
+   "dps": 28318
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.2,
+     0.2
+    ]
+   ],
+   "dps": 18667
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.146,
+     0.557
+    ]
+   ],
+   "dps": 6367
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.211,
+     0.232
+    ]
+   ],
+   "dps": 36927
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.17,
+     0.485
+    ]
+   ],
+   "dps": 6866
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.067,
+     0.311
+    ]
+   ],
+   "dps": 10654
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [
+    [
+     "Imploding Impacts",
+     "EnemyArmourBroken",
+     0.107,
+     0.314
+    ]
+   ],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Jade Heritage": 0.0,
+    "Renly's Training": 0.0,
+    "Imploding Impacts": 0.0,
+    "Answered Call": 0.0,
+    "Wooden Wall": 0.0,
+    "Warcaller's Bellow": 0.0,
+    "Turtle Charm": 0.0,
+    "Anvil's Weight": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-26 20:10"
+}

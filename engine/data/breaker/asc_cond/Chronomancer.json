@@ -1,0 +1,2611 @@
+{
+ "code": "596ad5081979",
+ "skills": {
+  "Animus Exchange": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Bitter Dead": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Arc": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.02,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 65374
+  },
+  "Ball Lightning": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 60052
+  },
+  "Artillery Ballista": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 1343
+  },
+  "Armour Breaker": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.037,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 55305
+  },
+  "Armour Piercing Rounds": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.042,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 78767
+  },
+  "Blood Hunt": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.03,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 11225
+  },
+  "Bone Cage": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.015,
+    "Now and Again": 0.024,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 128861
+  },
+  "Bonestorm": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.019,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 370339
+  },
+  "Cackling Companions": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.04,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Boneshatter": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 49435
+  },
+  "Cluster Grenade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.027,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.063
+   },
+   "inter": [],
+   "dps": 3736
+  },
+  "Coiling Bolts": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.02,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 68837
+  },
+  "Comet": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.008,
+    "Now and Again": 0.01,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 122367
+  },
+  "Contagion": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 10672
+  },
+  "Cross Slash": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.029,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.059
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Chilled",
+     0.037,
+     -0.16
+    ],
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.033,
+     -0.574
+    ],
+    [
+     "Quicksand Hourglass",
+     "OnChilledGround",
+     0.037,
+     -0.16
+    ]
+   ],
+   "dps": 10069
+  },
+  "Conductive Runes": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.032,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 3494
+  },
+  "Cull The Weak": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.032,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 9208
+  },
+  "Dark Effigy": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.017,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 28212
+  },
+  "Detonate Dead": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.016,
+    "Now and Again": 0.023,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 210740
+  },
+  "Detonate Living": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.022,
+    "Now and Again": 0.028,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 5989
+  },
+  "Detonate Minion": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.022,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.07
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.04,
+     -0.526
+    ],
+    [
+     "Now and Again",
+     "Frozen",
+     0.06,
+     -0.517
+    ]
+   ],
+   "dps": 10095
+  },
+  "Detonating Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 22891
+  },
+  "Devour": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 74138
+  },
+  "Earthquake": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 24736
+  },
+  "Earthshatter": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 12921
+  },
+  "Disengage": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 7241
+  },
+  "Electrocuting Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 33438
+  },
+  "Elemental Sundering": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.024,
+    "Now and Again": 0.036,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 2619
+  },
+  "Ember Fusillade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.02,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 167846
+  },
+  "Eternal March": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Essence Drain": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.02,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 65303
+  },
+  "Entangle": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.017,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 34115
+  },
+  "Escape Shot": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.016,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 17609
+  },
+  "Explosive Grenade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.03,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.06
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.04,
+     -0.064
+    ]
+   ],
+   "dps": 27680
+  },
+  "Explosive Shot": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 22523
+  },
+  "Explosive Spear": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 11958
+  },
+  "Eye of Winter": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.027,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.063
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.035,
+     -0.054
+    ],
+    [
+     "Now and Again",
+     "Frozen",
+     0.059,
+     -0.033
+    ]
+   ],
+   "dps": 1592
+  },
+  "Falling Thunder": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 53955
+  },
+  "Fangs of Frost": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 31791
+  },
+  "Fireball": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.017,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 68314
+  },
+  "Firestorm": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 128626
+  },
+  "Flame Breath": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.035,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 130723
+  },
+  "Flame Wall": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.016,
+    "Now and Again": 0.024,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 65713
+  },
+  "Flameblast": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.027,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.063
+   },
+   "inter": [],
+   "dps": 88628
+  },
+  "Fortifying Cry": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Flash Grenade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.022,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.046
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.033,
+     -0.051
+    ]
+   ],
+   "dps": 4400
+  },
+  "Flicker Strike": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 60581
+  },
+  "Forge Hammer": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.034,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.061
+   },
+   "inter": [],
+   "dps": 17700
+  },
+  "Fragmentation Rounds": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 6052
+  },
+  "Fragments Of The Past": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 15163
+  },
+  "Frost Bomb": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.022,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.058
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Chilled",
+     0.033,
+     -0.185
+    ],
+    [
+     "Now and Again",
+     "Chilled",
+     0.067,
+     -0.159
+    ],
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.033,
+     -0.651
+    ],
+    [
+     "Now and Again",
+     "Frozen",
+     0.067,
+     -0.64
+    ],
+    [
+     "Quicksand Hourglass",
+     "OnChilledGround",
+     0.033,
+     -0.185
+    ],
+    [
+     "Now and Again",
+     "OnChilledGround",
+     0.067,
+     -0.159
+    ]
+   ],
+   "dps": 24778
+  },
+  "Freezing Salvo": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 19838
+  },
+  "Frostflame Nova": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Frost Darts": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.02,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 22628
+  },
+  "Frost Wall": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.033,
+    "Now and Again": 0.067,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 18158
+  },
+  "Frostbolt": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.017,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 85870
+  },
+  "Frozen Locus": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.024,
+    "Now and Again": 0.036,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 3099
+  },
+  "Furious Slam": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 32946
+  },
+  "Fury of the Mountain": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 16165
+  },
+  "Galvanic Shards": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 4894
+  },
+  "Gas Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 11375
+  },
+  "Gas Grenade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.03,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.06
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.04,
+     -0.438
+    ]
+   ],
+   "dps": 7474
+  },
+  "Gathering Storm": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.015,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 18945
+  },
+  "Glacial Cascade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 18008
+  },
+  "Glacial Bolt": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 12973
+  },
+  "Grim Pillars": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.015,
+    "Now and Again": 0.024,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 53560
+  },
+  "Glacial Lance": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 24118
+  },
+  "Hexblast": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.013,
+    "Now and Again": 0.022,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 225138
+  },
+  "Hailstorm Rounds": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 23065
+  },
+  "Hammer of the Gods": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 93996
+  },
+  "High Velocity Rounds": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.025,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 11431
+  },
+  "Ice Nova": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.017,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 44056
+  },
+  "Ice Strike": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 50426
+  },
+  "Ice Shards": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.04,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 27400
+  },
+  "Ice Shot": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 41575
+  },
+  "Incendiary Shot": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 3379
+  },
+  "Incinerate": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.016,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 122097
+  },
+  "Killing Palm": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 40627
+  },
+  "Lightning Conduit": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.034,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.061
+   },
+   "inter": [
+    [
+     "Now and Again",
+     "Frozen",
+     0.031,
+     -0.428
+    ]
+   ],
+   "dps": 11836
+  },
+  "Lightning Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 27358
+  },
+  "Leap Slam": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.015,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 67497
+  },
+  "Lightning Rod": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 18804
+  },
+  "Lunar Assault": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 24810
+  },
+  "Lightning Spear": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 22583
+  },
+  "Magnetic Salvo": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 9498
+  },
+  "Oil Barrage": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 103331
+  },
+  "Molten Blast": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.025,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 26247
+  },
+  "Orb of Storms": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.015,
+    "Now and Again": 0.024,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 45664
+  },
+  "Oil Grenade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.025,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.05
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.032,
+     -0.21
+    ]
+   ],
+   "dps": 5614
+  },
+  "Powered by Verisium": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Perfect Strike": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 81813
+  },
+  "Poisonburst Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 16119
+  },
+  "Permafrost Bolts": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 3924
+  },
+  "Plasma Blast": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.011,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 85218
+  },
+  "Profane Ritual": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 85474
+  },
+  "Primal Strikes": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 17661
+  },
+  "Rain of Arrows": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 116109
+  },
+  "Rampage": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.032,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 15018
+  },
+  "Rake": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.013,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 7319
+  },
+  "Rapid Assault": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 3087
+  },
+  "Raise Zombie": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 1856
+  },
+  "Rend": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.032,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 17628
+  },
+  "Rolling Magma": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 26725
+  },
+  "Rapid Shot": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.044,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 140111
+  },
+  "Rolling Slam": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.012,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 6137
+  },
+  "Seismic Cry": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.029,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.053
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.04,
+     -0.514
+    ]
+   ],
+   "dps": 333
+  },
+  "Shattering Palm": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 14996
+  },
+  "Shockchain Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 18522
+  },
+  "Shield Wall": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 13669
+  },
+  "Shockburst Rounds": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.041,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 24400
+  },
+  "Shockwave Totem": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 3223
+  },
+  "Siege Ballista": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.025,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 2185
+  },
+  "Skeletal Cleric": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Siphoning Strike": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 43432
+  },
+  "Siege Cascade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 9538
+  },
+  "Skeletal Arsonist": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 14648
+  },
+  "Skeletal Brute": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 13844
+  },
+  "Skeletal Frost Mage": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 11924
+  },
+  "Skeletal Reaver": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 8345
+  },
+  "Skeletal Storm Mage": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 16024
+  },
+  "Skeletal Sniper": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 9859
+  },
+  "Snap": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.034,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.052
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Chilled",
+     0.033,
+     -0.126
+    ],
+    [
+     "Now and Again",
+     "Chilled",
+     0.067,
+     -0.098
+    ],
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.033,
+     -0.626
+    ],
+    [
+     "Now and Again",
+     "Frozen",
+     0.067,
+     -0.614
+    ],
+    [
+     "Quicksand Hourglass",
+     "OnChilledGround",
+     0.033,
+     -0.126
+    ],
+    [
+     "Now and Again",
+     "OnChilledGround",
+     0.067,
+     -0.098
+    ]
+   ],
+   "dps": 122153
+  },
+  "Skyfall": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.009,
+    "Now and Again": 0.014,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 64098
+  },
+  "Snipe": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.023,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 5619
+  },
+  "Solar Orb": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 32034
+  },
+  "Spark": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.02,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 43502
+  },
+  "Spear of Solaris": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.009,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 21117
+  },
+  "Spearfield": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 5459
+  },
+  "Spiral Volley": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.02,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 11086
+  },
+  "Stampede": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 32981
+  },
+  "Storm Wave": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 51306
+  },
+  "Storm Lance": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 10126
+  },
+  "Tame Beast": {
+   "error": null,
+   "plain": {},
+   "inter": [],
+   "dps": 0
+  },
+  "Stormblast Bolts": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 10463
+  },
+  "Stormcaller Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 6069
+  },
+  "Summon Spectre": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.04,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Supercharged Slam": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.032,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 50812
+  },
+  "Sunder": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 48966
+  },
+  "Tamed Companion": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.04,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 1
+  },
+  "Tempest Flurry": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 36529
+  },
+  "Tempest Bell": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.067,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.102
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Chilled",
+     0.04,
+     -0.197
+    ],
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.04,
+     -0.656
+    ],
+    [
+     "Quicksand Hourglass",
+     "OnChilledGround",
+     0.04,
+     -0.197
+    ]
+   ],
+   "dps": 13133
+  },
+  "Thrashing Vines": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.015,
+    "Now and Again": 0.024,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 37149
+  },
+  "Thunderstorm": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 38471
+  },
+  "Thunderous Leap": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.013,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 17170
+  },
+  "Tornado": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 16691
+  },
+  "Tornado Shot": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 22854
+  },
+  "Toxic Growth": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 7517
+  },
+  "Twister": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 6641
+  },
+  "Vine Arrow": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.031,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 24289
+  },
+  "Vaulting Impact": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.01,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 9376
+  },
+  "Volcano": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.017,
+    "Now and Again": 0.025,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 74247
+  },
+  "Volcanic Fissure": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 15452
+  },
+  "Unearth": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.016,
+    "Now and Again": 0.026,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 23370
+  },
+  "Voltaic Barrier": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 6503
+  },
+  "Voltaic Grenade": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.03,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.06
+   },
+   "inter": [
+    [
+     "Quicksand Hourglass",
+     "Frozen",
+     0.04,
+     -0.251
+    ]
+   ],
+   "dps": 12720
+  },
+  "Wave of Frost": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 28318
+  },
+  "Whirling Assault": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.015,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 10374
+  },
+  "Wardbound Minions": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 18667
+  },
+  "Whirling Slash": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.032,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 6367
+  },
+  "Wind Blast": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.029,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 36927
+  },
+  "Wing Blast": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.023,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 10654
+  },
+  "Whirlwind Lance": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.026,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 6866
+  },
+  "Wind Serpent's Fury": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.025,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 12151
+  },
+  "Wolf Pack": {
+   "error": null,
+   "plain": {
+    "Unbound Encore": 0.0,
+    "Quicksand Hourglass": 0.0,
+    "Now and Again": 0.0,
+    "Footprints in the Sand": 0.0,
+    "Phased Form": 0.0,
+    "Inevitability": 0.0,
+    "Apex of the Moment": 0.0,
+    "Ultimate Command": 0.0
+   },
+   "inter": [],
+   "dps": 17165
+  }
+ },
+ "updated": "2026-11-26 21:53"
+}
