@@ -101,6 +101,7 @@ class SlotPlan:
     implicits: list[str] = field(default_factory=list)   # the base's own modifiers, shown above the affixes
     mods: list[str] = field(default_factory=list)        # a unique's own mods, its chosen variants applied
     variants: list[str] = field(default_factory=list)    # a unique's chosen variants (e.g. Mageblood's Legacy effects)
+    hunt: list[str] = field(default_factory=list)        # with TYPICAL_ROLLS: the variants worth hunting for (best first)
 
 
 def _value_at(text: str, roll: float) -> str:
@@ -554,21 +555,39 @@ def _set_variant(raw: str, key: str, value: int) -> str:
     return "\n".join(lines)
 
 
+# Uniques whose choices are rolled at random (Mageblood: 4 of 14 Legacies, Megalomaniac: 3 of 438 notables). False: each
+# choice is the best for the build (a roll few players own). True: each is the middle-scoring one (a typical roll, so the
+# guide's numbers are what a player is likely to have) and the best ones go in the card's "hunt for" list. Task 57: on 18
+# saved Uber builds a typical Mageblood beats the build's own belt on 1, the best roll on 14 (engine/data/rolls).
+TYPICAL_ROLLS = False
+HUNT: dict[str, list[str]] = {}   # item text as worn -> its best variants for the build (TYPICAL_ROLLS only)
+
+
 def best_variants(pob: PoB, raw: str, slot: str, score: "Scorer") -> str:
-    """For a unique whose mods you choose (Mageblood: four "Legacy of ..." effects), pick each choice in turn as the
-    one that helps this build most. Uniques with version variants ("Pre 0.2.0") keep their current version."""
+    """For a unique whose mods are chosen (Mageblood: four "Legacy of ..." effects), set each choice in turn: the one
+    that helps this build most, or with TYPICAL_ROLLS the middle-scoring one. Uniques with version variants
+    ("Pre 0.2.0") keep their current version."""
     import re
     names = [ln[len("Variant: "):] for ln in raw.split("\n") if ln.startswith("Variant: ")]
     if len(names) < 2 or any(re.match(r"\(?Pre \d|Current", n) for n in names):
         return raw
     keys = ["Selected Variant"] + [k for k in VARIANT_KEYS[1:] if HAS_ALT[k] in raw]
     current = pob.calc(SCORE_FIELDS)
-    for key in keys:
+    hunt: list[str] = []
+    for n, key in enumerate(keys):
         cands = [_set_variant(raw, key, i) for i in range(1, len(names) + 1)]
         outs = _try(pob, slot, cands)
-        scored = [(score(o, current), i) for i, o in enumerate(outs) if o is not None]
-        if scored:
-            raw = cands[max(scored)[1]]
+        scored = sorted((score(o, current), i) for i, o in enumerate(outs) if o is not None)
+        if not scored:
+            continue
+        if not TYPICAL_ROLLS:
+            raw = cands[scored[-1][1]]
+            continue
+        if n == 0:   # the best single choices, measured on the first slot: one per slot, best first
+            hunt = [names[i] for _, i in reversed(scored)][:len(keys)]
+        raw = cands[scored[(len(scored) - 1) // 2][1]]
+    if TYPICAL_ROLLS:
+        HUNT[raw] = hunt
     return raw
 
 
@@ -915,7 +934,7 @@ def craft_gear(
             log(f"  {w.slot:<12} UNIQUE {w.unique}")
             mods, variants = unique_lines(pob, w.unique_raw)
             plans.append(SlotPlan(w.slot, w.unique.split(",")[-1].strip(), [], w.unique_raw, w.unique,
-                                  mods=mods, variants=variants))
+                                  mods=mods, variants=variants, hunt=list(HUNT.get(w.unique_raw, []))))
         else:
             log(f"  {w.slot:<12} {w.base:<28} " + "; ".join(w.picked))
             plans.append(SlotPlan(w.slot, w.base, w.picked, w.raw(), affix_info=_affix_info(w),
