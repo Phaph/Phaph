@@ -642,6 +642,11 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     cards showed the wrong notables (enchants not read). Left after (c): re-read the next sweep for Deathblow's share; question for Kyle: Megalomaniac (and
     Mageblood) take the best 3 of 438 notables, a roll almost nobody has.
 
+57. [ ] (09:50: measuring: Mageblood best / median / worst roll on the 18 rank_check_8 Uber builds, bossing, no re-optimisation; session scratchpad cull/mb.py, mb.out)
+    (added 2026-11-27, from PC_TODO 'Mageblood (with the planned average-roll fix)', agreed with Kyle 2026-11-18) Uniques with random choices
+    (Mageblood 4 of 14 Legacies, Megalomaniac 3 of 438 notables) are picked and shown with the best roll for the build. Plan: wear a typical roll
+    (median per slot), list the best ones as "hunt for". Page text ("Choices for this build") would need a one-line change: UI is shelved, so ask Kyle.
+
 ## Waiting for Kyle
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
