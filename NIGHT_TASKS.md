@@ -642,7 +642,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     cards showed the wrong notables (enchants not read). Left after (c): re-read the next sweep for Deathblow's share; question for Kyle: Megalomaniac (and
     Mageblood) take the best 3 of 438 notables, a roll almost nobody has.
 
-57. [ ] (10:40: measured, engine/data/rolls/mageblood_rank_check_8.txt: a typical (median) Mageblood beats the build's own belt on 1 of 18 saved Uber builds, the best roll on 14, 3 already wore the best roll (Lodestone builds too). Branch `rolls` (~/phaph_rolls, pushed, not merged): gear.TYPICAL_ROLLS, off by default, + SlotPlan.hunt, 1 test passes. Waiting for Kyle: turn it on? + page text. Not done: full suite on it, Megalomaniac measured, Lodestone numbers re-checked)
+57. [ ] (10:40: measured, engine/data/rolls/mageblood_rank_check_8.txt: a typical (median) Mageblood beats the build's own belt on 1 of 18 saved Uber builds, the best roll on 14, 3 already wore the best roll (Lodestone builds too). Branch `rolls` (~/phaph_rolls, pushed, not merged): gear.TYPICAL_ROLLS, off by default, + SlotPlan.hunt; full suite green 11:05 (256 passed). Waiting for Kyle: turn it on? + page text. Not done: Megalomaniac measured, Lodestone numbers re-checked)
     (added 2026-11-27, from PC_TODO 'Mageblood (with the planned average-roll fix)', agreed with Kyle 2026-11-18) Uniques with random choices
     (Mageblood 4 of 14 Legacies, Megalomaniac 3 of 438 notables) are picked and shown with the best roll for the build. Plan: wear a typical roll
     (median per slot), list the best ones as "hunt for". Page text ("Choices for this build") would need a one-line change: UI is shelved, so ask Kyle.
