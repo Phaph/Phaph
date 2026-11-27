@@ -214,6 +214,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   (worktree ~/phaph_cull, engine 2026-11-27.1): mapping culls at 10% not 35%; ~/cull.sh = suite (cull-tests, 2 cores, ~/cull_tests.log) -> merge, deploy, push
   (~/merge_cull.log). (b) 'made-up gem Fire Spell on Melee Hit' was the check's fault: fixed on main 92a2bfb. (c) Megalomaniac: branch `enchants` (~/phaph_ench,
   test_pob_fixes 20 passed): after cull lands, merge main into it, add a cull unit test, full suite, deploy 2026-11-27.2.
+  08:15: PoB does apply Megalomaniac's notables (7 of 59 sample picks change a bare Spark build, e.g. Potent Incantation x1.213): only the card text was wrong.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
