@@ -643,14 +643,14 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     cards showed the wrong notables (enchants not read). Left after (c): re-read the next sweep for Deathblow's share; question for Kyle: Megalomaniac (and
     Mageblood) take the best 3 of 438 notables, a roll almost nobody has.
 
-57. [ ] (10:40: measured, engine/data/rolls/mageblood_rank_check_8.txt: a typical (median) Mageblood beats the build's own belt on 1 of 18 saved Uber builds, the best roll on 14, 3 already wore the best roll (Lodestone builds too). Branch `rolls` (~/phaph_rolls, pushed, not merged): gear.TYPICAL_ROLLS, off by default, + SlotPlan.hunt; full suite green 11:05 (256 passed). Waiting for Kyle: turn it on? + page text. Megalomaniac (3 builds, engine/data/rolls): best roll +19 to +26% score vs the build's own jewel, typical -9% (worth ~nothing). Not done: Lodestone numbers re-checked)
+57. [ ] (10:40: measured, engine/data/rolls/mageblood_rank_check_8.txt: CORRECTED 13:40: 16 of the 18 builds already wear Mageblood, so the test compares a typical roll with the engine's chosen roll: typical is lower on 17 of 18 (score -0.07 to -0.52). Whether a rare belt beats a typical Mageblood is NOT measured (the earlier 'Mageblood would mostly leave guides' was not shown). Lodestone: 84 of 102 saved full builds wear Mageblood, 19 Megalomaniac, all hand-picked rolls. Next: A/B full Uber builds with TYPICAL_ROLLS on. Branch `rolls` (~/phaph_rolls, pushed, not merged): gear.TYPICAL_ROLLS, off by default, + SlotPlan.hunt; full suite green 11:05 (256 passed). Waiting for Kyle: turn it on? + page text. Megalomaniac (3 builds, engine/data/rolls): best roll +19 to +26% score vs the build's own jewel, typical -9% (worth ~nothing). Not done: Lodestone numbers re-checked)
     (added 2026-11-27, from PC_TODO 'Mageblood (with the planned average-roll fix)', agreed with Kyle 2026-11-18) Uniques with random choices
     (Mageblood 4 of 14 Legacies, Megalomaniac 3 of 438 notables) are picked and shown with the best roll for the build. Plan: wear a typical roll
     (median per slot), list the best ones as "hunt for". Page text ("Choices for this build") would need a one-line change: UI is shelved, so ask Kyle.
 
 ## Waiting for Kyle
-- **Mageblood / Megalomaniac rolls (task 57, 2026-11-27):** guides wear the best Legacies for the build. On 18 saved Uber builds a typical roll beats
-  the build's own belt on 1 (best roll: 14). Turn on typical rolls (gear.TYPICAL_ROLLS on branch `rolls`)? Mageblood would mostly leave guides. If yes, the
+- **Mageblood / Megalomaniac rolls (task 57, 2026-11-27):** guides wear the best Legacies for the build. On 18 saved Uber builds (16 already wearing
+  Mageblood) a typical roll scores 7-52% below the chosen roll on 17. Whether Mageblood would still beat a rare belt: not measured yet (A/B next). Turn on typical rolls (gear.TYPICAL_ROLLS on branch `rolls`)? If yes, the
   page's "Choices for this build" line needs to read e.g. "Typical roll; hunt for: ..." (one line in api/static/index.html; UI is shelved, so asking).
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.

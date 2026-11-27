@@ -2,6 +2,8 @@
 # Columns: gear score vs the build's own belt (engine Scorer: damage + 0.4 x EHP + resists), Full DPS ratio, Legacies picked.
 # best = best Legacy per slot in turn (what the engine wears now); median = middle-scoring Legacy per slot (a typical roll); worst.
 # Not re-optimised around the belt: an estimate. 3 builds already wore the best roll (best +0.000).
+# CORRECTION 13:40: 16 of these 18 builds already wear Mageblood (their own roll), so 'own belt' is mostly a Mageblood: median
+# vs own = typical roll vs the engine's chosen roll. Whether a rare belt beats a typical Mageblood is NOT measured here.
 Rain of Arrows Deadeye             best +0.215 x1.47 Sulphur/Sulphur/Sulphur/Diamond median -0.218 x1.00  worst -0.259
 Ice Shot Deadeye                   best +0.283 x1.52 Silver/Silver/Sulphur/Diamond median -0.175 x1.00  worst -0.236
 Electrocuting Arrow Deadeye        best +0.296 x1.53 Silver/Silver/Sulphur/Diamond median -0.178 x1.00  worst -0.235
