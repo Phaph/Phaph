@@ -642,12 +642,15 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     cards showed the wrong notables (enchants not read). Left after (c): re-read the next sweep for Deathblow's share; question for Kyle: Megalomaniac (and
     Mageblood) take the best 3 of 438 notables, a roll almost nobody has.
 
-57. [ ] (09:50: measuring: Mageblood best / median / worst roll on the 18 rank_check_8 Uber builds, bossing, no re-optimisation; session scratchpad cull/mb.py, mb.out)
+57. [ ] (10:40: measured, engine/data/rolls/mageblood_rank_check_8.txt: a typical (median) Mageblood beats the build's own belt on 1 of 18 saved Uber builds, the best roll on 14, 3 already wore the best roll (Lodestone builds too). Branch `rolls` (~/phaph_rolls, pushed, not merged): gear.TYPICAL_ROLLS, off by default, + SlotPlan.hunt, 1 test passes. Waiting for Kyle: turn it on? + page text. Not done: full suite on it, Megalomaniac measured, Lodestone numbers re-checked)
     (added 2026-11-27, from PC_TODO 'Mageblood (with the planned average-roll fix)', agreed with Kyle 2026-11-18) Uniques with random choices
     (Mageblood 4 of 14 Legacies, Megalomaniac 3 of 438 notables) are picked and shown with the best roll for the build. Plan: wear a typical roll
     (median per slot), list the best ones as "hunt for". Page text ("Choices for this build") would need a one-line change: UI is shelved, so ask Kyle.
 
 ## Waiting for Kyle
+- **Mageblood / Megalomaniac rolls (task 57, 2026-11-27):** guides wear the best Legacies for the build. On 18 saved Uber builds a typical roll beats
+  the build's own belt on 1 (best roll: 14). Turn on typical rolls (gear.TYPICAL_ROLLS on branch `rolls`)? Mageblood would mostly leave guides. If yes, the
+  page's "Choices for this build" line needs to read e.g. "Typical roll; hunt for: ..." (one line in api/static/index.html; UI is shelved, so asking).
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.
 - Class-weapon rule for Whetstone's default search: after blind_unlocked lands, show what the rule costs a player
