@@ -59,7 +59,7 @@ def audit_stage(pob: PoB, g) -> dict:
             issues["stats"].append(f"{label}: rare with no affixes")
         try:
             res = pob.send("item_lines", raw=p.raw)
-            lines = set(res.get("implicits") or []) | set(res.get("explicits") or [])
+            lines = set(res.get("enchants") or []) | set(res.get("implicits") or []) | set(res.get("explicits") or [])
             if not lines:
                 issues["readable"].append(f"{label}: Path of Building reads no mods")
             missing = [a for a in p.affixes for part in a.split(" / ") if part not in lines]

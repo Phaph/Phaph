@@ -24,6 +24,18 @@ def test_item_lines_lists_unreadable_lines(pob):
     assert not any("Intelligence" in l for l in lines["unsupported"])
 
 
+def test_megalomaniac_lists_its_chosen_notables(pob):
+    """Megalomaniac's only mods are "Allocates <notable>" enchants for its 3 chosen variants. item_lines left them
+    out, so the guide card showed the first 12 notables in the alphabet instead (sweep 2026-11-27)."""
+    import gear
+    u = next(x for x in pob.list_uniques() if x["name"].startswith("Megalomaniac"))
+    lines = pob.send("item_lines", raw=u["raw"])
+    assert len(lines["enchants"]) == 3
+    assert lines["enchants"] == ["Allocates " + v for v in lines["variants"]]
+    mods, _ = gear.unique_lines(pob, u["raw"])
+    assert mods == lines["enchants"]
+
+
 def test_stage_rules_channel_flameblast_full(pob):
     """Flameblast is used at its full stages (runner STAGE_RULES), also after try_skill swaps its supports; PoB's
     default of 1 stage read it at a fifth of its damage. Detonating Arrow keeps PoB's default."""
@@ -275,3 +287,17 @@ def test_patched_keystone_changes_the_numbers(pob):
     pob.send("set_custom_mods", text="Pain Attunement")
     assert pob.calc(["Life"])["Life"] == life0
     pob.send("set_custom_mods", text="")
+
+
+def test_mapping_culls_at_the_rare_threshold(pob):
+    """Mapping (normal monster) counts Culling Strike at 10%, not PoB's normal 35% (x1.54): Deathblow was worn in 8 of 9
+    Act 3-4 sweep builds for it (2026-11-27). Bosses keep the unique threshold (5%)."""
+    raw = "Rarity: UNIQUE\nDeathblow\nDoubled Gauntlets\nCulling Strike"
+    for boss, cull in [("None", 10), ("Pinnacle", 5)]:
+        pob.new()
+        pob.set_class("Sorceress", None)
+        pob.set_level(40)
+        pob.add_skill(["Spark"])
+        pob.set_config(enemyIsBoss=boss)
+        pob.add_item(raw)
+        assert pob.calc(["CullPercent"])["CullPercent"] == cull
