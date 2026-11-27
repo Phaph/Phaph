@@ -1,0 +1,31 @@
+  1.4   Lightning Conduit on Shock               FOUND, row 1 of 29 (Lightning Conduit / OnShockedGround +500%)  [not blind]
+  1.3   Archmage mana stacking                   missed (130 rows flagged)
+  1.9   Gemling attribute stacking               missed (130 rows flagged)
+  2.1   Lightning Spear + Tangletongue           missed (202 rows flagged)
+  2.5   Glacial Cascade vs Frozen                missed (68 rows flagged)
+  2.2   Ice Shards / Spearfield hidden more      FOUND, row 58 of 68 (Spearfield / ArmourBroken +17%)
+  3.2   Rathpith / Atalui's life Blood Mage      FOUND, row 1 of 93 (Seismic Cry / unique:Rathpith Globe +204%)
+  3.3a  Indigon                                  missed (93 rows flagged)
+  3.3b  The Whispering Ice                       missed (93 rows flagged)
+  3.4   Hollow Palm evasion                      missed (93 rows flagged)
+  3.6   Tactician vs Immobilised                 missed (52 rows flagged)
+  4.7   Totem Archmage (Ancestral Bond)          missed (114 rows flagged)
+  4.5   Uhtred supports counting Meta gems       missed (114 rows flagged)
+  stack column: 1.3   Archmage mana stacking               FOUND, 1 of 3
+  stack column: 1.9   Gemling attribute stacking           FOUND, 3 of 3
+  stack column: 3.2   Rathpith / Atalui's life Blood Mage  FOUND, 1 of 2
+  stack column: 3.3a  Indigon                              missed (2 flagged)
+  stack column: 3.4   Hollow Palm evasion                  missed (2 flagged)
+found 3 of 13 graded (13 cases)
+  v0.12.2 strict (+60% above usual): ['Lightning Conduit', 'Skeletal Reaver', 'Skeletal Sniper']
+  v0.12.2 condition: 52 rows, 42 pieces: 1 real, 33 false alarms, 8 unjudged
+  v0.12.2 matrix: 93 rows, 35 pieces: 0 real, 14 false alarms, 21 unjudged
+  v0.15.0 strict (+60% above usual): ['Cackling Companions', 'Siege Cascade', 'Skeletal Reaver', 'Wolf Pack']
+  v0.15.0 condition: 57 rows, 45 pieces: 1 real, 32 false alarms, 12 unjudged
+  v0.15.0 matrix: 114 rows, 37 pieces: 0 real, 16 false alarms, 21 unjudged
+  v0.5.0 strict (+60% above usual): ['Lightning Conduit']
+  v0.5.0 condition: 29 rows, 22 pieces: 4 real, 11 false alarms, 7 unjudged
+  v0.5.0 matrix: 130 rows, 15 pieces: 0 real, 8 false alarms, 7 unjudged
+  v0.8.0 strict (+60% above usual): ['Lightning Conduit', 'Raise Zombie', 'Skeletal Reaver', 'Skeletal Sniper']
+  v0.8.0 condition: 68 rows, 41 pieces: 2 real, 25 false alarms, 14 unjudged
+  v0.8.0 matrix: 202 rows, 51 pieces: 2 real, 34 false alarms, 15 unjudged
