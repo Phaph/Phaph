@@ -202,6 +202,10 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **19:20 (11-26):** task 48's scan 4 of 23 (Infernalist, Blood Mage, Lich, Abyssal Lich running; ~34 min each, so ~05:30 11-27). Meanwhile task 54 done: ladder history from the Wayback Machine (engine/tools/ninja_archive.py, data/ninja_archive; BREAKER.md 'Ladder history'). 0.4.0c: Walking Calamity 12.0 -> 8.2% in 11 days, the only case whose turn lines up with its patch.
 - **21:05 (11-26):** task 48 at 7 of 23 (Warbringer running). Done since: 0.4 cases in the answer key + first 0.4 grade (4.7 missed, 2 of 13), 0.4 false alarms judged (1 real of 62 flagged). Next light task: 55 (needs the Wayback Machine back up).
 - **23:40 (11-26):** task 48 at 11 of 23 (Disciple done 23:28; ~06:30 11-27 end). Task 55 closed (MAX_SKILLS stays 3). Every other open task waits for 48, Kyle's PC, or is shelved UI.
+- **01:20 (11-27):** task 48's scan at 15 of 23 (~05:30 end). **~/after48.sh queued** (setsid, ~/after48.log): after 48's 'all done' and a free server (the 05:00 sweep runs first), freezes main in
+  ~/phaph_51, runs task 51's old-patch scans there on 6 cores (0.1 + 0.3 condition/matrix/stack, 0.2 + 0.4 condition/matrix) into data/breaker/old51 (old/ kept; ~/old51_patch.log), grades
+  (old51/grade.txt, verdicts shared from old/), commits; then 48's blind re-run (unlocked) -> blind_unlocked_51.json / .txt, commits. old_patch.sh / grade_old.py take ENGINE_DIR / OLD_DIR / OLD_LOG.
+  New pieces flagged by the re-grade are unjudged: judge with old_verdicts.py / old_skill_verdicts.py before quoting false alarms. Then 48's read (`asc_cond.py report ~/asc48_out`), 38.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
