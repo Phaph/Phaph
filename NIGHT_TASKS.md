@@ -209,6 +209,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 - **02:30 (11-27): asc_cond.py report fixed** (report only; scan files unchanged): a pair now counts only if notable + condition beats the better of the two alone (`pays`). Before, player-side Frozen /
   Chilled (the build's damage x~0.2) times a notable that cancels it (Pathfinder 'speed unaffected by Slows') topped the report at +233% on 68 skills with both together = the notable alone (+4%). 17 of 23 read
   (partial, not a verdict): top pairs Amazon Open Weakness +50%, Titan Heavy Stunned +25%, Warbringer Armour Broken +20%, Witchhunter low life +16%; skill outliers Flicker Strike Witchhunter +57% over the usual.
+- 03:00 (11-27): task 48 at 19 of 23. Gemling done: no strong conditional passive (best: Integrated Efficiency vs Critical Weakness +4% on 46 skills; others +4-8% on 1 skill). Its implants pay plainly (task 47's fix), so for Gemling the blind re-run in after48.sh is what counts.
 - Task 37's queue waits for the old-patch scans (0.2 matrix, then 0.4), so it starts late.
 - **Task 42 (12:40):** Rain of Arrows Invoker: 849k boss as is, 3.46M with slots reversed (same spec, x4.1). Cause, part 1: once
   worn, a unique is never checked again (BREAKER.md). Fix on branch `revisit` (worktree ~/phaph_revisit, not pushed or
