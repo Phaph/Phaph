@@ -263,7 +263,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
 - **Waiting for Kyle:** nothing blocking.
 
-- **20:30 (11-27): task 57's 3-order A/B done** (engine/data/rolls/rolls_ab_3orders.txt): typical vs best roll, best of 3, boss -30% / +12% / -37% / -50%; typical keeps Mageblood in 3 of 12 rows. Waits on Kyle (Waiting for Kyle). Running: blind51 (task 48 blind re-run, 6 cores, started 20:28, ~/blind51.log).
+- **20:30 (11-27): task 57's 3-order A/B done** (engine/data/rolls/rolls_ab_3orders.txt): typical vs best roll, best of 3, boss -30% / +12% / -37% / -50%; typical keeps Mageblood in 3 of 12 rows. Waits on Kyle (Waiting for Kyle). Running: blind51 (task 48 blind re-run, 6 cores, started 20:28, ~/blind51.log; 4 of 23 by 23:00, ~36 min each one after another, so done ~10:30-11:00 Berlin 11-28 (estimate); after48.sh commits it).
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
