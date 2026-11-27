@@ -1,0 +1,6 @@
+# Task 57 (2026-11-27): Megalomaniac replacing the jewel in the first allocated plain socket of 3 saved Uber builds (rank_check_8.json), bossing.
+# [gear score vs the build's own jewel, Full DPS ratio, notables]. best = best notable per slot in turn; median = middle-scoring one (typical).
+# Caveat: the median pick repeats a notable (Megalomaniac has no 'Allow Duplicate Variants'): a roll the game can't make. Not re-optimised: an estimate.
+{"build": "Glacial Cascade Martial Artist", "socket": "Jewel 2491", "best": [0.19, 1.16, ["Marked for Sickness", "Barbaric Strength", "Jack of all Trades"]], "median": [-0.089, 0.911, ["Preservation", "Preservation", "Presence Present"]]}
+{"build": "Ice Shot Deadeye", "socket": "Jewel 2491", "best": [0.211, 1.138, ["Marked for Sickness", "Chakra of Thought", "Barbaric Strength"]], "median": [-0.089, 0.911, ["Piercing Claw", "Piercing Claw", "Pierce the Heart"]]}
+{"build": "Supercharged Slam Titan", "socket": "Jewel 2491", "best": [0.257, 1.192, ["Marked for Sickness", "Chakra of Thought", "Jack of all Trades"]], "median": [-0.092, 0.908, ["Quick Recovery", "Quick Recovery", "Quick Fingers"]]}
