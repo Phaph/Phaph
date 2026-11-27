@@ -1,0 +1,23 @@
+# Task 57 (2026-11-27): Mageblood in the Belt slot of the 18 saved Uber builds (rank_check_8.json, made on 11-26 by the rank8 run; engine version not stored in the file), bossing.
+# Columns: gear score vs the build's own belt (engine Scorer: damage + 0.4 x EHP + resists), Full DPS ratio, Legacies picked.
+# best = best Legacy per slot in turn (what the engine wears now); median = middle-scoring Legacy per slot (a typical roll); worst.
+# Not re-optimised around the belt: an estimate. 3 builds already wore the best roll (best +0.000).
+Rain of Arrows Deadeye             best +0.215 x1.47 Sulphur/Sulphur/Sulphur/Diamond median -0.218 x1.00  worst -0.259
+Ice Shot Deadeye                   best +0.283 x1.52 Silver/Silver/Sulphur/Diamond median -0.175 x1.00  worst -0.236
+Electrocuting Arrow Deadeye        best +0.296 x1.53 Silver/Silver/Sulphur/Diamond median -0.178 x1.00  worst -0.235
+Earthquake Titan                   best +0.000 x1.00 Silver/Silver/Bismuth/Diamond median -0.325 x0.65  worst -0.805
+Supercharged Slam Titan            best +0.128 x1.34 Silver/Silver/Sulphur/Diamond median -0.356 x0.76  worst -0.452
+Hammer of the Gods Titan           best +0.128 x1.33 Silver/Silver/Sulphur/Diamond median -0.341 x0.78  worst -0.424
+Wind Serpent's Fury Amazon         best +0.440 x1.63 Silver/Sulphur/Sulphur/Diamond median +0.069 x1.23  worst -0.185
+Lightning Spear Amazon             best +0.121 x1.28 Silver/Silver/Bismuth/Diamond median -0.497 x0.85  worst -0.634
+Fangs of Frost Amazon              best +0.128 x1.27 Silver/Silver/Sapphire/Diamond median -0.523 x0.85  worst -0.589
+Rapid Shot Tactician               best +0.000 x1.00 Silver/Silver/Bismuth/Diamond median -0.310 x0.66  worst -0.870
+Armour Piercing Rounds Tactician   best +0.000 x1.00 Silver/Silver/Bismuth/Diamond median -0.337 x0.65  worst -0.614
+Plasma Blast Tactician             best +0.081 x1.31 Sulphur/Sulphur/Sapphire/Diamond median -0.341 x1.17  worst -0.513
+Flicker Strike Martial Artist      best +0.372 x1.12 Silver/Jade/Bismuth/Stibnite median -0.073 x1.11  worst -0.267
+Glacial Cascade Martial Artist     best +0.156 x1.36 Silver/Silver/Sapphire/Diamond median -0.234 x1.16  worst -0.428
+Siphoning Strike Martial Artist    best +0.140 x0.59 Stibnite/Jade/Stibnite/Stibnite median -0.370 x0.59  worst -0.413
+Flame Breath Oracle                best +0.008 x1.17 Silver/Sulphur/Ruby/Diamond  median -0.279 x0.86  worst -0.560
+Devour Oracle                      best +0.018 x1.18 Silver/Silver/Bismuth/Diamond median -0.279 x0.85  worst -0.476
+Oil Barrage Oracle                 best +0.183 x1.18 Silver/Sulphur/Sulphur/Diamond median -0.116 x0.66  worst -0.340
+{'n': 18, 'best wins': 14, 'median wins': 1}
