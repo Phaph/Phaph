@@ -137,6 +137,29 @@ local function disambiguate(text)
 	return table.concat(out, "\n")
 end
 
+-- PoB fix: PasteSocketGroup reads a gem line with "^([ %a':]+) level/quality", so a name with a comma (the Disciple of
+-- Varashta's djinns: "Kelari, the Tainted Sands", "Navira, the Last Mirage", "Ruzhan, the Blazing Sword") is never
+-- read, and every skill swap with one failed ("no gems recognised", sweep 2026-11-27: the Disciple build died after
+-- 79 minutes). Paste them with a colon instead of the comma, then give the pasted gems their real names back.
+local COMMA_NAMES = {}
+for _, gem in pairs(data.gems) do
+	if gem.name and gem.name:find(",") then COMMA_NAMES[(gem.name:gsub(",", ":"))] = gem.name end
+end
+local function pasteGroup(text)
+	local list = build.skillsTab.socketGroupList
+	local before = #list
+	local fixed = text
+	for colon, real in pairs(COMMA_NAMES) do
+		fixed = fixed:gsub(real:gsub("%p", "%%%0"), (colon:gsub("%%", "%%%%")))
+	end
+	build.skillsTab:PasteSocketGroup(disambiguate(fixed))
+	if #list > before then
+		for _, gem in ipairs(list[#list].gemList) do
+			if COMMA_NAMES[gem.nameSpec] then gem.nameSpec = COMMA_NAMES[gem.nameSpec] end
+		end
+	end
+end
+
 -- Use PoB's Full DPS (sum over every included skill, with minion counts) whenever the build
 -- has more than one damage source or any minion skill; otherwise the main skill's output is
 -- identical and much cheaper to compute.
@@ -682,7 +705,7 @@ end
 
 function handlers.add_skill(cmd)
 	local before = #build.skillsTab.socketGroupList
-	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
+	pasteGroup(cmd.text)
 	local index = #build.skillsTab.socketGroupList
 	if index == before then error("no gems recognised in: " .. cmd.text) end
 	capGemLevels(build.skillsTab.socketGroupList[index])
@@ -782,7 +805,7 @@ function handlers.try_skill(cmd)
 	local old = list[cmd.group]
 	if not old then error("no group " .. tostring(cmd.group)) end
 	local count = #list
-	build.skillsTab:PasteSocketGroup(disambiguate(cmd.text))
+	pasteGroup(cmd.text)
 	if #list == count then error("no gems recognised in: " .. cmd.text) end
 	local new = table.remove(list)
 	new.includeInFullDPS = old.includeInFullDPS
