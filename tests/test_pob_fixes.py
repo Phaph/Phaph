@@ -301,3 +301,17 @@ def test_mapping_culls_at_the_rare_threshold(pob):
         pob.set_config(enemyIsBoss=boss)
         pob.add_item(raw)
         assert pob.calc(["CullPercent"])["CullPercent"] == cull
+
+
+def test_gems_with_a_comma_paste(pob):
+    """The Disciple of Varashta's djinns have a comma in their names, which PoB's paste pattern can't read: add_skill
+    and try_skill failed with "no gems recognised" (sweep 2026-11-27). runner.pasteGroup pastes them with a colon."""
+    pob.new()
+    pob.set_class("Sorceress", None)
+    pob.set_level(80)
+    g = pob.add_skill(["Kelari, the Tainted Sands"])["group"]
+    pob.try_skill(g, ["Navira, the Last Mirage"], ["TotalDPS"])
+    gems = {grp["group"]: grp["gems"] for grp in pob.send("groups")["groups"]}
+    assert gems[g][0] == "Navira, the Last Mirage"
+    g2 = pob.add_skill(["Ruzhan, the Blazing Sword"])["group"]
+    assert pob.send("groups")["groups"][g2 - 1]["gems"][0] == "Ruzhan, the Blazing Sword"
