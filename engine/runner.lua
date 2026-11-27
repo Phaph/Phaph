@@ -2464,7 +2464,7 @@ function handlers.list_gems(cmd)
 			if not (gem.tags and gem.tags[tag]) then ok = false end
 		end
 		if ok then
-			table.insert(gems, { name = gem.name, tags = gem.tagString, family = gem.gemFamily, tier = gem.Tier,
+			table.insert(gems, { name = gem.name, base = gem.baseTypeName, tags = gem.tagString, family = gem.gemFamily, tier = gem.Tier,
 				lineage = gem.tags and gem.tags.lineage or false, conditional = isSupport and isConditional(gem) or false })
 		end
 	end

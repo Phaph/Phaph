@@ -82,7 +82,8 @@ PROMPTS = [
 def load_game() -> dict:
     with PoB() as p:
         return {
-            "gems": {g["name"] for g in p.list_gems()},
+            # A gem's skill can carry its base type name: "Fire Spell on Hit" (the gem) socketed as "Fire Spell on Melee Hit".
+            "gems": {n for g in p.list_gems() for n in (g["name"], g.get("base")) if n},
             "uniques": {u["name"] for u in p.list_uniques()},
             "bases": {b["name"] for b in p.send("bases")["bases"]},
             "skills": {s["name"]: s for s in p.send("skill_catalog")["skills"]},
