@@ -1097,3 +1097,18 @@ Frozen / Chilled cancelled by Pathfinder's "unaffected by Slows" read +233% whil
   damage gain most: no special interaction. The notables themselves: Culling Strike vs a unique boss is 5% in PoB (x1.053); Decimating Strike is unsupported in PoB (ModCache parses it as nil), so
   JJE's own effect is never counted: a PoB gap (what Decimating Strike does in game: not checked). Low life is only part of a fight: uptime not modelled.
 These are questions (can the build keep the condition up on a boss?), not finds. The old per-ascendancy condition scan read all of these as 0. Next: the blind re-run (after48.sh).
+
+### Re-grade on the current engine (task 51, 2026-11-27)
+Task 40's answer key (13 cases, 0.4 cases added before grading on 11-26), old-patch scans re-run on main at 2cbc6d6 (after tasks 47, 48, 49, 50 and
+handuniques; frozen in ~/phaph_51), 0.1 + 0.3 condition / matrix / stack, 0.2 + 0.4 condition / matrix, 6 cores, 11:19-19:02 -> data/breaker/old51
+(the first grade's old/ kept). Grade: old51/grade.txt (`OLD_DIR=old51 python3 tools/grade_old.py`).
+- **Condition / matrix columns: 3 of 13 found** (was 2 of 13): 1.4 Lightning Conduit (row 1, not blind), 2.2 Spearfield (row 58 of 68), and new,
+  **3.2 Rathpith Globe, row 1 of 93** (Seismic Cry +204%): weapon and off-hand uniques are scanned since handuniques (it was untestable in task 40).
+- **Stack column:** 1.3 Archmage (1 of 3, as before), **1.9 Gemling attribute stacking, 3 of 3 (new)**, 3.2 Rathpith (1 of 2); Indigon and Hollow Palm missed.
+- **Any column: 5 of 13, or 4 of 12 without 1.4 (not blind).** Below the bar of half. Still missed: 2.1 Tangletongue, 2.5 Glacial Cascade vs Frozen,
+  3.3a Indigon, 3.3b Whispering Ice, 3.4 Hollow Palm, 3.6 Tactician vs Immobilised, 4.7 Ancestral Bond totems, 4.5 Uhtred (untestable).
+- **False alarms (condition + matrix, all four patches): 16 real, 237 false, 35 unjudged** (mostly minion skills): about 15 false per real (task 40,
+  0.1-0.3: about 12). The new scans flag more pieces (more rows per patch, e.g. 0.2 matrix 202 rows), so more finds came with more noise.
+  The 70 newly flagged pieces were judged with the same tools and rule (verdicts.json `_how`, 6 real); the 6 'real' are next-patch cuts, not proof
+  the piece was broken. verdicts.json is shared, so re-running the first grade now uses these verdicts too.
+- What changed the score: handuniques (Rathpith) and probably task 47 (Gemling; not isolated). Not checked: which commit caused which find.

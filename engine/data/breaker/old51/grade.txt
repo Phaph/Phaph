@@ -18,14 +18,14 @@
   stack column: 3.4   Hollow Palm evasion                  missed (2 flagged)
 found 3 of 13 graded (13 cases)
   v0.12.2 strict (+60% above usual): ['Lightning Conduit', 'Skeletal Reaver', 'Skeletal Sniper']
-  v0.12.2 condition: 52 rows, 42 pieces: 1 real, 33 false alarms, 8 unjudged
-  v0.12.2 matrix: 93 rows, 35 pieces: 0 real, 14 false alarms, 21 unjudged
+  v0.12.2 condition: 52 rows, 42 pieces: 1 real, 35 false alarms, 6 unjudged
+  v0.12.2 matrix: 93 rows, 35 pieces: 3 real, 32 false alarms, 0 unjudged
   v0.15.0 strict (+60% above usual): ['Cackling Companions', 'Siege Cascade', 'Skeletal Reaver', 'Wolf Pack']
-  v0.15.0 condition: 57 rows, 45 pieces: 1 real, 32 false alarms, 12 unjudged
-  v0.15.0 matrix: 114 rows, 37 pieces: 0 real, 16 false alarms, 21 unjudged
+  v0.15.0 condition: 57 rows, 45 pieces: 1 real, 34 false alarms, 10 unjudged
+  v0.15.0 matrix: 114 rows, 37 pieces: 0 real, 34 false alarms, 3 unjudged
   v0.5.0 strict (+60% above usual): ['Lightning Conduit']
   v0.5.0 condition: 29 rows, 22 pieces: 4 real, 11 false alarms, 7 unjudged
-  v0.5.0 matrix: 130 rows, 15 pieces: 0 real, 8 false alarms, 7 unjudged
+  v0.5.0 matrix: 130 rows, 15 pieces: 1 real, 14 false alarms, 0 unjudged
   v0.8.0 strict (+60% above usual): ['Lightning Conduit', 'Raise Zombie', 'Skeletal Reaver', 'Skeletal Sniper']
-  v0.8.0 condition: 68 rows, 41 pieces: 2 real, 25 false alarms, 14 unjudged
-  v0.8.0 matrix: 202 rows, 51 pieces: 2 real, 34 false alarms, 15 unjudged
+  v0.8.0 condition: 68 rows, 41 pieces: 3 real, 30 false alarms, 8 unjudged
+  v0.8.0 matrix: 202 rows, 51 pieces: 3 real, 47 false alarms, 1 unjudged
