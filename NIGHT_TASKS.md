@@ -263,6 +263,8 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   `--cpus 6` and via the Breaker queue; cron times are Berlin (server clock).
 - **Waiting for Kyle:** nothing blocking.
 
+- **20:30 (11-27): task 57's 3-order A/B done** (engine/data/rolls/rolls_ab_3orders.txt): typical vs best roll, best of 3, boss -30% / +12% / -37% / -50%; typical keeps Mageblood in 3 of 12 rows. Waits on Kyle (Waiting for Kyle). Running: blind51 (task 48 blind re-run, 6 cores, started 20:28, ~/blind51.log).
+
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
 The "Whetstone server" session works through this list on its own, top to bottom, until the usage limit (resets
@@ -649,14 +651,14 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     cards showed the wrong notables (enchants not read). Left after (c): re-read the next sweep for Deathblow's share; question for Kyle: Megalomaniac (and
     Mageblood) take the best 3 of 438 notables, a roll almost nobody has.
 
-57. [ ] (10:40: measured, engine/data/rolls/mageblood_rank_check_8.txt: CORRECTED 13:40: 16 of the 18 builds already wear Mageblood, so the test compares a typical roll with the engine's chosen roll: typical is lower on 17 of 18 (score -0.07 to -0.52). Whether a rare belt beats a typical Mageblood is NOT measured (the earlier 'Mageblood would mostly leave guides' was not shown). Lodestone: 84 of 102 saved full builds wear Mageblood, 19 Megalomaniac, all hand-picked rolls. A/B running since 13:55: container rolls-ab (2 cores, branch rolls, tools/rolls_ab.py, 4 path_luck specs x off/on, "as is" order) -> ~/rolls_ab/rolls_ab.json, .log; several hours (estimate). Branch `rolls` (~/phaph_rolls, pushed, not merged): gear.TYPICAL_ROLLS, off by default, + SlotPlan.hunt; full suite green 11:05 (256 passed). Waiting for Kyle: turn it on? + page text. Megalomaniac (3 builds, engine/data/rolls): best roll +19 to +26% score vs the build's own jewel, typical -9% (worth ~nothing). Not done: Lodestone numbers re-checked)
+57. [ ] (20:30: 3-order A/B done, engine/data/rolls/rolls_ab_3orders.txt: best of 3 orders, typical vs best roll, boss -30% / +12% / -37% / -50% (RoA, Ice Shot, Rapid Shot, Bonestorm); typical keeps Mageblood in 3 of 12 rows, best in 12 of 12. Only Kyle's call is left.) (10:40: measured, engine/data/rolls/mageblood_rank_check_8.txt: CORRECTED 13:40: 16 of the 18 builds already wear Mageblood, so the test compares a typical roll with the engine's chosen roll: typical is lower on 17 of 18 (score -0.07 to -0.52). Whether a rare belt beats a typical Mageblood is NOT measured (the earlier 'Mageblood would mostly leave guides' was not shown). Lodestone: 84 of 102 saved full builds wear Mageblood, 19 Megalomaniac, all hand-picked rolls. A/B running since 13:55: container rolls-ab (2 cores, branch rolls, tools/rolls_ab.py, 4 path_luck specs x off/on, "as is" order) -> ~/rolls_ab/rolls_ab.json, .log; several hours (estimate). Branch `rolls` (~/phaph_rolls, pushed, not merged): gear.TYPICAL_ROLLS, off by default, + SlotPlan.hunt; full suite green 11:05 (256 passed). Waiting for Kyle: turn it on? + page text. Megalomaniac (3 builds, engine/data/rolls): best roll +19 to +26% score vs the build's own jewel, typical -9% (worth ~nothing). Not done: Lodestone numbers re-checked)
     (added 2026-11-27, from PC_TODO 'Mageblood (with the planned average-roll fix)', agreed with Kyle 2026-11-18) Uniques with random choices
     (Mageblood 4 of 14 Legacies, Megalomaniac 3 of 438 notables) are picked and shown with the best roll for the build. Plan: wear a typical roll
     (median per slot), list the best ones as "hunt for". Page text ("Choices for this build") would need a one-line change: UI is shelved, so ask Kyle.
 
 ## Waiting for Kyle
 - **Mageblood / Megalomaniac rolls (task 57, 2026-11-27):** guides wear the best Legacies for the build. On 18 saved Uber builds (16 already wearing
-  Mageblood) a typical roll scores 7-52% below the chosen roll on 17. Whether Mageblood would still beat a rare belt: not measured yet (A/B next). Turn on typical rolls (gear.TYPICAL_ROLLS on branch `rolls`)? If yes, the
+  Mageblood) a typical roll scores 7-52% below the chosen roll on 17. A/B done 20:30 (4 specs, best of 3 orders, engine/data/rolls/rolls_ab_3orders.txt): with a typical roll boss DPS moves -30% / +12% / -37% / -50% and the engine drops Mageblood for a rare belt in 9 of 12 rows. So Mageblood's place in our guides rests on hand-picked Legacies. Turn on typical rolls (gear.TYPICAL_ROLLS on branch `rolls`)? If yes, the
   page's "Choices for this build" line needs to read e.g. "Typical roll; hunt for: ..." (one line in api/static/index.html; UI is shelved, so asking).
 - **Several slot orders in Whetstone guides?** Measured 2026-11-25 on 4 specs: best of 3 gains 0-39% boss damage over the default order (0, 5, 22, 39) at about 3x the Uber
   stage's time. Claude's recommendation: not by default; maybe as a slower "best" option later. Nothing is blocked on it.

@@ -1,0 +1,664 @@
+{
+ "Bow: Rain of Arrows": {
+  "best": {
+   "boss_dps": 2653114,
+   "dps": 689917,
+   "ehp": 8395,
+   "uniques": [
+    "Atsak's Sight, Veiled Mask",
+    "Loreweave, Ornate Ringmail",
+    "Kalandra's Touch, Ring",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "Atsak's Sight, Veiled Mask": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Loreweave, Ornate Ringmail": {
+     "variants": [
+      "Original Sin 1",
+      "Mings Heart 1",
+      "Mings Heart 1 Big Range"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Sulphur",
+      "Legacy of Sulphur",
+      "Legacy of Bismuth",
+      "Legacy of Diamond"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1651
+  },
+  "typical": {
+   "boss_dps": 1856519,
+   "dps": 318333,
+   "ehp": 28518,
+   "uniques": [
+    "Perfidy, Knight Armour",
+    "Kalandra's Touch, Ring",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "Perfidy, Knight Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Amethyst",
+      "Legacy of Granite",
+      "Legacy of Jade",
+      "Legacy of Granite"
+     ],
+     "hunt": [
+      "Legacy of Sulphur",
+      "Legacy of Stibnite",
+      "Legacy of Jade",
+      "Legacy of Diamond"
+     ]
+    }
+   },
+   "seconds": 1525
+  },
+  "best reversed": {
+   "boss_dps": 1304486,
+   "dps": 303271,
+   "ehp": 37708,
+   "uniques": [
+    "Nightscale, Pauascale Gloves",
+    "Mageblood, Utility Belt",
+    "Grip of Kulemak, Abyssal Signet"
+   ],
+   "rolled": {
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Jade",
+      "Legacy of Stibnite",
+      "Legacy of Stibnite",
+      "Legacy of Stibnite"
+     ],
+     "hunt": []
+    },
+    "Grip of Kulemak, Abyssal Signet": {
+     "variants": [
+      "Ulaman Abyssal Wasting Blinds",
+      "Kurgal Hybrid Mana Percent Taken Before Life",
+      "Ulaman Hybrid Evasion And Deflection",
+      "Kurgal Abyssal Wasting Debilitates"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1478
+  },
+  "best rotated": {
+   "boss_dps": 646210,
+   "dps": 221076,
+   "ehp": 34841,
+   "uniques": [
+    "Loreweave, Ornate Ringmail",
+    "Mageblood, Utility Belt",
+    "Astramentis, Stellar Amulet",
+    "Grip of Kulemak, Abyssal Signet"
+   ],
+   "rolled": {
+    "Loreweave, Ornate Ringmail": {
+     "variants": [
+      "Original Sin 1",
+      "Mings Heart 1",
+      "Mings Heart 1 Big Range"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Jade",
+      "Legacy of Stibnite",
+      "Legacy of Bismuth",
+      "Legacy of Stibnite"
+     ],
+     "hunt": []
+    },
+    "Astramentis, Stellar Amulet": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Grip of Kulemak, Abyssal Signet": {
+     "variants": [
+      "Ulaman Abyssal Wasting Blinds",
+      "Kurgal Abyssal Wasting Debilitates",
+      "Ulaman Hybrid Evasion And Deflection",
+      "Ulaman Increased Evasion Percent"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1949
+  },
+  "typical reversed": {
+   "boss_dps": 1546344,
+   "dps": 559346,
+   "ehp": 10420,
+   "uniques": [
+    "Mageblood, Utility Belt",
+    "Ming's Heart, Amethyst Ring"
+   ],
+   "rolled": {
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Amethyst",
+      "Legacy of Topaz",
+      "Legacy of Sapphire",
+      "Legacy of Topaz"
+     ],
+     "hunt": [
+      "Legacy of Jade",
+      "Legacy of Sulphur",
+      "Legacy of Stibnite",
+      "Legacy of Granite"
+     ]
+    }
+   },
+   "seconds": 1431
+  },
+  "typical rotated": {
+   "boss_dps": 1738519,
+   "dps": 421447,
+   "ehp": 14248,
+   "uniques": [],
+   "rolled": {},
+   "seconds": 1434
+  }
+ },
+ "Bow: Ice Shot": {
+  "best": {
+   "boss_dps": 2341204,
+   "dps": 1126914,
+   "ehp": 37461,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Grip of Kulemak, Abyssal Signet",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Grip of Kulemak, Abyssal Signet": {
+     "variants": [
+      "Kurgal Abyssal Wasting Debilitates",
+      "Ulaman Abyssal Wasting Blinds",
+      "Ulaman Hybrid Evasion And Deflection",
+      "Kurgal Hybrid Mana Percent Taken Before Life"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Jade",
+      "Legacy of Stibnite",
+      "Legacy of Bismuth",
+      "Legacy of Stibnite"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2060
+  },
+  "typical": {
+   "boss_dps": 2564390,
+   "dps": 1529815,
+   "ehp": 11057,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1917
+  },
+  "best reversed": {
+   "boss_dps": 2152923,
+   "dps": 1335560,
+   "ehp": 23948,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Jade",
+      "Legacy of Stibnite",
+      "Legacy of Stibnite",
+      "Legacy of Silver"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2151
+  },
+  "best rotated": {
+   "boss_dps": 2562427,
+   "dps": 1345527,
+   "ehp": 21326,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Jade",
+      "Legacy of Stibnite",
+      "Legacy of Ruby",
+      "Legacy of Stibnite"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2236
+  },
+  "typical reversed": {
+   "boss_dps": 2872288,
+   "dps": 1747158,
+   "ehp": 12174,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Bismuth",
+      "Legacy of Granite",
+      "Legacy of Diamond",
+      "Legacy of Diamond"
+     ],
+     "hunt": [
+      "Legacy of Jade",
+      "Legacy of Silver",
+      "Legacy of Stibnite",
+      "Legacy of Sulphur"
+     ]
+    }
+   },
+   "seconds": 2154
+  },
+  "typical rotated": {
+   "boss_dps": 2508515,
+   "dps": 1524848,
+   "ehp": 11771,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2134
+  }
+ },
+ "Crossbow: Rapid Shot": {
+  "best": {
+   "boss_dps": 8116122,
+   "dps": 6929644,
+   "ehp": 11176,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Grip of Kulemak, Abyssal Signet",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Grip of Kulemak, Abyssal Signet": {
+     "variants": [
+      "Kurgal Hybrid Mana Percent Taken Before Life",
+      "Kurgal Abyssal Wasting Debilitates",
+      "Kurgal Damage Taken From Mana Before Life",
+      "Amanamu Hybrid Strength Percent Gain As Fire"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Silver",
+      "Legacy of Silver",
+      "Legacy of Topaz",
+      "Legacy of Diamond"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1999
+  },
+  "typical": {
+   "boss_dps": 5103437,
+   "dps": 4387469,
+   "ehp": 9345,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1995
+  },
+  "best reversed": {
+   "boss_dps": 8967321,
+   "dps": 8137746,
+   "ehp": 8871,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Mageblood, Utility Belt",
+    "Kalandra's Touch, Ring"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Silver",
+      "Legacy of Silver",
+      "Legacy of Sulphur",
+      "Legacy of Diamond"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2037
+  },
+  "best rotated": {
+   "boss_dps": 6226552,
+   "dps": 5445969,
+   "ehp": 14437,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Silver",
+      "Legacy of Silver",
+      "Legacy of Jade",
+      "Legacy of Stibnite"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2186
+  },
+  "typical reversed": {
+   "boss_dps": 5649936,
+   "dps": 4739705,
+   "ehp": 9086,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2100
+  },
+  "typical rotated": {
+   "boss_dps": 5426905,
+   "dps": 4655924,
+   "ehp": 9429,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 2062
+  }
+ },
+ "Staff: Bonestorm": {
+  "best": {
+   "boss_dps": 11307158,
+   "dps": 8835987,
+   "ehp": 10636,
+   "uniques": [
+    "The Vertex, Tribal Mask",
+    "The Coming Calamity, Heroic Armour",
+    "Maligaro's Virtuosity, Fine Bracers",
+    "Mageblood, Utility Belt"
+   ],
+   "rolled": {
+    "The Vertex, Tribal Mask": {
+     "variants": [
+      "Skill Gems"
+     ],
+     "hunt": []
+    },
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Maligaro's Virtuosity, Fine Bracers": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Silver",
+      "Legacy of Silver",
+      "Legacy of Bismuth",
+      "Legacy of Diamond"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1623
+  },
+  "typical": {
+   "boss_dps": 3875212,
+   "dps": 2673299,
+   "ehp": 15132,
+   "uniques": [
+    "Carnage Heart, Amber Amulet"
+   ],
+   "rolled": {
+    "Carnage Heart, Amber Amulet": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1312
+  },
+  "best reversed": {
+   "boss_dps": 13586595,
+   "dps": 10700080,
+   "ehp": 10729,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "The Vertex, Tribal Mask",
+    "Mageblood, Utility Belt",
+    "Grip of Kulemak, Abyssal Signet"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "The Vertex, Tribal Mask": {
+     "variants": [
+      "Skill Gems"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Diamond",
+      "Legacy of Silver",
+      "Legacy of Bismuth",
+      "Legacy of Silver"
+     ],
+     "hunt": []
+    },
+    "Grip of Kulemak, Abyssal Signet": {
+     "variants": [
+      "Ulaman Critical Damage Bonus",
+      "Kurgal You And Ally Cast Speed",
+      "Kurgal Hybrid Cast Speed And Arcane Surge On Minion Death",
+      "Kurgal Percent Cast Speed Per Spirit"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1772
+  },
+  "best rotated": {
+   "boss_dps": 9303250,
+   "dps": 8815363,
+   "ehp": 32106,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour",
+    "Mageblood, Utility Belt",
+    "Grip of Kulemak, Abyssal Signet"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    },
+    "Mageblood, Utility Belt": {
+     "variants": [
+      "Legacy of Jade",
+      "Legacy of Stibnite",
+      "Legacy of Bismuth",
+      "Legacy of Stibnite"
+     ],
+     "hunt": []
+    },
+    "Grip of Kulemak, Abyssal Signet": {
+     "variants": [
+      "Kurgal Hybrid Mana Percent Taken Before Life",
+      "Ulaman Abyssal Wasting Blinds",
+      "Ulaman Hybrid Evasion And Deflection",
+      "Kurgal Abyssal Wasting Debilitates"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1919
+  },
+  "typical reversed": {
+   "boss_dps": 6799136,
+   "dps": 6979640,
+   "ehp": 15443,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1765
+  },
+  "typical rotated": {
+   "boss_dps": 5142155,
+   "dps": 4006055,
+   "ehp": 16290,
+   "uniques": [
+    "The Coming Calamity, Heroic Armour"
+   ],
+   "rolled": {
+    "The Coming Calamity, Heroic Armour": {
+     "variants": [
+      "Current"
+     ],
+     "hunt": []
+    }
+   },
+   "seconds": 1666
+  }
+ }
+}

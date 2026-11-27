@@ -1,0 +1,21 @@
+Task 57 A/B: Mageblood (and other random-roll uniques) at the best roll for the build vs a typical (median) roll.
+4 path_luck specs, Uber Endgame, branch rolls (97b7e5d), slot orders as is / reversed / rotated, 2 cores.
+Boss DPS / EHP per order; MB = still wears Mageblood. Measured 2026-11-27, finished 20:24 Berlin.
+
+Spec                 roll     as is              reversed           rotated            best of 3
+Bow: Rain of Arrows  best     2,653,114 /  8,395 MB  1,304,486 / 37,708 MB    646,210 / 34,841 MB   2,653,114
+                     typical  1,856,519 / 28,518 MB  1,546,344 / 10,420 MB  1,738,519 / 14,248 -    1,856,519  (-30%)
+Bow: Ice Shot        best     2,341,204 / 37,461 MB  2,152,923 / 23,948 MB  2,562,427 / 21,326 MB   2,562,427
+                     typical  2,564,390 / 11,057 -   2,872,288 / 12,174 MB  2,508,515 / 11,771 -    2,872,288  (+12%)
+Crossbow: Rapid Shot best     8,116,122 / 11,176 MB  8,967,321 /  8,871 MB  6,226,552 / 14,437 MB   8,967,321
+                     typical  5,103,437 /  9,345 -   5,649,936 /  9,086 -   5,426,905 /  9,429 -    5,649,936  (-37%)
+Staff: Bonestorm     best    11,307,158 / 10,636 MB 13,586,595 / 10,729 MB  9,303,250 / 32,106 MB  13,586,595
+                     typical  3,875,212 / 15,132 -   6,799,136 / 15,443 -   5,142,155 / 16,290 -    6,799,136  (-50%)
+
+Reading (Claude's, not proven beyond these 4 specs):
+- Best of 3 orders, typical vs best roll, boss DPS: -30%, +12%, -37%, -50%. Lower in 3 of 4.
+- A typical roll keeps Mageblood in 3 of 12 rows (RoA 2 of 3, Ice Shot 1 of 3, Rapid Shot 0, Bonestorm 0); the best roll keeps it in 12 of 12.
+  So with a typical roll the engine mostly prefers a rare belt: Mageblood's value in our guides comes from the hand-picked Legacies.
+- Order noise is large (RoA best roll 0.65M-2.65M across orders, x4.1), so Ice Shot's +12% is inside the noise; the Rapid Shot and
+  Bonestorm gaps (worst best-roll order still above the best typical order) are not.
+- Not measured: the other 19 ascendancies, Megalomaniac in full builds, the cost of the "hunt for" list on the page.
