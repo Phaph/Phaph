@@ -664,6 +664,13 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     (Mageblood 4 of 14 Legacies, Megalomaniac 3 of 438 notables) are picked and shown with the best roll for the build. Plan: wear a typical roll
     (median per slot), list the best ones as "hunt for". Page text ("Choices for this build") would need a one-line change: UI is shelved, so ask Kyle.
 
+58. [ ] (added 2026-11-28, Saturday sweep build 5) Attribute shortfall left in a finished stage: Rain of Arrows Deadeye, Interludes, Str 37 < 46 for a rare
+    Gilded Vestments (body armour). The final gear pass only penalises a short slot (guide.py:328 attr_weight=0.25 per point, a soft cost) and has no
+    hard check like the spirit safety net, so a base picked in earlier passes (attr_weight 0) stays when no single swap fixes it. Seen before once (11-19,
+    Mid Endgame crossbow Str 79 < 89). Fix idea: after the final pass, any slot still short -> re-pick that slot's base among those the build can wear
+    (or let balance_attributes run again), then re-check; unit test with a forced short base. Needs the full suite: after the sweep / finalists, or
+    alongside them on 2 cores. Re-read the rest of the sweep for more cases first.
+
 ## Waiting for Kyle
 - **Mageblood / Megalomaniac rolls (task 57, 2026-11-27):** guides wear the best Legacies for the build. On 18 saved Uber builds (16 already wearing
   Mageblood) a typical roll scores 7-52% below the chosen roll on 17. A/B done 20:30 (4 specs, best of 3 orders, engine/data/rolls/rolls_ab_3orders.txt): with a typical roll boss DPS moves -30% / +12% / -37% / -50% and the engine drops Mageblood for a rare belt in 9 of 12 rows. So Mageblood's place in our guides rests on hand-picked Legacies. Turn on typical rolls (gear.TYPICAL_ROLLS on branch `rolls`)? If yes, the
