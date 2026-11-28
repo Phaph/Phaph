@@ -1,39 +1,43 @@
-# Morning report, Fri 2026-11-27
+# Morning report, Sat 2026-11-28 (08:00 Mazatlan)
 
-## Last night's test sweep (5 builds)
-- **4 of 5 builds finished. 1 of 5 passed every check** (Witchhunter Rapid Shot, 5.2M damage at Uber). That 1 is on a loose reading: its only flag was "slow", and every build was slow.
-- **The most common problems:**
-  - All 5 were slow: 53 to 79 minutes each.
-  - 3 builds (Blood Mage, Titan, Oracle) were flagged for a "made-up gem, Fire Spell on Melee Hit". The checker was wrong about this, not the builds. The server session fixed the checker this morning.
-  - Blood Mage: Path of Building read no stats off a Megalomaniac jewel. The game does use the jewel. Only the jewel's description text was wrong, and that is fixed and live.
-- **1 build crashed:** Disciple of Varashta Bonestorm died after 79 minutes. The engine couldn't read gem names that have a comma in them (the 3 djinn gems). Fixed and live since 12:03 Berlin time.
-- **Nothing hung.** No build timed out.
-- I haven't checked whether these fixes work on a full sweep yet. Tonight's sweep will show that.
+Note: this check-in could not run `git pull` (it needed an approval nobody was there to give), so it read the
+repo as it was locally. The newest commit seen was 2520c92 (task 58).
 
-## What the server session finished
-- Task 48 (scan of conditional ascendancy passives): done 05:42.
-- Task 56 (fixes from the sweep): the culling fix, the checker fix, the Megalomaniac text and the comma gem names are all live, now at engine 2026-11-27.3 with 256 tests passing. Still open: the next sweep and one question about Deathblow.
-- Mageblood check: of the 18 saved top builds, 16 already wore Mageblood.
+## What the server session did
+- **Task 48 closed (10:20 Berlin):** the blind re-run without class rules is done. Bonestorm came out #1 for all
+  23 ascendancies. It found 0 of the 69 ladder top-3 builds (the 11-23 run found 5). This is not a find:
+  earlier checks showed the search over-rates Bonestorm about 1.8x against its full build.
+- **Task 58 added:** a new bug the sweep found (see below).
+- **Queued:** task 38's finalists re-run (all 17 weapons, best of 3 orders). It starts by itself when the sweep ends.
+- **Waiting for you:** task 57, Mageblood / Megalomaniac rolls. Guides currently pick the best roll for the
+  build. With a typical roll, boss damage moves -30% / +12% / -37% / -50% on the 4 builds tested, and the engine
+  swaps Mageblood out for a rare belt in 9 of 12 rows. Should guides use a typical roll and list the best rolls
+  as "hunt for"? Saying yes also means changing one line of page text.
+- Messages held overnight: none (the pending list was empty).
 
-## What it's working on now
-- Task 51: re-testing Lodestone on old patches. The server is full with this (6 cores).
-- The Mageblood "typical roll" test: 7 of 8 done. On builds getting a normal roll instead of the best one, top damage drops 30% to 66%. That is one test run per build, so it's not a final answer yet.
+## Saturday A-to-Z sweep (all 23 ascendancies)
+- Started 10:10 Berlin. **6 of 23 builds finished so far**, the 7th (Titan) is running.
+- **Passed every check: 0 of 6.** Every one was flagged "slow": 53 to 63 minutes each.
+- **Timed out (hung): none** (the limit is 2 hours per build).
+- Other failure: 1 of 6 (Deadeye, Rain of Arrows). Its Interludes body armour needs 46 Strength and the
+  build has 37. That is task 58.
+- Builds so far, boss damage: Bonestorm Infernalist 8.84M, Lich 4.68M, Abyssal Lich 4.57M, Blood Mage 3.49M;
+  Rain of Arrows Pathfinder 0.97M, Deadeye 0.69M.
+- At about 57 minutes a build, the last 17 builds need roughly 16 more hours. My estimate is that it ends
+  around Sunday 08:00 Berlin. The plan in the notes said 17 hours in total, which looks too short.
+- Breaker queue: it held the sweep back from 05:00 until the blind re-run freed the server at 10:10. No errors.
 
-## Waiting for you
-1. **Mageblood and Megalomaniac rolls:** should guides show a typical roll and list the best rolls as "worth hunting for"? This needs a one-line page change, so it's your call.
-2. Trying several gear orders in Whetstone guides: Claude says not by default (it takes about 3x as long). Nothing is blocked on this.
-3. Class-weapon rule for Whetstone: still waiting on a test run before we ask you.
-
-## Held messages (sent during quiet hours)
-- Mageblood: 16 of 18 test builds already wore it. A typical roll scores 7-52% lower on 17 of 18. Switch to typical rolls?
-- The Breaker queue finished last night's sweep with "0 failed". That means the job ran to the end. It does not mean the builds passed (see above).
-
-## Lodestone leads
-- Nothing new from the sweep.
+## Bugs and leads
+- **Bug (task 58):** the last gear pass only puts a soft penalty on a slot that is short of attributes. So an
+  armour piece the character can't actually wear can stay in the guide. This is the second time it has shown up
+  (the first was 11-19).
+- **Every build is "slow":** builds take about an hour each on 6 cores. This is known (task 4), but nothing
+  passes the sweep while the slow check stays as it is.
+- **No new Lodestone lead.** Bonestorm topping all 23 is most likely our search over-rating it (see above).
 
 ## 3 most useful next steps
-1. Answer the Mageblood question above.
-2. Let tonight's sweep confirm the fixes, especially that Disciple of Varashta now finishes.
-3. Look into why every build takes about an hour. That is far too slow for launch day.
-
-Note: I couldn't pull the latest changes this morning (the command needed approval), so this report is based on the copy from about 15:30 Berlin time.
+1. Answer task 57 (typical or best roll for Mageblood / Megalomaniac). It is the only thing waiting on you.
+2. Fix task 58: once the last gear pass is done, any slot still short of attributes gets a base the
+   character can wear.
+3. Decide what "slow" should mean, either a higher limit or faster builds. Right now it fails every build,
+   so the sweep's pass count tells us nothing.
