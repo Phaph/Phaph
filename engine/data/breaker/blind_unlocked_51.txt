@@ -1,0 +1,77 @@
+Blind test: 23 of 23 ascendancies searched (no poe.ninja input). Ladder: Forbidden Rites (124,102 characters, fetched 2026-11-17).
+1. Ladder's top 20 main skills found in some ascendancy's top 5: 0/20 (0%)
+         Frost Bomb                 16.8% of ladder   not in any top 15
+         Spark                      15.8% of ladder   our rank 8 on Deadeye
+         Comet                      14.6% of ladder   not in any top 15
+         Whirling Slash             12.8% of ladder   not in any top 15
+         Arc                        11.0% of ladder   not in any top 15
+         Wolf Pack                  11.0% of ladder   not in any top 15
+         Twister                    10.9% of ladder   not in any top 15
+         Frost Wall                 10.4% of ladder   not in any top 15
+         Oil Grenade                 8.2% of ladder   not in any top 15
+         Powered by Verisium         7.8% of ladder   not in any top 15
+         Flameblast                  7.8% of ladder   not in any top 15
+         Entangle                    7.2% of ladder   not in any top 15
+         Ice Shot                    7.1% of ladder   not in any top 15
+         Tornado Shot                6.7% of ladder   not in any top 15
+         Ice Nova                    6.6% of ladder   not in any top 15
+         Tornado                     6.1% of ladder   not in any top 15
+         Grim Pillars                5.6% of ladder   not in any top 15
+         Rend                        5.4% of ladder   not in any top 15
+         Orb of Storms               4.9% of ladder   not in any top 15
+         Snipe                       4.7% of ladder   not in any top 15
+2. Ascendancies, our best score vs share of players: Spearman +0.39 (1 = same order, 0 = unrelated)
+   Infernalist              score   10,687,201  ladder  5.7%   picks Bonestorm (Staff)
+   Deadeye                  score    6,126,355  ladder  6.0%   picks Bonestorm (Wand)
+   Lich                     score    5,590,413  ladder  1.6%   picks Bonestorm (Staff)
+   Blood Mage               score    5,305,832  ladder  2.7%   picks Bonestorm (Staff)
+   Stormweaver              score    5,293,903  ladder  3.4%   picks Bonestorm (Staff)
+   Invoker                  score    5,123,552  ladder  0.3%   picks Bonestorm (Staff)
+   Gemling Legionnaire      score    5,014,527  ladder 32.2%   picks Bonestorm (Staff)
+   Chronomancer             score    4,876,641  ladder  1.2%   picks Bonestorm (Staff)
+   Disciple of Varashta     score    4,791,188  ladder  7.2%   picks Bonestorm (Staff)
+   Abyssal Lich             score    4,672,518  ladder  0.9%   picks Bonestorm (Staff)
+   Martial Artist           score    4,571,657  ladder 10.6%   picks Bonestorm (Staff)
+   Acolyte of Chayula       score    4,410,214  ladder  1.7%   picks Bonestorm (Staff)
+   Ritualist                score    4,235,778  ladder  1.7%   picks Bonestorm (Staff)
+   Oracle                   score    4,147,946  ladder  7.3%   picks Bonestorm (Staff)
+   Pathfinder               score    4,119,456  ladder  1.4%   picks Bonestorm (Staff)
+   Spirit Walker            score    3,906,555  ladder  6.8%   picks Bonestorm (Staff)
+   Tactician                score    3,842,012  ladder  1.2%   picks Bonestorm (Staff)
+   Witchhunter              score    3,842,012  ladder  1.5%   picks Bonestorm (Staff)
+   Titan                    score    3,787,617  ladder  2.8%   picks Bonestorm (Wand)
+   Amazon                   score    3,644,154  ladder  0.6%   picks Bonestorm (Staff)
+   Shaman                   score    3,593,000  ladder  1.5%   picks Bonestorm (Staff)
+   Smith of Kitava          score    2,768,582  ladder  1.0%   picks Bonestorm (Staff)
+   Warbringer               score    2,493,295  ladder  0.7%   picks Bonestorm (Staff)
+3. Ranked top 3 by us, played by under 1% of the ladder (lead or modelling bug):
+   Bonestorm                  rank 1 on Infernalist            ladder 0.85%
+   Skyfall                    rank 2 on Infernalist            ladder 0.40%
+   Earthquake                 rank 2 on Abyssal Lich           ladder 0.16%
+   Rain of Arrows             rank 2 on Deadeye                ladder 0.08%
+   Coiling Bolts              rank 3 on Infernalist            ladder 0.22%
+4. Per ascendancy (poe.ninja top 3 main skills each, found in our top 5):
+   Infernalist              0/3  ladder: Comet, Spark, Powered by Verisium | ours: Bonestorm, Skyfall, Coiling Bolts, Earthquake, Fireball
+   Blood Mage               0/3  ladder: Spark, Comet, Orb of Storms | ours: Bonestorm, Skyfall, Coiling Bolts, Earthquake, Fireball
+   Lich                     0/3  ladder: Contagion, Essence Drain, Dark Effigy | ours: Bonestorm, Skyfall, Earthquake, Coiling Bolts, Rain of Arrows
+   Abyssal Lich             0/3  ladder: Entangle, Thunderstorm, Thrashing Vines | ours: Bonestorm, Earthquake, Skyfall, Coiling Bolts, Rain of Arrows
+   Deadeye                  0/3  ladder: Ice Shot, Tornado Shot, Snipe | ours: Bonestorm, Rain of Arrows, Earthquake, Skyfall, Ember Fusillade
+   Pathfinder               0/3  ladder: Ice Shot, Tornado Shot, Poisonburst Arrow | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Ember Fusillade
+   Titan                    0/3  ladder: Earthshatter, Shield Wall, Boneshatter | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Coiling Bolts
+   Warbringer               0/3  ladder: Cluster Grenade, Voltaic Grenade, Fortifying Cry | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Coiling Bolts
+   Smith of Kitava          0/3  ladder: Shield Wall, Detonate Dead, Fortifying Cry | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Firestorm
+   Stormweaver              0/3  ladder: Spark, Comet, Frost Bomb | ours: Bonestorm, Skyfall, Earthquake, Coiling Bolts, Rain of Arrows
+   Chronomancer             0/3  ladder: Frost Bomb, Comet, Frost Wall | ours: Bonestorm, Skyfall, Earthquake, Coiling Bolts, Rain of Arrows
+   Disciple of Varashta     0/3  ladder: Wolf Pack, Ice Nova, Powered by Verisium | ours: Bonestorm, Skyfall, Earthquake, Coiling Bolts, Rain of Arrows
+   Amazon                   0/3  ladder: Lightning Spear, Ice Shot, Storm Lance | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Ember Fusillade
+   Spirit Walker            0/3  ladder: Wolf Pack, Twister, Whirling Slash | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Ember Fusillade
+   Ritualist                0/3  ladder: Spark, Frost Wall, Frostbolt | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Ember Fusillade
+   Tactician                0/3  ladder: Galvanic Shards, Wolf Pack, Stormblast Bolts | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Dark Effigy
+   Witchhunter              0/3  ladder: Frostbolt, Frost Wall, Galvanic Shards | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Coiling Bolts
+   Gemling Legionnaire      0/3  ladder: Whirling Slash, Twister, Oil Grenade | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Coiling Bolts
+   Martial Artist           0/3  ladder: Rend, Devour, Tempest Bell | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Coiling Bolts
+   Invoker                  0/3  ladder: Whirling Assault, Flicker Strike, Profane Ritual | ours: Bonestorm, Earthquake, Skyfall, Rain of Arrows, Firestorm
+   Acolyte of Chayula       0/3  ladder: Poisonburst Arrow, Toxic Growth, Vine Arrow | ours: Bonestorm, Earthquake, Rain of Arrows, Skyfall, Coiling Bolts
+   Oracle                   0/3  ladder: Entangle, Grim Pillars, Spark | ours: Bonestorm, Skyfall, Rain of Arrows, Earthquake, Coiling Bolts
+   Shaman                   0/3  ladder: Spark, Comet, Shockwave Totem | ours: Bonestorm, Earthquake, Skyfall, Rain of Arrows, Coiling Bolts
+   total 0/69 (0%)
