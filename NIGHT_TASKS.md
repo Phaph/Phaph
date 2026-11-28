@@ -270,7 +270,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   by itself: these are search scores, and task 38 measured the search over-rating Bonestorm x1.83 vs its full build (Rapid Shot x0.41). The Saturday sweep (cron 05:00)
   waits for blind51's container (breaker_queue.sh line 50), so it starts ~10:30 and runs ~17 h (estimate): the server stays full until ~Sun 03:30.
   Next: when after48.sh commits blind51, run blind_diff on all 23, write it up in BREAKER.md (task 48 closes), then 38's finalists re-run after the sweep.
-- **10:20 (11-28): task 48 closed** (BREAKER.md). Bonestorm #1 23 of 23; ladder top 3 found 0 of 69 (11-23: 5). The Saturday sweep starts now (~17 h, estimate). Next: task 38's finalists re-run after the sweep; 57 waits on Kyle.
+- **10:20 (11-28): task 48 closed** (BREAKER.md). Bonestorm #1 23 of 23; ladder top 3 found 0 of 69 (11-23: 5). The Saturday sweep started 10:2x (sweep-0-1, ~17 h, estimate). Next: task 38's finalists re-run after the sweep; 57 waits on Kyle.
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
@@ -527,7 +527,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     supports / boss setup) or score_combo's "alone" leaves something out. Diff the two builds (lead_builds/ codes:
     supports, gear, tree, config) and fix; then re-run the combo leads. Until then combo leads stay unconfirmed.
 
-34. [ ] (2026-11-22 first 3: Bonestorm 2x Comet (holds), Rain of Arrows -43% vs Ice Shot, Wind Serpent's Fury -11% vs
+34. [ ] (2026-11-28: new under-1% top-3 skills from blind51: Skyfall Wand (0.40%), Earthquake One Hand Mace (0.16%), Coiling Bolts (0.22%); task 38's finalists re-run (best ~2 skills per weapon type, full Uber builds, best of 3 orders) builds these anyway: read them from it, no separate run) (2026-11-22 first 3: Bonestorm 2x Comet (holds), Rain of Arrows -43% vs Ice Shot, Wind Serpent's Fury -11% vs
     Lightning Spear; rest after the full blind re-run) Skill leads through the full-build bar (from tasks 16/30: interaction leads fade, a strong skill survives):
     after the full blind re-run, for each skill it ranks top 3 while under 1% of the ladder plays it (Bonestorm, Wind
     Serpent's Fury, Rain of Arrows, Supercharged Slam...), a full Uber Endgame build (lead_builds.py with a written spec)
