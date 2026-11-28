@@ -491,7 +491,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
     mirrored Full DPS group (same gems, stat set k) in guide.py so the build page and PoB export show the real total;
     check Earthquake and Coiling Bolts end to end.
 
-29. [ ] (2026-11-22: draft rules with sources in data/immobilise_rules.json, all unverified; the blocker: how much a
+29. [ ] (2026-11-28: re-searched the web (poe2wiki Freeze, Mobalytics freeze guide, forum 3597221): still no number for the per-freeze threshold rise or its decay; still blocked on a datamine / game files) (2026-11-22: draft rules with sources in data/immobilise_rules.json, all unverified; the blocker: how much a
     boss's threshold rises after each immobilise is not published; 2026-11-22: 3 sources agree it rises and decays back,
     none gives numbers: needs a datamine or game-file source, or the PC's PoB/game files) Immobilise buildup model (from task 14): Freeze, Heavy Stun, Pin and Electrocute fill by damage against a
     threshold (cold vs ailment threshold; physical/melee vs stun threshold; projectile physical for Pin; lightning
