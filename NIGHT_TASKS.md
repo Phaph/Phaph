@@ -265,6 +265,12 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
 
 - **20:30 (11-27): task 57's 3-order A/B done** (engine/data/rolls/rolls_ab_3orders.txt): typical vs best roll, best of 3, boss -30% / +12% / -37% / -50%; typical keeps Mageblood in 3 of 12 rows. Waits on Kyle (Waiting for Kyle). Running: blind51 (task 48 blind re-run, 6 cores, started 20:28, ~/blind51.log; 4 of 23 by 23:00, ~36 min each one after another, so done ~10:30-11:00 Berlin 11-28 (estimate); after48.sh commits it). 01:00: 7 of 23 in, Bonestorm (Staff or Wand) is #1 in all 7 (Infernalist, Blood Mage, Lich, Abyssal Lich, Deadeye, Pathfinder, Titan). In the write-up, check whether that is the skill or our Bonestorm model (release-time estimate, 20 spikes + explosion all on one boss, BREAKER.md ~line 985) before calling it a find.
 
+- **03:15 (11-28): blind51 at 10 of 23, Bonestorm #1 in all 10, same as the 11-23 run** (engine/tools/blind_diff.py old.json new.json). Changes vs 11-23: Bonestorm on a Wand now
+  ~0.9-1.1x the Staff (was ~0.45x: task 41's focus), Earthquake One Hand Mace in the top 3 on 6 of 10 (second weapon / shield), Comet and Coiling Bolts out of the top 3. Not a find
+  by itself: these are search scores, and task 38 measured the search over-rating Bonestorm x1.83 vs its full build (Rapid Shot x0.41). The Saturday sweep (cron 05:00)
+  waits for blind51's container (breaker_queue.sh line 50), so it starts ~10:30 and runs ~17 h (estimate): the server stays full until ~Sun 03:30.
+  Next: when after48.sh commits blind51, run blind_diff on all 23, write it up in BREAKER.md (task 48 closes), then 38's finalists re-run after the sweep.
+
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
 The "Whetstone server" session works through this list on its own, top to bottom, until the usage limit (resets
