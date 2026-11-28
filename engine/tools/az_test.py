@@ -199,7 +199,8 @@ def run_one(text: str, expect: dict, game: dict) -> dict:
     r.update(
         fails=fails, seconds=round(time.time() - t0),
         stages={g.stage: {"dps": round(total_dps(g.stats)), "items": len(g.gear) + len(g.jewels or []),
-                          "uniques": [p.unique for p in list(g.gear) + list(g.jewels or []) if p.unique]}
+                          "uniques": [p.unique for p in list(g.gear) + list(g.jewels or []) if p.unique],
+                          "skill": g.skill, "supports": list(g.supports or [])}   # per stage: e.g. Deathblow's share (task 56)
                 for g in guides},
         setups=[f'{x.get("skill")} + {", ".join(x.get("supports") or [])}' for x in end.setups[:4]],
         main_supports=end.supports, total_dps=round(total_dps(s)), boss_dps=round(end.boss_dps or 0),
