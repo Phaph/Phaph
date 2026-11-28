@@ -907,6 +907,45 @@ def craft_gear(
             if stage.max_uniques is None and score.attr_weight:
                 _revisit_uniques(pob, works, stage, score, skip=anchor, log=log)
 
+    # Hard check, final pass only (task 58): the attribute cost above is soft, so a base picked in an earlier pass can stay
+    # when no single affix fixes it (sweep 2026-11-28: Gilded Vestments at Str 37 of 46). Such a slot gets a new base the
+    # character can wear without it, crafted again, and resistances are re-balanced.
+    if score.attr_weight:
+        kinds = {slot: (t, sub) for slot, t, sub in weapon_slots}
+        for _ in range(2):
+            redone = False
+            for i, w in enumerate(works):
+                if w is anchor or own_deficit(pob.calc(SCORE_FIELDS + _req_fields(w.slot)), w.slot) <= 0:
+                    continue
+                pob.send("unequip", slot=w.slot)
+                have = pob.calc(["Str", "Dex", "Int"])
+                if w.slot in kinds:
+                    pool = [b for b in hand_bases(*kinds[w.slot]) if _meets(b, have)] or \
+                        [b for b in bases if b["type"] == kinds[w.slot][0] and _sub_ok(b.get("subType"), kinds[w.slot][1])
+                         and not b["name"].startswith("Runeforged") and base_usable(b) and _meets(b, have)]
+                    pool = sorted(pool, key=lambda b: -b["level"])[:6]
+                else:
+                    item_type = {**ARMOUR_SLOTS, **JEWELLERY_SLOTS}.get(w.slot)
+                    pool = [b for b in bases if b["type"] == item_type and not b["name"].startswith("Runeforged")
+                            and base_usable(b) and _meets(b, have)]
+                    pool = _top_bases(pool, item_type, per_subtype=1 if item_type in ARMOUR_SLOTS.values() else 40)
+                if not pool:
+                    pob.send("equip", slot=w.slot, raw=w.unique_raw or w.raw(), fields=SCORE_FIELDS)
+                    log(f"  {w.slot:<12} short on attributes, and no base it can wear")
+                    continue
+                old = w.unique or w.base
+                nw = new_work(w.slot, pool)
+                _fill(pob, nw, stage, score, stage.max_affixes, allow=lambda g: True)
+                pob.send("equip", slot=nw.slot, raw=nw.raw(), fields=SCORE_FIELDS)
+                works[i] = nw
+                redone = True
+                log(f"  {w.slot:<12} {old} needs more attributes than the build has: now {nw.base}")
+            if not redone:
+                break
+            _cap_resistances(pob, works, stage)
+            for w in works:
+                _fill(pob, w, stage, score, stage.max_affixes, allow=lambda g: True)
+
     plans = []
     for w in works:
         if _enforce_rules(w, stage, log):
