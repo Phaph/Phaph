@@ -270,6 +270,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   by itself: these are search scores, and task 38 measured the search over-rating Bonestorm x1.83 vs its full build (Rapid Shot x0.41). The Saturday sweep (cron 05:00)
   waits for blind51's container (breaker_queue.sh line 50), so it starts ~10:30 and runs ~17 h (estimate): the server stays full until ~Sun 03:30.
   Next: when after48.sh commits blind51, run blind_diff on all 23, write it up in BREAKER.md (task 48 closes), then 38's finalists re-run after the sweep.
+- **10:20 (11-28): task 48 closed** (BREAKER.md). Bonestorm #1 23 of 23; ladder top 3 found 0 of 69 (11-23: 5). The Saturday sweep starts now (~17 h, estimate). Next: task 38's finalists re-run after the sweep; 57 waits on Kyle.
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
@@ -625,7 +626,7 @@ Lodestone uses are kept; page edits for 9 and 10 are shelved in design/pending_u
 47. [x] (2026-11-25 21:00: merged, live as 2026-11-25.1, 245 passed; A/B in BREAKER.md) Ascendancy points: choice options never tried, Abyssal Lich none, leftovers unspent. Left after the
     merge: cached guides on older engine versions; a guide line saying filler passives aren't in the numbers (steps carry `filler`; page work is paused).
 
-48. [ ] (2026-11-27 05:40: scan done, 23 of 23, BREAKER.md 'Conditional ascendancy passives'; left: the blind re-run, queued in ~/after48.sh after task 51's scans) (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
+48. [x] (2026-11-28 10:08: blind re-run done, BREAKER.md 'Blind re-run, no class rules, on the current engine': Bonestorm #1 23 of 23, 0 of 69 ladder top 3s (was 5), Spearman +0.39; no find) (2026-11-27 05:40: scan done, 23 of 23, BREAKER.md 'Conditional ascendancy passives'; left: the blind re-run, queued in ~/after48.sh after task 51's scans) (added 2026-11-25) Redo after 47: conditions_asc + matrix_asc, with conditional ascendancy passives seen: the scan takes passives on their plain gain, so "25% more vs Heavy Stunned" (Titan)
     is never taken and its condition reads 0. Per skill, also try each notable (path included) with each condition (override addNodes), or take the passives again under the condition. Then the blind
     test (unlocked) again: Gemling is 32% of the ladder and was scored without its implants.
 

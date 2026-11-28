@@ -1112,3 +1112,21 @@ handuniques; frozen in ~/phaph_51), 0.1 + 0.3 condition / matrix / stack, 0.2 + 
   The 70 newly flagged pieces were judged with the same tools and rule (verdicts.json `_how`, 6 real); the 6 'real' are next-patch cuts, not proof
   the piece was broken. verdicts.json is shared, so re-running the first grade now uses these verdicts too.
 - What changed the score: handuniques (Rathpith) and probably task 47 (Gemling; not isolated). Not checked: which commit caused which find.
+
+### Blind re-run, no class rules, on the current engine (task 48, 2026-11-28)
+blind_test.py --unlock on main at 2cbc6d6 (after tasks 41 off-hands, 47 ascendancy points, 48 conditional passives, 49 enemy distance, 50), 23 of 23,
+6 cores, 11-27 20:28 -> 11-28 10:08 -> data/breaker/blind_unlocked_51.json / .txt. Compare: `python3 engine/tools/blind_diff.py
+data/breaker/blind_unlocked.json data/breaker/blind_unlocked_51.json 5` (old = 11-23, engine 2026-11-23.1). These are search scores, not full builds.
+- **Ladder match got worse, not better:** ladder top 20 skills in some top 5: 0 of 20 (11-23: 1, Comet); per-ascendancy top 3 in our top 5: **0 of 69**
+  (11-23: 5 of 69); ascendancy order vs share of players: Spearman +0.39 (11-23: +0.20).
+- **Bonestorm (Staff) #1 on 23 of 23, as on 11-23.** Every ascendancy's top 5 is drawn from the same few builds: Bonestorm Staff, Bonestorm Wand,
+  Skyfall Wand, Earthquake One Hand Mace (each in 22-23 top 5s), then Rain of Arrows Bow (15) or Coiling Bolts Staff (7). Comet, Fireball, Firestorm left.
+  So the ascendancy barely changes the pick: the search ranks weapon kinds, and task 38 measured that it over-rates Bonestorm x1.83 vs its full build.
+- What moved: Bonestorm Wand ~0.45x -> 0.9-1.1x the Staff (task 41's focus); Earthquake One Hand Mace into the top 3 (second weapon / shield, task 41);
+  Gemling Bonestorm 3.88M -> 4.08M (+5%; the run that has its implants). Acolyte 6.42M -> 3.71M: probably the 11-23 run still had the free Purple Flames
+  (fixed in 2026-11-23.2), not checked. Bonestorm -15 to -20% on Ranger / Huntress / Mercenary ascendancies vs ~-4% on Witch / Sorceress: a guess is
+  task 49's 4 m distance; not checked.
+- Identical pairs: Tactician = Witchhunter to the digit in both runs (and Titan = Warbringer = Smith on 11-23): their ascendancy passives add nothing
+  to a staff spell in the search.
+- **Verdict:** no find. The blind search alone can't rank across weapon kinds (known since task 38); Lodestone's ranking has to come from full-build
+  finalists per weapon type (task 38's re-run, after the Saturday sweep). Task 48 closes.
