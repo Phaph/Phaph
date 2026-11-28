@@ -271,6 +271,7 @@ Fresh session? Read this block, then CLAUDE.md and BREAKER.md's last sections. S
   waits for blind51's container (breaker_queue.sh line 50), so it starts ~10:30 and runs ~17 h (estimate): the server stays full until ~Sun 03:30.
   Next: when after48.sh commits blind51, run blind_diff on all 23, write it up in BREAKER.md (task 48 closes), then 38's finalists re-run after the sweep.
 - **10:20 (11-28): task 48 closed** (BREAKER.md). Bonestorm #1 23 of 23; ladder top 3 found 0 of 69 (11-23: 5). The Saturday sweep started 10:2x (sweep-0-1, ~17 h, estimate). Next: task 38's finalists re-run after the sweep; 57 waits on Kyle.
+- **11:00 (11-28): task 38's finalists re-run queued: ~/finalists51.sh** (setsid, ~/finalists51.log): waits for a free server (after the sweep), freezes main in ~/phaph_38, all 17 weapons, top 2, best of 3 orders, 6 cores -> data/breaker/finalists_51.json / .txt, commits. Run time not measured for 17 weapons with 3 orders (many hours, estimate). Then: rank by full builds, compare with finalists_offhand / finalists_orders, read 34's candidates from it.
 
 # Unattended task list (Kyle away 2026-11-18 to ~11-20, on phone and laptop)
 
